@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-// Sort options for talent directory
+
+
 
 export const SORT_OPTIONS = [
 <<<<<<< HEAD
@@ -12,6 +12,11 @@ export const SORT_OPTIONS = [
   { value: 'experience', label: 'Most Experienced' }
   { value: 'price-low', label: 'Price: Low to High' }
 =======
+// Sort options for talent directory;
+export const SORT_OPTIONS = [;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   { value: 'relevance', label: 'Relevance' },
   { value: 'rating', label: 'Highest Rating' },
   { value: 'experience', label: 'Most Experienced' },
@@ -23,7 +28,11 @@ export const SORT_OPTIONS = [
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   { value: 'price-high', label: 'Price: High to Low' }
 
+
+
+  { value: 'price-high', label: 'Price: High to Low' }
 =======
+
 
 // Sort options for talent directory;
 export const SORT_OPTIONS = [;

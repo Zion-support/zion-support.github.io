@@ -1,14 +1,12 @@
 const { describe, it, expect, vi, beforeEach } = require(
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
   'vitest')'
   'node-mocks-http')'
   '@sendgrid/mail')'
   '../../server/controllers/authController')'
   '@sendgrid/mail', () => ({'
-  authController.forgotPassword', () => {'
+  authController && authController.forgotPassword', () => {'
   'node-mocks-http')'
   @sendgrid/mail'
   '
@@ -16,9 +14,7 @@ const { describe, it, expect, vi, beforeEach } = require(
   '"sends"
       "method"
       "body"
-<<<<<<< HEAD
-    "await"
-=======
+
   'vitest')';
 const { createRequest, createResponse } = require(
   'node-mocks-http')';

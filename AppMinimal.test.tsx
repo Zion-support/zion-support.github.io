@@ -55,15 +55,8 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import AppM
 }); it('displays correct content',() => { render(<AppMinimal />)}
 }); it('handles user interactions',() => { render(<AppMinimal />)})}
 });'
-<<<<<<< HEAD
-</AppMinimal>'
-=======
-<<<<<<< HEAD
-</AppMinimal>'
-=======
-</AppMinimal>'
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+
 =======
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -81,7 +74,7 @@ describe('AppMinimal'
   it('handles user interactions'
 import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import AppMinimal from \'./AppMinimal\'; describe(\'AppMinimal\',() => { it(\'renders without crashing\',() => { render(<AppMinimal />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<AppMinimal />)}); it(\'handles user interactions\',() => { render(<AppMinimal />)})});
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe('AppMinimal', () => { it('renders without crashing', () => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<AppMinimal />)}); it("handles user interactions"
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 });

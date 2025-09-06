@@ -24,14 +24,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.status(200).json({ url })
 }
-function escapeHtml(str: string) {
-  return String(str)
-    .replace(/&/g, '&amp,')
-    .replace(/</g, '&lt,')
-    .replace(/>/g, '&gt,')
+
 =======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next',
 export default async function handler(req, res) {
   try {

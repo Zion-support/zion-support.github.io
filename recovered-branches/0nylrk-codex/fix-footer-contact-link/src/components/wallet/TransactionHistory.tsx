@@ -30,53 +30,30 @@ export function TransactionHistory() {
   const { transactions, loading } = useWallet(),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  if (loading) {;
+
+=======
+
+
   if (loading) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
-      <Card>
-        <CardHeader>
-          <CardTitle>Transaction History</CardTitle>
-          <CardDescription>Loading transactions...</CardDescription>
-        </CardHeader>
-      </Card>
-    )
+      <Card>;
+        <CardHeader>;
+          <CardTitle>Transaction History</CardTitle>;
+          <CardDescription>Loading transactions...</CardDescription>;
+        </CardHeader>;
+      </Card>;
+    );
   }
 
-  const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn'),
-  const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn'),
+  const earnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'earn');
+  const burnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'burn');
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Transaction History</CardTitle>
-        <CardDescription>Your recent ZION$ activity</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Tabs defaultValue="earned">
-          <TabsList className="w-full">
-            <TabsTrigger value="earned" className="flex-1">Earned</TabsTrigger>
-            <TabsTrigger value="spent" className="flex-1">Spent</TabsTrigger>
-          </TabsList>
-          <TabsContent value="earned">
-            <ScrollArea className="h-64">
-              {earnTransactions.length === 0 ? (
-                <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>
-              ) : (
-                <div className="space-y-2 mt-2">
-                  {earnTransactions.map(tx => (
-                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">
-                      <div>
-                        <p className="font-medium">{tx.reason |"Token reward"}</p>
-                        <p className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
-                        </p>
-                      </div>
-                      <Badge variant="outline" className="bg-green-100 text-green-800">
-                        +{tx.amount} ZION$
-                      </Badge>
-                    </div>
-<<<<<<< HEAD
+
 =======
+
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -100,6 +77,7 @@ export function TransactionHistory() {;
   const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn');
   const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
   return (;
+
     <Card>;
       <CardHeader>;
         <CardTitle>Transaction History</CardTitle>;
@@ -113,20 +91,20 @@ export function TransactionHistory() {;
           </TabsList>;
           <TabsContent value="earned">;
             <ScrollArea className="h-64">;
-              {earnTransactions.length === 0 ? (;
+              {earnTransactions && earnTransactions.length === 0 ? (;
                 <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>;
               ) : (;
                 <div className="space-y-2 mt-2">;
-                  {earnTransactions.map(tx => (;
-                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">;
+                  {earnTransactions && earnTransactions.map(tx => (;
+                    <div key={tx && tx.id} className="flex items-center justify-between py-2 border-b">;
                       <div>;
-                        <p className="font-medium">{tx.reason || "Token reward"}</p>;
+                        <p className="font-medium">{tx && tx.reason || "Token reward"}</p>;
                         <p className="text-xs text-muted-foreground">;
-                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
+                          {formatDistanceToNow(new Date(tx && tx.created_at), { addSuffix: true })}
                         </p>;
                       </div>;
                       <Badge variant="outline" className="bg-green-100 text-green-800">;
-                        +{tx.amount} ZION$;
+                        +{tx && tx.amount} ZION$;
                       </Badge>;
                     </div>;
 <<<<<<< HEAD

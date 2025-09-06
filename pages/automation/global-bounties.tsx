@@ -1,15 +1,6 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import import data from '../../data/global-bounties.json';
-export default function GlobalBountiesPage() {
 
-  const items: any[] = (data?.items |[]).slice(0, 100)
 
-  return (
-    <EnhancedLayout>
-      <div className="max-w-5xl mx-auto py-10">
-        <h1 className="text-3xl font-bold">Global Bounties</h1>
-<<<<<<< HEAD
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

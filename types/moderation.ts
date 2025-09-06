@@ -17,22 +17,18 @@ export interface ModerationAction {;
 <<<<<<< HEAD
 export interface ModerationFlag {
 =======
+}
+
 
 export interface ModerationFlag {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   content: string;
-  reporterId: string;
-  targetId: string;
-  targetType: 'post' | 'comment' | 'user';
+  reporter_id: string;
+  target_id: string;
+  target_type: 'post' | 'comment' | 'user';
   status: ModerationStatus;
-  createdAt: string;
-  updatedAt: string;
-  adminNotes?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-}
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

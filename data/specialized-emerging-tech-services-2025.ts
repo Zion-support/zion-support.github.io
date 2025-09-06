@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants';
 
 
   id: string;
@@ -12,23 +10,23 @@ import { ServiceVariant } from '../types/service-variants';
   popular: boolean;
   icon: string;
   color: string;
-  textColor: string;
+  text_color: string;
   link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
   category: string;
-  realService: boolean;
+  real_service: boolean;
   technology: string[];
   integrations: string[];
-  useCases: string[];
+  use_cases: string[];
   roi: string;
   competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  market_size: string;
+  growth_rate: string;
   variant: ServiceVariant;
-  contactInfo: {
+  contact_info: {
     mobile: string;
     email: string;
     address: string;
@@ -36,16 +34,19 @@ import { ServiceVariant } from '../types/service-variants';
     website: string;
   }
 
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
 
-  marketAdvantage: string;
+  market_advantage: string;
+;
+
 const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -580,6 +581,27 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     features: [
       'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';
       'Advanced pattern recognitionCustom neuromorphic algorithms'
+=======
+      benefits: [;
+        'Energy efficiency',
+        'Cognitive capabilities',
+        'Real - time learning',
+        'Brain - inspired processing',
+      ],
+      capabilities: [;
+        'Neural architectures',
+        'Cognitive computing',
+        'Hardware integration',
+        'Custom algorithms',
+      ],
+      market_advantage:;
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
+    },
+  ];    description: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.';
+    features: [;
+      'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications';
+      'Advanced pattern recognition_custom neuromorphic algorithms';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ];
     popular: true, icon: '🧠'
     color: 'from-pink-600 to-rose-600', textColor: 'text-pink-400'

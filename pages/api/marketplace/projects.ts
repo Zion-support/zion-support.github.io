@@ -10,6 +10,9 @@ import {
   ProjectDocument
   ProjectNote
 } from "../../../utils/marketplace/types";
+function bad(res: NextApiResponse, message: string, code = 400) {
+  return res && res.status(code).json({ ok: false, error: message });
+}
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -49,8 +52,8 @@ function bad(res: NextApiResponse, message: string, code = 400) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
-  if (user.role === "client" && user.id === project.clientId) return true;
-  if (user.role === "talent" && user.talentSlug === project.talentSlug)
+  if (user && user.role === "client" && user && user.id === project && project.clientId) return true;
+  if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
     return true;
   return false;
 =======
@@ -85,7 +88,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
@@ -117,13 +120,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         }
 =======
     const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
-    if (req.method === "GET") {
-      return res.json({ ok: true, project })
-    }
 
     if (req.method === "PATCH") {
       const { action } = req.body as { action: string };

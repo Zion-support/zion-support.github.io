@@ -17,12 +17,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
-const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('AllowPOST')
-    return res.status(405).end('Method Not Allowed')
 
   }
   try {
@@ -70,9 +64,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (existingIndex >= 0) {
+
+
       courses[existingIndex] = { ...courses[existingIndex], ...body };
     } else {
-      courses.push(body)
+      courses.push(body);
     }
 <<<<<<< HEAD
 <<<<<<< HEAD

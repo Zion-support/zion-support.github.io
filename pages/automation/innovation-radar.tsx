@@ -1,15 +1,6 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import import data from '../../data/innovation-radar.json';
-export default function InnovationRadarPage() {
 
-  const items: any[] = (data?.items |[]).slice(0, 50)
 
-  return (
-    <EnhancedLayout>
-      <div className="max-w-5xl mx-auto py-10">
-        <h1 className="text-3xl font-bold">Innovation Radar</h1>
-<<<<<<< HEAD
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Signals generated at {data?.generatedAt |'—'}</p>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Signals generated at {data?.generatedAt || '—'}</p>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

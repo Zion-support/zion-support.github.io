@@ -10,10 +10,6 @@ const TOKEN = process.env.WEB3_STORAGE_TOKEN || '',
 export const config = { api: { bodyParser: { sizeLimit: '2mb' } } },
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-import { Web3Storage, File } from 'web3.storage';
-<<<<<<< HEAD
-const TOKEN = process.env.WEB3_STORAGE_TOKEN |''
-export const config = { api: { bodyParser: { sizeLimit: '2mb' } } }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).end()
   if (!TOKEN) return res.status(400).json({ error: 'Missing WEB3_STORAGE_TOKEN' })
@@ -27,6 +23,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
 <<<<<<< HEAD
     return res.status(500).json({ error: e?.message |'Backup failed' })
+  }
+
+}
+
 =======
 =======
     return res.status(500).json({ error: e?.message || 'Backup failed' })
@@ -59,6 +59,10 @@ export default async function handler(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
+
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
   }
 }

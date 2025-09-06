@@ -534,8 +534,9 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
 
     }
   }
-];
+
 =======
+
 export interface ResearchDevelopmentService2029 {;
 =======
 =======
@@ -774,5 +775,9 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
+
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

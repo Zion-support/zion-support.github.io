@@ -131,9 +131,7 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
   deleteDialogOpen ;
 }onOpenChange= {;
   setDeleteDialogOpen ;
-<<<<<<< HEAD:temp_broken_files/resume-builder/portfolio/ProjectCard.tsx
-}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;"}"
-=======
+
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
 }"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectCard.tsx
+

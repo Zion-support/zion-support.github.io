@@ -90,8 +90,7 @@ class IntelligentErrorFixer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
@@ -148,8 +147,7 @@ class IntelligentErrorFixer {
 <<<<<<< HEAD
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -180,8 +178,7 @@ class IntelligentErrorFixer {
 <<<<<<< HEAD
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -212,8 +209,7 @@ class IntelligentErrorFixer {
 <<<<<<< HEAD
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -333,8 +329,7 @@ class IntelligentErrorFixer {
 <<<<<<< HEAD
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -354,8 +349,7 @@ class IntelligentErrorFixer {
 <<<<<<< HEAD
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -384,8 +378,7 @@ class IntelligentErrorFixer {
 <<<<<<< HEAD
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -406,8 +399,7 @@ class IntelligentErrorFixer {
 <<<<<<< HEAD
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -439,8 +431,7 @@ class IntelligentErrorFixer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
@@ -492,8 +483,7 @@ class IntelligentErrorFixer {
 <<<<<<< HEAD
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -532,8 +522,7 @@ class IntelligentErrorFixer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
@@ -611,16 +600,14 @@ class IntelligentErrorFixer {
           fs.unlinkSync(duplicate);
         }
       }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
@@ -800,8 +787,7 @@ const {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -913,7 +899,7 @@ const {
 =======
 =======
         );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -959,9 +945,8 @@ const {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -969,7 +954,7 @@ const {
 =======
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -1193,7 +1178,10 @@ if (require.main === module) {
   fixer.run().catch(console.error);
 }
 module.exports = IntelligentErrorFixer;
-<<<<<<< HEAD
+
+
+=======
+
 module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 <<<<<<< HEAD
@@ -1218,8 +1206,7 @@ module.exports = IntelligentErrorFixer;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======

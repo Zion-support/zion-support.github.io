@@ -58,11 +58,11 @@ export function SharedInbox() {
       preview: "We've found 5 new candidates that match your recent job posting for UI/UX Designer."
       timestamp: "Yesterday"
       unread: false
-<<<<<<< HEAD
-    }
-=======
+
+
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
     {
       id: "msg-3"
       from: "Sarah Wilson"
@@ -151,6 +151,7 @@ export function SharedInbox() {;
     }
   ];
   return (;
+
     <Card>;
       <CardHeader>;
         <div className="flex items-center justify-between">;
@@ -158,33 +159,66 @@ export function SharedInbox() {;
             <CardTitle>Shared Inbox</CardTitle>;
             <CardDescription>Team messages and notifications</CardDescription>;
           </div>;
-          <Badge className="bg-blue-500">{messages.filter(m => m.unread).length} New</Badge>;
+          <Badge className="bg-blue-500">{messages && messages.filter(m => m && m.unread).length} New</Badge>;
         </div>;
       </CardHeader>;
       <CardContent className="p-0">;
         <div className="divide-y divide-border">;
-          {messages.map((message) => (;
-            <div;
-              key={message.id} ;
-              className={`flex flex-col p-4 hover:bg-muted/50 cursor-pointer ${message.unread ? 'bg-blue-50 dark:bg-blue-900/10' : ''}`}
-            >;
+          {messages && messages.map((message) => (;
+            <div
+              key={message && message.id} 
+              className={`flex flex-col p-4 hover:bg-muted/50 cursor-pointer ${message && message.unread ? 'bg-blue-50 dark:bg-blue-900/10' : ''}`}>;
               <div className="flex items-center justify-between">;
-                <p className={`font-medium ${message.unread ? 'font-semibold' : ''}`}>{message.from}</p>;
-                <span className="text-xs text-muted-foreground">{message.timestamp}</span>;
+                <p className={`font-medium ${message && message.unread ? 'font-semibold' : ''}`}>{message && message.from}</p>;
+                <span className="text-xs text-muted-foreground">{message && message.timestamp}</span>;
               </div>;
-              <p className="text-sm font-medium mt-1">{message.subject}</p>;
-              <p className="text-sm text-muted-foreground mt-1 truncate">{message.preview}</p>;
+              <p className="text-sm font-medium mt-1">{message && message.subject}</p>;
+              <p className="text-sm text-muted-foreground mt-1 truncate">{message && message.preview}</p>;
             </div>;
           ))}
         </div>;
-        {messages.length === 0 && (;
+
+        {messages && messages.length === 0 && (;
           <div className="p-4 text-center text-muted-foreground">;
             No new messages;
           </div>;
         )}
-;
+
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
+=======
+    <Card>;
+      <CardHeader>;
+        <div className="flex items - center justify - between">;
+          <div>;
+            <CardTitle > Shared Inbox</CardTitle>;
+            <CardDescription > Team messages and notifications</CardDescription>;
+          </div>;
+          <Badge className="bg - blue - 500">{messages.filter (m => m.unread).length} New</Badge>;
+        </div>;
+      </CardHeader>;
+      <CardContent className="p - 0">;
+        <div className="divide - y divide - border">;
+          {messages.map ((message) => (
+            <div;
+              key={message.id}
+              className={`flex flex - col p - 4 hover:bg - muted / 50 cursor - pointer ${message.unread ? 'bg - blue - 50 dark:bg - blue - 900 / 10' : ''}`}
+            >;
+              <div className="flex items - center justify - between">;
+                <p className={`font - medium ${message.unread ? 'font - semibold' : ''}`}>{message.from}</p>;
+                <span className="text - xs text - muted - foreground">{message.timestamp}</span>;
+              </div>;
+              <p className="text - sm font - medium mt - 1">{message.subject}</p>;
+              <p className="text - sm text - muted - foreground mt - 1 truncate">{message.preview}</p>;
+            </div>))}
+        </div>;
+        {messages.length === 0 && (
+          <div className="p - 4 text - center text - muted - foreground">;
+            No new messages;
+          </div>)}
+        <div className="p - 3 text - center border - t border - border">;
+          <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             View All Messages;
           </button>;
         </div>;
@@ -196,5 +230,8 @@ export function SharedInbox() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </Card>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

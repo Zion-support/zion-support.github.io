@@ -1,12 +1,12 @@
-// Performance optimization utilities
-export const optimizeImages = () => {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    if (!img.loading) {
-      img.loading = 'lazy'
+
+  const images = document && document.querySelectorAll('img');
+  images && images.forEach(img => {
+    if (!img && img.loading) {
+      img && img.loading = 'lazy';
     }
-    if (!img.decoding) {
-      img.decoding = 'async'
+    if (!img && img.decoding) {
+      img && img.decoding = 'async';
+
     }
 <<<<<<< HEAD
   });
@@ -46,15 +46,28 @@ export const preloadCriticalResources = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-<<<<<<< HEAD
-  const loadComponent = componentName => {    return import(`./components/${componentName}`)
-  }
-  return { loadComponent }
+
+// Performance optimization utilities;
+export const optimize_images = () =>: any {
+  const images = document.querySelectorAll ('img');
+;
+  images.for_each (img => {
+    // Check condition
+if ( {) {
+  $2
 }
     link.rel = 'preload'
 <<<<<<< HEAD
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font'
 =======
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+
+};
+
+=======
+
 =======
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
 ;
@@ -71,6 +84,7 @@ export const optimizeBundleSize = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
+
   };
 
   return { loadComponent };
@@ -79,5 +93,7 @@ export const optimizeBundleSize = () => {
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -30,12 +30,7 @@ export default function ApiDocsPage() {
         selectedVersion={selectedVersion}
         onChangeVersion={(v) => { setSelectedVersion(v), setActiveEndpointId(undefined) }}
         visibilityFilter={visibility}
-<<<<<<< HEAD:components/docs/ApiDocsPage.tsx
-        onChangeVisibility={setVisibility}
-      />
-      <main className="p-6 space-y-6">
-        <header className="flex items-center justify-between">
-=======
+
         onChangeVisibility={setVisibility}      />
       <main className=&quot;p-6 space-y-6&quot;>
         <header className=&quot;flex items-center justify-between&quot;>
@@ -54,9 +49,7 @@ export default function ApiDocsPage() {
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>
           </div>
         </header>
-<<<<<<< HEAD:components/docs/ApiDocsPage.tsx
-        {activeEndpoint ? (
-=======
+
 
         {_activeEndpoint ? (
 <<<<<<< HEAD

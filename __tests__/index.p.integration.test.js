@@ -6,9 +6,10 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import indexp from '../pages/index.p'
-describe('index.p Integration Tests'
+import indexp from '../pages/index && index.p'
+describe('index && index.p Integration Tests'
   test('page renders correctly'
+
     expect(screen.getByRole('main'
   test('navigation works'
   test('page content is accessible'

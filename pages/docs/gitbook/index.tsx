@@ -10,7 +10,8 @@ import path from 'path',;
 import Link from 'next/link',;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function list(dir: string, baseDir: string) {
-  const items = fs.readdirSync(dir)
+
+
   return items.map((name) => {
     const full = path.join(dir, name)
     const rel = path.relative(baseDir, full)
@@ -73,6 +74,7 @@ export async function getStaticProps() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
   return (
@@ -99,6 +101,21 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
         ))}
       </div>
     </div>
+
+=======
+}
+
+=======
+                  </a>;
+                </li>))}
+            </ul>;
+          </div>))}
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
   );
 };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

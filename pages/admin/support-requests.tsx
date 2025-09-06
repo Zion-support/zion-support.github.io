@@ -5,6 +5,7 @@ import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
 =======
+
 import { GetServerSideProps } from 'next',;
 import { useState } from 'react',;
 import { readJson } from '../../utils/fsDb',;
@@ -37,27 +38,24 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
-}
-},;
-export default function SupportRequests(req, res) {
-  try {
-  const [requests, setRequests] = useState(initialRequests);
-  async function resolve(id: string) {;
-    await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) });
-    setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)));
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
+
+=======
+}
+
+=======
+              <button on_click={() => resolve (r.id)} className="enhanced - button enhanced - button - primary">Mark Resolved</button>)}
+          </div>))}
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Support Requests</h1>
       <div className="grid gap-3">
-<<<<<<< HEAD
-        {requests.length === 0 && <div className="opacity-70">No requests found.</div>}
-=======
+
         {requests.length === 0 && <div className="opacity-70">No requests found.</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import { MapPin } from 'lucide-react'
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { toast } from "@/hooks/use-toast";
-interface PaymentSectionProps {
-  selectedCountry: CountryPricing
-=======
 
-import { MapPin } from 'lucide-react'
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { CountryPricing } from "@/data/onsiteServicePricing",
-import { toast } from "@/hooks/use-toast",
-interface PaymentSectionProps {
-  selectedCountry: CountryPricing
-}
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -84,31 +69,73 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 =======
       <p className="text-2xl font-bold text-zion-cyan mb-6">
 import { MapPin } from 'lucide-react';
-import { PaymentButton } from "@/components/transactions/PaymentButton",;
-import { CountryPricing } from "@/data/onsiteServicePricing",;
-import { toast } from "@/hooks/use-toast",;
+import { PaymentButton } from '@/components / transactions / PaymentButton';
+import { CountryPricing } from '@/data / onsiteServicePricing';
+import { toast } from '@/hooks / use - toast';
+interface PaymentSectionProps {
+  selected_country: CountryPricing;
+export /**
+ * PaymentSection - Function description
+ */
+function PaymentSection() {
+  // Handle successful payment;
+  const handlePaymentInitiated = () =>: any {
+    toast ({
+      title: 'Processing your request',
+      description:;
+        "You'll be redirected to our secure payment portal momentarily.",
+    });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+
+
+import { MapPin } from 'lucide-react';
+import { PaymentButton } from '@/components/transactions/PaymentButton';
+import { CountryPricing } from '@/data/onsiteServicePricing';
+import { toast } from '@/hooks/use-toast';
 interface PaymentSectionProps {;
   selectedCountry: CountryPricing;
-}
-;
-export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
+
+export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps) {;
   // Handle successful payment;
   const handlePaymentInitiated = () => {;
     toast({;
-      title: "Processing your request";
-      description: "You'll be redirected to our secure payment portal momentarily."});
+      title: 'Processing your request',;
+      description:;
+        "You'll be redirected to our secure payment portal momentarily.",;
+    });
   };
-  return (;
-    <div className="text-center">;
-      <p className="text-zion-slate-light mb-2">Selected Country</p>;
-      <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">;
-        <MapPin className="mr-2 h-5 w-5 text-zion-purple" />;
-        {selectedCountry.country}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  return (
+
+        onPaymentInitiated={handlePaymentInitiated}      />;
+      <p className='text-xs text-zion-slate-light mt-2'>;
+        Price includes transportation and first hour onsite. Additional hours;
+        billed separately.;
+      </p>;
+    </div>;
+  );
+
+}"}
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    <div className='text - center'>;
+      <p className='text - zion - slate - light mb - 2'>Selected Country</p>;
+      <h4 className='text - xl font - bold text - white mb - 2 flex items - center justify - center'>;
+        <MapPin className='mr - 2 h - 5 w - 5 text - zion - purple' />;
+        {selected_country.country}
       </h4>;
-      <p className="text-2xl font-bold text-zion-cyan mb-6">;
-        ${selectedCountry.pricePerIncident.toFixed(2)}
+      <p className='text - 2xl font - bold text - zion - cyan mb - 6'>;
+        ${selected_country.pricePerIncident.to_fixed (2)}
       </p>;
       <PaymentButton;
+
         amount={selectedCountry.pricePerIncident}
         serviceId="it-onsite-service"
         providerId="zion-tech-group"

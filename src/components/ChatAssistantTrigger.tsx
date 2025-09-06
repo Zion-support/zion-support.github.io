@@ -134,8 +134,10 @@ export function ChatAssistantTrigger() {;
     }
   },
 
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <>
+    <>;
       <Button
         onClick = {(,) => setIsOpen(true),}
         size="icon"
@@ -148,22 +150,17 @@ export function ChatAssistantTrigger() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {isOpen && (
         <ChatAssistant
-<<<<<<< HEAD
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
-          recipient={{
-            id: 'ai-assistant'
-            name: 'AI Assistant'
-            avatarUrl: 'https://placehold.co/64x64?text=AI'
-
-            role: 'Virtual Assistant'
 =======
+
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
+
           recipient={{;
             id: 'ai-assistant',;
-            name: 'AI Assistant';
-            avatarUrl: 'https://placehold.co/64x64?text=AI';
+            name: 'AI Assistant',;
+            avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Virtual Assistant';
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -172,11 +169,11 @@ export function ChatAssistantTrigger() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
           onSendMessage = {handleSendMessage,}
-        />
+        />;
       )}
-<<<<<<< HEAD
-    </>
-  )
+
+    </>;
+  );
 }
 <<<<<<< HEAD
 =======
@@ -188,6 +185,7 @@ export function ChatAssistantTrigger() {;
 =======
 <<<<<<< HEAD
 =======
+
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

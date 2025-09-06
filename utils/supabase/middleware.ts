@@ -36,6 +36,7 @@ export function middleware(request: NextRequest) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+  return NextResponse.next ();
 }
   return NextResponse.next();
   } catch (error) {
@@ -51,3 +52,4 @@ export function middleware(request: NextRequest) {;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

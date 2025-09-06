@@ -18,7 +18,7 @@ export function getSupabaseClient(): ZionSupabase {try {;
       if (!browserClient) {;
         browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
       }
-      return browserClient;
+      return browser_client;
     }
 <<<<<<< HEAD
     // Server-side: create a new client per call to avoid cross-request state;

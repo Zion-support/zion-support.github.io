@@ -1,30 +1,15 @@
-/** @type {import('next').NextConfig} */;
-<<<<<<< HEAD
-const nextConfig = {reactStrictMode: true;
-  compress: true;
-  poweredByHeader: false;
-  eslint: { ignoreDuringBuilds: true }
-  typescript: { ignoreBuildErrors: true }
-  pageExtensions: ['tsxtsjsxjs'];
-  // Image optimization;
-  images: {domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"];
-    formats: ['image/webpimage/avif'];
-  }
-  // Output configuration;
-  output: 'standalone';
-  // Trailing slash;
-  trailingSlash: false;
-  // Base path;
-  basePath: '';
-  // Asset prefix;
-  assetPrefix: '';
-  // Generate ETags;
-  generateEtags: true;
-  // Dist directory;
-  distDir: '.next';
-}
-module.exports = nextConfig;
+
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  page_extensions: ['tsxtsjsxjs'],
 =======
+/** @type {import('next').NextConfig} */;
+
 const nextConfig = {;
 <<<<<<< HEAD
   reactStrictMode: true;
@@ -40,23 +25,24 @@ const nextConfig = {;
   eslint: { ignoreDuringBuilds: true },;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
+
   // Image optimization;
-  images: {;
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],;
-    formats: ['image/webpimage/avif'];
-  },;
+  images: {
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image / webpimage / avif'];
+  },
   // Output configuration;
-  output: 'standalone',;
+  output: 'standalone',
   // Trailing slash;
-  trailingSlash: false,;
+  trailing_slash: false,
   // Base path;
-  basePath: '',;
+  base_path: '',
   // Asset prefix;
-  assetPrefix: '',;
+  asset_prefix: '',
   // Generate ETags;
-  generateEtags: true,;
+  generate_etags: true,
   // Dist directory;
-  distDir: '.next';
-},;
-module.exports = nextConfig,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  dist_dir: '.next';
+},
+module.exports = next_config,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

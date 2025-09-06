@@ -66,14 +66,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method === "GET") {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const scope = state.config.scope,
-    const scopedEvents = filterEventsByScope(state.events, scope),
-    return res.status(200).json({
+    const scoped_events = filterEventsByScope (state.events, scope),
+    return res.status (200).json ({
       status: "ok",
-      instanceId: state.config.instanceId,
+      instance_id: state.config.instance_id,
       config: state.config,
       lastSyncedAt: state.lastSyncedAt,
       counts: {
+
         totalEvents: scopedEvents.length,
 <<<<<<< HEAD
         proposals: scopedEvents.filter((e) => e.type === "proposal").length,

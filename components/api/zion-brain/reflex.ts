@@ -22,9 +22,9 @@ function isAuthorized(req: NextApiRequest): boolean {
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken |token === superToken;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req));
-    return res.status(401).json({ error: 'Unauthorized' });
-  if (req.method === 'GET') {
+  if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
+
+  if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
 <<<<<<< HEAD
     return res.status(200).json({ metrics: state.metrics |{} });  }
@@ -38,16 +38,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     const state = readState<{ metrics?: unknown }>();
     return res.status(200).json({ metrics: state.metrics |{} })
   }
-  if (req.method === 'POST') {
-    const started = Date.now();
+
+  if (req && req.method === 'POST') {
+    const started = Date && Date.now();
     try {
-      const metrics = req.body |{}
+      const metrics = req && req.body || {};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const triggers = evaluateReflexes(metrics);
       const state = readState<any>();
-      state.metrics = metrics;
-      state.lastTriggers = triggers;
+      state && state.metrics = metrics;
+      state && state.lastTriggers = triggers;
       writeState(state);
-      const latencyMs = Date.now() - started;
+
+      const latencyMs = Date && Date.now() - started;
+
+
       appendLog({
         module: 'reflex'
         type: 'metrics'
@@ -55,7 +60,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
         latencyMs
         payload: { metrics, triggers }
       });
-      return res.status(200).json({ triggers });
+      return res && res.status(200).json({ triggers });
     } catch (e: any) {
       appendLog({
         module: 'reflex'
@@ -63,15 +68,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
         status: 'error'
         payload: { error: e?.message |'unknown' }
       });
-      return res.status(500).json({ error: 'Reflex failure' });    }
 
+      return res && res.status(500).json({ error: 'Reflex failure' });    }
   }
-return res.status(405).json({ error: 'Method not allowed' });
+
+  return res && res.status(405).json({ error: 'Method not allowed' });
+
 }      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
-      return res.status(200).json({ triggers })
+      return res && res.status(200).json({ triggers })
     } catch (e: any) {
-      appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message |'unknown' } });
-      return res.status(500).json({ error: 'Reflex failure' })
+
+      appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
+      return res && res.status(500).json({ error: 'Reflex failure' })
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,6 +96,7 @@ return res.status(405).json({ error: 'Method not allowed' });
 }
 
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

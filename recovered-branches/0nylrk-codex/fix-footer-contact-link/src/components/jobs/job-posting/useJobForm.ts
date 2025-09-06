@@ -41,23 +41,14 @@ import { useAuth } from "@/hooks/useAuth",
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export interface JobPostingProps {
-  jobId?: string,
-  onSuccess?: () => void
+  job_id?: string;
+  on_success?: () => void;
 }
 
-export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
-<<<<<<< HEAD
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const [startDate, setStartDate] = useState<Date | undefined>(undefined);
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined);
-  const [isRemote, setIsRemote] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null);
-=======
+
   const { user } = useAuth(),
   const navigate = useNavigate(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   
   const [startDate, setStartDate] = useState<Date | undefined>(undefined),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
@@ -65,11 +56,26 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const [isLoading, setIsLoading] = useState(false),
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const form = useForm<JobSchemaType>({
-    resolver: zodResolver(jobSchema),
+    resolver: zodResolver(jobSchema);
     defaultValues: {
-<<<<<<< HEAD
+
+export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
+  const { user } = use_auth ();
+  const navigate = use_navigate ();
+;
+  const [start_date, setStartDate] = useState < Date | undefined>(undefined);
+  const [end_date, setEndDate] = useState < Date | undefined>(undefined);
+  const [is_remote, setIsRemote] = useState (false);
+  const [is_loading, setIsLoading] = useState (false);
+  const [initial_values, setInitialValues] = useState < JobSchemaType | null>(null);
+;
+  const form = use_form < JobSchemaType>({
+    resolver: zod_resolver (job_schema);
+    default_values: {
+
       title: '';
       company: '';
       location: '';
@@ -85,54 +91,73 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       expiry_date: '';
       is_remote: false;
       category: '';
-      status: ''
-      external_apply_link: ''}
-    mode: "onChange"});
-  // Function to create/update jobs that will be implemented by parent component
-  const submitJob = async (values: JobSchemaType) => {
-    if (!user) {
-      toast.error("You must be logged in to post a job");
-      navigate("/login")
+
+      toast && toast.error("You must be logged in to post a job");
+      navigate("/login"),
+
       return
     }
     setIsLoading(true);
     try {
-      const publishedDate = startDate ? startDate.toString() : '';
-      const expiryDate = endDate ? endDate.toString() : '';
+
+      const publishedDate = startDate ? startDate && startDate.toString() : '';
+      const expiryDate = endDate ? endDate && endDate.toString() : '';
+
+
       const jobData = {
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
-        is_remote: isRemote
-        user_id: user.id}
+
+        is_remote: isRemote,
+        user_id: user && user.id};
+
+
       if (onSuccess) {
         onSuccess()
       }
       return jobData
     } catch (error: any) {
-      console.error("Error in job form submission:", error);
-      toast.error(error.message |"Failed to process form");
-      throw error
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  return {
-    form;
-    isLoading;
-    startDate;
-    setStartDate;
-    endDate
-    setEndDate;
-    isRemote;
-    setIsRemote;
-    initialValues;
-    setInitialValues;
-    submitJob
-  }
-}
 
+      console && console.error("Error in job form submission:", error);
+      toast && toast.error(error && error.message || "Failed to process form");
+
+      throw error
 =======
+      status: '',
+      external_apply_link: ''}
+    mode: "on_change"});
+;
+  // Function to create / update jobs that will be implemented by parent component;
+  const submit_job = async (values: JobSchemaType) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast.error ("You must be logged in to post a job");
+      navigate ("/login"),
+      return;
+    }
+    setIsLoading (true);
+;
+    try {
+      const published_date = start_date ? start_date.to_string () : '';
+      const expiry_date = end_date ? end_date.to_string () : '';
+;
+      const job_data = {
+        ...values;
+        published_date: published_date;
+        expiry_date: expiry_date;
+        is_remote: is_remote,
+        user_id: user.id}
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        on_success ();
+=======
+
       title: '',
       company: '',
       location: '',
@@ -247,12 +272,12 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
-      
-      return jobData
+      return job_data;
     } catch (error: any) {
-      console.error("Error in job form submission:", error),
-      toast.error(error.message || "Failed to process form"),
-      throw error
+      console.error ("Error in job form submission:", error);
+      toast.error (error.message || "Failed to process form");
+      throw error;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading(false)
 <<<<<<< HEAD
@@ -263,16 +288,18 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 
   return {
     form;
-    isLoading;
-    startDate;
+    is_loading;
+    start_date;
     setStartDate;
-    endDate, 
+
+    end_date,
+
     setEndDate;
-    isRemote;
+    is_remote;
     setIsRemote;
-    initialValues;
+    initial_values;
     setInitialValues;
-    submitJob
+    submit_job;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
@@ -302,5 +329,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+
+;
+

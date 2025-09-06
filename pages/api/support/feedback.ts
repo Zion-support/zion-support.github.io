@@ -9,11 +9,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { articleId, helpful } = req.body as { articleId: string, helpful: boolean },
   if (!articleId || helpful === undefined) return res.status(400).json({ error: 'articleId and helpful required' }),
 
-  const feedback = readJson<any[]>('support/feedback.json', []),
-  feedback.push({ articleId, helpful, ts: Date.now() }),
-  writeJson('support/feedback.json', feedback),
-  return res.status(200).json({ ok: true });
-};
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';

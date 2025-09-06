@@ -3,15 +3,23 @@
 <<<<<<< HEAD
 
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
-export type JobCategory =
-  | 'development'
-  | 'design'
-  | 'marketing'
-  | 'content'
-  | 'data'
-  | 'business'
+;
+export type JobCategory =;
+  | 'development';
+  | 'design';
+  | 'marketing';
+  | 'content';
+  | 'data';
+  | 'business';
   | 'other';
+;
 export interface JobBudget {
+  min: number;
+  max: number,
+  currency: string;
+
+}
+export interface Job {
 =======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 
@@ -51,6 +59,8 @@ export interface Job {;
 <<<<<<< HEAD
 export interface JobFormData {
 =======
+}
+
 
 export interface JobFormData {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -58,12 +68,14 @@ export interface JobFormData {;
   description: string;
   category: JobCategory;
   skills: string;
-  budgetMin: number;
-  budgetMax: number
-  deadline: Date
+
+  budget_min: number;
+  budget_max: number,
+  deadline: Date;
 }
-// Add JobMatch interface to be shared across components
-export interface JobMatch {;
+// Add JobMatch interface to be shared across components;
+
+export interface JobMatch {
   id: string;
   job_id: string;
   talent_id: string;
@@ -85,8 +97,10 @@ export interface JobMatch {;
     key_projects: any[];
     skills: string[];
     location?: string;
-    category?: string
-    company_name?: string
+
+    category?: string,
+    company_name?: string;
+
   }
 }
 <<<<<<< HEAD
@@ -100,13 +114,15 @@ export interface ResumeAttachment {;
   type: 'ai_resume' | 'custom_upload';
   file_url?: string;
   resume_id?: string;
-  summary?: string
-  skills?: string[]
+
+  summary?: string,
+  skills?: string[];
 }
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
 <<<<<<< HEAD
 export interface JobApplication {
 =======
+
 
 export interface JobApplication {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -126,30 +142,18 @@ export interface JobApplication {;
     full_name: string;
     professional_title: string;
     profile_picture_url?: string;
-    bio: string
-    skills: string[]
+
+    bio: string,
+    skills: string[];
+
   }
   resume?: ResumeAttachment;
-  // New fields for resume scoring
+  // New fields for resume scoring;
   match_score?: number;
   match_summary?: string;
   match_breakdown?: {
     skills_match?: {
       score: number;
-      matching: string[]
-      missing: string[]
-    }
-    experience_match?: {
-      score: number
-      analysis: string
-    }
-    education_match?: {
-      score: number
-      analysis: string
-    }
-  }
-  match_suggestion?: string;
-  scored_at?: string;
 
   notes?: string,  // New field for client notes
 <<<<<<< HEAD
@@ -263,18 +267,19 @@ export interface JobApplication {;
     skills_match?: {;
       score: number,;
       matching: string[],;
+
       missing: string[];
-    },;
-    experience_match?: {;
-      score: number,;
-      analysis: string;
-    },;
-    education_match?: {;
-      score: number,;
+    }
+    experience_match?: {
+      score: number,
       analysis: string;
     }
-  },;
-  match_suggestion?: string,;
+    education_match?: {
+      score: number,
+      analysis: string;
+    }
+  }
+  match_suggestion?: string;
   scored_at?: string;
   notes?: string,  // New field for client notes;
 <<<<<<< HEAD
@@ -284,3 +289,4 @@ export interface JobApplication {;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

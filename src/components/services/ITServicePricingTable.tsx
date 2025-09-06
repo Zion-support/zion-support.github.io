@@ -63,33 +63,35 @@ export function ITServicePricingTable() {
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       )
     }
-<<<<<<< HEAD
-=======
-    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    // Sort data
-    filteredData.sort((a, b) => {
-      if (a[sortConfig.key] < b[sortConfig.key]) {
-<<<<<<< HEAD
-        return sortConfig.direction === 'ascending' ? -1 : 1
+
+    // Sort data;
+    filteredData && filteredData.sort((a, b,) => {;
+      if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
+        return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
       }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === 'ascending' ? 1 : -1
+      if (a[sortConfig && sortConfig.key] > b[sortConfig && sortConfig.key]) {;
+        return sortConfig && sortConfig.direction === 'ascending' ? 1 : -1;
       }
-      return 0
-    })
-    return filteredData
-  }, [onsiteServicePricing, searchQuery, sortConfig])
-  const handleSort = (key: keyof CountryPricing,) => {
-    setSortConfig({
-      key
-      direction:
-        sortConfig.key === key && sortConfig.direction === 'ascending'
-          ? 'descending'
-          : 'ascending'
-    })
-  }
-=======
+      return 0;
+    });
+
+    return filteredData;
+  }, [onsiteServicePricing, searchQuery, sortConfig]);
+
+  const handleSort = (key: keyof CountryPricing,) => {;
+    setSortConfig({;
+      key,;
+      direction:;
+        sortConfig && sortConfig.key === key && sortConfig && sortConfig.direction === 'ascending';
+          ? 'descending';
+          : 'ascending',;
+    });
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  return (
+
+
         return sortConfig.direction === "ascending" ? -1 : 1
       }
       if (a[sortConfig.key] > b[sortConfig.key]) {
@@ -109,7 +111,6 @@ export function ITServicePricingTable() {
           ? "descending" 
           : "ascending"})
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 <<<<<<< HEAD
 =======
@@ -121,15 +122,7 @@ export function ITServicePricingTable() {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
           <Input
-<<<<<<< HEAD
-            placeholder='Search by country...'
-            value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
-            className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />
-        </div>
-      </div>
-      <div className='rounded-md border border-zion-blue-light overflow-hidden'>
-=======
+
             placeholder="Search by country..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -145,15 +138,70 @@ export function ITServicePricingTable() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Table>
-          <TableHeader className="bg-zion-blue">
+          <TableHeader className='bg-zion-blue'>
             <TableRow>
-<<<<<<< HEAD
-              <TableHead className='text-zion-cyan font-medium'>
+
+            onChange={e => setSearchQuery(e && e.target.value)}
+            className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />;
+        </div>;
+      </div>;
+
+      <div className='rounded-md border border-zion-blue-light overflow-hidden'>;
+        <Table>;
+          <TableHeader className='bg-zion-blue'>;
+            <TableRow>;
+              <TableHead className='text-zion-cyan font-medium'>;
+
                 <Button
                   variant='ghost'
                   onClick={() => handleSort('country')}
-                  className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'                >
+                  className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'                >;
+                  <span>Country</span>;
+                  <ArrowUpDown className='h-4 w-4' />;
+                </Button>;
+              </TableHead>;
+              <TableHead className='text-right text-zion-cyan font-medium'>;
+                <Button
+                  variant='ghost'
+                  onClick={() => handleSort('pricePerIncident')}
+                  className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'                >;
+                  <span>Price Per Incident</span>;
+                  <ArrowUpDown className='h-4 w-4' />;
 =======
+    <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 w - full'>;
+      <div className='flex items - center mb - 6'>;
+        <div className='relative flex - 1'>;
+          <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light' />;
+          <Input;
+            placeholder='Search by country...';
+            value={search_query}
+            on_change={e => setSearchQuery (e.target.value)}
+            className='pl - 10 bg - zion - blue border - zion - blue - light focus:border - zion - purple text - white'          />;
+        </div>;
+      </div>;
+      <div className='rounded - md border border - zion - blue - light overflow - hidden'>;
+        <Table>;
+          <TableHeader className='bg - zion - blue'>;
+            <TableRow>;
+              <TableHead className='text - zion - cyan font - medium'>;
+                <Button;
+                  variant='ghost';
+                  on_click={() => handle_sort ('country')}
+                  className='hover:bg - zion - blue - dark p - 0 flex items - center space - x-1 text - zion - cyan hover:text - zion - cyan - light'                >;
+                  <span > Country</span>;
+                  <ArrowUpDown className='h - 4 w - 4' />;
+                </Button>;
+              </TableHead>;
+              <TableHead className='text - right text - zion - cyan font - medium'>;
+                <Button;
+                  variant='ghost';
+                  on_click={() => handle_sort ('pricePerIncident')}
+                  className='hover:bg - zion - blue - dark p - 0 flex items - center justify - end space - x-1 w - full text - zion - cyan hover:text - zion - cyan - light'                >;
+                  <span > Price Per Incident</span>;
+                  <ArrowUpDown className='h - 4 w - 4' />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
               <TableHead className="text-zion-cyan font-medium">
                 <Button 
                   variant="ghost" 
@@ -169,13 +217,7 @@ export function ITServicePricingTable() {
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
-<<<<<<< HEAD
-              <TableHead className='text-right text-zion-cyan font-medium'>
-                <Button
-                  variant='ghost'
-                  onClick={() => handleSort('pricePerIncident')}
-                  className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'                >
-=======
+
               <TableHead className="text-right text-zion-cyan font-medium">
                 <Button 
                   variant="ghost" 
@@ -195,19 +237,7 @@ export function ITServicePricingTable() {
           </TableHeader>
           <TableBody className="bg-zion-blue-dark">
             {sortedData.length > 0 ? (
-<<<<<<< HEAD
-              sortedData.map(item => (
-                <TableRow
-                  key={item.country}
-                  className='border-b border-zion-blue-light hover:bg-zion-blue/50'
-                >
-                  <TableCell className='flex items-center space-x-2'>
-                    <Globe className='h-4 w-4 text-zion-purple' />
-                    <span className='text-white'>{item.country}</span>
-                  </TableCell>
-                  <TableCell className='text-right font-medium text-white'>
-                    ${item.pricePerIncident.toFixed(2)}                  </TableCell>
-=======
+
               sortedData.map((item) => (
                 <TableRow key={item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">
                   <TableCell className="flex items-center space-x-2">
@@ -322,10 +352,12 @@ export function ITServicePricingTable() {;
                 >;
                   <span>Price Per Incident</span>;
                   <ArrowUpDown className="h-4 w-4" />;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </Button>;
               </TableHead>;
             </TableRow>;
           </TableHeader>;
+
           <TableBody className="bg-zion-blue-dark">;
             {sortedData.length > 0 ? (;
               sortedData.map((item) => (;
@@ -335,15 +367,21 @@ export function ITServicePricingTable() {;
                     <span className="text-white">{item.country}</span>;
                   </TableCell>;
                   <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>;
+
                 </TableRow>;
               ));
             ) : (;
               <TableRow>;
+
                 <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">;
+
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
             )}
+
+=======
+
           </TableBody>;
         </Table>;
       </div>;
@@ -354,5 +392,40 @@ export function ITServicePricingTable() {;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+          <TableBody className='bg - zion - blue - dark'>;
+            {sorted_data.length > 0 ? (
+              sorted_data.map (item => (
+                <TableRow;
+                  key={item.country}
+                  className='border - b border - zion - blue - light hover:bg - zion - blue / 50';
+                >;
+                  <TableCell className='flex items - center space - x-2'>;
+                    <Globe className='h - 4 w - 4 text - zion - purple' />;
+                    <span className='text - white'>{item.country}</span>;
+                  </TableCell>;
+                  <TableCell className='text - right font - medium text - white'>;
+                    ${item.pricePerIncident.to_fixed (2)}                  </TableCell>;
+                </TableRow>))) : (
+              <TableRow>;
+                <TableCell;
+                  col_span={2}
+                  className='text - center py - 10 text - zion - slate - light';
+                >;
+                  No countries match your search;
+                </TableCell>;
+              </TableRow>)}
+          </TableBody>;
+        </Table>;
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+;
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

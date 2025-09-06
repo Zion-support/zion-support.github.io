@@ -57,61 +57,6 @@ interface JobMatchProps {
 
 }
 }
-=======
-import React from 'react',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react';
-import { formatDistanceToNow } from "date-fns",;
-import { JobMatch } from "@/types/jobs",;
-interface JobMatchProps {;
-  matchId: string,;
-  talentId: string,;
-  name: string,;
-  title: string,;
-  company: string,;
-  avatar: string,;
-  location: string,;
-  category: string,;
-  matchPercent: number,;
-  skills: string[],;
-  onApply?: (matchId: string) => void,;
-  onViewDetails?: (matchId: string) => void,;
-  onInvite?: (matchId: string) => void;
-}
-;
-export function JobMatchCard({;
-  matchId,;
-  talentId,;
-  name,;
-  title,;
-  company,;
-  avatar,;
-  location,;
-  category,;
-  matchPercent,;
-  skills,;
-  onApply,;
-  onViewDetails,;
-  onInvite;
-}: JobMatchProps) {;
-  const handleApply = () => {;
-    if (onApply) {;
-      onApply(matchId);
-    }
-  },;
-  const handleViewDetails = () => {;
-    if (onViewDetails) {;
-      onViewDetails(matchId);
-    }
-  },;
-  const handleInvite = () => {;
-    if (onInvite) {;
-      onInvite(matchId);
-    }
-  },
 
   // Generate a formatted date for display
   const postedDate = new Date(),
@@ -199,5 +144,21 @@ export function JobMatchCard({;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+=======
+  talent_id,
+  name,
+  title,
+  company,
+  avatar,
+  location,
+  category,
+  match_percent,
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -33,19 +33,16 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
 
-  const handleInputChange = (e) => {
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: ''
-      }));
-    }
+
+
   };
 
   const handleSubmit = async (e) => {
@@ -199,12 +196,47 @@ export default function Contact() {
                       className={errors.email ? 'border-red-500' : ''}
                       required
                     />
-                    {errors.email && (
-                      <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                    )}
+
                   </div>
                 </div>
-                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      placeholder="Your company name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                      Service Interest
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="ai-ml">AI & Machine Learning</option>
+                      <option value="cloud">Cloud Infrastructure</option>
+                      <option value="web">Web Development</option>
+                      <option value="mobile">Mobile Applications</option>
+                      <option value="security">Cybersecurity</option>
+                      <option value="analytics">Data Analytics</option>
+                      <option value="consulting">Consulting</option>
+                    </select>
+
+                  </div>
+                </div>
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
                     Subject
@@ -222,27 +254,9 @@ export default function Contact() {
                     <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
                   )}
                 </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className={errors.message ? 'border-red-500' : ''}
-                    placeholder="Tell us about your project or requirements..."
-                    required
-                  />
-                  {errors.message && (
-                    <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-                  )}
-                </div>
-                
-                <Button
+
+                <button
+
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
@@ -257,5 +271,47 @@ export default function Contact() {
       
       <ChatAssistant />
     </div>
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+const Contact: React.FC = () => {;
+  return (
+    <div className="min-h-screen bg-gray-50">;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>;
+        <p className="text-lg text-gray-600">;
+          Get in touch with us for any questions or inquiries.;
+        </p>;
+      </div>;
+    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
+=======
+
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

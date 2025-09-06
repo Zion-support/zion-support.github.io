@@ -37,10 +37,15 @@ export interface Wallet {userId: string;
 }
 export interface TokenConfig {symbol: TokenSymbol;
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
-  earnRules: Record<string number>, // action -> tokens;
-  burnRules: Record<string number>, // feature -> tokens;
+
+
+
+
 }
-export interface WalletSummary {wallet: Wallet;
+
+export interface WalletSummary {
+  wallet: Wallet,
+
   transactions: TokenTransaction[];
   config: TokenConfig;
 =======

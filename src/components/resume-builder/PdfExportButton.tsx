@@ -22,12 +22,11 @@ interface PdfExportButtonProps {
   resume: Resume
 }
 
-}
 
 =======
+}
+}
 
-}
-}
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -54,53 +53,7 @@ interface PdfExportButtonProps {;
   resume: Resume;
 }
 
-export function PdfExportButton({ resume }: PdfExportButtonProps) {
-  const [isExporting, setIsExporting] = useState(false),
-  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
-  const [includePortfolio, setIncludePortfolio] = useState(true),
-  const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
 
-  const handleExport = async () => {
-    if (isExporting) return,
-    
-    setIsExporting(true),
-    
-    try {
-      const options: ExportOptions = {
-        theme,
-        includePortfolio,
-        maxProjects: 3,
-        fontFamily
-      },
-      
-      const pdfBlob = await exportResumeToPDF(resume, options),
-      
-      // Create download link and trigger download
-      const url = URL.createObjectURL(pdfBlob),
-      const link = document.createElement('a'),
-      link.href = url,
-      link.download = `${resume.basic_info.title || 'Resume'}.pdf`,
-      document.body.appendChild(link),
-      link.click(),
-      
-      // Clean up
-      document.body.removeChild(link),
-      URL.revokeObjectURL(url),
-      
-      toast({
-        title: "Success!",
-        description: "Your resume has been downloaded as a PDF."})
-    } catch (error) {
-      logErrorToProduction('Error exporting PDF:', { data: error }),
-      toast({
-        title: "Export failed",
-        description: "There was an error exporting your resume to PDF.",
-        variant: "destructive"
-      })
-    } finally {
-      setIsExporting(false)
-    }
-  },
 
   return (
     <DropdownMenu>

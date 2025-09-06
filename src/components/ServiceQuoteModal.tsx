@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-...formData;            startDate: startDate?.toISOString()
 =======
+
 ...formData;            startDate: startDate?.toISOString(),
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             endDate: endDate?.toISOString()}
@@ -13,6 +13,17 @@
 }
 <<<<<<< HEAD
 =======
+...form_data;            start_date: start_date?.toISOString (),
+            end_date: end_date?.toISOString ()}
+        }
+      });
+}
+}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======

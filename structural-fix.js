@@ -1,9 +1,14 @@
 }});
-console.log(`Fixed ${fixedCount} files`)));
-<<<<<<< HEAD
+
+;
+console.log (`Fixed ${fixed_count} files`)));
 }
 });
+;
+
 =======
+console.log(`Fixed ${fixedCount} files`)));
+
 };
 });
 <<<<<<< HEAD

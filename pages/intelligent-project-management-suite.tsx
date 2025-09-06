@@ -15,9 +15,8 @@ export async function getStaticProps() {
 	return (getSlugStaticProps as any)({ params: { slug: 'intelligent-project-management-suite' } })
 }
 
-export default function IntelligentProjectManagementSuite(props: any) {
-	return <ServicePage {...props} />
-};
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

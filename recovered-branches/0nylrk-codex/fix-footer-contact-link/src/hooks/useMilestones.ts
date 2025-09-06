@@ -9,6 +9,7 @@ export { useMilestones } from './milestones/useMilestones',;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
 =======
-export { useMilestones } from './milestones/useMilestones',;
-export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export { use_milestones } from './milestones / use_milestones';
+export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones / types';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

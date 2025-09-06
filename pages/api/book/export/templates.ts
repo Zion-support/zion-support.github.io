@@ -2,6 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;

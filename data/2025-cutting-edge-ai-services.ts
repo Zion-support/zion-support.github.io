@@ -436,12 +436,6 @@ export const cuttingEdgeAIServices2025 = [
     ]
   }
 =======
-      'SOC2',
-      'ISO 27001',
-      'GDPR',
-      'CCPA',
-      'Intellectual property protection',
-    ],
   },;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
@@ -667,3 +661,4 @@ export const cuttingEdgeAIServices2025 = [;
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

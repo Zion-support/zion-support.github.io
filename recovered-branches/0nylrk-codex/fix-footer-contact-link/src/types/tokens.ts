@@ -22,7 +22,6 @@ export interface TokenTransaction {;
   user_id: string;
   amount: number;
   transaction_type: TransactionType;
-  reason: string | null
 
   created_at: string
 }
@@ -44,6 +43,7 @@ export interface TokenTransaction {;
   transaction_type: TransactionType,;
   reason: string | null;
   created_at: string;
+
 }
 ;
 <<<<<<< HEAD

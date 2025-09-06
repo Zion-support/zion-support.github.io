@@ -1,28 +1,29 @@
 
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function CaseStudyPage() {
-  const caseStudy = {
-    id: 'ai-automation-manufacturing'
-    title: 'AI-Powered Manufacturing Automation'
-    company: 'Global Manufacturing Corp'
-    industry: 'Manufacturing'
-    challenge: 'Inefficient production processes, high downtime, and quality control issues'
-    solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization'
-    results: [
-      '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs'
-    ]
-    technologies: ['Machine LearningComputer VisionIoT SensorsPredictive Analytics']
-    duration: '6 months'
-    teamSize: '8 engineers'
-    featured: true
-<<<<<<< HEAD
-  }
+    id: 'ai-automation-manufacturing',
+    title: 'AI-Powered Manufacturing Automation',
+=======
+import React from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+export default /**
+ * CaseStudyPage - Function description
+ */
+function CaseStudyPage() {
+  const case_study = {
+    id: 'ai - automation - manufacturing',
+    title: 'AI - Powered Manufacturing Automation',
+
+    company: 'Global Manufacturing Corp',
+    industry: 'Manufacturing',
+    challenge: 'Inefficient production processes, high downtime, and quality control issues',
+    solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
+
 
 =======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
     <>
       <Head>
@@ -33,9 +34,8 @@ export default function CaseStudyPage() {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <main className="pt-20 pb-16">
           <div className="max-w-4xl mx-auto px-6">
-<<<<<<< HEAD
-            {/* Breadcrumb */}
-=======
+
+
             {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -51,13 +51,8 @@ export default function CaseStudyPage() {
                 ← Back to Case Studies
               </Link>
             </nav>
-<<<<<<< HEAD
-            {/* Header */}
-            <header className="mb-12 text-center">
-              <div className="mb-4">
-                <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-                  {caseStudy.industry}
-=======
+
+
             {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -85,9 +80,8 @@ export default function CaseStudyPage() {
                 <span>Team: {caseStudy.teamSize}</span>
               </div>
             </header>
-<<<<<<< HEAD
-            {/* Challenge */}
-=======
+
+
             {/* Challenge */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -104,9 +98,8 @@ export default function CaseStudyPage() {
                 <p className="text-white/90 text-lg">{caseStudy.challenge}</p>
               </div>
             </section>
-<<<<<<< HEAD
-            {/* Solution */}
-=======
+
+
             {/* Solution */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -123,9 +116,8 @@ export default function CaseStudyPage() {
                 <p className="text-white/90 text-lg">{caseStudy.solution}</p>
               </div>
             </section>
-<<<<<<< HEAD
-            {/* Technologies */}
-=======
+
+
             {/* Technologies */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -143,12 +135,8 @@ export default function CaseStudyPage() {
                   <div key={index} className="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center">
                     <span className="text-blue-400 font-semibold">{tech}</span>
                   </div>
-<<<<<<< HEAD
-                ))}
-              </div>
-            </section>
-            {/* Results */}
-=======
+
+
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -178,12 +166,8 @@ export default function CaseStudyPage() {
                       <span className="text-white/90 font-semibold">{result}</span>
                     </div>
                   </div>
-<<<<<<< HEAD
-                ))}
-              </div>
-            </section>
-            {/* Call to Action */}
-=======
+
+
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -265,16 +249,16 @@ export default function CaseStudyPage() {
                   This case study demonstrates the real impact of AI automation in manufacturing.;
                   Let's discuss how we can help you achieve similar results.;
                 </p>;
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
                   <Link;
                     href="/contact";
-                    className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
+                    className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
                   >;
                     Get Started;
                   </Link>;
                   <Link;
-                    href="/case-studies";
-                    className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300";
+                    href="/case - studies";
+                    className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - cyan - 400 / 50 transition - all duration - 300";
                   >;
                     View More Case Studies;
                   </Link>;
@@ -292,6 +276,8 @@ export default function CaseStudyPage() {
   }
 <<<<<<< HEAD
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

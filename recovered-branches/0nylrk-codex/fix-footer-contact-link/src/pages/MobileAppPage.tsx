@@ -13,6 +13,7 @@ import {AppScreenshots} from "@/components/mobile-app/AppScreenshots";
 import {AppTestimonials} from "@/components/mobile-app/AppTestimonials";
 import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner";
 import {DownloadSection} from "@/components/mobile-app/DownloadSection";
+
 =======
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
@@ -29,23 +30,34 @@ import { DownloadSection } from "@/components/mobile-app/DownloadSection",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const MobileAppPage: React.FC = () => {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-    <AppLayout>
+
+    <AppLayout>;
+
       <SEO
         title="Zion AI Marketplace App"
         description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now."
         keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs"
-      />
-      <MobileAppHero />
-      <AppFeatures />
-      <AppScreenshots />
-      <AppTestimonials />
-      <DownloadSection />
-      <AppStoreBanner />
-    </AppLayout>
-  )
-<<<<<<< HEAD
-}
+
+      />;
+
+      <MobileAppHero />;
+
+      <AppFeatures />;
+
+      <AppScreenshots />;
+
+      <AppTestimonials />;
+
+      <DownloadSection />;
+
+      <AppStoreBanner />;
+    </AppLayout>;
+  );
+};
+
+
 export default MobileAppPage;
 
 =======
@@ -88,4 +100,5 @@ const MobileAppPage: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default MobileAppPage;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

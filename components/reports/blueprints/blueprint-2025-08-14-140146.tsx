@@ -1,7 +1,4 @@
-import Head from 'next/head';
 
-export default function Page() {
-<<<<<<< HEAD
 
   return (
 <<<<<<< HEAD

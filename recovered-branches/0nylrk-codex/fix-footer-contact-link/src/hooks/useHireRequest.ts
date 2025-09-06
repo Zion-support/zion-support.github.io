@@ -10,22 +10,19 @@ export interface HireRequestData {
     id: string;
     full_name: string;
 
-    professional_title: string
-
-    email?: string
+    professional_title: string,
+    email?: string;
   }
   requester: {
     name: string;
+    email: string,
+    id?: string;
 
-    email: string
-
-    id?: string
   }
   project: {
     overview: string;
     timeline: string;
 
-    budgetMin: number
 
 =======
 import {useState} from 'react';
@@ -46,7 +43,7 @@ export interface HireRequestData {
   talent: {
     id: string,
     full_name: string,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
     professional_title: string,
     email?: string
   },
@@ -77,39 +74,90 @@ export function useHireRequest() {;
     setError(null)
     try {
       // Call the edge function to process the hire request
-      const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
+      const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
         body: requestData
-<<<<<<< HEAD
-      });
+
 =======
+
       }),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       if (error) throw error;
       // Show success message
       toast({
-<<<<<<< HEAD
-        title: "Request Submitted"
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
-      return { success: true, requestId: response?.request_id }
-    } catch (error) {
-      console.error("Error submitting hire request:", error);
-      const errorMessage = error instanceof Error
-        ? error.message
-        : "There was a problem submitting your request. Please try again.";
-=======
+
+
         title: "Request Submitted",
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),
+        description: `Your request to hire ${requestData && requestData.talent.full_name} has been sent successfully.`});
       
       return { success: true, requestId: response?.request_id }
     } catch (error) {
-      console.error("Error submitting hire request:", error),
+      console && console.error("Error submitting hire request:", error);
       
       const errorMessage = error instanceof Error 
+
+    budget_min: number,
+    budget_max: number;
+  }
+}
+export /**
+ * useHireRequest - Function description
+ */
+function useHireRequest() {
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const submitHireRequest = async (request_data: HireRequestData) => {
+    setIsSubmitting (true);
+    set_error (null),
+    try {
+      // Call the edge function to process the hire request;
+      const { data: response, error } = await supabase.functions.invoke ('process - hire - request', {
+        body: request_data;
+      });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Show success message;
+      toast ({
+        title: "Request Submitted",
+        description: `Your request to hire ${request_data.talent.full_name} has been sent successfully.`});
+;
+      return { success: true, request_id: response?.request_id }
+    } catch (error) {
+      console.error ("Error submitting hire request:", error);
+;
+      const error_message = error instanceof Error;
+        ? error.message;
+        : "There was a problem submitting your request. Please try again.";
+;
+      set_error (error_message);
+;
+      toast ({
+        title: "Error";
+        description: error_message,
+        variant: "destructive"});
+;
+      return { success: false, error: error_message }
+
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+
+;
+  return {
+    submitHireRequest;
+    is_submitting;
+    error;
+
+=======
         ? error.message 
         : "There was a problem submitting your request. Please try again.",
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       setError(errorMessage);
       toast({
 <<<<<<< HEAD

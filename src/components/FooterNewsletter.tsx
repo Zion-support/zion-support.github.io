@@ -86,9 +86,10 @@ export function FooterNewsletter(): React.ReactElement {
         onChange={(e) => setHoneypot(e.target.value)}
         style={{ display: 'none' }}
         tabIndex={-1}
-        autoComplete="off"
-      />
-      
+        autoComplete='off';
+        style={{ display: 'none' }}
+      />;
+
       <Button
         type="submit"
         disabled={isSubmitting}

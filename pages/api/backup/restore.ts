@@ -20,6 +20,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
 <<<<<<< HEAD
     return res.status(500).json({ error: e?.message |'Restore failed' })
+  }
+
+}
+
 =======
 =======
     return res.status(500).json({ error: e?.message || 'Restore failed' })
@@ -44,6 +48,10 @@ export default async function handler(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
+
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
   }
 }

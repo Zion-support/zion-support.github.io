@@ -1,27 +1,26 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
+
+
 const { test, expect } = require('@playwright/test')'
-test.describe('"E2E"
+test && test.describe('"E2E"
   test('"homepage"
     "await"
     "await"
   test('"contact"
     "await"
-    await page.fill('input[name="name"
-    "await": page.fill('input[name="email"
-    "await": page.fill('textarea[name="message"
-    await page.click('button[type="submit"
+    await page && page.fill('input[name="name"
+    "await": page && page.fill('input[name="email"
+    "await": page && page.fill('textarea[name="message"
+    await page && page.click('button[type="submit"
     "await"
     "await"
     "await"
     "await"
+
     await page.fill('input[name="name"
     await page.fill('input[name="email"
-<<<<<<< HEAD
-    await page.fill('textarea[name="message"
-=======
+
 const { test, expect } = require('@playwright/test')';
 test.describe('"E2E": Tests', () => {';
   test('"homepage": loads correctly', async ({ page }) => {';

@@ -9,6 +9,7 @@
       if (parts.length > 1) {
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0]
+
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -114,12 +115,29 @@ function restorePage(pagePath) {;
 
       corruptedBackup: corruptedBackupPath
 =======
-;
+'),
+      // Check condition
+if ( {) {
+  $2
+}
+        // Take the content after the conflict resolution;
+        backup_content = parts[1].split ('>>>>>>>')[0];
+      }
+    }
+    // Clean up the content;
+    backup_content = backup_content.trim (),
+    // Ensure it has proper structure;
+    if () {) {
+  $2
+}
+      return { restored: false, reason: 'Backup content is also corrupted' }
+    }
     // Create a backup of the current corrupted file;
-    const timestamp = Date.now();
-    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`;
-    fs.writeFileSync(corruptedBackupPath, currentContent),;
+    const timestamp = Date.now (),
+    const corruptedBackupPath = `${page_path}.corrupted.${timestamp}`,
+    fs.writeFileSync (corruptedBackupPath, current_content),
     // Restore the page;
+
     fs.writeFileSync(pagePath, backupContent),;
     return {;
       restored: true,;
@@ -172,15 +190,6 @@ function fixSpecificPages() {
       console.log(`⚠️  Page not found: ${pagePath}`)
       results.failed++
 
-=======
-  },
-  // // // console.log('🚀 Starting targeted page restoration...'),
-  // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
-  for (const pagePath of corruptedPages) {
-    if (!fs.existsSync(pagePath)) {
-      // // // console.log(`⚠️  Page not found: ${pagePath}`),
-      results.failed++,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       results.details.push({
         file: pagePath
         restored: false
@@ -204,6 +213,7 @@ function fixSpecificPages() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const result = restorePage(pagePath),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (result.restored) {
       results.restored++
       console.log(`✅ Restored: ${pagePath}`)
@@ -229,15 +239,8 @@ function fixSpecificPages() {
   }
   // Generate summary
 
-  console.log('\n📊 Restoration Summary: ')
-  console.log(`   Total pages: ${results.total}`)
-  console.log(`   Restored: ${results.restored}`)
-  console.log(`   Failed: ${results.failed}`)
-  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)
-  // Save detailed report
-  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json')
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
-  console.log(`\n📄 Detailed report saved to: ${reportPath}`)
+      results.failed++,
+
 
   return results
 =======
@@ -329,8 +332,8 @@ module.exports = {
   fixSpecificPages
   findBestBackup
 }
-
 =======
+
 ;
 module.exports = {;
   restorePage,;
@@ -342,16 +345,15 @@ module.exports = {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {
-  restorePage,
+  restore_page,
   fixSpecificPages,
   findBestBackup;
-<<<<<<< HEAD
-},;
 
-=======
+
 };
 =======
->>>>>>> main
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

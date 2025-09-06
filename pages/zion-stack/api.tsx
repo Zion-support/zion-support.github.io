@@ -2,10 +2,8 @@
 import dynamic from 'next/dynamic';
 <<<<<<< HEAD
 
-const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false })
 
-export default function ZionStackApiRoute() {
-  return <ApiDocsPage />
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
 <<<<<<< HEAD

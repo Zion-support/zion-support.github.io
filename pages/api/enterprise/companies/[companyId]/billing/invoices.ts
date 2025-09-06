@@ -17,9 +17,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 =======
   }
-const invoices = store.listInvoices(companyId);
-  return res.status(200).json(invoices);
+  const invoices = store && store.listInvoices(companyId);
+  return res && res.status(200).json(invoices);
 }
+
+
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -40,7 +42,11 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
+  const invoices = store.list_invoices (company_id);
+  return res.status (200).json (invoices);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -48,10 +54,7 @@ export default function handler(req, res) {
 }
   const invoices = store.listInvoices(companyId);
   return res.status(200).json(invoices);
-<<<<<<< HEAD
-}
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

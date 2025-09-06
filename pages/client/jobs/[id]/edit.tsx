@@ -11,6 +11,7 @@ const fetcher = (url: string) => fetch(url).then(r => r.json());
 <<<<<<< HEAD
 export default function EditJobPage() {
 =======
+
 export default function EditJobPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -26,7 +27,7 @@ export default function EditJobPage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
-  const { id } = router.query;
+  const { id } = router && router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
   const job = data?.job;
 <<<<<<< HEAD
@@ -46,12 +47,6 @@ export default function EditJobPage(req, res) {
   }, [job]);
   async function save() {
     await fetch(`/api/jobs/${id}`, {
-      method: 'PATCH'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ title, description, category })
-    });
-    router.push('/client/dashboard');  }
-  if (!job) return <div>Loading…</div>;
 
 =======
 <<<<<<< HEAD
@@ -62,15 +57,11 @@ export default function EditJobPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   useEffect(() => {;
     if (job) {;
-      setTitle(job.title || '');
-      setDescription(job.description || '');
-      setCategory(job.category || '');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, [job]),;
+      setTitle(job && job.title || '');
+      setDescription(job && job.description || '');
+      setCategory(job && job.category || '');    }
+  }, [job]);
+
   async function save() {;
     await fetch(`/api/jobs/${id}`, {;
       method: 'PATCH',;
@@ -112,7 +103,7 @@ export default function EditJobPage(req, res) {
 <<<<<<< HEAD
 =======
 
-}
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )

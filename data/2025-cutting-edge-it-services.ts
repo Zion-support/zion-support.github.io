@@ -433,6 +433,10 @@ export const cuttingEdgeITServices2025 = [
   },;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+=======
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
@@ -655,3 +659,4 @@ export const cuttingEdgeITServices2025 = [;
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

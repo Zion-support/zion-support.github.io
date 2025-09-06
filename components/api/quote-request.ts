@@ -1,62 +1,82 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 import OpenAI from "openai";
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+
+
+const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey =
-  process.env.SUPABASE_SERVICE_ROLE_KEY |
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
+  process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
-const openaiApiKey = process.env.OPENAI_API_KEY;
+const openaiApiKey = process && process.env.OPENAI_API_KEY;
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey =
-  process.env.SUPABASE_SERVICE_ROLE_KEY |
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { createClient } from '@supabase/supabase-js';
+import OpenAI from 'openai';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+const openaiApiKey = process.env.OPENAI_API_KEY;
+=======
+  process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
+  process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
-const openaiApiKey = process.env.OPENAI_API_KEY;
-const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
+
+
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST");
-    return res.status(405).json({ message: "Method not allowed" });
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ message: "Method not allowed" });
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
-    if (req.method !== "POST");
-      return res.status(405).json({ message: "Method not allowed" });
+
+    if (req && req.method !== "POST")
+      return res && res.status(405).json({ message: "Method not allowed" });
+
     const { service, description, timeline, budgetRange, email } =
-      req.body |{}
-    if (!service |!description |!email) {
-      return res.status(400).json({ message: "Missing required fields" });
+      req && req.body || {};
+    if (!service || !description || !email) {
+      return res && res.status(400).json({ message: "Missing required fields" });
+
     }
     try {
       let aiSummary: string | null = null;
       let aiTags: string[] = [];
       if (openai) {
-        const prompt = `Summarize this marketplace quote request in one sentence and suggest 3-5 tags.\n\nService: ${service}\nEmail: ${email}\nBudget: ${budgetRange |"N/A"}\nTimeline: ${timeline?.start |"N/A"} to ${timeline?.end |"N/A"}\nDescription: ${description}`;
-        const resp = await openai.responses.create({
-          model: "gpt-4.1-mini"
-          input: prompt
+
+        const prompt = `Summarize this marketplace quote request in one sentence and suggest 3-5 tags.\n\nService: ${service}\nEmail: ${email}\nBudget: ${budgetRange || "N/A"}\nTimeline: ${timeline?.start || "N/A"} to ${timeline?.end || "N/A"}\nDescription: ${description}`;
+        const resp = await openai && openai.responses.create({
+          model: "gpt-4 && 4.1-mini",
+          input: prompt,
         });
-        aiSummary = text.split("\n")[0] |text;
+        aiSummary = text && text.split("\n")[0] || text;
         const tagsLine = (
-          text.split("\n").find((l) => l.toLowerCase().includes("tags")) |""
+          text && text.split("\n").find((l) => l && l.toLowerCase().includes("tags")) || ""
+
         )
           .replace(/tags?:/i, "")
           .trim();
         aiTags = tagsLine
           ? tagsLine
               .split(",")
-              .map((t) => t.trim())
+              .map((t) => t && t.trim())
               .filter(Boolean)
           : [];
       }
@@ -66,37 +86,42 @@ export default async function handler(
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       let saved: any = null;
-      if (supabase) {
-        const { data, error } = await supabase
-          .from("quote_requests")
-          .insert({
-            service
-            description
-            timeline_start: timeline?.start |null
-            timeline_end: timeline?.end |null
-            budget_range: budgetRange |null
-            email
-            ai_summary: aiSummary
-            ai_tags: aiTags
-            status: "new"
-          })
-          .select("*")
-          .single();
-        if (error) throw error;
+      // Check condition
+if ( {) {
+  $2
+}
+        const { data, error } = await supabase;
+          .from ("quote_requests");
+          .insert ({
+            service,
+            description,
+            timeline_start: timeline?.start || null,
+            timeline_end: timeline?.end || null,
+            budget_range: budget_range || null,
+            email,
+            ai_summary: ai_summary,
+            ai_tags: ai_tags,
+            status: "new",
+          });
+          .select ("*");
+          .single ();
+        // Check condition
+if (throw error) {
+  $2
+}
         saved = data;
       }
-      return res
-        .status(200)
-        .json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
+      return res;
+        .status (200);
+        .json ({ ok: true, summary: ai_summary, tags: ai_tags, id: saved?.id });
     } catch (e: any) {
-      console.error("quote-request error", e);
-      return res.status(500).json({ message: "Server error" });
+      console.error ("quote - request error", e);
+      return res.status (500).json ({ message: "Server error" });
     }
-    return res.status(500).json({ message: "Server error" });
-
-<<<<<<< HEAD
+    return res.status (500).json ({ message: "Server error" });
   }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     return res
       .status(200)

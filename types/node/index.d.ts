@@ -6,6 +6,8 @@ declare const __dirname: string;
 declare const __filename: string;
 export {}
 =======
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type;
+
 declare const __dirname: string,;
 declare const __filename: string,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

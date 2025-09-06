@@ -21,7 +21,6 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
 
-  const isMobile = useIsMobile();
 
 =======
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -33,7 +32,8 @@ import { useIsMobile } from "@/hooks/use-mobile",
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <SEO
@@ -84,14 +84,17 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from "lucide-react",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { useIsMobile } from "@/hooks/use-mobile",;
+
 function ApplicationStatusTrackerContent() {;
   const isMobile = useIsMobile();
-  return (;
+
+  return (
     <>;
-      <SEO;
-        title="Application Status Tracker | Zion AI Marketplace";
-        description="Track the status of your job applications in the Zion AI marketplace.";
+      <SEO
+        title="Application Status Tracker | Zion AI Marketplace" 
+        description="Track the status of your job applications in the Zion AI marketplace." 
       />;
+
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
           <div>;
@@ -99,6 +102,7 @@ function ApplicationStatusTrackerContent() {;
             <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>;
           </div>;
         </div>;
+
         <div className="grid grid-cols-1 gap-6">;
           <Card>;
             <CardHeader className="border-b bg-muted/50">;
@@ -132,14 +136,11 @@ export default function ApplicationStatusTracker() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
-export default function ApplicationStatusTracker() {
-  return (
-    <ProtectedRoute>
-      <AppLayout>
-        <ApplicationStatusTrackerContent />
-      </AppLayout>
-    </ProtectedRoute>
-  )
+    </ProtectedRoute>);
+=======
+
+
+
 }
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

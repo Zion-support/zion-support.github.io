@@ -38,6 +38,7 @@ import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
 import { ApiLogs } from "@/components/developers/ApiLogs",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TabDefinition {
   id: string
   label: string
@@ -47,7 +48,12 @@ interface TabDefinition {
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
+interface TabDefinition {;
+  id: string,;
+  label: string,;
+  icon: LucideIcon;
+}
+
 export function DeveloperPortal() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
@@ -59,12 +65,14 @@ export function DeveloperPortal() {
 
   const [activeTab, setActiveTab] = useState<string>("documentation");
 
+  const { user } = useAuth();
 =======
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState<string>("documentation"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen }
@@ -83,16 +91,55 @@ export function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
+=======
+import { useState } from './react';
+import { use_auth } from '@/hooks / use_auth';
+import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from './lucide-react';
+;
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { ApiKeysManager } from '@/components / developers / ApiKeysManager';
+import { WebhooksManager } from '@/components / developers / WebhooksManager';
+import { ApiDocumentation } from '@/components / developers / ApiDocumentation';
+import { ApiLogs } from '@/components / developers / ApiLogs';
+interface TabDefinition {
+  id: string,
+  label: string,
+  icon: LucideIcon;
+}
+export /**
+ * DeveloperPortal - Function description
+ */
+function DeveloperPortal() {
+  const { user } = use_auth ();
+  const [active_tab, setActiveTab] = useState < string>("documentation");
+;
+  // Define the tabs;
+  const tabs: TabDefinition[] = [;
+    { id: "documentation", label: "Documentation", icon: BookOpen },
+    { id: "api - keys", label: "API Keys", icon: Key },
+    { id: "webhooks", label: "Webhooks", icon: Webhook },
+    { id: "logs", label: "Logs", icon: List }],
+  return (
+    <div className="w - full max - w-7xl mx - auto p - 4 md:p - 8">;
+      <div className="mb - 8">;
+        <h1 className="text - 3xl font - bold text - white flex items - center">;
+          <Terminal className="mr - 3" size={32} />;
+          Developer Portal;
+        </h1>;
+        <p className="text - zinc - 400 mt - 2">;
+          Access the Zion API, manage your API keys, and set up webhooks.;
+        </p>;
+      </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Tabs */}
+
+=======
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
-<<<<<<< HEAD
-            const Icon = tab.icon;
 
-=======
             const Icon = tab.icon,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             return (
               <button
                 key={tab.id}
@@ -103,8 +150,7 @@ export function DeveloperPortal() {
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
-<<<<<<< HEAD
-=======
+
                 <Icon size={16} className="mr-2" />
 import { useState } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -131,13 +177,15 @@ interface TabDefinition {;
 export function DeveloperPortal() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState<string>("documentation"),;
+
   // Define the tabs;
   const tabs: TabDefinition[] = [;
     { id: "documentation", label: "Documentation", icon: BookOpen },;
     { id: "api-keys", label: "API Keys", icon: Key },;
     { id: "webhooks", label: "Webhooks", icon: Webhook },;
-    { id: "logs", label: "Logs", icon: List }];
-  return (;
+    { id: "logs", label: "Logs", icon: List }],;
+
+  return (
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">;
       <div className="mb-8">;
         <h1 className="text-3xl font-bold text-white flex items-center">;
@@ -148,9 +196,11 @@ export function DeveloperPortal() {;
           Access the Zion API, manage your API keys, and set up webhooks.;
         </p>;
       </div>;
+
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">;
         <div className="flex flex-wrap -mb-px">;
+
           {tabs.map((tab) => {;
             const Icon = tab.icon;
             return (;
@@ -172,18 +222,22 @@ export function DeveloperPortal() {;
                 {tab.label}
               </button>
             )
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           })}
-        </div>
-      </div>
+
+        </div>;
+      </div>;
+
+
       {/* Tab content */}
-      <div>
+      <div>;
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
-      </div>
-    </div>
-  )
+      </div>;
+    </div>;
+  );
 }
 <<<<<<< HEAD
 export default function ProtectedDeveloperPortal() {
@@ -195,14 +249,17 @@ export default function ProtectedDeveloperPortal() {
 }
 <<<<<<< HEAD
 =======
+
 ;
+
 export default function ProtectedDeveloperPortal() {;
-  return (;
+  return (
     <ProtectedRoute>;
       <DeveloperPortal />;
     </ProtectedRoute>;
   );
 }
+
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======

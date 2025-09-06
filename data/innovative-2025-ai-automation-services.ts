@@ -36,7 +36,7 @@ export interface InnovativeAIAutomationService {;
     email: string;
     address: string;
 
-    website: string;
+
   }
 
   realImplementation: boolean;
@@ -404,7 +404,9 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     reviews: 28
 <<<<<<< HEAD
   }
+
 ];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 export interface InnovativeAIAutomationService {;
 =======

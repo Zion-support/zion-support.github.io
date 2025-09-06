@@ -54,8 +54,9 @@ export default Sidebar;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export const Sidebar: React.FC = () => {
+const Sidebar: React.FC = () => {;
   return (
     <aside className="w-64 bg-gray-800 text-white min-h-screen">
       <div className="p-4">

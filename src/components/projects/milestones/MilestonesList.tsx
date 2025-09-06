@@ -24,18 +24,6 @@ interface MilestonesListProps {
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
-import { useAuth  } from '@/hooks/useAuth';
-import { MilestoneCard  } from './MilestoneCard';
-import { AddMilestoneForm  } from './AddMilestoneForm';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper
-import { Plus } from 'lucide-react'
-import { EmptyState } from '@/components/ui/empty-state';
-interface MilestonesListProps {
 
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>
@@ -130,43 +118,34 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
-      <div className="space-y-4">
-        {[1, 2, 3].map((i) => (
-          <Card key={i}>
-            <CardContent className="p-6">
-              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
-            </CardContent>
-          </Card>
+      <div className="space-y-4">;
+        {[1, 2, 3].map((i,) => (;
+          <Card key={i}>;
+            <CardContent className="p-6">;
+              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;
+              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;
+              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
+            </CardContent>;
+          </Card>;
         ))}
-      </div>
-    )
+      </div>;
+    );
   }
-<<<<<<< HEAD
-=======
+
+
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
-        icon={<span className="text-3xl">📊</span>}
+        icon = {<span className="text-3xl">📊</span>,}
         title="No Milestones Yet"
-<<<<<<< HEAD
-        description = {isClient ?
-          "Break down the project into manageable milestones to track progress and payments." :
-          "No milestones have been created for this project yet.",}
-        action={isClient ?
-          {
-            text: "Create First Milestone"
-            onClick: (,) => setShowAddForm(true)
-          } : undefined
-        }
-      />
-    )
-  }
+
 =======
+
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
           "No milestones have been created for this project yet."}
@@ -190,21 +169,40 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  if (milestones && milestones.length === 0 && !showAddForm) {;
+    return (
+      <EmptyState
+        icon = {<span className="text-3xl">📊</span>,}
+        title="No Milestones Yet";
+        description = {isClient ? ;
+          "Break down the project into manageable milestones to track progress and payments." : ;
+          "No milestones have been created for this project yet.",}
+        action={isClient ? ;
+          {;
+            text: "Create First Milestone",;
+            onClick: (,) => setShowAddForm(true);
+          } : undefined;
+        }
+      />;
+    );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  }
   return (
-    <div className="space-y-6">
-      {isClient && !showAddForm && (
-        <div className="flex justify-end">
-          <Button onClick={() => setShowAddForm(true)}>
-            <Plus className="h-4 w-4 mr-2" />
-            Add Milestone
-          </Button>
-        </div>
+    <div className="space-y-6">;
+      {isClient && !showAddForm && (;
+        <div className="flex justify-end">;
+          <Button onClick={(,) => setShowAddForm(true)}>;
+            <Plus className="h-4 w-4 mr-2" />;
+            Add Milestone;
+          </Button>;
+        </div>;
       )}
-<<<<<<< HEAD
-=======
+
+
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
@@ -257,22 +255,25 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </CardContent>;
         </Card>;
       )}
-      
-      <div className="space-y-4">
-        {milestones.map((milestone) => (
+
+
+      <div className="space-y-4">;
+        {milestones && milestones.map((milestone,) => (;
+
           <MilestoneCard
-            key={milestone.id}
-            id={milestone.id}
-            projectId={milestone.project_id}
-            title={milestone.title}
-            description={milestone.description}
-            amount={parseFloat(milestone.amount.toString())}
-            status={milestone.status}
-            dueDate={milestone.due_date}
-            onApprove={onApprove}
-            onReject={onReject}
+            key = {milestone && milestone.id,}
+            id = {milestone && milestone.id,}
+            projectId = {milestone && milestone.project_id,}
+            title = {milestone && milestone.title,}
+            description = {milestone && milestone.description,}
+            amount = {parseFloat(milestone && milestone.amount.toString()),}
+            status = {milestone && milestone.status,}
+            dueDate = {milestone && milestone.due_date,}
+            onApprove = {onApprove,}
+            onReject = {onReject,}
           />;
         ))}
+
       </div>;
     </div>;
   );

@@ -19,6 +19,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error: any) {
 <<<<<<< HEAD
     res.status(500).json({ error: error?.message |'Failed to update status' })
+  }
+
+}
+
 =======
 =======
     res.status(500).json({ error: error?.message || 'Failed to update status' })
@@ -68,6 +72,10 @@ export default function handler(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
+
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
   }
 }

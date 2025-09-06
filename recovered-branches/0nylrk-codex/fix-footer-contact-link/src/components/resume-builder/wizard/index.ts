@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-export { ResumeWizard } from "./ResumeWizard";
-export * from "./types";
-export * from "./constants";
-=======
 
 <<<<<<< HEAD
 export { ResumeWizard } from './ResumeWizard',;

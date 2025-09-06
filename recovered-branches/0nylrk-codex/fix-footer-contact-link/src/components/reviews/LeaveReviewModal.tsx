@@ -121,29 +121,35 @@ interface LeaveReviewModalProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-;
-export function LeaveReviewModal({;
-  projectId,;
-  revieweeId,;
-  revieweeName,;
-  isOpen,;
+
+export function LeaveReviewModal(): any ({;
+
+  projectId;
+  revieweeId;
+  revieweeName;
+  isOpen;
   onClose}: LeaveReviewModalProps) {;
-  const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId),;
-  const [open, setOpen] = useState(isOpen),;
+  const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
+  const [open, setOpen] = useState(isOpen);
+
+
   useEffect(() => {;
     setOpen(isOpen);
-  }, [isOpen]),;
+  }, [isOpen]);
+
   const handleOpenChange = (open: boolean) => {;
     setOpen(open),;
     if (!open) {;
       onClose();
     }
-  },;
+  };
+
   const handleSubmit = async (formValues: any) => {;
     if (userReview) {;
       // Update existing review;
-      const { project_id, reviewee_id, ...updates } = formValues,;
-      const success = await updateReview(userReview.id, updates),;
+
+      const { project_id, reviewee_id, ...updates } = formValues;
+      const success = await updateReview(userReview && userReview.id, updates);
       if (success) {;
         handleOpenChange(false);
       }
@@ -159,33 +165,38 @@ export function LeaveReviewModal({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
-      return success
+      return success;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
 
 =======
+
   },
 =======
   };
 =======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-    <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="max-w-md">
-        <DialogHeader>
-          <DialogTitle>
+    <Dialog open={open} onOpenChange={handleOpenChange}>;
+      <DialogContent className="max-w-md">;
+        <DialogHeader>;
+          <DialogTitle>;
             {userReview ? "Edit Your Review" : `Rate Your Experience with ${revieweeName}`}
-          </DialogTitle>
-          <DialogDescription>
-            Your feedback helps build a trustworthy community. It will be visible after moderation.
-          </DialogDescription>
-        </DialogHeader>
+
+          </DialogTitle>;
+          <DialogDescription>;
+            Your feedback helps build a trustworthy community. It will be visible after moderation.;
+          </DialogDescription>;
+        </DialogHeader>;
+
+
         <ReviewForm
           projectId={projectId}
           revieweeId={revieweeId}
@@ -193,17 +204,34 @@ export function LeaveReviewModal({;
           onSubmit={handleSubmit}
           defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
-<<<<<<< HEAD
-        />
-      </DialogContent>
-    </Dialog>
-  )
-}
-=======
+
         />;
       </DialogContent>;
     </Dialog>;
   );
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { useState, useEffect } from './react';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
+import { Button } from '@/components / ui / button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { ReviewForm } from './ReviewForm';
+import { use_reviews } from '@/hooks / use_reviews';
+interface LeaveReviewModalProps {
+  project_id: string,
+  reviewee_id: string,
+  reviewee_name: string,
+  is_open: boolean,
+  on_close: () => void;
+}
+export /**
+ * LeaveReviewModal - Function description
+ */
+function LeaveReviewModal() {
+  const { user_review, submit_review, update_review, is_submitting } = use_reviews (project_id);
+  const [open, set_open] = useState (is_open);
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+

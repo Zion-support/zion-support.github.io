@@ -3,9 +3,8 @@ const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 <<<<<<< HEAD
 
-  const abs = path.resolve(__dirname, '....', relPath)
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true })
-  return { status: res.status |0, stdout: res.stdout |'', stderr: res.stderr |'' }
+=======
+
 
 =======
   const abs = path.resolve(__dirname, '....', relPath),

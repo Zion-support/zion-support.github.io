@@ -81,8 +81,7 @@ log(message) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -177,8 +176,7 @@ class ErrorPreventionAutomation {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -247,8 +245,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -637,8 +634,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 }
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -671,8 +667,7 @@ automation.start().catch(error => {}),
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -746,9 +741,8 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 30000
       };);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
@@ -821,9 +815,8 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 30000
       };);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
@@ -894,9 +887,8 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 300000
       };);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
@@ -967,9 +959,8 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 30000
       };);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
@@ -1032,8 +1023,7 @@ automation.start().catch(error => {}),
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -1117,9 +1107,8 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 120000
       };);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
@@ -1209,7 +1198,7 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -1285,8 +1274,7 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -1437,8 +1425,7 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -1555,8 +1542,7 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -1632,8 +1618,7 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======

@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import { Button } from "@/components/ui/button";
-interface ContractHeaderProps {
-  onCreateClick: () => void;
-}
-<<<<<<< HEAD
-export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
+
+
+export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {;
   return (
     <div className="flex justify-between items-center mb-8">
       <div>
@@ -64,6 +58,7 @@ export function ContractHeader({ onCreateClick }: ContractHeaderProps) {;
           Create legally binding agreements with optional blockchain deployment;
         </p>;
       </div>;
+
       <Button size="lg" onClick={onCreateClick}>;
         Create New Contract;
       </Button>;

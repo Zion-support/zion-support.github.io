@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -122,15 +121,6 @@ export const NotificationCenter: React.FC = () => {;
     }
   }, [open, loadedOnce, fetchNotifications]),
 
-  const handleMarkAllAsRead = async () => {
-    try {
-      await markAllAsRead(),
-      enqueueSnackbar("All notifications marked as read", { variant: 'success' })
-    } catch (err) {
-      logErrorToProduction('Failed to mark notifications as read:', { data: err }),
-      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
-    }
-  },
 
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
@@ -148,10 +138,7 @@ export const NotificationCenter: React.FC = () => {;
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
-<<<<<<< HEAD
-              {unreadCount > 9 ? '9+' : unreadCount}
-            </span>
-=======
+
   }, [open, loadedOnce, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
     try {;
@@ -163,6 +150,7 @@ export const NotificationCenter: React.FC = () => {;
     }
   },;
   const handleFilterChange = (newFilter: FilterType) => {;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setFilter(newFilter as any);
   };
   return (;
@@ -188,11 +176,14 @@ export const NotificationCenter: React.FC = () => {;
         <NotificationHeader
           unreadCount = {unreadCount,}
           onMarkAllAsRead = {handleMarkAllAsRead,}
-        />
+        />;
+
         <NotificationFilter
           filter = {filter as FilterType,}
           onFilterChange = {handleFilterChange,}
-        />
+        />;
+
+
         <NotificationList
 =======
         <NotificationHeader 
@@ -243,6 +234,7 @@ export const NotificationCenter: React.FC = () => {;
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
         />;
+
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;

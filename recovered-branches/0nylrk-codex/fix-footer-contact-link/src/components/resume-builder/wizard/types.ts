@@ -11,22 +11,28 @@ import {Resume} from "@/types/resume";
 export interface StepProps {
   id: string;
   label: string
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
 export interface NavigationButtonsProps {
+  on_back?: () => void;
+  on_next?: () => void;
 =======
 
-export interface NavigationButtonsProps {;
+import { Resume } from "@/types/resume",
+
+=======
+import {Resume} from "@/types/resume";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   onBack?: () => void;
   onNext?: () => void;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   isNextDisabled?: boolean;
   backLabel?: string;
   nextLabel?: string;
   isLoading?: boolean
 <<<<<<< HEAD
 =======
+
 =======
 }
 
@@ -91,10 +97,7 @@ export interface CreateResumeFormProps {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export interface EmptyResumeProps {
-<<<<<<< HEAD
-  onCreateClick: () => void;
-}
-=======
+
   onCreateClick: () => void
 }
 ;

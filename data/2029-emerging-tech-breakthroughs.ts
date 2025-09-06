@@ -55,17 +55,13 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Expert insights"
 
     ];
-    link: "/services/2029-emerging-tech-breakthrough", category: "Emerging Tech Breakthroughs 2029"
-    realImplementation: true
-
-    contactInfo: {
-      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+    link: "/services / 2029 - emerging - tech - breakthrough", category: "Emerging Tech Breakthroughs 2029",
+    real_implementation: true,
+    contact_info: {
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+
 export interface EmergingTechBreakthrough2029 {;
 =======
   };
@@ -152,5 +148,9 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
+
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

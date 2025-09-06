@@ -5,11 +5,9 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
-// In-memory simple rate limiter (per IP)
-const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000, // 5 minutes
-const RATE_LIMIT_MAX_REQUESTS = 15,
 
-const ipToRequests: Record<string, { timestamps: number[] }> = {},
+=======
+
 
 function isRateLimited(ip: string): boolean {
   const now = Date.now(),
@@ -60,6 +58,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -70,8 +69,8 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
-  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
+
+
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -83,9 +82,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   // Auth via Bearer token
-const authHeader = req.headers.authorization |''
-  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
-  if (!token |token !== process.env.OPERATOR_API_TOKEN) {
+
+
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit

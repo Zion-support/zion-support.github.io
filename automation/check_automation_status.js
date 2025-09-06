@@ -52,8 +52,7 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -69,9 +68,6 @@ async function checkAutomationStatus() { const statusReport = {
     automationScripts: [];
     systemHealth: {};
     "overallStatus": 'unknow,n'};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -120,8 +116,7 @@ async function checkAutomationStatus() { const statusReport = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
@@ -201,8 +196,7 @@ if (require.main === module) {}
   checkAutomationStatus();
 }
 module.exports = { checkAutomationStatus };,
-<<<<<<< HEAD
-=======;
+;
 =======
 ;
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
@@ -210,8 +204,7 @@ module.exports = { checkAutomationStatus };,
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
@@ -272,11 +265,7 @@ async function checkAutomationStatus() {
       } catch(error) { 
       statusReport.pm2Processes = [] }
 
-      } catch(error) { 
-      statusReport.pm2Processes = [] }
 
-      } catch(error) { 
-      statusReport.pm2Processes = [] }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -394,8 +383,7 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -471,8 +459,7 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======

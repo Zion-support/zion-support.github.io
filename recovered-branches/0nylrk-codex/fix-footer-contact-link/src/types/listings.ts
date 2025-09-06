@@ -9,9 +9,6 @@ export interface ListingCategory {;
   id: string;
   name: string;
 
-  description: string
-
-  icon: string
 }
 <<<<<<< HEAD
 export interface ProductListing {
@@ -23,9 +20,9 @@ export interface ProductListing {;
   title: string;
   description: string;
 
-  category: string
+  category: string,
+  subcategory?: string, // Adding optional subcategory field;
 
-  subcategory?: string, // Adding optional subcategory field
   price: number | null;
   currency: string;
   tags: string[];
@@ -33,20 +30,20 @@ export interface ProductListing {;
     name: string;
     id: string;
 
-    avatarUrl?: string
-    email?: string, // Added optional email property
+    avatar_url?: string,
+    email?: string, // Added optional email property;
   }
 
   images: string[];
-  createdAt: string;
+  created_at: string;
   rating?: number;
-  reviewCount?: number;
 
-  featured?: boolean
+  review_count?: number;
+  featured?: boolean,
+  ai_score?: number, // Added ai_score as optional property;
+  location?: string, // Adding location property to fix TypeScript errors;
+  availability?: string, // Adding availability property to fix TypeScript errors;
 
-  aiScore?: number, // Added aiScore as optional property
-  location?: string, // Adding location property to fix TypeScript errors
-  availability?: string, // Adding availability property to fix TypeScript errors
 }
 <<<<<<< HEAD
 export interface ListingItem {
@@ -112,4 +109,5 @@ export interface ListingItem {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export type ListingView = 'grid' | 'list';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

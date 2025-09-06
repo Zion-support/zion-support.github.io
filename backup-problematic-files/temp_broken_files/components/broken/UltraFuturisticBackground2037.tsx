@@ -690,15 +690,7 @@ ref={canvasRef}
         style={{
           background: 'transparent'
           filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2037.tsx
-        }}
-      />;
-      {children}
-    </div>;
-  );
-}
-export default UltraFuturisticBackground2037;
-=======
+
         }}      />
       {children}
     </div>

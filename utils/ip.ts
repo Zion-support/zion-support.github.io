@@ -27,8 +27,10 @@ export function getClientIp(req: any): string {;
   if (forwarded) {
     return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
   }
-  return remoteAddress |'unknown';
-}
+
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 <<<<<<< HEAD

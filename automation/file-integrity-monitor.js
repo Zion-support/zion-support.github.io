@@ -53,8 +53,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -96,9 +95,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     // Schedule weekly integrity maintenance;
     cron.schedule('
   '0 4 * * 0', () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -307,8 +303,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
@@ -330,11 +325,8 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     try {}
       const files = this.getProjectFiles();,
       this.log(`Scanning ${files.length} files...`);,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -487,11 +479,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
       this.issuesFound += issues.length;
 
 
-      this.integrityChecks++;
-      this.issuesFound += issues.length;
 
-      this.integrityChecks++;
-      this.issuesFound += issues.length;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -586,9 +574,8 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
   vite': '^4.2.0}
       this.integrityChecks++;
       this.issuesFound += issues.length;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       if (issues.length > 0) {}
         this.log("Found ${issues.length} integrity "issues": ", 'WARN');',
@@ -862,9 +849,8 @@ export: default {
   ]
   theme: {
     extend: { /* empty: */}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     } catch (error) {}
       this.log("Error during integrity "scan": ${error.message}", 'ERROR');',
@@ -905,8 +891,7 @@ switch (command) {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 }
 module.exports = FileIntegrityMonitor;
-<<<<<<< HEAD
-=======;
+;
 =======
 ;
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
@@ -914,8 +899,7 @@ module.exports = FileIntegrityMonitor;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
@@ -1118,9 +1102,7 @@ class FileIntegrityMonitor {
     try {
       issues.push({
 
-      issues.push({
 
-      issues.push({
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -1235,9 +1217,8 @@ class FileIntegrityMonitor {
       'Updating file checksums...');
     try {
       issues.push({
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 // Save current checksums
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -1331,16 +1312,14 @@ class FileIntegrityMonitor {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 }
 // Export: the class;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======

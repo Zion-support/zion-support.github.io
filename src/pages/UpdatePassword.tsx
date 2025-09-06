@@ -69,11 +69,36 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
   )
 }
 =======
+
+
+=======
+  FormMessage } from '@/components / ui / form'; import { toast  } from '@/hooks / use - toast';
+import { cleanupAuthState  } from '@/utils / auth_utils';
+import { logErrorToProduction } from '@/utils / production_logger';
+// Form validation schema;
+const updatePasswordSchema = z;
+  .object ({
+    password: z;
+      .string ();
+      .min (8, "Password must be at least 8 characters");
+      .max (64, "Password must be less than 64 characters");
+    confirm_password: z.string ()});
+  .refine ((data, ) => data.password === data.confirm_password, {
+    message: "Passwords do not match",
+    path: ["confirm_password"]}),
+type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
+}
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
       .max(64, "Password must be less than 64 characters"),
 =======
 =======
       .max(64, "Password must be less than 64 characters"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
@@ -91,12 +116,6 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
-export default function UpdatePassword() {
-  const [isLoading, setIsLoading] = useState(false),
-  const [accessToken, setAccessToken] = useState<string | null>(null),
-  const [error, setError] = useState<string | null>(null),
-  const [success, setSuccess] = useState(false),
-  const router = useRouter(),
 
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({

@@ -59,20 +59,8 @@ export type SyncEventType =;
   | "token_transfer";
   | "talent_mobility";
   | "dao_endorsement";
-<<<<<<< HEAD
-  | "leaderboard_entry";
-export interface BaseEventPayload {id: string;
-}
-export interface ProposalVoteEntry {voterId: string;
-  weight: number;
-  choice: string;
-}
-export interface ProposalPayload extends BaseEventPayload {proposalId: string;
-  title: string;
-  votes: ProposalVoteEntry[];
-}
-export interface TokenTransferPayload extends BaseEventPayload {txId: string;
-=======
+
+
   | "leaderboard_entry",;
 export interface BaseEventPayload {;
   id: string;
@@ -153,10 +141,8 @@ export interface TokenTransferPayload extends BaseEventPayload {;
   fromSubnet: string;
   toSubnet: string;
   timestamp: number;
-<<<<<<< HEAD
-}
-export interface TalentMobilityPayload extends BaseEventPayload {personId: string;
-=======
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -165,39 +151,43 @@ export interface TalentMobilityPayload extends BaseEventPayload {personId: strin
 ;
 export interface TalentMobilityPayload extends BaseEventPayload {;
   personId: string;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
-<<<<<<< HEAD
-}
-export interface DaoEndorsementPayload extends BaseEventPayload {fromDAO: string;
-  toDAO: string;
-  resolutionId: string;
-  decision: "endorse" | "reject";
-  timestamp: number;
-}
-export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: string, // userId or teamId;
-  score: number;
-  category: string, // e.g., grants, contributions;
-  rank?: number;
-  period?: string, // e.g., 2025-Q3;
-}
+
+  | "leaderboard_entry",
+export interface BaseEventPayload {
+  id: string;
 =======
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
-;
-export interface DaoEndorsementPayload extends BaseEventPayload {;
-  fromDAO: string;
-  toDAO: string;
-  resolutionId: string;
-  decision: "endorse" | "reject",;
+export interface ProposalVoteEntry {
+  voter_id: string,
+  weight: number,
+  choice: string;
+}
+export interface ProposalPayload extends BaseEventPayload {
+  proposal_id: string,
+  title: string,
+  votes: ProposalVoteEntry[];
+}
+export interface TokenTransferPayload extends BaseEventPayload {
+  tx_id: string,
+  token: string,
+  amount: number,
+  from_subnet: string,
+  to_subnet: string,
   timestamp: number;
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -232,19 +222,13 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
   | TalentMobilityPayload;
   | DaoEndorsementPayload;
-<<<<<<< HEAD
-  | LeaderboardEntryPayload;
-export interface SyncEvent {eventId: string;
-  type: SyncEventType;
-  payload: SyncEventPayload;
-=======
+
+
   | LeaderboardEntryPayload,;
 export interface SyncEvent {;
 <<<<<<< HEAD
@@ -267,15 +251,28 @@ export interface SyncEvent {;
   version: number;
   timestamp: number;
   merkleRoot?: string, // required for proposal events;
-<<<<<<< HEAD
+
+  | LeaderboardEntryPayload,
+export interface SyncEvent {
+  event_id: string,
+  type: SyncEventType,
+  payload: SyncEventPayload,
+  originInstanceId: string,
+  version: number,
+  timestamp: number,
+  merkle_root?: string, // required for proposal events;
 }
-export interface MultiverseState {config: InstanceConfig;
-  lastSyncedAt: number;
-  seenEventIds: Record<string true>;
-  latestVersionByEntityId: Record<string number>;
-  proposalMerkleById: Record<string string>;
+export interface MultiverseState {
+  config: InstanceConfig,
+  lastSyncedAt: number,
+  seenEventIds: Record < string true>,
+  latestVersionByEntityId: Record < string number>,
+  proposalMerkleById: Record < string string>;
+
   events: SyncEvent[];
+}
 =======
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

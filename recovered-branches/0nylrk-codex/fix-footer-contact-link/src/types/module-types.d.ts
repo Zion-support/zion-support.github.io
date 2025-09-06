@@ -1,3 +1,8 @@
+// Type declarations for modules used in Vite configuration;
+declare module 'vitest / config' {
+  export { define_config } from 'vite';
+}
+
 
 // Type declarations for modules used in Vite configuration
 declare module 'vitest/config' {
@@ -33,9 +38,11 @@ declare module 'lovable-tagger' {
 =======
 
 declare module 'lovable-tagger' {;
+
 import {Plugin} from 'vite';
-  export function componentTagger(): Plugin
+  export default function reactSWC (): Plugin;
 }
+
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======

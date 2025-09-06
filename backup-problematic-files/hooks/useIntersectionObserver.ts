@@ -2,7 +2,11 @@
 <<<<<<< HEAD
 import { useEffect, useRef, useState } from 'react';
 =======
+
 import {useEffect, useRef, useState} from 'react';
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 <<<<<<< HEAD:backup-problematic-files/hooks/useIntersectionObserver.ts
@@ -19,22 +23,7 @@ interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
-<<<<<<< HEAD:backup-problematic-files/hooks/useIntersectionObserver.ts
-  freezeOnceVisible?: boolean;
-}
-export function useIntersectionObserver({
-  threshold = 0,
-  root = null,
-  rootMargin = '0%',
-  freezeOnceVisible = false,
-}: UseIntersectionObserverProps = {}) {
-  const [entry, setEntry] = useState<IntersectionObserverEntry>(),
-  const [node, setNode] = useState<Element | null>(null),
-  const observer = useRef<IntersectionObserver | null>(null),
-  const frozen = entry?.isIntersecting && freezeOnceVisible,
-  const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
-    setEntry(entry);
-=======
+
   freezeOnceVisible?: boolean
 }
 <<<<<<< HEAD

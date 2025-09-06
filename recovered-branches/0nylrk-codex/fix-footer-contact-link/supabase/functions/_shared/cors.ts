@@ -9,9 +9,7 @@ export const corsHeaders = {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const corsHeaders = {;
-<<<<<<< HEAD
-'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
-=======
+
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

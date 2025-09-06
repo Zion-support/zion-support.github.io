@@ -1,16 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function AISalesAutomationPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))
-  if (!service) return null
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'));
+  if (!service) return null;
+
 
 =======
+
 import React from 'react',;
 import Head from 'next/head',;
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react',;
@@ -48,6 +44,7 @@ export default function AISalesAutomationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))
   if (!service) return null,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout>
       <Head>
@@ -68,9 +65,8 @@ export default function AISalesAutomationPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-emerald-400 mt-0.5"><Check /><span>{feat}</span></li>
-<<<<<<< HEAD
-                ))}
-=======
+
+
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -99,9 +95,8 @@ export default function AISalesAutomationPage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
-<<<<<<< HEAD
-              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Accelerate Pipeline<ArrowRight /></a>
-=======
+
+
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Accelerate Pipeline<ArrowRight /></Link>
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

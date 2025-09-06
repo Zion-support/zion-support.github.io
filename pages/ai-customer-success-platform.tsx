@@ -12,12 +12,6 @@ export default function AICustomerSuccessPlatform() {
 	return (
 		<ServiceLanding
 
-=======
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
-export default function AICustomerSuccessPlatform() {
-	return (
-		<ServiceLanding
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 			title="AI Customer Success Platform"
 			slug="ai-customer-success-platform"
 			description="Predict churn, orchestrate proactive outreach, and increase lifetime value. Our AI monitors accounts across product usage, tickets, billing, and NPS to trigger playbooks that prevent churn and expand revenue."

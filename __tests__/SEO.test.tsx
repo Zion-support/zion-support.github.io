@@ -54,6 +54,7 @@ const React from "react"; import { render,screen } from "@testing-library/react"
 <<<<<<< HEAD
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 =======
+
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -73,7 +74,14 @@ describe('SEO', () => {
 >>>>>>> origin/main
 <<<<<<< HEAD
 =======
-    expect(screen.getByTestId('seo')).toBeInTheDocument();
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import SEO from '../components / SEO';
+describe ('SEO', () => {
+  test ('renders without crashing', () => {
+    render (<SEO />);
+    expect (screen.getByTestId ('seo')).toBeInTheDocument ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 });
 =======

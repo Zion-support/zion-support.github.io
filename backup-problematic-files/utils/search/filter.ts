@@ -118,6 +118,7 @@ export function suggestDidYouMean(query: string): string | null {;
   if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr';
   return null;
 =======
+
 export type AccessLevel = 'public' | 'private' | 'admin';
 
 export interface SearchResult {

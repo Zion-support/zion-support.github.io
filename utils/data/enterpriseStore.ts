@@ -10,7 +10,6 @@ const seedCompany: CompanyRecord = {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
 const generateId = () => Math.random().toString(36).slice(2, 10);
-<<<<<<< HEAD
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';
   slug: 'acme';
@@ -93,8 +92,6 @@ export const store = {getCompanyBySlug(slug: string) {;
     return true;
   }
   listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId];
-    return company ? company.invoices : [];
-  }}
 =======
 const seedCompany: CompanyRecord = {;
   id: 'cmp_acme';
@@ -113,14 +110,16 @@ const seedCompany: CompanyRecord = {;
     usageLimits: {;
       monthlyJobPosts: 50,;
       budgetCapUsd: 10000}},;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   members: [;
-    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },;
-    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },;
-    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],;
+    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
+    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
+    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],
   activity: [;
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' },;
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } }],;
+    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },
+    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],
   invoices: [;
+
     { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },;
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;
 <<<<<<< HEAD
@@ -262,10 +261,11 @@ export const store = {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
+
     return true;
-  },;
-  listInvoices(companyId: string): InvoiceRecord[] {;
-    const company = companiesById[companyId];
+  },
+  list_invoices (company_id: string): InvoiceRecord[] {
+    const company = companiesById[company_id];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return company ? company.invoices : [];
-  }};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }}

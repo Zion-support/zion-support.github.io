@@ -23,13 +23,11 @@ interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
 }
 
-<<<<<<< HEAD
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
-  const { open, toggleSidebar } = useSidebar();
-=======
+
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
   const { open, toggleSidebar } = useSidebar(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Button
@@ -61,12 +59,12 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       className={cn("", className)}
       onClick={toggleSidebar}
-      {...props}
-    >;
+      {...props}>;
       {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
       <span className="sr-only">Toggle Sidebar</span>;
     </Button>;
   );
 }
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

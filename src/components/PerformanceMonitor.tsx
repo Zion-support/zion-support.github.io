@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react';
-import { usePerformance } from '../hooks/usePerformance';
 
 interface PerformanceMonitorProps {
   enabled?: boolean;

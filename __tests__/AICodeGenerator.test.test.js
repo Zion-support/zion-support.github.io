@@ -20,24 +20,15 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AICodeGeneratortest from '../components/AICodeGenerator.test';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
 describe('AICodeGeneratortest', () => {
   test('renders without crashing', () => {
     render(<AICodeGeneratortest />);
     expect(screen.getByTestId('aicodegenerator.test')).toBeInTheDocument();
   });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+
   test('displays correct content', () => {
     render(<AICodeGeneratortest />);
   });

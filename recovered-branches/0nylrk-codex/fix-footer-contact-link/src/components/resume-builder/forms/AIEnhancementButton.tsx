@@ -24,6 +24,11 @@ interface AIEnhancementButtonProps {
 <<<<<<< HEAD
 export function AIEnhancementButton({
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import {useState} from 'react';
+import {Button} from '@/components / ui / button';
+import {Sparkles, Loader2} from 'lucide-react';
 
 export function AIEnhancementButton({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -34,25 +39,23 @@ export function AIEnhancementButton({;
 <<<<<<< HEAD
 
   buttonText = "Enhance with AI";
-  className
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useResumeEnhancer();
-  const [error, setError] = useState<string | null>(null);
-  const handleEnhance = async () => {
-    if (!currentContent |currentContent.trim().length < 10) {
+
+
+  const handleEnhance = async () => {;
+    if (!currentContent || currentContent && currentContent.trim().length < 10) {;
+
       setError('Please enter at least some basic content before enhancing');
-      return
+      return;
     }
+
+
+
     setError(null);
-    const enhancedContent = await enhanceContent(
+    const enhancedContent = await enhanceContent(;
       currentContent;
       enhancementType;
-      context
+      context;
     );
-    if (enhancedContent) {
-      onEnhanced(enhancedContent)
-    }
-  }
 
 =======
   buttonText = "Enhance with AI";
@@ -122,6 +125,7 @@ export function AIEnhancementButton({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Button
       type="button"
@@ -129,19 +133,38 @@ export function AIEnhancementButton({
       size="sm"
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
       onClick={handleEnhance}
-      disabled={isEnhancing}
-    >
-      {isEnhancing ? (
-        <Loader2 className="h-3 w-3 animate-spin" />
-      ) : (
-        <Sparkles className="h-3 w-3" />
+      disabled={isEnhancing}>;
+      {isEnhancing ? (;
+        <Loader2 className="h-3 w-3 animate-spin" />;
+      ) : (;
+        <Sparkles className="h-3 w-3" />;
       )}
-      <span className="text-xs">{buttonText}</span>
-    </Button>
-  )
-<<<<<<< HEAD
-}
+
+      <span className="text-xs">{buttonText}</span>;
+    </Button>;
+  );
 =======
+
+
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
+interface AIEnhancementButtonProps {
+  current_content: string,
+  enhancement_type: 'summary' | 'work - description' | 'skill - categorization' | 'general',
+  context?: string;
+  on_enhanced: (enhanced_content: string) => void,
+  button_text?: string;
+  class_name?: string;
+}
+export /**
+ * AIEnhancementButton - Function description
+ */
+function AIEnhancementButton() {
+  const { enhance_content, is_enhancing } = useResumeEnhancer ();
+  const [error, set_error] = useState < string | null>(null);
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+

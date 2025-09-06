@@ -1,5 +1,4 @@
 
-import React from 'react';
 
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -44,21 +43,17 @@ export default function EmailDmarcAnalyzerPage() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
+
 }
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-export default function EmailDmarcAnalyzerPage(req, res) {
-  try {
-  return (;
+
+
     <Layout>;
       <Head>;
-        <title>Email DMARC Analyzer | Zion Tech Group</title>;
-        <meta name="description" content="Monitor DMARC aggregate reports, SPF/DKIM posture, domain reputation hints, and deliverability scorecards." />;
-        <link rel="canonical" href="https://ziontechgroup.com/email-dmarc-analyzer" />;
+        <title > Email DMARC Analyzer | Zion Tech Group</title>;
+        <meta name="description" content="Monitor DMARC aggregate reports, SPF / DKIM posture, domain reputation hints, and deliverability scorecards." />;
+        <link rel="canonical" href="https://ziontechgroup.com / email - dmarc - analyzer" />;
       </Head>;
+
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Email DMARC Analyzer</h1>;
@@ -71,7 +66,6 @@ export default function EmailDmarcAnalyzerPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
 =======
           </div>;

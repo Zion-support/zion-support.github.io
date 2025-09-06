@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export { EducationForm } from "./EducationForm";
-export * from "./types";
-=======
 
 <<<<<<< HEAD
 export { EducationForm } from './EducationForm',;

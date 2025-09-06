@@ -1,12 +1,6 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function RetailTechnologySolutions() {
-	return (
-		<ServiceLanding
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 			title="Retail Technology Solutions"
 			slug="retail-technology-solutions"
 			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."

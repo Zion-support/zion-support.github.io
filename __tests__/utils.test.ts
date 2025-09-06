@@ -11,9 +11,7 @@ export {};
 export {};
 <<<<<<< HEAD
 module.exports = {};
-=======
-module.exports = {};
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
 =======
 // Mock test for utils
 describe('Utils', () => {
@@ -28,7 +26,7 @@ describe('Utils', () => {
 =======
 =======
 export {};
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

@@ -3,15 +3,17 @@
 <<<<<<< HEAD
 
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
+;
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
+;
+
 export interface Integration {
   id: string;
   name: string;
   description: string;
-  logoUrl: string;
+  logo_url: string;
   status: IntegrationStatus;
-  lastSync?: string
-=======
+
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
 =======
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
@@ -22,24 +24,22 @@ export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
 
 export type IntegrationStatus = "connected" | "warning" | "disconnected",
 
-<<<<<<< HEAD
-export interface Integration {;
-  id: string;
-  name: string;
-  description: string;
-  logoUrl: string;
-  status: IntegrationStatus;
-=======
+
 export interface Integration {
   id: string,
   name: string,
   description: string,
   logoUrl: string,
   status: IntegrationStatus,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   lastSync?: string,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   type: IntegrationType
+=======
+  last_sync?: string,
+  type: IntegrationType;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 <<<<<<< HEAD
 =======
@@ -73,17 +73,6 @@ export type CrmIntegrationEvents =
   | "contact_synced"
   | "deal_created"
   | "deal_updated"
-<<<<<<< HEAD
-  | "note_added";
-  | "job_synced";
-=======
-  | "note_added"
-<<<<<<< HEAD
-  | "job_synced";
-export type AtsIntegrationEvents =
-=======
-  | "job_synced",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export type AtsIntegrationEvents = 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -121,18 +110,29 @@ export interface SyncLog {;
   timestamp: string,;
   details: string;
 }
-;
 export type CrmIntegrationEvents =;
   | "contact_synced";
   | "deal_created";
   | "deal_updated";
   | "note_added";
-  | "job_synced",;
+  | "job_synced";
+;
 export type AtsIntegrationEvents =;
   | "applicant_created";
   | "candidate_status_changed";
   | "interview_scheduled";
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+  | "note_added"
+
+  | "applicant_created"
+  | "candidate_status_changed"
+  | "interview_scheduled"
+
+  | "resume_uploaded"
+
+
   | "resume_uploaded";
   | "job_posted";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

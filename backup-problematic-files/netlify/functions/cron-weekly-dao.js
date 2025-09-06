@@ -73,19 +73,14 @@ exports.handler = async function () {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
     }
-<<<<<<< HEAD:netlify/functions/cron-weekly-dao.js
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-dao.js
+
+
     return { statusCode: 200, body: JSON.stringify({ ok: true, updatedAt: data.updatedAt }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD:netlify/functions/cron-weekly-dao.js
 
-}
-
-=======
 },
 <<<<<<< HEAD
 >>>>>>> main:netlify/functions/cron-weekly-dao.js

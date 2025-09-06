@@ -60,9 +60,10 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       peers: state.config.peers,
       scope: state.config.scope,
-      optIn: state.config.optIn,
+      opt_in: state.config.opt_in,
       paused: state.config.paused,
 <<<<<<< HEAD
 =======

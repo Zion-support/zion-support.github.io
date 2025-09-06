@@ -348,7 +348,7 @@ class FraudStore {
   }
 }
 export const fraudStore = new FraudStore();
-<<<<<<< HEAD:utils/fraud/store.ts
+
 export const getFraudStore = () => fraudStore;
 =======
 export const getFraudStore = () => fraudStore;

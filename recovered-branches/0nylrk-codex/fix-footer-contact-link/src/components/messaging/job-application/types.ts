@@ -38,12 +38,18 @@ export interface Job {;
 export interface ApplyToJobModalProps {;
   job: Job,;
   isOpen: boolean,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onClose: () => void;
 
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
-<<<<<<< HEAD
+
+
+  is_open: boolean;
+  on_close: () => void;
+  onApplySuccess?: (job_id: string) => Promise < void>;
+}
 
 =======
 ;

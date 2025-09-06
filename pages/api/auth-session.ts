@@ -20,6 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'OK' })
 }
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
   res.status(200).json({ message: 'OK' });

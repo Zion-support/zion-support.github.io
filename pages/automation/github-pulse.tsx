@@ -26,11 +26,11 @@ export default function GithubPulsePage() {
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">GitHub Pulse</h1>
-<<<<<<< HEAD
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
-=======
+
+
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
         <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
           <Metric label="Stars" value={repo.stargazers_count} />
           <Metric label="Forks" value={repo.forks} />
@@ -42,10 +42,6 @@ export default function GithubPulsePage() {
       </div>
     </EnhancedLayout>
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 function Metric({ label, value }: { label: string, value: any }) {
   return (

@@ -6,6 +6,8 @@ import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
+export function MobileResumeBuilder() {;
+
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
@@ -22,8 +24,9 @@ import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/res
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function MobileResumeBuilder() {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen">;
       <MobileHeader
         title="Resume Builder"
         showBack
@@ -50,14 +53,16 @@ export function MobileResumeBuilder() {;
       <MobileHeader;
         title="Resume Builder";
         showBack;
+
       />;
+
       <main className="py-4">;
         <ResumeBuilderComponent />;
       </main>;
+
       <BottomNavigation />;
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 <<<<<<< HEAD

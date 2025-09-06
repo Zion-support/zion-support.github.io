@@ -32,6 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     label: label as any})
 
   res.status(200).json({ items })
+
 =======
 =======
 =======
@@ -57,40 +58,24 @@ function ensureAdmin(req: NextApiRequest): boolean {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
 }
-;
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.status(405).json({ error: 'Method not allowed' });
+    res.status (405).json ({ error: 'Method not allowed' }),
     return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
+  if () {) {
+  $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (!ensureAdmin(req)) {;
-    res.status(401).json({ error: 'Unauthorized' });
+    res.status (401).json ({ error: 'Unauthorized' }),
     return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
+
 }
   } catch (error) {
     console.error("Error:", error);

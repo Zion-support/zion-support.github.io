@@ -30,35 +30,6 @@ import ProfilePage from "../pages/ProfilePage",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const TalentRoutes = () => {
-  return (
-    <Routes>
-      {/* Talent Routes */}
-      <Route path="/talent" element={<TalentDirectory />} />
-      <Route path="/talents" element={<TalentsPage />} />
-      <Route path="/talent/:id" element={<TalentProfilePage />} />
-      <Route
-        path="/saved-talents"
-        element={
-          <ProtectedRoute>
-            <SavedTalentsPage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/create-talent-profile"
-        element={
-          <ProtectedRoute>
-            <CreateTalentProfile />
-          </ProtectedRoute>
-        }
-      />
-      <Route path="/profile/:id" element={<ProfilePage />} />
-    </Routes>
-  )
-<<<<<<< HEAD
-}
-export default TalentRoutes;
-
 =======
 },
 
@@ -77,23 +48,25 @@ import SavedTalentsPage from "../pages/SavedTalentsPage",;
 import CreateTalentProfile from "../pages/CreateTalentProfile",;
 import ProfilePage from "../pages/ProfilePage",;
 const TalentRoutes = () => {;
-  return (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
     <Routes>;
       {/* Talent Routes */}
+
       <Route path="/talent" element={<TalentDirectory />} />;
       <Route path="/talents" element={<TalentsPage />} />;
       <Route path="/talent/:id" element={<TalentProfilePage />} />;
-      <Route;
-        path="/saved-talents";
-        element={;
+      <Route
+        path="/saved-talents" 
+        element={
           <ProtectedRoute>;
             <SavedTalentsPage />;
           </ProtectedRoute>;
         } ;
       />;
-      <Route;
-        path="/create-talent-profile";
-        element={;
+      <Route
+        path="/create-talent-profile" 
+        element={
           <ProtectedRoute>;
             <CreateTalentProfile />;
           </ProtectedRoute>;
@@ -108,4 +81,5 @@ const TalentRoutes = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default TalentRoutes;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -20,24 +20,15 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
 describe('AIChatbotSystemtest', () => {
   test('renders without crashing', () => {
     render(<AIChatbotSystemtest />);
     expect(screen.getByTestId('aichatbotsystem.test')).toBeInTheDocument();
   });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+
   test('displays correct content', () => {
     render(<AIChatbotSystemtest />);
   });

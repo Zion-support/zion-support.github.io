@@ -52,23 +52,50 @@ import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string;
+  children?: React && React.ReactNode;
+}
+
+import React from './react';
+import { cn  } from '@/lib / utils';
+interface SidebarGroupLabelProps extends React.HTMLAttributes < HTMLDivElement> {
+  class_name?: string;
   children?: React.ReactNode;
 }
-;
-export function SidebarGroupLabel({ className, children, ...props }: SidebarGroupLabelProps) {;
-  return (;
+export /**
+ * SidebarGroupLabel - Function description
+ */
+function SidebarGroupLabel() {
+  return (
     <div;
-      className={cn("px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider", className)} ;
+      className={cn (
+        "px - 3 mb - 2 text - xs font - semibold text - muted - foreground uppercase tracking - wider",
+        class_name,
+
+      )}
       {...props}
     >;
       {children}
+
+
+export function SidebarGroupLabel(): any ({ className, children, ...props }: SidebarGroupLabelProps) {;
+  return (
+    <div
+      className={cn("px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider", className)} 
+      {...props}>;
+      {children}
     </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 <<<<<<< HEAD
 }
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+    <div 
+      className={cn("px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider", className)} 
+
+  );
+
+
+
 }
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

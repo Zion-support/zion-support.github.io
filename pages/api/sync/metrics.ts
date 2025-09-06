@@ -44,6 +44,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const contributionsBySubject: Record<string, number> = {},
   let globalVotes = 0,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -72,8 +73,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     topContributors
     totalVoteCount: globalVotes
 
-    lastSyncedAt: state.lastSyncedAt})
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+
       const p = e.payload as any,
 =======
     treasuryTotals: totalsByToken,

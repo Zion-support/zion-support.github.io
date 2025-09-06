@@ -1,21 +1,10 @@
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
-import * as ContextMenuPrimitive from &quot;@radix-ui/react-context-menu&quot;
-import { Check, ChevronRight, Circle } from 'lucide-react';
-;
-import { cn } from &quot;@/lib/utils&quot;
-=======
+
+
 import * as React from "react"
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu"
 import { Check, ChevronRight, Circle } from 'lucide-react'
-<<<<<<< HEAD
-import { cn } from &quot;@/lib/utils&quot;
-=======
 
-import { cn } from "@/lib/utils"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const ContextMenu = ContextMenuPrimitive.Root
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger
 const ContextMenuGroup = ContextMenuPrimitive.Group
@@ -26,15 +15,29 @@ const ContextMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
     inset?: boolean
+=======
+import * as React from &quot;react & quot;
+import * as ContextMenuPrimitive from &quot;@radix - ui / react - context - menu & quot;
+import { Check, ChevronRight, Circle } from 'lucide-react';
+import { cn } from &quot;@/lib / utils & quot;
+;
+const ContextMenu = ContextMenuPrimitive.Root;
+const ContextMenuTrigger = ContextMenuPrimitive.Trigger;
+const ContextMenuGroup = ContextMenuPrimitive.Group;
+const ContextMenuPortal = ContextMenuPrimitive.Portal;
+const ContextMenuSub = ContextMenuPrimitive.Sub;
+const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup;
+const ContextMenuSubTrigger = React.forward_ref<;
+  React.ElementRef < typeof ContextMenuPrimitive.SubTrigger>,
+  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.SubTrigger> & {
+    inset?: boolean;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
->(({ className, inset, children, ...props }, ref) => (;
+>(({ class_name, inset, children, ...props }, ref) => (
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
-<<<<<<< HEAD
-className={cn(
-      &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;
-      inset && &quot;pl-8&quot;
-=======
+
+
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
@@ -48,9 +51,8 @@ className={cn(
     {...props}
   >;
     {children}
-<<<<<<< HEAD
-<ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
-=======
+
+
     <ChevronRight className="ml-auto h-4 w-4" />
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -67,9 +69,8 @@ const ContextMenuSubContent = React.forwardRef<
   <ContextMenuPrimitive.SubContent
     ref={ref}
     className={cn(
-<<<<<<< HEAD
-      &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
-=======
+
+
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -83,9 +84,8 @@ const ContextMenuSubContent = React.forwardRef<
 ));
 ContextMenuSubContent.displayName = ContextMenuPrimitive.SubContent.displayName;
 const ContextMenuContent = React.forwardRef<;
-<<<<<<< HEAD
-  React.ElementRef<typeof ContextMenuPrimitive.Content>;
-=======
+
+
   React.ElementRef<typeof ContextMenuPrimitive.Content>,;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -97,10 +97,8 @@ const ContextMenuContent = React.forwardRef<;
   <ContextMenuPrimitive.Portal>;
     <ContextMenuPrimitive.Content;
       ref={ref}
-<<<<<<< HEAD
-className={cn(
-        &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
-=======
+
+
       className={cn(
         "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 <<<<<<< HEAD
@@ -124,19 +122,17 @@ const ContextMenuItem = React.forwardRef<;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   React.ElementRef<typeof ContextMenuPrimitive.Item>,;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     inset?: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Item;
     ref={ref}
-<<<<<<< HEAD
-className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
-      inset && &quot;pl-8&quot;
-=======
+
+
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
@@ -152,9 +148,8 @@ className={cn(
 ));
 ContextMenuItem.displayName = ContextMenuPrimitive.Item.displayName;
 const ContextMenuCheckboxItem = React.forwardRef<;
-<<<<<<< HEAD
-  React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>;
-=======
+
+
   React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>,;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -165,10 +160,8 @@ const ContextMenuCheckboxItem = React.forwardRef<;
 >(({ className, children, checked, ...props }, ref) => (;
   <ContextMenuPrimitive.CheckboxItem;
     ref={ref}
-<<<<<<< HEAD
-className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
-=======
+
+
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 <<<<<<< HEAD
@@ -178,23 +171,35 @@ className={cn(
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       className
     )}
+=======
+className={cn (
+      &quot;relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  />));
+ContextMenuItem.display_name = ContextMenuPrimitive.Item.display_name;
+const ContextMenuCheckboxItem = React.forward_ref<;
+  React.ElementRef < typeof ContextMenuPrimitive.CheckboxItem>,
+  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.CheckboxItem>;
+>(({ class_name, children, checked, ...props }, ref) => (
+  <ContextMenuPrimitive.CheckboxItem;
+    ref={ref}
+className={cn (
+      &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      class_name)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     checked={checked}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <ContextMenuPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
-      </ContextMenuPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <ContextMenuPrimitive.ItemIndicator>;
+        <Check className=&quot;h - 4 w - 4&quot; />;
+      </ContextMenuPrimitive.ItemIndicator>;
+    </span>;
     {children}
-  </ContextMenuPrimitive.CheckboxItem>;
-));
-ContextMenuCheckboxItem.displayName =;
-  ContextMenuPrimitive.CheckboxItem.displayName;
-const ContextMenuRadioItem = React.forwardRef<;
-<<<<<<< HEAD
-  React.ElementRef<typeof ContextMenuPrimitive.RadioItem>;
-=======
+
+
   React.ElementRef<typeof ContextMenuPrimitive.RadioItem>,;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -205,10 +210,8 @@ const ContextMenuRadioItem = React.forwardRef<;
 >(({ className, children, ...props }, ref) => (;
   <ContextMenuPrimitive.RadioItem;
     ref={ref}
-<<<<<<< HEAD
-className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
-=======
+
+
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 <<<<<<< HEAD
@@ -238,19 +241,17 @@ const ContextMenuLabel = React.forwardRef<;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   React.ElementRef<typeof ContextMenuPrimitive.Label>,;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     inset?: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Label;
     ref={ref}
-<<<<<<< HEAD
-className={cn(
-      &quot;px-2 py-1.5 text-sm font-semibold text-foreground&quot;
-      inset && &quot;pl-8&quot;
-=======
+
+
     className={cn(
       "px-2 py-1.5 text-sm font-semibold text-foreground",
       inset && "pl-8",
@@ -266,9 +267,8 @@ className={cn(
 ));
 ContextMenuLabel.displayName = ContextMenuPrimitive.Label.displayName;
 const ContextMenuSeparator = React.forwardRef<;
-<<<<<<< HEAD
-  React.ElementRef<typeof ContextMenuPrimitive.Separator>;
-=======
+
+
   React.ElementRef<typeof ContextMenuPrimitive.Separator>,;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -277,27 +277,29 @@ const ContextMenuSeparator = React.forwardRef<;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
+=======
+className={cn (
+      &quot;px - 2 py - 1.5 text - sm font - semibold text - foreground & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  />));
+ContextMenuLabel.display_name = ContextMenuPrimitive.Label.display_name;
+const ContextMenuSeparator = React.forward_ref<;
+  React.ElementRef < typeof ContextMenuPrimitive.Separator>,
+  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Separator>;
+>(({ class_name, ...props }, ref) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   <ContextMenuPrimitive.Separator;
     ref={ref}
-<<<<<<< HEAD
-    className={cn(&quot;-mx-1 my-1 h-px bg-border&quot; className)}
-=======
+
+
     className={cn("-mx-1 my-1 h-px bg-border", className)}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
     {...props}
-/>
-))
-ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName
-const ContextMenuShortcut = ({
-  className
-  ...props
-}: React.HTMLAttributes<HTMLSpanElement>) => {
-  return (
-    <span
-      className={cn(
-<<<<<<< HEAD
-        &quot;ml-auto text-xs tracking-widest text-muted-foreground&quot;
-=======
+
+
         "ml-auto text-xs tracking-widest text-muted-foreground",
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -306,30 +308,29 @@ const ContextMenuShortcut = ({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         className
       )}
-      {...props}
-    />;
-  );
-}
-<<<<<<< HEAD
-ContextMenuShortcut.displayName = &quot;ContextMenuShortcut&quot;
-export {
-  ContextMenu
-  ContextMenuTrigger
-  ContextMenuContent
-  ContextMenuItem
-  ContextMenuCheckboxItem
-  ContextMenuRadioItem
-  ContextMenuLabel
-  ContextMenuSeparator
-  ContextMenuShortcut
-  ContextMenuGroup
-  ContextMenuPortal
-  ContextMenuSub
-  ContextMenuSubContent
-  ContextMenuSubTrigger
-  ContextMenuRadioGroup}
 =======
+/>));
+ContextMenuSeparator.display_name = ContextMenuPrimitive.Separator.display_name;
+const ContextMenuShortcut = ({
+  class_name,
+  ...props;
+}: React.HTMLAttributes < HTMLSpanElement>) =>: any {
+  return (
+    <span;
+      className={cn (
+        &quot;ml - auto text - xs tracking - widest text - muted - foreground & quot;,
+        class_name)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      {...props}
+    />);
+}
+
+ContextMenuShortcut.display_name = &quot;ContextMenuShortcut & quot;
+;
+=======
+
 ContextMenuShortcut.displayName = "ContextMenuShortcut"
+
 
 export {
   ContextMenu,

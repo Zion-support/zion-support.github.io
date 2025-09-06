@@ -25,10 +25,20 @@ export function buildPrintableHtml(project: BookProject): string {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const chapterHtml = chapters;
     .map(;
+=======
+import type { BookProject } from '../book / book_types',
+export function buildPrintableHtml (project: BookProject): string {
+  const { meta, chapters, visuals } = project,
+  const quotes_html = visuals.quote_callouts;
+    .map ((q) => `<blockquote class="quote"><p>${escape_html (q.text)}</p>${q.attribution ? `<cite>${escape_html (q.attribution)}</cite>` : ''}</blockquote>`);
+    .join ('\n'),
+  const chapter_html = chapters;
+    .map (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       (c) => `;
       <section class="chapter">;
-        <h2>${escapeHtml(c.title)}</h2>;
-        <div class="content">${paragraphize(c.content)}</div>;
+        <h2>${escape_html (c.title)}</h2>;
+        <div class="content">${paragraphize (c.content)}</div>;
       </section>;
     `);
 <<<<<<< HEAD
@@ -55,11 +65,21 @@ export function buildPrintableHtml(project: BookProject): string {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+=======
+    .join ('\n\n'),
+  const visuals_html = [;
+    ...visuals.timeline_images,
+    ...visuals.daoVoteCharts,
+    ...visuals.ui_screens];
+    .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .join ('\n'),
+  const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return `<!doctype html>;
 <html>;
 <head>;
-<meta charset="utf-8" />;
-<title>${escapeHtml(meta.title)}</title>;
+<meta charset="utf - 8" />;
+<title>${escape_html (meta.title)}</title>;
 <style>;
 <<<<<<< HEAD
   @page { margin: 1in }
@@ -176,10 +196,26 @@ function escapeHtml(s: string): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 </style>;
 </head>;
 <body>;
   <section class="cover">;
+
+    <div>${escape_html (meta.publisher || '')}</div>;
+    <h1>${escape_html (meta.title)}</h1>;
+    <h3>${escape_html (meta.subtitle || '')}</h3>;
+    <div class="by">By ${escape_html (meta.author)}</div>;
+
+    ${barcode}
+  </section>;
+  ${quotes_html}
+  ${chapter_html}
+  ${visuals_html}
+</body>;
+</html>`;
+}
+
     <div>${escapeHtml(meta.publisher || '')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
     <h3>${escapeHtml(meta.subtitle || '')}</h3>;
@@ -225,8 +261,28 @@ function paragraphize(text: string): string {;
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
-<<<<<<< HEAD
+
+function paragraphize (text: string): string {
+  // Check condition
+if (return '') {
+  $2
+}
+  return text;
+    .split (/\n\n+/);
+    .map ((p) => `<p>${escape_html (p)}</p>`);
+    .join ('\n');
+}
+function escape_html (string: string): string {
+  return s;
+    .replace (/&/g, '&amp, ');
+    .replace (/</g, '<');
+    .replace (/>/g, '>');
+    .replace (/"/g, '"');
+    .replace (/'/g, '&#039, ');
+}
+
 =======
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

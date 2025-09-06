@@ -7,12 +7,14 @@ export const operator = {
   getEvents: () => []
   getEventById: (id: string) => null
 }
-=======
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-  logEvent: (event: any) => null,
-  getEvents: () => [],
+// Operator utilities;
+export const operator = {
+  // Add operator functionality here;
+  log_event: (event: any) => null,
+  get_events: () => [],
   getEventById: (id: string) => null;
 };
 =======

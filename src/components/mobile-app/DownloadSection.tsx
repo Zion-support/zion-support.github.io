@@ -48,7 +48,7 @@ export const DownloadSection: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
               <AppStoreButtons 
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
@@ -58,6 +58,7 @@ export const DownloadSection: React.FC = () => {
               />
               
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
@@ -106,29 +107,51 @@ export const DownloadSection: React.FC = () => {;
   // These would typically come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
-  return (;
-    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
-      <div className="container mx-auto px-4">;
-        <div className="max-w-4xl mx-auto">;
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">;
-            <div className="flex-1">;
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Get The App Today</h2>;
-              <p className="text-lg text-gray-300 mb-8">;
+  return (
+    <section className="py - 16 bg - gradient - to - b from - zion - blue to - zion - blue - dark">;
+      <div className="container mx - auto px - 4">;
+        <div className="max - w-4xl mx - auto">;
+          <div className="flex flex - col md:flex - row items - center justify - between gap - 8">;
+            <div className="flex - 1">;
+              <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">Get The App Today</h2>;
+              <p className="text - lg text - gray - 300 mb - 8">;
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
-                className="mb-8";
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-                onAppStoreClick={() => logInfo("App Store button clicked")}
-                onGooglePlayClick={() => logInfo("Google Play button clicked")}
+                className="mb - 8";
+                appStoreUrl = {appStoreUrl, }
+                googlePlayUrl = {googlePlayUrl, }
+                onAppStoreClick = {(, ) => log_info ("App Store button clicked"), }
+                onGooglePlayClick = {() => log_info ("Google Play button clicked"), }
               />;
+              <div className="text - sm text - gray - 400">;
+                <p > Compatible with iOS 14+ and Android 8.0+</p>;
+                <p > Free download, in - app purchases available</p>;
+              </div>;
+            </div>;
+            <div className="flex - shrink - 0 bg - white dark: bg - zion - blue - dark p - 4 rounded - lg">;
+              <div className="w - 36 h - 36 flex items - center justify - center bg - white dark:bg - zion - blue rounded - lg">;
+                <QrCodeIcon className="w - full h - full p - 2" />;
+
+                {/* This would be replaced with an actual QR code in production */}
+              </div>;
+              <p className="text - center text - xs mt - 2 text - zion - blue - dark">Scan to download</p>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+}
+
+              />;
+
               <div className="text-sm text-gray-400">;
-                <p>Compatible with iOS 14+ and Android 8.0+</p>;
+                <p>Compatible with iOS 14+ and Android 8 && 8.0+</p>;
                 <p>Free download, in-app purchases available</p>;
               </div>;
             </div>;
-            <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">;
+
+            <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">;
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
                 <QrCodeIcon className="w-full h-full p-2" />;
                 {/* This would be replaced with an actual QR code in production */}
@@ -144,5 +167,12 @@ export const DownloadSection: React.FC = () => {;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+            
+            <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

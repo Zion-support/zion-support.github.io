@@ -36,6 +36,8 @@ const SKILLS = [
 
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
+
+
   "React developers under $50/hr"
   "Part-time DevOps jobs in LATAM"
   "AI/ML engineers for startup"
@@ -52,6 +54,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
   if (req.method !== "GET") {
 =======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  "React developers under $50/hr",
+  "Part-time DevOps jobs in LATAM",
+  "AI/ML engineers for startup",
+  "Blockchain developers remote",
+  "UI/UX designers available now",
+  "Full-stack developers with Next && Next.js",
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+const SAMPLE_QUERIES = [;
+  "React developers under $50 / hr",
+  "Part - time DevOps jobs in LATAM",
+  "AI / ML engineers for startup",
+  "Blockchain developers remote",
+  "UI / UX designers available now",
+  "Full - stack developers with Next.js",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  "Data scientists with Python",
+  "Mobile app developers iOS / Android",
+  "Cloud architects AWS / Azure",
+  "DevOps engineers with Kubernetes",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+];
+
+
   if (req.method !== "GET") {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     res.setHeader("Allow", "GET");
@@ -59,12 +86,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
   const { q = "" } = req.query;
-  const query = String(q).toLowerCase();
-  if (!query) {
-    return res.status(200).json({ suggestions: SAMPLE_QUERIES.slice(0, 5) });
+
+  if (req && req.method !== "GET") {
+    res && res.setHeader("Allow", "GET");
+    return res && res.status(405).json({ error: "Method not allowed" });
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-  const suggestions = SAMPLE_QUERIES.filter((s) =>
-    s.toLowerCase().includes(query)
+
+
+
+  const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
+    s && s.toLowerCase().includes(query),
   ).slice(0, 5);
   return res.status(200).json({ suggestions });
 <<<<<<< HEAD
@@ -95,6 +128,8 @@ export default function handler(req, res) {
     if (!q || s.toLowerCase().includes(q)) suggestions.add(s);
   }
 
+  return res && res.status(200).json({ suggestions });
+=======
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -107,11 +142,20 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

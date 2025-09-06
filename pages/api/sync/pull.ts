@@ -92,6 +92,15 @@ export default function handler(req, res) {
 <<<<<<< HEAD
 }
 =======
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';,
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
+  $2
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

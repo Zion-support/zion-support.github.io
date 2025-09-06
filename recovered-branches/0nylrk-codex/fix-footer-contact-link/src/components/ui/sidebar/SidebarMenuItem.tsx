@@ -17,8 +17,7 @@ import { cn } from "@/lib/utils",
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
   className?: string,
   children?: React.ReactNode
-<<<<<<< HEAD
-=======
+
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
@@ -30,19 +29,33 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-export function SidebarMenuItem({
-  className
-  children
-  ...props
-}: SidebarMenuItemProps) {
+
+import React from './react';
+import { cn  } from '@/lib / utils';
+interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLLIElement> {
+  class_name?: string;
+  children?: React.ReactNode;
+}
+export /**
+ * SidebarMenuItem - Function description
+ */
+function SidebarMenuItem() {
+
   return (
-    <li className={cn("", className)} {...props}>
+    <li className={cn ("", class_name)} {...props}>;
       {children}
     </li>
 <<<<<<< HEAD
   );
 }
+
 =======
+    </li>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    </li>
+
   )
 }
 ;

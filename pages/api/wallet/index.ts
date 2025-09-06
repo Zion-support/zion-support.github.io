@@ -16,13 +16,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
   }
   try {
-    const summary = null;
-    return res.status(200).json(summary)
+    const summary = getWalletSummary (user_id);
+    return res.status (200).json (summary);
   } catch (err: any) {
 <<<<<<< HEAD
     return res.status(500).json({ error: err.message |'Unknown error' });
   }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
     return res.status(500).json({ error: err.message || 'Unknown error' });

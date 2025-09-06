@@ -28,16 +28,8 @@ export default function AIEvalsPage() {
 		email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-	}
-	const plans = [
-		{ name: 'Startup', price: '$149/month', items: ['5K eval callsLatency/Cost trackingToxicity/PII checksCSV export'] }
-		{ name: 'Growth', price: '$499/month', items: ['50K eval callsCustom metrics (BLEU/ROUGE/F1)CI evals via APISlack alerts'] }
-		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPCSLA & audit logsSOC2 supportSAML/SSO'] }]
 
-	return (
-		<QuantumHolographicMatrixBackground intensity={1.5}>
-=======
+
 	},
 	const plans = [
 		{ name: 'Startup', price: '$149/month', items: ['5K eval callsLatency/Cost trackingToxicity/PII checksCSV export'] },
@@ -49,9 +41,10 @@ export default function AIEvalsPage() {_const _contactInfo = {
 		{_name: 'Startup', _price: '$149/month', _items: ['5K eval calls', _'Latency/Cost tracking', _'Toxicity/PII checks', _'CSV export']},
 		{_name: 'Growth', _price: '$499/month', _items: ['50K eval calls', _'Custom metrics (BLEU/ROUGE/F1)', _'CI evals via API', _'Slack alerts']},
 		{_name: 'Enterprise', _price: 'Custom', _items: ['Private cloud/VPC', _'SLA & audit logs', _'SOC2 support', _'SAML/SSO']}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
 	return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
 				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />
@@ -62,10 +55,8 @@ export default function AIEvalsPage() {_const _contactInfo = {
 					<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Evaluations</h1>
 					<p className="text-xl text-gray-300">Benchmark models and prompts with real metrics and safety checks. Ship reliable AI faster.</p>
 					<div className="mt-6 flex justify-center gap-3">
-<<<<<<< HEAD
-						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Get a Demo</a>
-						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</a>
-=======
+
+
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Get a Demo</Link>
 						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</Link>
 <<<<<<< HEAD
@@ -83,12 +74,8 @@ export default function AIEvalsPage() {_const _contactInfo = {
 							<ul className="space-y-2 text-gray-300 text-sm">
 								{p.items.map((i) => (
 									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
-<<<<<<< HEAD
-								))}
-							</ul>
-						</div>
-					))}
-=======
+
+
 								))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -131,9 +118,8 @@ export default function AIEvalsPage() {_const _contactInfo = {
 						<div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
 					</div>
 					<div className="text-center">
-<<<<<<< HEAD
-						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</a>
-=======
+
+
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

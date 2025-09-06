@@ -30,12 +30,17 @@ const Onboarding: NextPage = () => {
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
   const prev = () => setStep((s) => Math.max(s - 1, 0)),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+
+=======
     <div className="space-y-6">
       <Head>
         <title>Onboarding - Zion</title>
       </Head>
+
       <h1 className="text-2xl font-semibold">Get Started</h1>
+
       <div className="flex items-center gap-2 text-sm flex-wrap">
         {steps.map((label, i) => (
 <<<<<<< HEAD
@@ -96,6 +101,7 @@ const Onboarding: NextPage = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </div>
+
       <div className="flex gap-2">
         <EnhancedButton variant="secondary" onClick={prev} disabled={step === 0}>Back</EnhancedButton>
         <EnhancedButton onClick={next} disabled={step === steps.length - 1}>{step === steps.length - 1 ? 'Done' : 'Next'}</EnhancedButton>

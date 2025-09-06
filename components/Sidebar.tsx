@@ -107,26 +107,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
 =======
 import React, { useState } from 'react';
-import Link from 'next/link';
+import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 
-import {
-  X
-  Building2
-  Code
-  Smartphone
-  Cloud
-  Shield
-  Zap
-  ShoppingCart
-  Heart
-  GraduationCap
-  Factory
-  Truck
-  CreditCard
-  Phone
-  Mail
 
   ExternalLink
 =======
@@ -157,39 +141,74 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
     setOpenDropdowns(prev =>
       prev.includes(title)
         ? prev.filter(item => item !== title)
+=======
+import { ;
+  X, ;
+  Building2, ;
+  Code, ;
+  Smartphone, ;
+  Cloud, ;
+  Shield, ;
+  Zap,;
+  ShoppingCart,;
+  Heart,;
+  GraduationCap,;
+  Factory,;
+  Truck,;
+  CreditCard,;
+  Phone,;
+  Mail,;
+  ExternalLink;
+} from 'lucide-react';
+
+interface SidebarProps {;
+  isOpen: boolean, onClose: () => void,;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
+  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
+
+  const handleDropdownToggle = (title: string) => {;
+    setOpenDropdowns(prev =>;
+      prev && prev.includes(title);
+        ? prev && prev.filter(item => item !== title);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         : [...prev, title];
     );
 
-  }
-  const navigation = {
-    'Services': [
-      { name: 'Web Development', href: '/services/web-development', icon: Code }
-      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone }
-      { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud }
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield }
-      { name: 'Performance Optimization', href: '/services/performance', icon: Zap }
-    ]
-    'Solutions': [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 }
-      { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart }
-      { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart }
-      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap }
-    ]
-    'Industries': [
-      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory }
-      { name: 'Logistics', href: '/industries/logistics', icon: Truck }
-      { name: 'Finance', href: '/industries/finance', icon: CreditCard }
-      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart }
-      { name: 'Education', href: '/industries/education', icon: GraduationCap }
-    ];
-  }
-  const quickLinks = [
-    { name: 'About Us', href: '/about' }
-    { name: 'Our Team', href: '/team' }
-    { name: 'Case Studies', href: '/case-studies' }
-    { name: 'Blog', href: '/blog' }
-    { name: 'Careers', href: '/careers' }
-    { name: 'Contact', href: '/contact' }
+
+  const navigation = {;
+    'Services': [;
+      { name: 'Web Development', href: '/services/web-development', icon: Code },;
+      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone },;
+      { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud },;
+      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },;
+      { name: 'Performance Optimization', href: '/services/performance', icon: Zap },;
+    ],;
+    'Solutions': [;
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 },;
+      { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart },;
+      { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart },;
+      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap },;
+    ],;
+    'Industries': [;
+      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },;
+      { name: 'Logistics', href: '/industries/logistics', icon: Truck },;
+      { name: 'Finance', href: '/industries/finance', icon: CreditCard },;
+      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },;
+      { name: 'Education', href: '/industries/education', icon: GraduationCap },;
+    ],;
+  };
+
+  const quickLinks = [;
+    { name: 'About Us', href: '/about' },;
+    { name: 'Our Team', href: '/team' },;
+    { name: 'Case Studies', href: '/case-studies' },;
+    { name: 'Blog', href: '/blog' },;
+    { name: 'Careers', href: '/careers' },;
+    { name: 'Contact', href: '/contact' },;
+  ];
+
 
 <<<<<<< HEAD
   ];
@@ -197,11 +216,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
+    <AnimatePresence>;
+      {isOpen && (;
+        <>;
           {/* Backdrop */}
-          <motion.div
+          <motion&& motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -236,13 +255,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
             <div className="p-6">
               {/* Header */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center space-x-2">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
-                    <Building2 className="w-8 h-8 text-white" />
-                  </div>
-                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-                </div>
+              <div className="flex items-center justify-between mb-8">;
+                <div className="flex items-center space-x-2">;
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">;
+                    <Building2 className="w-8 h-8 text-white" />;
+                  </div>;
+                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>;
+                </div>;
                 <button
                   onClick={onClose}
 <<<<<<< HEAD
@@ -262,9 +281,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               {/* Navigation */}
-              <nav className="space-y-4">
-                {Object.entries(navigation).map(([title, links]) => (
-                  <div key={title}>
+              <nav className="space-y-4">;
+                {Object && Object.entries(navigation).map(([title, links]) => (;
+                  <div key={title}>;
                     <button
                       onClick={() => handleDropdownToggle(title)}
 <<<<<<< HEAD
@@ -310,13 +329,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
                 <div className="space-y-2">
                   {quickLinks.map((link) => (
                     <Link
-                      key={link.name}
-                      href={link.href}
+                      key={link && link.name}
+                      href={link && link.href}
                       className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
-                      onClick={onClose}
-                    >
-                      {link.name}
-                    </Link>
+                      onClick={onClose}>;
+                      {link && link.name}
+                    </Link>;
                   ))}
                 </div>
               </div>
@@ -348,19 +366,19 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               {/* Contact Info */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-600">
-                    <Phone className="w-4 h-4" />
-                    <span>+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-600">
-                    <Mail className="w-4 h-4" />
-                    <span>kleber@ziontechgroup.com</span>
-                  </div>
-                </div>
-                <div className="mt-4">
+              <div className="mt-8 pt-8 border-t border-gray-200">;
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>;
+                <div className="space-y-3">;
+                  <div className="flex items-center space-x-3 text-gray-600">;
+                    <Phone className="w-4 h-4" />;
+                    <span>+1 302 464 0950</span>;
+                  </div>;
+                  <div className="flex items-center space-x-3 text-gray-600">;
+                    <Mail className="w-4 h-4" />;
+                    <span>kleber@ziontechgroup && ziontechgroup.com</span>;
+                  </div>;
+                </div>;
+                <div className="mt-4">;
                   <Link
                     href="/contact"
                     className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -375,12 +393,35 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
           </motion.div>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>;
   );
-<<<<<<< HEAD
+
+import {
+  X,
+  Building2,
+  Code,
+  Smartphone,
+  Cloud,
+  Shield,
+  Zap,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Factory,
+  Truck,
+  CreditCard,
+  Phone,
+  Mail,
+  ExternalLink;
+} from 'lucide-react';
+;
+interface SidebarProps {
+  is_open: boolean, on_close: () => void,
 }
 <<<<<<< HEAD
 export default Sidebar;
+;
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======

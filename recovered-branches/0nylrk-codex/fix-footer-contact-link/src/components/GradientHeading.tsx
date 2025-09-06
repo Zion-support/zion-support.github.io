@@ -5,9 +5,23 @@ import { cn } from "@/lib/utils";
 import React from "react";
 interface GradientHeadingProps {
 
-  children: React.ReactNode
   className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+
+
+export function GradientHeading(): any ({ children, className, level = "h2" }: GradientHeadingProps) {;
+  const Tag = level;
+
+  return (
+    <Tag
+      className={cn(
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
+
+        className
+      )}>;
 =======
+
 import { cn } from "@/lib/utils",
 import React from "react",
 =======
@@ -16,7 +30,7 @@ import React from "react";
 =======
 import { cn } from "@/lib/utils",
 import React from "react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface GradientHeadingProps {
   children: React.ReactNode,
@@ -43,11 +57,7 @@ export function GradientHeading({ children, className, level = "h2" }: GradientH
   return (
     <Tag
       className={cn(
-<<<<<<< HEAD
-        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
 
-        className
-=======
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
         className
 <<<<<<< HEAD
@@ -77,7 +87,34 @@ export function GradientHeading({ children, className, level = "h2" }: GradientH
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
     >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
-    </Tag>
-  )
+
+    </Tag>;
+  );
 }
+
+=======
+import { cn } from '@/lib / utils';
+import React from './react';
+interface GradientHeadingProps {
+  children: React.ReactNode,
+  class_name?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+export /**
+ * GradientHeading - Function description
+ */
+function GradientHeading() {
+  const Tag = level;
+;
+  return (
+    <Tag;
+      className={cn (
+        "text - 4xl font - bold tracking - tight bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent";
+        class_name)}
+    >;
+      {children}
+    </Tag>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

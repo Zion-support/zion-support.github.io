@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+
 import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
@@ -29,12 +29,42 @@ export function readState(): IntegrationsState {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ensureDataDir();
   try {
-    const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
+    const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
+    return JSON && JSON.parse(raw) as IntegrationsState;
+=======
+      events: []
+    };
+    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
+=======
+    }
+    fs.writeFileSync (STATE_FILE, JSON.stringify (initial, null, 2), "utf8");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+}
+
+
+
+export function readState(): IntegrationsState {;
+
+
+  ensureDataDir();
+  const current = readState();
+  (mutator(current),
+    fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));
+  return current;
+=======
+export function read_state (): IntegrationsState {
+  ensureDataDir ();
+  try {
+
+    const raw = fs.readFileSync (STATE_FILE, "utf8");
+    return JSON.parse (raw) as IntegrationsState;
+
   } catch (error) {
     return { connections: [], logs: [], overrides: [], events: [] }
   }
 }
+
 export function writeState(
 <<<<<<< HEAD
   mutator: (state: IntegrationsState) => void
@@ -45,11 +75,35 @@ export function writeState(
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ensureDataDir();
   const current = readState();
-  (mutator(current)
-    fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8"));
+
+  (mutator(current),
+    fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));
+
   return current;
 }
-<<<<<<< HEAD
 
+
+
+export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
+  ensureDataDir();
+  const current = readState();
+  mutator(current);
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
+  return current
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export function write_state (
+  mutator: (state: IntegrationsState) => void,
+): IntegrationsState {
+  ensureDataDir ();
+  const current = read_state ();
+  (mutator (current),
+    fs.writeFileSync (STATE_FILE, JSON.stringify (current, null, 2), "utf8"));
+  return current;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

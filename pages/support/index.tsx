@@ -9,7 +9,10 @@ import { GetServerSideProps } from 'next',;
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
-      destination: '/help'
+      destination: '/help',
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       permanent: false}}
 <<<<<<< HEAD
 }

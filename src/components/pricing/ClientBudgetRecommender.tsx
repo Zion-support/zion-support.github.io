@@ -226,14 +226,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       <div>
         {!suggestion && !isLoading ? (
           <Button
-<<<<<<< HEAD
-            type='button'
-            variant='outline'
-            onClick={generateSuggestion}
-            disabled={!jobTitle |!category}
-            className='w-full'          >
-            <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
-=======
+
             type="button"
             variant="outline"
             onClick={generateSuggestion}
@@ -248,9 +241,30 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </Button>
         ) : (
+=======
+            disabled={!jobTitle || !category}
+            className='w-full'>;
+            <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation;
+          </Button>;
+        ) : (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <PricingSuggestionBox
+=======
+    <div className='space - y-4'>;
+      <div>;
+        {!suggestion && !is_loading ? (
+          <Button;
+            type='button';
+            variant='outline';
+            on_click={generate_suggestion}
+            disabled={!job_title || !category}
+            className='w - full'          >;
+            <Sparkles className='h - 4 w - 4 mr - 2' /> Get Budget Recommendation;
+          </Button>) : (
+          <PricingSuggestionBox;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             suggestion={suggestion}
-            isLoading={isLoading}
+            is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
 <<<<<<< HEAD
             rateType='hourly'          />
@@ -275,12 +289,14 @@ return (<div className="space-y-4" > <div> {"
 }
 
 =======
+
 },
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             rateType="hourly"
           />
         )}
+
       </div>;
     </div>;
   );
@@ -288,5 +304,22 @@ return (<div className="space-y-4" > <div> {"
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+return (<div className="space - y-4" > <div> {";
+  !suggestion && !is_loading ? (<Button type="button" variant="outline" on_click={
+  generate_suggestion ";
+}> <Sparkles className="h - 4 w - 4 mr - 2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />);
+}</div> </div>);
+}
+'"  );
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

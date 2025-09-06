@@ -637,25 +637,15 @@ export const advancedITServices2025 = [
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
-export const advancedITServices2025 = [;
-  {;
-    id: 'quantum-cloud-infrastructure-platform',;
-    name: 'QuantumCloud Infrastructure',;
-    description: 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.',;
-    features: [;
-      'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support';
-    ],;
-    pricing: {;
-      starter: { price: 299, period: 'month', features: ['Up to 100 vCPUsBasic quantum featuresStandard support'] },;
-      professional: { price: 799, period: 'month', features: ['Up to 500 vCPUsAdvanced quantum featuresPriority supportCustom algorithms'] },;
-      enterprise: { price: 1999, period: 'month', features: ['Unlimited resourcesCustom quantum solutionsWhite-label platformDedicated support team'] }
-    },;
-    category: 'Cloud Infrastructure',;
-    tags: ['Quantum ComputingCloud InfrastructureSecurityScalability'],;
-    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure',;
-    contact: {;
-      phone: '+1 302 464 0950',;
+    market_size: '$15.7B',
+    target_audience:;
+      'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
+    competitive_advantage:;
+      'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration',
+  },
+];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
+
     },;
     marketSize: '$178.9B',;
     targetAudience: 'Enterprise businesses, cloud providers, research institutions, government agencies',;
@@ -873,4 +863,5 @@ export const advancedITServices2025 = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

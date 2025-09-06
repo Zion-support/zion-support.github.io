@@ -106,23 +106,28 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
   return next;
 }
-export function listProposals(): ProposalMeta[] {ensureDirs();
-  const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')));
-  const metas: ProposalMeta[] = entries.map((id) => {;
+
+
     const metaPath = path.join(dataDir, id, 'meta.json');
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
-export function getProposal(id: string): ProposalMeta | null {try {;
+
+
     const metaPath = path.join(dataDir, id, 'meta.json');
     if (!fs.existsSync(metaPath)) return null;
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   } catch {return null;
   }
 }
-export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
+
+
 =======
+
+
+  artifacts: {;
+
     markdownPath?: string,;
     jsonPath?: string,;
     pdfPath?: string,;
@@ -345,12 +350,11 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
-<<<<<<< HEAD
-}
-export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
-    ...meta;
-    artifacts: { ...meta.artifacts, ...artifacts }}));
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

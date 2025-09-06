@@ -7,16 +7,6 @@ import bs58 from 'bs58',;
 import jwt from 'jsonwebtoken',;
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me',
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).end(),
-  const { message, signature, publicKey } = req.body || {},
-  if (!message || !signature || !publicKey) return res.status(400).json({ error: 'Missing fields' }),
-  try {
-    const cookieHeader = req.headers.cookie || '',
-    const match = cookieHeader.match(/siwe-nonce=([^]+)/),
-    if (!match) return res.status(400).json({ error: 'Missing nonce' }),
-    const nonce = match[1],
-    if (!String(message).includes(`Nonce: ${nonce}`)) return res.status(400).json({ error: 'Nonce mismatch' }),
 
     const sigBytes = bs58.decode(signature),
     const msgBytes = new TextEncoder().encode(message),

@@ -1,9 +1,3 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIAutonomousEcosystemManager() {
-	return (
-		<ServiceLanding
-<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

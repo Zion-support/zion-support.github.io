@@ -17,8 +17,8 @@ export interface UserDetails {;
   permissions?: string[],
   companyId?: string;
   bio?: string;
-  createdAt?: string;
-  updatedAt?: string
+  created_at?: string;
+  updated_at?: string;
 }
 <<<<<<< HEAD
 export interface UserProfile {
@@ -27,21 +27,20 @@ export interface UserProfile {
 export interface UserProfile {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string;
-  displayName?: string;
+  display_name?: string;
   email: string;
-  userType: string;
-  profileComplete: boolean;
-  createdAt: string;
-  updatedAt: string;
+  user_type: string;
+  profile_complete: boolean;
+  created_at: string;
+  updated_at: string;
   avatar_url?: string;
   bio?: string;
-  avatarUrl?: string;
+  avatar_url?: string;
   headline?: string;
   role?: string;
 
-  permissions?: string[]
-
-  companyId?: string
+  permissions?: string[],
+  company_id?: string;
 }
 // Update AuthContextType definition to match implementation
 export interface AuthContextType {;
@@ -126,3 +125,4 @@ export interface AuthContextType {;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

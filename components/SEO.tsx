@@ -36,9 +36,14 @@ import Head from "next/head";
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import React from './react';
+import Head from './next / head';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface SEOProps {
+=======
+interface SEOProps {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
 <<<<<<< HEAD
@@ -57,10 +62,12 @@ interface SEOProps {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   keywords?: string;
 }
-const SEO: React.FC<SEOProps> = ({
-  title = "Zion Tech Group - Technology Solutions"
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development."
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting"
+
+const SEO: React.FC < SEOProps> = ({
+  title = "Zion Tech Group - Technology Solutions",
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting",
+
 }) => {
   return (
     <Head>
@@ -76,10 +83,28 @@ const SEO: React.FC<SEOProps> = ({
 <<<<<<< HEAD
 }
 =======
+
+const SEO: React.FC<SEOProps> = ({;
+  title = "Zion Tech Group - Technology Solutions",;
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
+}) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <Head>;
+      <title>{title}</title>;
+      <meta name="description" content={description} />;
+      <meta name="keywords" content={keywords} />;
+      <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
+    </Head>;
+  );
+
+
 };
 
 export default SEO;
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
@@ -122,8 +147,9 @@ export default function SEO({
 =======
 }
 export default SEO;
->>>>>>> origin/main
+
 =======
+
 >>>>>>> origin/automation-improvements-final
 =======
 }

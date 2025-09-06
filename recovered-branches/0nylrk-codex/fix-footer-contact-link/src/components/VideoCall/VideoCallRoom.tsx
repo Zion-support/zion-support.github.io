@@ -5,6 +5,13 @@
 import React from 'react';
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
+interface VideoCallRoomProps {;
+
+  room?: string;
+  token?: string;
+  serverUrl?: string;
+  onDisconnect?: () => void;
+  className?: string;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
@@ -25,8 +32,11 @@ interface VideoCallRoomProps {
   serverUrl?: string,
   onDisconnect?: () => void,
   className?: string
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
+
+
+export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (
     <Card className={className |"w-full max-w-3xl mx-auto"}>
       <CardHeader>
@@ -62,6 +72,7 @@ interface VideoCallRoomProps {;
 ;
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (;
+
     <Card className={className || "w-full max-w-3xl mx-auto"}>;
       <CardHeader>;
         <CardTitle>Video Call</CardTitle>;
@@ -77,11 +88,11 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
       </CardContent>;
     </Card>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 <<<<<<< HEAD
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

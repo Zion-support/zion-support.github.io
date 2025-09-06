@@ -1,15 +1,11 @@
-import type { NextPage } from 'next';
-import Link from 'next/link';
 
-const AutomationsIndex: NextPage = () => {
-  const items = [
-<<<<<<< HEAD
-    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' }
-    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }]
+
 =======
+
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -22,13 +18,6 @@ const AutomationsIndex: NextPage = () => {
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
             </div>
           </Link>
-<<<<<<< HEAD
-        ))}
-      </div>
-    </main>
-  )
-}
-export default AutomationsIndex;
 
 <<<<<<< HEAD
 =======
@@ -41,6 +30,7 @@ export default AutomationsIndex,;
   }
 }
       </div>;
+
     </main>;
   );
 },;

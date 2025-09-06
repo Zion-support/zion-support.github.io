@@ -3,18 +3,25 @@
 <<<<<<< HEAD
 import { Skill } from '@/types/resume';
 export interface SkillsFormProps {
+  resume_id: string;
 =======
+
 import {Skill} from '@/types/resume';
 export interface SkillsFormProps {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   resumeId: string;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   skills: Skill[];
-  onComplete: () => void;
-  onBack: () => void
+
+  on_complete: () => void;
+  on_back: () => void;
+
 }
 <<<<<<< HEAD
 export interface SkillItemProps {
 =======
+}
+
 
 export interface SkillItemProps {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

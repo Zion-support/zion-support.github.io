@@ -36,6 +36,7 @@ export default function AISalesIntelligencePlatform() {
 	return (
 		<ServiceLanding
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 			title="AI Sales Intelligence Platform"
 			slug="ai-sales-intelligence-platform"
 			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows."

@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-// Search parser utilities
-export const parseSearchQuery = (query: string) => {
-  // Add search query parsing functionality here
+
+// Search parser utilities;
+export const parseSearchQuery = (query: string) =>: any {
+  // Add search query parsing functionality here;
   return {
 <<<<<<< HEAD
     keywords: []
@@ -9,31 +9,53 @@ export const parseSearchQuery = (query: string) => {
     location: null
     type: null
   }
-}
-export const searchAll = (parsed: any, access: any) => {
-  // Add search functionality here
-  return {
-    all: []
-    talent: []
-    jobs: []
-    projects: []
+
+  const words = query && query.toLowerCase().split(/\s+/);
+  const keywords: string[] = [];
+  const skills: string[] = [];
+  
+  // Simple keyword extraction
+  for (const word of words) {
+    if (word && word.length > 2) {
+      keywords && keywords.push(word);
+    }
   }
-}
+  
+  if (keywords && keywords.length > 0) {
+    filters && filters.keywords = keywords;
+  }
+  
+  // Extract skills (simple heuristic)
+  const skillKeywords = ['javascript', 'react', 'node', 'python', 'java', 'typescript', 'vue', 'angular', 'php', 'ruby', 'go', 'rust', 'swift', 'kotlin', 'c++', 'c#', 'html', 'css', 'sql', 'mongodb', 'postgresql', 'mysql', 'redis', 'docker', 'kubernetes', 'aws', 'azure', 'gcp', 'git', 'github', 'gitlab', 'jenkins', 'ci/cd', 'devops', 'frontend', 'backend', 'fullstack', 'mobile', 'ios', 'android', 'web', 'api', 'rest', 'graphql', 'microservices', 'blockchain', 'ai', 'ml', 'data', 'analytics', 'design', 'ui', 'ux', 'figma', 'sketch', 'adobe', 'photoshop', 'illustrator'];
+  
+  for (const word of words) {
+    if (skillKeywords && skillKeywords.includes(word)) {
+      skills && skills.push(word);
+    }
+  }
+  
+  if (skills && skills.length > 0) {
+    filters && filters.skills = skills;
+  }
+  
+  return filters;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     keywords: [],
     skills: [],
     location: null,
     type: null;
-  };
-};
-
-export const searchAll = (parsed: any, access: any) => {
-  // Add search functionality here
+  }
+}
+;
+export const search_all = (parsed: any, access: any) =>: any {
+  // Add search functionality here;
   return {
     all: [],
     talent: [],
     jobs: [],
     projects: [];
+
   };
 };
 
@@ -44,7 +66,12 @@ export const suggestDidYouMean = (query: string) => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export const suggestDidYouMean = (query: string) => {
+  // Add did you mean functionality here;
+  return null;
+
+
+
 }
 =======
 };

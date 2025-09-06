@@ -1,6 +1,4 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+
 
 const MarketSignals: NextPage = () => {
   return (
@@ -13,9 +11,8 @@ const MarketSignals: NextPage = () => {
         <h1 className="text-2xl font-bold">AI Market Signals Agent</h1>
         <p>Runs daily to curate relevant AI/tech market signals and trends and stores them in the repository.</p>
         <div className="space-y-2">
-<<<<<<< HEAD
-          <Link href="/data/reports/market-signals/latest.json"><a className="text-blue-600 underline">Latest Report (JSON)</a></Link>
-=======
+
+
           <Link href="/data/reports/market-signals/latest.json"><a className="text-blue-600 underline">Latest Report (JSON)</Link></Link>
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -39,8 +36,6 @@ export default MarketSignals,
 },
 <<<<<<< HEAD
 
-export default MarketSignals,;
-=======
 export default MarketSignals,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

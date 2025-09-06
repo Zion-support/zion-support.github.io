@@ -9,33 +9,16 @@ export interface Offer {
 export interface Offer {;
 =======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   createdAtIso: string;
-  clientId: string;
-  talentSlug: string;
+  client_id: string;
+  talent_slug: string;
   startDateIso: string;
+
   scopeSummary: string;
   paymentTerms: PaymentTerms;
-<<<<<<< HEAD
-  agreementUrl?: string;
-  status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED';
-  changeRequestNote?: string;
-  projectId?: string;
-}
-export interface PaymentTerms {
-  type: 'hourly' | 'fixed' | 'milestone';
-  amount?: number;
-  currency?: string;
-  milestones?: Array<{
-    title: string;
-    amount: number;
-    dueDateIso: string;
-  }>;
-}
-export interface Project {
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -59,8 +42,8 @@ export interface Project {;
   id: string;
   title: string;
   summary: string;
-  clientId: string;
-  talentSlug: string;
+  client_id: string;
+  talent_slug: string;
   startDateIso: string;
 <<<<<<< HEAD
 <<<<<<< HEAD

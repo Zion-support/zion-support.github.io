@@ -24,23 +24,39 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
 <<<<<<< HEAD
 }
 
-const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
-  ({ icon, active, children, href, target, badge, className, ...props }, ref,) => {
-    if (href) {
-      return(<a
+      return (<a;
           href={href}
-    return(<button
+    return (<button;
         ref={ref}
-SidebarMenuItem.displayName = "SidebarMenuItem"
+
+SidebarMenuItem.display_name = "SidebarMenuItem";
+
+export { SidebarMenuItem, SidebarMenuGroup }
+export { SidebarMenuItem, SidebarMenuGroup }
+}
+export { SidebarMenuItem, SidebarMenuGroup }
+
+SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
+
 export { SidebarMenuItem, SidebarMenuGroup };
 export { SidebarMenuItem, SidebarMenuGroup };
 };
+
 export { SidebarMenuItem, SidebarMenuGroup };
 }
 <<<<<<< HEAD
 export { SidebarMenuItem, SidebarMenuGroup }
 
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
+
+=======
+
 =======
 =======
 import React, { forwardRef } from "react",

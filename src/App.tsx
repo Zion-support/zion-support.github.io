@@ -16,7 +16,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="App">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
           <Header />
           <div className="main-content">
             <Sidebar />
@@ -31,6 +31,7 @@ export default function App() {
             </main>
           </div>
           <Footer />
+          <PerformanceMonitor />
         </div>
       </Router>
     </ErrorBoundary>

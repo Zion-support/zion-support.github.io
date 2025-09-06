@@ -38,7 +38,6 @@ const BusinessIntelligenceChat: NextPage = () => {
 export default BusinessIntelligenceChat;
 <<<<<<< HEAD
 
-=======
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======

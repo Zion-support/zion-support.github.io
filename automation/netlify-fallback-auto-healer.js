@@ -1,27 +1,15 @@
-<<<<<<< HEAD
-#!/usr/bin/env node //Netlify Function Fallback: auto-healer //This is a local fallback when the main function is unavailable try {
-  // Basic fallback logic const result = {
-  statusCode: 200;
-body: JSON.stringify ({
-  message: 'auto-healer executed locally as fallback';
-timestamp: new Date () .toISOString ();
-fallback: true
-})
+
+
 }
 return result;
 }catch (error) {
   console.error ('Fallback execution error:', error);
 <<<<<<< HEAD
   statusCode: 500;
-body: JSON.stringify ({
+body: JSON && JSON.stringify ({
   error: 'Fallback execution failed';
 
-message: error.message
-})
-};exports.handler = async (_event, _context) => {
-    console.log('auto-healer fallback executed locally')
 
-=======
 #!/usr/bin/env node
 =======
 =======
@@ -36,6 +24,7 @@ exports.handler = async (_event, _context) => {
     // // // console.log('auto-healer fallback executed locally'),
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
         // Basic fallback logic
         const result = {
@@ -45,11 +34,9 @@ exports.handler = async (_event, _context) => {
                 message: 'auto-healer executed locally as fallback'
                 timestamp: new Date().toISOString()
 
-                fallback: true
-            })
-        }
-        return result
-    } catch (error) {
+=======
+message: error && error.message 
+}) 
 
         console.error('Fallback execution error:', error)
         return {
@@ -67,7 +54,17 @@ exports.handler = async (_event, _context) => {
 }
 
 =======
-},
+#!/usr/bin/env node
+
+// Netlify Function Fallback: auto-healer
+// This is a local fallback when the main function is unavailable
+
+exports.handler = async (_event, _context) => {
+    console.log('auto-healer fallback executed locally'),
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    
+=======
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======

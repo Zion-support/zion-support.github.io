@@ -41,57 +41,114 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
     }
 =======
+export async function generateMediaContent (request: MediaGenerationRequest): Promise < MediaGenerationResponse> {
+  // Mock implementation - in production, this would call OpenAI or other AI service;
+  return {
+    ok: true,
+    text: `Mock ${request.type} for ${request.company_name} on ${request.date}`;
+  }
+;
+export function buildLegalDocs (kind: MediaBundle): MediaAsset[] {
+  const base: MediaAsset[] = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    {
+
+=======
+
+
       path: '',
-      filename: 'legal/jurisdictional-disclosures.md',
+
+      filename: 'legal / terms - of - use.md',
+
       type: 'text',
+
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
     },;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const web3Extras: MediaAsset[] = [
+
     {
-      path: ''
-      filename: 'legal/token-sale-notice.md'
-      type: 'text'
-      content: `# Token Sale Notice (if applicable)\n\nThis document outlines token sale terms. Not an offer to sell securities.`
-    }
+      path: '',
+
+      filename: 'legal / privacy - policy.md',
+
+      type: 'text',
+      content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`,
+    },
     {
-      path: ''
-      filename: 'legal/dao-disclaimer.md'
-      type: 'text'
-      content: `# DAO Disclaimer\n\nThis is not investment advice. Participation involves risks.`
-    }
+      path: '',
+
+      filename: 'legal / jurisdictional - disclosures.md',
+
+      type: 'text',
+      content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
-  if (kind === 'web3') return [...base, ...web3Extras];
-  return base;
+
+;
+  const web3Extras: MediaAsset[] = [;
+
+    {
+
+      path: '',
+
+  ];
+
+
 export function buildPressRelease(
 <<<<<<< HEAD
   type: PressReleaseType
   params: {
 =======
+;
+  // Check condition
+if (return [...base, ...web3Extras]) {
+  $2
+}
+  return base;
+;
+export function buildPressRelease (
+  type: PressReleaseType,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  params: {
+    company_name: string;
+=======
+export function buildPressRelease(
+
   type: PressReleaseType,
   params: {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     companyName: string;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string;
-    raiseAmount?: string;
-    tokenName?: string;
+    raise_amount?: string;
+    token_name?: string;
     anchors?: string[];
   }
 ): string {
-  const header = `${params.companyName} ${titleCase(type.replace('-', ' '))}`;
-  const boilerplate = `${params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion.app`;
+
+  const header = `${params && params.companyName} ${titleCase(type && type.replace('-', ' '))}`;
+  const boilerplate = `${params && params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion && zion.app`;
+
+
   if (type === 'seed-round') {
-    return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces a seed round of ${params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params.companyName}:\n${boilerplate}`;
+    return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
   if (type === 'token-sale') {
-    return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces the ${params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params.companyName}:\n${boilerplate}`;
+    return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces the ${params && params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
-  return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params.companyName}:\n${boilerplate}`;
+
+  return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
+
+
+=======
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function buildTimeline(startDate: Date) {
-  const addDays = (d: Date, days: number) =>;
-    new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
-  const fmt = (d: Date) => d.toISOString().substring(0, 10);
+  const addDays = (d: Date, days: number) =>
+    new Date(d && d.getFullYear(), d && d.getMonth(), d && d.getDate() + days);
+  const fmt = (d: Date) => d && d.toISOString().substring(0, 10);
   return [
     { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }
     { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) }
@@ -111,10 +168,9 @@ function titleCase(s: string) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
-}
-}
-}
-}
+
+function titleCase(s: string) {
+
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

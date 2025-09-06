@@ -5,10 +5,10 @@ import { readJson  } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {
 
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  return { props: { articles } }
-export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
-  const categories = Array.from(new Set(articles.map(a => a.category)));
+              ))}
+          </div>;
+        </div>;
+      ))}
 
 =======
 import {readJson} from '../../utils/fsDb';
@@ -56,7 +56,7 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
                   <a className="enhanced-card hover:shadow-md">
                     <div className="font-medium">{a.title}</div>
                     <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
-                  </Link>
+                  </a>
                 </Link>
 <<<<<<< HEAD
               ))}
@@ -67,6 +67,7 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
 );
 <<<<<<< HEAD
 =======
+
 
 }
 }

@@ -13,6 +13,10 @@ import { v4 as uuidv4 } from 'uuid';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 async function mockProviderCall<T>(
@@ -20,18 +24,11 @@ async function mockProviderCall<T>(
   action: string
   details: Record<string, any>
 ): Promise<{ log: SyncLogEntry; result: T }> {
+
   const log: SyncLogEntry = {
-    id: uuidv4()
-    timestamp: Date.now()
-    providerId: connection.providerId
-    level: "info"
-    action
-    details
-  }
-  // In a real implementation, call provider SDK/API here using connection.accessToken
-  return { log, result: { ok: true } as unknown as T }
+
 }
-// CRM actions
+// CRM actions;
 export const crm = {
   async syncContact(
 <<<<<<< HEAD
@@ -45,19 +42,9 @@ export const crm = {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return mockProviderCall(connection, "sync_contact", { contact });
   }
-  async addEmailTouchpoint(
-    connection: ProviderConnection
-    touchpoint: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
-  }
-  async addProjectNote(
-    connection: ProviderConnection
-    note: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_project_note", { note });
-  }
-}
+
+};
+
 // ATS actions
 export const ats = {
   async updateStatus(
@@ -74,8 +61,51 @@ export const ats = {
   }
 }
 
-<<<<<<< HEAD
+  async pushApplicant($2) {
+    return simulateAction($3);
+  },
+  async uploadResume($2) {
+    return simulateAction($3);
+  },
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+    return simulateAction(connection, 'ats.updateStatus', { change })
+  }};
+
 =======
+  async sync_contact (
+    connection: ProviderConnection,
+    contact: Record < string, any>,
+  ) {
+    return mockProviderCall (connection, "sync_contact", { contact });
+  },
+  async addEmailTouchpoint (
+    connection: ProviderConnection,
+    touchpoint: Record < string, any>,
+  ) {
+    return mockProviderCall (connection, "add_email_touchpoint", { touchpoint });
+  },
+  async addProjectNote (
+    connection: ProviderConnection,
+    note: Record < string, any>,
+  ) {
+    return mockProviderCall (connection, "add_project_note", { note });
+  },
+}
+;
+// ATS actions;
+export const ats = {
+  async update_status (
+    connection: ProviderConnection,
+    status: Record < string, any>,
+  ) {
+    return mockProviderCall (connection, "update_status", { status });
+  },
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
   async createCandidate(
     connection: ProviderConnection,
     candidate: Record<string, any>

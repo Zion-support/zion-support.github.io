@@ -3,14 +3,12 @@ import { motion } from 'framer-motion';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
+  errorInfo?: ErrorInfo;
 }
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -20,17 +18,12 @@ class ErrorBoundary extends Component<Props, State> {
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
+    this.setState({ error, errorInfo });
   }
-
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
       return (
         <motion.div
           className="min-h-screen flex items-center justify-center bg-slate-900"
@@ -66,43 +59,31 @@ class ErrorBoundary extends Component<Props, State> {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               We're sorry, but something unexpected happened. Please try refreshing the page.
-            </motion.p>
-            
-            <motion.div
-              className="space-y-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
+            </p>
+            <div className="space-y-3">
               <button
                 onClick={() => window.location.reload()}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Refresh Page
               </button>
-              
               <button
-                onClick={() => window.location.href = '/'}
-                className="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors"
               >
-                Go Home
+                Try Again
               </button>
-            </motion.div>
-            
+            </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <motion.details
-                className="mt-8 text-left"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-              >
-                <summary className="text-gray-400 cursor-pointer hover:text-white">
+              <details className="mt-4 p-4 bg-gray-100 rounded-lg">
+                <summary className="cursor-pointer text-sm font-medium text-gray-700">
                   Error Details (Development)
                 </summary>
-                <pre className="mt-2 p-4 bg-slate-800 rounded-lg text-sm text-red-400 overflow-auto">
-                  {this.state.error.stack}
+                <pre className="mt-2 text-xs text-gray-600 overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
                 </pre>
-              </motion.details>
+              </details>
             )}
           </div>
         </motion.div>

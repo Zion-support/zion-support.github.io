@@ -38,7 +38,8 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
-import Layout from '../components/Layout';
+
+
 export default function TestPage() {
   return (
 <<<<<<< HEAD
@@ -76,14 +77,19 @@ export default function TestPage() {
       <Head>
         <title>Test Page | Zion Tech Group</title>
       </Head>
-<<<<<<< HEAD
-      <div className='min-h-screen bg-black text-white flex items-center justify-center'>
-        <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
-      </div>
-    </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
+
+export default function TestPage() {;
+  return (
+    <Layout title="Test Page">;
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">;
+        <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>;
+      </div>;
+    </Layout>;
+
+=======
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 }
 
@@ -101,6 +107,7 @@ export default function TestPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -146,10 +153,8 @@ export default function TestPage() {
     </>;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
->>>>>>> origin/main
 =======
-);
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
         <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
       </div>
@@ -168,6 +173,21 @@ export default function TestPage() {
 }
 <<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import React from 'react';
+import Layout from '../components / Layout';
+;
+export default /**
+ * TestPage - Function description
+ */
+function TestPage() {
+  return (
+    <Layout title="Test Page">;
+      <div className="min - h-screen bg - gray - 100 flex items - center justify - center">;
+        <h1 className="text - 4xl font - bold text - gray - 900">Test Page</h1>;
+      </div>;
+    </Layout>);
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======

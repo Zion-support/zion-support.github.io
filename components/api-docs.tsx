@@ -1,4 +1,15 @@
 import { GetServerSideProps } from 'next';
+
+
+  };      permanent: true}}
+
+}
+
+
+export default function ApiDocsRedirect() {;
+  return null;
+}
+=======
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -18,9 +29,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 export default function ApiDocsRedirect() {;
   return null;
-<<<<<<< HEAD
 }
+
 =======
+
 }
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

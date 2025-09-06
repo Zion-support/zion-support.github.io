@@ -2,12 +2,7 @@
 <<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
-=======
-<<<<<<< HEAD
-import React from "react";
-import Layout from "../components/Layout";
-<<<<<<< HEAD
-=======
+
 import React from 'react';
 import Layout from '../components/Layout';
 >>>>>>> origin/automation-improvements-final
@@ -21,8 +16,10 @@ import Layout from "../components/Layout";
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Status() {
   return (
     <Layout
@@ -63,6 +60,59 @@ export default function Status() {
           </div>
         </div>
       </div>
+    </Layout>
+=======
+export default function Status() {;
+  return (
+    <Layout
+      title="System Status - Zion Tech Group"
+      description="Check the current status of Zion Tech Group services and systems.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              System Status;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              All systems are operational.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">Status page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
     </Layout>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
+=======
+import React from './react';
+import Layout from "../components / Layout";
+;
+export default /**
+ * Status - Function description
+ */
+function Status() {
+  return (
+    <Layout;
+      title="System Status - Zion Tech Group";
+      description="Check the current status of Zion Tech Group services and systems.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
+              System Status;
+            </h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              All systems are operational.;
+            </p>;
+          </div>;
+          <div className="text - center">;
+            <p className="text - gray - 600">Status page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

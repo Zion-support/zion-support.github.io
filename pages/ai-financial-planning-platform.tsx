@@ -1,9 +1,3 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AiFinancialPlanningPlatform() {
-	return (
-		<ServiceLanding
-<<<<<<< HEAD
 
 			title="AI Financial Planning Platform"
 			description="Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence."
@@ -21,9 +15,7 @@ export default function AiFinancialPlanningPlatform() {
 				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake"
 				"Executive dashboards and board-ready reports"
 
-				"Headcount planning and hiring plans"
-			]}
-			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 			title="AI Financial Planning Platform"
 			description="Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence."

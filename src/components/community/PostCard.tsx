@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-import React from 'react'
-import {formatDistanceToNow} from "date-fns"
-import Link from "next/link"
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
 
-import { formatDistanceToNow } from "date-fns"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
-import { ForumPost } from "@/types/community"
-import { logInfo } from '@/utils/productionLogger'
-=======
+
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -58,9 +45,8 @@ export default PostCard
 
 =======
 
-const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
-export default PostCard;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      "transition-shadow hover: shadow-md",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 <<<<<<< HEAD
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),

@@ -73,7 +73,7 @@ export function FraudDetectionSettings() {
     }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">
@@ -178,10 +178,16 @@ export function FraudDetectionSettings() {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-}
-}
+
 =======
+
+
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;

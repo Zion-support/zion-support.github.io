@@ -1,6 +1,4 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+
 
 const LanguageSync: NextPage = () => {
   return (
@@ -34,8 +32,6 @@ export default LanguageSync,
 },
 <<<<<<< HEAD
 
-export default LanguageSync,;
-=======
 export default LanguageSync,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

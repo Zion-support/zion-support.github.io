@@ -82,19 +82,14 @@ exports.handler = async function () {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }
-<<<<<<< HEAD:netlify/functions/cron-weekly-sitemap.js
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
+
+
     return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD:netlify/functions/cron-weekly-sitemap.js
 
-}
-
-=======
 },
 <<<<<<< HEAD
 >>>>>>> main:netlify/functions/cron-weekly-sitemap.js

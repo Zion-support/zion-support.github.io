@@ -8,8 +8,6 @@ import type { Application } from '../../utils/types',;
 import { rateLimit } from '../../utils/rateLimit',;
 const FILE = 'applications.json',
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return,
 
   if (req.method === 'GET') {
     const { jobId, talentSlug } = req.query,
@@ -105,14 +103,6 @@ createdAtIso: now}
   res.status(405).end('Method Not Allowed')
 }
 
-=======
-type Application = {
-  id: string;
-  jobId: string;
-  talentSlug: string;
-  status: 'applied' | 'skipped';
-  createdAtIso: string;
-};
 
 const FILE = 'applications.json';
 
@@ -173,5 +163,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

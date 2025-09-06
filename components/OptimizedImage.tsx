@@ -1,5 +1,31 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
-import Image from 'next/image';
+
+import Image from 'next / image';
+;
+
 interface OptimizedImageProps {
 <<<<<<< HEAD
   src: string
@@ -15,7 +41,7 @@ interface OptimizedImageProps {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   width?: number;
   height?: number;
-  className?: string;
+  class_name?: string;
   priority?: boolean;
   quality?: number;
 }
@@ -33,7 +59,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   width = 800;
   height = 600;
-  className = '';
+  class_name = '';
   priority = false;
 <<<<<<< HEAD
   quality = 75
@@ -44,22 +70,24 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 }) => {
   return (
-    <Image
+    <Image;
       src={src}
       alt={alt}
       width={width}
       height={height}
-      className={className}
+      className={class_name}
       priority={priority}
       quality={quality}
+
+;
+
+=======
       placeholder="blur"
       blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-<<<<<<< HEAD
-/>  );
-}
-=======
+
     />  );
 };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default OptimizedImage;

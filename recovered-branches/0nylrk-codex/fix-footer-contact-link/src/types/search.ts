@@ -62,18 +62,9 @@ export interface SearchHighlight {;
   match: string,;
   after: string;
 }
-;
-export interface FilterOptions {;
-  productTypes: {;
-    label: string,;
-    value: string;
-  }[],;
-  locations: {;
-    label: string,;
-    value: string;
-  }[],;
-  availabilityOptions: {;
-    label: string,;
+export interface FilterOptions {
+  product_types: {
+    label: string,
     value: string;
   }[];
   ratingOptions: number[];
@@ -84,3 +75,4 @@ export interface FilterOptions {;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

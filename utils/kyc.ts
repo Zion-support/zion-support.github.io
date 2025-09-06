@@ -9,46 +9,76 @@ export interface KycDocumentMeta {
 export interface KycDocumentMeta {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   url: string;
-  uploadedAt: string;
+  uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
 <<<<<<< HEAD
 export interface KycProfile {
+  user_id: string;
 =======
+
 
 export interface KycProfile {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   role: KycRole;
   fullLegalName?: string;
-  businessName?: string;
+  business_name?: string;
   businessRegistrationNumber?: string;
   country?: string;
   dateOfBirth?: string;
   documents: KycDocumentMeta[];
   status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
-  amlStatus: 'unknown' | 'clear' | 'match' | 'review';
+  aml_status: 'unknown' | 'clear' | 'match' | 'review';
   flags?: string[];
-  riskScore?: number;
-  createdAt: string;
+  risk_score?: number;
+  created_at: string;
   lastUpdatedAt: string;
-  auditTrail: Array<{
+  audit_trail: Array<{
     at: string;
     by: string;
     action: string;
+
     details?: any
+
   }>;
+
+=======
+// KYC (Know Your Customer) utilities
+export interface KycProfile {
+  userId: string;
+  role: 'client' | 'talent' | 'both';
+  fullLegalName: string;
+  businessName?: string;
+  businessRegistrationNumber?: string;
+  documents: KycDocument[];
+  status: 'in_progress' | 'pending_review' | 'approved' | 'rejected' | 'expired';
+  submittedAt?: string;
+  reviewedAt?: string;
+  expiresAt?: string;
+  reviewerId?: string;
+  rejectionReason?: string;
+  notes?: string;
+
 }
-export function getRequiredDocuments(role: KycRole): string[] {
-  if (role === 'client') {;
+
+export function getRequiredDocuments (role: KycRole): string[] {
+  // Check condition
+if ( {) {
+  $2
+}
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
   }
 }
-export function getOptionalDocuments(role: KycRole): string[] {
-  if (role === 'client') {;
+
+
     return ['bank_statement', 'utility_bill'];
   } else {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
@@ -64,23 +94,75 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   if (!profile.fullLegalName && !profile.businessName) {
     missing.push('name');
   }
-  if (!profile.country) {
-    missing.push('country');
+  
+  if (!profile && profile.country) {
+    missing && missing.push('country');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
+
   if (profile.role === 'client' && !profile.dateOfBirth) {
     missing.push('dateOfBirth');
   }
+
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
+=======
+  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
+    missing && missing.push('dateOfBirth');
+  }
+  return { ok: missing && missing.length === 0, missing };  
+  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
+    missing && missing.push('businessRegistrationNumber');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return {
-    ok: missing.length === 0
+
+    ok: missing && missing.length === 0,
+
     missing
+
   }
+
 }
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
+  const missing: string[] = [];
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('name');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('country');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('dateOfBirth');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('businessRegistrationNumber');
+  }
+  return {
+    ok: missing.length === 0,
+    missing;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

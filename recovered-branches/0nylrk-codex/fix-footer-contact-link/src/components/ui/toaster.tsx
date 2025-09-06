@@ -12,11 +12,16 @@ import {Toaster, as, SonnerToaster} from "sonner";
 =======
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function Toaster() {
   return (
 
+=======
+import {Toaster, as, SonnerToaster} from "sonner";
+export function Toaster() {;
+  return (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     <SonnerToaster
       position="top-right"
       toastOptions={{
@@ -50,9 +55,9 @@ export function Toaster() {;
           border: '1px solid #1e3a6f'};
         duration: 4000;
         descriptionClassName: "text-zion-slate-light"}}
+
     />;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 <<<<<<< HEAD

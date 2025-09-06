@@ -250,66 +250,34 @@ export default function PrivacyPage() {
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+import {
+
+  Shield,
+  Lock,
+  Eye,
+  Database,
+  Mail,
+  Phone,
+  MapPin,
+  Users,;
+
+} from "lucide-react";
+import MainLayout from "../components/layout/MainLayout";
+
+
+=======
+
+import { 
+  Shield, Lock, Eye, Database, Globe, 
+  User, Settings, AlertTriangle, CheckCircle, Mail
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-const PrivacyPage: React.FC = () => {
-  const lastUpdated = 'January 17, 2025';
 
-  const privacySections = [
-    {
-      title: 'Information We Collect',
-<<<<<<< HEAD
-      icon: <Database className='w-8 h-8' />,
-      color: 'from-cyan-500 to-blue-500',
-      content: [
-        'Personal information (name, email, phone number, company)',
-        'Business information (company size, industry, project requirements)',
-        'Technical information (IP address, browser type, device information)',
-        'Usage data (website interactions, service usage patterns)',
-        'Communication records (emails, phone calls, support tickets)',
-      ],
-    },
-    {
-      title: 'How We Use Your Information',
-      icon: <Settings className='w-8 h-8' />,
-      color: 'from-purple-500 to-pink-500',
-      content: [
-        'Provide and improve our services',
-        'Communicate with you about our services',
-        'Process payments and manage accounts',
-        'Send marketing communications (with consent)',
-        'Analyze usage patterns and improve user experience',
-        'Comply with legal obligations',
-      ],
-    },
-    {
-      title: 'Information Sharing',
-      icon: <Globe className='w-8 h-8' />,
-      color: 'from-green-500 to-emerald-500',
-      content: [
-        'We do not sell, trade, or rent your personal information',
-        'Share with trusted service providers under strict confidentiality',
-        'Comply with legal requirements and court orders',
-        'Protect our rights, property, and safety',
-        'Business transfers (with notice and choice)',
-      ],
-    },
-    {
-      title: 'Data Security',
-      icon: <Lock className='w-8 h-8' />,
-      color: 'from-orange-500 to-red-500',
-      content: [
-        'Industry-standard encryption for data in transit and at rest',
-        'Regular security audits and vulnerability assessments',
-        'Access controls and authentication measures',
-        'Employee training on data protection',
-        'Incident response and breach notification procedures',
-      ],
-    },
-=======
+
+
       icon: <Database className="w-8 h-8" />,
       color: 'from-cyan-500 to-blue-500',
       content: [
@@ -340,42 +308,18 @@ const PrivacyPage: React.FC = () => {
         'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
+
+
   ];
 
   const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal information',
-<<<<<<< HEAD
-      icon: <Eye className='w-6 h-6' />,
-    },
-    {
-      title: 'Correction',
-      description: 'Request correction of inaccurate information',
-      icon: <CheckCircle className='w-6 h-6' />,
-    },
-    {
-      title: 'Deletion',
-      description: 'Request deletion of your personal information',
-      icon: <AlertTriangle className='w-6 h-6' />,
-    },
-    {
-      title: 'Portability',
-      description: 'Request transfer of your data to another service',
-      icon: <Database className='w-6 h-6' />,
-    },
-    {
-      title: 'Objection',
-      description: 'Object to processing of your personal information',
-      icon: <User className='w-6 h-6' />,
-    },
-    {
-      title: 'Restriction',
-      description: 'Request restriction of processing activities',
-      icon: <Settings className='w-6 h-6' />,
-    },
-=======
+
+
+
       icon: <Eye className="w-6 h-6" />
     };
     {
@@ -403,7 +347,8 @@ const PrivacyPage: React.FC = () => {
       description: 'Request restriction of processing activities',
       icon: <Settings className="w-6 h-6" />
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
+
   ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -428,20 +373,22 @@ import {
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
 =======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/automation-improvements-final
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function PrivacyPage() {
+=======
+export default function PrivacyPage() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
+
+
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 
@@ -452,13 +399,12 @@ export default function PrivacyPage() {
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
       keywords="privacy policy, data protection, personal information, GDPR compliance"
-      canonical="https://ziontechgroup.com/privacy"
-    >
-      <div className="min-h-screen bg-gray-50">
+      canonical="https://ziontechgroup && ziontechgroup.com/privacy">;
+      <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
+          <div className="max-w-7xl mx-auto px-4">;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -494,9 +440,9 @@ export default function PrivacyPage() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Content Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
+        <section className="py-16 px-4">;
+          <div className="max-w-4xl mx-auto">;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1060,6 +1006,8 @@ const PrivacyPage: React.FC = () => {
                   Personal Information
                 </h3>
 =======
+
+
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
@@ -1091,7 +1039,8 @@ const PrivacyPage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
@@ -1135,13 +1084,14 @@ const PrivacyPage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-=======
+
+
                 <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
                 <p className="mb-6">
                   We use the information we collect to provide, maintain, and improve our services.
                 </p>
                 
->>>>>>> origin/automation-improvements-final
+
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
@@ -1175,6 +1125,8 @@ const PrivacyPage: React.FC = () => {
                   described in this policy.
 <<<<<<< HEAD
 =======
+
+
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
@@ -1189,39 +1141,25 @@ const PrivacyPage: React.FC = () => {
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
-<<<<<<< HEAD
-                  We implement appropriate security measures to protect your
-                  personal information against unauthorized access, alteration
-                  disclosure, or destruction.
-=======
+
                   We implement appropriate security measures to protect your personal information against 
                   unauthorized access, alteration, disclosure, or destruction.
->>>>>>> origin/automation-improvements-final
+
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
                 <p className="mb-6">
-<<<<<<< HEAD
-                  You have the right to access, update, or delete your personal
-                  information. You may also opt out of certain communications
-                  from us.
-=======
+
                   You have the right to access, update, or delete your personal information. You may also 
                   opt out of certain communications from us.
->>>>>>> origin/automation-improvements-final
+
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
                 <p className="mb-6">
-<<<<<<< HEAD
-                  If you have any questions about this Privacy Policy, please
-                  contact us at:
-                </p>
-<<<<<<< HEAD
 
-=======
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 
->>>>>>> origin/automation-improvements-final
+
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
@@ -1270,11 +1208,11 @@ const PrivacyPage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <p className="text-sm text-gray-600 mt-8">
 =======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <p className="text-sm text-gray-600 mt-8">
 >>>>>>> origin/automation-improvements-final
 =======
@@ -1323,99 +1261,17 @@ import {
   Lock,
   Eye,
   Database,
-  Globe,
-  User,
-  Settings,
-  AlertTriangle,
-  CheckCircle,
-  Mail,;} from 'lucide-react';
-
-const PrivacyPage: React.FC = () => {
-  const lastUpdated = 'January 17, 2025';
-
-  const privacySections = [
-    {
-      title: 'Information We Collect',
-      icon: <Database className='w-8 h-8' />,
-      color: 'from-cyan-500 to-blue-500',
-      content: [
-        'Personal information (name, email, phone number, company)',
-        'Business information (company size, industry, project requirements)',
-        'Technical information (IP address, browser type, device information)',
-        'Usage data (website interactions, service usage patterns)',
-        'Communication records (emails, phone calls, support tickets)',
-      ],
-    },
-    {
-      title: 'How We Use Your Information',
-      icon: <Settings className='w-8 h-8' />,
-      color: 'from-purple-500 to-pink-500',
-      content: [
-        'Provide and improve our services',
-        'Communicate with you about our services',
-        'Process payments and manage accounts',
-        'Send marketing communications (with consent)',
-        'Analyze usage patterns and improve user experience',
-        'Comply with legal obligations',
-      ],
-    },
-    {
-      title: 'Information Sharing',
-      icon: <Globe className='w-8 h-8' />,
-      color: 'from-green-500 to-emerald-500',
-      content: [
-        'We do not sell, trade, or rent your personal information',
-        'Share with trusted service providers under strict confidentiality',
-        'Comply with legal requirements and court orders',
-        'Protect our rights, property, and safety',
-        'Business transfers (with notice and choice)',
-      ],
-    },
-    {
-      title: 'Data Security',
-      icon: <Lock className='w-8 h-8' />,
-      color: 'from-orange-500 to-red-500',
-      content: [
-        'Industry-standard encryption for data in transit and at rest',
-        'Regular security audits and vulnerability assessments',
-        'Access controls and authentication measures',
-        'Employee training on data protection',
-        'Incident response and breach notification procedures',
-      ],
-    },  ];
-
-  const rights = [
-    {
-      title: 'Access',
-      description: 'Request access to your personal information',
-      icon: <Eye className='w-6 h-6' />,
-    },
-    {
-      title: 'Correction',
-      description: 'Request correction of inaccurate information',
-      icon: <CheckCircle className='w-6 h-6' />,
-    },
-    {
-      title: 'Deletion',
-      description: 'Request deletion of your personal information',
-      icon: <AlertTriangle className='w-6 h-6' />,
-    },
-    {
-      title: 'Portability',
-      description: 'Request transfer of your data to another service',
-      icon: <Database className='w-6 h-6' />,
-    },
-    {
-      title: 'Objection',
-      description: 'Object to processing of your personal information',
-      icon: <User className='w-6 h-6' />,
-    },
-    {
-      title: 'Restriction',
-      description: 'Request restriction of processing activities',
-      icon: <Settings className='w-6 h-6' />,
-    },  ];
-
+  Mail,
+  Phone,
+  MapPin,
+  Users,
+} from './lucide-react';
+import MainLayout from "../components / layout / MainLayout";
+;
+export default /**
+ * PrivacyPage - Function description
+ */
+function PrivacyPage() {
   return (
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -1446,154 +1302,70 @@ const PrivacyPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Overview */}
-          <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
-            <div className='max-w-6xl mx-auto'>
-              <div className='grid lg:grid-cols-2 gap-12 items-center'>                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <h2 className='text-4xl font-bold mb-6 text-white'>
-                    Our Commitment to Privacy
-                  </h2>
-                  <p className='text-lg text-gray-300 mb-6 leading-relaxed'>
-                    At Zion Tech Group, we are committed to protecting your
-                    privacy and ensuring the security of your personal
-                    information. This Privacy Policy explains how we collect,
-                    use, disclose, and safeguard your information when you use
-                    our services.
-                  </p>
-                  <p className='text-lg text-gray-300 mb-6 leading-relaxed'>
-                    We believe in transparency and want you to understand how
-                    your information is handled. This policy applies to all
-                    users of our website, services, and applications.
-                  </p>
-                  <div className='flex items-center gap-4 text-cyan-400'>
-                    <Lock className='w-6 h-6' />
-                    <span className='font-medium'>
-                      Your data is safe with us
-                    </span>
-                  </div>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className='relative'
-                >
-                  <div className='bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30'>
-                    <div className='text-center space-y-6'>
-                      <div className='w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto'>
-                        <Shield className='w-12 h-12 text-white' />
-                      </div>
-                      <h3 className='text-2xl font-bold text-white'>
-                        Data Protection
-                      </h3>
-                      <p className='text-gray-300'>
-                        Enterprise-grade security for your information
-                      </p>
+                  We collect information you provide directly to us, such as;
+                  when you create an account, use our services, or contact us;
+                  for support.;
+                </p>;
 
-                      <div className='grid grid-cols-2 gap-4 text-sm'>
-                        <div className='text-center'>
-                          <div className='text-2xl font-bold text-cyan-400'>
-                            256-bit
-                          </div>
-                          <div className='text-gray-400'>Encryption</div>
-                        </div>
-                        <div className='text-center'>
-                          <div className='text-2xl font-bold text-purple-400'>
-                            99.9%
-                          </div>
-                          <div className='text-gray-400'>Uptime</div>                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </section>
+                <h3 className="text - xl font - semibold mb - 4">;
+                  Personal Information;
+                </h3>;
+                <ul className="list - disc pl - 6 mb - 6">;
+                  <li > Name and contact information</li>;
+                  <li > Email address</li>;
+                  <li > Phone number</li>;
+                  <li > Company information</li>;
+                  <li > Payment information</li>;
+                </ul>;
+                <h3 className="text - xl font - semibold mb - 4">;
+                  Usage Information;
+                </h3>;
+                <ul className="list - disc pl - 6 mb - 6">;
+                  <li > How you use our services</li>;
+                  <li > Device information</li>;
+                  <li > IP address</li>;
+                  <li > Browser type and version</li>;
+                  <li > Operating system</li>;
+                </ul>;
+                <h2 className="text - 2xl font - bold mb - 6 mt - 12">;
+                  How We Use Your Information;
+                </h2>;
+                <p className="mb - 6">;
+                  We use the information we collect to provide, maintain, and;
+                  improve our services.;
+                </p>;
+                <ul className="list - disc pl - 6 mb - 6">;
+                  <li > Provide and maintain our services</li>;
+                  <li > Process transactions</li>;
+                  <li > Send you technical notices and support messages</li>;
+                  <li > Respond to your comments and questions</li>;
+                  <li > Improve our services and develop new features</li>;
+                  <li > Monitor and analyze usage and trends</li>;
+                </ul>;
+                <h2 className="text - 2xl font - bold mb - 6 mt - 12">;
+                  Information Sharing;
+                </h2>;
+                <p className="mb - 6">;
 
-          {/* Privacy Principles */}
-          <section className='py-20 px-4'>
-            <div className='max-w-6xl mx-auto'>              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className='text-center mb-16'
-              >
-                <h2 className='text-4xl font-bold mb-4 text-white'>
-                  Our Privacy Principles
-                </h2>
-                <p className='text-xl text-gray-300'>
-                  The foundation of how we handle your data
-                </p>
-              </motion.div>
+                  We do not sell, trade, or otherwise transfer your personal;
+                  information to third parties without your consent, except as;
+                  described in this policy.;
+                </p>;
 
-              <div className='grid md:grid-cols-2 gap-8'>                {privacySections.map((section, index) => (
-                  <motion.div
-                    key={section.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50'
-                  >
-                    <div
-                      className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}
-                    >
-                      <div className='text-white'>{section.icon}</div>
-                    </div>
-                    <h3 className='text-2xl font-bold text-white mb-4'>
-                      {section.title}
-                    </h3>
-                    <ul className='space-y-3'>
-                      {section.content.map((item, itemIndex) => (
-                        <li key={itemIndex} className='flex items-start gap-3'>
-                          <div className='w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0'></div>
-                          <span className='text-gray-300'>{item}</span>                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
+                <h2 className="text - 2xl font - bold mb - 6 mt - 12">Data Security</h2>;
+                <p className="mb - 6">;
+                  We implement appropriate security measures to protect your;
+                  personal information against unauthorized access, alteration,
+                  disclosure, or destruction.;
+                </p>;
+                <h2 className="text - 2xl font - bold mb - 6 mt - 12">Your Rights</h2>;
+                <p className="mb - 6">;
 
-          {/* Your Rights */}
-          <section className='py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50'>
-            <div className='max-w-6xl mx-auto'>              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className='text-center mb-16'
-              >
-                <h2 className='text-4xl font-bold mb-4 text-white'>
-                  Your Privacy Rights
-                </h2>
-                <p className='text-xl text-gray-300'>
-                  You have control over your personal information
-                </p>
-              </motion.div>
+                  You have the right to access, update, or delete your personal;
+                  information. You may also opt out of certain communications;
+                  from us.;
+                </p>;
 
-              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>                {rights.map((right, index) => (
-                  <motion.div
-                    key={right.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center'
-                  >
-                    <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4'>
-                      <div className='text-white'>{right.icon}</div>
-                    </div>
-                    <h3 className='text-xl font-bold text-white mb-2'>
-                      {right.title}
-                    </h3>
-                    <p className='text-gray-300 text-sm'>{right.description}</p>                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
 
           {/* Detailed Policy */}
           <section className='py-20 px-4'>
@@ -1817,6 +1589,7 @@ const PrivacyPage: React.FC = () => {
         </main>
       </Layout>
     </ErrorBoundary>
+
   );
 };
 export default PrivacyPage;
@@ -2502,14 +2275,13 @@ export default PrivacyPage;
 export default PrivacyPage;
 
  
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
 
  
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+
+
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
@@ -2520,12 +2292,12 @@ export default PrivacyPage;
 
 >>>>>>> origin/main
 =======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 =======
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======

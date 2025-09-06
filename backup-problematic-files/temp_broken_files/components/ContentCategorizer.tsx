@@ -515,15 +515,7 @@ type=&quot;text&quot;
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
-<<<<<<< HEAD:components/ContentCategorizer.tsx
-            <select
-              value={selectedCategory}
-              onChange={(e) => {setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
-              }}
-className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
-            >
-=======
+
             <select,
 value={selectedCategory}
               onChange={(e) => {
@@ -541,12 +533,7 @@ value={selectedCategory}
                   {category.name} ({category.count})
                 </option>
               ))}
-<<<<<<< HEAD:components/ContentCategorizer.tsx
-            </select>;
-          </div>;
-          {/* Subcategory Filter */}
-<div>
-=======
+
             </select>
           </div>
 
@@ -566,15 +553,7 @@ value={selectedSubcategory}
               <option value=&quot;all&quot;>All Subcategories</option>
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
-<<<<<<< HEAD:components/ContentCategorizer.tsx
-                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
-                </option>;
-              ))}
-            </select>;
-          </div>;
-          {/* Content Type Filter */}
-<div>
-=======
+
                   {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}                </option>
               ))}
             </select>
@@ -597,12 +576,7 @@ value={selectedType}
                   {type.name}
                 </option>;
               ))}
-<<<<<<< HEAD:components/ContentCategorizer.tsx
-            </select>;
-          </div>;
-          {/* Relevance Filter */}
-<div>
-=======
+
             </select>
           </div>
 
@@ -626,8 +600,7 @@ value={selectedRelevance}
             </select>;
           </div>;
         </div>;
-<<<<<<< HEAD:components/ContentCategorizer.tsx
-=======
+
 ;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
@@ -651,15 +624,7 @@ value={sortBy}
 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
                 {sortOrder === 'asc' ? '↑' : '↓'}
-<<<<<<< HEAD:components/ContentCategorizer.tsx
-              </button>;
-            </div>;
-          </div>;
-          <button;
-            onClick={clearAllFilters}
-className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
-          >
-=======
+
               </button>
             </div>
           </div>
@@ -676,29 +641,7 @@ onClick={clearAllFilters}
           </button>
         </div>
       </div>
-<<<<<<< HEAD:components/ContentCategorizer.tsx
-      {/* Category Pills */}
-      <div>
-        <div className=&quot;flex flex-wrap gap-2&quot;>
-          {categories.map(category => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory === category.id;
-                  ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300';
-                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10';
-              }`}
->
-              <category.icon className=&quot;w-4 h-4&quot; />
-              {category.name}
-              <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
-                {category.count}
-              </span>;
-            </button>;
-          ))}
-        </div>;
-      </div>;
-=======
+
 
       {_/* Category Pills */}
       <div>
@@ -793,8 +736,7 @@ key={category.id}
               <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
                 {item.desc}
               </p>;
-<<<<<<< HEAD:components/ContentCategorizer.tsx
-=======
+
 ;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
@@ -808,14 +750,7 @@ key={category.id}
                     {tag}
                   </span>;
                 ))}
-<<<<<<< HEAD:components/ContentCategorizer.tsx
-{item.tags.length > 3 && (
-                  <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
-                    +{item.tags.length - 3}
-                  </span>;
-                )}
-              </div>;
-=======
+
                 {item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>                    +{item.tags.length - 3}
                   </span>

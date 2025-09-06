@@ -26,13 +26,10 @@ const AutomationStatus: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-<<<<<<< HEAD
-  )
-}
-export default AutomationStatus;
 
 <<<<<<< HEAD
 =======
+
 export default AutomationStatus,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======

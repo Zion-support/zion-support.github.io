@@ -38,7 +38,6 @@ const SystemAdministrationChat: NextPage = () => {
 export default SystemAdministrationChat;
 <<<<<<< HEAD
 
-=======
         <title>SystemAdministrationChat - Zion Tech Solutions</title>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======

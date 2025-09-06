@@ -14,15 +14,6 @@ import {
 <<<<<<< HEAD
 import { X, Filter } from 'lucide-react'
 
-  Sheet
-  SheetContent
-  SheetHeader
-  SheetTitle
-  SheetFooter
-  SheetTrigger
-} from '@/components/ui/sheet'
-import { Badge } from '@/components/ui/badge'
-import { Label } from '@/components/ui/label'
 
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents'
@@ -109,10 +100,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               <SheetHeader>
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
-<<<<<<< HEAD
-              <div className='py-6 space-y-6'>
-                {type === 'jobs' ? (
-=======
+
               
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
@@ -131,9 +119,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
-<<<<<<< HEAD
-                    <div className='space-y-2'>
-=======
+
                     
                     <div className="space-y-2">
 <<<<<<< HEAD
@@ -160,17 +146,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
                       </div>
                     </div>
-<<<<<<< HEAD
-                    <div className='space-y-2'>
-                      <Label>Experience (years)</Label>
-                      <Slider
-                        aria-label='Years of experience'
-                        defaultValue={[0, 10]}
-                        max={20}
-                        step={1}
-                        className='my-4'                      />
-                      <div className='flex justify-between text-xs text-muted-foreground'>
-=======
+
                     
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
@@ -193,28 +169,26 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                     </div>
                   </>
                 )}
-<<<<<<< HEAD
-                <div className='space-y-2'>
-=======
+
                 
                 <div className="space-y-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Label>Location</Label>
                   <Select>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select location" />
+                      <SelectValue placeholder='Select location' />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="remote">Remote</SelectItem>
-                      <SelectItem value="us">United States</SelectItem>
-                      <SelectItem value="europe">Europe</SelectItem>
-                      <SelectItem value="asia">Asia</SelectItem>
+                      <SelectItem value='remote'>Remote</SelectItem>
+                      <SelectItem value='us'>United States</SelectItem>
+                      <SelectItem value='europe'>Europe</SelectItem>
+                      <SelectItem value='asia'>Asia</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
-<<<<<<< HEAD
-                <div className='space-y-2'>
-=======
+
+
                 
                 <div className="space-y-2">
 <<<<<<< HEAD
@@ -223,15 +197,14 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Label>Salary Range</Label>
-                  <div className="flex gap-4 items-center">
-                    <Input placeholder="Min" type="number" className="w-full" />
+                  <div className='flex gap-4 items-center'>
+                    <Input placeholder='Min' type='number' className='w-full' />
                     <span>to</span>
-                    <Input placeholder="Max" type="number" className="w-full" />
+                    <Input placeholder='Max' type='number' className='w-full' />
                   </div>
                 </div>
-<<<<<<< HEAD
-                <div className='space-y-2'>
-=======
+
+
                 
                 <div className="space-y-2">
 <<<<<<< HEAD
@@ -240,18 +213,43 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Label>Skills</Label>
-                  <div className="grid grid-cols-2 gap-2">
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Python</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Figma</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">UI/UX</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>
-                  </div>
-                </div>
-<<<<<<< HEAD
-                <div className='flex items-center justify-between'>
+                  <div className='grid grid-cols-2 gap-2'>
 =======
+
+                <div className='space-y-2'>;
+                  <Label>Location</Label>;
+=======
+                    <div className='space - y-2'>;
+                      <Label > Experience (years)</Label>;
+                      <Slider;
+                        aria - label='Years of experience';
+                        default_value={[0, 10]}
+                        max={20}
+                        step={1}
+                        className='my - 4'                      />;
+                      <div className='flex justify - between text - xs text - muted - foreground'>;
+                        <span > 0+ years</span>;
+                        <span > 20+ years</span>;
+                      </div>;
+                    </div>;
+                  </>)}
+                <div className='space - y-2'>;
+                  <Label > Location</Label>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  <Select>;
+                    <SelectTrigger>;
+                      <SelectValue placeholder='Select location' />;
+                    </SelectTrigger>;
+                    <SelectContent>;
+                      <SelectItem value='remote'>Remote</SelectItem>;
+                      <SelectItem value='us'>United States</SelectItem>;
+                      <SelectItem value='europe'>Europe</SelectItem>;
+                      <SelectItem value='asia'>Asia</SelectItem>;
+                    </SelectContent>;
+                  </Select>;
+                </div>;
+
+
                 
                 <div className="flex items-center justify-between">
 <<<<<<< HEAD
@@ -263,8 +261,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                   <Switch />
                 </div>
               </div>
-<<<<<<< HEAD
-=======
+
+
               
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -272,13 +270,20 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <SheetFooter>
-                <Button variant="outline" className="w-full">Reset</Button>
-                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
+                <Button variant='outline' className='w-full'>
+                  Reset
+                </Button>
+                <Button
+                  className='w-full'
+                  onClick={() => addFilter('Experience: 3+ years')}
+                >
+                  Apply Filters
+                </Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
-<<<<<<< HEAD
-=======
+
+
           
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -286,13 +291,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Select>
-            <SelectTrigger className="w-[120px] h-8">
-              <SelectValue placeholder="Sort By" />
+            <SelectTrigger className='w-[120px] h-8'>
+              <SelectValue placeholder='Sort By' />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="newest">Newest</SelectItem>
-              <SelectItem value="relevance">Best Match</SelectItem>
-              <SelectItem value="salary">Highest Pay</SelectItem>
+              <SelectItem value='newest'>Newest</SelectItem>
+              <SelectItem value='relevance'>Best Match</SelectItem>
+              <SelectItem value='salary'>Highest Pay</SelectItem>
             </SelectContent>
           </Select>
 <<<<<<< HEAD
@@ -315,6 +320,89 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
   )
 }
 =======
+                <div className='space - y-2'>;
+                  <Label > Salary Range</Label>;
+                  <div className='flex gap - 4 items - center'>;
+                    <Input placeholder='Min' type='number' className='w - full' />;
+                    <span > to</span>;
+                    <Input placeholder='Max' type='number' className='w - full' />;
+                  </div>;
+                </div>;
+                <div className='space - y-2'>;
+                  <Label > Skills</Label>;
+                  <div className='grid grid - cols - 2 gap - 2'>;
+                    <Badge;
+                      variant='outline';
+                      className='cursor - pointer hover:bg - primary / 5 justify - start';
+                    >;
+                      JavaScript;
+                    </Badge>;
+                    <Badge;
+                      variant='outline';
+                      className='cursor - pointer hover:bg - primary / 5 justify - start';
+                    >;
+                      React;
+                    </Badge>;
+                    <Badge;
+                      variant='outline';
+                      className='cursor - pointer hover:bg - primary / 5 justify - start';
+                    >;
+                      Python;
+                    </Badge>;
+                    <Badge;
+                      variant='outline';
+                      className='cursor - pointer hover:bg - primary / 5 justify - start';
+                    >;
+                      Figma;
+                    </Badge>;
+                    <Badge;
+                      variant='outline';
+                      className='cursor - pointer hover:bg - primary / 5 justify - start';
+                    >;
+                      UI / UX;
+                    </Badge>;
+                    <Badge;
+                      variant='outline';
+                      className='cursor - pointer hover:bg - primary / 5 justify - start';
+                    >;
+                      Node.js;
+                    </Badge>;
+                  </div>;
+                </div>;
+                <div className='flex items - center justify - between'>;
+                  <Label > Only show verified profiles</Label>;
+                  <Switch />;
+                </div>;
+              </div>;
+              <SheetFooter>;
+                <Button variant='outline' className='w - full'>;
+                  Reset;
+                </Button>;
+                <Button;
+                  className='w - full';
+                  on_click={() => add_filter ('Experience: 3+ years')}
+
+                >;
+                  Apply Filters;
+                </Button>;
+              </SheetFooter>;
+            </SheetContent>;
+          </Sheet>;
+
+          <Select>;
+            <SelectTrigger className='w-[120px] h - 8'>;
+
+              <SelectValue placeholder='Sort By' />;
+            </SelectTrigger>;
+            <SelectContent>;
+              <SelectItem value='newest'>Newest</SelectItem>;
+              <SelectItem value='relevance'>Best Match</SelectItem>;
+              <SelectItem value='salary'>Highest Pay</SelectItem>;
+            </SelectContent>;
+          </Select>;
+
+=======
+
       </div>;
     </div>;
   );
@@ -335,6 +423,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               />
             </Badge>
           ))}
+
         </div>;
       </div>;
     </div>;
@@ -344,5 +433,28 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+          {active_filters.map (filter => (
+            <Badge;
+              key={filter}
+              variant='secondary';
+              className='flex items - center gap - 1';
+            >;
+              {filter}
+              <X;
+                className='h - 3 w - 3 cursor - pointer';
+                on_click={() => remove_filter (filter)}              />;
+            </Badge>))}
+        </div>;
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+;
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

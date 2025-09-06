@@ -22,14 +22,35 @@ import React from 'react';
 import Layout from '../components/Layout';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
-=======
-<<<<<<< HEAD
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function ITServices() {
   return (
     <Layout
@@ -69,10 +90,61 @@ export default function ITServices() {
           </div>
         </div>
       </div>
-    </Layout>;
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
+    </Layout>
+=======
+export default function ITServices() {;
+  return (
+    <Layout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              IT Services;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Complete IT solutions to power your digital transformation.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">;
+=======
+import React from './react';
+import Layout from "../components / Layout";
+;
+export default /**
+ * ITServices - Function description
+ */
+function ITServices() {
+  return (
+    <Layout;
+      title="IT Services - Zion Tech Group";
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
+              IT Services;
+            </h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Complete IT solutions to power your digital transformation.;
+            </p>;
+          </div>;
+          <div className="text - center">;
+            <p className="text - gray - 600">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              IT Services page is under construction.;
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+
+=======
+
+=======
+
 }
 <<<<<<< HEAD
 =======

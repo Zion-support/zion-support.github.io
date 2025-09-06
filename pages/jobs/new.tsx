@@ -52,12 +52,33 @@ export default function NewJobPage() {
             <textarea className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" rows={5} placeholder="Job description" />
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
           </form>
-<<<<<<< HEAD
+
+
+          </form>;
         )}
-      </EnhancedCard>
-    </div>
-);
+      </EnhancedCard>;
+    </div>;
+  );
+
+
 =======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import {useState} from 'react';
+import EnhancedCard from '../../components / ui / EnhancedCard';
+import EnhancedButton from '../../components / ui / EnhancedButton';
+import EnhancedLoading from '../../components / ui / EnhancedLoading';
+import { use_toast } from '../../components / ui / NotificationSystem';
+          </form>)}
+      </EnhancedCard>;
+    </div>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

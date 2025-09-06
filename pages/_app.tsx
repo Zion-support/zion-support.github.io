@@ -29,12 +29,14 @@ export default function App({ Component, pageProps }: AppProps) {
 import '../styles/globals.css';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
+
 =======
+
+
+
 =======
->>>>>>> origin/main
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
 =======
@@ -48,15 +50,14 @@ return <Component {...pageProps} />;
 import '../styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+>>>>>>> origin/automation-improvements-final
 =======
+
 =======
 }
 =======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {;
   return <Component {...pageProps} />;
@@ -80,11 +81,7 @@ export default function App({ Component, pageProps }: AppProps) {
 import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-<<<<<<< HEAD
-  return <Component {...pageProps} />;
-import '../styles/globals.css';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+
 import '../styles/globals.css';
 
 <<<<<<< HEAD
@@ -105,7 +102,23 @@ export default function App({ Component, pageProps }: AppProps) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+import type { AppProps } from 'next / app';
+import '../src / styles / globals.css';
+;
+export default /**
+ * App - Function description
+ */
+function App() {
+return <Component {...page_props} />;
+import '../styles / globals.css';
+;
+export default /**
+ * App - Function description
+ */
+function App() {
+  return <Component {...page_props} />;
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======

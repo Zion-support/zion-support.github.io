@@ -111,17 +111,19 @@ interface QuoteDetailsProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-;
+
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null,;
+  if (!quote) return null;
+
   const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified',;
-    try {;
+    if (!dateString) return 'Not specified';    try {;
       return format(new Date(dateString), 'PPP');
     } catch (e) {;
       return dateString;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-  },
+  }
+=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -129,21 +131,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-2xl flex items-center justify-between">
-            <span>{quote.project_name}</span>
-            <QuoteStatusBadge status={quote.status} />
-          </DialogTitle>
-          <DialogDescription>
-            Quote request submitted on {formatDate(quote.created_at)}
-          </DialogDescription>
-        </DialogHeader>
-<<<<<<< HEAD
-        <Separator className="my-4" />
-        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-=======
+
+
         
         <Separator className="my-4" />
         
@@ -168,8 +157,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
               </div>
             </CardContent>
           </Card>
-<<<<<<< HEAD
-=======
+
+
           
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -192,8 +181,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             </CardContent>
           </Card>
         </div>
-<<<<<<< HEAD
-=======
+
+
         
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -204,8 +193,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
             <p className="mb-4">{quote.project_summary}</p>
-<<<<<<< HEAD
-=======
+
+
             
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -218,10 +207,11 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
                 <p>{quote.project_description}</p>
               </>
             )}
-<<<<<<< HEAD
-=======
+
+
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
               <span className="font-medium">Budget: </span>
@@ -234,8 +224,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-=======
+
+
         
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

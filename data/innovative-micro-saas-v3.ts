@@ -46,55 +46,19 @@ export interface InnovativeMicroSaasV3 {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-    address: string;
-  }
 export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
   {
-<<<<<<< HEAD
-    id: 'ai-customer-support'
-    name: 'AI Customer Support Platform'
-    tagline: '24/7 intelligent customer support automation'
-    price: '$59/month'
-    description:
-      'Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.'
-    features: [
-      'AI chatbot integration'
-      'Multi-language support'
-      'Ticket management'
-      'Analytics dashboard'
-      'CRM integration'
-    ]
-    link: '/services/ai-customer-support'
-    category: 'Customer Support'
-    realImplementation: true
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-];      mobile: "+1 302 464 0950";
-
-      email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-=======
-    id: "ai-customer-support",
-    name: "AI Customer Support Platform",
-    tagline: "24/7 intelligent customer support automation",
-    price: "$59/month",
+    id: "ai-customer-support", name: "AI Customer Support Platform",
+    tagline: "24/7 intelligent customer support automation", price: "$59/month",
     description: "Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.",
     features: [
-      "AI chatbot integration",
-      "Multi-language support",
-      "Ticket management",
-      "Analytics dashboard",
+      "AI chatbot integration";
+      "Multi-language support";
+      "Ticket management";
+      "Analytics dashboard";
       "CRM integration"
-    ],
-    link: "/services/ai-customer-support",
-    category: "Customer Support",
+    ];
+    link: "/services/ai-customer-support", category: "Customer Support",
     realImplementation: true,
     contactInfo: {
 <<<<<<< HEAD
@@ -118,4 +82,12 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
     }
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

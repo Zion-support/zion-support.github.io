@@ -15,7 +15,8 @@ import { motion, AnimatePresence  } from 'framer-motion';
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
@@ -28,9 +29,8 @@ import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card'
 import Spinner from '@/components/ui/spinner';
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-<<<<<<< HEAD
-  <Card className;
-=======
+
+
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -445,7 +445,8 @@ export default function TalentsPage() {;
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   // Loading state
   if (loading && talents.length === 0) {
     return (
@@ -467,13 +468,23 @@ export default function TalentsPage() {;
     )
   }
 
-<<<<<<< HEAD
 
-    let filteredTalents = allTalents
+
     }
 }
 
 =======
+
+
+=======
+;
+    let filtered_talents = all_talents;
+    }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
   // Error state
   if (error) {
     return (

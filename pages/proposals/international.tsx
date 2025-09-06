@@ -23,32 +23,39 @@ type ProposalListItem = {
   type: string
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
-<<<<<<< HEAD
-}
-export default function InternationalProposalsPage() {
-  const [items, setItems] = useState<ProposalListItem[]>([])
-  const [filter, setFilter] = useState('All')
-  useEffect(() => {
+
 =======
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components / layout / EnhancedLayout',
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+type ProposalListItem = {
+  id: string,
+  title: string,
+  target_institution: string,
+  regional_scope: string,
+  type: string,
+  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
+
+
 },
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([]),
   const [filter, setFilter] = useState('All'),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+
   useEffect__(() => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     fetch('/api/proposals')
       .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
-<<<<<<< HEAD
-  }, [])
-  const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
 
-=======
+
   }, []),
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   return (
     <EnhancedLayout>
       <div className="space-y-4">
@@ -74,15 +81,8 @@ export default function InternationalProposalsPage() {
               </div>
               <div className="flex items-center gap-4 text-sm">
                 <span className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{i.status}</span>
-<<<<<<< HEAD
-                <a className="text-blue-600 underline" href={`/api/proposals?id=${i.id}`} target="_blank" rel="noreferrer">JSON</a>
-                <a className="text-blue-600 underline" href={`/proposals/${i.id}.md`} target="_blank" rel="noreferrer">Markdown</a>
-                <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</a>
-              </div>
-            </div>
-          ))}
-          {filtered.length === 0 && <div className="p-4 text-sm text-gray-600">No proposals yet.</div>}
-=======
+
+
                 <a className="text-blue-600 underline" href={`/api/proposals?id=${i.id}`} target="_blank" rel="noreferrer">JSON</Link>
                 <a className="text-blue-600 underline" href={`/proposals/${i.id}.md`} target="_blank" rel="noreferrer">Markdown</Link>
                 <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</Link>

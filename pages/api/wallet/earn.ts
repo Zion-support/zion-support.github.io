@@ -23,16 +23,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId, amount, reason, metadata } = req.body |{}
   if (!userId |typeof amount !== "number" |!reason) {
     return res.status(400).json({ error: "userId, amount, reason required" })
-<<<<<<< HEAD
-  }
-  try {
-    const tx = earnTokens(userId, Math.floor(amount), reason, metadata)
 
     return res.status(200).json({ tx })
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
 <<<<<<< HEAD
 =======
+
   };
 };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

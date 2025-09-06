@@ -101,13 +101,16 @@ export default async function handler(req, res) {
   const browser = await puppeteer.launch({;
     headless: true;
     args: ['--no-sandbox--disable-setuid-sandbox']});
+
   try {
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle0' });
     const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true });
-    await browser.close(),;
+    await browser.close();
+
     res.setHeader('Content-Typeapplication/pdf');
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"');
+
     res.status(200).send(pdfBuffer);
   } catch (error) {
     try { await browser.close() } catch {  } catch (error) {
@@ -124,11 +127,57 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   }
 <<<<<<< HEAD
 }
+
 =======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import puppeteer from 'puppeteer',
+export const config = {
+  api: {
+    body_parser: {
+      size_limit: '10mb'}}},
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    res.status (405).json ({ error: 'Method not allowed' }),
+    return;
+  }
+  const { html, page_size } = req.body as { html: string, page_size?: 'A4' | 'LETTER' },
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (400).json ({ error: 'Missing html' }),
+    return;
+  }
+  const browser = await puppeteer.launch ({
+    headless: true,
+    args: ['--no - sandbox--disable - setuid - sandbox']}),
+  try {
+    const page = await browser.new_page (),
+    await page.set_content (html, { wait_until: 'networkidle0' }),
+    const pdf_buffer = await page.pdf ({ format: page_size === 'A4' ? 'A4' : 'Letter', print_background: true }),
+    await browser.close (),
+    res.set_header ('Content - Typeapplication / pdf'),
+    res.set_header ('Content - Dispositionattachment, filename="zion - os - book.pdf"'),
+    res.status (200).send (pdf_buffer);
+  } catch (e: any) {
+    try { await browser.close () } catch {}
+    res.status (500).json ({ error: e?.message || 'Failed to render PDF' });
+  }
+}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

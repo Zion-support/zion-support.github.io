@@ -9,10 +9,7 @@ export interface DateRange {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export interface DateRange {;
   from?: Date;
-<<<<<<< HEAD
-  to?: Date
-}
-=======
+
   to?: Date;
 }
 ;

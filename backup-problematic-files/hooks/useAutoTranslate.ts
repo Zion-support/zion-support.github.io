@@ -105,12 +105,7 @@ export function useAutoTranslate(
   }, [key, debounceMs]);
 
   return { translations, loading, error }
-<<<<<<< HEAD:hooks/useAutoTranslate.ts
-    }
-  }, [key, debounceMs]);
-  return { translations, loading, error }
+
 }
-=======
-}
->>>>>>> main:hooks/useAutoTranslate.ts
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useAutoTranslate.ts

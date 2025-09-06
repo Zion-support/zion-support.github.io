@@ -26,19 +26,26 @@ const REGION_OPTIONS = [
   { id: "Asia", label: "Asia" }
   { id: "South America", label: "South America" }
   { id: "Australia", label: "Australia" }
-  { id: "Africa", label: "Africa" }
-<<<<<<< HEAD
-];
-export function RegionFilter({
-  selectedRegions
-  toggleRegion
-  expanded
-  toggleSection
-  isMobileFilterOpen
-}: RegionFilterProps) {
 =======
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Checkbox} from "@/components/ui/checkbox";
+import {RegionFilterProps} from "@/types/filters";
+const REGION_OPTIONS = [;
+  { id: "North America", label: "North America" },;
+  { id: "Europe", label: "Europe" },;
+  { id: "Asia", label: "Asia" },;
+  { id: "South America", label: "South America" },;
+  { id: "Australia", label: "Australia" },;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  { id: "Africa", label: "Africa" }
+
+export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
+
+  return (
+=======
+
 ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -67,8 +74,7 @@ export function RegionFilter({
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-<<<<<<< HEAD
-=======
+
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;
@@ -82,29 +88,33 @@ const REGION_OPTIONS = [;
 ];
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
   return (;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
-      <button;
+      <button
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium";
-      >;
+        className="flex w-full items-center justify-between text-white font-medium">;
         <span>Region</span>;
         {expanded ? (;
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+
       </button>;
+
       {expanded && (;
         <div className="mt-4 space-y-2">;
-          {REGION_OPTIONS.map(region => (;
-            <div key={region.id} className="flex items-center">;
-              <Checkbox;
-                id={`region-${region.id}`}
-                checked={selectedRegions.includes(region.id)}
-                onCheckedChange={() => toggleRegion(region.id)}
-                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
-              />
+          {REGION_OPTIONS && REGION_OPTIONS.map(region => (;
+            <div key={region && region.id} className="flex items-center">;
+
+              <Checkbox
+                id={`region-${region && region.id}`}
+                checked={selectedRegions && selectedRegions.includes(region && region.id)}
+                onCheckedChange={() => toggleRegion(region && region.id)}
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
+              />;
               <label
+
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
@@ -116,15 +126,32 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                 {region.label}
               </label>
             </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
-        </div>
+        </div>;
       )}
     </div>
 <<<<<<< HEAD
   );
 }
 =======
+    </div>
+
   )
+
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { ChevronDown, ChevronUp  } from './lucide-react';
+import { Checkbox  } from '@/components / ui / checkbox';
+import { RegionFilterProps  } from '@/types / filters';
+const REGION_OPTIONS = [;
+  { id: "North America", label: "North America" },
+  { id: "Europe", label: "Europe" },
+  { id: "Asia", label: "Asia" },
+  { id: "South America", label: "South America" },
+  { id: "Australia", label: "Australia" },
+  { id: "Africa", label: "Africa" },
+];
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

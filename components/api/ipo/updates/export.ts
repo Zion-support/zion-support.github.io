@@ -20,24 +20,16 @@ import PDFDocument from 'pdfkit';
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!requireSuperadminApi(req, res)) return;
 
-  const id = String(req.query.id |"");
-  const updates = readJsonFile("updates.json", [] as any[]);
-  const u = updates.find((x: any) => x.id === id);
-  if (!u) return res.status(404).json({ error: "Not found" });
-  res.setHeader("Content-Type", "application/pdf");
-  res.setHeader(
-    "Content-Disposition"
-    `attachment; filename="${u.title.replace(/[^a-z0-9]/gi, "_")}.pdf"`
-  );
-  res.setHeader("Content-Typeapplication/pdf");
-  res.setHeader(
-    "Content-Disposition"
-    `attachment, filename="${u.title.replace(/[^a-z0-9]/gi, "_")}.pdf"`
-  );
-  const doc = new PDFDocument({ size: "A4", margin: 50 });
+  const id = String(req.query.id || '');
+  const updates = readJsonFile('updates.json', [] as any[]);
+  const u = updates.find((x: any) => x.id === id),
+  if (!u) return res.status(404).json({ error: 'Not found' });
+  res.setHeader('Content-Typeapplication/pdf');
+  res.setHeader('Content-Disposition', `attachment, filename="${u.title.replace(/[^a-z0-9]/gi,'_')}.pdf"`);
+  const doc = new PDFDocument({ size: 'A4', margin: 50 });
+
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { underline: true });
   doc.moveDown();
@@ -63,5 +55,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  doc.end();
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -5,25 +5,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 };
-export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
-  const [storedValue, setStoredValue] = useState<T>(() => {;
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
-  const [storedValue, setStoredValue] = useState<T>(() => {;
+
+export const useLocalStorage = <T>(key: string, initialValue: T) => {
+  const [storedValue, setStoredValue] = useState<T>(() => {
+
+
+
+
 =======
 }
 export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [storedValue, setStoredValue] = useState<T>(() => {;
->>>>>>> origin/main
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     try {;
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) :initialValue} catch (error) {console.error(`Error reading localStorage key "${key}":`, error);
@@ -31,10 +27,6 @@ export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [stor
   });
   const setValue = (valu:e:T | ((va:l:T) => T)) => {try {;
       const valueToStore = value instanceof Function ? value(storedValue) :value;import { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function useLocalStorage<T>(key: string, initialValue: T) {
 <<<<<<< HEAD
   // Get from local storage then parse stored json or return initialValue
@@ -149,8 +141,8 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
     try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
+      const item = window && window.localStorage.getItem(key);
+      return item ? JSON && JSON.parse(item) : initialValue;
     } catch (error) {
       console.error(`Error reading localStorage key "${key}":`, error);
 >>>>>>> origin/main
@@ -164,32 +156,22 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
       setStoredValue(valueToStore);
       // Save to local storage
       if (typeof window !== 'undefined') {
-        window.localStorage.setItem(key, JSON.stringify(valueToStore));
+        window && window.localStorage.setItem(key, JSON && JSON.stringify(valueToStore));
       }
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.error(`Error setting localStorage key "${key}":`, error);
-  }
+
+      console && console.error(`Error setting localStorage key "${key}":`, error);
+
+  };
+
   return [storedValue, setValue] as const;
 <<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console.error(`Error setting localStorage key "${key}":`, error)};
+      console && console.error(`Error setting localStorage key "${key}":`, error)};
+
   };
   return [storedValue, setValue] as const};
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-};
-};
-};
-=======
-=======
-};
-};
-};
-<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -215,45 +197,41 @@ export default function UseLocalStorage({ }: UseLocalStorageProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+};
+};
+
+
 };
 =======
-<<<<<<< HEAD
-};
-export default useLocalStorage;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-      console.error(`Error setting localStorage key "${key}":`, error)}
-  }
-  return [storedValue, setValue] as const}
->>>>>>> origin/main
-}
-}
-<<<<<<< HEAD
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
 =======
 }
-}
->>>>>>> origin/main
+
+
 =======
+}
+
+=======
+
+
+}
+}
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/automation-improvements-final
 =======
       console.error(`Error setting localStorage key "${key}":`, error)}
   }
   return [storedValue, setValue] as const}
-}
-}
-}
-}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+;
+
 =======
       console.error(`Error setting localStorage key "${key}":`, error)};
   };
@@ -261,12 +239,10 @@ export default useLocalStorage;
 };
 };
 };
-<<<<<<< HEAD
-};
-=======
+
 };
 export default useLocalStorage;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 <<<<<<< HEAD

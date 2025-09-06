@@ -6,13 +6,12 @@ import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Bell } from 'lucide-react';
-
-interface NotificationListProps {
-  loading: boolean;
-  error: string | null;
-  notifications: Notification[];
-  onMarkAsRead: (id: string) => Promise<void>;
-  onDismiss: (id: string) => Promise<void>;
+interface NotificationListProps {;
+  loading: boolean,;
+  error: string | null,;
+  notifications: Notification[],;
+  onMarkAsRead: (id: string,) => Promise<void>,;
+  onDismiss: (id: string,) => Promise<void>,;
   onRetry: () => void;
 }
 
@@ -68,9 +67,9 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             notification={notification}
             onMarkAsRead={onMarkAsRead}
             onDismiss={onDismiss}
-          />
-        ))}
-      </div>
-    </ScrollArea>
+          />;
+        ));
+      )}
+    </ScrollArea>;
   );
 };

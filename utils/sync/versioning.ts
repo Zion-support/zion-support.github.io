@@ -1,5 +1,24 @@
-<<<<<<< HEAD
-// Versioning utilities
+
+export interface Version {
+  major: number;
+  minor: number;
+  patch: number;
+  build?: number;
+}
+
+
+}
+=======
+export function nextVersionFor(
+  state: MultiverseState,
+  entityKey: string
+): number {
+  const current = state.latestVersionByEntityId[entityKey] || 0;
+  return current + 1;
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+// Versioning utilities;
 export const versioning = {
   // Add versioning functionality here
 <<<<<<< HEAD

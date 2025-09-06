@@ -17,9 +17,9 @@ export function ApiLogs() {
   const hasNextPage = currentPage < totalPages - 1
   const hasPrevPage = currentPage > 0
   );
-};
-  );
-};
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",

@@ -146,8 +146,7 @@ class LintingAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -239,8 +238,7 @@ class LintingAutomation {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -313,8 +311,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -393,8 +390,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -473,9 +469,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         encoding: 'utf8'
         timeout: 120000;
       };);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "cwd": this.projectRoot,
         "encoding": 'utf8',
@@ -540,8 +535,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -667,8 +661,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -731,9 +724,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       stack: error.stack,
       projectRoot: this.projectRoot
    ; ;};
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     return { "exists": false }}
   async reportLintingFailure(error) {
@@ -743,7 +735,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       stack: error.stack;
       projectRoot: this.projectRoot;
    };
-<<<<<<< HEAD
+
+
 =======
 <<<<<<< HEAD
     
@@ -860,8 +853,7 @@ return { "exists": false };
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -951,9 +943,8 @@ return { "exists": false };
               return stats.mtime.getTime() > cutoffTime;} catch {
               return false;}
           }))}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const cutoffTime = Date.now() - 60000; // 1 minute ago
     try {
@@ -1021,9 +1012,8 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
       for (const file of, files) {}
         const filePath = path.join(dir, file);,
         const stat = fs.statSync(filePath);,
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 return recentFiles;
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -1043,10 +1033,9 @@ return recentFiles;
       for (const file of files) {
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
-<<<<<<< HEAD
-        if () {
-          this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
-          fileList.push(filePath)}
+
+
+
 =======
 <<<<<<< HEAD
 =======
@@ -1172,9 +1161,8 @@ if (stat.isDirectory()) {
         await this.checkFileChanges()}
     }, this.lintInterval);
   }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Handle graceful shutdown;}
     process.on('SIGTERM', () => {'}
@@ -1197,8 +1185,7 @@ if (stat.isDirectory()) {
 }
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1230,8 +1217,7 @@ automation.start().catch(error => {}),
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
@@ -1283,9 +1269,9 @@ if (this.isRunning) {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 }
-<<<<<<< HEAD
-// Start the linting automation;
-const automation = new LintingAutomation;(;);
+
+
+
 =======
 <<<<<<< HEAD
 =======

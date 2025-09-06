@@ -1,12 +1,6 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function HealthcareAISolutions() {
-	return (
-		<ServiceLanding
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 			title="Healthcare AI Solutions"
 			slug="healthcare-ai-solutions"
 			description="Deploy AI for diagnostics assistance, care management, operational optimization, and compliance workflows. Improve outcomes while protecting patient privacy."

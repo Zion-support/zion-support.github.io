@@ -59,6 +59,7 @@ export function verifyVotesAgainstMerkleRoot(;
   const root = computeMerkleRootFromVotes(votes);
   return root === merkleRoot;
 =======
+
 import crypto from 'crypto';
 
 export interface MerkleNode {

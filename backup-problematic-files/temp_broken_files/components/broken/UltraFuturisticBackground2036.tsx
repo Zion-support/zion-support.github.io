@@ -520,7 +520,7 @@ ref={canvasRef}
 <<<<<<< HEAD
 =======
         ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+
 =======
 ;
 =======
@@ -586,15 +586,7 @@ key={i}
               <motion.div,
 key={i}
                 className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
-                style={{
-                  top: `${(i + 1) * 16.67}%`}}
-                animate={{opacity: [0.2, 0.6, 0.2]}}
-                transition={{duration: 4;
-                  repeat: Infinity;
-                  delay: i * 0.8}}
-              />;
-=======
+
                 style={{                  top: `${(i + 1) * 16.67}%`}}
                 animate={_{
                   opacity: [0.2, 0.6, 0.2]}}

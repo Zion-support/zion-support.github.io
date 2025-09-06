@@ -1,143 +1,101 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+
+
 >>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const CACHE_NAME =';static-cache-v1'';;
 const DATA_CACHE_NAME =';data-cache-v1'';;
 const FILES_TO_CACHE = [
-  '/', '';/index.html', '';/offline.html', '';/manifest.json', '';/vite.svg']';;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+
+
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 >>>>>>> origin/automation-improvements-final
+=======
+
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 const CACHE_NAME =';static-cache-v1'';
 const DATA_CACHE_NAME =';data-cache-v1'';
 const FILES_TO_CACHE = [
   '/', '';/index.html', '';/offline.html', '';/manifest.json', '';/vite.svg']';
-<<<<<<< HEAD
->>>>>>> origin/main
+
+  '/', '';/index && index.html', '';/offline && offline.html', '';/manifest && manifest.json', '';/vite && vite.svg']';;
+
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const CACHE_NAME =';static-cache-v1'';
 const DATA_CACHE_NAME =';data-cache-v1'';
-const FILES_TO_CACHE = ['/', '';/index.html', '';/offline.html', '';/manifest.json', '';/vite.svg']';
-self.addEventListener(
+const FILES_TO_CACHE = ['/', '';/index && index.html', '';/offline && offline.html', '';/manifest && manifest.json', '';/vite && vite.svg']';
+self && self.addEventListener(
   'install', "event": => {'';install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE))
+  event && event.waitUntil(
+    caches && caches.open(CACHE_NAME).then(cache => cache && cache.addAll(FILES_TO_CACHE))
   );
-  self.skipWaiting()});
-self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(keyList =>
-      Promise.all(
-        keyList.map("key": => {
+  self && self.skipWaiting()});
+self && self.addEventListener('activate', event => {
+  event && event.waitUntil(
+    caches && caches.keys().then(keyList =>
+      Promise && Promise.all(
+        keyList && keyList.map("key": => {
           if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-            return caches.delete(key)}
+            return caches && caches.delete(key)}
         })
       )
     )
   );
-  self.clients.claim()});
-self.addEventListener('fetch', event => {
-  if (event.request.method !== 'GET') return;
-  if (event.request.url.includes('/api/')) {
-    event.respondWith(
-      caches.open(DATA_CACHE_NAME).then(cache =>
-        fetch(event.request)
+  self && self.clients.claim()});
+self && self.addEventListener('fetch', event => {
+  if (event && event.request.method !== 'GET') return;
+  if (event && event.request.url && url.includes('/api/')) {
+    event && event.respondWith(
+      caches && caches.open(DATA_CACHE_NAME).then(cache =>
+        fetch(event && event.request)
           .then(response => {
-            if (response.status === 200) {
-              cache.put(event.request, response.clone());
+            if (response && response.status === 200) {
+              cache && cache.put(event && event.request, response && response.clone());
             return response})
-          .catch(() => cache.match(event.request))));
+          .catch(() => cache && cache.match(event && event.request))));
     return}
-  event.respondWith(
-    caches.match(event.request).then(response => {
+  event && event.respondWith(
+    caches && caches.match(event && event.request).then(response => {
       return (
-<<<<<<< HEAD
-        response ||
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||  fetch(event.request).catch(() => caches.match('/offline.html')) )}) )});
-const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
-const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||  fetch(event.request).catch(() => caches.match('/offline.html')) )}) )});
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
+
+
 >>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
-const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||
-<<<<<<< HEAD
-const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||
 =======
+
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+
+
+const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||  fetch(event.request).catch(() => caches.match('/offline.html')) )}) )});
+
 =======
+
+=======
+
+
 =======
 const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||  fetch(event.request).catch(() => caches.match('/offline.html')) )}) )});
 const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
         response |
 const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1''; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']'; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response |fetch(event.request).catch(() => caches.match('/offline.html')) )}) )});
 const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1''; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']'; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response |
 const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1''; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']'; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response |
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         fetch(event.request).catch(() => caches.match('/offline.html'))
       )})
   )});
@@ -169,18 +127,20 @@ const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1''
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||
 const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||
 const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||  fetch(event.request).catch(() => caches.match('/offline.html')) )}) )});
 const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+
+
+
         response |
 const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1''; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']'; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response |fetch(event.request).catch(() => caches.match('/offline.html')) )}) )});
 const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1''; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']'; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response |
@@ -205,9 +165,73 @@ const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1'';
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 
+
+=======
+const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1''; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']'; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response |fetch(event.request).catch(() => caches.match('/offline.html')) )}) )});
+const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1''; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']'; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response |
+const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1''; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']'; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response |
+const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1''; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']'; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response |fetch(event.request).catch(() => caches.match('/offline.html')) )}) )});
+const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1''; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']'; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response |
+const CACHE_NAME =';static-cache-v1''; const DATA_CACHE_NAME =';data-cache-v1''; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']'; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response |
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index && index.html','';/offline && offline.html','';/manifest && manifest.json','';/vite && vite.svg']';; self && self.addEventListener( 'install',event: => {'';install',event => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then(cache => cache && cache.addAll(FILES_TO_CACHE)) ); self && self.skipWaiting()}); self && self.addEventListener('activate',event => { event && event.waitUntil( caches && caches.keys().then(keyList => Promise && Promise.all( keyList && keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches && caches.delete(key)} }) ) ) ); self && self.clients.claim()}); self && self.addEventListener('fetch',event => { if (event && event.request.method !== 'GET') return; if (event && event.request.url && url.includes('/api/')) { event && event.respondWith( caches && caches.open(DATA_CACHE_NAME).then(cache => fetch(event && event.request) .then(response => { if (response && response.status === 200) { cache && cache.put(event && event.request,response && response.clone()); return response}) .catch(() => cache && cache.match(event && event.request)))); return} event && event.respondWith( caches && caches.match(event && event.request).then(response => { return ( response ||  fetch(event && event.request).catch(() => caches && caches.match('/offline && offline.html')) )}) )});
+const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index && index.html','';/offline && offline.html','';/manifest && manifest.json','';/vite && vite.svg']';; self && self.addEventListener( 'install',event: => {'';install',event => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then(cache => cache && cache.addAll(FILES_TO_CACHE)) ); self && self.skipWaiting()}); self && self.addEventListener('activate',event => { event && event.waitUntil( caches && caches.keys().then(keyList => Promise && Promise.all( keyList && keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches && caches.delete(key)} }) ) ) ); self && self.clients.claim()}); self && self.addEventListener('fetch',event => { if (event && event.request.method !== 'GET') return; if (event && event.request.url && url.includes('/api/')) { event && event.respondWith( caches && caches.open(DATA_CACHE_NAME).then(cache => fetch(event && event.request) .then(response => { if (response && response.status === 200) { cache && cache.put(event && event.request,response && response.clone()); return response}) .catch(() => cache && cache.match(event && event.request)))); return} event && event.respondWith( caches && caches.match(event && event.request).then(response => { return ( response ||
+const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index && index.html','';/offline && offline.html','';/manifest && manifest.json','';/vite && vite.svg']';; self && self.addEventListener( 'install',event: => {'';install',event => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then(cache => cache && cache.addAll(FILES_TO_CACHE)) ); self && self.skipWaiting()}); self && self.addEventListener('activate',event => { event && event.waitUntil( caches && caches.keys().then(keyList => Promise && Promise.all( keyList && keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches && caches.delete(key)} }) ) ) ); self && self.clients.claim()}); self && self.addEventListener('fetch',event => { if (event && event.request.method !== 'GET') return; if (event && event.request.url && url.includes('/api/')) { event && event.respondWith( caches && caches.open(DATA_CACHE_NAME).then(cache => fetch(event && event.request) .then(response => { if (response && response.status === 200) { cache && cache.put(event && event.request,response && response.clone()); return response}) .catch(() => cache && cache.match(event && event.request)))); return} event && event.respondWith( caches && caches.match(event && event.request).then(response => { return ( response ||
+        fetch(event && event.request).catch(() => caches && caches.match('/offline && offline.html'))
+      )})
+  )});
+const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index && index.html','';/offline && offline.html','';/manifest && manifest.json','';/vite && vite.svg']';; self && self.addEventListener( 'install',event: => {'';install',event => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then(cache => cache && cache.addAll(FILES_TO_CACHE)) ); self && self.skipWaiting()}); self && self.addEventListener('activate',event => { event && event.waitUntil( caches && caches.keys().then(keyList => Promise && Promise.all( keyList && keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches && caches.delete(key)} }) ) ) ); self && self.clients.claim()}); self && self.addEventListener('fetch',event => { if (event && event.request.method !== 'GET') return; if (event && event.request.url && url.includes('/api/')) { event && event.respondWith( caches && caches.open(DATA_CACHE_NAME).then(cache => fetch(event && event.request) .then(response => { if (response && response.status === 200) { cache && cache.put(event && event.request,response && response.clone()); return response}) .catch(() => cache && cache.match(event && event.request)))); return} event && event.respondWith( caches && caches.match(event && event.request).then(response => { return ( response ||  fetch(event && event.request).catch(() => caches && caches.match('/offline && offline.html')) )}) )});
+const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index && index.html','';/offline && offline.html','';/manifest && manifest.json','';/vite && vite.svg']';; self && self.addEventListener( 'install',event: => {'';install',event => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then(cache => cache && cache.addAll(FILES_TO_CACHE)) ); self && self.skipWaiting()}); self && self.addEventListener('activate',event => { event && event.waitUntil( caches && caches.keys().then(keyList => Promise && Promise.all( keyList && keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches && caches.delete(key)} }) ) ) ); self && self.clients.claim()}); self && self.addEventListener('fetch',event => { if (event && event.request.method !== 'GET') return; if (event && event.request.url && url.includes('/api/')) { event && event.respondWith( caches && caches.open(DATA_CACHE_NAME).then(cache => fetch(event && event.request) .then(response => { if (response && response.status === 200) { cache && cache.put(event && event.request,response && response.clone()); return response}) .catch(() => cache && cache.match(event && event.request)))); return} event && event.respondWith( caches && caches.match(event && event.request).then(response => { return ( response ||
+const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index && index.html','';/offline && offline.html','';/manifest && manifest.json','';/vite && vite.svg']';; self && self.addEventListener( 'install',event: => {'';install',event => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then(cache => cache && cache.addAll(FILES_TO_CACHE)) ); self && self.skipWaiting()}); self && self.addEventListener('activate',event => { event && event.waitUntil( caches && caches.keys().then(keyList => Promise && Promise.all( keyList && keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches && caches.delete(key)} }) ) ) ); self && self.clients.claim()}); self && self.addEventListener('fetch',event => { if (event && event.request.method !== 'GET') return; if (event && event.request.url && url.includes('/api/')) { event && event.respondWith( caches && caches.open(DATA_CACHE_NAME).then(cache => fetch(event && event.request) .then(response => { if (response && response.status === 200) { cache && cache.put(event && event.request,response && response.clone()); return response}) .catch(() => cache && cache.match(event && event.request)))); return} event && event.respondWith( caches && caches.match(event && event.request).then(response => { return ( response ||
+const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index && index.html','';/offline && offline.html','';/manifest && manifest.json','';/vite && vite.svg']';; self && self.addEventListener( 'install',event: => {'';install',event => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then(cache => cache && cache.addAll(FILES_TO_CACHE)) ); self && self.skipWaiting()}); self && self.addEventListener('activate',event => { event && event.waitUntil( caches && caches.keys().then(keyList => Promise && Promise.all( keyList && keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches && caches.delete(key)} }) ) ) ); self && self.clients.claim()}); self && self.addEventListener('fetch',event => { if (event && event.request.method !== 'GET') return; if (event && event.request.url && url.includes('/api/')) { event && event.respondWith( caches && caches.open(DATA_CACHE_NAME).then(cache => fetch(event && event.request) .then(response => { if (response && response.status === 200) { cache && cache.put(event && event.request,response && response.clone()); return response}) .catch(() => cache && cache.match(event && event.request)))); return} event && event.respondWith( caches && caches.match(event && event.request).then(response => { return ( response ||  fetch(event && event.request).catch(() => caches && caches.match('/offline && offline.html')) )}) )});
+const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index && index.html','';/offline && offline.html','';/manifest && manifest.json','';/vite && vite.svg']';; self && self.addEventListener( 'install',event: => {'';install',event => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then(cache => cache && cache.addAll(FILES_TO_CACHE)) ); self && self.skipWaiting()}); self && self.addEventListener('activate',event => { event && event.waitUntil( caches && caches.keys().then(keyList => Promise && Promise.all( keyList && keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches && caches.delete(key)} }) ) ) ); self && self.clients.claim()}); self && self.addEventListener('fetch',event => { if (event && event.request.method !== 'GET') return; if (event && event.request.url && url.includes('/api/')) { event && event.respondWith( caches && caches.open(DATA_CACHE_NAME).then(cache => fetch(event && event.request) .then(response => { if (response && response.status === 200) { cache && cache.put(event && event.request,response && response.clone()); return response}) .catch(() => cache && cache.match(event && event.request)))); return} event && event.respondWith( caches && caches.match(event && event.request).then(response => { return ( response ||
+const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index && index.html','';/offline && offline.html','';/manifest && manifest.json','';/vite && vite.svg']';; self && self.addEventListener( 'install',event: => {'';install',event => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then(cache => cache && cache.addAll(FILES_TO_CACHE)) ); self && self.skipWaiting()}); self && self.addEventListener('activate',event => { event && event.waitUntil( caches && caches.keys().then(keyList => Promise && Promise.all( keyList && keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches && caches.delete(key)} }) ) ) ); self && self.clients.claim()}); self && self.addEventListener('fetch',event => { if (event && event.request.method !== 'GET') return; if (event && event.request.url && url.includes('/api/')) { event && event.respondWith( caches && caches.open(DATA_CACHE_NAME).then(cache => fetch(event && event.request) .then(response => { if (response && response.status === 200) { cache && cache.put(event && event.request,response && response.clone()); return response}) .catch(() => cache && cache.match(event && event.request)))); return} event && event.respondWith( caches && caches.match(event && event.request).then(response => { return ( response ||
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+const CACHE_NAME =';static - cache - v1'';;
+const DATA_CACHE_NAME =';data - cache - v1'';;
+const FILES_TO_CACHE = [;
+  '/', '';/index.html', '';/offline.html', '';/manifest.json', '';/vite.svg']';;
+const CACHE_NAME =';static - cache - v1'';
+const DATA_CACHE_NAME =';data - cache - v1'';
+const FILES_TO_CACHE = ['/', '';/index.html', '';/offline.html', '';/manifest.json', '';/vite.svg']';
+self.addEventListener (
+  'install', "event": => {'';install', event => {
+  event.wait_until (
+    caches.open (CACHE_NAME).then (cache => cache.add_all (FILES_TO_CACHE)));
+  self.skip_waiting ()});
+self.addEventListener ('activate', event => {
+  event.wait_until (
+    caches.keys ().then (key_list =>;
+      Promise.all (
+        key_list.map ("key": => {
+          // Check condition
+if ( {) {
+  $2
 }
+            return caches.delete (key)}
+        }))));
+  self.clients.claim ()});
+self.addEventListener ('fetch', event => {
+  // Check condition
+if (return) {
+  $2
 }
+  if () {) {
+  $2
 }
+    event.respond_with (
+      caches.open (DATA_CACHE_NAME).then (cache =>;
+        fetch (event.request);
+          .then (response => {
+            // Check condition
+if ( {) {
+  $2
 }
 }
 }

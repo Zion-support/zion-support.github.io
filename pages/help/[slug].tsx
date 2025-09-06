@@ -10,7 +10,25 @@ import {readJson} from '../../utils/fsDb';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { HelpArticle } from '../../utils/support';
 
-export const getStaticPaths: GetStaticPaths = async () => {;
+=======
+
+
+import {GetStaticPaths, GetStaticProps} from 'next';
+import {useState} from 'react';
+
+
+
+import type { HelpArticle } from '../../utils/support';
+=======
+import {read_json} from '../../utils / fs_db';
+import type { HelpArticle } from '../../utils / support';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export const getStaticPaths: GetStaticPaths = async () => {
+  const articles = read_json < HelpArticle[]>('help / articles.json', []);
+  return {
+
+export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
 <<<<<<< HEAD
@@ -21,19 +39,32 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 export const getStaticProps: GetStaticProps = async ctx => {
   const slug = ctx.params?.slug as string;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  const article = articles.find(a => a.slug === slug) |null;
-  return { props: { article } };}
+  const article = articles.find((a) => a.slug === slug) || null;
+  return { props: { article } }
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {
+  const [voted, setVoted] = useState<null | boolean>(null);
+  async function vote(helpful: boolean) {
+    await fetch('/api/support/feedback', {
+
+export const getStaticPaths: GetStaticPaths = async () => {;
+  const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
+  return {;
+    paths: articles && articles.map(a => ({ params: { slug: a && a.slug } })),;
+    fallback: false,;
 =======
     paths: articles.map(a => ({ params: { slug: a.slug } })),
     fallback: false,
+
   };
 };
 
 export const getStaticProps: GetStaticProps = async ctx => {;
-  const slug = ctx.params?.slug as string;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  const article = articles.find(a => a.slug === slug) || null;
+  const slug = ctx && ctx.params?.slug as string;
+  const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
+  const article = articles && articles.find(a => a && a.slug === slug) || null;
   return { props: { article } };};
 
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
@@ -125,13 +156,10 @@ export default function HelpArticlePage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

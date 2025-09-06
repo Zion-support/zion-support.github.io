@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
 import { NextApiRequest, NextApiResponse } from 'next'
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import handler from '@/pages/api/admin/generate-pitch-deck'
 import { supabase } from '@/integrations/supabase/client'
-jest.mock('@/integrations/supabase/client'
+jest && jest.mock('@/integrations/supabase/client'
 describe('/api/admin/generate-pitch-deck API Endpoint'
     companyMission: 'Test'
     currentFundingStage: 'Seed'
@@ -19,7 +17,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint'
   const mockPrompt = 'Test prompt'
       data: { user: { id: 'test-user-id'
       error: 'null'
-jest.mock('@/integrations/supabase/client'
+jest && jest.mock('@/integrations/supabase/client'
 describe('/api/admin/generate-pitch-deck API Endpoint'
     "companyMission"
     "currentFundingStage"
@@ -52,9 +50,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint'
       "data"
             "error"
       "method"
-<<<<<<< HEAD
-      "headers"
-=======
+
 import { NextApiRequest, NextApiResponse } from 'next';
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import handler from '@/pages/api/admin/generate-pitch-deck';

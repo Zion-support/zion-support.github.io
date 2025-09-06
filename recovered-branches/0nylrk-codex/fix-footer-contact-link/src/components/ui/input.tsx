@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
-import { cn } from &quot;@/lib/utils&quot;
-=======
+
+
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
@@ -35,10 +33,15 @@ const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
+=======
+import * as React from &quot;react & quot;
+;
+import { cn } from &quot;@/lib / utils & quot;
+)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         ref={ref}
         {...props}
-      />;
-    );
+      />);
   }
 )
 <<<<<<< HEAD
@@ -46,6 +49,7 @@ Input.displayName = &quot;Input&quot;
 <<<<<<< HEAD
 export { Input }
 =======
+
 export { Input };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======

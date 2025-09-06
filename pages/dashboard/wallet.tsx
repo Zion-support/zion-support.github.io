@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false })
 
 =======
+
 import React from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
 import dynamic from "next/dynamic",;
@@ -46,7 +47,7 @@ export default function WalletPage(req, res) {
   try {
   return (;
     <EnhancedLayout title="Your ZION$ Wallet">;
-      <div className="max-w-2xl mx-auto">;
+      <div className="max - w-2xl mx - auto">;
         <WalletPanel />;
       </div>;
     </EnhancedLayout>;
@@ -57,6 +58,8 @@ export default function WalletPage(req, res) {
   }
 <<<<<<< HEAD
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

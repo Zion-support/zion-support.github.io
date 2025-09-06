@@ -1,12 +1,6 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function FintechSolutions() {
-	return (
-		<ServiceLanding
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 			title="Fintech AI Solutions"
 			slug="fintech-solutions"
 			description="AI solutions for fraud detection, risk scoring, KYC/AML automation, and real-time decisioning. Improve compliance and customer experience across the lifecycle."

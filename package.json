@@ -287,7 +287,8 @@
     "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "security:headers": "node scripts/security-headers.js",
     "automation:ultimate": "node automation/ultimate-automation-suite.cjs",
-    "automation:fix": "node simple-automation-fixer.cjs"
+    "automation:fix": "node simple-automation-fixer.cjs",
+    "test:a11y": "node scripts/accessibility-tests.js"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -335,8 +336,8 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-toggle-group": "^1.0.4",
     "@radix-ui/react-tooltip": "^1.0.7",
-    "@reduxjs/toolkit": "^2.8.2",
-    "@stripe/stripe-js": "^2.3.0",
+
+
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -348,6 +349,7 @@
     "@types/react": "17.0.88",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
+    "aws-sdk": "^2.1692.0",
     "axios": "^1.11.0",
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
@@ -371,6 +373,7 @@
 =======
 >>>>>>> origin/main
     "events": "^3.3.0",
+    "express-rate-limit": "^8.1.0",
     "fastify": "^5.6.0",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     "framer-motion": "^10.16.16",
@@ -429,6 +432,8 @@
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1"
   },
   "devDependencies": {
+    "@axe-core/cli": "^4.10.2",
+    "@axe-core/react": "^4.10.2",
     "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
@@ -483,6 +488,10 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "identity-obj-proxy": "^3.0.0",
+    "imagemin": "^9.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-webp": "^8.0.0",
     "jest": "^30.1.3",
     "jest-environment-jsdom": "^30.1.2",
     "jsdom": "^24.0.0",

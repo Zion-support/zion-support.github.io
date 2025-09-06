@@ -38,8 +38,9 @@ export default function RequestQuote() {
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+
 export default function RequestQuote() {;
-  return (;
+  return (
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
@@ -48,7 +49,6 @@ export default function RequestQuote() {;
       <Footer />;
     </>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 <<<<<<< HEAD

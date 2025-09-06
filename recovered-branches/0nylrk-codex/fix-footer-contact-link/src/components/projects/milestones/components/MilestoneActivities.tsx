@@ -4,6 +4,19 @@ import React from 'react';
 interface MilestoneActivitiesProps {
 <<<<<<< HEAD
 =======
+import React from './react';
+interface MilestoneActivitiesProps {
+  project_id: string;
+}
+export /**
+ * MilestoneActivities - Function description
+ */
+function MilestoneActivities() {
+  return <div > Activity will be shown here</div>;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
   projectId: string
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -17,9 +30,7 @@ interface MilestoneActivitiesProps {;
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   return <div>Activity will be shown here</div>;
-<<<<<<< HEAD
-}
-=======
+
 }
 ;
 <<<<<<< HEAD

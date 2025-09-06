@@ -97,25 +97,25 @@ export interface TalentProfile {;
     description: string;
   }[];
 }
-;
-export interface TalentProfileFilters {;
-  search?: string,;
-  skills?: string[],;
-  availabilities?: string[],;
-  regions?: string[],;
-  priceRange?: [number, number],;
-  experienceRange?: [number, number];
+export interface TalentProfileFilters {
+  search?: string;
+  skills?: string[];
+  availabilities?: string[];
+  regions?: string[];
+  price_range?: [number, number];
+  experience_range?: [number, number];
+
 }
-;
-export interface HireRequest {;
-  id: string,;
-  clientId: string,;
-  talentId: string,;
-  projectTitle: string,;
-  projectDescription: string,;
-  budget: {;
-    min: number,;
-    max: number,;
+export interface HireRequest {
+  id: string;
+  client_id: string;
+  talent_id: string;
+  project_title: string;
+  project_description: string;
+  budget: {
+    min: number;
+
+    max: number,
     currency: string;
   },;
   timeline: {;
@@ -132,3 +132,4 @@ export interface HireRequest {;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

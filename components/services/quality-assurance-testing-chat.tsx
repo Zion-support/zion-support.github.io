@@ -38,7 +38,6 @@ const QualityAssuranceTestingChat: NextPage = () => {
 export default QualityAssuranceTestingChat;
 <<<<<<< HEAD
 
-=======
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======

@@ -6,6 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 <<<<<<< HEAD
 =======
 
+
 export function cn(...inputs: ClassValue[]) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return twMerge(clsx(inputs));}
@@ -30,46 +31,28 @@ export function cn(...inputs: ClassValue[]) {;
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export function formatDate(date: Date | string | number): string {
-  return new Intl.DateTimeFormat("en-US", {
 
-<<<<<<< HEAD
-},
+  return new Intl && Intl.DateTimeFormat("en-US", {
+    month: "long", day: "numeric",
+    year: "numeric",
+}
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 >>>>>>> origin/automation-improvements-final
 =======
     month: "long", day: "numeric"
     year: "numeric"
 }
-<<<<<<< HEAD
-const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
-import { type ClassValue, clsx } from 'clsx';,
-import { twMerge } from 'tailwind-merge';,
-export function cn(...inputs: ClassValue[]) {}
-  return twMerge(clsx(inputs));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
-export function formatCurrency(amount: number, currency = "USD"): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency", currency
+
+  return new Intl && Intl.NumberFormat("en-US", {
+    style: "currency", currency,
+
   }).format(amount);
->>>>>>> origin/main
 }
 }
-<<<<<<< HEAD
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-<<<<<<< HEAD
-=======
-=======
 }
 =======
 =======
@@ -77,17 +60,25 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
-export function formatDate(date: Date | string | number): string {
-  return new Intl.DateTimeFormat("en-US", {
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+import { type ClassValue, clsx  } from './clsx';
+import { tw_merge  } from './tailwind - merge';
+;
+export /**
+ * cn - Function description
+ */
+function cn() {
+  return tw_merge (clsx (inputs));}
+export function format_date (date: Date | string | number): string {
+  return new Intl.DateTimeFormat ("en - US", {
     month: "long", day: "numeric",
     year: "numeric",
-  }).format(new Date(date));
 }
-
-export function formatCurrency(amount: number, currency = "USD"): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency", currency,;
-  }).format(amount);
+export function format_currency (amount: number, currency = "USD"): string {
+  return new Intl.NumberFormat ("en - US", {
+    style: "currency", currency,
+  }).format (amount);
 }
 <<<<<<< HEAD
 
