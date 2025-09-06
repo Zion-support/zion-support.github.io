@@ -1,57 +1,4 @@
-<<<<<<< HEAD
 }
-=======
-import { useResumeEnhancer  } from '@/hooks/useResumeEnhancer';
-import { useResume  } from '@/hooks/useResume';
-import { BulkAddSkillsProps  } from './types';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { Textarea } from '@/components/ui/textarea';
-export const BulkAddSkills = null;
-import { useState } from 'react'
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer'
-import { useResume } from '@/hooks/useResume'
-import { BulkAddSkillsProps } from './types'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import { Textarea } from '@/components/ui/textarea'
-export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
-  const [bulkSkills, setBulkSkills] = useState('')
-  const [error, setError] = useState<string | null>(null)
-  const { enhanceContent, isEnhancing } = useResumeEnhancer()
-  const { addSkill } = useResume()
-  const handleCategorizeSkills = async () => {
-    if (!bulkSkills |bulkSkills.trim().length === 0) {
-      setError('Please enter some skills to categorize')
-      return
-    }
-    setError(null)
-    try {
-      const enhancedContent = await enhanceContent(
-        bulkSkills
-        'skill-categorization'
-      )
-      if (enhancedContent) {
-        try {
-          // Parse the JSON response
-          const categorizedSkills = JSON.parse(enhancedContent)
-          // Add the categorized skills
-          for (const [category, skillsList] of Object.entries(categorizedSkills)) {
-            if (Array.isArray(skillsList)) {
-              for (const skillName of skillsList as string[]) {
-                await addSkill(resumeId, {
-                  name: skillName
-                  category: category
-                  proficiency: 3})
-              }
-            }
-          }
-          // Reset the form and bulk input
-          setBulkSkills('')
-          // Refresh the skills
-          await onSuccess()
-        } catch (err) {
-          setError('Failed to parse categorized skills. Please try again.')
-        }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
@@ -144,8 +91,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
 };
 
 '"
-<<<<<<< HEAD
 
 '";
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+

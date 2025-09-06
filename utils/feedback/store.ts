@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 
 export interface FeedbackRecord {;
 
@@ -12,40 +10,23 @@ export function tryWriteToFirestore(doc: any): Promise<boolean> {
 }
 
 export type FeedbackRecord = {
-<<<<<<< HEAD
-=======
-=======
-=======
 
-export interface FeedbackRecord {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import fs from 'fs';
 import path from 'path';
 
 export type FeedbackRecord = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
   id: string;
   createdAtIso: string;
   user: { id?: string; role?: string; talentSlug?: string };
   rating: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   comment?: string;
   kind: 'general' | 'bug' | 'feature';
   context?: { actionType?: string; metadata?: any };
 };
 
-<<<<<<< HEAD
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'runtime');
 const DB_PATH = path && path.join(DATA_DIR, 'feedback && feedback.json');
 
@@ -63,13 +44,6 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items }, null, 2), 'utf-8');
   return rec;
 
-=======
-
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
-  feedbackData.push(feedback);
-  console.log('Feedback saved:', feedback.id);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export interface FeedbackStats {
@@ -86,23 +60,14 @@ export interface FeedbackStats {
   recent: FeedbackRecord[];
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-export function getAllFeedback(): FeedbackRecord[] {;
-  return [...feedbackData];
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
   metadata: Record < string, any>;
   created_at: string;
   ip: string;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
+
+
 
 const feedbackData: FeedbackRecord[] = [];
 
@@ -111,41 +76,21 @@ export async function saveFeedbackFallback(
 ): Promise<void> {
   feedbackData.push(feedback);
   console.log("Feedback saved:", feedback.id);
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-const feedback_data: FeedbackRecord[] = [];
-;
-export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise < void> {
-  feedback_data.push (feedback);
-  console.log ('Feedback saved:', feedback.id);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+
 }
 
 export function writeAll(rows: any[]): void {
   console.log("Writing feedback rows:", rows.length);
   // Implementation would write to database or file
 }
-<<<<<<< HEAD
-=======
+
 
 export function getAllFeedback(): FeedbackRecord[] {
   return [...feedbackData];
 }
-<<<<<<< HEAD
-=======
-export function getAllFeedback (): FeedbackRecord[] {
-  return [...feedback_data];
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+
 const DATA_DIR = path.join(process.cwd(), 'data', 'runtime');
 const DB_PATH = path.join(DATA_DIR, 'feedback.json');
 
@@ -162,4 +107,4 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   items.push(rec);
   fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), 'utf-8');
   return rec;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+

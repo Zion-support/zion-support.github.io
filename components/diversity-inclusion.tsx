@@ -54,7 +54,6 @@ export default function DiversityInclusionPage() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
@@ -148,5 +147,4 @@ function DiversityInclusionPage() {
       </div>;
     </div>);
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+

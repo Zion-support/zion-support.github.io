@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 }</div> </div>) import fs from 'fs';
@@ -28,11 +27,6 @@ export async function getServerSideProps() {;
   let items: NewsItem[] = [];  let generatedAt = '';
   try {
     items = json.items || [];
-=======
-import fs from 'fs';
-import path from 'path';
-type NewsItem = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     generatedAt = json.generatedAt || ''
   } catch {}
   return { props: { items, generatedAt } }
@@ -61,7 +55,6 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 
 );
 }
-<<<<<<< HEAD
   );
 }
 
@@ -87,5 +80,4 @@ function NewsDigestPage() {
           </div>))}
       </div>;
     </div>);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+

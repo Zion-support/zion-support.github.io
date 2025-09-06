@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const type = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(
   req: NextApiRequest
@@ -31,7 +25,6 @@ export default async function handler(
     .send(
       `# Zion Partner SDK (REST)\n\nBase URL: /api\n\nEndpoints:\n- POST /talents\n- GET /jobs\n- GET /certifications\n- POST /verify-student\n- POST /redeem-grant\n\nAuth:\n- Provide X-API-KEY header or Authorization: Bearer <JWT> (use /api/partners/token).`
     );
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
@@ -83,7 +76,3 @@ if ( {) {
   }
   res.set_header ("Content - Type", "text / markdown");
   return res.status (200).send (`# Zion Partner SDK (REST)\n\n_base URL: /api\n\n_endpoints:\n- POST /talents\n- GET /jobs\n- GET /certifications\n- POST /verify - student\n- POST /redeem - grant\n\n_auth:\n- Provide X - API - KEY header or Authorization: Bearer <JWT> (use /api / partners / token).`);
-=======
-  return res.status(200).send(`# Zion Partner SDK (REST)\n\nBase URL: /api\n\nEndpoints:\n- POST /talents\n- GET /jobs\n- GET /certifications\n- POST /verify-student\n- POST /redeem-grant\n\nAuth:\n- Provide X-API-KEY header or Authorization: Bearer <JWT> (use /api/partners/token).`)
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

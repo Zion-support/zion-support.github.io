@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   Rocket,
   Brain,
@@ -62,29 +61,6 @@ export default function UltraFuturisticHero2027() {
   Star, TrendingUp, Users, CheckCircle
 export default function UltraFuturisticHero2027() {
   const features = [
-=======
-import React from 'react',
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Target, Cpu, Database, Cloud, Lock, ArrowRight;
-  Star, TrendingUp, Users, CheckCircle
- } from 'lucide-react';
-export default function UltraFuturisticHero2027() {
-  const features = null;
-            ease: "easeInOut"
-    {
-      icon: Atom
-      text: 'Quantum Computing'
-      color: 'from-blue-400 to-cyan-400'
-    }
-    {
-      icon: Globe
-      text: 'Digital Reality'
-      color: 'from-green-400 to-emerald-400'
-    }
-    {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       icon: Shield
       text: 'Enterprise Security'
       color: 'from-red-400 to-orange-400'
@@ -130,7 +106,6 @@ import { motion } from 'framer-motion';
       color: 'from - red - 400 to - orange - 400',
     },
   ];
-<<<<<<< HEAD
 ;
   const stats = [;
   const stats = [
@@ -224,67 +199,13 @@ import { motion } from 'framer-motion';
             duration: 12,
             repeat: Infinity,
 
-=======
-  return (
-    <section className='relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
-      {/* Background Elements */}
-      <div className='absolute inset-0 pointer-events-none'>
-        {/* Floating Orbs */}
-        <motion.div
-          className='absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl'
-          animate={{
-            y: [0, -20, 0],
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-ease: 'easeInOut',
-          }}
-        />
-
-        <motion.div
-          className='absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl'
-          animate={{
-            y: [0, 20, 0],
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.5, 0.2],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-ease: 'easeInOut',
-          }}
-        />
-        <motion.div
-className='absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl'
-          animate={{
-            y: [0, -30, 0],
-            scale: [1, 1.1, 1],
-            opacity: [0.4, 0.7, 0.4],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-ease: 'easeInOut',
-          }}
-        />
-        {/* Grid Pattern */}
-<div className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]' />
-      </div>
-      <div className='max-w-7xl mx-auto relative z-10'>
-        <div className='text-center'>
-          {/* Main Heading */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
+
 className='mb-8'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
           >
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -293,7 +214,6 @@ className='mb-8'
             </h1>
             <h2 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
               The Future of
-<<<<<<< HEAD
               <span className='bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4'>                Technology          >
             className="mb-8"
           >
@@ -305,9 +225,6 @@ className='mb-8'
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               The Future of
               <span className="bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4">
-=======
-              <span className='bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 Technology
               </span>
             </h2>
@@ -378,7 +295,6 @@ className='flex flex-col sm:flex-row gap-6 justify-center mb-16'
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>;
@@ -431,10 +347,6 @@ className='flex flex-col sm:flex-row gap-6 justify-center mb-16'
             animate={{ opacity: 1, y: 0 }}
 
 
-=======
-            transition={{ duration: 0.8, delay: 0.6 }}
-className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             {features.map((feature, index) => (
               <motion.div
@@ -463,15 +375,11 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-<<<<<<< HEAD
                 className='group'
 
 
 
 
-=======
-className='group'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
                   <div
@@ -479,11 +387,9 @@ className='group'
                   >
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
-<<<<<<< HEAD
-=======
+
                   <h3 className='text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300'>
                     {feature.text}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   </h3>
                 </div>
               </motion.div>
@@ -495,12 +401,7 @@ className='group'
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
-=======
-            transition={{ duration: 0.8, delay: 1.0 }}
-className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -534,7 +435,6 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-<<<<<<< HEAD
                 className='text - center group';
               >;
                 <div;
@@ -554,17 +454,13 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'
                   {stat.label}
                 className='text-center group'
 
-=======
-className='text-center group'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div
                   className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}
                 >
                   {stat.number}
                 </div>
-<<<<<<< HEAD
-=======
+
                 <div className='text-cyan-300 font-medium group-hover:text-cyan-400 transition-colors duration-300'>
                   {stat.label}
                 </div>
@@ -574,25 +470,19 @@ className='text-center group'
                   />
                 </div>
               </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           {/* Trust Indicators */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
-=======
-            transition={{ duration: 0.8, delay: 1.4 }}
-className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
           >
             <h3 className='text-2xl font-bold text-white mb-6'>
               Trusted by Industry Leaders
             </h3>
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
               {[
-<<<<<<< HEAD
                 'Fortune 500'
                 'Tech Giants'
                 'Research Labs'
@@ -606,18 +496,10 @@ className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {['Fortune 500Tech GiantsResearch LabsGovernment'].map((trust, index) => (
-=======
-                'Fortune 500',
-                'Tech Giants',
-                'Research Labs',
-                'Government',
-              ].map((trust, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
                   key={trust}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-<<<<<<< HEAD
 
             transition={{ duration: 0 && 0.8, delay: 1 && 1.4 }}
             className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'>;
@@ -639,10 +521,6 @@ className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-
                 <motion&& motion.div
 
 
-=======
-                  transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }}
-className='text-center'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3'>
                     <Shield className='w-8 h-8 text-cyan-400' />
@@ -735,12 +613,5 @@ className='text-center'
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
 
 
-=======
-      {/* Bottom Glow */}
-<div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />
-    </section>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

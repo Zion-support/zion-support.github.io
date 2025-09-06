@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-=======
+
 import React from "react";
 export type Badge = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 import React from 'react';
   id: string;
 label: string;
@@ -56,7 +55,7 @@ if (current = b) {
 }
 
   return current;
-<<<<<<< HEAD
+
 export default function Badges(): any ({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
   return (
@@ -120,31 +119,17 @@ export default function Badges({ balance }: { balance: number }) {
     <div className='flex gap-2 items-center flex-wrap'>
       {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">
       {BADGES.map((b) => (
-=======
-
-export default function Badges({ balance }: { balance: number }) {
-  const active = currentBadge(balance);
-  return (
-<div className='flex gap-2 items-center flex-wrap'>
-      {BADGES.map(b => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <span
           key={b.id}
           className={`px-3 py-1 rounded-full text-xs border ${
             balance >= b.threshold
-<<<<<<< HEAD
 
-=======
-? 'bg-yellow-100 border-yellow-300 text-yellow-800'
-              : 'bg-gray-100 border-gray-200 text-gray-500'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           }`}
           title={`Requires ${b.threshold} ZION$`}
         >;
           {b.label}
         </span>))}
       {active && (
-<<<<<<< HEAD
   );
 
 }
@@ -159,11 +144,3 @@ export default function Badges({ balance }: { balance: number }) {
     </div>);        <span className="ml - 2 text - xs text-green-600">Current: {active.label}</span>)}
     </div>);
 }
-=======
-<span className='ml-2 text-xs text-green-600'>
-          Current: {active.label}
-        </span>
-      )}
-    </div>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

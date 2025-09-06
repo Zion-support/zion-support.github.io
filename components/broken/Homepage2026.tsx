@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
 import {
 
@@ -33,30 +32,18 @@ import {
   CheckCircle,
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail;
-=======
-import { ArrowRight, Star;
-  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
-  Users, Building, Rocket, CheckCircle, Phone, Mail
- } from 'lucide-react';
-const Homepage2026: React.FC;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 const Homepage2026: React.FC = () => {
   return (
     <Layout>;
       {/* Main Content */}
-<<<<<<< HEAD
       <main className='relative z-10'>
 
 
 
 
-=======
-<main className='relative z-10'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Hero Section */}
         <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;
           {/* Background Elements */}
-<<<<<<< HEAD
           <div className='absolute inset - 0 pointer - events - none'>;
             <div className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg animate - pulse'></div>;
             <div className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full animate - pulse delay - 1000'></div>;
@@ -79,31 +66,11 @@ const Homepage2026: React.FC = () => {
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-          <div className='absolute inset-0 pointer-events-none'>
-            <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>
-            <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>
-            <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>
-          </div>
-
-          <div className='text-center max-w-4xl mx-auto relative z-10'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-className='space-y-6'
-            >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Company Badge */}
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
 
-=======
-                transition={{ duration: 0.6, delay: 0.2 }}
-className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2026</span>
@@ -132,7 +99,6 @@ className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cy
                   </button>
                 </Link>
                 <a href='mailto:kleber@ziontechgroup.com'>
-<<<<<<< HEAD
                   <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                    Get Started
                   </button>
                 </a>
@@ -164,14 +130,10 @@ className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cy
                 </Link>
                 <a href="mailto:kleber@ziontechgroup.com">
                   <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-=======
-                  <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     Get Started
                   </button>
                 </a>
               </div>
-<<<<<<< HEAD
                 className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium'>;
                 <Star className='w-4 h-4' />;
                 <span>Innovation Leader 2026</span>;
@@ -279,76 +241,11 @@ className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cy
               </div>;
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-
-              {/* Trust Indicators */}
-              <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'        <section className="py-20 px-4 bg-black/30 relative">;
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>;
-          <div className="max-w-6xl mx-auto relative z-10">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We deliver innovative solutions that drive real business transformation
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-                transition={{ duration: 0.8, delay: 0.4 }}
-className='flex items-center justify-center space-x-6 text-sm text-gray-400'
-              >
-                <div className='flex items-center space-x-2'>
-                  <Shield className='w-4 h-4 text-green-400' />
-                  <span>Enterprise Security</span>
-                </div>
-                <div className='flex items-center space-x-2'>
-                  <Globe className='w-4 h-4 text-blue-400' />
-                  <span>Global Reach</span>
-                </div>
-                <div className='flex items-center space-x-2'>
-                  <TrendingUp className='w-4 h-4 text-purple-400' />
-                  <span>Proven Results</span>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Company Stats */}
-<section className='py-20 px-4 bg-black/30 relative'>
-          <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
-          <div className='max-w-6xl mx-auto relative z-10'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-className='text-center mb-16'
-            >
-              <h2 className='text-4xl font-bold text-white mb-4'>
-                Why Choose Zion Tech Group?
-              </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                We deliver innovative solutions that drive real business
-                transformation
-              </p>
-            </motion.div>
-
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-<<<<<<< HEAD
-=======
+
 className='text-center'
               >
                 <div className='text-4xl mb-4'>🚀</div>
@@ -357,32 +254,20 @@ className='text-center'
                 </h3>
                 <p className='text-gray-300 text-sm'>
                   Starting at $69/month for specialized business solutions
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
                 </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
-=======
-className='text-center'
-              >
-                <div className='text-4xl mb-4'>🏗️</div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  IT Infrastructure
-                </h3>
-                <p className='text-gray-300 text-sm'>
-                  Starting at $499/month for robust infrastructure solutions
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-<<<<<<< HEAD
-=======
+
 className='text-center'
               >
                 <div className='text-4xl mb-4'>🤖</div>
@@ -391,32 +276,20 @@ className='text-center'
                 </h3>
                 <p className='text-gray-300 text-sm'>
                   Starting at $199/month for intelligent automation
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-<<<<<<< HEAD
+
                 <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge AI</h3>
                 <p className="text-gray-300 text-sm">
-=======
-className='text-center'
-              >
-                <div className='text-4xl mb-4'>🧠</div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  Cutting-Edge AI
-                </h3>
-                <p className='text-gray-300 text-sm'>
-                  Starting at $179/month for next-generation AI
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </motion.div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -427,40 +300,15 @@ className='text-center'
               whileInView={{ opacity: 1, y: 0 }}
 
 
-=======
-        {/* Service Categories */}
-<section className='py-20 px-4'>
-          <div className='max-w-6xl mx-auto'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-className='text-center mb-16'
-            >
-              <h2 className='text-4xl font-bold text-white mb-6'>
-                Our Service Portfolio
-              </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Comprehensive solutions covering every aspect of modern business
-                technology needs
-              </p>
-            </motion.div>
-
-            <div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               {/* AI Automation Services */}
 
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'
 
 
-=======
-className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='text-5xl mb-6'>🤖</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -486,7 +334,6 @@ className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blu
                   </div>
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
-<<<<<<< HEAD
                   <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>                    Learn More              >
               <motion&& motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -513,9 +360,6 @@ className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blu
                 </div>
                 <Link href="/comprehensive-2025-services-showcase">
                   <button className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-=======
-                  <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     Learn More
                   </button>
                 </Link>
@@ -720,12 +564,7 @@ className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blu
               <motion&& motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-<<<<<<< HEAD
 
-=======
-                transition={{ duration: 0.6, delay: 0.2 }}
-className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='text-5xl mb-6'>🏗️</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -817,12 +656,7 @@ className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-g
               <motion&& motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-<<<<<<< HEAD
 
-=======
-                transition={{ duration: 0.6, delay: 0.3 }}
-className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='text-5xl mb-6'>🚀</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -987,12 +821,7 @@ className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-pur
               <motion&& motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-<<<<<<< HEAD
 
-=======
-                transition={{ duration: 0.6, delay: 0.4 }}
-className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='text-5xl mb-6'>🧠</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -1026,7 +855,6 @@ className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-oran
             </div>
           </div>
         </section>
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1035,24 +863,6 @@ className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-oran
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-=======
-        {/* Contact Section */}
-<section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>
-          <div className='max-w-4xl mx-auto text-center'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-className='space-y-6'
-            >
-              <h2 className='text-4xl font-bold text-white mb-6'>
-                Ready to Transform Your Business?
-              </h2>
-              <p className='text-xl text-gray-300 mb-8'>
-                Get in touch with our team to discuss how our innovative
-                services can drive your success
-              </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Contact Information */}
               <div className='bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8'>;
                 <h3 className='text-2xl font-semibold text-cyan-400 mb-6'>;
@@ -1064,7 +874,6 @@ className='space-y-6'
                     <div>;
                       <div className='text-sm text-gray-400'>Website</div>;
                       <a
-<<<<<<< HEAD
                     <Mail className="w-5 h-5 text-yellow-400" />
                     <div>
                       <div className="text-sm text-gray-400">Email</div>
@@ -1074,53 +883,11 @@ className='space-y-6'
                       <div className="text-sm text-gray-400">Address</div>
                       <div className="text-white font-medium">
                         364 E Main St STE 1008<br />
-=======
-                        href='https://ziontechgroup.com'
-                        className='text-cyan-400 hover:underline font-medium'
-                      >
-                        ziontechgroup.com
-                      </a>
-                    </div>
-                  </div>
-<div className='flex items-center space-x-3'>
-                    <Phone className='w-5 h-5 text-green-400' />
-                    <div>
-                      <div className='text-sm text-gray-400'>Phone</div>
-                      <a
-                        href='tel:+13024640950'
-                        className='text-cyan-400 hover:underline font-medium'
-                      >
-                        +1 302 464 0950
-                      </a>
-                    </div>
-                  </div>
-<div className='flex items-center space-x-3'>
-                    <Mail className='w-5 h-5 text-yellow-400' />
-                    <div>
-                      <div className='text-sm text-gray-400'>Email</div>
-                      <a
-                        href='mailto:kleber@ziontechgroup.com'
-                        className='text-cyan-400 hover:underline font-medium'
-                      >
-                        kleber@ziontechgroup.com
-                      </a>
-                    </div>
-                  </div>
-<div className='flex items-center space-x-3'>
-                    <MapPin className='w-5 h-5 text-purple-400' />
-                    <div>
-                      <div className='text-sm text-gray-400'>Address</div>
-                      <div className='text-white font-medium'>
-                        364 E Main St STE 1008
-                        <br />
-                        Middletown DE 19709
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
                       </div>;
                     </div>;
                   </div>;
@@ -1170,29 +937,3 @@ export default Homepage2026;  )
 export default Homepage2026;
 
 export default Homepage2026;
-=======
-<div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <a
-                  href='mailto:kleber@ziontechgroup.com'
-                  className='inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
-                >
-                  <span>Get Started Today</span>
-                  <ArrowRight className='w-5 h-5' />
-                </a>
-                <a
-                  href='tel:+13024640950'
-                  className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300'
-                >
-                  Call Now
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </Layout>
-);
-};
-
-export default Homepage2026;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * Deployment Automation;
  * Automates deployment processes;
  */
 
-<<<<<<< HEAD
 const fs = require('fs')
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
@@ -18,15 +16,10 @@ const { execSync } = require('child_process')
     this.deployments.push('Created Dockerfile')
     this.log('Created Dockerfile', 'SUCCESS')
     const dockerCompose = ""version"
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
     console.error('Deployment automation "failed")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    console.error('Deployment automation "failed")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -157,7 +150,7 @@ class DeploymentAutomation {
     } catch (error) {
       this.log(`💥 Deployment Automation Failed: ${error.message}`);
       process.exit(1);
-=======
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -165,7 +158,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Deployment Automation');
-console.log('========================');
+console.log('===');
 
 class DeploymentAutomation {
   constructor() {
@@ -560,22 +553,11 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
       
       await this.generateReport();
       return false;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     }
   }
 }
 
-<<<<<<< HEAD
 // Run the automation
 const automation = new DeploymentAutomation();
 automation.run();
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
-// Run the deployment automation
-if (require.main === module) {
-  const deployment = new DeploymentAutomation();
-  deployment.run().catch(console.error);
-}
 
-module.exports = DeploymentAutomation;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd

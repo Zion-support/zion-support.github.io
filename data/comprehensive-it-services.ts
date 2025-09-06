@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 export interface ComprehensiveITService {
 id: string;
   name: string;
@@ -33,22 +31,13 @@ id: string;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 
   {
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Next - generation quantum - powered cloud infrastructure',
@@ -70,28 +59,8 @@ id: string;
       '24 / 7 quantum operations center',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    icon: '☁️',
 
-=======
-    color: 'from - blue - 600 to - indigo - 700',
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
-    market_position:;
-      'First - to - market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure, GCP) lack quantum capabilities.',
-    target_audience:;
-      'Large enterprises, Financial institutions, Research organizations, Government agencies, Tech companies',
-    trial_days: 30,
-    setup_time: '2 weeks',
-    category: 'Quantum IT Infrastructure',
-    real_service: true,
-    technology: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum computing',
       'Quantum networking',
       'React',
@@ -101,41 +70,8 @@ id: string;
       'AWS',
       'Custom quantum hardware',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
-    integrations: [;
-      'Enterprise systems',
-      'Legacy applications',
-      'Cloud platforms',
-      'Security tools',
-      'Monitoring systems',
-    ],
-    use_cases: [;
-      'High - performance computing',
-      'Financial modeling',
-      'Drug discovery',
-      'Climate modeling',
-      'AI training',
-      'Blockchain operations',
-    ],
-    roi: 'Enterprises report 300% ROI through improved performance and quantum - grade security.',
-    competitors: [;
-      'AWS',
-      'Azure',
-      'Google Cloud',
-      'Traditional cloud providers',
-    ],
-    market_size: '$400B cloud market, quantum segment growing 400% annually',
-    growth_rate: '400% annual growth',
-    variant: 'quantum - advanced',
-    contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -150,24 +86,8 @@ id: string;
     reviews: 32,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-      'AI-powered deployment optimization',
-    id: 'ai - powered - devops - automation',
-    name: 'AI - Powered DevOps Automation',
-    tagline: 'Intelligent DevOps automation with AI - driven optimization',
-    price: '$8, 999',
-    period: '/month',
-    description:;
-      'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.',
-    features: [;
-      'AI - powered deployment optimization',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Intelligent infrastructure scaling',
       'Predictive failure detection',
       'Automated performance tuning',
@@ -179,28 +99,8 @@ id: string;
       '24 / 7 AI operations center',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    icon: '🤖',
 
-=======
-    color: 'from - green - 600 to - emerald - 700',
-    text_color: 'text - green - 400',
-    link: 'https://ziontechgroup.com / ai - powered - devops - automation',
-    market_position:;
-      'Advanced AI - powered DevOps automation. Competitors like GitLab CI / CD and Jenkins lack AI optimization capabilities.',
-    target_audience:;
-      'DevOps teams, Engineering organizations, Tech companies, Enterprises, Startups',
-    trial_days: 21,
-    setup_time: '1 day',
-    category: 'AI & DevOps Automation',
-    real_service: true,
-    technology: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'AI algorithms',
       'Machine learning',
       'React',
@@ -211,40 +111,8 @@ id: string;
       'Docker',
       'Kubernetes',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
-    integrations: [;
-      'GitHub',
-      'GitLab',
-      'Bitbucket',
-      'Slack',
-      'Jira',
-      'Confluence',
-      'AWS',
-      'Azure',
-      'Google Cloud',
-    ],
-    use_cases: [;
-      'CI / CD automation',
-      'Infrastructure management',
-      'Performance optimization',
-      'Security automation',
-      'Compliance automation',
-      'Resource optimization',
-    ],
-    roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
-    competitors: ['GitLab CI / CD', 'Jenkins', 'CircleCI', 'GitHub Actions'],
-    market_size: '$8B DevOps market, AI segment growing 350% annually',
-    growth_rate: '350% annual growth',
-    variant: 'ai - futuristic',
-    contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -259,23 +127,8 @@ id: string;
     reviews: 245,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
-    id: 'quantum - cybersecurity - suite',
-    name: 'Quantum Cybersecurity Suite',
-    tagline: 'Unhackable quantum - secured cybersecurity platform',
-    price: '$18, 999',
-    period: '/month',
-    description:;
-      'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.',
-    features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum encryption algorithms',
       'AI - powered threat detection',
       'Quantum key distribution',
@@ -288,28 +141,8 @@ id: string;
       '24 / 7 quantum security operations',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    icon: '🔒',
 
-=======
-    color: 'from - red - 600 to - pink - 700',
-    text_color: 'text - red - 400',
-    link: 'https://ziontechgroup.com / quantum - cybersecurity - suite',
-    market_position:;
-      'First - to - market quantum cybersecurity platform. Traditional security tools (Palo Alto, CrowdStrike) lack quantum capabilities.',
-    target_audience:;
-      'Enterprises, Financial institutions, Government agencies, Healthcare organizations, Tech companies',
-    trial_days: 30,
-    setup_time: '1 week',
-    category: 'Quantum Cybersecurity',
-    real_service: true,
-    technology: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum encryption',
       'AI algorithms',
       'React',
@@ -319,42 +152,8 @@ id: string;
       'AWS',
       'Custom quantum hardware',
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
-    integrations: [;
-      'SIEM systems',
-      'Firewalls',
-      'Endpoint protection',
-      'Identity management',
-      'Compliance tools',
-    ],
-    use_cases: [;
-      'Network security',
-      'Endpoint protection',
-      'Data encryption',
-      'Threat detection',
-      'Incident response',
-      'Compliance management',
-    ],
-    roi: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.',
-    competitors: [;
-      'Palo Alto Networks',
-      'CrowdStrike',
-      'Symantec',
-      'Traditional security tools',
-    ],
-    market_size:;
-      '$150B cybersecurity market, quantum segment growing 400% annually',
-    growth_rate: '400% annual growth',
-    variant: 'quantum - cyberpunk',
-    contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -410,7 +209,6 @@ id: string;
   growthRate: string;
   variant: string;
   contactInfo: {
-<<<<<<< HEAD
       
     mobile: string, email: string,
     address: string,
@@ -421,19 +219,12 @@ id: string;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
   {
-<<<<<<< HEAD
-=======
 
-    id: 'enterprise-it-infrastructure', name: 'Enterprise IT Infrastructure Management',
-    tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     mobile: string;
     email: string;
     address: string;
@@ -447,7 +238,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     id: 'enterprise-it-infrastructure';
     name: 'Enterprise IT Infrastructure Management';
     tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     price: '$25,999',
     period: '/month',
     description: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',
@@ -471,7 +261,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
     reviews: 156
@@ -559,26 +348,10 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     customers: 180;
     rating: 4.9,
     reviews: 156;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-  }
 
-=======
-
-export interface ComprehensiveITService {;
-
-  }
-
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
-=======
+
     realImplementation: true
     implementationDetails:
       'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'
@@ -1231,7 +1004,7 @@ export interface ComprehensiveITService {;
       'Symantec'
       'Traditional security tools'
     ]
-=======
+
   // Cloud Migration & Optimization Services
   {
     id: 'cloud-migration-optimization',
@@ -1966,7 +1739,7 @@ export interface ComprehensiveITService {;
       'Symantec',
       'Traditional security tools',
     ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
     marketSize:
       '$150B cybersecurity market, quantum segment growing 400% annually',
     growthRate: '400% annual growth',
@@ -1979,25 +1752,7 @@ export interface ComprehensiveITService {;
     },
     realImplementation: true,
     implementationDetails:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
-    launchDate: '2024-09-15'
-    customers: 180
-    rating: 4.9
-    reviews: 156
-  }
-=======
-      'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
-    launchDate: '2024-09-15',
-    customers: 180,
-    rating: 4.9,
-    reviews: 156,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -2010,17 +1765,10 @@ export interface ComprehensiveITService {;
     rating: 4.9
 
     reviews: 156
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
   }
 ];
-=======
-export interface ComprehensiveITService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string,;
   name: string,;
   tagline: string,;
@@ -2498,7 +2246,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     customers: 180,;
     rating: 4.9,;
     reviews: 156;
-<<<<<<< HEAD
 
   }
 ];
@@ -3364,17 +3111,13 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     reviews: 156;
   }
 ;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
+
+
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launchDate: '2024-09-15',
     customers: 180,
@@ -3385,4 +3128,4 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     reviews: 156
   }
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+

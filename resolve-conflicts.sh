@@ -8,7 +8,7 @@ resolve_conflicts() {
     echo "Resolving conflicts in: $file"
     
     # Check if file exists and has conflicts
-    if [[ -f "$file" && $(grep -c "<<<<<<< HEAD" "$file") -gt 0 ]]; then
+    if [[ -f "$file" && $(grep -c "" "$file") -gt 0 ]]; then
         # Create backup
         cp "$file" "${file}.backup"
         

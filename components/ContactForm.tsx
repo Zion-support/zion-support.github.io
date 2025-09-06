@@ -1,98 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import LoadingSpinner from './LoadingSpinner';
-
-=======
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 interface FormData {
   name: string;
   email: string;
   company: string;
-<<<<<<< HEAD
   phone: string;
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-  service: string;
-  message: string;
-}
-
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-<<<<<<< HEAD
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    } catch {
-      setSubmitStatus('error');
-=======
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setIsSubmitted(true);
-    } catch (error) {
-      console.error('Error submitting form: ', error);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     } finally {
       setIsSubmitting(false);
     }
   };
-<<<<<<< HEAD
 
   return (
     <div className="max-w-2xl mx-auto bg-white rounded-lgshadow-lgp-8">
@@ -229,41 +143,7 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      setSubmitStatus('success');
-    } catch {;
-      setSubmitStatus('error');
-    } finally {;
-      setIsSubmitting(false);
-    }
-  }
-  return (
-            <option value="consulting">Consulting</option>;
-            <option value="other">Other</option>;
-          </select>;
-        </div>;
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200">;
-          {isSubmitting ? (;
-            <div className="flex items-center justify-center">;
-              <LoadingSpinner size="sm" />;
-              <span className="ml-2">Sending...</span>;
-            </div>;
-          ) : (;
-            'Send Message';
-          )}
-        </button>;
-      </form>;
-    </div>;
-  );
-<<<<<<< HEAD
-=======
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   if (isSubmitted) {
     return (
       <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
@@ -442,4 +322,4 @@ export default ContactForm;
   );
 };
 export default ContactForm;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+

@@ -19,7 +19,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 
 export default function Web3LoginButton() {;
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {;
@@ -32,17 +31,6 @@ async function resolveDisplayName(): any (addr: string): Promise<string | null> 
     const did = data?.payload || {};
     return did && did.lens || did && did.ens || null;
   } catch {;
-=======
-import dynamic from 'next/dynamic';
-const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {
-  ssr: false,
-});
-async function resolveDisplayName(addr: string): Promise<string | null> {
-  try {
-    const did = data?.payload || {};
-return did.lens || did.ens || null;
-  } catch {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return null;
   }
 
@@ -51,7 +39,6 @@ export default function Web3LoginButton() {;
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
-<<<<<<< HEAD
   } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   useEffect(() => {    return did.lens |did.ens |null
@@ -66,22 +53,12 @@ export default function Web3LoginButton() {
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   useEffect(() => {
-=======
-  } | null>(null);
-  const [displayName, setDisplayName] = useState<string | null>(null);
-  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-  useEffect(() => {
-const saved =
-      typeof window !== 'undefined'
-        ? window.localStorage.getItem('zion-web3-user')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         : null;
     if (saved) setUser(JSON && JSON.parse(saved));
     const pref =;
       typeof window !== 'undefined';
         ? window && window.localStorage.getItem('zion-web3-display');
         : null;
-<<<<<<< HEAD
     setDisplayWeb3(pref === 'true');  }, []);
       else setDisplayName(null);
     })();
@@ -95,25 +72,6 @@ const saved =
   const disconnect = async () => {;
     window && window.localStorage.removeItem('zion-web3-user');
     try {;
-=======
-    setDisplayWeb3(pref === 'true');
-  }, []);
-
-  useEffect(() => {
-    (async () => {
-if (user && displayWeb3)
-        setDisplayName(await resolveDisplayName(user.address));
-      else setDisplayName(null);
-    })();
-  const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) => {
-    window.localStorage.setItem('zion-web3-user', JSON.stringify(u));
-    setUser(u);
-  };
-
-  const disconnect = async () => {
-    window.localStorage.removeItem('zion-web3-user');
-try {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       await fetch('/api/auth/logout', { method: 'POST' });
     } catch {}
     setUser(null);
@@ -124,48 +82,7 @@ try {
   if (user) {
     const base =
       displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-    return (
-      <div className='flex items-center gap-2'>;
-        <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1 && 1.5 py-0 && 0.5'>;
-          Web3 Verified;
-        </span>;
-        <button
-          className='rounded-md border px-2 py-1 text-xs'
-          onClick={() => setOpen(true)}
-        >;
-          {base}
-        </button>;
-        <button className='text-xs text-red-600' onClick={disconnect}>;
-          Logout;
-        </button>;
-        {open && (;
-          <Web3LoginModal
-            isOpen={open}
-            onClose={() => setOpen(false)}
-            onLoggedIn={onLoggedIn}
-          />;
-        )}
-<<<<<<< HEAD
-      </div>;
-    );  }
-  return (
-    <>    );
-  }
-  return (
-    <>;
-      <button
-=======
-      </div>
-    );
-  }
-  return (
-    <>
-<button
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         onClick={() => setOpen(true)}
         className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs';
       >;
@@ -178,7 +95,6 @@ try {
           onLoggedIn={onLoggedIn}
         />;
       )}
-<<<<<<< HEAD
     </>;
   );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs">Connect Wallet</button>;
 
@@ -347,7 +263,3 @@ if ( {) {
     </>);      <button on_click={() => set_open (true)} className="rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py-1.5 text-xs">Connect Wallet</button>;
       {open && <Web3LoginModal is_open={open} on_close={() => set_open (false)} onLoggedIn={onLoggedIn} />}
     </>);
-=======
-    </>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

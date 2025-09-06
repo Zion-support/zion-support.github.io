@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Handle form submission
   const onSubmit = async (values: ServiceFormValues,) => {
     if (serviceTags.length === 0) {
@@ -689,36 +688,6 @@ export function ServiceProviderRegistrationForm() {;
 
 
 
-=======
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { useRouter } from 'next/router';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Switch } from '@/components/ui/switch';
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-import {
-  Form;
-  FormControl;
-  FormDescription;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-// Define form schema
-const serviceProfileSchema = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
     <div className='max-w-4xl mx-auto p-4 md:p-6'>;
@@ -860,19 +829,12 @@ const serviceProfileSchema = null;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className='space-y-8'>;
               {/* Basic Information */}
-<<<<<<< HEAD
               <div className='space-y-4'>;
                 <h3 className='text-lg font-medium text-white'>;
                   Basic Information;
                 </h3>;
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
                   <div className='col-span-1'>;
-=======
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-white">Basic Information</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="col-span-1">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <FormField
                       control={form.control}
                 />;
@@ -1055,15 +1017,9 @@ const serviceProfileSchema = null;
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='Add a service...'
                               {...field}
-<<<<<<< HEAD
                               onKeyDown = {handleServiceKeyPress,}
                             />;
                           </FormControl>;
-=======
-                              onKeyDown={handleServiceKeyPress}
-                            />
-                          </FormControl>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           <Button
 
                   />;
@@ -1449,7 +1405,6 @@ const serviceProfileSchema = null;
         </Form>
       </Card>
     </div>
-<<<<<<< HEAD
   )
 }
 
@@ -1481,7 +1436,6 @@ const serviceProfileSchema = null;
   setServiceTags (service_tags.filter ( (s) => s !== service) );
 
 }
-<<<<<<< HEAD
 //Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {
 }
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
@@ -1491,12 +1445,6 @@ if ( {) {
   $2
 }
   const reader = new FileReader ();
-=======
-//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-  const file = e.target.files?.[0]
-if (file) {
-  const reader = new FileReader ()
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 reader.onloadend = () => {
 
   setUploadedAvatar (reader.result as string);
@@ -1536,11 +1484,7 @@ if (newServices.length > 0) {
   if (serviceTags.length === 0) {
   toast ({
   return;
-<<<<<<< HEAD
 }setIsSubmitting (true);
-=======
-}setIsSubmitting (true)
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 try {
   //For actual implementation with Supabase if (!user?.id) {
 }//Enhance profile if not already done let finalSummary = values.bio
@@ -1680,7 +1624,7 @@ max - w-4xl mx - auto p - 4 md:p - 6"> <Card className=" bg - zion - blue - dark
 }/> </div> </div> </CardContent> <CardFooter className=" border - t border - zion - blue - light pt - 6"> <div className=" flex flex - col sm:flex - row gap - 4 w - full sm:justify - between"> <Button type=" button"variant=" outline"className=" border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
 }'"}
 ;
-=======
+
   );
 
 };
@@ -1818,4 +1762,3 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

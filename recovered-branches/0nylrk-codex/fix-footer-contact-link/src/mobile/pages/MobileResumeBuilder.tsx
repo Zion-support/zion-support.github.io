@@ -54,4 +54,3 @@ function MobileResumeBuilder() {
       <BottomNavigation />;
     </div>);
 }
-<<<<<<< HEAD

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
@@ -71,13 +70,8 @@ function RegionFilter() {
             <div key={region && region.id} className="flex items-center">;
 
 import { ChevronDown, ChevronUp } from 'lucide-react';
-<<<<<<< HEAD
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
-=======
-import { Checkbox } from "@/components/ui/checkbox",;
-import { RegionFilterProps } from "@/types/filters",;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const REGION_OPTIONS = [;
   { id: "North America", label: "North America" },;
   { id: "Europe", label: "Europe" },;
@@ -91,7 +85,6 @@ const REGION_OPTIONS = [;
   { id: "Africa", label: "Africa" }
 ]
 
-<<<<<<< HEAD
 export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
@@ -103,43 +96,6 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
-=======
-=======
-import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";
-const REGION_OPTIONS = null;
-const REGION_OPTIONS = [
-  { id: 'North America', label: 'North America' }
-  { id: 'Europe', label: 'Europe' }
-  { id: 'Asia', label: 'Asia' }
-  { id: 'South America', label: 'South America' }
-  { id: 'Australia', label: 'Australia' }
-  { id: 'Africa', label: 'Africa' }
-]
-export function RegionFilter({
-  selectedRegions
-  toggleRegion
-  expanded
-  toggleSection
-  isMobileFilterOpen
-}: RegionFilterProps) {
-  return (
-    <div className='mb-6 border-b border-zion-blue-light pb-6'>
-      <button
-        onClick={toggleSection}
-        className='flex w-full items-center justify-between text-white font-medium'      >
-        <span>Region</span>
-        {expanded ? (
-          <ChevronUp className='h-4 w-4 text-zion-slate-light' />
-        ) : (
-          <ChevronDown className='h-4 w-4 text-zion-slate-light' />
-        )}
-      </button>
-      {expanded && (
-        <div className='mt-4 space-y-2'>
-          {REGION_OPTIONS.map(region => (
-            <div key={region.id} className='flex items-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -152,7 +108,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
         ) : (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         )}
 
 
@@ -174,13 +129,8 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
-=======
-                className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <label
                 htmlFor={`region-${region.id}`}
 
@@ -281,7 +231,7 @@ function RegionFilter() {
   );
 }
 ;
-=======
+
 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'
               />
               <label
@@ -307,4 +257,3 @@ toggleSection ;
 }</div>) ;
 }</div>) ;
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

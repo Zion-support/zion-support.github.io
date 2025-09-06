@@ -1,23 +1,8 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-const { execSync } = require('child_process');
 
-console.log('🔧 Comprehensive syntax error fixing...');
-
-// Function to fix specific syntax patterns
-function fixFileContent(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix merge conflict markers
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`  🔄 Fixing merge conflicts in ${filePath}`);
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
       modified = true;
     }
 
@@ -153,14 +138,7 @@ for (const file of files) {
 
 console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
 console.log('🎯 Comprehensive syntax fixing complete!');
-=======
-=======
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 
 class ComprehensiveSyntaxFixer {
   constructor() {
@@ -173,7 +151,6 @@ class ComprehensiveSyntaxFixer {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
-<<<<<<< HEAD
   async fixAllSyntaxErrors() {
     this.log('🔧 Starting comprehensive syntax error fixing...');
     
@@ -261,48 +238,9 @@ function findFilesWithErrors(dir) {;
         const ext = path.extname(fullPath);
         if (extensions.includes(ext)) {;
           files.push(fullPath);
-=======
-  getAllFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-    const files = [];
-
-    if (!fs.existsSync(dir)) {
-      return files;
-    }
-
-    const items = fs.readdirSync(dir);
-
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (
-          !['node_modules', '.git', '.next', 'dist', 'build'].includes(item)
-        ) {
-          files.push(...this.getAllFiles(fullPath, extensions));
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         }
       }
     }
-<<<<<<< HEAD
-  }
-  ;
-  traverse(dir);
-  return files;
-}
-;
-// Main execution;
-console.log('🔍 Scanning for files with syntax errors...');
-const files = findFilesWithErrors(process.cwd());
-;
-console.log(`Found ${files.length} files to check`);
-;
-let fixedCount = 0;
-for (const file of files) {;
-  if (fixSyntaxErrors(file)) {;
-    fixedCount++;
-=======
 
     return files;
   }
@@ -470,123 +408,8 @@ for (const file of files) {;
     }
 
     this.log('🎉 Comprehensive syntax fixing completed!');
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-// Run the fixer
-const fixer = new ComprehensiveSyntaxFixer();
-<<<<<<< HEAD
-fixer.fixAllSyntaxErrors().catch(console.error);
-}
 
-    this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
-    for (const file of problematicFiles) {;
-  const result = await this.fixFile(file);
-      if (result.fixed) {;
-  this.fixedFiles++;,
-}
-    }
 
-    this.log(`🎉 Fixed syntax in ${this.fixedFiles} files`);
-    if (this.errors.length > 0) {;
-  this.log(`⚠️  ${this.errors.length} errors occurred:`);
-      this.errors.forEach(error => {;
-  this.log(`   - ${error.file}: ${error.error}`);,
-});,
-}
-
-    return {;
-  totalFiles: allFiles.length,
-      fixedFiles: this.fixedFiles.length,
-      errors: this.errors.length,
-      fixedFileList: this.fixedFiles,
-      errorList: this.errors;,
-}
-  }
-
-  generateReport(results) {;
-  const report = {;
-  timestamp: new Date().toISOString(),
-      summary: results,
-      fixedFiles: this.fixedFiles,
-      errors: this.errors;,
-}
-      fixed: this.fixedFiles,
-      errors: this.errors,
-      totalFiles: problematicFiles.length;,
-}
-  }
-
-  async createCleanESLintConfig() {;
-  this.log("🔧 Creating clean ESLint configuration...");
-    const eslintConfig = `module.exports = {;
-  extends: [ "next/core-web-vitals",
-    "eslint: recommended",
-    "@typescript-eslint/recommended" ],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
-  rules: {;
-  "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-explicit-any": "warn",
-    "react-hooks/exhaustive-deps": "warn";,
-},
-  ignorePatterns: ["node_modules/", ".next/", "out/"];,
-};`;
-    try {;
-  fs.writeFileSync(".eslintrc.js", eslintConfig);
-      this.log("✅ Created clean ESLint configuration");,
-} catch (error) {;
-  this.log(`❌ Error creating ESLint config: ${error.message}`);,
-}
-  }
-
-  async run() {;
-  try {;
-  // Fix syntax issues;
-      const fixResult = await this.fixAllFiles();
-      // Create clean ESLint config;
-      await this.createCleanESLintConfig();
-      this.log("🎉 Comprehensive syntax fixing completed successfully");
-      return fixResult;,
-} catch (error) {;
-  this.log(`💥 Syntax fixing failed: ${error.message}`);
-      throw error;,
-}
-  }
-}
-
-// Run the syntax fixer if this file is executed directly;
-if (require.main === module) {;
-  const fixer = new ComprehensiveSyntaxFixer();
-  fixer.run();
-    .then((result) => {;
-  console.log("✅ Syntax fixing completed");
-      console.log(`📊 Fixed ${result.fixed} files`);
-      if (result.errors.length > 0) {;
-  console.log(`⚠️  ${result.errors.length} errors occurred`);,
-}
-      process.exit(0);,
-});
-    .catch((error) => {;
-  console.error("❌ Syntax fixing failed: ", error.message);
-      process.exit(1);,
-});,
-}
-
-module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
-console.log('🎯 Comprehensive syntax fixing complete!');
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
-fixer.run().catch(console.error);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  setErrors (newErrors);
 }
 setIsSubmitting (true);
@@ -22,85 +20,6 @@ const handleInputBlur = (name: keyof FormData) => {;
   opacity: 0, y: -10
 }animate= {
   {
-=======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Send,
-  CheckCircle,
-  AlertCircle,
-  User,
-  Mail,
-  Phone,
-  Building,
-  MapPin,
-  MessageSquare,
-  Clock,
-  Calendar,
-  Globe,
-} from 'lucide-react';
-import Link from 'next/link';
-
-const EnhancedContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    budget: '',
-    timeline: '',
-    message: '',
-  });
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [selectedService, setSelectedService] = useState('');
-
-  const services = [
-    {
-      id: 'ai-development',
-      name: 'AI Development',
-      icon: Globe,
-      color: 'from-purple-500 to-pink-500',
-    },
-    {
-      id: 'cloud-architecture',
-      name: 'Cloud Architecture',
-      icon: Globe,
-      color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      id: 'web-development',
-      name: 'Web Development',
-      icon: Globe,
-      color: 'from-green-500 to-emerald-500',
-    },
-    {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      icon: Globe,
-      color: 'from-red-500 to-orange-500',
-    },
-    {
-      id: 'iot-platforms',
-      name: 'IoT Platforms',
-      icon: Globe,
-      color: 'from-indigo-500 to-purple-500',
-    },
-    {
-      id: 'digital-transformation',
-      name: 'Digital Transformation',
-      icon: Globe,
-      color: 'from-yellow-500 to-orange-500',
-    },
-    {
-      id: 'custom',
-      name: 'Custom Solution',
-      icon: Globe,
-      color: 'from-gray-500 to-slate-500',
-    },
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   ];
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {}
@@ -134,7 +53,6 @@ const EnhancedContactForm: React.FC = () => {
       return;
     }
     setIsSubmitting(true);
-<<<<<<< HEAD
       });
       setErrors({});
     } catch (error) {;
@@ -143,72 +61,10 @@ const EnhancedContactForm: React.FC = () => {
     } finally {;
       setIsSubmitting(false);
     }
-=======
-
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    // Reset form after successful submission
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        budget: '',
-        timeline: '',
-        message: '',
-      });
-      setSelectedService('');
-    }, 5000);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
-    }
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
-  if (isSubmitted) {
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     return (
       <motion&& motion.div
         initial={{ opacity: 0, scale: 0 && 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
         className="text-center py-12">;
         <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center">;
           <CheckCircle className="w-10 h-10 text-green-400" />;
@@ -224,49 +80,9 @@ const EnhancedContactForm: React.FC = () => {
           Send Another Message;
         </button>;
       </div>;
-=======
-        className="py-20 bg-gradient-to-br from-green-50 to-emerald-50"
-      >
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto">
-            <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8">
-              <CheckCircle className="w-12 h-12 text-white" />
-            </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Thank You for Reaching Out!
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              We&apos;ve received your message and will get back to you within
-              24 hours. Our team is excited to discuss your project and explore
-              how we can help bring your vision to life.''
-            </p>
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                What happens next?
-              </h3>
-              <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm text-gray-600">
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-green-500" />
-                  <span>Response within 24h</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MessageSquare className="w-4 h-4 text-green-500" />
-                  <span>Schedule consultation</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-green-500" />
-                  <span>Project planning</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     );
   }
   return (
-<<<<<<< HEAD
     <div className="max-w-4xl mx-auto">;
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
         {/* Contact Information */}
@@ -376,15 +192,7 @@ const EnhancedContactForm: React.FC = () => {
                 </>;
               )}
 }
-=======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
-import { FormData, FormErrors } from '../types';
-import { useToast } from './ui/Toast';
-const EnhancedContactForm: React.FC;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+
     <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="container mx-auto px-4">
         <motion.div
@@ -770,5 +578,4 @@ const EnhancedContactForm: React.FC;
   );
 };
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 export default EnhancedContactForm;

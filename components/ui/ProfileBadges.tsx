@@ -22,7 +22,6 @@ import React from 'react';
 import type { KycProfile } from '../../utils/kyc';
 import { getBadgeLabels } from '../../utils/kyc';
 import { VerifiedBadge } from './VerifiedBadge';
-<<<<<<< HEAD
 
 export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
   const labels = getBadgeLabels(profile || undefined);
@@ -37,9 +36,3 @@ export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
 
 
 
-=======
-export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
-  const labels = null;
-  return <VerifiedBadge labels={labels} />
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

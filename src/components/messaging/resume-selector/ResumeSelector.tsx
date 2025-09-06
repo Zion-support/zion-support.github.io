@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Fetch resume data when component mounts
   useEffect(() => {
     const loadResumes = async () => {
@@ -177,9 +175,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         value={selectedOption} 
         onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
         className="space-y-3"
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
@@ -194,7 +189,6 @@ import { SelectResumeSection } from './SelectResumeSection';
 import { ResumeOption, ResumeSelectorProps } from './types';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-<<<<<<< HEAD
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
@@ -285,7 +279,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         value={selectedOption}
         onValueChange={(value: 'recent' | 'select' | 'upload') => setSelectedOption(value)}
         className="space-y-4"
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       >
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="recent" id="recent" />
@@ -357,14 +350,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         </div>
       )}
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
@@ -448,4 +436,3 @@ return (<div className="space-y-4" > <h3 className="text-lg font-medium text-whi
 }'"
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

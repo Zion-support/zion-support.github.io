@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 
 type Props = {;
   room: Room | null;
   onLeave: () => void;
-=======
-import React from 'react';
-import type { Room } from 'livekit-client';
-type Props = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
@@ -15,7 +9,6 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
   const toggleMic = async () => {
     if (!room) return;
-<<<<<<< HEAD
   accent?: 'blue' | 'cyan';};type Props = {;
   room: Room | null,;
   onLeave: () => void,;
@@ -56,32 +49,6 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
-=======
-const enabled =
-      await room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled);
-  };
-
-  const toggleCam = async () => {
-    if (!room) return;
-    const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
-setCamEnabled(enabled);
-  };
-
-  const toggleScreenShare = async () => {
-    if (!room) return;
-    try {
-const enabled =
-        await room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled);
-    } catch (e) {
-      console.warn('Screen share failed', e);
-    }
-  };
-
-  return (
-<div className='flex items-center gap-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='flex items-center gap-3'>
       <button
@@ -108,7 +75,6 @@ const enabled =
         Leave
       </button>
     </div>
-<<<<<<< HEAD
 );
 }
 
@@ -215,6 +181,3 @@ if (return) {
       </button>;
     </div>);
 }
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

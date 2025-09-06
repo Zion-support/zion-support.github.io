@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
@@ -379,4 +378,3 @@ const PricingGuide: React.FC = () => {
 };
 
 export default PricingGuide;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

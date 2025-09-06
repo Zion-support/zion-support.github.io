@@ -16,7 +16,6 @@ function readAllGrants(): GrantApplication[] {
     const raw = fs.readFileSync(full, 'utf8');
     return JSON.parse(raw) as GrantApplication;
   });
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {;
     const { status, sector, region, program } = req.query;
@@ -127,39 +126,13 @@ if ( {) {
   $2
 }
         res.status (400).json ({ error: 'Missing required fields' });
-=======
-  const files = null;
-      return (
-        (status ? g.status === status : true) &&
-        (sector ? g.sector === sector : true) &&
-        (region ? g.region === region : true) &&
-        (program ? g.program === program : true)
-);
-    });
-    res.status(200).json({ items: list });
-    return;
-  }
-
-  if (req.method === 'POST') {
-    try {
-      const payload = req.body as CreateGrantPayload;
-if (
-        !payload ||
-        !payload.projectName ||
-        !payload.teamInfo ||
-        !payload.proposalSummary ||
-        !payload.timeline
-      ) {
-        res.status(400).json({ error: 'Missing required fields' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         return;
       }
       ensure_dir ();
       const id = uuidv4 ();
       const now = new Date ().toISOString ();
       const record: GrantApplication = {
-<<<<<<< HEAD
-=======
+
 id,
         program: payload.program || 'grant',
         projectName: payload.projectName,
@@ -188,7 +161,7 @@ id,
       res.status(201).json({ id, record });
     } catch (e: any) {
       res.status(500).json({ error: e?.message |'Failed to create grant' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
     }
     return;
   }
@@ -203,14 +176,10 @@ id,
 }
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
-<<<<<<< HEAD
+
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' })
     }
     return
   }
 
-=======
-  res.status(405).end('Method Not Allowed')
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

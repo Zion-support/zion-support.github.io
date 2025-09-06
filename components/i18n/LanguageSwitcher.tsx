@@ -1,48 +1,18 @@
 
 
 const localeToFlag: Record<string, string> = {
-<<<<<<< HEAD
 
   en: 'us',
   pt: 'br',
   es: 'es',
-=======
-  en: 'us';
-  pt: 'br';
-  es: 'es';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ar: 'sa'},
 const localeLabelKey: Record<string, string> = {
-<<<<<<< HEAD
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
   ar: 'lang.arabic',
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
-=======
-  en: 'lang.english';
-  pt: 'lang.portuguese';
-  es: 'lang.spanish';
-  ar: 'lang.arabic'},
-
-export default function LanguageSwitcher() {
-  const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
-  const current = null;
-  en: 'us'
-  pt: 'br'
-  es: 'es'
-  ar: 'sa'
-};  ar: 'sa'}
-const localeLabelKey: Record<string, string> = {
-  en: 'lang.english'
-  pt: 'lang.portuguese'
-  es: 'lang.spanish'
-  ar: 'lang.arabic'
-};  ar: 'lang.arabic'}
-export default function LanguageSwitcher() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';
@@ -82,11 +52,10 @@ setOpen(false);
             <li key={lng}>;
               <button
                 role='option'
-<<<<<<< HEAD
-=======
+
                 aria-selected={current.startsWith(lng)}
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
   return (
     <div className="relative">;
       <button
@@ -108,7 +77,7 @@ setOpen(false);
         </ul>;
       )}
     </div>
-<<<<<<< HEAD
+
 );
 }
   );
@@ -208,7 +177,3 @@ function LanguageSwitcher() {
             </li>))}
         </ul>)}
     </div>);
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

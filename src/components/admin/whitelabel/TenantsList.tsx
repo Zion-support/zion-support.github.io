@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -97,19 +95,7 @@ export function TenantsList() {;
 
 }
 ;
-=======
-.order('created_at', { ascending: false }),;
 
-}
-
-
-
-        .order ('created_at', { ascending: false }),
-}
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React, { useState, useEffect } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -170,4 +156,3 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 }'"
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

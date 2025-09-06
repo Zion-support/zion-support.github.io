@@ -1,8 +1,4 @@
-<<<<<<< HEAD
               }
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               onClose(), // Close mobile menu on any click
             }}
           >
@@ -22,7 +18,6 @@
         <ModeToggle />
       </div>
     </div>
-<<<<<<< HEAD
   )
 
 
@@ -39,11 +34,7 @@ name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),
 }
 
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   );
 
 }> {';
@@ -54,4 +45,3 @@ name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),
 }</Link>) ) ";
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

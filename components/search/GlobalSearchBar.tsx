@@ -1,81 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
-export default function GlobalSearchBar() {;
-import { useEffect, useMemo, useRef, useState } from 'react';
-  useEffect(() => {;
-    if (!query) {;
-      setSuggestions([]);
-      return;      return;
-      setSuggestions([]);
-      return
-    }
-    controller && controller.current?.abort();
-    controller && controller.current = new AbortController();
-    const run = async () => {;
-      try {;
-        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {;
-          signal: controller && controller.current!.signal,;
-        });
-        const j = await r && r.json();
-        setSuggestions(j && j.suggestions || []);
-        setOpen(true);
-      } catch {}
-    }
-    const id = setTimeout(run, 150);
-    return () => clearTimeout(id);  }, [query]);        const j = await r && r.json();
-        setSuggestions(j && j.suggestions || []);
-        setOpen(true);
-      } catch {}
-    }
-    const id = setTimeout(run, 150);
-    return () => clearTimeout(id);
-        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
-        const j = await r.json();
-        setSuggestions(j.suggestions || []);
-        setOpen(true)
-      } catch {}
-    };
-    const id = setTimeout(run, 150);
-    return () => clearTimeout(id)
-  }, [query]);
-    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
-    router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false)
-  };
-  const startVoice = () => {
-    if (typeof window === 'undefined') return;
-    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
-import { useEffect, useMemo, useRef, useState  } from 'react';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 export default function GlobalSearchBar() {
 
 export default function GlobalSearchBar() {;
@@ -88,13 +11,8 @@ export default function GlobalSearchBar() {;
     if (!query) {
       setSuggestions([]);
       return;      return
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 
 
 class ErrorBoundary extends React.Component {
@@ -230,13 +148,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
           <ul className="max-h-64 overflow-auto py-1 text-sm">;
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
     }
     
     return this.props.children;
@@ -257,12 +170,11 @@ export default function GlobalSearchBar() {
       return;      return;
       setSuggestions([]);
       return
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useRouter } from 'next/router';
   const router = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
     }
     controller.current?.abort();
     controller.current = new AbortController();
@@ -277,63 +189,17 @@ const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
       } catch {}
     }
     const id = setTimeout(run, 150);
-<<<<<<< HEAD
     return () => clearTimeout(id);  }, [query]);        const j = await r.json();
         setSuggestions(j.suggestions |[]);
         setOpen(true)
       } catch {}
     }
     const id = setTimeout(run, 150);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-    return () => clearTimeout(id);
-  }, [query]);
-  const onSubmit = (e?: React.FormEvent) => {
-    e?.preventDefault();
-    if (!query.trim()) return;
-fetch('/api/telemetry/search', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ q: query }),
-    }).catch(() => {});
-    router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false);
-  };
-
-  const startVoice = () => {
-    if (typeof window === 'undefined') return;
-const Speech: any =
-      (window as any).SpeechRecognition ||
-      (window as any).webkitSpeechRecognition;
-    if (!Speech) return;
-    const rec = new Speech();
-    rec.lang = 'en-US';
-    rec.onresult = (e: any) => {
-<<<<<<< HEAD
-=======
-      const transcript = e.results?.[0]?.[0]?.transcript || '';
-if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
-    };
-    rec.start();
-  }
-    >
-      <input
-        value={query}
-        onChange={e => setQuery(e.target.value)}
-        onFocus={() => setOpen(suggestions.length > 0)}
-        className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500'
-        placeholder='Search talent, jobs, projects...'
-        aria-label='Search'
-      />
-      <div className='absolute inset-y-0 right-2 flex items-center gap-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <button
           type='button'
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
           aria-label='Voice search'
         >
           🎤
@@ -357,7 +223,7 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
                     setOpen(false);
                     router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
-<<<<<<< HEAD
+
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()
   }
@@ -382,10 +248,6 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
           <ul className="max-h-64 overflow-auto py-1 text-sm">
             {suggestions.map((s, i) => (
               <li key={i}>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <button
                   type="button"
                   onClick={() => {;
@@ -393,24 +255,15 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
-<<<<<<< HEAD
 
                 >
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    router && router.push(`/search?q=${encodeURIComponent(s)}`);
 
-                  }}
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
                 >
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -420,49 +273,21 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
           </ul>;
         </div>;
       )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 
 
                   {s}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
                   {s}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </form>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-}
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-  )
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import { use_router } from 'next / router';
 export default /**
  * GlobalSearchBar - Function description
@@ -631,26 +456,18 @@ if (return) {
         </div>)}
     </form>));
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
 
-  );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   );
 
 );  )
 }
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+
+
+
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+

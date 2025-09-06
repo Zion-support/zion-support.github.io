@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-06T00:07:28.790Z",
   "vulnerabilities": [
     {
@@ -318,19 +317,13 @@
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+
+
+
+
+
   "auditReportVersion": 2,
   "vulnerabilities": {},
   "metadata": {
@@ -352,6 +345,6 @@
     }
   }
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
+
+

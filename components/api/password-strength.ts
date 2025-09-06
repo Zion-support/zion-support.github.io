@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 // Check condition
 if (strength = 'very - weak') {
@@ -108,9 +107,6 @@ if ( {) {
         has_numbers;
         has_symbols;
         hasCommonPatterns;
-=======
-password.toLowerCase () .includes (pattern) );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 if (score < 30) strength = 'very-weak';
 else if (score < 50) strength = 'weak';
@@ -125,7 +121,6 @@ if (!hasNumbers) feedback.push ('Add numbers');
 if (!hasSymbols) feedback.push ('Add special characters');
 if (hasCommonPatterns) feedback.push ('Avoid common patterns and words');
 if (entropy < 30) feedback.push ('Password is too predictable');
-<<<<<<< HEAD
 // Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next';
 interface PasswordStrengthResult {
   password: string;
@@ -141,15 +136,11 @@ interface PasswordStrengthResult {
 
     hasCommonPatterns: boolean
 
-=======
-    hasCommonPatterns: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     entropy: number
   }
   suggestions: string[]
 }
 export default async function handler(
-<<<<<<< HEAD
 
   req: NextApiRequest
 
@@ -172,22 +163,6 @@ export default async function handler(
     const hasLowercase = /[a-z]/.test(password);
     const hasNumbers = /\d/.test(password);
     const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
-=======
-  req: NextApiRequest;
-  res: NextApiResponse<PasswordStrengthResult | { error: string }>
-) {
-  if (req.method !== 'POST') {
-return res.status(405).json({ error: 'Method not allowed' });
-  }
-  try {
-    const { password } = req.body;
-    if (!password || typeof password !== 'string') {
-      return res.status(400).json({ error: 'Password is required' });
-    }
-    // Password analysis
-const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     // Check for common patterns
     const commonPatterns = [
       '123'
@@ -277,13 +252,6 @@ suggestions.push(
   } catch (error) {
     console.error('Password strength check error:', error);
     res.status(500).json({ error: 'Internal server error' });
-<<<<<<< HEAD
   }
 }
   }
-=======
-  }
-    res.status(500).json({ error: 'Internal server error' })
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

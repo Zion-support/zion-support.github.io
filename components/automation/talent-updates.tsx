@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 }</div> </div>) import fs from 'fs';
@@ -40,12 +39,6 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
 
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 
-=======
-import fs from 'fs',
-import path from 'path';
-import { TALENT_PROFILES } from '../../data/talent';
-type TalentSummary = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>
@@ -60,7 +53,6 @@ type TalentSummary = any;
         ))}
       </div>
     </div>
-<<<<<<< HEAD
 import {TALENT_PROFILES} from '../../data / talent';
 type TalentSummary = { slug: string, summary: string },
 export async /**
@@ -95,7 +87,3 @@ function TalentUpdatesPage() {
           </div>))}
       </div>;
     </div>);
-=======
-);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -9,7 +9,6 @@ Object.defineProperty(window, "matchMedia", {
 
 import '@testing-library/jest-dom';
 
-<<<<<<< HEAD
 // Mock window && window.matchMedia
 Object && Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -41,19 +40,6 @@ Object && Object.defineProperty(window, 'matchMedia', {
   unobserve() {}
 }
 // Mock console methods to reduce noise in tests
-=======
-// Global test setup
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn(), }));
-
-// Mock IntersectionObserver
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn(), }));
-
-// Mock console methods
-global.console = {
-  ...console, warn: jest.fn(), error: jest.fn(), };
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const originalError = console && console.error;
 const originalWarn = console && console.warn;

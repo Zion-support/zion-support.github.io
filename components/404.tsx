@@ -7,7 +7,6 @@
   return (
     </div>;
     </div>
-<<<<<<< HEAD
   );export default function NotFoundPage() {
   return (
     <div className="container mx-auto px-4 py-20 text-center">
@@ -50,6 +49,3 @@ function NotFoundPage() {
       <p className="mt - 2 text - gray - 600 dark:text-gray-300">Sorry, we couldn’t find that page.</p>;
     </div>);
 }
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

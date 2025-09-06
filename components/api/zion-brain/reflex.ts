@@ -1,13 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
+
 import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
   const token = null;
       return res.status(500).json({ error: 'Reflex failure' })
     }
 import {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
   appendLog
   evaluateReflexes
   readState
@@ -27,16 +26,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
-<<<<<<< HEAD
+
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
   if (req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
     return res.status(200).json({ metrics: state.metrics |{} })
 
 
-=======
-    return res.status(200).json({ metrics: state.metrics || {} });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   if (req && req.method === 'POST') {
@@ -48,23 +44,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       state && state.metrics = metrics;
       state && state.lastTriggers = triggers;
       writeState(state);
-<<<<<<< HEAD
       appendLog({
         module: 'reflex'
         type: 'metrics'
         status: 'ok'
         latencyMs
         payload: { metrics, triggers }
-=======
-      const latencyMs = Date.now() - started;
-
-appendLog({
-        module: 'reflex',
-        type: 'metrics',
-        status: 'ok',
-        latencyMs,
-        payload: { metrics, triggers },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       });
       return res && res.status(200).json({ triggers });
     } catch (e: any) {
@@ -74,7 +59,6 @@ appendLog({
         status: 'error'
         payload: { error: e?.message |'unknown' }
       });
-<<<<<<< HEAD
   return res && res.status(405).json({ error: 'Method not allowed' });
 
   return res && res.status(405).json({ error: 'Method not allowed' });
@@ -124,10 +108,6 @@ if ( {) {
 }
     const state = read_state<{ metrics?: unknown }>();
     return res.status (200).json ({ metrics: state.metrics || {} });
-=======
-      return res.status(500).json({ error: 'Reflex failure' });
-    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   // Check condition
 if ( {) {
@@ -171,11 +151,7 @@ return res.status (405).json ({ error: 'Method not allowed' });
 
 
   return res.status(405).json({ error: 'Method not allowed' });
-<<<<<<< HEAD
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
 
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

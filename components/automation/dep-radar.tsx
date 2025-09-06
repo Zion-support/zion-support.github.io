@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   const file = path.join(process.cwd(), 'datadep-radar.json');
   let outdated: Outdated[] = [];  let generatedAt = '';
@@ -8,12 +7,6 @@
     outdated = json.outdated |[];
     generatedAt = json.generatedAt |''
 
-=======
-import fs from 'fs';
-import path from 'path';
-type Outdated = any;
-    generatedAt = json.generatedAt || ''
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch {}
   return { props: { outdated, generatedAt } }
 }
@@ -62,8 +55,7 @@ function DepRadarPage() {
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
       {outdated.length === 0 ? (
-<<<<<<< HEAD
-=======
+
         <div className="text-sm text-gray-600">All dependencies up to date.</div>
       ) : (
         <div className="overflow-auto border rounded">
@@ -92,4 +84,3 @@ function DepRadarPage() {
     </div>
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

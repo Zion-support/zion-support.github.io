@@ -1,26 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const stockStatus =;
-    product && product.stock === undefined;
-      : 'In stock';
-
-  const stockVariant =;
-    product && product.stock === undefined;
-  const productTitle = product && product.title;
-
-  const imageUrl = Array && Array.isArray(product && product.images) && product && product.images.length > 0 ? product && product.images[0] : null;
-  const imageAltText = productTitle;
-
-  const isMobile = useMediaQuery('(max-width: 768px)'),;
-  const isTablet = useMediaQuery('(max-width: 1200px)'),;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
 
   );
 }
-<<<<<<< HEAD
     product.stock === undefined;
       ? 'success';
       : product.stock <= 0;
@@ -200,28 +181,7 @@ const stockStatus =;
   );
 }
 ;
-=======
 
-  );
-}
-
-  const stock_status =;
-    product.stock === undefined;
-      : 'In stock';
-  const stock_variant =;
-    product.stock === undefined;
-  const product_title = product.title;
-  const image_url = Array.is_array (product.images) && product.images.length > 0 ? product.images[0] : null;
-  const imageAltText = product_title;
-  const is_mobile = useMediaQuery ('(max - width: 768px)'),
-  const is_tablet = useMediaQuery ('(max - width: 1200px)'),
-  const image_sizes = is_mobile ? '100vw' : is_tablet ? '50vw' : '33vw');
-}
-  );
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import Link from 'next/link';
 import { Heart } from 'lucide-react'
 import { useWishlist  } from '@/hooks/useWishlist';
@@ -292,4 +252,3 @@ onBuy () > {'";
 }
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

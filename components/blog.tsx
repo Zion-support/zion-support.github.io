@@ -43,7 +43,6 @@ export default function BlogPage() {
           kleber@ziontechgroup.com.
         </p>
       </div>
-<<<<<<< HEAD
   );export default function BlogPage() {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
@@ -96,7 +95,3 @@ function BlogPage() {
 
 
 
-=======
-    </UltraFuturisticBackground>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

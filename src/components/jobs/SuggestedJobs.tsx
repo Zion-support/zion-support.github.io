@@ -1,81 +1,6 @@
-<<<<<<< HEAD
 interface SuggestedJobsProps {
   talent_id?: string;
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-
-export /**
- * SuggestedJobs - Function description
- */
-function SuggestedJobs() {
-  const { user } = use_auth ();
-  const currentTalentId = talent_id || user?.id;
-  const {
-    is_loading,
-    updateJobMatchStatus,
-    categorized_matches: {
-      new_matches,
-      viewed_matches,
-      applied_matches;
-    }
-  } = useJobSuggestions (currentTalentId);
-  const handle_apply = (match_id: string, job_id: string) =>: any {
-    updateJobMatchStatus (match_id, 'applied');    // In a real app, this might redirect to application form or open a modal;
-
-  }
-  const handle_decline = (match_id: string) =>: any {
-    updateJobMatchStatus (match_id, 'declined');
-  }
-
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
-  const { user } = useAuth()
-  const currentTalentId = talentId || user?.id
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
-
-
-  const { 
-    isLoading,
-    updateJobMatchStatus, 
-    categorizedMatches: { 
-
-
-
-
-
-  if (isLoading) {
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-
-
-    updateJobMatchStatus, ;
-import { useAuth } from "@/hooks/useAuth";
-import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
-import { useJobSuggestions } from "@/hooks/useJobSuggestions";
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
-<<<<<<< HEAD
-=======
-    updateJobMatchStatus
-import { useAuth } from "@/hooks/useAuth"
-import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge"
-import { useJobSuggestions } from "@/hooks/useJobSuggestions"
-import { JobMatchesCard } from "./JobMatchesCard"
-import { NoJobsCard } from "./NoJobsCard"
-interface SuggestedJobsProps {
-  talentId?: string
-}
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-  const { user } = useAuth();
-  const currentTalentId = null;
-  if (isLoading) {
-    return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
@@ -165,18 +90,8 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
       
 ;
-=======
-
-
-;
-
-      
-;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
@@ -216,18 +131,8 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
       
 ;
-=======
-
-
-;
-
-      
-;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
@@ -240,8 +145,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
 
                 key = {match.id,}
-<<<<<<< HEAD
-=======
+
 
       {/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (;
@@ -254,7 +158,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
             {appliedMatches && appliedMatches.map(match => (;
               <JobMatchesCard
                 key = {match && match.id,}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
@@ -268,7 +172,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
 
     </div>;
   );
@@ -395,11 +298,8 @@ if ( {) {
 }</div>);
 }'"}
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
     </div>
   );
 
@@ -455,4 +355,3 @@ if (isLoading) {;
 }</div> </div>) ;
 }</div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

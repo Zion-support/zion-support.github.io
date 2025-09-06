@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * Syntax Error Fixer;
@@ -8,24 +7,13 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+
+
+
   }
 
   log(message) {
@@ -50,7 +38,7 @@ const path = require('path')
       return false;
     } catch (error) {
       this.errors.push(`${filePath}: ${error.message}`);
-=======
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -58,7 +46,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🔧 Syntax Error Fixer');
-console.log('=====================');
+console.log('');
 
 class SyntaxErrorFixer {
   constructor() {
@@ -102,12 +90,11 @@ class SyntaxErrorFixer {
         }
       }
       
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+
       return false;
     }
   }
 
-<<<<<<< HEAD
   fixCommonErrors(content) {
     // Fix unterminated strings
     content = content.replace(/'([^']*?)(?=\n|$)/g, (match, str) => {
@@ -128,16 +115,11 @@ class SyntaxErrorFixer {
     content = content.replace(/([^;}])\n/g, '$1;\n');
     
     // Fix merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+    content = content.replace(/[\s\S]*?[\s\S]*?
+
+
+
+
     
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
@@ -221,172 +203,4 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxErrorFixer;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-  log(message, level = 'INFO')
-    this.log(' Starting syntax error fixing...')
-      this.log('Running ESLint auto-fix...')
-      execSync('npm run "lint": fix', { "stdio"})
-      execSync('npm run type-check', { "stdio"})
-      execSync('npm run format', { "stdio"})
-      this.log(` Syntax fixing "failed"`)
-      this.log(`� Syntax error fixing "failed"`)
-=======
-  async fixESLintErrors() {
-    this.log('🔍 Running ESLint with auto-fix...');
-    
-    try {
-      const result = execSync('npx eslint . --fix --ext .js,.jsx,.ts,.tsx', {
-        encoding: 'utf8',
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      this.log('✅ ESLint auto-fix completed', 'success');
-      this.fixes.push({
-        type: 'eslint',
-        message: 'Auto-fix applied',
-        timestamp: new Date().toISOString()
-      });
-      return true;
-    } catch (error) {
-      this.log('⚠️ ESLint found issues that could not be auto-fixed', 'warning');
-      const output = error.stdout || error.stderr || '';
-      this.fixes.push({
-        type: 'eslint',
-        message: 'Issues found that require manual review',
-        output: output,
-        timestamp: new Date().toISOString()
-      });
-      return false;
-    }
-  }
 
-  async fixImportIssues() {
-    this.log('🔍 Checking for import issues...');
-    
-    const srcDir = path.join(process.cwd(), 'src');
-    if (!fs.existsSync(srcDir)) {
-      this.log('⚠️ No src directory found', 'warning');
-      return false;
-    }
-
-    let importFixes = 0;
-    
-    const walkDir = (dir) => {
-      const files = fs.readdirSync(dir);
-      
-      for (const file of files) {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory()) {
-          walkDir(filePath);
-        } else if (file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.js') || file.endsWith('.jsx')) {
-          try {
-            let content = fs.readFileSync(filePath, 'utf8');
-            let modified = false;
-            
-            // Fix common import issues
-            if (content.includes('import React from "react"') && !content.includes('import * as React')) {
-              content = content.replace('import React from "react"', 'import * as React from "react"');
-              modified = true;
-            }
-            
-            // Fix missing file extensions in imports
-            const importRegex = /import\s+.*\s+from\s+['"]([^'"]+)['"]/g;
-            let match;
-            while ((match = importRegex.exec(content)) !== null) {
-              const importPath = match[1];
-              if (!importPath.startsWith('.') && !importPath.startsWith('/') && !importPath.includes('.')) {
-                // This might be a missing extension, but we'll be conservative
-                continue;
-              }
-            }
-            
-            if (modified) {
-              fs.writeFileSync(filePath, content);
-              importFixes++;
-            }
-          } catch (error) {
-            this.log(`Error processing ${filePath}: ${error.message}`, 'error');
-          }
-        }
-      }
-    };
-    
-    walkDir(srcDir);
-    
-    if (importFixes > 0) {
-      this.log(`✅ Fixed ${importFixes} import issues`, 'success');
-      this.fixes.push({
-        type: 'imports',
-        count: importFixes,
-        timestamp: new Date().toISOString()
-      });
-    } else {
-      this.log('✅ No import issues found', 'success');
-    }
-    
-    return true;
-  }
-
-  async generateReport() {
-    const duration = Date.now() - this.startTime;
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      fixes: this.fixes,
-      errors: this.errors,
-      summary: {
-        totalFixes: this.fixes.length,
-        successfulFixes: this.fixes.filter(f => f.type !== 'error').length,
-        errors: this.errors.length
-      }
-    };
-    
-    const reportPath = path.join(process.cwd(), 'syntax-error-fixer-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📄 Report saved to: ${reportPath}`);
-    return report;
-  }
-
-  async run() {
-    this.log('🚀 Starting syntax error fixing process...');
-    
-    try {
-      await this.fixESLintErrors();
-      await this.fixTypeScriptErrors();
-      await this.fixImportIssues();
-      
-      const report = await this.generateReport();
-      
-      this.log('🎉 Syntax error fixing completed!');
-      this.log(`📊 Summary: ${report.summary.successfulFixes} fixes applied, ${report.summary.errors} errors`);
-      
-      return report;
-    } catch (error) {
-      this.log(`❌ Syntax fixing failed: ${error.message}`, 'error');
-      this.errors.push({
-        message: error.message,
-        stack: error.stack,
-        timestamp: new Date().toISOString()
-      });
-      
-      await this.generateReport();
-      throw error;
-    }
-  }
-}
-
-// Run the fixer
-if (require.main === module) {
-  const fixer = new SyntaxErrorFixer();
-  fixer.run().catch(console.error);
-}
-
-module.exports = SyntaxErrorFixer;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd

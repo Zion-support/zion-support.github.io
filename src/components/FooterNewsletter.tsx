@@ -1,39 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
 {/* Honeypot field */}
       <input
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
+
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
-=======
+
 import React, { useState } from 'react';
 // import { Input } from '@/components/ui/input';
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
 import { Button } from '@/components/ui/button';
 // import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 
 export function FooterNewsletter(): React.ReactElement {
-<<<<<<< HEAD
 
   const [email, setEmail] = useState('')
   const [honeypot, setHoneypot] = useState('')
@@ -100,29 +85,6 @@ export function FooterNewsletter(): React.ReactElement {
       >
       <label htmlFor='newsletter-email' className='sr-only'>
 
-=======
-import React, { useState, useRef } from 'react';
-import { Input  } from '@/components/ui/input';
-import { Button  } from '@/components/ui/button';
-import { useToast  } from '@/hooks/use-toast';
-import { Loader2 } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function FooterNewsletter(): React.ReactElement {
-  const [email, setEmail] = useState('');
-  const [honeypot, setHoneypot] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [emailError, setEmailError] = useState('');
-  const { toast } = useToast();
-  const EMAIL_REGEX = null;
-  return (
-    <form
-      id="footer-newsletter-form"
-      aria-label="Newsletter sign-up"
-      onSubmit={handleSubmit}
-      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
-    >
-      <label htmlFor="newsletter-email" className="sr-only">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         Email address for newsletter subscription
       </label>
       <Input
@@ -150,11 +112,11 @@ export function FooterNewsletter(): React.ReactElement {
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
 
   const lastSubmit = useRef(0),
-=======
+
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   // const { toast } = useToast();
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -207,8 +169,6 @@ export function FooterNewsletter(): React.ReactElement {
         )}
       </Button>
     </form>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
 }
@@ -216,20 +176,11 @@ export function FooterNewsletter(): React.ReactElement {
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
+
+
+
+
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -241,27 +192,14 @@ export function FooterNewsletter(): React.ReactElement {
       >;
         {isSubmitting ? (;
           <>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
-=======
-<<<<<<< HEAD
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
+
             <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
+
+
+
             Subscribing...;
           </>;
         ) : (;
@@ -373,20 +311,9 @@ export function FooterNewsletter():React.ReactElement {;
           <>;
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
+
+
             Subscribing...;
           </>;
         ) : (;
@@ -394,37 +321,15 @@ export function FooterNewsletter():React.ReactElement {;
         )}
       </Button>;
     </form>;
-<<<<<<< HEAD
   );
 } ;
-=======
-<<<<<<< HEAD
+
+
   );
 } ;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  );
-} ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
+
+
 } ;
 
 import React, { useState, useRef } from 'react';
@@ -549,27 +454,14 @@ if ( {) {
     </form>);
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
+
 }
-=======
-<<<<<<< HEAD
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
+
 
 
 };
@@ -583,29 +475,16 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 } ;
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
+
+
+
+
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+
+
   );
 }
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+

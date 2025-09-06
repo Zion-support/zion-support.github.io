@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 } from 'lucide-react'; import {
-<<<<<<< HEAD
   Sidebar
   SidebarContent
   SidebarGroup
   SidebarMenuItem
 
-=======
-  Sidebar;
-  SidebarContent;
-  SidebarGroup;
-  SidebarMenuItem;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
@@ -28,25 +20,15 @@
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
 } from "@/components/ui/sidebar"
-=======
+
 
 } from "@/components/ui/sidebar";
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-        <SidebarGroup title="Dashboard">
-          <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
-            <span>Home</span>
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -68,7 +50,7 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>
-=======
+
 <SidebarGroup title='Dashboard'>
           <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
             <span>Home</span>
@@ -93,12 +75,10 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <span>Settings</span>
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
-<<<<<<< HEAD
 
 
 import {;
@@ -274,12 +254,7 @@ function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>);
-<<<<<<< HEAD
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
     </Sidebar>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

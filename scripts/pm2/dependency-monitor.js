@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-#!/usr/bin/env node;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -48,13 +39,8 @@ class DependencyMonitor {; constructor() {; this.projectRoot = process.cwd(); th
 } catch (error) {this.log(`❌ Error running dependency monitor: ${error.message}`); process.exit(1)}}}
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
-<<<<<<< HEAD
 monitor.run().catch(error = > {process.exit(1)});
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
@@ -1326,7 +1312,6 @@ monitor.run().catch(error => {,;
 }),;
 
 
-<<<<<<< HEAD
 class DependencyMonitor {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -1688,16 +1673,9 @@ monitor.run ().catch (error = > { process.exit (1)});
 
 monitor.run().catch(error = > {; process.exit(1)});
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 monitor.run().catch(error = > {; process.exit(1)});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
+
+

@@ -51,14 +51,14 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>> ')) {
+    if (!content.includes('') && !content.includes('') && !content.includes('
       return false;
     }
     
     console.log(`📝 Fixing merge conflicts in: ${filePath}`);
     
-    // Strategy: Keep the newer version (after =======) for most cases
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [a-f0-9]+/g, (match, headContent, newContent) => {
+    // Strategy: Keep the newer version (after ) for most cases
+    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n
       // For version conflicts, prefer the newer version
       if (headContent.includes('"') && newContent.includes('"')) {
         return newContent.trim();
@@ -67,8 +67,8 @@ function resolveMergeConflicts(filePath) {
     });
     
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/[\s\S]*?
     
     fs.writeFileSync(filePath, content);
     return true;
@@ -99,7 +99,7 @@ function findConflictedFiles(dir) {
           // Check for merge conflict markers
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
+            if (content.includes('') || content.includes('') || content.includes('
               conflictedFiles.push(fullPath);
             }
           } catch (err) {

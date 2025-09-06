@@ -1,32 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-import { ServiceVariant } from '../types / service - variants';
 
-export interface EmergingTech2026Service {
-
-  {
-
-=======
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   contactInfo: {
-<<<<<<< HEAD
       
     mobile: string, email: string,
     address: string,
@@ -37,10 +11,7 @@ export interface EmergingTech2026Service {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 }
       'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.'
     launchDate: '2026-04-20'
@@ -109,44 +80,10 @@ export interface EmergingTech2026Service {;
   rating: number,;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
 
-export const emergingTech2026Services: EmergingTech2026Service[] = [
-  // Neuromorphic Computing Platform
-  {
-
-    id: 'neuromorphic-computing-platform-2026', name: 'Neuromorphic Computing Platform 2026',
-    tagline: 'Brain-inspired computing for next-generation AI and robotics',
-    price: '$2,499',
-    period: '/month', description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural architecture for ultra-efficient AI processing and autonomous robotics.',
-    features: [
-      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesAutonomous decision makingAdaptive behavior patternsMulti-modal sensory processingContinuous learning algorithmsEnergy-efficient computing';
-      'Real-time pattern recognitionAutonomous robotics control'
-    ];
-    popular: true, icon: '🧠',
-    color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/neuromorphic-computing-platform-2026',
-    marketPosition: 'Competitive with Intel Loihi ($500-2000), IBM TrueNorth ($1000-5000), and BrainChip ($200-1000). Our advantage: Advanced neural architecture, real-time learning, and autonomous capabilities.',
-    targetAudience: 'AI research institutions, Robotics companies, Autonomous vehicle manufacturers, Defense contractors, Healthcare technology companies, Research laboratories',
-    trialDays: 14, setupTime: '16 hours',
-    category: 'Emerging Technology & AI', realService: true,
-    technology: ['Neuromorphic ComputingSpiking Neural NetworksReactNode.jsPostgreSQLRedisAWSCustom Hardware'], integrations: ['ROS (Robot Operating System)TensorFlowPyTorchOpenCVGazebo SimulatorUnity3DUnreal Engine'],
-    useCases: ['Autonomous roboticsEdge AI processingReal-time pattern recognitionAutonomous vehiclesSmart sensorsCognitive computing'], roi: 'Average customer sees 600% ROI within 18 months through improved AI performance and energy efficiency.',
-    competitors: ['Intel LoihiIBM TrueNorthBrainChipQualcomm ZerothSpiNNaker'], marketSize: '$8.7B market',
-    growthRate: '400% annual growth', variant: 'ai-futuristic',
-    contactInfo: {
-      
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -155,16 +92,9 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     customers: 180;
     rating: 4.8,
     reviews: 120;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026Service {;
   id: string,;
@@ -561,22 +491,16 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     customers: 180,;
     rating: 4.8;
     reviews: 120;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
-=======
+
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
+
     mobile: string;
     email: string;
     address: string;
@@ -1226,4 +1150,4 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     reviews: 120
   }
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
