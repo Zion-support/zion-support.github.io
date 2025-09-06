@@ -1,35 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const metadata = { title: 'IT Services | Zion Tech Group' } export default /**
- * ITServicesPage - Function description
- */
-function ITServicesPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>IT Services</h1> <p style={{margin_top: 8, color: '#374151'}}>Cloud, DevOps, SRE and security services engineered for uptime and efficiency.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Cloud & Infra" details={["AWS / GCP / Azure", "Kubernetes", "Serverless", "IaC (Terraform)"]} /> <Item title="DevOps & SRE" details={["CI / CD", "Observability", "Autoscaling", "Chaos testing"]} /> <Item title="Security" details={["Hardening", "Zero Trust", "Vuln mgmt", "Compliance"]} /> </div> <Pricing /> </section> )} /**
- * Item - Function description
- */
-function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
- * Pricing - Function description
- */
-function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="Assessment" price="$4k–$10k" features={["2 weeks", "Cloud review", "Security audit", "Roadmap"]} /> <Plan name="Implementation" price="$15k–$50k" features={["4–8 weeks", "Infra as code", "CI / CD", "Monitoring"]} /> <Plan name="Managed" price="$5k+/mo" features={["24 / 7 on - call", "SLO mgmt", "Cost optimization", "Reports"]} /> </div> )} /**
- * Plan - Function description
- */
-function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
-=======
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-export const metadata: Metadata = {
-=======
-<<<<<<< HEAD
-export const metadata = { 
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
-  title: 'IT Services | Zion Tech Group',
-  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.',
-  keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE'
-};
-=======
 import React from 'react';
-import Link from 'next/link';
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+
+export const metadata = {
+  title: 'IT Services & Solutions | Zion Tech Group',
+  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions. 24/7 support with 99.9% uptime guarantee.',
+  keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure management, enterprise IT, cloud consulting, SRE'
+};
 
 interface ITServiceProps {
   title: string;
@@ -43,7 +18,7 @@ interface ITServiceProps {
 
 function ITService({ title, description, price, features, benefits, icon, href }: ITServiceProps) {
   return (
-    <Link
+    <a
       href={href}
       className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-blue-300"
     >
@@ -55,56 +30,6 @@ function ITService({ title, description, price, features, benefits, icon, href }
         </div>
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
-<<<<<<< HEAD
-      <ul className="text-gray-600 space-y-2">
-        {solutions.map((solution) => (
-          <li key={solution} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {solution}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function ITBenefitCard({ title, description, icon }: { 
-  title: string; 
-  description: string; 
-  icon: string; 
-}) {
-  return (
-    <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function Pricing() {
-  return (
-    <section className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">IT Service Pricing</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Assessment" 
-          price="$4k–$10k" 
-          features={["2 weeks", "Cloud review", "Security audit", "Roadmap", "Recommendations"]} 
-          popular={false}
-        />
-        <Plan 
-          name="Implementation" 
-          price="$15k–$50k" 
-          features={["4–8 weeks", "Infra as code", "CI/CD", "Monitoring", "Security hardening"]} 
-          popular={true}
-        />
-        <Plan 
-          name="Managed Services" 
-          price="$5k+/mo" 
-          features={["24/7 on-call", "SLO mgmt", "Cost optimization", "Reports", "Proactive maintenance"]} 
-          popular={false}
-        />
-=======
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
         <ul className="space-y-1">
@@ -125,9 +50,8 @@ function Pricing() {
             </span>
           ))}
         </div>
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
       </div>
-    </Link>
+    </a>
   );
 }
 
@@ -170,7 +94,7 @@ function PricingTier({ name, price, period, description, features, popular = fal
         ))}
       </ul>
       <a
-        href="mailto:kleber@ziontechgroup.com?subject=IT Services Quote Request - {name}"
+        href="mailto:kleber@ziontechgroup.com?subject=IT Services - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-blue-600 text-white hover:bg-blue-700'
@@ -182,15 +106,8 @@ function PricingTier({ name, price, period, description, features, popular = fal
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/fix-website-loading-errors-final
-=======
 
-<<<<<<< HEAD
-function CTASection() {
-=======
 export default function ITServicesPage() {
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -199,7 +116,7 @@ export default function ITServicesPage() {
           IT Services & Solutions
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Complete IT infrastructure, cloud solutions, and digital transformation services to modernize your business operations.
+          Complete IT infrastructure, cloud solutions, and digital transformation services to modernize your business operations. 24/7 support with 99.9% uptime guarantee.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -227,7 +144,7 @@ export default function ITServicesPage() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ITService
-            title="Cloud Migration"
+            title="Cloud Migration & Optimization"
             description="Seamless migration to AWS, Azure, or Google Cloud with zero downtime and cost optimization"
             price="Starting at $5,000"
             features={[
@@ -242,7 +159,7 @@ export default function ITServicesPage() {
             href="/services/cloud-migration"
           />
           <ITService
-            title="DevOps & CI/CD"
+            title="DevOps & CI/CD Implementation"
             description="Automated deployment pipelines, infrastructure as code, and continuous integration"
             price="Starting at $3,000"
             features={[
@@ -272,7 +189,7 @@ export default function ITServicesPage() {
             href="/services/cybersecurity-suite"
           />
           <ITService
-            title="Mobile Development"
+            title="Mobile App Development"
             description="Native and cross-platform mobile app development for iOS and Android"
             price="Starting at $5,000"
             features={[
@@ -287,7 +204,7 @@ export default function ITServicesPage() {
             href="/services/mobile-development"
           />
           <ITService
-            title="API Development"
+            title="API Development & Integration"
             description="RESTful APIs, GraphQL, and microservices architecture for modern applications"
             price="Starting at $2,000"
             features={[
@@ -315,6 +232,51 @@ export default function ITServicesPage() {
             benefits={["Better Performance", "Data Security", "Scalability", "Reliability"]}
             icon="🗄️"
             href="/services/data-analytics"
+          />
+          <ITService
+            title="Network Infrastructure"
+            description="Network design, implementation, and management for optimal connectivity and security"
+            price="Starting at $3,500"
+            features={[
+              "Network design & planning",
+              "Firewall configuration",
+              "VPN setup",
+              "Network monitoring",
+              "Security hardening"
+            ]}
+            benefits={["Better Connectivity", "Enhanced Security", "Improved Performance", "Reliability"]}
+            icon="🌐"
+            href="/services/network-infrastructure"
+          />
+          <ITService
+            title="IT Support & Helpdesk"
+            description="24/7 technical support and helpdesk services for your business operations"
+            price="Starting at $1,200"
+            features={[
+              "24/7 technical support",
+              "Remote assistance",
+              "Issue tracking & resolution",
+              "User training",
+              "Knowledge base management"
+            ]}
+            benefits={["24/7 Support", "Quick Resolution", "User Satisfaction", "Reduced Downtime"]}
+            icon="🎧"
+            href="/services/helpdesk-platform"
+          />
+          <ITService
+            title="Disaster Recovery & Backup"
+            description="Comprehensive backup solutions and disaster recovery planning to protect your data"
+            price="Starting at $2,500"
+            features={[
+              "Backup strategy design",
+              "Automated backup systems",
+              "Disaster recovery planning",
+              "Data replication",
+              "Recovery testing"
+            ]}
+            benefits={["Data Protection", "Business Continuity", "Risk Mitigation", "Peace of Mind"]}
+            icon="💾"
+            href="/services/disaster-recovery"
           />
         </div>
       </section>
@@ -351,8 +313,50 @@ export default function ITServicesPage() {
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* Process */}
       <section className="py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Process</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We follow a systematic approach to ensure your IT infrastructure is robust, secure, and scalable.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            {
+              step: "01",
+              title: "Assessment & Planning",
+              description: "We analyze your current IT infrastructure and create a comprehensive improvement plan."
+            },
+            {
+              step: "02",
+              title: "Design & Architecture",
+              description: "Our experts design a scalable and secure IT architecture tailored to your needs."
+            },
+            {
+              step: "03",
+              title: "Implementation",
+              description: "We implement the solution with minimal disruption to your business operations."
+            },
+            {
+              step: "04",
+              title: "Monitoring & Support",
+              description: "Ongoing monitoring, maintenance, and support to ensure optimal performance."
+            }
+          ].map((phase, index) => (
+            <div key={index} className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                {phase.step}
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{phase.title}</h3>
+              <p className="text-gray-600">{phase.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">IT Services Pricing</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -408,43 +412,40 @@ export default function ITServicesPage() {
         </div>
       </section>
 
-      {/* Process */}
-      <section className="py-12 bg-gray-50 rounded-lg">
+      {/* Success Stories */}
+      <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Process</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We follow a systematic approach to ensure your IT infrastructure is robust, secure, and scalable.
+            See how we've helped businesses transform their IT infrastructure and operations.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              step: "01",
-              title: "Assessment & Planning",
-              description: "We analyze your current IT infrastructure and create a comprehensive improvement plan."
+              company: "E-commerce Platform",
+              industry: "Retail",
+              result: "99.9% uptime achieved",
+              description: "Migrated to AWS cloud infrastructure, achieving 99.9% uptime and reducing operational costs by 40% while improving performance."
             },
             {
-              step: "02",
-              title: "Design & Architecture",
-              description: "Our experts design a scalable and secure IT architecture tailored to your needs."
+              company: "SaaS Startup",
+              industry: "Technology",
+              result: "50% faster deployments",
+              description: "Implemented DevOps practices and CI/CD pipelines, reducing deployment time from 4 hours to 2 hours and eliminating deployment errors."
             },
             {
-              step: "03",
-              title: "Implementation",
-              description: "We implement the solution with minimal disruption to your business operations."
-            },
-            {
-              step: "04",
-              title: "Monitoring & Support",
-              description: "Ongoing monitoring, maintenance, and support to ensure optimal performance."
+              company: "Financial Services",
+              industry: "Finance",
+              result: "Zero security incidents",
+              description: "Enhanced cybersecurity posture with comprehensive security suite, achieving zero security incidents and full compliance with financial regulations."
             }
-          ].map((phase, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                {phase.step}
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">{phase.title}</h3>
-              <p className="text-gray-600">{phase.description}</p>
+          ].map((story, index) => (
+            <div key={index} className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+              <div className="text-sm text-blue-600 font-semibold mb-2">{story.industry}</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{story.company}</h3>
+              <p className="text-gray-600 mb-4">{story.description}</p>
+              <div className="text-2xl font-bold text-green-600">{story.result}</div>
             </div>
           ))}
         </div>
@@ -477,24 +478,4 @@ export default function ITServicesPage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-export const metadata = { title: 'IT Services | Zion Tech Group' } export default /**
- * ITServicesPage - Function description
- */
-function ITServicesPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>IT Services</h1> <p style={{margin_top: 8, color: '#374151'}}>Cloud, DevOps, SRE and security services engineered for uptime and efficiency.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Cloud & Infra" details={["AWS / GCP / Azure", "Kubernetes", "Serverless", "IaC (Terraform)"]} /> <Item title="DevOps & SRE" details={["CI / CD", "Observability", "Autoscaling", "Chaos testing"]} /> <Item title="Security" details={["Hardening", "Zero Trust", "Vuln mgmt", "Compliance"]} /> </div> <Pricing /> </section> )} /**
- * Item - Function description
- */
-function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
- * Pricing - Function description
- */
-function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="Assessment" price="$4k–$10k" features={["2 weeks", "Cloud review", "Security audit", "Roadmap"]} /> <Plan name="Implementation" price="$15k–$50k" features={["4–8 weeks", "Infra as code", "CI / CD", "Monitoring"]} /> <Plan name="Managed" price="$5k+/mo" features={["24 / 7 on - call", "SLO mgmt", "Cost optimization", "Reports"]} /> </div> )} /**
- * Plan - Function description
- */
-function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
->>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
-=======
-}
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
