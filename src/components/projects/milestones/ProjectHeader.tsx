@@ -9,7 +9,7 @@ interface ProjectHeaderProps {
 }
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {
-  const router = useRouter(), // Changed from useNavigate to useRouter
+  const router = useRouter(); // Changed from useNavigate to useRouter
   
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">

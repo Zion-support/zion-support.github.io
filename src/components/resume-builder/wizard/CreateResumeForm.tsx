@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Loader2 } from 'lucide-react'
 import { CreateResumeFormProps } from "./types";
 export const CreateResumeForm = ({ 
-  onCreateResume;
+  onCreateResume,
   onCancel;
   isLoading 
 }: CreateResumeFormProps) => {

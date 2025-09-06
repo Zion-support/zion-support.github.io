@@ -34,7 +34,7 @@ export function ListingCard({
 
   return (
     <Link
-      href={`/profile/${profileId}`}
+      href = {`/profile/${profileId}`}
       tabIndex={0}
       className={cn(
 

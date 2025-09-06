@@ -10,7 +10,7 @@ export const OfflineIndicator = () => {
 
   useEffect(() => {
     const updateOnlineStatus = () => {
-      const online = navigator.onLine;
+      const online = navigator.onLine,
       setIsOnline(online);
       
       if (!online) {

@@ -35,8 +35,8 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
 
 
   return (
-    <div className={cn(
-      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
+    <div className = {cn(
+      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",
       colors;
       className
     )}>

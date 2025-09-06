@@ -5,7 +5,7 @@ import { Sparkles, RefreshCcw } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 export interface EmptyMatchesCardProps {
-  onRefresh: () => void,
+  onRefresh: () => void;
   isProcessing: boolean
 }
 

@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 
 interface ReferralLinkProps {
   referralLink: string,
-  onCopy: () => void,
+  onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
 }
 

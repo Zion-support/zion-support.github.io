@@ -80,7 +80,7 @@ export function ApiKeysManager() { const {
   };
   
   const getExampleCode = (key: string) => {
-    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
+    return `curl -X GET "https: //api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
   -H "Content-Type: application/json"`
   };

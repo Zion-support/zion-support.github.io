@@ -12,7 +12,7 @@ export function FloatingCTA() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
+      const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
 
       if (scrollPosition > threshold && !isClosed) {

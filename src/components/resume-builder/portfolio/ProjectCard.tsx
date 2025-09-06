@@ -9,7 +9,7 @@ import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
   project: PortfolioProject,
-  onEdit: (project: PortfolioProject) => void,
+  onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void
 }
 

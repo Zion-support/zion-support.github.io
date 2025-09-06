@@ -10,10 +10,10 @@ import React, { useState } from 'react'; // Import React and useState
 
 export interface TalentCardProps {
   talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
+  onViewProfile: (id: string) => void;
+  onRequestHire: (talent: TalentProfile) => void;
   isSaved: boolean,
-  onToggleSave: (id: string, isSaved: boolean) => void,
+  onToggleSave: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean
 }
 

@@ -19,9 +19,9 @@ interface IntegrationCardProps {
 
 export function IntegrationCard({
 
-  title,
-  description,
-  icon,
+  title;
+  description;
+  icon;
   status = "disconnected",
 
   href;

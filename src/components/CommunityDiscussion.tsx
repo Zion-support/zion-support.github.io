@@ -41,7 +41,7 @@ export const CommunityDiscussion: React.FC = () => {
     if (!newTitle.trim() || !newBody.trim()) return;
     setPosts([
       {
-        id: Date.now(),
+        id: Date.now();
         author: "You",
         time: "Now",
         title: newTitle,

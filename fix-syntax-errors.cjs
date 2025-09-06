@@ -6,74 +6,30 @@ const glob = require('glob');
 
 // Common syntax fixes
 const fixes = [
-  // Fix import statements - replace comma with semicolon
+  // Fix interface properties - add semicolons
   {
-    pattern: /import\s+.*?from\s+['"][^'"]+['"],\s*$/gm,
-    replacement: (match) => match.replace(/,$/, ';')
+    pattern: /(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2;$3'
   },
-  // Fix interface properties - replace comma with semicolon
+  // Fix object properties - add semicolons
   {
-    pattern: /(\s+)(\w+)(\?)?:\s*([^,;]+),\s*$/gm,
-    replacement: '$1$2$3: $4;'
+    pattern: /(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2;$3'
   },
-  // Fix function parameters - replace comma with semicolon in destructuring
+  // Fix function parameters - add commas
   {
-    pattern: /(\s+)(\w+):\s*([^,;]+),\s*$/gm,
-    replacement: '$1$2: $3;'
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
   },
-  // Fix statements ending with comma instead of semicolon
+  // Fix missing semicolons after return statements
   {
-    pattern: /([^;])\s*,\s*$/gm,
-    replacement: '$1;'
+    pattern: /return\s+([^;]+),(\s*\/\/[^\n]*)?$/gm,
+    replacement: 'return $1;$2'
   },
-  // Fix specific patterns
+  // Fix missing semicolons after variable declarations
   {
-    pattern: /setErrors\(newErrors\),\s*$/gm,
-    replacement: 'setErrors(newErrors);'
-  },
-  {
-    pattern: /return\s+Object\.keys\([^)]+\)\.length\s*===\s*0\s*$/gm,
-    replacement: (match) => match.replace(/,$/, ';')
-  },
-  {
-    pattern: /e\.preventDefault\(\),\s*$/gm,
-    replacement: 'e.preventDefault();'
-  },
-  {
-    pattern: /setIsSubmitting\(true\),\s*$/gm,
-    replacement: 'setIsSubmitting(true);'
-  },
-  {
-    pattern: /await\s+new\s+Promise\([^)]+\)\s*,\s*$/gm,
-    replacement: (match) => match.replace(/,$/, ';')
-  },
-  {
-    pattern: /setIsSubmitted\(true\),\s*$/gm,
-    replacement: 'setIsSubmitted(true);'
-  },
-  {
-    pattern: /showSuccess\([^)]+\)\s*,\s*$/gm,
-    replacement: (match) => match.replace(/,$/, ';')
-  },
-  {
-    pattern: /setFormData\(\{[^}]+\}\)\s*,\s*$/gm,
-    replacement: (match) => match.replace(/,$/, ';')
-  },
-  {
-    pattern: /setErrors\(\{\}\)\s*$/gm,
-    replacement: 'setErrors({});'
-  },
-  {
-    pattern: /console\.error\([^)]+\)\s*,\s*$/gm,
-    replacement: (match) => match.replace(/,$/, ';')
-  },
-  {
-    pattern: /showError\([^)]+\)\s*$/gm,
-    replacement: (match) => match.replace(/,$/, ';')
-  },
-  {
-    pattern: /setIsSubmitting\(false\)\s*$/gm,
-    replacement: 'setIsSubmitting(false);'
+    pattern: /(\w+)\s*=\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2;$3'
   }
 ];
 
@@ -82,20 +38,20 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    fixes.forEach(fix => {
+    // Apply fixes
+    for (const fix of fixes) {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
       }
-    });
+    }
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -103,35 +59,19 @@ function fixFile(filePath) {
   }
 }
 
-function main() {
-  const patterns = [
-    'components/**/*.tsx',
-    'components/**/*.ts',
-    'pages/**/*.tsx',
-    'pages/**/*.ts',
-    'src/**/*.tsx',
-    'src/**/*.ts',
-    'hooks/**/*.ts',
-    'lib/**/*.ts',
-    'utils/**/*.ts'
-  ];
-  
-  let totalFixed = 0;
-  
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { cwd: process.cwd() });
-    files.forEach(file => {
-      if (fixFile(file)) {
-        totalFixed++;
-      }
-    });
-  });
-  
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+// Find all TypeScript/JavaScript files
+const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', {
+  cwd: process.cwd(),
+  ignore: ['node_modules/**', 'dist/**', 'build/**', 'out/**']
+});
+
+console.log(`Found ${files.length} files to check...`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
 }
 
-if (require.main === module) {
-  main();
-}
-
-module.exports = { fixFile, fixes };
+console.log(`Fixed ${fixedCount} files`);

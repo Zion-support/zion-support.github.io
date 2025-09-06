@@ -1,9 +1,10 @@
 
-import React from 'react';
-};
-
-=======
 import React, { Suspense, ComponentType, ReactNode } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { Suspense, lazy } from 'react';
+
 
 interface LazyComponentProps {
   component: ComponentType<Record<string, unknown>>;
@@ -24,4 +25,5 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 };
 
 export default LazyComponent;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-8bf8
+
+

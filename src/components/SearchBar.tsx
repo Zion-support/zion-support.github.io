@@ -20,12 +20,12 @@ interface SearchBarProps {
    * Function to call when the search input changes
    * @param {string} val - The new value of the search input
    */
-  onChange: (val: string) => void,
+  onChange: (val: string) => void;
   /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
    */
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
   /**
    * The placeholder text for the search input
    */
@@ -37,14 +37,14 @@ interface SearchBarProps {
  */
 export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
 
-  const router = useRouter(),
-  const [ suggestions, setSuggestions ] = useState<SearchSuggestion[]>([]),
-  const [ focused, setFocused ] = useState(false),
-  const [ highlightedIndex, setHighlightedIndex ] = useState(-1),
+  const router = useRouter();
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
+  const [focused, setFocused] = useState(false);
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const listId = 'searchbar-autocomplete-list',
-  const debounced = useDebounce(value, 150),
-  const inputRef = useRef<HTMLInputElement>(null),
-  const containerRef = useRef<HTMLDivElement>(null),
+  const debounced = useDebounce(value, 150);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 
     const searchQuery = encodeURIComponent(suggestion.text);
     router.push(`/search?q=${searchQuery}`);
-    fireEvent('search', { search_term: suggestion.text }),
+    fireEvent('search', { search_term: suggestion.text });
     setFocused(false);
     setHighlightedIndex(-1);
     inputRef.current?.blur()
@@ -112,9 +112,9 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
             // Ensure the input receives focus properly
             e.target.setSelectionRange(e.target.value.length, e.target.value.length)
           }}
-          onBlur={(e) => {
+          onBlur = {(e) => {
             // Only blur if not clicking on suggestions
-            const relatedTarget = e.relatedTarget as HTMLElement;
+            const relatedTarget = e.relatedTarget as HTMLElement,
             if (!relatedTarget || !containerRef.current?.contains(relatedTarget)) {
               setFocused(false);
               setHighlightedIndex(-1)
@@ -133,9 +133,9 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 inputRef.current?.blur()
               }
               // If Enter is pressed and there's a value, navigate with query parameter
-              if (e.key === 'Enter' && value.trim()) {
-                e.preventDefault(), // Prevent form submission if SearchBar is in a form
-                fireEvent('search', { search_term: value }),
+              if (e.key = == 'Enter' && value.trim()) {
+                e.preventDefault(); // Prevent form submission if SearchBar is in a form
+                fireEvent('search', { search_term: value });
                 router.push(`/search?q=${encodeURIComponent(value)}`);
                 setFocused(false);
                 inputRef.current?.blur()
@@ -160,7 +160,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                   // This case should ideally be handled by the form's onSubmit;
                   // but if SearchBar is used standalone, this provides a fallback.
                   e.preventDefault();
-                  fireEvent('search', { search_term: value }),
+                  fireEvent('search', { search_term: value });
                   router.push(`/search?q=${encodeURIComponent(value)}`);
                   setFocused(false);
                   inputRef.current?.blur()

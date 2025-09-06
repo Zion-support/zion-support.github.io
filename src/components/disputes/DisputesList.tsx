@@ -36,7 +36,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       case "under_review":
         return "secondary";
       case "resolved":
-        return "outline", // Changed from "success" to "outline"
+        return "outline"; // Changed from "success" to "outline"
       case "closed":
         return "outline";
       default:

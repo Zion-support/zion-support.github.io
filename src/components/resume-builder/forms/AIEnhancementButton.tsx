@@ -7,7 +7,7 @@ interface AIEnhancementButtonProps {
   currentContent: string,
   enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',
   context?: string;
-  onEnhanced: (enhancedContent: string) => void,
+  onEnhanced: (enhancedContent: string) => void;
   buttonText?: string;
   className?: string
 }
@@ -17,7 +17,7 @@ export function AIEnhancementButton({
   enhancementType;
   context;
   onEnhanced;
-  buttonText = "Enhance with AI";
+  buttonText = "Enhance with AI",
   className
 
 }: AIEnhancementButtonProps) { const { enhanceContent, isEnhancing  } = useResumeEnhancer(),
@@ -32,7 +32,7 @@ export function AIEnhancementButton({
     
     setError(null);
     const enhancedContent = await enhanceContent(
-      currentContent;
+      currentContent,
       enhancementType;
       context
     );

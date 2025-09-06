@@ -10,9 +10,10 @@ import { Briefcase } from 'lucide-react'
 
 function HiringTrackerContent() {
 
-  const router = useRouter(),
+  const router = useRouter();
   const jobId = router.query.jobId as string,
-  const [ activeTab, setActiveTab ] = useState<string>("kanban");
+  const [activeTab, setActiveTab] = useState<string>("kanban");
+
 
   return (
     <>

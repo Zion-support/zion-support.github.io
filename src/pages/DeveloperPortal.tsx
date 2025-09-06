@@ -41,7 +41,7 @@ export function DeveloperPortal() { const { user  } = useAuth(),
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
-            const Icon = tab.icon;
+            const Icon = tab.icon,
             return (
               <button
                 key={tab.id}

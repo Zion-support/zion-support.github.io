@@ -12,7 +12,7 @@ import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
 export interface HireRequestFormProps {
   talent: TalentProfile,
-  onClose: () => void,
+  onClose: () => void;
   initialJobTitle?: string;
   userDetails?: {
     name?: string;

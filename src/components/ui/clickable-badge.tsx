@@ -11,7 +11,7 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
 export function ClickableBadge({
   children;
   className;
-  variant = "default";
+  variant = "default",
   onRemove;
   ...props
 }: ClickableBadgeProps) {
@@ -28,7 +28,7 @@ export function ClickableBadge({
       <span>{children}</span>
       {onRemove && (
         <button
-          type="button"
+          type = "button"
           onClick={(e) => {
             e.stopPropagation();
             onRemove()

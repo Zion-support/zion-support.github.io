@@ -20,31 +20,8 @@ export function formatCurrency(amount: number, currency = "USD"): string {
   }).format(amount);
 }
 
-export function debounce<T extends (...args: unknown[]) => unknown>(
-  func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
-  return (...parameters: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...parameters), wait);
-  };
-}
 
-export function throttle<T extends (...args: unknown[]) => unknown>(
-  func: T,
-  limit: number
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
-  return (...parameters: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...parameters);
-
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
-}
-=======
 };
->>>>>>> pr-11992
+
+=======
+>>>>>>> 30889177205cebd97139cc147ef02d82a95d183f

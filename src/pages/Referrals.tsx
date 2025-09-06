@@ -16,16 +16,18 @@ import { Share, Users } from 'lucide-react'
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
 
-export default function ReferralsPage() { const router = useRouter(), // Changed from navigate
-  const { isAuthenticated  } = useAuth(),
-  const { isLoading,
-    referralCode,
-    referrals,
-    rewards,
-    stats,
-    getReferralLink,
-    copyReferralLink,
-    shareOnSocialMedia } = useReferrals(),
+export default function ReferralsPage() {
+  const router = useRouter(); // Changed from navigate
+  const { isAuthenticated } = useAuth();
+  const {
+    isLoading;
+    referralCode;
+    referrals;
+    rewards;
+    stats;
+    getReferralLink;
+    copyReferralLink;
+    shareOnSocialMedia} = useReferrals();
 
 
   useEffect(() => {
@@ -33,7 +35,7 @@ export default function ReferralsPage() { const router = useRouter(), // Changed
       toast({
         title: "Authentication required",
         description: "Please login to access the referral program",
-        variant: "destructive"}),
+        variant: "destructive"});
       router.push("/login"), // Changed to router.push
     }
   }, [isAuthenticated, router]), // Changed navigate to router in dependencies
