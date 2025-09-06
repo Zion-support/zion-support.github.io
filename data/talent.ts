@@ -1,3 +1,4 @@
+// Stub talent data - placeholder for missing functionality
 export const TALENT_PROFILES = [
   {
     id: '1',
@@ -24,6 +25,4 @@ export const TALENT_PROFILES = [
     originalLanguage: 'en',
     translations: {},
   },
-];    translations: {}
-  }
 ];

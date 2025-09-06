@@ -7,8 +7,8 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });  const { job } = req.body as { job?: Record<string, any> };
-  if (!job) return res.status(400).json({ error: 'Missing job payload' });
+    return res.status(405).json({ error: 'Method not allowed' });  const { resume } = req.body as { resume?: Record<string, any> };
+  if (!resume) return res.status(400).json({ error: 'Missing resume payload' });
 
   const state = readState();
   const crms = state.connections.filter(
@@ -24,25 +24,14 @@ export default async function handler(
       id: `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       providerId: conn.providerId,
       level: 'info',
-      action: 'sync_contact',
+      action: 'add_email_touchpoint',
     };
-    await crm.syncContact(conn, {
-      company: job.company,
-      contact: job.contact,
+    await crm.addEmailTouchpoint(conn, {
+      subject: 'Resume viewed',
+      resumeId: resume.id,
     });
     writeState(s => s.logs.push(log));
     results.push({ providerId: conn.providerId, ok: true });
   }
-
-  // record Zapier event
-  writeState(s => {
-    s.events.push({
-      id: `${Date.now()}-job-posted`,
-      type: 'zion.job.posted',
-      timestamp: Date.now(),
-      payload: { job },
-    });
-  });
-
   res.status(200).json({ ok: true, results });
 }

@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 class PerformanceMonitor {
+  constructor() {
     this.metrics = {
       bundleSize: 0,
       loadTime: 0,
@@ -28,6 +29,7 @@ class PerformanceMonitor {
     this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
   }
 
+  generateReport() {
     const report = {
       timestamp: this.metrics.timestamp,
       bundleSize: this.metrics.bundleSize,

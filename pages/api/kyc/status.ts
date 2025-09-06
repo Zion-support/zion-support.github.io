@@ -13,6 +13,7 @@ function load(): Record<string, KycProfile> {
   } catch {
     return {};
   }
+}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET')
@@ -27,3 +28,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     requiredDocuments: getRequiredDocuments(profile.role),
     optionalDocuments: getOptionalDocuments(profile.role),
   });
+}

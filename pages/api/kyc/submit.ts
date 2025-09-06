@@ -18,6 +18,7 @@ function load(): Record<string, KycProfile> {
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
+}
 
 export default async function handler(
   req: NextApiRequest,
@@ -104,3 +105,4 @@ export default async function handler(
   save(db);
 
   res.status(200).json({ ok: true, profile, aml: amlResult });
+}

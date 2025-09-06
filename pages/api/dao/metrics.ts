@@ -1,9 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import * as fs from 'fs';
-import * as path from 'path';
+import fs from 'fs';
+import path from 'path';
 
 const configPath = path.join(process.cwd(), 'data', 'dao', 'config.json');
 const cachePath = path.join(process.cwd(), 'data', 'dao', 'metrics.json');
+
 async function fetchJson(url: string) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
