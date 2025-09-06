@@ -1,51 +1,50 @@
-
-
+import React from 'react';
 import { Link } from 'react-router-dom';
+
 const Services: React.FC = () => {
   const services = [
     {
-      title: "AI & Machine Learning",
-      description: "Transform your business with cutting-edge AI solutions including natural language processing, computer vision, and predictive analytics.",
-      features: ["Custom AI Models", "Data Analytics", "Automation", "Predictive Insights"],
+      title: "Micro SaaS Development",
+      description: "End-to-end product development with billing, auth, and analytics",
+      features: ["Foundational architecture", "Billing + subscriptions", "Growth analytics"],
+      icon: "🚀",
+      color: "from-blue-500 to-purple-600",
+      href: "/services/micro-saas"
+    },
+    {
+      title: "AI Services",
+      description: "LLM applications, RAG systems, and MLOps pipelines",
+      features: ["RAG and agents", "Evals + guardrails", "MLOps pipelines"],
       icon: "🤖",
-      color: "from-blue-500 to-purple-600"
+      color: "from-green-500 to-blue-600",
+      href: "/services/ai-services"
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable, secure, and reliable cloud solutions that grow with your business needs.",
-      features: ["AWS / Azure / GCP", "DevOps", "Microservices", "Auto-scaling"],
-      icon: "☁️",
-      color: "from-green-500 to-blue-600"
+      title: "IT Services",
+      description: "Cloud migration, DevOps, and security solutions",
+      features: ["Cloud migration", "DevOps + SRE", "Security"],
+      icon: "⚙️",
+      color: "from-purple-500 to-pink-600",
+      href: "/services/it-services"
     },
     {
-      title: "Web Development",
-      description: "Modern, responsive web applications built with the latest technologies and best practices.",
-      features: ["React / Next.js", "TypeScript", "Mobile-First", "SEO Optimized"],
-      icon: "💻",
-      color: "from-purple-500 to-pink-600"
-    },
-    {
-      title: "Mobile Applications",
-      description: "Native and cross-platform mobile apps that deliver exceptional user experiences.",
-      features: ["iOS / Android", "React Native", "Flutter", "App Store Optimization"],
-      icon: "📱",
-      color: "from-orange-500 to-red-600"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and ensure compliance.",
-      features: ["Security Audits", "Penetration Testing", "Compliance", "24/7 Monitoring"],
-      icon: "🔒",
-      color: "from-red-500 to-orange-600"
+      title: "Blockchain",
+      description: "Smart contracts, DeFi protocols, and Web3 applications",
+      features: ["Smart contracts", "DeFi protocols", "NFT platforms"],
+      icon: "⛓️",
+      color: "from-orange-500 to-red-600",
+      href: "/services/blockchain"
     },
     {
       title: "Data Analytics",
-      description: "Turn your data into actionable insights with advanced analytics and visualization tools.",
-      features: ["Business Intelligence", "Data Warehousing", "Real-time Analytics", "Custom Dashboards"],
+      description: "Business intelligence, predictive modeling, and real-time analytics",
+      features: ["BI dashboards", "Predictive analytics", "Real-time insights"],
       icon: "📊",
-      color: "from-indigo-500 to-purple-600"
+      color: "from-indigo-500 to-purple-600",
+      href: "/services/data-analytics"
     }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -56,29 +55,11 @@ const Services: React.FC = () => {
             Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
           </p>
         </div>
-=======
-const Services: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            Comprehensive technology solutions designed to transform your business 
-            and drive innovation across all sectors.
-          </p>
-        </div>
-
-
       </div>
+
       {/* Services Grid */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
@@ -102,7 +83,7 @@ const Services: React.FC = () => {
                     ))}
                   </ul>
                   <Link
-                    to="/contact"
+                    to={service.href}
                     className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
                   >
                     Learn More
@@ -115,10 +96,8 @@ const Services: React.FC = () => {
             ))}
           </div>
         </div>
-
-
-
       </div>
+
       {/* Process Section */}
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,9 +106,6 @@ const Services: React.FC = () => {
             <p className="text-xl text-gray-600">How we deliver exceptional results for your business</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-
-
-
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-600">1</span>
@@ -158,24 +134,10 @@ const Services: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>
               <p className="text-gray-600">We provide ongoing support and optimization to ensure your success.</p>
             </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎓</span>
-              </div>
-              <h3 className="text-lg font-semibold">Education</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏛️</span>
-              </div>
-              <h3 className="text-lg font-semibold">Government</h3>
-            </div>
-
-
           </div>
         </div>
       </div>
+
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -194,39 +156,11 @@ const Services: React.FC = () => {
             >
               View Pricing
             </Link>
-
-
-
           </div>
         </div>
       </div>
     </div>
-=======
-const Services: React.FC = () => {;
-  return (
-    <div className="min-h-screen bg-gray-50">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>;
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-          <div className="bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-xl font-semibold mb-4">AI Services</h3>;
-            <p className="text-gray-600">Cutting-edge AI solutions for your business.</p>;
-          </div>;
-          <div className="bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-xl font-semibold mb-4">IT Services</h3>;
-            <p className="text-gray-600">Comprehensive IT solutions and support.</p>;
-          </div>;
-          <div className="bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-xl font-semibold mb-4">Cloud Solutions</h3>;
-            <p className="text-gray-600">Scalable cloud infrastructure and services.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-
 };
-;
-export default Services;
 
+export default Services;
