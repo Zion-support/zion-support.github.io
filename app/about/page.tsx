@@ -37,7 +37,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
             <p className="text-gray-300 text-lg mb-6">
-              To be the world's most trusted technology partner, known for our
+              To be the world&apos;s most trusted technology partner, known for our
               innovation, reliability, and commitment to client success.
             </p>
             <p className="text-gray-300 text-lg">

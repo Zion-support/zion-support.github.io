@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
@@ -289,7 +288,7 @@ export default function AIMeetingAssistantPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what our clients have to say about their experience.
+            Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -461,7 +460,7 @@ function TestimonialCard({ quote, author, role, company }: {
 }) {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-      <p className="text-gray-600 mb-4 italic">"{quote}"</p>
+      <p className="text-gray-600 mb-4 italic">&ldquo;{quote}&rdquo;</p>
       <div className="border-t pt-4">
         <div className="font-semibold text-gray-900">{author}</div>
         <div className="text-sm text-gray-600">{role}</div>
