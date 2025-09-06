@@ -14,12 +14,16 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es6: true,
-    dom: true
+    es6: true
   },
   globals: {
     KeyboardEvent: 'readonly',
+<<<<<<< HEAD
     MouseEvent: 'readonly',
     Event: 'readonly'
   }
 };
+=======
+  }
+};
+>>>>>>> origin/main

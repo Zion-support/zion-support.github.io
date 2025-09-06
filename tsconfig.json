@@ -18,7 +18,11 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
+<<<<<<< HEAD
     "module": "esnext",
+=======
+    "module": "ESNext",
+>>>>>>> origin/main
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -37,7 +41,8 @@
       "@/styles/*": ["./styles/*"],
       "@/utils/*": ["./utils/*"],
       "@/types/*": ["./types/*"]
-    }
+    },
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "next-env.d.ts",

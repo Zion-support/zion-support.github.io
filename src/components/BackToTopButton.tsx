@@ -1,5 +1,6 @@
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import { useEffect, useState  } from './react';
 export /**
  * BackToTopButton - Function description
@@ -27,6 +28,14 @@ export function BackToTopButton() {;
   const [visible, setVisible] = useState(false),;
   useEffect(() => {;
     const updateVisibility = () => {;
+=======
+
+export function BackToTopButton() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const updateVisibility = () => {
+>>>>>>> origin/main
       setVisible(window.scrollY > 400);
     };
     updateVisibility();
@@ -48,4 +57,12 @@ export function BackToTopButton() {;
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
+<<<<<<< HEAD
 
+=======
+    >
+      <ArrowUp className="h-4 w-4" />
+    </button>
+  );
+}
+>>>>>>> origin/main
