@@ -1,111 +1,90 @@
 import React from 'react';
-import Card from '../components/Card';
 
-const About: React.FC = () => {
+export default function About() {
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            About Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            We are a leading technology company specializing in AI, cybersecurity, 
-            and cloud infrastructure solutions that transform businesses and drive innovation.
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We are a leading technology company specializing in AI, micro SaaS development, 
+            IT solutions, and digital transformation services.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
-            <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+            <p className="text-gray-600 mb-6">
               To empower businesses with cutting-edge technology solutions that drive growth, 
-              enhance security, and unlock new possibilities in the digital age.
+              efficiency, and innovation. We believe in the transformative power of AI and 
+              technology to solve complex business challenges.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              We believe in the transformative power of technology and are committed to 
-              delivering solutions that not only meet today's needs but anticipate tomorrow's challenges.
+            <p className="text-gray-600">
+              Our team of expert developers, data scientists, and technology consultants 
+              work together to deliver solutions that not only meet today's needs but 
+              anticipate tomorrow's challenges.
             </p>
           </div>
           <div>
-            <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              To be the world's most trusted technology partner, known for innovation, 
-              reliability, and exceptional service delivery.
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Vision</h2>
+            <p className="text-gray-600 mb-6">
+              To be the world's most trusted technology partner, known for delivering 
+              innovative solutions that transform businesses and create lasting value.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-600">
               We envision a future where technology seamlessly integrates with business 
-              operations to create unprecedented value and opportunities.
+              processes, making operations more efficient, decisions more data-driven, 
+              and outcomes more predictable.
             </p>
           </div>
         </div>
 
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-8">Why Choose Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card 
-              title="Expert Team" 
-              description="Our team consists of industry-leading experts with decades of combined experience in cutting-edge technologies." 
-            />
-            <Card 
-              title="Proven Track Record" 
-              description="We have successfully delivered hundreds of projects for clients across various industries and sectors." 
-            />
-            <Card 
-              title="24/7 Support" 
-              description="Our dedicated support team is available around the clock to ensure your systems run smoothly." 
-            />
-            <Card 
-              title="Innovation Focus" 
-              description="We stay at the forefront of technology trends to deliver the most advanced solutions." 
-            />
-            <Card 
-              title="Security First" 
-              description="Security is embedded in everything we do, ensuring your data and systems are always protected." 
-            />
-            <Card 
-              title="Scalable Solutions" 
-              description="Our solutions are designed to grow with your business, adapting to your changing needs." 
-            />
+        <div className="bg-white rounded-xl p-8 shadow-lg mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Our Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-semibold mb-2">Excellence</h3>
+              <p className="text-gray-600">We strive for the highest quality in everything we do.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🤝</div>
+              <h3 className="text-xl font-semibold mb-2">Collaboration</h3>
+              <p className="text-gray-600">We work closely with our clients as partners.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-semibold mb-2">Innovation</h3>
+              <p className="text-gray-600">We embrace new technologies and creative solutions.</p>
+            </div>
           </div>
         </div>
 
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-8">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎯</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Excellence</h3>
-              <p className="text-gray-300">We strive for excellence in everything we do</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🤝</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Collaboration</h3>
-              <p className="text-gray-300">We work closely with our clients as partners</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">💡</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Innovation</h3>
-              <p className="text-gray-300">We embrace new ideas and technologies</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🛡️</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Integrity</h3>
-              <p className="text-gray-300">We maintain the highest ethical standards</p>
-            </div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Ready to transform your business with our technology solutions?
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Email Us
+            </a>
+          </div>
+          <div className="mt-6 text-sm text-gray-500">
+            <p>364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default About;
+}

@@ -1,139 +1,73 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-const Home: React.FC = () => {
+
+export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Leading AI-powered technology solutions for modern businesses. Transform your digital future with cutting-edge innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-semibold text-lg shadow-2xl"
-              >
-                Explore Services
-              </Link>
-              <Link
-                to="/contact"
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-2000"></div>
-      </div>
-      {/* Features Section */}
-      <div className="py-20 bg-white/5 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech?</h2>
-            <p className="text-xl text-gray-300">Cutting-edge technology solutions that drive business growth</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Solutions</h3>
-              <p className="text-gray-300">Leverage artificial intelligence to automate processes, gain insights, and drive innovation across your organization.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Lightning Fast</h3>
-              <p className="text-gray-300">Optimized performance and scalability to handle your growing business needs with enterprise-grade reliability.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Secure & Reliable</h3>
-              <p className="text-gray-300">Enterprise-grade security measures and 99.9% uptime guarantee to protect your business data and operations.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Stats Section */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">500+</div>
-              <div className="text-gray-300">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">24/7</div>
-              <div className="text-gray-300">Support</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300">Team Members</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-blue-100 mb-8">Join thousands of companies already using Zion Tech to accelerate their digital transformation.</p>
-          <Link
-            to="/contact"
-            className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl inline-block"
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-6xl font-extrabold mb-4 animate-fade-in">
+            Zion Tech Group
+          </h1>
+          <p className="text-2xl text-gray-300 mb-8 animate-slide-up">
+            Leading AI & Technology Solutions for a Smarter Future
+          </p>
+          <Link 
+            to="/services" 
+            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
           >
-            Start Your Journey Today
+            Explore Our Services
           </Link>
         </div>
-=======
 
-const Home: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Welcome to Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Leading the future of technology with innovative solutions, AI services, 
-            and cutting-edge IT infrastructure.
-          </p>
-          <div className="space-x-4">
-            <button className="btn-primary">
-              Get Started
-            </button>
-            <button className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50">
-              Learn More
-            </button>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+            <div className="text-4xl mb-4">✨</div>
+            <h3 className="text-xl font-bold mb-2">AI Services</h3>
+            <p className="text-gray-300">Transform your business with cutting-edge AI solutions.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+            <div className="text-4xl mb-4">🔒</div>
+            <h3 className="text-xl font-bold mb-2">Cybersecurity</h3>
+            <p className="text-gray-300">Protect your digital assets with advanced security solutions.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+            <div className="text-4xl mb-4">☁️</div>
+            <h3 className="text-xl font-bold mb-2">Cloud Infrastructure</h3>
+            <p className="text-gray-300">Scale your operations with robust cloud solutions.</p>
           </div>
         </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-8">Why Choose Us?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-2">Innovation</h3>
+              <p className="text-gray-300">Pioneering the next generation of technology.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-2">Expertise</h3>
+              <p className="text-gray-300">Team of industry-leading professionals.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-2">Reliability</h3>
+              <p className="text-gray-300">Trusted solutions for critical operations.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-2">Scalability</h3>
+              <p className="text-gray-300">Solutions designed to grow with you.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-2">Security</h3>
+              <p className="text-gray-300">Robust protection for all your data.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-2">Support</h3>
+              <p className="text-gray-300">24/7 dedicated customer assistance.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
-export default Home;
