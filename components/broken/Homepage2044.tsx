@@ -1,11 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 </div>);
+<<<<<<< HEAD
 
  </div>);
 
+=======
+ </div>);
+</div>);
+ </div>);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 //Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
 ...revolutionary2044AIServices ], []);
@@ -74,6 +78,7 @@ top: `$ {
   scale: 0.95
 }initial= {
   {
+<<<<<<< HEAD
 
 =======
 
@@ -882,19 +887,23 @@ top: `$ {
   opacity: 1, coordinate_y: 0;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   opacity: 0, y: 20
 }animate= {
   {
   opacity: 1, y: 0
-=======
   opacity: 0, y: 20 
 
 }animate= {
   {
   opacity: 1, y: 0 
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }transition= {
   {
   duration: 0.5, delay: index * 0.1;
@@ -916,6 +925,7 @@ top: `$ {
 }
 export default Homepage2044;export default Homepage2044;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -933,3 +943,6 @@ export default Homepage2044;export default Homepage2044;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

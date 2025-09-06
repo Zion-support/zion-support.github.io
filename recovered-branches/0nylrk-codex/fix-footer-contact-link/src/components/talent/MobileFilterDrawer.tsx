@@ -12,27 +12,23 @@ import React from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Drawer} from "@/components/ui/drawer";
 import {FilterSidebar} from "@/components/talent/FilterSidebar";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
-<<<<<<< HEAD
 import { Drawer } from "@/components/ui/drawer";
 import { FilterSidebar } from "@/components/talent/FilterSidebar";
-=======
 import { Drawer } from "@/components/ui/drawer",
 import { FilterSidebar } from "@/components/talent/FilterSidebar",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface MobileFilterDrawerProps {
 
   isMobileFilterOpen: boolean
@@ -40,6 +36,7 @@ interface MobileFilterDrawerProps {
 
   filterProps: any, // We'll pass all filter-related props through this object
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -54,42 +51,48 @@ interface MobileFilterDrawerProps {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function MobileFilterDrawer({
   isMobileFilterOpen;
 
   setIsMobileFilterOpen
 
-=======
 
-<<<<<<< HEAD
 export function MobileFilterDrawer({ ;
   isMobileFilterOpen;
-=======
 export function MobileFilterDrawer({ 
   isMobileFilterOpen,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   setIsMobileFilterOpen, 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   filterProps
 }: MobileFilterDrawerProps) {
   return (
     <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-        <FilterSidebar
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        <FilterSidebar
         <FilterSidebar 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Drawer } from "@/components/ui/drawer",;
 import { FilterSidebar } from "@/components/talent/FilterSidebar",;
@@ -109,6 +112,7 @@ export function MobileFilterDrawer({;
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">;
         <FilterSidebar;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         <FilterSidebar 
@@ -122,6 +126,8 @@ export function MobileFilterDrawer({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {...filterProps}
           isMobileFilterOpen={isMobileFilterOpen}
         />

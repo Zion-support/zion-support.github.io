@@ -1,15 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Button } from '@/components/ui/button'
-<<<<<<< HEAD
-=======
 import { Filter } from 'lucide-react'
 import { SearchFilter } from './filters/SearchFilter'
 import { SortFilter } from './filters/SortFilter'
@@ -19,13 +20,14 @@ import { RegionFilter } from './filters/RegionFilter'
 import { ExperienceFilter } from './filters/ExperienceFilter'
 import { PriceFilter } from './filters/PriceFilter'
 import { FilterSidebarProps } from '@/types/filters'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Filter } from 'lucide-react'
 =======
 import React from "react",
@@ -40,11 +42,14 @@ import { RegionFilter } from "./filters/RegionFilter",
 import { ExperienceFilter } from "./filters/ExperienceFilter",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
 export function FilterSidebar({
@@ -67,6 +72,7 @@ export function FilterSidebar({
   setSortOption
   clearFilters
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -74,6 +80,10 @@ import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -94,10 +104,13 @@ export function FilterSidebar({
   clearFilters,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isMobileFilterOpen,}: FilterSidebarProps) {
 
   return (
@@ -141,16 +154,22 @@ export function FilterSidebar({
       </div>
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Filters
         </h3>
         <Button
           variant="ghost"
           size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
 export function FilterSidebar({
@@ -171,10 +190,13 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
@@ -183,6 +205,7 @@ export function FilterSidebar({
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -204,13 +227,18 @@ export function FilterSidebar({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Filters
         </h3>
         <Button 
           variant="ghost" 
           size="sm" 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           onClick={clearFilters}
 >>>>>>>           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
         >
@@ -218,11 +246,14 @@ export function FilterSidebar({
         </Button>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>>       {/* Search */}
 ursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -273,11 +304,14 @@ export function FilterSidebar({;
         </Button>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Search */}
 >>>>>>>       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -373,6 +407,7 @@ export function FilterSidebar({;
         toggleSection={() => toggleSection('price')}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         <Button
@@ -389,6 +424,8 @@ export function FilterSidebar({;
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         isMobileFilterOpen={isMobileFilterOpen}      />
       {isMobileFilterOpen && (
         <Button
@@ -444,28 +481,28 @@ ursor/fix-website-loading-errors-and-merge-6662
         isMobileFilterOpen={isMobileFilterOpen}
       />
       {isMobileFilterOpen && (
-<<<<<<< HEAD
         <Button
-=======
         <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         isMobileFilterOpen={isMobileFilterOpen}
       />;
       {isMobileFilterOpen && (;
         <Button;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
 >>>>>>>           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
         </Button>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -486,23 +523,23 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </>
   )
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </>;
   );
-<<<<<<< HEAD
 };
 }
-=======
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

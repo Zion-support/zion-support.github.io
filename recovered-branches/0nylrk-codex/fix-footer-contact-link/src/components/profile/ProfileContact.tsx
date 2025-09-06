@@ -2,13 +2,23 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileContact.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Mail, Send} from "lucide-react";
+import {useState} from "react";
+import {toast} from "@/hooks/use-toast";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Mail, Send } from "lucide-react",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -16,6 +26,8 @@ import { Mail, Send } from "lucide-react",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 interface ProfileContactProps {
@@ -46,8 +58,13 @@ const handleSendMessage = (e: React.FormEvent) => {
         }));
     }, 1000);
   }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProfileContactProps {
   email?: string,
   profileName: string,
@@ -56,13 +73,23 @@ interface ProfileContactProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {;
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState(""),
   const [subject, setSubject] = useState(""),
   const [isSending, setIsSending] = useState(false),
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -88,12 +115,15 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -203,8 +233,16 @@ function ProfileContact() {
         </div>
       </form>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+  )
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -483,5 +521,9 @@ setIsSending (true);
 =======
   );
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

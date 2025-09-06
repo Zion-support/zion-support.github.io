@@ -38,9 +38,12 @@ class ErrorBoundary extends React.Component {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -54,6 +57,7 @@ import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 export default function TalentDirectory() {;
   const navigate = useNavigate();
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Use our custom hook to manage state;
   const {;
@@ -98,6 +102,8 @@ function TalentDirectory() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -107,25 +113,17 @@ import { TalentResults } from "@/components/talent/TalentResults",
 import { useTalentDirectory } from "@/hooks/useTalentDirectory",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { X } from "lucide-react",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { TalentProfile } from "@/types/talent";
 export default function TalentDirectory() {
-=======
 import { Button } from "@/components/ui/button",
 import { TalentProfile } from "@/types/talent",
 export default function TalentDirectory() {
   const navigate = useNavigate(),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const navigate = useNavigate();
   // Use our custom hook to manage state
   const {
-<<<<<<< HEAD
     filteredTalents;
     isLoading;
     searchTerm;
@@ -171,8 +169,11 @@ export default function TalentDirectory() {
     clearFilters;
     toggleSection;
     handleToggleSave} = useTalentDirectory();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     filteredTalents,
     isLoading,
     searchTerm,
@@ -203,6 +204,7 @@ export default function TalentDirectory() {
     handleToggleSave} = useTalentDirectory(),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const handleRequestHire = (talent: TalentProfile) => {
@@ -212,17 +214,21 @@ export default function TalentDirectory() {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent)
     setIsHireModalOpen(true)
-<<<<<<< HEAD
   }
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
     navigate(`/talent/${id}`)
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const viewProfile = (id: string) => {
@@ -230,6 +236,7 @@ export default function TalentDirectory() {
     navigate(`/talent/${id}`)
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -237,6 +244,8 @@ export default function TalentDirectory() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -259,10 +268,13 @@ export default function TalentDirectory() {
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">
               <FilterSidebar
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 searchTerm={searchTerm}
                 setSearchTerm={setSearchTerm}
                 selectedSkills={selectedSkills}
@@ -282,8 +294,11 @@ export default function TalentDirectory() {
                 clearFilters={clearFilters}
               />
             </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -421,6 +436,7 @@ export default function TalentDirectory() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentDirectory.tsx
 
 
@@ -522,6 +538,8 @@ export default function TalentDirectory() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">
               <Button
@@ -533,6 +551,7 @@ export default function TalentDirectory() {;
                 Filter & Sort
               </Button>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -626,12 +645,9 @@ export default function TalentDirectory() {;
 =======
 <<<<<<< HEAD
 =======
-            
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            
             {/* Results */}
             <TalentResults
               filteredTalents={filteredTalents}
@@ -641,7 +657,6 @@ export default function TalentDirectory() {;
               savedTalents={savedTalents}
               handleToggleSave={handleToggleSave}
               isAuthenticated={isAuthenticated}
-<<<<<<< HEAD
               activeFiltersProps={{
                 selectedSkills;
                 toggleSkill;
@@ -651,8 +666,11 @@ export default function TalentDirectory() {;
                 toggleRegion;
                 priceRange;
                 setPriceRange;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               activeFiltersProps={{;
                 selectedSkills,;
                 toggleSkill,;
@@ -662,6 +680,7 @@ export default function TalentDirectory() {;
                 toggleRegion,;
                 priceRange,;
                 setPriceRange,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -742,6 +761,8 @@ export default function TalentDirectory() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 experienceRange;
                 setExperienceRange;
 
@@ -787,6 +808,7 @@ export default function TalentDirectory() {;
                 </div>
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -845,14 +867,19 @@ export default function TalentDirectory() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       </div>
     </AppLayout>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>;
         </div>;
       </div>;
@@ -1021,5 +1048,8 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

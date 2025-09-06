@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -14,6 +15,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {Job, JobStatus} from "@/types/jobs";
@@ -21,6 +25,7 @@ import {toast} from "sonner";
 import {useAuth} from "./useAuth";
 import {createJob, updateJob, getJobById} from "@/services/jobService";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -31,15 +36,20 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export const useJobs = (userId?: string, status?: JobStatus) => {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export const useJobs = (userId?: string, status?: JobStatus) => {
 export const useJobs = (userId?: string, status?: JobStatus) => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -55,6 +65,9 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const clientId = userId |user?.id;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { Job, JobStatus } from "@/types/jobs",
@@ -67,6 +80,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -99,23 +113,30 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+  
+  const clientId = userId || user?.id,
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false),
       return
     }
     try {
-<<<<<<< HEAD
       setIsLoading(true);
-=======
       setIsLoading(true),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       let query = supabase
         .from("jobs")
         .select("*")
         .eq("client_id", clientId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -178,6 +199,8 @@ if (throw fetch_error) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .order("created_at", { ascending: false });
       if (status) {
         query = query.eq("status", status)
@@ -185,8 +208,11 @@ if (throw fetch_error) {
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
       setJobs(data as Job[]);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .order("created_at", { ascending: false }),
       
       if (status) {
@@ -199,11 +225,14 @@ if (throw fetch_error) {
       
       setJobs(data as Job[]),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setError(null)
     } catch (err: any) {
       console.error("Error fetching jobs:", err),
@@ -213,6 +242,7 @@ if (throw fetch_error) {
       setIsLoading(false)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -223,12 +253,16 @@ if (throw fetch_error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
     try {
       const { error: updateError } = await supabase
@@ -236,6 +270,7 @@ if (throw fetch_error) {
         .update({ status: newStatus })
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only update their own jobs
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -267,12 +302,12 @@ if (throw fetch_error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      if (updateError) throw updateError;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      if (updateError) throw updateError;
       
       if (updateError) throw updateError,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Update local state
       setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job)),
       toast.success("Job status updated successfully"),
@@ -282,13 +317,14 @@ if (throw fetch_error) {
       toast.error("Failed to update job status"),
       return false
     }
-<<<<<<< HEAD
   }
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const deleteJob = async (jobId: string) => {
     try {
       const { error: deleteError } = await supabase
@@ -296,6 +332,7 @@ if (throw fetch_error) {
         .delete()
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only delete their own jobs
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -387,12 +424,12 @@ if (throw delete_error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      if (deleteError) throw deleteError;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      if (deleteError) throw deleteError;
         
       if (deleteError) throw deleteError,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Update local state
       setJobs(jobs.filter(job => job.id !== jobId)),
       toast.success("Job deleted successfully"),
@@ -401,7 +438,6 @@ if (throw delete_error) {
       console.error("Error deleting job:", err),
       toast.error("Failed to delete job"),
       return false
-<<<<<<< HEAD
     }
   }
   // Fetch jobs when component mounts or dependencies change
@@ -418,14 +454,16 @@ if (throw delete_error) {
     createJob;
     updateJob
     getJobById
-<<<<<<< HEAD
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
@@ -518,6 +556,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     updateJob;
     getJobById;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
@@ -541,3 +580,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

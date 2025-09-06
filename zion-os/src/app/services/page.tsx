@@ -20,12 +20,9 @@ function ServicesPage() {
 =======
 =======
 import Link from 'next/link';
-<<<<<<< HEAD
 export default function ServicesPage() {return (;
-=======
 export default function ServicesPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

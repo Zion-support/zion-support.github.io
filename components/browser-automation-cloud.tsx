@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function BrowserAutomationCloudPage() {
 
@@ -226,22 +227,17 @@ function BrowserAutomationCloudPage() {
 	];
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function BrowserAutomationCloudPage() {
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function BrowserAutomationCloudPage() {
   const features = [
     'Parallel Playwright/Puppeteer execution',
@@ -250,7 +246,6 @@ export default function BrowserAutomationCloudPage() {
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;
   ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const features = [
     'Parallel Playwright/Puppeteer execution'
@@ -357,9 +352,9 @@ export default function BrowserAutomationCloudPage() {
 				</section>
 			</main>
 		</>
-<<<<<<< HEAD
 	)
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <>;
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -436,3 +431,7 @@ export default function BrowserAutomationCloudPage() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+	),
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

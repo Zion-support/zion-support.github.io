@@ -5,9 +5,6 @@
 
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {ApplicationsTracker} from "@/components/jobs/applications";
@@ -15,14 +12,18 @@ import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Briefcase, Inbox} from "lucide-react";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 function ApplicationStatusTrackerContent() {
@@ -41,24 +42,24 @@ function ApplicationStatusTrackerContent() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
 
   const isMobile = useIsMobile();
 
-=======
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useIsMobile } from "@/hooks/use-mobile",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <SEO
@@ -88,6 +89,7 @@ function ApplicationStatusTrackerContent() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -109,6 +111,8 @@ import {useIsMobile} from "@/hooks/use-mobile";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default function ApplicationStatusTracker() {
   return (
@@ -119,10 +123,13 @@ export default function ApplicationStatusTracker() {
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -283,7 +290,10 @@ function ApplicationStatusTracker() {
 =======
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 export default function ApplicationStatusTracker() {;
@@ -336,9 +346,6 @@ Application Status Tracker | Zion AI Marketplace"description=" Track the status 
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export default function ApplicationStatusTracker() {
@@ -351,5 +358,8 @@ export default function ApplicationStatusTracker() {
   )
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

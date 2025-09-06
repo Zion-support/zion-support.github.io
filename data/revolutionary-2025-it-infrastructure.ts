@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     ];
@@ -21,6 +22,8 @@ import { ServiceVariant } from '../types / service - variants';
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -1680,13 +1683,10 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     roi: 'Enterprises see 4000%+ ROI through unhackable security and reduced breach risks.'
     competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne']
     marketSize: '$200B cybersecurity market',    features: [
-<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
-=======
       'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ];
     popular: true, icon: '🔒',
     color: 'from-red-600 to-pink-700', textColor: 'text-red-400',
@@ -2574,7 +2574,6 @@ export default revolutionary2025ITServices;
 ];
 export default revolutionary2025ITServices;
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Revolutionary2025ITService {;
   id: string,;
@@ -2996,11 +2995,10 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [;
     reviews: 52;
   }
 ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default revolutionary2025ITServices;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

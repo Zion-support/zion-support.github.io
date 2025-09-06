@@ -5,18 +5,14 @@
 
 =======
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
-<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 interface HiringAnalyticsProps {
   jobId?: string
 }
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -26,8 +22,11 @@ interface HiringAnalyticsProps {
 }
 
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{
 
@@ -82,18 +81,21 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   if (isLoading) {
     return <div>Loading analytics data...</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   if (!applications |applications.length === 0) {
-=======
-=======
-=======
 import { useState, useEffect } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',
 
@@ -356,15 +358,14 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
   }, [applications]);
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   
   if (!applications || applications.length === 0) {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return (
       <Card className="text-center py-16">
         <CardContent>
@@ -376,6 +377,7 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
       </Card>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -418,6 +420,13 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
                 data={analyticsData && analyticsData.statusDistribution}
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
+
+  
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* Status Distribution */}
@@ -783,7 +792,6 @@ if ( {) {
                 {analyticsData.funnelData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
-<<<<<<< HEAD
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -792,8 +800,11 @@ if ( {) {
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
@@ -863,5 +874,8 @@ if (applications && applications.length > 0) {
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

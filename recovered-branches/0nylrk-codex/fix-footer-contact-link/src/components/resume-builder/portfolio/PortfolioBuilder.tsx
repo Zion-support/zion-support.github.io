@@ -3,8 +3,20 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+import { useState, useEffect  } from 'react';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { FilePlus, Loader2  } from 'lucide-react';
+import { ProjectCard  } from './ProjectCard';
+import { ProjectForm  } from './ProjectForm';
+import { PortfolioProject  } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
+export function PortfolioBuilder() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -14,6 +26,7 @@ import {ProjectForm} from './ProjectForm';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -29,6 +42,8 @@ import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
   const [showAddProject, setShowAddProject] = useState(false);
 
@@ -52,6 +67,7 @@ export function PortfolioBuilder() {
       fetchProjects();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -64,6 +80,10 @@ export function PortfolioBuilder() {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -93,6 +113,7 @@ export function PortfolioBuilder() {;
       fetchProjects();
     }
   },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -105,6 +126,9 @@ export function PortfolioBuilder() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -143,6 +167,7 @@ export function PortfolioBuilder() {;
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -535,6 +560,10 @@ if ( {) {
 {editingProject ? "Edit Project" : "Add New Project"}
             </h2>
 
+=======
+              {editingProject ? "Edit Project" : "Add New Project"}
+            </h2>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <ProjectForm
               project={editingProject |undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
@@ -542,6 +571,26 @@ if ( {) {
                 setShowAddProject(false);
                 setEditingProject(null);
 
+<<<<<<< HEAD
+=======
+              {editingProject ? 'Edit Project' : 'Add New Project'}
+            </h2>;
+            <ProjectForm;
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {;
+                setShowAddProject(false);
+                setEditingProject(null);
+            <ProjectForm 
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {
+                setShowAddProject(false);
+                setEditingProject(null)
+              onCancel={() => {;
+                setShowAddProject(false);
+                setEditingProject(null);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               }}
             />
           </CardContent>

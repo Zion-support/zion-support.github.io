@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SEO } from '@/components/SEO'
 import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable'
 import { ProtectedRoute } from '@/components/ProtectedRoute'
@@ -43,7 +46,10 @@ function ReviewsModerationContent() {
       })
       setIsLoading(false) }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   useEffect(() => {
     fetchReviews();        title: "Error"
@@ -64,13 +70,15 @@ function ReviewsModerationContent() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-=======
   };
   useEffect(() => {;
     fetchReviews();        title: "Error",
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { SEO } from "@/components/SEO",
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",
@@ -158,20 +166,21 @@ function ReviewsModerationContent() {;
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
       toast({
         title: "Error",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         description: "Failed to load reviews. Please try again later.",
         variant: "destructive"}),
       setIsLoading(false)
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   useEffect(() => {
     fetchReviews()
   useEffect((,) => {
     fetchReviews()
-=======
   },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -179,6 +188,7 @@ function ReviewsModerationContent() {;
   }
   useEffect(() => {
     fetchReviews()
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect((,) => {
     fetchReviews()
@@ -186,26 +196,30 @@ function ReviewsModerationContent() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [activeTab]),
 
   const handleRefresh = () => {
     fetchReviews()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   }
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 =======
   },
@@ -227,6 +241,7 @@ function ReviewsModerationContent() {;
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <Star className="h-5 w-5" />
 =======
@@ -237,20 +252,16 @@ function ReviewsModerationContent() {;
 >>>>>>>               <Star className="h-5 w-5" />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
               <Star className='h-5 w-5' />              Review Management            <CardTitle className="flex items-center gap-2">
-=======
         
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Star className="h-5 w-5" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Review Management
@@ -275,10 +286,13 @@ function ReviewsModerationContent() {;
               </TabsList>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <TabsContent value='pending' className='mt-0'>
                 <ReviewsModerationTable                  reviews={reviews}            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="mb-6">
@@ -308,11 +322,14 @@ function ReviewsModerationContent() {;
                     This section will show reviews that have been reported by
                     users.                  </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               <TabsContent value="reported" className="mt-0">
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable 
@@ -323,17 +340,21 @@ function ReviewsModerationContent() {;
               </TabsContent>
               
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <TabsContent value="reported" className="mt-0">
 >>>>>>>                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
                   <h3 className="text-lg font-medium mb-2">Reported Reviews</h3>
                   <p className="text-muted-foreground">
                     This section will show reviews that have been reported by users.
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -349,6 +370,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  </p>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
 >>>>>>>               </TabsContent>
             </Tabs>
@@ -365,7 +389,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   )
-<<<<<<< HEAD
 }
 export default function ReviewsModeration() {
   return (
@@ -382,14 +405,15 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
   handleRefresh "
 }/> </TabsContent> <TabsContent value="reported" className="mt-0" > <div className="text-center py-12 border rounded-lg" > <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" /> <h3 className="text-lg font-medium mb-2" >Reported Reviews</h3> <p className="text-muted-foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>)
 }export default function ReviewsModeration () {
-<<<<<<< HEAD
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
-=======
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"};
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SEO } from "@/components/SEO",;
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
@@ -526,8 +550,11 @@ function ReviewsModeration() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

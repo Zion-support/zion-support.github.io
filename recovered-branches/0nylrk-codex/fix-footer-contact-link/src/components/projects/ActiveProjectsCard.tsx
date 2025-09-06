@@ -17,9 +17,12 @@ import { Badge } from "@/components/ui/badge",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {BriefcaseIcon, Clock} from "lucide-react";
@@ -45,31 +48,29 @@ export function ActiveProjectsCard() {;
 =======
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from "react",
 import { Link } from "react-router-dom",
 import { BriefcaseIcon, Clock } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
 
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
-=======
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     if (projects && !isLoading) {
       const active = projects.filter(p =>
@@ -77,6 +78,7 @@ export function ActiveProjectsCard() {
       ).slice(0, 3), // Limit to 3 most recent projects
       setActiveProjects(active)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -90,13 +92,17 @@ export function ActiveProjectsCard() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [projects, isLoading]);
 
-=======
   }, [projects, isLoading]),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <Card>
@@ -112,11 +118,14 @@ export function ActiveProjectsCard() {
             {[1, 2].map(idx => (
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from "react",;
 import { Link } from "react-router-dom",;
 import { BriefcaseIcon, Clock } from "lucide-react",;
@@ -192,6 +201,7 @@ export function ActiveProjectsCard() {;
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -213,17 +223,20 @@ export function ActiveProjectsCard() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         </CardContent>
       </Card>
     )
   }
-<<<<<<< HEAD
-=======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (activeProjects.length === 0) {
     return (
       <Card>
@@ -281,6 +294,7 @@ export function ActiveProjectsCard() {;
           </Button>
         </CardFooter>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -555,13 +569,17 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ActiveProjectsCard.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Card>
   )
 }
-=======
     </Card>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

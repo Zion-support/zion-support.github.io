@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { v4 as uuidv4 } from "uuid";
@@ -571,14 +572,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next",
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import type { NextApiRequest, NextApiResponse } from "next",
 import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { v4 as uuidv4 } from "uuid";
 
 import {
-<<<<<<< HEAD
   assertClient
   assertTalentOrClientForOffer
   getDemoUser
@@ -588,7 +588,6 @@ import {
   listOffers
   saveOffer
   saveProject
-=======
   assertClient,
   assertTalentOrClientForOffer,
   getDemoUser,;
@@ -598,18 +597,12 @@ import {
   listOffers,
   saveOffer,
   saveProject,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "../../../utils/marketplace/store";
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
-<<<<<<< HEAD
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({
@@ -621,19 +614,15 @@ import { v4 as uuidv4 } from "uuid",
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth",
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store",
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-<<<<<<< HEAD
     if (req.method === "GET") {
       const user = getDemoUser(req);
       if (user.role === "client") {
         const offers = listOffers({ clientId: user.id });
-<<<<<<< HEAD
         return res.json({ ok: true, offers });
       }
       if (user.role === "talent") {
@@ -726,12 +715,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         if (user.role !== "talent")
           return bad(res, "Only talent can decline", 403);
         existing.status = "DECLINED";
-=======
         return res.json({ ok: true, offers });
       }
       if (user.role === "talent") {
-=======
-<<<<<<< HEAD
     if (req.method === "GET") {;
       const user = getDemoUser(req);
       if (user.role === "client") {
@@ -759,7 +745,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return bad(res, "Missing required fields");
       }
 
-=======
     if (req.method === 'GET') {
       res.status(200).json({ offers: [] });
     } else if (req.method === 'POST') {
@@ -825,7 +810,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
       if (user.role === "talent") {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         const offers = listOffers({ talentSlug: user.talentSlug });
         return res.json({ ok: true, offers });
       }
@@ -838,10 +822,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {};
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
         return bad(res, "Missing required fields")
-<<<<<<< HEAD
       }
 
-=======
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -855,8 +837,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const offer: Offer = {
         id: uuidv4(),
         createdAtIso: new Date().toISOString(),
@@ -866,12 +846,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
         agreementUrl,
-<<<<<<< HEAD
         status: "SENT"
-=======
-<<<<<<< HEAD
         status: "SENT",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       };
       saveOffer(offer);
       return res.status(201).json({ ok: true, offer });
@@ -887,9 +863,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (action === "accept") {
         if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
         existing.status = "CONFIRMED";
-<<<<<<< HEAD
-=======
-=======
         status: "SENT"},
       saveOffer(offer),
       return res.status(201).json({ ok: true, offer })
@@ -916,8 +889,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (action === "accept") {
         if (user.role !== "talent") return bad(res, "Only talent can accept", 403),
         existing.status = "CONFIRMED",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         // Create a project upon acceptance
         const project: Project = {
           id: uuidv4(),
@@ -927,18 +898,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           talentSlug: existing.talentSlug,
           startDateIso: existing.startDateIso,
           status: "ACTIVE",
-<<<<<<< HEAD
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
-=======
-<<<<<<< HEAD
           timeline:
             existing.paymentTerms.type === "milestone"
               ? existing.paymentTerms.milestones || []
               : [],
-=======
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           documents: existing.agreementUrl
             ? [
                 {
@@ -947,12 +912,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   url: existing.agreementUrl,
                   uploadedAtIso: new Date().toISOString()}]
             : [],
-<<<<<<< HEAD
           notes: []
-=======
-<<<<<<< HEAD
           notes: [],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         };
         saveProject(project);
         existing.projectId = project.id;
@@ -964,11 +925,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         if (user.role !== "talent") return bad(res, "Only talent can request changes", 403);
         existing.status = "CHANGES_REQUESTED";
         existing.changeRequestNote = changeRequestNote || "";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         saveOffer(existing);
         return res.json({ ok: true, offer: existing })
       }
-<<<<<<< HEAD
       return bad(res, "Unknown action");
     }
     return bad(res, "Method not allowed", 405);
@@ -976,15 +935,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const status = e?.statusCode |500;
     return res
       .status(status)
-<<<<<<< HEAD
       .json({ ok: false, error: e?.message |"Server error" });
 
-=======
 
       if (action === "decline") {
-=======
       .json({ ok: false, error: e?.message || "Server error" });
-=======
           notes: []},
         saveProject(project),
         existing.projectId = project.id,
@@ -1025,7 +980,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 ;
       if (action === "decline") {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
         existing.status = "DECLINED";
         saveOffer(existing);
@@ -1039,11 +993,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
-<<<<<<< HEAD
 }
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -1063,6 +1014,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
@@ -1075,3 +1027,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

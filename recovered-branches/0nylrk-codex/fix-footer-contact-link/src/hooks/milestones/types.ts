@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 import {supabase} from '@/integrations / supabase / client';
@@ -20,13 +18,15 @@ export interface Milestone {;
 import {supabase} from '@/integrations/supabase/client';
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
 export interface Milestone {
-=======
 import {supabase} from '@/integrations/supabase/client';
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
 
 export interface Milestone {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   project_id: string;
   title: string;
@@ -61,13 +61,14 @@ export interface MilestoneActivity {;
   created_by: string
   deliverables?: any[]
 }
-<<<<<<< HEAD
 export interface MilestoneActivity {
-=======
 
 export interface MilestoneActivity {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   milestone_id: string;
   user_id: string;
@@ -86,8 +87,11 @@ export interface MilestoneActivity {;
     display_name: string
 
     avatar_url?: string
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { supabase } from '@/integrations/supabase/client',;
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved',;
 export interface Milestone {;
@@ -117,6 +121,7 @@ export interface MilestoneActivity {;
     display_name: string;
     avatar_url?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     display_name: string,
@@ -131,5 +136,7 @@ export interface MilestoneActivity {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -30,6 +30,8 @@ import React, { useEffect, useRef } from 'react';
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationId: number;
@@ -735,15 +737,10 @@ if ( {) {
             scale: [1, 0.9, 1]
             opacity: [0.3, 0.6, 0.3],          }}
           transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
             duration: 25
             repeat: Infinity
-=======
             duration: 25,
             repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'linear',          }}          }}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -793,7 +790,10 @@ if ( {) {
             scale: [1, 0.9, 1];
             opacity: [0.3, 0.6, 0.3]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }}
           transition={{
             duration: 25
@@ -922,23 +922,24 @@ if ( {) {
 
 =======
         />
-=======
             duration: 25,
             repeat: Infinity,
             ease: 'linear',          }}
 
-=======
-=======
             ease: 'linear',          }}
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }}
           transition={{
             duration: 25,
             repeat: Infinity,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -993,21 +994,16 @@ ease: 'linear',            ease: "linear";
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ease: 'linear',            ease: "linear"
           }}
         />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
           }}
 
         />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Floating Circles */}
         <motion.div
           className='absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40'
@@ -1069,33 +1065,44 @@ ease: 'linear',            ease: "linear";
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+        <motion.div
+          className='absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-400/40'
+          animate={{
+            y: [0, 20, 0]
+            opacity: [0.4, 0.8, 0.4],          className="absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-400/40"
+          animate={{
+            y: [0, 20, 0];
+            opacity: [0.4, 0.8, 0.4]
+          transition={{
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 10
             repeat: Infinity
-=======
             duration: 10,
             repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'easeInOut',            ease: "easeInOut"
           }}
 <<<<<<< HEAD
         />;
 =======
         />
-=======
-<<<<<<< HEAD
             duration: 10,
             repeat: Infinity,
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           }}
 
         />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1110,6 +1117,8 @@ ease: 'linear',            ease: "linear";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Animated Lines */}
         <motion&& motion.div
           className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
@@ -1230,6 +1239,7 @@ ease: "easeInOut"
           }}
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             duration: 8,
             repeat: Infinity,
@@ -1307,10 +1317,13 @@ ease: "easeInOut"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
         />;
       </div>;
@@ -1319,36 +1332,25 @@ ease: "easeInOut"
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 8,
             repeat: Infinity,
 
           }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
             duration: 8,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
-=======
 
           }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Top gradient */}
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1409,6 +1411,7 @@ ease: "easeInOut"
             className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full';
             style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
@@ -1426,14 +1429,18 @@ ease: "easeInOut"
               top: `${Math && Math.random() * 100}%`,
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
-=======
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }}
             animate={{
               y: [0, -100, 0]
@@ -1519,6 +1526,7 @@ ease: "easeInOut"
               scale: [0, 1, 0]
             }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1532,6 +1540,8 @@ ease: "easeInOut"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             transition={{
               duration: Math && Math.random() * 10 + 10,
               repeat: Infinity,
@@ -1580,27 +1590,17 @@ export default UltraFuturisticBackground2030;      </div>;
 };
 export default UltraFuturisticBackground2030;
       </div>
-=======
 
-=======
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
         ))}
       </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',            }}
 
             }}
@@ -1609,11 +1609,6 @@ export default UltraFuturisticBackground2030;
         ))}
       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Neon Glow Effects */}
 <<<<<<< HEAD
       <div className="fixed inset-0 pointer-events-none z-25">
@@ -1627,25 +1622,17 @@ export default UltraFuturisticBackground2030;
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />
         <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       </div>
     </div>
   );
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </div>
     </div>
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraFuturisticBackground2030;      </div>
     </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1753,17 +1740,14 @@ export default UltraFuturisticBackground2030;
 =======
 =======
 
-<<<<<<< HEAD
-=======
 export default UltraFuturisticBackground2030;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
-=======
 export default UltraFuturisticBackground2030;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

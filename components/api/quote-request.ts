@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -23,6 +23,8 @@ const supabaseKey =
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 import OpenAI from "openai";
@@ -132,15 +134,16 @@ export default async function handler(
           : [];
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       let saved: any = null;
       if (supabase) {
         const { data, error } = await supabase
@@ -165,6 +168,7 @@ export default async function handler(
         .status(200)
         .json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
     } catch (e: any) {
+<<<<<<< HEAD
       console && console.error("quote-request error", e);
       return res && res.status(500).json({ message: "Server error" });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -338,6 +342,15 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+      console.error("quote-request error", e);
+      return res.status(500).json({ message: "Server error" });
+    }
+    return res.status(500).json({ message: "Server error" });
+
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return res
       .status(200)
       .json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
@@ -346,8 +359,11 @@ if (throw error) {
     return res.status(500).json({ message: 'Server error' });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

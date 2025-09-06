@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useJobApplications.ts
@@ -15,11 +16,15 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {toast} from "sonner";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -31,21 +36,28 @@ export const useJobApplications = (jobId?: string) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export const useJobApplications = (jobId?: string) => {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export const useJobApplications = (jobId?: string) => {
 export const useJobApplications = (jobId?: string) => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -56,6 +68,7 @@ export const useJobApplications = (jobId?: string) => {
   const [applications, setApplications] = useState<JobApplication[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -72,15 +85,15 @@ export const useJobApplications = (jobId?: string) => {
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const fetchApplications = async () => {
     if (!user) {
       setIsLoading(false),
       return
     }
     try {
-<<<<<<< HEAD
       setIsLoading(true);
       let query = supabase
         .from("job_applications")
@@ -90,8 +103,11 @@ export const useJobApplications = (jobId?: string) => {
           talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
         `)
         .order("created_at", { ascending: false });
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setIsLoading(true),
       
       let query = supabase
@@ -103,6 +119,7 @@ export const useJobApplications = (jobId?: string) => {
         `)
         .order("created_at", { ascending: false }),
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -127,6 +144,8 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useJobApplications.ts
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Filter by job if jobId is provided
       if (jobId) {
         query = query.eq("job_id", jobId)
@@ -143,6 +162,7 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
           const { data: jobIds } = await supabase
             .from("jobs")
             .select("id")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useJobApplications.ts
 
@@ -271,32 +291,28 @@ if (throw fetch_error) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useJobApplications.ts
 =======
 <<<<<<< HEAD
-            .eq("client_id", user.id);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            .eq("client_id", user.id);
             .eq("client_id", user.id),
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           if (jobIds && jobIds.length > 0) {
             const jobIdArray = jobIds.map(job => job.id),
             query = query.in("job_id", jobIdArray)
           }
         }
       }
-<<<<<<< HEAD
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
-=======
       
       const { data, error: fetchError } = await query,
       
       if (fetchError) throw fetchError,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Transform the data to match our application types
       const transformedData = data.map((app: any) => ({
         ...app,
         talent_profile: app.talent_profile ? {
-<<<<<<< HEAD
           ...app.talent_profile;
           full_name: app.talent_profile.display_name;
           profile_picture_url: app.talent_profile.avatar_url
@@ -354,8 +370,11 @@ if (throw fetch_error) {
 =======
       console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err.message)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ...app.talent_profile,
           full_name: app.talent_profile.display_name,
           profile_picture_url: app.talent_profile.avatar_url,
@@ -369,15 +388,19 @@ if (throw fetch_error) {
       console.error("Error fetching applications:", err),
       setError("Failed to fetch applications: " + err.message),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast.error("Failed to fetch applications")
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -392,11 +415,11 @@ if (throw fetch_error) {
       toast && toast.error("You must be logged in to apply for jobs");
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
     if (!user) {
       toast.error("You must be logged in to apply for jobs"),
@@ -408,12 +431,15 @@ if (throw fetch_error) {
         .from("job_applications")
         .insert({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           job_id: jobId;
           talent_id: user.id;
           resume_id: resumeId;
@@ -422,8 +448,11 @@ if (throw fetch_error) {
         })
         .select()
         .single();
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           job_id: jobId,
           talent_id: user.id,
           resume_id: resumeId,
@@ -434,22 +463,28 @@ if (throw fetch_error) {
         .single(),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (error) {
         if (error.code === '23505') { // Unique violation
           toast.error("You have already applied to this job")
         } else {
           throw error
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -497,6 +532,7 @@ export const useJobApplications = (jobId?: string) => {;
             const jobIdArray = jobIds.map(job => job.id),;
             query = query.in("job_id", jobIdArray);
           }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -551,11 +587,11 @@ if ( { // Unique violation) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
         return false
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
       // Add the new application to the local state
       const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]);
@@ -567,9 +603,6 @@ if ( { // Unique violation) {
       return false
     }
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
       const { data, error: fetchError } = await query,;
       if (fetchError) throw fetchError,;
@@ -620,6 +653,7 @@ if ( { // Unique violation) {
         }
         return false;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useJobApplications.ts
 
@@ -679,6 +713,8 @@ export const useJobApplications = (jobId?:string) => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       // Add the new application to the local state
       const newApplication = data as JobApplication,
@@ -693,13 +729,17 @@ export const useJobApplications = (jobId?:string) => {;
     }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
     try {
       const { error } = await supabase
         .from("job_applications")
         .update({ status })
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -715,10 +755,15 @@ export const useJobApplications = (jobId?:string) => {;
       if (error) throw error;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        .eq("id", applicationId);
+      if (error) throw error;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq("id", applicationId),
       
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -881,10 +926,11 @@ export const useJobApplications = (jobId?:string) => {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useJobApplications.ts
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Update the local state
       setApplications(prev =>
         prev.map(app => app.id === applicationId ? { ...app, status } : app)
-<<<<<<< HEAD
       );
       toast.success(`Application status updated to ${status}`);
       return true
@@ -895,11 +941,14 @@ export const useJobApplications = (jobId?:string) => {;
       return false
     }
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ),
       
       toast.success(`Application status updated to ${status}`),
@@ -912,12 +961,15 @@ export const useJobApplications = (jobId?:string) => {;
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
       const { error } = await supabase
@@ -928,6 +980,7 @@ export const useJobApplications = (jobId?:string) => {;
         })
         .eq("id", applicationId)
         .is("viewed_at", null), // Only update if not already viewed
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useJobApplications.ts
 
@@ -973,29 +1026,29 @@ export const useJobApplications = (jobId?:string) => {;
 ========
 =======
 <<<<<<< HEAD
-      if (error) throw error;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      if (error) throw error;
       
       if (error) throw error,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Update the local state
       setApplications(prev =>
         prev.map(app => app.id === applicationId ?
           { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
         )
-<<<<<<< HEAD
       );
-=======
       ),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return true
     } catch (err) {
       console.error("Error marking application as viewed:", err),
       return false
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   // Fetch applications when component mounts or dependencies change
@@ -1109,14 +1162,16 @@ if ( {) {
     applyToJob;
     updateApplicationStatus
     markApplicationAsViewed
-<<<<<<< HEAD
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Add the new application to the local state;
       const newApplication = data as JobApplication,;
@@ -1185,6 +1240,7 @@ if ( {) {
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1311,3 +1367,7 @@ markApplicationAsViewed
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

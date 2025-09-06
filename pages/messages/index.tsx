@@ -26,6 +26,7 @@ const Messages: NextPage = () => {
         title="No messages yet"
         description="Start a conversation by requesting a quote or responding to an existing one."
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         icon={<span>📫</span>  } catch (error) {
@@ -48,6 +49,8 @@ const Messages: NextPage = () => {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         icon={<span>📫</span>}
         primaryAction={{ label: 'Explore talent', href: '/talent' }}
         secondaryAction={{ label: 'Browse services', href: '/services' }}
@@ -77,6 +80,7 @@ const Messages: NextPage = () => {
       />;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     </div>);
 },
@@ -104,9 +108,9 @@ export default Messages
 =======
 <<<<<<< HEAD
 =======
-export default Messages,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default Messages,;
         icon={<span>📫</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -129,6 +133,7 @@ export default Messages,;
 },;
 export default Messages;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -144,3 +149,5 @@ export default Messages;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

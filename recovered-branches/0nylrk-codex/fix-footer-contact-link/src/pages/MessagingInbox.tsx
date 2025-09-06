@@ -1,11 +1,13 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import { MessageSquare, Video  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
@@ -29,7 +31,6 @@ export default function MessagingInbox() {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const [activeCall, setActiveCall] = useState<string | null>(null);
-=======
 import {MessageSquare, Video} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
@@ -41,9 +42,12 @@ import {useNavigate} from 'react-router-dom';
 export default function MessagingInbox() {
   const { ;
     conversations;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react',
 import { useMessaging } from '@/context/MessagingContext',
@@ -57,10 +61,13 @@ export default function MessagingInbox() {
   const { 
     conversations,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     activeConversation, 
     setActiveConversation, 
     markAsRead,
@@ -74,8 +81,11 @@ export default function MessagingInbox() {
 
 =======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -85,6 +95,7 @@ export default function MessagingInbox() {
         console.error("Failed to load conversations:", error),
         toast.error("Failed to load messages. Please try again.")
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -144,11 +155,17 @@ function MessagingInbox() {
   }, [fetchConversations]);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+    loadData()
+  }, [fetchConversations]);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     loadData()
   }, [fetchConversations]),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -164,12 +181,13 @@ function MessagingInbox() {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first"),
       return
     }
-<<<<<<< HEAD
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
     // Show toast notification
@@ -180,8 +198,11 @@ function MessagingInbox() {
     navigate(`/call/${roomId}`)
   }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
@@ -196,12 +217,15 @@ function MessagingInbox() {
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -237,11 +261,14 @@ function MessagingInbox() {
               ) : (
                 <ConversationsList
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -624,11 +651,6 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
 =======
                 <ConversationsList;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   conversations={conversations}
                   activeConversation={activeConversation}
                   setActiveConversation={setActiveConversation}
@@ -645,10 +667,11 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
       </div>
     </ProtectedRoute>
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

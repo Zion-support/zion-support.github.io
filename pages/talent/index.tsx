@@ -25,15 +25,10 @@ import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
 interface Talent {;
 =======
 import Head from 'next/head';
-<<<<<<< HEAD
 import { useMemo, useState  } from 'react';
 import Pagination from '../../components/ui/Pagination';
-<<<<<<< HEAD
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
-=======
-<<<<<<< HEAD
 import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Talent {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -41,7 +36,6 @@ interface Talent {
   name: string;
   title: string;
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -113,14 +107,15 @@ const TalentDirectory: NextPage = () => {
     const start = (page - 1) * pageSize;
     return mockTalent.slice(start, start + pageSize);
   }, [page]);
-=======
 import { useMemo, useState } from 'react';
 import Pagination from '../../components/ui/Pagination';
-=======
   testimonial?: { quote: string; author: string };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
 interface Talent {;
   id: string;
@@ -138,6 +133,7 @@ interface Talent {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -146,6 +142,8 @@ interface Talent {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
   id: String(i + 1),
   name: `Talent ${i + 1}`,
@@ -201,6 +199,7 @@ const TalentDirectory: NextPage = () => {
     return mockTalent.slice(start, start + pageSize)
   }, [page]),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
@@ -248,6 +247,8 @@ const TalentDirectory: NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -257,6 +258,7 @@ const TalentDirectory: NextPage = () => {;
       </Head>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -270,6 +272,8 @@ const TalentDirectory: NextPage = () => {;
       <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-4">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <h1 className='text-2xl font-semibold'>Explore Talent</h1>
       <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
         {pageItems.map(t => (
@@ -279,7 +283,6 @@ const TalentDirectory: NextPage = () => {;
               <div className='flex gap-1'>
                 {t.badges.map(b => (                  <TrustBadge key={b} type={b} />
                 ))}
-=======
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -407,16 +410,10 @@ export default TalentDirectory;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </div>
             <div className="text-sm opacity-80">{t.title}</div>
             {t.testimonial && (
-<<<<<<< HEAD
               <MicroTestimonial
                 quote={t.testimonial.quote}
                 author={t.testimonial.author}
@@ -435,14 +432,15 @@ export default TalentDirectory;
 }
 export default TalentDirectory;
 
-<<<<<<< HEAD
-=======
 export default TalentDirectory;
 
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <MicroTestimonial quote={t.testimonial.quote} author={t.testimonial.author} />
             )  } catch (error) {
     console.error("Error:", error);
@@ -462,6 +460,7 @@ export default TalentDirectory;
 },;
 export default TalentDirectory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -477,3 +476,5 @@ export default TalentDirectory;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -8,7 +8,6 @@
 
 =======
 
-<<<<<<< HEAD
 import React from 'react';
 import { Dialog;
   DialogContent;
@@ -18,8 +17,11 @@ import { AIEnhancementPanel  } from './AIEnhancementPanel';
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementDialogProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -35,6 +37,7 @@ export function AIEnhancementDialog({;
   onApply;
   defaultOptions;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -42,6 +45,8 @@ export function AIEnhancementDialog({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import {;
   Dialog,;
@@ -60,6 +65,7 @@ interface AIEnhancementDialogProps {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -67,6 +73,8 @@ interface AIEnhancementDialogProps {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   title: string
   isOpen: boolean
@@ -87,16 +95,20 @@ export function AIEnhancementDialog({
   onApply,
   defaultOptions,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   initialContent
 }: AIEnhancementDialogProps) {
 
   const handleApply = (content: string) => {
     onApply(content)
     onClose()
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -190,10 +202,10 @@ export function AIEnhancementDialog({;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>

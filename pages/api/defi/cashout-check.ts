@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -17,6 +18,8 @@ function load (): Record < string, KycProfile> {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import type { KycProfile } from '../../../utils/kyc',;
 import fs from 'fs',;
@@ -24,14 +27,16 @@ import path from 'path',;
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),
 const FILE = path.join(DATA_DIR, 'profiles.json'),
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
 =======
 
@@ -131,13 +136,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (profile.amlStatus === 'match' |(profile.flags |[]).includes('aml_alert')) return res.status(200).json({ allowed: false, reason: 'AML alert' })
 
   return res.status(200).json({ allowed: true, reason: 'KYC approved and AML clear' })
-=======
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
@@ -148,9 +148,6 @@ function load(): Record<string, KycProfile> {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
@@ -168,8 +165,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(200).json({ allowed: true, reason: 'KYC approved and AML clear' });
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -197,6 +192,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -205,10 +201,14 @@ export default function handler(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

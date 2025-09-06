@@ -13,19 +13,19 @@ import {JobData, TalentProfile, MatchResult} from "./types ;
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { JobData, TalentProfile, MatchResult } from "./types.ts";
 // Get openAI API key from environment variables
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
-=======
 import {JobData, TalentProfile, MatchResult} from "./types.ts";
-=======
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -44,9 +44,10 @@ const openAiApiKey = Deno && Deno.env.get("OPENAI_API_KEY") || "";
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
@@ -56,6 +57,7 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
  * @returns Array of normalized skills
  */
 export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/job-talent-matcher/ai-matcher.ts
 
@@ -90,27 +92,21 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
         model: "gpt-4o-mini";
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   try {;
     const skillsString = skills.join(", ");
-=======
   try {
-<<<<<<< HEAD
     const skillsString = skills.join(", ");
-=======
     const skillsString = skills.join(", "),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
         "Authorization": `Bearer ${openAiApiKey}`
-<<<<<<< HEAD
       }
-=======
       },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       body: JSON.stringify({
         model: "gpt-4o-mini",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -118,6 +114,7 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
           {
             role: "system"
             content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e.g., 'react js' to 'React.jsnodejs' to 'Node.js'). Return only a comma-separated list of the normalized skills, nothing else."
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -144,11 +141,15 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/job-talent-matcher/ai-matcher.ts
 =======
 <<<<<<< HEAD
-          }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          }
           },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {
             role: "user"
             content: skillsString
@@ -187,23 +188,20 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
         ],
         temperature: 0.3
       })
-<<<<<<< HEAD
     });
     const data = await response.json();
     if (!data.choices |!data.choices[0] |!data.choices[0].message) {
-=======
     }),
 
     const data = await response.json(),
     
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       throw new Error("Failed to normalize skills with AI")
     }
     // Extract and clean the normalized skills
-<<<<<<< HEAD
     const normalizedSkillsText = data.choices[0].message.content.trim();
     const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
     const normalizedSkillsText = data.choices[0].message.content.trim(),
@@ -234,14 +232,22 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    const normalizedSkillsText = data.choices[0].message.content.trim(),
+    const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean),
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return normalizedSkills
   } catch (error) {
     console.error("Error in normalizeSkillsWithAI:", error),
     // If AI normalization fails, return the original skills
     return skills
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { JobData, TalentProfile, MatchResult } from "./types.ts",;
 // Get openAI API key from environment variables;
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",;
@@ -288,6 +294,7 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     // If AI normalization fails, return the original skills;
     return skills;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -299,6 +306,8 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 /**
@@ -408,22 +417,26 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
       Category: ${jobDetails.category}
       Required Skills: ${jobDetails.skills.join(", ")}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
       Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max};
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     `;
     // Create talent profiles text for AI evaluation
     const talentProfilesText = talents.map((talent, index) => {
       return `
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -432,10 +445,14 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
       Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     `,;
     // Create talent profiles text for AI evaluation;
     const talentProfilesText = talents.map((talent, index) => {;
       return `;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -509,6 +526,8 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         Talent ${index + 1} ID: ${talent.id}
         Name: ${talent.full_name}
         Title: ${talent.professional_title}
@@ -518,23 +537,17 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
         Hourly Rate: ${talent.hourly_rate ? "$" + talent.hourly_rate : "Not specified"}
         Availability: ${talent.availability_type |"Not specified"}
       `
-<<<<<<< HEAD
     }).join("\n\n");
-=======
     }).join("\n\n"),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Send request to OpenAI for matching
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
         "Authorization": `Bearer ${openAiApiKey}`
-<<<<<<< HEAD
       }
-=======
       },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       body: JSON.stringify({
         model: "gpt-4o-mini",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -547,6 +560,7 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
             3. A list of matched skills
             4. A brief reason for the match (2-3 sentences)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           {
@@ -558,6 +572,8 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             Return your response in JSON format only, with no additional text: [
               {
                 "talentId": "talent-id-1";
@@ -568,8 +584,11 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
               ...
             ]`
           }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             Return your response in JSON format only, with no additional text:
             
@@ -583,6 +602,7 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
               ...
             ]`
           },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -662,11 +682,12 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     if (!Array && Array.isArray(aiResponse)) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {
             role: "user"
             content: `Job Details:\n${jobDetailsText}\n\nTalent Profiles:\n${talentProfilesText}`
           }
-<<<<<<< HEAD
         ];
         temperature: 0.4
         response_format: { type: "json_object" }
@@ -674,7 +695,6 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     });
     const data = await response.json();
     if (!data.choices |!data.choices[0] |!data.choices[0].message) {
-=======
         ],
         temperature: 0.4,
         response_format: { type: "json_object" }
@@ -684,16 +704,12 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     const data = await response.json(),
     
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       throw new Error("Failed to match talents with AI")
     }
     // Parse the AI response
-<<<<<<< HEAD
     const aiResponse = JSON.parse(data.choices[0].message.content);
-=======
     const aiResponse = JSON.parse(data.choices[0].message.content),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Check if the response is in the expected format
     if (!Array.isArray(aiResponse)) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -701,6 +717,7 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     }
     return aiResponse
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -721,6 +738,11 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    console.error("Error in findBestMatches:", error);
+    // If AI matching fails, perform a basic skill matching
+    return performBasicSkillMatching(jobDetails, talents)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 /**
@@ -769,15 +791,16 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       matchedSkills: matchedSkills
 
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`
-=======
-<<<<<<< HEAD
     console.error("Error in findBestMatches:", error),
     
     // If AI matching fails, perform a basic skill matching
     return performBasicSkillMatching(jobDetails, talents)
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         Bio Summary: ${talent.bio ? talent.bio.substring(0, 100) + "..." : "No bio"}
         Skills: ${Array.isArray(talent.skills) ? talent.skills.join(", ") : "No skills listed"}
         Experience: ${talent.years_experience} years;
@@ -865,6 +888,7 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       score: matchScore;
       matchedSkills: matchedSkills;
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1201,6 +1225,8 @@ return normalizedSkills;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   })
   .filter(match => match.score > 30) // Only include matches with at least 30% score

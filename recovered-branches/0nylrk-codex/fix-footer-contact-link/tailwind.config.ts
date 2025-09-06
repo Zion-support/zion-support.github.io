@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
@@ -42,26 +43,19 @@ const config: Config = {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Config} from "tailwindcss";
 import {fontFamily} from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
-<<<<<<< HEAD
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
 
-=======
 import plugin from "tailwindcss/plugin",
 import animatePlugin from "tailwindcss-animate",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -72,17 +66,20 @@ const config: Config = {
   safelist: ['border-border'],
   theme: {
     container: {
-<<<<<<< HEAD
       center: true;
       padding: "2rem"
       screens: {
         "2xl": "1400px"}}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       center: true,
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -102,6 +99,8 @@ const config: Config = {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -110,7 +109,6 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-<<<<<<< HEAD
           DEFAULT: "hsl(var(--primary))"
           foreground: "hsl(var(--primary-foreground))"}
         secondary: {
@@ -173,8 +171,11 @@ const config: Config = {
 =======
         "accordion-down": "accordion-down 0.2s ease-out"
         "accordion-up": "accordion-up 0.2s ease-out"}}}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))"},
         secondary: {
@@ -229,22 +230,28 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out"}}},
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           direction: 'rtl'
           textAlign: 'right'}
         '.ltr': {
@@ -254,7 +261,6 @@ const config: Config = {
     })]}
 export default config;
 
-=======
           direction: 'rtl',
           textAlign: 'right'},
         '.ltr': {
@@ -264,11 +270,14 @@ export default config;
     })]},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default config,
 import { Config } from "tailwindcss",;
 import { fontFamily } from "tailwindcss/defaultTheme",;
@@ -362,6 +371,7 @@ const config: Config = {;
       addUtilities(newUtilities);
     })]},;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default config;
 
@@ -450,3 +460,6 @@ export default config;
 export default config;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default config;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

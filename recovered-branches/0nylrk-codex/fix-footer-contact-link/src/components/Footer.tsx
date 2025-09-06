@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -438,25 +439,19 @@ function Footer() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { NewsletterForm } from "@/components/NewsletterForm",
-<<<<<<< HEAD
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { Link } from "react-router-dom";
-=======
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { Link } from "react-router-dom";
-=======
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function Footer() {
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">
@@ -531,21 +526,25 @@ export function Footer() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/Footer.tsx
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </footer>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 import { NewsletterForm } from "@/components/NewsletterForm",;
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",;
@@ -623,6 +622,7 @@ export function Footer() {;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </footer>;
   );
@@ -655,3 +655,8 @@ export function Footer() {;
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    </footer>;
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

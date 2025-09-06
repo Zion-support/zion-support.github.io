@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import {;
   Mail,;
@@ -68,6 +69,27 @@ import { AnimatePresence } from 'framer-motion';
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+import {
+  Mail
+  Phone
+  MapPin
+  Globe
+  Twitter
+  Linkedin
+  Github
+  ArrowUp
+  Crown
+  Zap
+  Brain
+  Rocket
+  Shield
+  Users
+  BookOpen
+  Briefcase
+  Atom;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Mail,
   Phone,
   MapPin,
@@ -166,7 +188,6 @@ const footerSections: FooterSection[] = [
 =======
   Briefcase,;
   Atom,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 import Link from 'next/link';
@@ -507,7 +528,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   },  {
     title: 'Resources'
     links: [
-<<<<<<< HEAD
       { label: 'Blog', href: '/blog', description: 'Industry insights' },  {
     title: 'Solutions'
     links: [
@@ -632,12 +652,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
-=======
       { label: 'Blog', href: '/blog', description: 'Industry insights' },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -647,10 +667,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const footerSections = [
     {
       title: 'Services'
       items: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -683,6 +706,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         { label: 'AI & Machine Learning', href: '/ai-services' }
         { label: 'Quantum Computing', href: '/quantum-computing' }
         { label: 'Space Technology', href: '/space-tech' }
@@ -726,8 +751,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         { label: 'Support', href: '/support' }
       ]
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         { label: 'AI & Machine Learning', href: '/ai-services' },
         { label: 'Quantum Computing', href: '/quantum-computing' },
         { label: 'Space Technology', href: '/space-tech' },
@@ -1005,7 +1033,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       ],
     },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const socialLinks = [
     {
@@ -1047,6 +1074,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       transition: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1054,10 +1082,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         duration: 0.5
       }
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface FooterLink {;
@@ -1723,44 +1754,42 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
       <div className=&quot;absolute inset-0 -z-10&quot;>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         duration: 0.5,
       },
     },
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>
       {/* Animated Background Elements */}
       <div className='absolute inset-0 -z-10'>        {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (
           <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
             key={i}  }
-=======
             key={i}  };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
-=======
-<<<<<<< HEAD
             key={i}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className=&quot;absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full&quot;
             animate={{
@@ -1776,6 +1805,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
 ease: "easeInOut"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full'
             animate={{
               x: [0, Math.random() * 1000, 0]
@@ -1912,14 +1943,16 @@ ease: "easeInOut"
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Globe className="w-4 h-4 text-blue-400" />
                   <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200">
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     ziontechgroup.com
                   </a>
                 </div>
@@ -2130,6 +2163,7 @@ ease: "easeInOut"
             ))}
           </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2148,12 +2182,9 @@ ease: "easeInOut"
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
           {/* Social Links & Newsletter */}
           <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2212,14 +2243,7 @@ ease: "easeInOut"
 =======
 =======
             className='mt-16 pt-12 border-t border-gray-800/50'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
               {/* Social Links */}
@@ -2235,7 +2259,6 @@ ease: "easeInOut"
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
-<<<<<<< HEAD
                     <social.icon className='w-5 h-5' />                  </motion.a>          >
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Social Links */}
@@ -2280,7 +2303,6 @@ ease: "easeInOut"
                   </motion.a>
                 ))}
               </div>
-=======
                     <social.icon className='w-5 h-5' />                  </motion.a>
 
                   </motion.a>
@@ -2288,11 +2310,6 @@ ease: "easeInOut"
                 ))}
               </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Newsletter Signup */}
 <<<<<<< HEAD
               <div className="flex-1 max-w-md">
@@ -2308,14 +2325,7 @@ ease: "easeInOut"
                 <p className='text-gray-400 text-sm mb-4'>
                   Get the latest insights on AI consciousness, quantum
                   computing, and future technology.
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
                 <div className='flex space-x-2'>
                   <input
@@ -2324,7 +2334,6 @@ ease: "easeInOut"
                     className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
                   />
                   <motion.button
-<<<<<<< HEAD
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}                </p>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="flex space-x-2">
@@ -2364,6 +2373,7 @@ ease: "easeInOut"
                   />
                   <motion.button
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2386,6 +2396,11 @@ ease: "easeInOut"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                    className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
+                    className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -2396,6 +2411,7 @@ ease: "easeInOut"
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2516,12 +2532,9 @@ whileHover={{ scale: 1 && 1.05 }}
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Bottom Bar */}
         <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2554,14 +2567,7 @@ whileHover={{ scale: 1 && 1.05 }}
                 © 2024 Zion Tech Group. All rights reserved. |;
 =======
           className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -2634,6 +2640,7 @@ whileHover={{ scale: 1 && 1.05 }}
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2740,11 +2747,12 @@ export default UltraAdvancedFuturisticFooter2025;
         className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
-=======
 
       {/* Scroll to Top Button */}
       <motion.button
@@ -2752,12 +2760,15 @@ export default UltraAdvancedFuturisticFooter2025;
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
@@ -2813,20 +2824,22 @@ export default UltraAdvancedFuturisticFooter2025;
       </motion.button>
     </footer>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default UltraAdvancedFuturisticFooter2025;      </motion.button>
     </footer>
   )
 }
 export default UltraAdvancedFuturisticFooter2025;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default UltraAdvancedFuturisticFooter2025;
 
@@ -2841,13 +2854,14 @@ export default UltraAdvancedFuturisticFooter2025;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default UltraAdvancedFuturisticFooter2025;
 export default UltraAdvancedFuturisticFooter2025;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default UltraAdvancedFuturisticFooter2025;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

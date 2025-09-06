@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -315,6 +316,8 @@ interface ITService {
   technologies: string[],
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useState } from "react";
 interface ITService {id: string;
@@ -613,7 +616,6 @@ function ITSolutionsPage() {
 =======
 ];
 export default function ITSolutionsPage() {return (;
-=======
 "use client",;
 import { useState } from "react",;
 interface ITService {;
@@ -905,7 +907,6 @@ const itServices: ITService[] = [;
 ],;
 export default function ITSolutionsPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="space-y-8">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Header */}

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:vite.config.ts
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -69,8 +70,15 @@ import {defineConfig, splitVendorChunkPlugin} from 'vite';
 import react from '@vitejs/plugin-react';
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'node:path';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+// https://vitejs.dev/config/
 export default defineConfig({
+<<<<<<< HEAD
 <<<<<<< HEAD
 	plugins: [react()],
 	resolve: {
@@ -104,16 +112,23 @@ export default defineConfig({
 					'react-vendor': ['react', 'react-dom'],
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   plugins: [
     react({
       include: '**/*.{jsx,js,ts,tsx}',
       fastRefresh: true,
+<<<<<<< HEAD
 
+=======
+      jsxRuntime: 'automatic',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }),
     splitVendorChunkPlugin(),
   ],
   resolve: {
     alias: {
+<<<<<<< HEAD
 
 
 
@@ -162,6 +177,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       '@': path.resolve(__dirname, './src'),
       '@components': path.resolve(__dirname, './src/components'),
       '@pages': path.resolve(__dirname, './src/pages'),
@@ -169,6 +186,7 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
+<<<<<<< HEAD
       '@assets': path.resolve(__dirname, './src/assets')
     }
   },
@@ -179,10 +197,17 @@ export default defineConfig({
     jsx: 'automatic',
   },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      '@assets': path.resolve(__dirname, './src/assets'),
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   build: {
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
     rollup_options: {
       output: {
@@ -313,15 +338,52 @@ export default defineConfig({;
   optimize_deps: {
     include: [;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     rollupOptions: {
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
+<<<<<<< HEAD
+=======
+          'ui-vendor': [
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-alert-dialog',
+            '@radix-ui/react-avatar',
+            '@radix-ui/react-checkbox',
+            '@radix-ui/react-collapsible',
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-hover-card',
+            '@radix-ui/react-label',
+            '@radix-ui/react-menubar',
+            '@radix-ui/react-navigation-menu',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-progress',
+            '@radix-ui/react-radio-group',
+            '@radix-ui/react-scroll-area',
+            '@radix-ui/react-select',
+            '@radix-ui/react-separator',
+            '@radix-ui/react-slider',
+            '@radix-ui/react-slot',
+            '@radix-ui/react-switch',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-toast',
+            '@radix-ui/react-toggle',
+            '@radix-ui/react-tooltip',
+          ],
+          'animation-vendor': ['framer-motion'],
+          'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          'icons-vendor': ['lucide-react'],
+          'state-vendor': ['@reduxjs/toolkit'],
+          'router-vendor': ['react-router-dom'],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
           const name = assetInfo.name || '';
+<<<<<<< HEAD
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
           if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
@@ -761,12 +823,20 @@ export default defineConfig({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
+=======
+          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
+          if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
+          return 'assets/[name]-[hash].[ext]';
+        },
+      },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
         passes: 2,
         unsafe: true,
         unsafe_comps: true,
@@ -778,7 +848,9 @@ export default defineConfig({
       mangle: {
         safari10: true,
         properties: {
-
+          regex: /^_/,
+        },
+      },
     },
     chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
@@ -787,17 +859,39 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: [
-      'reactreact-domreact-router-domframer-motion',
-      'lucide-react@radix-ui/react-accordion@radix-ui/react-alert-dialog@radix-ui/react-avatar',
-      '@radix-ui/react-checkbox@radix-ui/react-collapsible@radix-ui/react-dialog@radix-ui/react-dropdown-menu',
-      '@radix-ui/react-label@radix-ui/react-popover@radix-ui/react-progress@radix-ui/react-radio-group',
-      '@radix-ui/react-scroll-area@radix-ui/react-select@radix-ui/react-separator@radix-ui/react-slider',
-      '@radix-ui/react-slot@radix-ui/react-switch@radix-ui/react-tabs@radix-ui/react-toast',
-      '@radix-ui/react-tooltip'
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'framer-motion',
+      'lucide-react',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-alert-dialog',
+      '@radix-ui/react-avatar',
+      '@radix-ui/react-checkbox',
+      '@radix-ui/react-collapsible',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-label',
+      '@radix-ui/react-popover',
+      '@radix-ui/react-progress',
+      '@radix-ui/react-radio-group',
+      '@radix-ui/react-scroll-area',
+      '@radix-ui/react-select',
+      '@radix-ui/react-separator',
+      '@radix-ui/react-slider',
+      '@radix-ui/react-slot',
+      '@radix-ui/react-switch',
+      '@radix-ui/react-tabs',
+      '@radix-ui/react-toast',
+      '@radix-ui/react-tooltip',
     ],
     exclude: ['@radix-ui/react-icons'],
     esbuildOptions: {
-
+      target: 'esnext',
+    },
+  },
+  css: {
+    devSourcemap: false,
   },
   esbuild: {
     jsx: 'automatic',
@@ -811,7 +905,8 @@ export default defineConfig({
       overlay: false,
     },
     fs: {
-
+      allow: ['..'],
+    },
   },
   preview: {
     port: 4173,
@@ -821,13 +916,16 @@ export default defineConfig({
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
-
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+  },
+  envPrefix: ['VITE_', 'ZION_'],
   experimental: {
     renderBuiltUrl(filename, { hostType }) {
       if (hostType === 'js') {
         return { js: `__ASSET__${filename}__` };
       } else {
         return { relative: true };
+<<<<<<< HEAD
 
 
 
@@ -854,3 +952,9 @@ export default defineConfig({
   }
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      }
+    },
+  },
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

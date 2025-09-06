@@ -1,12 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from 'react'
 import * as ToastPrimitives from '@radix-ui/react-toast'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { X } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 <<<<<<< HEAD
 
@@ -15,6 +21,7 @@ import { cn } from '@/lib/utils'
 import { logInfo } from '@/utils/productionLogger'
 const ToastProvider = ToastPrimitives.Provider; import { logInfo } from '@/utils/productionLogger'
 const ToastProvider = ToastPrimitives.Provider
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -25,12 +32,18 @@ const ToastProvider = ToastPrimitives.Provider; import { logInfo } from '@/utils
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { cn } from '@/lib/utils';
+import { logInfo } from '@/utils/productionLogger';
+const ToastProvider = ToastPrimitives.Provider; import { logInfo } from '@/utils/productionLogger'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { logInfo } from '@/utils/productionLogger',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -50,6 +63,10 @@ const ToastProvider = ToastPrimitives.Provider
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+const ToastProvider = ToastPrimitives.Provider
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const ToastViewport = React.forwardRef<
 >>>>>>>   React.ElementRef<typeof ToastPrimitives.Viewport>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
@@ -57,6 +74,7 @@ const ToastViewport = React.forwardRef<
   <ToastPrimitives.Viewport
     ref={ref}
     className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,24 +87,18 @@ ToastViewport.displayName = ToastPrimitives.Viewport.displayName
     ),}
 >>>>>>>     {...props}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]',      className
     ),}
-=======
       "fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]",
       className
     )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {...props}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   />
 ))
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName
-<<<<<<< HEAD
-<<<<<<< HEAD
 const toastVariants = cva(
   'group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full'
   {
@@ -107,6 +119,7 @@ const toastVariants = cva(
     }
   }
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 onst toastVariants = cva(
 import React from 'react';
@@ -161,12 +174,10 @@ const toastVariants = cva(
 >>>>>>>   "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
 =======
 =======
-
 =======
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 const toastVariants = cva(
   "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -182,6 +193,7 @@ const toastVariants = cva(
     defaultVariants: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       variant: "default"}}
@@ -195,10 +207,16 @@ const toastVariants = cva(
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      variant: "default"}}
+)
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       variant: 'default',
     },
   }
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 onst Toast = React.forwardRef<
 ursor/fix-website-loading-errors-and-merge-6662
@@ -207,11 +225,11 @@ const Toast = React.forwardRef<
 >>>>>>>   React.ElementRef<typeof ToastPrimitives.Root>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       variant: "default"}}
 )
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -220,8 +238,11 @@ const Toast = React.forwardRef<
 >(({ className, variant, ...props }, ref) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
   )
 })
@@ -296,10 +317,14 @@ export {
 //       // Implementation of toast functionality
 //       logInfo('Toast:', { data: props })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 //     }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -309,6 +334,11 @@ export {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+//     },;
+//   };
+// };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <ToastPrimitives.Root
 import * as React from "react";
@@ -440,6 +470,7 @@ export {;
 //     };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 //   }
@@ -455,11 +486,15 @@ export {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-//   }
-// }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 //   }
 // }
+//   }
+// }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

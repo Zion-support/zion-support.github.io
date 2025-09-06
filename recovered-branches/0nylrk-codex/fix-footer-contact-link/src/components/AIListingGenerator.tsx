@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIListingGenerator.tsx
 
 <<<<<<< HEAD
@@ -23,6 +24,8 @@ import { Sparkles, ArrowRight } from "@/components/icons",
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -33,6 +36,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
 import {Badge} from "@/components/ui/badge";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface GeneratedContent {;
   description: string,;
@@ -64,6 +68,8 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -72,7 +78,6 @@ import { Textarea } from "@/components/ui/textarea",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Skeleton } from "@/components/ui/skeleton",
 import { Sparkles, ArrowRight } from "@/components/icons",
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 interface GeneratedContent {
@@ -95,14 +100,16 @@ interface AIListingGeneratorProps {
     category?: string;
     keyFeatures?: string;
     targetAudience?: string
-=======
 import { supabase } from "@/integrations/supabase/client",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -112,12 +119,15 @@ interface GeneratedContent {
   },
   keyPoints: string[]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 interface AIListingGeneratorProps {
@@ -138,9 +148,12 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -169,6 +182,7 @@ interface AIListingGeneratorProps {;
     keyFeatures?: string,;
     targetAudience?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -176,14 +190,19 @@ interface AIListingGeneratorProps {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title |"");
   const [category, setCategory] = useState(initialValues.category |"");
@@ -191,7 +210,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
-=======
   const { toast } = useToast(),
   const [title, setTitle] = useState(initialValues.title || ""),
   const [category, setCategory] = useState(initialValues.category || ""),
@@ -199,10 +217,12 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
   const [isLoading, setIsLoading] = useState(false),
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
       case 'title':
@@ -218,6 +238,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         setTargetAudience(e.target.value)
         break
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -260,12 +281,16 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
@@ -273,6 +298,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "Please provide at least a title and category."
         variant: "destructive"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -280,6 +306,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       });
       return
     }
@@ -290,8 +318,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       });
       if (error) {
         throw new Error(error.message)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }),
       return
 ;
@@ -643,6 +674,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       if (error) {;
         throw new Error(error.message);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -654,10 +686,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       if (data.error) {
         throw new Error(data.error)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -670,12 +705,16 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-      setGeneratedContent(data.generated);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      setGeneratedContent(data.generated);
 
       setGeneratedContent(data.generated),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -737,6 +776,7 @@ if ( {) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -749,11 +789,11 @@ if ( {) {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent);
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
@@ -790,12 +830,13 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
     }
-<<<<<<< HEAD
   }
-=======
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="space-y-6">
@@ -852,6 +893,7 @@ if ( {) {
               placeholder="e.g. Developers, Marketers, Startups"
               className="bg-zion-blue border border-zion-blue-light text-white"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -864,17 +906,15 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               disabled={isLoading}
             />
           </div>
-<<<<<<< HEAD
           <Button
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
-=======
           <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
       setGeneratedContent(data.generated),;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1125,14 +1165,13 @@ if ( {) {
             />;
           </div>;
           <Button;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
             {isLoading ? (
@@ -1171,6 +1210,7 @@ if ( {) {
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1246,6 +1286,9 @@ if ( {) {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
           <CardHeader>

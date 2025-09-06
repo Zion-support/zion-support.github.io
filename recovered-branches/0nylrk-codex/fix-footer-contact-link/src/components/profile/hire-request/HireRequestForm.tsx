@@ -19,9 +19,12 @@ import { ProjectDetailsField } from "./ProjectDetailsField",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {useHireRequestForm, FormValues} from "./useHireRequestForm";
 import {Button} from "@/components/ui/button";
@@ -56,8 +59,6 @@ export interface HireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,;
   initialJobTitle?: string;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
@@ -67,7 +68,6 @@ import { Loader2 } from "lucide-react",
 import { TalentProfile } from "@/types/talent",
 import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
-<<<<<<< HEAD
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
 export interface HireRequestFormProps {
@@ -76,7 +76,6 @@ export interface HireRequestFormProps {
   onClose: () => void
 
   initialJobTitle?: string;
-=======
 import { TimelineField } from "./TimelineField",
 import { BudgetFields } from "./BudgetFields",
 export interface HireRequestFormProps {
@@ -84,15 +83,19 @@ export interface HireRequestFormProps {
   onClose: () => void,
   initialJobTitle?: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   userDetails?: {
     name?: string,
     email?: string,
     id?: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -117,14 +120,13 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onSubmitSuccess?: () => void
 }
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
-<<<<<<< HEAD
 
   const { form, isSubmitting, onSubmit } = useHireRequestForm({
     talent
@@ -133,21 +135,20 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     initialJobTitle;
     userDetails
   });
-=======
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
     talent, 
-<<<<<<< HEAD
     onClose: onSubmitSuccess || onClose, ;
     initialJobTitle;
-=======
     onClose: onSubmitSuccess || onClose, 
     initialJobTitle,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     userDetails 
   }),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -187,11 +188,14 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             ) : (
               'Submit Request'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",;
 import { Button } from "@/components/ui/button",;
@@ -492,11 +496,6 @@ return (<Form {
 =======
             ) : (;
               'Submit Request';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </Button>
         </DialogFooter>

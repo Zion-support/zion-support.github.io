@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Head from 'next/head',
@@ -47,6 +48,18 @@ function AIAutomationTrends2025() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link';
+
+import React from 'react'
+
+import Link from 'next/link',
+import React from 'react',
+export default function AIAutomationTrends2025() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>;
       <Head>;
@@ -278,6 +291,7 @@ function AIAutomationTrends2025() {
       </div>
     </>
   )
+<<<<<<< HEAD
 
 =======
 =======
@@ -988,19 +1002,24 @@ export default function AIAutomationTrends2025() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 };
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1017,3 +1036,5 @@ export default function AIAutomationTrends2025() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

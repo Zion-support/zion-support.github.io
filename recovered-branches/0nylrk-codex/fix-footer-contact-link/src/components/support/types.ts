@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { ReactNode  } from './react';
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ReactNode } from "react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export interface HelpArticle {
@@ -19,8 +22,11 @@ export interface HelpArticle {
 
 }
 export interface HelpCategory {
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {ReactNode} from "react";
 export interface HelpArticle {;
   id: string;
@@ -37,12 +43,15 @@ export interface HelpCategory {
 }
 
 export interface HelpCategory {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   description: string;
@@ -51,15 +60,22 @@ export interface HelpCategory {;
   articles: HelpArticle[]
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+export interface SupportTicket {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 export interface SupportTicket {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   user_id: string;
   subject: string;
@@ -70,6 +86,7 @@ export interface SupportTicket {;
   created_at: string;
   updated_at: string;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -77,6 +94,9 @@ export interface SupportTicket {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ReactNode } from "react",
 export interface HelpArticle {
   id: string,
@@ -137,6 +157,7 @@ updatedAt: string;
   updatedAt: string;
 }
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,3 +168,5 @@ updatedAt: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

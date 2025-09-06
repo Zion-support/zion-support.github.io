@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -227,15 +228,14 @@ export default function ApiMockContractTestingPage(req, res) {
             ))}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
 export default function ApiMockContractTestingPage() {
-=======
-<<<<<<< HEAD
 import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
@@ -245,7 +245,6 @@ export default function ApiMockContractTestingPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com',  };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -259,7 +258,6 @@ export default function ApiMockContractTestingPage() {
         'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.'
       price: 'Starting at $69/month'
       features: [
-<<<<<<< HEAD
         'OpenAPI/GraphQL import and live mock server'
         'Contract tests gated in CI (GitHub/GitLab/Bitbucket)'
         'Dynamic data generators and scenario templates'
@@ -268,7 +266,6 @@ export default function ApiMockContractTestingPage() {
       link: 'https://ziontechgroup.com/api-mock-contract-testing'
       contactInfo
     }
-=======
         'OpenAPI/GraphQL import and live mock server',
         'Contract tests gated in CI (GitHub/GitLab/Bitbucket)',
         'Dynamic data generators and scenario templates',
@@ -277,7 +274,6 @@ export default function ApiMockContractTestingPage() {
       link: 'https://ziontechgroup.com/api-mock-contract-testing',
       contactInfo,;
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const tiers = [
     {
@@ -296,12 +292,8 @@ export default function ApiMockContractTestingPage() {
       items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support']
     },  ];
 
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
@@ -338,11 +330,6 @@ export default function ApiMockContractTestingPage(req, res) {
   }
 }
   ],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Layout>
@@ -351,6 +338,7 @@ export default function ApiMockContractTestingPage(req, res) {
         <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />
         <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <ServiceAds heading="API Quality Fast-Track" subheading="Mock, validate, and ship with confidence." items={adItems} />
@@ -393,6 +381,8 @@ export default function ApiMockContractTestingPage(req, res) {
                   ))}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
         <ServiceAds
           heading='API Quality Fast-Track'
@@ -443,7 +433,6 @@ export default function ApiMockContractTestingPage(req, res) {
                 <MapPin />
                 <span>{contactInfo.address}</span>
               </div>
-=======
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <ServiceAds heading="API Quality Fast-Track" subheading="Mock, validate, and ship with confidence." items={adItems} />
         <div className="max-w-5xl mx-auto mt-8">
@@ -495,17 +484,21 @@ export default function ApiMockContractTestingPage(req, res) {
 =======
               <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -641,13 +634,11 @@ export default function ApiMockContractTestingPage(req, res) {
 ;
 =======
 <<<<<<< HEAD
-);
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+);
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -656,9 +647,12 @@ export default function ApiMockContractTestingPage(req, res) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

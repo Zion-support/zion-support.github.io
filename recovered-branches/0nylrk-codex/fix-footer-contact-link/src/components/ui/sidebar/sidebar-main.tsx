@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
 
 }
@@ -10,6 +11,8 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from &quot;react&quot;
 import type { CSSProperties } from &quot;react&quot;
 import { Sheet, SheetContent } from &quot;@/components/ui/sheet&quot;
@@ -20,8 +23,11 @@ export interface SidebarProps extends React.ComponentProps<&quot;div&quot;> {
   side?: &quot;left&quot; | &quot;right&quot;
   variant?: &quot;sidebar&quot; | &quot;floating&quot; | &quot;inset&quot;
   collapsible?: &quot;offcanvas&quot; | &quot;icon&quot; | &quot;none&quot;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react"
 import type { CSSProperties } from "react"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
@@ -33,6 +39,7 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   side?: "left" | "right"
   variant?: "sidebar" | "floating" | "inset"
   collapsible?: "offcanvas" | "icon" | "none"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -49,29 +56,30 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (props.collapsible === &quot;none&quot;) {
     return (
       <div
         className={cn(
           &quot;flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground&quot;
-=======
 ;
   if (props.collapsible === &quot;none&quot;) {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
   if (props.collapsible === "none") {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return (
       <div
         className={cn(
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -135,6 +143,8 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           props.className
         )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -206,32 +216,36 @@ if (isMobile) {
       </Sheet>
     )
   }
-<<<<<<< HEAD
   return (;
     <div;
       ref={ref}
 className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   return (;
     <div;
       ref={ref}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      className="group peer hidden md:block text-sidebar-foreground"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      className="group peer hidden md:block text-sidebar-foreground"
 className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
-=======
       className="group peer hidden md:block text-sidebar-foreground"
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
@@ -252,15 +266,17 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       {/* This is what handles the sidebar gap on desktop */}
 <div
         className={cn(
-<<<<<<< HEAD
           "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear&quot;
           &quot;group-data-[collapsible=offcanvas]:w-0&quot;
           &quot;group-data-[side=right]:rotate-180&quot;
           props.variant === &quot;floating&quot; |props.variant === &quot;inset&quot;
             ? &quot;group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]&quot;
             : &quot;group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear",
           "group-data-[collapsible=offcanvas]:w-0",
           "group-data-[side=right]:rotate-180",
@@ -268,21 +284,27 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
             ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       />
       <div
         className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex&quot;
           props.side === &quot;left&quot;
             ? &quot;left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]&quot;
@@ -291,7 +313,6 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.variant === &quot;floating&quot; |props.variant === &quot;inset&quot;
             ? &quot;p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]&quot;
             : &quot;group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l&quot;
-=======
           "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex",
           props.side === "left"
             ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
@@ -300,8 +321,11 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.variant === "floating" || props.variant === "inset"
             ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           props.className
         )}
         {...props}
@@ -317,29 +341,32 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
   )
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 Sidebar.displayName = &quot;Sidebar&quot;
 export const SidebarRail = React.forwardRef<
   HTMLButtonElement
   React.ComponentProps<&quot;button&quot;>
-=======
 Sidebar.displayName = "Sidebar"
 
 export const SidebarRail = React.forwardRef<
-<<<<<<< HEAD
   HTMLButtonElement,;
   React.ComponentProps<&quot;button&quot;>
-=======
   HTMLButtonElement,
   React.ComponentProps<"button">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
   return (
@@ -351,6 +378,7 @@ export const SidebarRail = React.forwardRef<
       onClick={toggleSidebar}
       title="Toggle Sidebar"
       className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -488,14 +516,19 @@ export const SidebarRail = React.forward_ref<;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex&quot;
         &quot;[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize&quot;
         &quot;[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize&quot;
         &quot;group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar&quot;
         &quot;[[data-side=left][data-collapsible=offcanvas]_&]:-right-2&quot;
         &quot;[[data-side=right][data-collapsible=offcanvas]_&]:-left-2&quot;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
         "[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize",
         "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
@@ -503,18 +536,22 @@ export const SidebarRail = React.forward_ref<;
         "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",
         "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         props.className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -529,31 +566,34 @@ export const SidebarInset = React.forwardRef<
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 SidebarRail.displayName = &quot;SidebarRail&quot;
 export const SidebarInset = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<&quot;main">
-=======
 SidebarRail.displayName = "SidebarRail"
 
 export const SidebarInset = React.forwardRef<
-<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;main">
-=======
   HTMLDivElement,
   React.ComponentProps<"main">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >((props, ref) => {
   return (
     <main
       ref={ref as SafeRef<HTMLDivElement>}
       className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -566,19 +606,24 @@ export const SidebarInset = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "relative flex min-h-svh flex-1 flex-col bg-background&quot;
         &quot;peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow&quot;
-=======
         "relative flex min-h-svh flex-1 flex-col bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         props.className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -720,8 +765,12 @@ SidebarInset.displayName = "SidebarInset";)
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
 =======
 <<<<<<< HEAD
-SidebarInset.displayName = &quot;SidebarInset"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+SidebarInset.displayName = &quot;SidebarInset"
 SidebarInset.displayName = "SidebarInset"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

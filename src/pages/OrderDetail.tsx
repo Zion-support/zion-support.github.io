@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -20,13 +21,14 @@ import { use_auth } from '@/hooks / use_auth';
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { ArrowLeft, Package, CreditCard, MapPin, Clock, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Link from 'next/link';
 
 import { useAuth } from '@/hooks/useAuth';
@@ -135,6 +137,7 @@ const getStatusIcon = (status: string) => {
       return <Clock className="h-4 w-4" />;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -142,14 +145,18 @@ export default function OrderDetail() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default function OrderDetail() {
-=======
 };
 
 export default function OrderDetail() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const router = useRouter();
   const { user } = useAuth();
   const [order, setOrder] = useState<Order | null>(null);
@@ -335,11 +342,14 @@ if ( {) {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Link from 'next/link',;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     );
   }
@@ -716,9 +726,6 @@ export default function OrderDetailPage() {;
   );
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 import { Button } from '@/components/ui/button',;
@@ -787,19 +794,18 @@ export default function OrderDetailPage() {;
     return (
       <div className="container max-w-3xl py-10">
         <Skeleton className="h-6 w-full" />
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </div>
     )
   }
 
   return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className="container mx-auto px-4 py-8">
       <div className="mb-6">
         <Link href="/orders">
@@ -1143,8 +1149,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className="container max-w-3xl py-10 space-y-6">
       <h1 className="text-3xl font-bold">Order #{order.orderId}</h1>
 
@@ -1188,8 +1192,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

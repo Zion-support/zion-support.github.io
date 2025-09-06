@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
 
 <<<<<<< HEAD
@@ -6,6 +7,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Slider} from "@/components/ui/slider";
@@ -28,9 +31,12 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter])
     }
   };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -40,6 +46,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { X, Filter } from "lucide-react",
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const removeFilter = (filter: string) => {
@@ -70,6 +77,8 @@ interface BrowseFiltersProps {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Label } from "@/components/ui/label";
 interface BrowseFiltersProps {
   type: "jobs" | "talents"
@@ -86,7 +95,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   }
 
-=======
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
   type: "jobs" | "talents"
@@ -112,15 +120,19 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -128,6 +140,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useCurrency } from '@/hooks/useCurrency'
@@ -13,6 +14,10 @@ import {logErrorToProduction} from '@/utils/productionLogger'
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { useCurrency } from '@/hooks/useCurrency'
+import {logErrorToProduction} from '@/utils/productionLogger'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -26,11 +31,14 @@ import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertC
 import { formatDistanceToNow } from "date-fns",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface Transaction {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { safeStorage } from "@/utils/safeStorage";
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -87,6 +95,7 @@ export function TransactionHistory() {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> interface Transaction {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id: string,
@@ -103,13 +112,11 @@ export function TransactionHistory() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { safeStorage } from "@/utils/safeStorage",
 import { useCurrency } from '@/hooks/useCurrency',
 import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Transaction {
   id: string,
   user_id: string,
@@ -121,9 +128,12 @@ interface Transaction {
   in_escrow: boolean,
   created_at: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   completed_at?: string
   refunded_at?: string
   cancelled_at?: string
@@ -166,11 +176,14 @@ export function TransactionHistory() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   completed_at?: string,
   refunded_at?: string,
   cancelled_at?: string,
@@ -715,6 +728,7 @@ export function TransactionHistory() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -728,3 +742,5 @@ export function TransactionHistory() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

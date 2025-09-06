@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 
@@ -140,14 +138,12 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, event, url, referrer } = req.body |{}
   if (!code |!event) return res.status($1).json({ $2 });
@@ -186,7 +182,6 @@ if ( {) {
 
 =======
     return res.status(200).json({ saved: false, error: e?.message });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -211,8 +206,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (error) return res.status(500).json({ error: 'Database error' });
     return res.status(200).json({ saved: true })
   } catch (e: any) {
-<<<<<<< HEAD
     return res.status(200).json({ saved: false, error: e?.message })
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
@@ -221,8 +216,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 =======
-    return res.status(200).json({ saved: false, error: e?.message });
 =======
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    return res.status(200).json({ saved: false, error: e?.message });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -284,6 +282,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
@@ -296,3 +295,7 @@ export default async function handler(req, res) {
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

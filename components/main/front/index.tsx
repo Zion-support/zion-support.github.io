@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -215,14 +216,13 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
-import Head from 'next/head',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import Head from 'next/head',
 import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 
 import {
-<<<<<<< HEAD
   Cpu
   Gauge
   GitBranch
@@ -237,9 +237,12 @@ import {
   Link2
   Palette
   LineChart;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Cpu,
   Gauge,
   GitBranch,
@@ -430,6 +433,7 @@ function MainFrontIndex() {
 =======
   Palette,;
   LineChart,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from 'lucide-react';import { motion, useScroll, useSpring } from 'framer-motion';import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
@@ -451,9 +455,15 @@ export default function MainFrontIndex() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-export default function MainFrontIndex() {;
 =======
+} from 'lucide-react';import { motion, useScroll, useSpring } from 'framer-motion';import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function MainFrontIndex() {;
+
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -463,6 +473,9 @@ export default function MainFrontIndex() {
 export default function MainFrontIndex() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default function MainFrontIndex() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { scrollYProgress } = useScroll();
   const progressX = useSpring(scrollYProgress, {
     stiffness: 90
@@ -479,6 +492,7 @@ export default function MainFrontIndex() {
     const onScroll = () => setShowToTop(window.scrollY > 400);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -490,6 +504,8 @@ export default function MainFrontIndex() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     window.addEventListener('scroll', onScroll, { passive: true } as any);
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
@@ -1138,15 +1154,9 @@ export default function MainFrontIndex() {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </nav>
-=======
 
         </nav>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Mobile overlay menu */}
         {mobileOpen && (
           <motion.div
@@ -1154,22 +1164,19 @@ export default function MainFrontIndex() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className=&quot;fixed inset-0 z-40 bg-slate-950/80 backdrop-blur&quot;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='fixed inset-0 z-40 bg-slate-950/80 backdrop-blur'            onClick={() => setMobileOpen(false)}            className="fixed inset-0 z-40 bg-slate-950/80 backdrop-blur"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             onClick={() => setMobileOpen(false)}
-=======
             className='fixed inset-0 z-40 bg-slate-950/80 backdrop-blur'            onClick={() => setMobileOpen(false)}
 
             onClick={() => setMobileOpen(false)}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <motion.div
               initial={{ y: -20, opacity: 0 }}
@@ -1215,14 +1222,7 @@ export default function MainFrontIndex() {
 =======
               className='mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-white/5 p-6 text-white shadow-xl'
               onClick={e => e.stopPropagation()}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='mb-4 flex items-center justify-between'>
                 <div className='text-lg font-semibold'>Navigate</div>
@@ -1328,6 +1328,7 @@ export default function MainFrontIndex() {
         )}
       </header>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       {/* Hero */}
 <<<<<<< HEAD
@@ -1346,22 +1347,18 @@ export default function MainFrontIndex() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Hero */}
       <div role='main' className='relative z-10'>        <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'      <div role="main" className="relative z-10">
-=======
           className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1369,10 +1366,13 @@ export default function MainFrontIndex() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1398,6 +1398,8 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
             </div>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'
           <div className='text-center'>
             <div className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'>
@@ -2052,6 +2054,7 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
                   <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">{label as string}</a>
                 </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
               ))}
             </div>;
           </div>;
@@ -2466,14 +2469,11 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
 <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI SEO Auditor</div><div className="mt-1 text-sm text-white/75">On‑site improvements</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                 </Link>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
@@ -2509,15 +2509,8 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
                 <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                   Open <span aria-hidden>→</span>
                 </div>
-<<<<<<< HEAD
-=======
 
               </a>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Link>
             <Link href='#capabilities'>
               <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo'>
@@ -2743,7 +2736,6 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
 =======
         </section>
         {/* Floating Quick-Nav Dock */}
-<<<<<<< HEAD
         <aside className='fixed left-4 top-1/2 z-30 -translate-y-1/2 block'>
           <nav aria-label='Quick section navigation' className='space-y-2'>
             {[
@@ -3209,18 +3201,21 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="engines"
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className="mx-auto max-w-7xl px-6 pb-14"
         >
@@ -3327,6 +3322,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
               <div className="mt-3 text-xs text-cyan-300/90">Open →</div>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pb-14'
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Autonomous Engines (Beyond GitHub Actions)
@@ -3374,18 +3371,21 @@ className="mx-auto max-w-7xl px-6 pb-14"
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="innovations"
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className="mx-auto max-w-7xl px-6 pb-14"
         >
@@ -3407,6 +3407,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
             <a href="/.netlify/functions/autonomous-invention-orchestrator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pb-14'
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Autonomous Innovations
@@ -4042,22 +4044,15 @@ className="mx-auto max-w-7xl px-6 pb-14"
                 ) : (
                   <Link href={card.href as string}><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a></Link>
                 )}
-=======
 
                 )}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </article>
             ))}
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -4065,6 +4060,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Netlify Automations */}
         <motion&& motion.section
           id='netlify-automations'          initial={{ opacity: 0, y: 24 }}
@@ -4175,21 +4172,13 @@ className="mx-auto max-w-7xl px-6 pb-14"
 =======
 =======
           viewport={{ once: true, amount: 0.2 }}
-<<<<<<< HEAD
           transition={{ duration: 0.5 }}          id="netlify-automations"
-=======
           transition={{ duration: 0.5 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -4663,20 +4652,23 @@ className="mx-auto max-w-7xl px-6 pb-14"
                   <p className="mt-1 text-sm text-white/75">{desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
                 </a>
-=======
 
                 </a>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -4793,6 +4785,9 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* AUTO-GENERATED: FRONT_ADS_START */}
                 Icon: ShieldCheck,
                 title: 'Guardrails',
@@ -4921,6 +4916,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
         </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* AUTO-GENERATED: FRONT_ADS_END */}
 
 =======
@@ -4933,6 +4929,10 @@ className="mx-auto max-w-7xl px-6 pb-14"
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+        {/* AUTO-GENERATED: FRONT_ADS_END */}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Outcome Benefits */}
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -4941,11 +4941,15 @@ className="mx-auto max-w-7xl px-6 pb-14"
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
+<<<<<<< HEAD
 
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Outcome‑Focused Benefits
@@ -5107,6 +5111,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
                   <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span> — {b.desc} <span className="ml-1 text-cyan-300/90">→</span></span>
                 </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -5126,10 +5131,14 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -5228,6 +5237,9 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Suites */}
         <motion&& motion.section
           id='suites'          initial={{ opacity: 0, y: 24 }}
@@ -5253,6 +5265,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -5266,16 +5279,20 @@ className="mx-auto max-w-7xl px-6 pb-14"
           whileInView={{ opacity: 1, y: 0 }}
 
 =======
-          className='mx-auto max-w-7xl px-6 pb-14'          id="suites"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          className='mx-auto max-w-7xl px-6 pb-14'          id="suites"
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -5322,6 +5339,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -5340,6 +5358,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
             {[;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -5547,7 +5567,6 @@ className="mx-auto max-w-7xl px-6 pb-14"
 =======
           </div>
         </motion.section>
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </article>
@@ -5556,6 +5575,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
           </div>
         </motion.section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -5568,6 +5588,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Superpowers */}
         <motion.section
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -5578,6 +5600,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
+<<<<<<< HEAD
 
 =======
 
@@ -5679,13 +5702,10 @@ className="mx-auto max-w-7xl px-6 pb-14"
           className='mx-auto max-w-7xl px-6 pb-14'
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Superpowers
           </h2>
@@ -5726,6 +5746,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
                 <Icon className="h-6 w-6 text-cyan-300" />
                 <h3 className="mt-3 text-lg font-semibold">{title}</h3>
                 <p className="mt-1 text-sm text-white/75">{desc}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -5814,10 +5835,11 @@ className="mx-auto max-w-7xl px-6 pb-14"
         <motion&& motion.section
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         </motion.section>
-=======
 
               </article>
 
@@ -5825,11 +5847,6 @@ className="mx-auto max-w-7xl px-6 pb-14"
           </div>
         </motion.section>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Get Started */}
         <motion.section
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -5849,16 +5866,17 @@ className="mx-auto max-w-7xl px-6 pb-14"
                 <p className="mt-1 text-xs text-white/75">See live autonomous suites and workflows.</p>
 =======
           className='mx-auto max-w-7xl px-6 pb-14'
-<<<<<<< HEAD
-=======
 
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Get Started in Minutes
           </h2>
@@ -6013,17 +6031,18 @@ className="mx-auto max-w-7xl px-6 pb-14"
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'          id="features"
-=======
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -6054,6 +6073,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -6075,6 +6095,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -6649,7 +6671,6 @@ className="mx-auto max-w-7xl px-6 pb-14"
                   <p className="mt-2 text-sm text-white/75">{desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Learn more <Link2 className="h-3.5 w-3.5" /></div>
                 </a>
-=======
 
 <<<<<<< HEAD
 
@@ -6696,11 +6717,6 @@ className="mx-auto max-w-7xl px-6 pb-14"
 =======
                 </a>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Link>
             ))}
 <<<<<<< HEAD
@@ -6711,14 +6727,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
 =======
           </div>
         </motion.section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Outcomes */}
         <motion.section
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -6736,16 +6745,17 @@ className="mx-auto max-w-7xl px-6 pb-14"
           <div className="relative mx-auto mt-6 max-w-6xl overflow-hidden">
 =======
           className='mx-auto max-w-7xl px-6 pb-14'
-<<<<<<< HEAD
-=======
 
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Outcomes
           </h2>
@@ -6816,7 +6826,6 @@ className="mx-auto max-w-7xl px-6 pb-14"
                     <Link key={`${item.label}-${idx}`} href={item.href}>
                       <a className='mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10'>
                         <span className='h-1.5 w-1.5 rounded-full bg-cyan-400' />{' '}
-<<<<<<< HEAD
                         {item.label}                      </a>                  { label: 'Experiment velocity', href: '/automation' }]
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   .flatMap((item) => [item, item])
@@ -6824,6 +6833,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
                     <Link key={`${item.label}-${idx}`} href={item.href}>
                       <a className="mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">
                         <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {item.label}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       </a>
@@ -6840,10 +6850,13 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         {item.label}                      </a>
 
                       </a>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -6851,12 +6864,15 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Link>
                   ))}
               </div>
             </div>
           </div>
         </motion.section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -6934,6 +6950,9 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Feature Map */}
         <motion.section
           id="feature-map"
@@ -7747,6 +7766,7 @@ label: 'Live Dashboards',
         {/* Platform Modules */}
         <motion.section
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -8107,29 +8127,26 @@ label: 'Live Dashboards',
 
 =======
 <<<<<<< HEAD
-          id='modules'          id="feature-map"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          id='modules'          id="feature-map"
           id='modules'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -8159,7 +8176,6 @@ label: 'Live Dashboards',
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {
-<<<<<<< HEAD
                 Icon: Rocket
                 title: 'Autonomous Factories'
                 desc: 'Composable, domain‑specific automation factories.'
@@ -8689,7 +8705,6 @@ label: 'Live Dashboards',
             ))}
           </div>
         </motion.section>
-=======
                 Icon: Rocket,
                 title: 'Autonomous Factories',
                 desc: 'Composable, domain‑specific automation factories.',
@@ -8748,9 +8763,7 @@ label: 'Live Dashboards',
           </div>
         </motion.section>
         {/* AUTO: catalog injection for automated advertising */}
-<<<<<<< HEAD
 
-=======
         {
           /* AUTO:FRONT_INDEX_DIRECTORY_START */
 <section id="auto-catalog" className="mx-auto max-w-7xl px-6 pb-16">
@@ -8811,21 +8824,13 @@ label: 'Live Dashboards',
                   </div>
                   <p className="mt-2 text-sm text-white/75">{desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" /></div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </a>
 
               </Link>
             ))}
           </div>
         </motion.section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Neural Feature Matrix */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -8833,14 +8838,7 @@ label: 'Live Dashboards',
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Neural Feature Matrix
@@ -9089,6 +9087,7 @@ label: 'Live Dashboards',
                 </Link>
               )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           </div>
         </motion.section>
@@ -9100,6 +9099,8 @@ label: 'Live Dashboards',
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}          </div>        >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -9265,16 +9266,11 @@ label: 'Live Dashboards',
               )
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ))}
-=======
             )}          </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </motion.section>
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
         </motion && motion.section>;
@@ -9283,12 +9279,9 @@ label: 'Live Dashboards',
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Extended Feature Directory */}
         <motion.section
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -9386,14 +9379,7 @@ label: 'Live Dashboards',
             {[;
 =======
           className='mx-auto max-w-7xl px-6 pb-14'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Extended Feature Directory
@@ -9562,6 +9548,7 @@ label: 'Live Dashboards',
                 </Link>
               )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           </div>
         </motion.section>
@@ -9573,6 +9560,8 @@ label: 'Live Dashboards',
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}          </div>        >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -9607,16 +9596,11 @@ label: 'Live Dashboards',
                 </Link>
               )
             ))}
-=======
             )}          </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </motion.section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring'>;
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
@@ -9822,12 +9806,9 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Capability Deep Links */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -9835,14 +9816,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Capability Deep Links
@@ -9950,7 +9924,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                   </a>
                 </Link>
               )
-<<<<<<< HEAD
             )}          </div>        >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capability Deep Links</h2>
@@ -10035,7 +10008,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
             ))}
           </div>
         </motion.section>
-=======
             )}          </div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -10043,6 +10015,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 
         </motion.section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -10056,6 +10029,8 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Use Cases */}
         <motion&& motion.section
           id='use-cases'          initial={{ opacity: 0, y: 24 }}
@@ -10078,17 +10053,18 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 =======
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'          id="use-cases"
-=======
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0 && 0.2 }}
@@ -10180,6 +10156,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className='mx - auto max - w-7xl px - 6 pb - 16';
         >;
@@ -10316,6 +10293,8 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pb-14'
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Use Cases
@@ -10679,15 +10658,10 @@ className="mx-auto max-w-7xl px-6 pb-14"
                 </Link>
               )
             ))}
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </motion.section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30'>;
@@ -10780,6 +10754,9 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Capabilities */}
         <motion&& motion.section
           id='capabilities'          initial={{ opacity: 0, y: 24 }}
@@ -10814,17 +10791,18 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
 =======
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'          id="capabilities"
-=======
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -10861,6 +10839,7 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className='mx - auto max - w-7xl px - 6 pb - 14'          id="capabilities";
           initial={{ opacity: 0, coordinate_y: 24 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -10878,6 +10857,8 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -11033,7 +11014,6 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
                   </div>
                   <p className="mt-1 text-sm text-white/75">{desc}</p>
                 </a>
-=======
 
 <<<<<<< HEAD
 
@@ -11047,15 +11027,19 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
                 </a>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -11211,12 +11195,9 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Why Zion */}
         <motion.section
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -11227,6 +11208,7 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
+<<<<<<< HEAD
 
 =======
 
@@ -11311,13 +11293,10 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
           className='mx-auto max-w-7xl px-6 pb-14'
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Why Zion
           </h2>
@@ -11359,6 +11338,7 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
                 <div className="mt-1 text-sm text-white/75">{desc as string}</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -11373,10 +11353,11 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
         </motion && motion.section>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         </motion.section>
-=======
 
 <<<<<<< HEAD
 
@@ -11394,12 +11375,15 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
         </motion.section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Value Pillars */}
         <motion&& motion.section
           id='pillars'          initial={{ opacity: 0, y: 24 }}
@@ -11425,6 +11409,7 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -11438,16 +11423,20 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
           whileInView={{ opacity: 1, y: 0 }}
 
 =======
-          className='mx-auto max-w-7xl px-6 pb-14'          id="pillars"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          className='mx-auto max-w-7xl px-6 pb-14'          id="pillars"
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -11500,6 +11489,7 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -11571,6 +11561,8 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
             {[;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -11626,7 +11618,6 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
                   </div>
                   <p className="mt-1 text-sm text-white/75">{desc}</p>
                 </a>
-=======
 
 <<<<<<< HEAD
 
@@ -11640,15 +11631,19 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
                 </a>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -11743,6 +11738,9 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Benefits */}
         <motion&& motion.section
           id='benefits'          initial={{ opacity: 0, y: 24 }}
@@ -11787,11 +11785,10 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
 =======
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-20'          id="benefits"
-=======
           className='mx-auto max-w-7xl px-6 pb-20'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -11799,10 +11796,13 @@ className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdro
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -11820,6 +11820,8 @@ className="mx-auto max-w-7xl px-6 pb-20"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pb-20'
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Benefits
@@ -12029,7 +12031,6 @@ className="mx-auto max-w-7xl px-6 pb-20"
 =======
           </div>
         </motion.section>
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
@@ -12038,6 +12039,7 @@ className="mx-auto max-w-7xl px-6 pb-20"
           </div>
         </motion.section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -12050,6 +12052,8 @@ className="mx-auto max-w-7xl px-6 pb-20"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Benefits in Practice */}
         <motion.section
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -12060,6 +12064,7 @@ className="mx-auto max-w-7xl px-6 pb-20"
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'
+<<<<<<< HEAD
 
 =======
 
@@ -12227,12 +12232,9 @@ className="mx-auto max-w-7xl px-6 pb-20"
           className='mx-auto max-w-7xl px-6 pb-16'
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Benefits in Practice
@@ -12498,7 +12500,6 @@ className="mx-auto max-w-7xl px-6 pb-20"
 =======
 =======
         {/* Tailored Value by Team */}
-<<<<<<< HEAD
         <section className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Tailored Value by Team
@@ -12652,6 +12653,7 @@ className="mx-auto max-w-7xl px-6 pb-20"
           transition={{ duration: 0 && 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="reports"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -12668,17 +12670,13 @@ className="mx-auto max-w-7xl px-6 pb-20"
 =======
 =======
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -12812,8 +12810,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
               <p className="mt-1 text-sm text-white/75">Futuristic micro‑interactions and motion design system.</p>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="mt-3 text-xs text-cyan-300/90">Docs →</div>
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -12838,6 +12836,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </a>
           </div>
         </motion.section>
@@ -12968,7 +12968,6 @@ className="mx-auto max-w-7xl px-6 pb-16"
 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">
 =======
           className='mx-auto max-w-7xl px-6 pb-16'
-<<<<<<< HEAD
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Quality Gates & Guardrails
           </h2>
@@ -13216,18 +13215,11 @@ className="mx-auto max-w-7xl px-6 pb-16"
           className="mx-auto max-w-7xl px-6 pb-24"
 =======
         <motion.section
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-16'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         >
@@ -13976,27 +13968,14 @@ className="mx-auto max-w-7xl px-6 pb-16"
                   <div className="text-sm font-semibold text-white">{title as string}</div>
                   <div className="mt-1 text-xs text-white/70">{desc as string}</div>
                 </a>
-=======
 
                 </a>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Link>
             ))}
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <motion.section
@@ -14531,6 +14510,7 @@ className="mx-auto max-w-7xl px-6 pb-16"
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           id="agents"
@@ -14541,16 +14521,20 @@ className="mx-auto max-w-7xl px-6 pb-16"
 
 =======
 <<<<<<< HEAD
-          className='mx-auto max-w-7xl px-6 pb-14'          id="agents"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          className='mx-auto max-w-7xl px-6 pb-14'          id="agents"
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -14560,6 +14544,7 @@ className="mx-auto max-w-7xl px-6 pb-16"
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -14584,6 +14569,8 @@ className="mx-auto max-w-7xl px-6 pb-16"
             {[;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -14668,7 +14655,6 @@ className="mx-auto max-w-7xl px-6 pb-16"
                   <p className="mt-1 text-sm text-white/75">{desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
                 </a>
-=======
 
 <<<<<<< HEAD
 
@@ -14682,15 +14668,19 @@ className="mx-auto max-w-7xl px-6 pb-16"
                 </a>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -14804,6 +14794,9 @@ className="mx-auto max-w-7xl px-6 pb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Capabilities Matrix */}
         <motion&& motion.section
           id='capability-matrix'          initial={{ opacity: 0, y: 24 }}
@@ -14829,6 +14822,7 @@ className="mx-auto max-w-7xl px-6 pb-16"
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -14842,16 +14836,20 @@ className="mx-auto max-w-7xl px-6 pb-16"
           whileInView={{ opacity: 1, y: 0 }}
 
 =======
-          className='mx-auto max-w-7xl px-6 pb-16'          id="capability-matrix"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          className='mx-auto max-w-7xl px-6 pb-16'          id="capability-matrix"
           className='mx-auto max-w-7xl px-6 pb-16'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -14903,6 +14901,7 @@ className="mx-auto max-w-7xl px-6 pb-16"
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           </div>
         </motion.section>
@@ -14931,6 +14930,8 @@ className="mx-auto max-w-7xl px-6 pb-16"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pb-16'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -15147,15 +15148,10 @@ className="mx-auto max-w-7xl px-6 pb-16"
                 </Link>
               )
             ))}
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </motion.section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo'>;
@@ -15248,6 +15244,9 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Benefits Directory */}
         <motion&& motion.section
           id='benefits-directory'          initial={{ opacity: 0, y: 24 }}
@@ -15273,6 +15272,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -15286,16 +15286,20 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
           whileInView={{ opacity: 1, y: 0 }}
 
 =======
-          className='mx-auto max-w-7xl px-6 pb-16'          id="benefits-directory"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          className='mx-auto max-w-7xl px-6 pb-16'          id="benefits-directory"
           className='mx-auto max-w-7xl px-6 pb-16'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -15373,6 +15377,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -15395,6 +15400,8 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
             {[;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pb-16'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -15474,7 +15481,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                   <p className="mt-1 text-sm text-white/75">{b.desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Explore <span aria-hidden>→</span></div>
                 </a>
-=======
 
 <<<<<<< HEAD
 
@@ -15488,15 +15494,19 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                 </a>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -15905,9 +15915,12 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* AUTO-GENERATED: FRONT_ADS_START */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        {/* AUTO-GENERATED: FRONT_ADS_START */}
+
         <section id='auto-ads' className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Auto‑advertised Highlights
@@ -16002,12 +16015,13 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
           </div>
         </section>
         {/* AUTO-GENERATED: FRONT_ADS_END */}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Feature Highlights (new) */}
         <motion&& motion.section
           id='feature-highlights'          initial={{ opacity: 0, y: 24 }}
@@ -16075,7 +16089,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 =======
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'          </div>
         </section>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -16083,6 +16096,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
         {/* Feature Highlights (new) */}
         <motion&& motion.section
           id="feature-highlights"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -16094,6 +16108,10 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+          className='mx-auto max-w-7xl px-6 pb-14'
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
             <a;
@@ -16126,6 +16144,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className='mx - auto max - w-7xl px - 6 pb - 14'          </div>;
         </section>;
 {/* AUTO - GENERATED: FRONT_ADS_END */}
@@ -16148,6 +16167,8 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
             {[;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='mx-auto max-w-7xl px-6 pb-14'
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Feature Highlights
@@ -16329,13 +16350,13 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
               { title: 'SEO Audit Runner', href: '/.netlify/functions/seo-audit-runner' }
               { title: 'AI Trends Radar', href: '/.netlify/functions/ai-trends-radar-runner' }
               { title: 'Front Index Directory Builder', href: '/.netlify/functions/front-index-directory-builder' }
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* existing reports content */}
         </section>
 
         {/* New Intelligent Automations */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -16346,6 +16367,8 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               { title: 'Revenue Ideas Promoter', href: '/.netlify/functions/revenue-ideas-promoter' }].map((tool) => (
@@ -16356,6 +16379,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
             ))}
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -16467,14 +16491,14 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           {/* existing reports content */}
         </section>
 
         {/* New Intelligent Automations */}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Back to top */}
@@ -16484,6 +16508,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className='fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]'
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -17265,17 +17290,21 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 =======
           className='fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]'
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           aria-label='Scroll to top'        >          className="fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]"
           aria-label="Scroll to top"
-=======
           aria-label='Scroll to top'        >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           ↑ Top
         </button>
@@ -17371,14 +17400,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 }</div> </div> </div>) );
 =======
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /* AUTO-GENERATED: FRONT_ACTIONS_START */
 <section className='mx-auto max-w-7xl px-6 pb-14'>
   <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -17550,18 +17572,15 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
   </div>
 </section>;
 /* AUTO-GENERATED: FRONT_ACTIONS_END */
-<<<<<<< HEAD
 }</div>
-<<<<<<< HEAD
 }</div> </div> </div>) )
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 }</div> 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</div> </div> </div>) ) 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }</div> </div> </motion.section> {
   /* Showcase */;
 }<motion.section > <h2 className="text - center text - 2xl font - bold tracking - wide text - white / 90" >Showcase: Features, Capabilities, Benefits</h2> <p className="mx - auto mt - 2 max - w-3xl text - center text - sm text - white / 70" >Jump into highlighted areas of the platform. Every card links to a deep section or dedicated page.</p> <div className="mt - 6 grid grid - cols - 1 gap - 5 sm:grid - cols - 2 lg:grid - cols - 3" > <Link href="#features" > <a className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <div className="flex items - center gap - 2" ><Zap className="h - 5 w - 5 text - cyan - 300" /><h3 className="text - lg font - semibold" >Explore Features</h3></div> <p className="mt - 1 text - sm text - white / 75" >Self‑improving systems, composable factories, observability and more.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90" >Open <span aria - hidden>→</span></div> </a> </a> <Link href="#capabilities" > <a className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <div className="flex items - center gap - 2" ><Cpu className="h - 5 w - 5 text - cyan - 300" /><h3 className="text - lg font - semibold" >Browse Capabilities</h3></div> <p className="mt - 1 text - sm text - white / 75" >Design evolution, SEO, a11y, performance, refactors, and policy.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90" >Open <span aria - hidden>→</span></div> </a> </a> <Link href="#benefits" > <a className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <div className="flex items - center gap - 2" ><Gauge className="h - 5 w - 5 text - cyan - 300" /><h3 className="text - lg font - semibold" >See Benefits</h3></div> <p className="mt - 1 text - sm text - white / 75" >Momentum, quality, safety, and measurable outcomes.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90" >Open <span aria - hidden>→</span></div> </a> </a> <Link href="#feature - map" > <a className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <div className="flex items - center gap - 2" ><Globe className="h - 5 w - 5 text - cyan - 300" /><h3 className="text - lg font - semibold" >Feature Map</h3></div> <p className="mt - 1 text - sm text - white / 75" >A quick overview of what you can explore right now.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90" >Open <span aria - hidden>→</span></div> </a> </a> <Link href="#guardrails" > <a className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <div className="flex items - center gap - 2" ><ShieldCheck className="h - 5 w - 5 text - cyan - 300" /><h3 className="text - lg font - semibold" >Guardrails</h3></div> <p className="mt - 1 text - sm text - white / 75" >Defense‑in‑depth checks and safety before shipping.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90" >Open <span aria - hidden>→</span></div> </a> </a> <Link href="/automation" > <a className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <div className="flex items - center gap - 2" ><Rocket className="h - 5 w - 5 text - cyan - 300" /><h3 className="text - lg font - semibold" >Automation Hub</h3></div> <p className="mt - 1 text - sm text - white / 75" >Factories, agents, and live workflows in one place.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90" >Open <span aria - hidden>→</span></div> </a> </a> </div> </motion.section> {
@@ -17572,6 +17591,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
   /* Autonomous Innovations */;
 }<motion.section > </a> <a href="/.netlify / functions / revenue - ideas - lab" className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <div className="flex items - center gap - 2" ><LineChart className="h - 5 w - 5 text - cyan - 300" /><h3 className="text - lg font - semibold" >Revenue Ideas Lab</h3></div> <p className="mt - 1 text - sm text - white / 75" >Monetization experiments with safe, automatic repository sync.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90" >Open <span aria - hidden>→</span></div> </a> <a href="/.netlify / functions / autonomous - invention - orchestrator" className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <div className="flex items - center gap - 2" ><Rocket className="h - 5 w - 5 text - cyan - 300" /><h3 className="text - lg font - semibold" >Autonomous Invention Orchestrator</h3></div> <p className="mt - 1 text - sm text - white / 75" >Continuously invents and applies front enhancements.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90" >Open <span aria - hidden>→</span></div> </a> </div> </motion.section> </a>) );
 }</div> </section>) : (<Link href= {
+<<<<<<< HEAD
 <<<<<<< HEAD
   card.href as string;
 }><a className="mt - 3 inline - block text - sm text - cyan - 300 hover:text - cyan - 200 underline" >Open</a></a>;
@@ -17589,24 +17609,21 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 }</div> </motion.section> <section className="mx - auto max - w-7xl px - 6 pb - 16"> <div className="relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 10 via - violet - 600 / 10 to - cyan - 600 / 10 p - 6 backdrop - blur - xl"> <div aria - hidden className="pointer - events - none absolute inset - 0 opacity-[0.08] [background:radial - gradient (circle at center, rgba (255, 255, 255, 0.35) 0, rgba (255, 255, 255, 0) 60%), linear - gradient (90deg, rgba (255, 255, 255, 0.12) 1px, transparent 1px), linear - gradient (0deg, rgba (255, 255, 255, 0.12) 1px, transparent 1px) ] bg-[size:100% 100%, 2.5rem 2.5rem, 2.5rem 2.5rem] animate - grid" /> <h2 className="text - center text - 2xl font - bold tracking - wide text - white / 90">Explore Zion Systems</h2> <p className="mx - auto mt - 2 max - w-3xl text - center text - sm text - white / 70">Discover key features, capabilities, and benefits. Each card links to a dedicated page or live hub.</p> <div className="mt - 6 grid grid - cols - 1 gap - 5 sm:grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4"> <Link href="/automation"><a className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 5 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo"><div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /><h3 className="text - base font - semibold">Automation Hub</h3><p className="mt - 1 text - sm text - white / 75">Factories, agents, and live workflows</p><div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90">Open <span aria - hidden>→</span></div></a></Link> <Link href="/reports / seo"><a className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 5 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo"><div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /><h3 className="text - base font - semibold">AI SEO Auditor</h3><p className="mt - 1 text - sm text - white / 75">Continuous on‑site SEO improvements</p><div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90">Open <span aria - hidden>→</span></div></a></Link> <Link href="/site - health"><a className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 5 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo"><div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /><h3 className="text - base font - semibold">Site Health</h3><p className="mt - 1 text - sm text - white / 75">A11y, performance, and link integrity</p><div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90">Open <span aria - hidden>→</span></div></a></Link> <Link href="/reports / ai - trends"><a className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 5 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo"><div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /><h3 className="text - base font - semibold">AI Trends Radar</h3><p className="mt - 1 text - sm text - white / 75">Signals that inspire new automations</p><div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90">Open <span aria - hidden>→</span></div></a></Link> <Link href="/newsroom"><a className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 5 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo"><div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /><h3 className="text - base font - semibold">Newsroom</h3><p className="mt - 1 text - sm text - white / 75">Latest autonomous updates</p><div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90">Open <span aria - hidden>→</span></div></a></Link> <a href="https://github.com / Zion - Holdings / zion.app / actions" target="blank" rel="noopener noreferrer" className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 5 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover holo"><div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /><h3 className="text - base font - semibold">Live Workflows</h3><p className="mt - 1 text - sm text - white / 75">Observe pipelines running 24 / 7</p><div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90">Open <span aria - hidden>→</span></div></a> /* AUTO - GENERATED: FRONT ADS END */;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   card.href as string
 }><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline" >Open</a></a>
 }</article>) )
-=======
   card.href as string 
 }><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline" >Open</a></a>
 }</article>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </section> {
   /* Netlify Automations */
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold"> {
   f.label
 }</div> <div className="mt-1 text-sm text-white/75"> {
-<<<<<<< HEAD
   f.desc
-=======
   f.desc 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>
 }</div> </motion.section> </a> <a href="/.netlify/functions/autonomous-invention-orchestrator" target="blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Autonomous Invention Orchestrator</div> <div className="mt-1 text-sm text-white/75" >Invents and curates fresh automations and safely syncs diffs to main.</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Trigger <span aria-hidden>↗</span></div> </a> </div> </section> {
   /* Feature Spotlight */
@@ -17644,11 +17661,8 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 }<motion.section > <h2 className="text-center text-2xl font-bold tracking-wide text-white/90" >Feature Map</h2> <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70" > A fast overview of what you can explore right now across the platform. </p> <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-base font-semibold"> {
   item.label
 }</div> <div className="mt-1 text-sm text-white/75"> {
-<<<<<<< HEAD
   item.desc
-=======
   item.desc 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }</div> </motion.section> {
@@ -17685,33 +17699,24 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-base font-semibold"> {
   item.label
 }</div> <div className="mt-1 text-sm text-white/75"> {
-<<<<<<< HEAD
   item.desc
-=======
   item.desc 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 }</div> </motion.section> {
   /* Extended Feature Directory */
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-3"><Icon className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold"> {
   title
 }</h3></div> <p className="mt-1 text-sm text-white/75"> {
-<<<<<<< HEAD
   desc
-=======
   desc 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 }</div> </motion.section> {
   /* Capability Deep Links */
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-base font-semibold"> {
   label as string
 }</div> <div className="mt-1 text-sm text-white/75"> {
-<<<<<<< HEAD
   desc as string
-=======
   desc as string 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }</div> </motion.section> {
@@ -17734,11 +17739,8 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 }> <a className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30" > <div className="text-2xl font-extrabold tracking-tight" > {
   item.value
 }</div> <div className="mt-1 text-xs text-white/70" > {
-<<<<<<< HEAD
   item.label
-=======
   item.label 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }</div> </motion.section> {
@@ -17752,17 +17754,18 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 }<motion.section </a> </a>) );
 }</div> </motion.section> {
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* Benefits */;
 }<motion.section </a> </a>) );
 }</div> </div> </div>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   /* Benefits */
 }<motion.section </a> </a>) )
-=======
   /* Benefits */ 
 }<motion.section </a> </a>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div> </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }</div> </motion.section> {
@@ -17775,20 +17778,25 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
   b.label;
 }</span> — {
 <<<<<<< HEAD
+<<<<<<< HEAD
   b.desc;
 }<span className="ml - 1 text - cyan - 300 / 90" >→</span></span>;
 }</div> </motion.section> </a> </a>) );
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   b.desc
 }<span className="ml-1 text-cyan-300/90" >→</span></span>
 }</div> </motion.section> </a> </a>) )
-=======
   b.desc 
 }<span className="ml-1 text-cyan-300/90" >→</span></span>
 }</div> </motion.section> </a> </a>) ) 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }</div> </section> {
   /* Ecosystem & Integrations */;
 }<motion.section > <h2 className="text - center text - 2xl font - bold tracking - wide text - white / 90" >Ecosystem & Integrations</h2> <div className="mt - 6 grid grid - cols - 1 gap - 4 sm:grid - cols - 2 lg:grid - cols - 4" > <a href="/site - health" target="blank" rel="noopener" className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <div className="flex items - center gap - 2" > <Rocket className="h - 5 w - 5 text - cyan - 300" /> <h3 className="text - lg font - semibold" >GitHub Actions</h3> </div> <p className="mt - 1 text - sm text - white / 75" >Live pipelines, logs, and artifacts powering automations.</p> <div className="mt - 3 text - xs text - cyan - 300 / 90" >Open →</div> </a> </div> <p className="mt - 1 text - sm text - white / 75" >Zero‑ops hosting and functions for maintenance schedules.</p> <div className="mt - 3 text - xs text - cyan - 300 / 90" >Learn more →</div> </a> </div> <p className="mt - 1 text - sm text - white / 75" >Realtime data and storage for emerging automation needs.</p> <div className="mt - 3 text - xs text - cyan - 300 / 90" >Explore →</div> </a> </div> <p className="mt - 1 text - sm text - white / 75" >Futuristic micro‑interactions and motion design system.</p> <div className="mt - 3 text - xs text - cyan - 300 / 90" >Docs →</div> </a> </div> </motion.section> {
@@ -17821,11 +17829,8 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-base font-semibold"> {
   item.title
 }</div> <div className="mt-1 text-sm text-white/75"> {
-<<<<<<< HEAD
   item.desc
-=======
   item.desc 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }</div> </motion.section> {
@@ -17836,6 +17841,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 }</div> </section> {
   /* AUTO - GENERATED: FRONT ADS END */;
 }{
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -17854,18 +17860,24 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   /* Feature Highlights (new) */
 }<motion.section </a>) )
 }</div> </motion.section> </a>) )
 }</div> </section> </div> > ↑ Top </button>)
 }</div>)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   /* Feature Highlights (new) */ 
 }<motion.section </a>) ) 
 }</div> </motion.section> </a>) ) 
 }</div> </section> </div> > ↑ Top </button>) 
 }</div>) 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -17873,13 +17885,15 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
+}/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
+}/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
 <<<<<<< HEAD
-}/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
-=======
-}/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -22,6 +23,8 @@ interface PaymentSummaryProps {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -29,7 +32,10 @@ import { CreditCard } from 'lucide-react';
 interface PaymentSummaryProps {
   milestones: Milestone[];
   paymentTerms: string | null
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
@@ -43,12 +49,23 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
     .filter((m) => m.status === "paid")
     .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
     .toFixed(2);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from 'react',;
+import { Milestone } from '@/hooks/useMilestones',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { CreditCard } from 'lucide-react',;
+interface PaymentSummaryProps {;
+  milestones: Milestone[],;
+  paymentTerms: string | null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = milestones.reduce(
     (sum, m) => sum + parseFloat(m.amount.toString()), 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -56,6 +73,12 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
     0
   ).toFixed(2),
 
+=======
+    0;
+  ).toFixed(2);
+    0
+  ).toFixed(2),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -70,6 +93,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       0
     ).toFixed(2),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -100,6 +124,8 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
     .toFixed(2);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="mb-8 bg-muted/30">
       <CardHeader className="pb-3">
@@ -126,6 +152,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
 <<<<<<< HEAD
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -134,10 +161,17 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
 
             <p className="font-medium">${paidAmount}</p>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            <p className="font-medium">${paidAmount}</p>
+            <p className="font-medium">
+              ${paidAmount}
+            </p>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -192,12 +226,21 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+
+            <p className="font-medium">
+              ${paidAmount}
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </p>;
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -333,3 +376,6 @@ export const PaymentSummary:React.FC<PaymentSummaryProps> = ({ milestones, payme
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

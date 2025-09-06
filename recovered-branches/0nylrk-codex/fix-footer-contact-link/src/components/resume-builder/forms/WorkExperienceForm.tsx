@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/WorkExperienceForm.tsx
@@ -7,6 +8,8 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -28,8 +31,11 @@ import { useResume  } from '@/hooks/useResume';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { Card, CardContent  } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -47,12 +53,15 @@ import {Alert, AlertDescription} from '@/components/ui/alert';
 import {Card, CardContent} from '@/components/ui/card';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -72,6 +81,7 @@ interface WorkExperienceFormProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -82,12 +92,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
 
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -133,6 +147,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           location: ''})
         setEditingId(null)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -141,6 +156,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -227,6 +244,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           location: ''}),;
         setEditingId(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -241,10 +259,13 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -258,12 +279,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   };
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
@@ -276,6 +301,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -286,15 +312,19 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   }
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!),;
@@ -309,6 +339,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -319,11 +350,14 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -333,6 +367,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <div>
@@ -394,6 +430,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 ========
@@ -423,6 +460,9 @@ import {Loader2, Edit, Trash2} from 'lucide-react';
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Experience' : 'Add Experience'}
@@ -469,6 +509,7 @@ import {Loader2, Edit, Trash2} from 'lucide-react';
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -900,16 +941,22 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <Input
                         type="date"
                         {...field}
                         value={field.value |''}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <Input 
                         type="date" 
                         {...field} 
                         value={field.value || ''}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -917,6 +964,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       />
                     </FormControl>
                     <FormMessage />
@@ -1335,23 +1384,30 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     setEditingId(null),
                     form.reset({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       company_name: ''
                       role_title: ''
                       start_date: format(new Date(), 'yyyy-MM-dd');
                       is_current: false
                       description: ''
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1487,6 +1543,8 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/WorkExperienceForm.tsx
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       location: ''})
                   } else {
                     onBack()
@@ -1505,7 +1563,6 @@ if ( {) {
                     Next
                   </Button>
                 )}
-<<<<<<< HEAD
               </div>
             </div>
           </form>
@@ -1514,8 +1571,11 @@ if ( {) {
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>;
             </div>;
           </form>;
@@ -1581,5 +1641,8 @@ form.reset ({
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

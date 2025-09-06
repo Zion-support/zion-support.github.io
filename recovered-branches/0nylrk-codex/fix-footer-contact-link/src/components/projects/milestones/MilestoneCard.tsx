@@ -5,11 +5,9 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { format  } from 'date-fns';
 import { Check, ArrowDown, X } from "lucide-react";
@@ -30,8 +28,6 @@ interface MilestoneCardProps {
   onReject?: (id: string) => Promise<void>
 }
 export function MilestoneCard({
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -41,7 +37,6 @@ import {Check, ArrowDown, X} from "lucide-react";
 import {useDisputeCheck} from '@/hooks/useDisputeCheck';
 import {DisputeStatusBadge} from '@/components/disputes/DisputeStatusBadge';
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
-=======
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -51,8 +46,11 @@ import { Check, ArrowDown, X } from "lucide-react",
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface MilestoneCardProps {
   id: string,
   projectId: string,
@@ -64,13 +62,15 @@ interface MilestoneCardProps {
   onApprove?: (id: string) => Promise<void>,
   onReject?: (id: string) => Promise<void>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export function MilestoneCard({ ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id;
   projectId;
 
@@ -95,10 +95,8 @@ export function MilestoneCard({ ;
       case 'rejected':
         return 'bg-red-500';
       default: return 'bg-gray-500'
-<<<<<<< HEAD
     }
   }
-=======
 import { Button } from "@/components/ui/button",
 import { format } from 'date-fns',
 import { Check, ArrowDown, X } from "lucide-react",
@@ -115,10 +113,13 @@ interface MilestoneCardProps {
   dueDate?: string,
   onApprove?: (id: string) => Promise<void>,
   onReject?: (id: string) => Promise<void>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -358,14 +359,9 @@ export function MilestoneCard({;
       case 'rejected':;
         return 'bg-red-500';
       default: return 'bg-gray-500';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -424,6 +420,7 @@ export function MilestoneCard({;
               Actions frozen due to dispute
             </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -434,17 +431,21 @@ export function MilestoneCard({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         </div>
       </CardFooter>
     </Card>
   )
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>;
           <div className="flex gap-2">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
@@ -696,11 +697,10 @@ case 'rejected':
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
 =======
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

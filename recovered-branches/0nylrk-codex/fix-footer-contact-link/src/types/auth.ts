@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/auth.ts
 
 <<<<<<< HEAD
@@ -9,12 +10,16 @@ export interface UserDetails {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-export interface UserDetails {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface UserDetails {
 export interface UserDetails {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id?: string;
   name?: string;
   email?: string;
@@ -71,12 +76,9 @@ export interface UserProfile {
   createdAt?: string;
   updatedAt?: string
 }
-<<<<<<< HEAD
 export interface UserProfile {
-=======
 
 export interface UserProfile {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string;
   displayName?: string;
   email: string;
@@ -115,16 +117,21 @@ export interface AuthContextType {;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 export interface UserDetails {;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id?: string,;
   name?: string,;
   email?: string,;
@@ -182,6 +189,7 @@ export interface AuthContextType {;
   signIn?: (email: string, password: string) => Promise<{ error: any }>,;
   signOut?: () => Promise<void>;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -283,3 +291,7 @@ export interface AuthContextType {;
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

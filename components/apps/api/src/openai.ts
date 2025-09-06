@@ -21,13 +21,14 @@ Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join() || 'N/A'}
 =======
 
-<<<<<<< HEAD
 type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
-=======
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return new OpenAI({ apiKey });
 export async function generateJobPost(
   openai: OpenAIClient
@@ -35,6 +36,7 @@ export async function generateJobPost(
   opts: any
 ): Promise<string> {
   const prompt = `Create a concise, compelling job post for a ${role}.
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -50,16 +52,20 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 Company: ${opts.company |'Confidential'}
 Location: ${opts.location |'Remote'}
 Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
-=======
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai && openai.responses.create({
     model: 'gpt-4o-mini';
@@ -123,18 +129,15 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 =======
 
   return completion.output_text
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

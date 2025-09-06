@@ -28,12 +28,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 import { updatePipelineItemStatus } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
   if (req.method !== 'POST')
-=======
   if (req.method !== 'POST');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req.body |{}
   if (!itemId |!status)
@@ -134,6 +131,7 @@ function handler() {
     res.status(500).json({ error: e.message })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
@@ -149,3 +147,8 @@ function handler() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

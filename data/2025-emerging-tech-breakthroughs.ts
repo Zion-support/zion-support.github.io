@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ];      mobile: '+1 302 464 0950';
@@ -112,6 +113,8 @@ export interface EmergingTechBreakthrough2025 {
   launch_date: string;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechBreakthrough2025 {;
   id: string;
@@ -1002,21 +1005,18 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Complete metaverse AI development platform with AI-powered tools, dynamic generation, and intelligent environments.'
     launchDate: '2025-02-25'
     customers: 32
     rating: 4.7
     reviews: 18
   }
-=======
       'Complete metaverse AI development platform with AI-powered tools, dynamic generation, and intelligent environments.',
     launchDate: '2025-02-25',
     customers: 32,
     rating: 4.7,
     reviews: 18,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1029,12 +1029,8 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 4.7
 
     reviews: 18
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthrough2025 {;
   id: string,;
@@ -1385,12 +1381,11 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     customers: 32,;
     rating: 4.7;
     reviews: 18;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

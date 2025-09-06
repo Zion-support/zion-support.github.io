@@ -60,9 +60,12 @@ class ErrorBoundary extends React.Component {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -82,6 +85,7 @@ export default function TenantOnboarding() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [formData, setFormData] = useState({;
     brand_name: "",;
@@ -242,6 +246,8 @@ export default function TenantOnboarding() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -255,25 +261,18 @@ import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
 export default function TenantOnboarding() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
-=======
 import { supabase } from "@/integrations/supabase/client",
 import { Switch } from "@/components/ui/switch",
 export default function TenantOnboarding() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("company"),
   const [isSubmitting, setIsSubmitting] = useState(false),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [formData, setFormData] = useState({
 
     brand_name: ""
@@ -285,23 +284,28 @@ export default function TenantOnboarding() {
     industry: ""
     custom_domain: ""
     is_co_branded: true
-<<<<<<< HEAD
   });
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }),
   
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
@@ -309,10 +313,13 @@ export default function TenantOnboarding() {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }))
@@ -326,8 +333,11 @@ export default function TenantOnboarding() {
     try {
       // Generate subdomain if not provided
       const subdomain = formData.subdomain |formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const handleSelectChange = (name: string, value: string) => {
@@ -347,17 +357,21 @@ export default function TenantOnboarding() {
       const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Create landing page copy
       const landingPageCopy = {
         headline: "AI Hiring Assistant"
         subtitle: `Find the best talent for your ${formData.industry |"company"}`
         cta: "Get Started"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -367,12 +381,16 @@ export default function TenantOnboarding() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      }
       },
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -391,17 +409,23 @@ export default function TenantOnboarding() {
         })
         .select('id, brand_name, subdomain')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .single();
       if (error) throw error;
       toast.success("Tenant created successfully!", {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
       });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .single(),
       
       if (error) throw error,
@@ -411,11 +435,14 @@ export default function TenantOnboarding() {
       }),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Reset form
       setFormData({
         brand_name: ""
@@ -429,6 +456,7 @@ export default function TenantOnboarding() {
         is_co_branded: true
       })
     } catch (error: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -448,10 +476,19 @@ export default function TenantOnboarding() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      console.error("Error creating tenant:", error);
+      toast.error("Failed to create tenant", {
+        description: error.message
+      console.error("Error creating tenant:", error),
+      toast.error("Failed to create tenant", { 
+        description: error.message 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       })
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -865,10 +902,10 @@ if (throw error) {
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TenantOnboarding.tsx
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <>
@@ -1265,6 +1302,7 @@ if (throw error) {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1284,6 +1322,9 @@ if (throw error) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -1747,11 +1788,10 @@ Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label 
 =======
     </>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

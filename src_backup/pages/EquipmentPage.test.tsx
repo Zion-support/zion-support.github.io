@@ -87,6 +87,7 @@ describe ('EquipmentPage', () => {
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
             
@@ -101,6 +102,9 @@ describe ('EquipmentPage', () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -135,6 +139,7 @@ describe ('EquipmentPage', () => {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
               
@@ -149,6 +154,9 @@ describe ('EquipmentPage', () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -234,6 +242,7 @@ describe ('EquipmentPage', () => {
                 </select>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
               
@@ -248,6 +257,9 @@ describe ('EquipmentPage', () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
@@ -366,10 +378,13 @@ describe ('EquipmentPage', () => {
             </div>
             {/* Business Hours */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>
               <div className="space-y-3">
@@ -393,9 +408,12 @@ describe ('EquipmentPage', () => {
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="bg-white rounded-xl shadow-lg p-8">;
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>;
               <div className="space-y-3">;
@@ -419,12 +437,15 @@ describe ('EquipmentPage', () => {
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
@@ -485,6 +506,7 @@ describe ('EquipmentPage', () => {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   );
@@ -493,14 +515,18 @@ describe ('EquipmentPage', () => {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 <<<<<<< HEAD
 }
 =======
 }
-=======
   );
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

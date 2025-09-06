@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -321,6 +322,8 @@ interface MicroSAASService {
   integrations: string[],
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useState } from "react";
 interface MicroSAASService {id: string;
@@ -625,7 +628,6 @@ function MicroSAASPage() {
 =======
 ];
 export default function MicroSAASPage() {return (;
-=======
 "use client",;
 import { useState } from "react",;
 interface MicroSAASService {;
@@ -923,7 +925,6 @@ const microSAASServices: MicroSAASService[] = [;
 ],;
 export default function MicroSAASPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="space-y-8">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Header */}

@@ -1,23 +1,30 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/resume-selector/ResumePreviewCard.tsx
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { Resume } from "@/types/resume";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -27,6 +34,8 @@ import { Badge } from "@/components/ui/badge",
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Download  } from 'lucide-react';
 import { Resume } from "@/types/resume";
@@ -40,15 +49,17 @@ export function ResumePreviewCard({
   onDownload
   isLoading
 }: ResumePreviewCardProps) {
-=======
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react',
 import { Resume } from "@/types/resume",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ResumePreviewCardProps {
   resume: Resume,
   onDownload: () => void,
@@ -115,7 +126,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading } ResumePrevie
 <<<<<<< HEAD
 =======
 export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">
@@ -139,6 +149,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
           </Button>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {resume.basic_info.summary}
           </p>
@@ -146,9 +157,10 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
-=======
         
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
@@ -188,26 +200,18 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         </div>;
         {resume.basic_info.summary && (;
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {resume.basic_info.summary}
           </p>
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
-=======
         
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0, 5).map((skill, index) => (
@@ -229,6 +233,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             )}
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </CardContent>;
@@ -454,19 +459,12 @@ isLoading: boolean
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardContent>
-<<<<<<< HEAD
     </Card>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </CardContent>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

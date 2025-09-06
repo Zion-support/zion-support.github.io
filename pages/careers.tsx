@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +24,36 @@ import React from 'react';
 
 import {
 
+=======
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+import React from 'react';
+ursor/integrate-build-improve-and-re-verify-8f7d
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+origin/main
+origin/automation-improvements-final
+import {
+  Users
+  MapPin
+  Clock
+  DollarSign
+  ArrowRight
+  Heart
+  Star
+  Award
+  Coffee
+  Zap
+  Shield
+  Briefcase
+  GraduationCap
+  Globe
+  CheckCircle
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Users,
   MapPin,
   Clock,
@@ -38,9 +69,12 @@ import {
   GraduationCap,
   Globe,
   CheckCircle,;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -170,6 +204,7 @@ const values = [
       "We conduct business with honesty, transparency, and ethical practices."
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -419,17 +454,21 @@ const values = [;
 export default function CareersPage() {;
 =======
 <<<<<<< HEAD
-export default function CareersPage() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function CareersPage() {
 
 interface CareersProps {
   className?: string;
 }
 
 const Careers: React.FC<CareersProps> = ({ className }) => {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -451,11 +490,14 @@ const Careers: React.FC<CareersProps> = ({ className }) => {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
 
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import Layout from '../components/Layout';
 export default function CareersPage() {
@@ -464,6 +506,7 @@ export default function CareersPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -485,6 +528,11 @@ export default function CareersPage() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -1244,23 +1292,13 @@ function CareersPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </MainLayout>
-=======
-<<<<<<< HEAD
     </MainLayout>
-=======
     </Layout>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
     </MainLayout>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

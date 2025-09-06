@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/components/ProjectDetailsFields.tsx
 
 <<<<<<< HEAD
@@ -8,12 +9,16 @@ import { format } from "date-fns";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { format } from "date-fns";
-=======
 import { format } from 'date-fns'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { CalendarIcon } from 'lucide-react'
 
 import { UseFormReturn, ControllerRenderProps } from 'react-hook-form'
@@ -38,10 +43,13 @@ import { format } from "date-fns"
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormField
   FormItem
   FormLabel
@@ -50,10 +58,13 @@ import { UseFormReturn, ControllerRenderProps } from "react-hook-form"
   FormMessage
 } from "@/components/ui/form"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 
@@ -61,8 +72,11 @@ import { format } from "date-fns",
 import { CalendarIcon } from 'lucide-react'
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form",
 import { 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormField,
   FormItem, 
   FormLabel, 
@@ -70,6 +84,7 @@ import {
   FormDescription, 
   FormMessage 
 } from "@/components/ui/form",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -197,19 +212,18 @@ function ProjectDetailsFields() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Calendar } from "@/components/ui/calendar"
-<<<<<<< HEAD
 import { ContractFormValues } from "./ContractForm"
 
 interface ProjectDetailsFieldsProps {
-=======
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
@@ -230,9 +244,12 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> },) => (
         name="projectName"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 
@@ -248,11 +265,14 @@ import {
   FormMessage 
 } from "@/components/ui/form",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button",
@@ -291,6 +311,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>           <FormItem>
@@ -305,10 +326,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
               <Input placeholder="AI Website Development" {...field} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/components/ProjectDetailsFields.tsx
 
@@ -324,6 +348,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>             <FormMessage />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <FormMessage />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </FormItem>
@@ -406,12 +432,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         name="scopeSummary"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> }) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -430,16 +459,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         control={form.control}
         name="scopeSummary"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
-<<<<<<< HEAD
                 placeholder='Describe the project scope, deliverables, and expectations...'
                 className='min-h-[120px]'                placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
@@ -452,7 +475,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <FormMessage />
           </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
@@ -472,12 +498,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           render={({ field }: { field: ControllerRenderProps<ContractFormValues, "startDate"> },) => (
             <FormItem className="flex flex-col">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
         name="scopeSummary";
@@ -632,6 +661,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
             <FormMessage />;
           </FormItem>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         )}
 <<<<<<< HEAD
       />
@@ -726,6 +756,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -735,12 +767,15 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           control={form.control}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name='startDate'
           render={({
             field,
@@ -755,15 +790,19 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           render={({ field }: { field: ControllerRenderProps<ContractFormValues, "startDate"> },) => (
             <FormItem className="flex flex-col">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name="startDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (
             <FormItem className="flex flex-col">
               <FormLabel>Start Date</FormLabel>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -773,10 +812,13 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -792,17 +834,13 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 >>>>>>>                         format(field.value, "PPP")
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
-=======
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {field.value ? (
                         format(field.value, "PPP")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -817,12 +855,15 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                   <Calendar
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     initialFocus
                   />
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     mode='single'
                     selected={field.value}
                     onSelect={field.onChange}
@@ -846,6 +887,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={(date) => date < new Date()}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                     initialFocus
 ursor/fix-website-loading-errors-and-merge-6662
@@ -926,6 +968,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     mode="single"
       />;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -956,6 +1000,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Calendar
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>>                     initialFocus
 >>>>>>>                   />
@@ -966,6 +1011,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     initialFocus
                   />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -974,6 +1021,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -988,6 +1036,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        />
+        <FormField
+          control={form.control}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name='endDate'
           render={({
             field
@@ -1000,6 +1053,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           name="endDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (
             <FormItem className="flex flex-col">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1017,10 +1071,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        />;
+        <FormField;
+          control={form.control}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name="endDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (
             <FormItem className="flex flex-col">
               <FormLabel>End Date (Optional)</FormLabel>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1030,10 +1090,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1049,17 +1112,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                         format(field.value, "PPP")
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
-=======
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {field.value ? (
                         format(field.value, "PPP")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1249,10 +1308,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
       </div>
     </>
@@ -1260,20 +1322,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 ;
 }
+}
+}
+}
 <<<<<<< HEAD
-=======
-}
-}
-}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />;
       </div>;
     </>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1408,3 +1472,5 @@ FormMessage interface ProjectDetailsFieldsProps {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

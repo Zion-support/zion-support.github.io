@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ErrorState.tsx
 
 
@@ -56,23 +57,17 @@ function ErrorState() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { Card, CardContent } from "@/components/ui/card";
-=======
 import { Card, CardContent } from "@/components/ui/card";
-<<<<<<< HEAD
 
 import { Card, CardContent } from "@/components/ui/card",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 
 import { Card, CardContent } from "@/components/ui/card",
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ErrorStateProps {
   error: string
 }
@@ -85,20 +80,24 @@ export function ErrorState({ error }: ErrorStateProps) {
         <p className="text-muted-foreground">{error}</p>
       </CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 import { Card, CardContent } from "@/components/ui/card";
 interface ErrorStateProps {;
@@ -127,6 +126,7 @@ export function ErrorState({ error } ErrorStateProps) {;
         <h3 className="text-lg font-medium text-red-600 mb-1">Something went wrong</h3>;
         <p className="text-muted-foreground">{error}</p>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ErrorState.tsx
 =======
@@ -158,12 +158,16 @@ export function ErrorState({ error } ErrorStateProps) {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ErrorState.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Card>;
   );
 }
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

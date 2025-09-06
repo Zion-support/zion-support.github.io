@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -15,6 +16,10 @@ export interface SpecializedITSolution2026 {;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface SpecializedITSolution2026 {
+export interface SpecializedITSolution2026 {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -1222,29 +1227,35 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
     realImplementation: true
     implementationDetails:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
     launchDate: '2024-05-25'
     customers: 67
     rating: 4.4
     reviews: 33
   }
-=======
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
     launchDate: '2024-05-25',
     customers: 67,
     rating: 4.4,
     reviews: 33,
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 export const getSpecializedITSolutions2026ByCategory = (category: string) => {
   return specializedITSolutions2026.filter(
     solution => solution.category === category;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return specializedITSolutions2026.filter(solution => solution.popular);
@@ -1261,13 +1272,13 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export const getPopularSpecializedITSolutions2026 = () => {
-=======
 };
 
 export const getPopularSpecializedITSolutions2026 = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return specializedITSolutions2026.filter(solution => solution.popular);
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1288,6 +1299,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 };    return price >= minPrice && price <= maxPrice
 
   })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1331,6 +1343,8 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 <<<<<<< HEAD
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
@@ -1601,11 +1615,7 @@ export interface SpecializedITSolution2026 {;
 =======
 =======
 
-=======
 export interface SpecializedITSolution2026 {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1968,11 +1978,10 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxP
     const price = parseInt(solution.price.replace('$', '')),;
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

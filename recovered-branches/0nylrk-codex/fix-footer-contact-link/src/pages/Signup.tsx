@@ -1,15 +1,17 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Signup.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {Link, Navigate} from "react-router-dom";
 import {useForm, type, UseFormReturn} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
 import {User, Mail, Lock, Eye, EyeOff, Facebook, Twitter} from "lucide-react";
-=======
 import { useState } from "react",
 import { Link, Navigate } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -17,11 +19,14 @@ import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -39,6 +44,7 @@ import { Footer } from "@/components/Footer",
 // Form validation schema
 const signupSchema = z
   .object({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -69,17 +75,22 @@ import {Footer} from "@/components/Footer";
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     displayName: z.string().min(2, "Name must be at least 2 characters");
     email: z.string().email("Please enter a valid email")
-=======
     displayName: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email"),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -107,6 +118,8 @@ const signupSchema = z;
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .regex(/[0-9]/, "Password must contain at least one number");
     confirmPassword: z.string()
     termsAccepted: z.boolean().refine(val => val === true, {
@@ -120,8 +133,11 @@ export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .regex(/[0-9]/, "Password must contain at least one number"),
     confirmPassword: z.string(),
     termsAccepted: z.boolean().refine(val => val === true, {
@@ -141,22 +157,22 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
 =======
 type SignupFormValues = z.infer<typeof signupSchema>,
 
-<<<<<<< HEAD
 export default function Signup() {;
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-=======
 export default function Signup() {
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),
   const [showPassword, setShowPassword] = useState(false),
   const [showConfirmPassword, setShowConfirmPassword] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(signupSchema)
@@ -170,6 +186,7 @@ export default function Signup() {
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -182,12 +199,16 @@ export default function Signup() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    setIsSubmitting(true);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    setIsSubmitting(true);
     
     setIsSubmitting(true),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       await signup(data.email, data.password, data.displayName)
     } finally {
@@ -195,17 +216,22 @@ export default function Signup() {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
@@ -257,12 +283,15 @@ export default function Signup() {
                       </FormItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Link, Navigate } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -659,11 +688,6 @@ if ( {) {
                               placeholder="you@example && example.com"
 =======
                       </FormItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                   />
                   <FormField
@@ -1295,6 +1319,7 @@ if ( {) {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1480,9 +1505,13 @@ FormLabel;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Signup.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -25,18 +25,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 import { requireSuperadminApi } from '../../../utils/api/auth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!requireSuperadminApi(req, res)) return;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -51,6 +43,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ['CAC/LTV ratio1: 5.60.4']], const csv = rows.map(r => r.map(v => String(v)).join()).join('\n'),  res.setHeader('Content-Typetext/csv');
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
   res.status(200).send(csv)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -136,3 +129,7 @@ function handler() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

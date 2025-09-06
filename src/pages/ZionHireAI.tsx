@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -76,10 +77,9 @@ export default function ZionHireAI() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -102,13 +102,9 @@ import { Button } from '@/components/ui/button'
 } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 import Link from 'next/link'
-<<<<<<< HEAD
-=======
 export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel()
   const { isAuthenticated } = useAuth()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function ZionHireAI() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -129,6 +125,7 @@ export default function ZionHireAI() {
       <SEO
         title='Zion Hire AI - White-labeled AI Recruiting Assistant'
         description='Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.'
+<<<<<<< HEAD
 =======
 
       <SEO
@@ -136,6 +133,8 @@ export default function ZionHireAI() {
         description='Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.'
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -150,6 +149,7 @@ export default function ZionHireAI() {
   const { isAuthenticated } = useAuth(),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   return (
 ursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -158,25 +158,33 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>>     <>
       <SEO 
         title="Zion Hire AI - White-labeled AI Recruiting Assistant" 
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience."
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <Header />
       <main className='flex-1'>
         {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section
           className='relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24'
           style={
@@ -213,11 +221,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 }
               : {}
           }
-=======
         <section 
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24"
           style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <div className="container mx-auto px-4 md:px-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -264,6 +270,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className="relative z-10 rounded-lg shadow-xl"
                   loading="lazy"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>>               </div>
@@ -277,6 +284,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
 >>>>>>>             </div>
           </div>
@@ -297,6 +307,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
             <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
               <Card className='bg-card border border-border'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <CardHeader>
@@ -338,6 +349,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -350,11 +363,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card className="bg-card border border-border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <CardHeader>
                   <Briefcase className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Job Description Generator</CardTitle>
@@ -372,25 +380,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
                       <span>Optimized for inclusivity</span>
                     </li>
-<<<<<<< HEAD
                     <li className='flex items-center'>
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Template
                       </span>                      <span>Industry-specific templates</span>                    <li className="flex items-center">
-=======
                     <li className="flex items-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
 >>>>>>>                       <span>Industry-specific templates</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <Card className='bg-card border border-border'>
@@ -426,13 +436,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </li>
 =======
 =======
+=======
+              <Card className='bg-card border border-border'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Card className="bg-card border border-border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <CardHeader>
                   <PenTool className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Resume Screener</CardTitle>
@@ -451,7 +459,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span>Experience verification</span>
                     </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <li className='flex items-center'>
                       <span className='bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Custom
@@ -544,6 +555,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </li>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>>                     <li className="flex items-center">
 =======
@@ -553,6 +565,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <li className="flex items-center">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
@@ -561,20 +575,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
               <Card className='bg-card border border-border'>                <CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   <Users className="h-10 w-10 text-zion-purple mb-2" />
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Card className="bg-card border border-border">
                 <CardHeader>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <CardTitle>Candidate Matchmaker</CardTitle>
@@ -651,11 +662,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
                       <span>Culture fit prediction</span>
                     </li>
-<<<<<<< HEAD
                     <li className='flex items-center'>
                       <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Data
                       </span>                    <li className="flex items-center">
+<<<<<<< HEAD
 =======
 
 
@@ -664,12 +675,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                    <li className="flex items-center">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
 >>>>>>>                       <span>Performance tracking</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <Card className='bg-card border border-border'>                <CardHeader>
@@ -685,6 +700,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              <Card className='bg-card border border-border'>                <CardHeader>
+              
+              <Card className="bg-card border border-border">
+                <CardHeader>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Globe className="h-10 w-10 text-zion-purple mb-2" />
 >>>>>>>                   <CardTitle>Embeddable Widget</CardTitle>
                   <CardDescription>
@@ -701,11 +722,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Customizable branding</span>
                     </li>
-<<<<<<< HEAD
                     <li className='flex items-center'>
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Code
                       </span>                    <li className="flex items-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -721,12 +742,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                    <li className="flex items-center">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
 >>>>>>>                       <span>Simple JavaScript snippet</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <Card className='bg-card border border-border'>
@@ -773,13 +798,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                       <span>Cost per hire analysis</span>
 =======
 =======
+=======
+              <Card className='bg-card border border-border'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Card className="bg-card border border-border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <CardHeader>
                   <BarChart3 className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Advanced Analytics</CardTitle>
@@ -797,18 +820,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Candidate funnel metrics</span>
                     </li>
-<<<<<<< HEAD
                     <li className='flex items-center'>
                       <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Data
                       </span>                      <span>Cost per hire analysis</span>                    <li className="flex items-center">
-=======
                     <li className="flex items-center">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Cost per hire analysis</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -816,6 +832,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <Card className='bg-card border border-border'>
@@ -891,13 +908,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </span>                      <span>Team roles & permissions</span>                <CardHeader>
 =======
 =======
+=======
+              <Card className='bg-card border border-border'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Card className="bg-card border border-border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <CardHeader>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
@@ -916,7 +931,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Co-branded or white-labeled</span>
                     </li>
-<<<<<<< HEAD
                     <li className='flex items-center'>
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Access
@@ -937,12 +951,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Co-branded or white-labeled</span>
                     </li>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
 =======
@@ -962,11 +970,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className='bg-zion-blue-dark py-16'>
           <div className='container mx-auto px-4 md:px-6 text-center'>
             <h2 className='text-3xl font-bold text-white mb-4'>
@@ -975,6 +986,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className='text-zion-slate-light max-w-2xl mx-auto mb-8'>
               Join leading companies using Zion Hire AI to find better talent
               faster, reduce time-to-hire, and improve candidate experience.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             </p>
@@ -988,12 +1000,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-8">
               Join leading companies using Zion Hire AI to find better talent faster, 
               reduce time-to-hire, and improve candidate experience.
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             </p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1002,6 +1017,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </p>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Button 
@@ -1011,15 +1028,19 @@ ursor/fix-website-loading-errors-and-merge-6662
             >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link href='/enterprise/demo'>Schedule a Demo</Link>            </Button>            </p>
             <Button
               size="lg"
               className="bg-zion-purple hover: bg-zion-purple-light text-white"
               asChild
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               <Link href="/enterprise/demo">
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1032,6 +1053,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link href="/enterprise/demo">
 >>>>>>>                 Schedule a Demo
               </Link>
@@ -1040,6 +1063,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       </main>
     </>
   );
@@ -1051,21 +1075,23 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </main>;
     </>;
   );
 };
-=======
       </main>
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -1678,8 +1704,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

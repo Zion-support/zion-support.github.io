@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -15,31 +16,30 @@ function toSlug(name: string): string {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
-<<<<<<< HEAD
 function toSlug(name: string): string {return name;
-=======
-=======
-<<<<<<< HEAD
 import fs from "fs",;
 import path from "path",;
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion",;
-=======
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function toSlug(name: string): string {;
   return name;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -102,6 +102,8 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const tokenDir = path.join(process.cwd(), "data", "token"),;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 function ensureDir(dirPath: string) {if (!fs.existsSync(dirPath)) {;
     fs.mkdirSync(dirPath, { recursive: true });
@@ -575,14 +577,10 @@ if ( {) {
     );
     assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" });
   }
-<<<<<<< HEAD
-=======
 ;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -757,16 +755,10 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Schedule launch stream (/summit);
   ensureDir(eventsDir);
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   writeTextFile(;
-<<<<<<< HEAD
     summitEventPath;
     JSON.stringify(;
       {name: `${input.instanceName} Summit`;
@@ -796,7 +788,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       2;
     );
   );
-=======
     summitEventPath,;
     JSON.stringify(;
       {;
@@ -807,9 +798,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       2;
     );
   ),;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" }),;
   // 4. Activate Public Pages (record intent);
   const pagesActivationPath = path.join(baseDir, "pages.json"),;
@@ -821,8 +809,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
         activate: [;
           "/about",;
           "/manifesto",;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" });
   // 4. Activate Public Pages (record intent);
   const pagesActivationPath = path.join(baseDir, "pages.json");
@@ -834,10 +820,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
         activate: [;
           "/about";
           "/manifesto";
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           "/constitution",;
           "/partners",;
           "/academy",;
@@ -848,31 +830,22 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       2;
     );
   ),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
   // Optional modules markers;
   const optionalModules = Object.entries(input.modules);
     .filter(([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key));
-<<<<<<< HEAD
     .map(([key]) => key);
   if (optionalModules.length > 0) {const optionalPath = path.join(baseDir, "optional-modules.json");
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2));
-=======
-<<<<<<< HEAD
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" }),;
-=======
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Optional modules markers;
   const optionalModules = Object.entries(input.modules);
     .filter(([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key));
     .map(([key]) => key),;
   if (optionalModules.length > 0) {;
-<<<<<<< HEAD
     const optionalPath = path.join(baseDir, "optional-modules.json"),;
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
   }
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules);
@@ -887,12 +860,8 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     logs;
     summary;
     version}
-=======
-<<<<<<< HEAD
     .map(([key]) => key),;
   if (optionalModules.length > 0) {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const optionalPath = path.join(baseDir, "optional-modules.json");
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
@@ -925,6 +894,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
@@ -940,3 +910,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

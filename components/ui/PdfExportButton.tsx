@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
     if (!targetRef.current) return;
@@ -230,19 +229,16 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
     } as any;
     html2pdf().set(opt).from(element).save();
   }
-=======
 html2pdf () .set (opt) .from (element) .save () 
 };
 
 export default function PdfExportButton({
   targetRef,
-<<<<<<< HEAD
   fileName = 'resume.pdf',
 }: PdfExportButtonProps) {  const onClick = async () => {
 
   const onClick = async () => {
 
-=======
   fileName = 'resume.pdf',;
 }: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
 export type PdfExportButtonProps = {
@@ -252,7 +248,6 @@ export type PdfExportButtonProps = {
 };
 
 export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (!targetRef.current) return;
     const element = targetRef.current;
 
@@ -270,7 +265,6 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
     html2pdf().set(opt).from(element).save();
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       >
       Download as PDF
     </button>
@@ -283,11 +277,10 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       aria-label="Download as PDF"
       Download as PDF
     </button>
-<<<<<<< HEAD
 );
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -295,3 +288,5 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

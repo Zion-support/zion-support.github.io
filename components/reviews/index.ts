@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -32,3 +33,12 @@ export { default as ReviewCard } from './ReviewCard',;
 export { default as ReviewSummary } from './ReviewSummary';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export { default as StarRating } from './StarRating';
+export { default as ReviewForm } from './ReviewForm';
+export { default as ReviewCard } from './ReviewCard';
+export { default as StarRating } from './StarRating',;
+export { default as ReviewForm } from './ReviewForm',;
+export { default as ReviewCard } from './ReviewCard',;
+export { default as ReviewSummary } from './ReviewSummary';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

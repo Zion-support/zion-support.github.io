@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -6,6 +7,8 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Calendar, RefreshCw } from 'lucide-react'
 
@@ -27,12 +30,14 @@ import { Calendar as CalendarComponent } from '@/components/ui/calendar'
 import { format } from 'date-fns'
 import type { DateRange } from 'react-day-picker'
 import type { QuoteStatus } from '@/types/quotes'
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
@@ -44,6 +49,7 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -58,6 +64,8 @@ interface QuotesFilterProps {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface QuotesFilterProps {
   searchQuery: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -69,6 +77,7 @@ interface QuotesFilterProps {
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
   onReset: () => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -86,6 +95,8 @@ interface QuotesFilterProps {
 
 >>>>>>> >>>>>>> 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 
   searchQuery
@@ -288,16 +299,14 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
     </Card>;
   );
 };  )
+}
+
+}
+}
+
 <<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-
-=======
-}
-=======
-}
-
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

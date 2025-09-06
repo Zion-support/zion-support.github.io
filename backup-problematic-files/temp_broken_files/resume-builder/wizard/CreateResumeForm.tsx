@@ -67,7 +67,15 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
 }disabled= {;
   !newResumeTitle.trim () || isLoading ;
 }> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>) ;
+<<<<<<< HEAD
 
 };
 '"
 
+=======
+:temp_broken_files/resume-builder/wizard/CreateResumeForm.tsx
+};"'"
+};
+'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/wizard/CreateResumeForm.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -13,11 +13,14 @@ import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../
 <<<<<<< HEAD
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   setVendorApproval
   setVendorCommission
   suspendVendor;
@@ -25,7 +28,6 @@ import {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body |{};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
-=======
   setVendorApproval,
   setVendorCommission,;
   suspendVendor,;
@@ -34,7 +36,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -52,6 +53,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 <<<<<<< HEAD
     res.status(500).json({ error: e.message })
 }
+<<<<<<< HEAD
 
 =======
 =======
@@ -134,3 +136,6 @@ function handler() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

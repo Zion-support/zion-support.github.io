@@ -42,7 +42,10 @@ export function resetState(): void {
   logs: []
   overrides: []
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 export function get_state (): IntegrationState {
@@ -53,7 +56,6 @@ export function write_state (updater: (state: IntegrationState) => void): Integr
   updater (state);
 =======
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
-=======
 };
 
 export function getState(): IntegrationState {;
@@ -61,7 +63,6 @@ export function getState(): IntegrationState {;
 }
 
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   updater(state);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return { ...state }
@@ -69,16 +70,20 @@ export function writeState(updater: (state: IntegrationState) => void): Integrat
 export function reset_state (): void {
   state = {
 <<<<<<< HEAD
+<<<<<<< HEAD
     connections: [],
     logs: [],
     overrides: [];
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     connections: []
     logs: []
     overrides: []
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -87,10 +92,13 @@ export function reset_state (): void {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     connections: [],
     logs: [],
     overrides: [];
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -100,3 +108,6 @@ export function reset_state (): void {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

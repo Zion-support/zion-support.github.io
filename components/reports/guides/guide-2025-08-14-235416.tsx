@@ -15,7 +15,6 @@ export default function Page() {;
 =======
 =======
 import Head from 'next/head';
-<<<<<<< HEAD
 export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
@@ -44,7 +43,6 @@ export default function Page() {
         <div
           className='mt-4'
           dangerouslySetInnerHTML={{
-<<<<<<< HEAD
             __html:
 <<<<<<< HEAD
 
@@ -55,9 +53,9 @@ export default function Page() {
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
 =======
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
-=======
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -170,6 +168,8 @@ function Page() {
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>
@@ -182,12 +182,15 @@ function Page() {
 
 export default function Page() {
   return (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Guide — Cloud Improving Implementation</title>
@@ -201,6 +204,7 @@ export default function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/landing\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -238,22 +242,22 @@ export default function Page() {
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-=======
-<<<<<<< HEAD
     </div>;
   );
 }
 
 }
-=======
     </div>
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 import Head from 'next/head';
 export default function Page(req, res) {
@@ -281,6 +285,7 @@ export default function Page(req, res) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -295,3 +300,5 @@ export default function Page(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

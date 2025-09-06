@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import {
@@ -9,22 +10,18 @@ import { Textarea } from "@/components/ui/textarea";
 >>>>>>> import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-=======
-<<<<<<< HEAD
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -36,12 +33,15 @@ import {
 import { Label } from "@/components/ui/label"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import {
@@ -53,10 +53,13 @@ import {
 import { Label } from "@/components/ui/label",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
 =======
 >>>>>>> import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
@@ -88,6 +91,7 @@ export function MobileResumeBuilder() {
       case "skills":
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         return <SkillsStep />
@@ -99,10 +103,10 @@ export function MobileResumeBuilder() {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-        return <SkillsStep />
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        return <SkillsStep />
         return <SkillsStep />,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       default:
         return <BasicsStep />
     }
@@ -114,6 +118,7 @@ export function MobileResumeBuilder() {
         <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         >
           Basics
@@ -126,69 +131,59 @@ export function MobileResumeBuilder() {
           onClick = {(,) => setCurrentStep("basics"),}
 >>>>>>>         >
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant = {currentStep === "basics" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {(,) => setCurrentStep("basics"),}
-=======
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           Basics
         </Button>
         <Button
-<<<<<<< HEAD
           variant = {currentStep === "experience" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {() => setCurrentStep("experience"),}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         >
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           Experience
         </Button>
         <Button
-<<<<<<< HEAD
           variant = {currentStep === "education" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {() => setCurrentStep("education"),}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         >
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           Education
         </Button>
         <Button
-<<<<<<< HEAD
           variant = {currentStep === "skills" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {() => setCurrentStep("skills"),}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>         >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -208,6 +203,11 @@ export function MobileResumeBuilder() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          variant={currentStep === "skills" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("skills")}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
 =======
           variant={currentStep === "education" ? "default" : "outline"}
@@ -235,6 +235,7 @@ export function MobileResumeBuilder() {
       {renderStepContent()}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       <Button className="w-full flex gap-2" size="lg">
@@ -244,23 +245,25 @@ export function MobileResumeBuilder() {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
-=======
       
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
+      
 <<<<<<< HEAD
-=======
-      
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Button variant="default" className="w-full" size="lg">
 >>>>>>>         Save & Preview
       </Button>
@@ -295,6 +298,7 @@ function BasicsStep() {
           <Label htmlFor="summary">Professional Summary</Label>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -322,6 +326,14 @@ function BasicsStep() {
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          <Textarea
+            id="summary"
+            placeholder="Write a brief summary about yourself"
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             rows = {4,}
           />
         </div>
@@ -329,14 +341,15 @@ function BasicsStep() {
     </Card>
   )
 }
-=======
-<<<<<<< HEAD
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -456,6 +469,7 @@ function BasicsStep() {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -469,6 +483,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function ExperienceStep() {
 >>>>>>>   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
@@ -479,8 +496,11 @@ function ExperienceStep() {
     setExperiences(experiences.filter(exp => exp.id !== id))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const removeEducation = (id: string,) => {
     setEducations(educations.filter(edu => edu.id !== id))
@@ -488,7 +508,10 @@ function ExperienceStep() {
   const removeSkill = (id: string,) => {
     setSkills(skills.filter(skill => skill.id !== id))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
   )
@@ -695,13 +718,10 @@ function SkillsStep() {
 }
 =======
 
-=======
   };
 };
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },
   
   return (
@@ -1053,6 +1073,7 @@ function SkillsStep() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -1068,3 +1089,5 @@ function SkillsStep() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

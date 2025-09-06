@@ -1,16 +1,19 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-=======
-<<<<<<< HEAD
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Sparkles, RefreshCcw } from 'lucide-react'
 export interface EmptyMatchesCardProps {
   onRefresh: () => void;
@@ -19,6 +22,7 @@ export function EmptyMatchesCard({
   onRefresh
   isProcessing
 }: EmptyMatchesCardProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -29,6 +33,8 @@ import { Button } from "@/components/ui/button";
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className='p-6 text-center border-dashed border-2 bg-muted/30'>
       <div className='mb-4 flex justify-center'>
@@ -41,10 +47,12 @@ import { Button } from "@/components/ui/button";
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button 
         onClick = {onRefresh,}
         disabled = {isProcessing,}
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Sparkles, RefreshCcw } from 'lucide-react'
@@ -57,6 +65,7 @@ export interface EmptyMatchesCardProps {
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -65,6 +74,8 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">
@@ -84,27 +95,26 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 =======
         Run AI matching to find talents that match this job's requirements.
       </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button
         onClick = {onRefresh,}
         disabled = {isProcessing,}
-=======
       <Button 
         onClick={onRefresh} 
         disabled={isProcessing}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
       <Button 
         onClick={onRefresh} 
         disabled={isProcessing}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className="mx-auto"
       >
         {isProcessing ? (
           <>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -121,11 +131,14 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <RefreshCcw className='mr-2 h-4 w-4 animate-spin' />            Processing...
           </>
         ) : (
           <>
             <Sparkles className='mr-2 h-4 w-4' />            Find AI Matches            <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             Processing...
           </>
@@ -152,10 +165,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             Processing...
           </>
         ) : (
           <>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -174,6 +191,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         )}
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Sparkles className='mr-2 h-4 w-4' />            <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
           </>
@@ -182,12 +201,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>
   )
 }
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
           </>
@@ -233,6 +248,7 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -245,3 +261,5 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

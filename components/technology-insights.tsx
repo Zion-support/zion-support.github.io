@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -289,11 +290,15 @@ download_url: '/whitepapers / automation - roi - guide.pdf',
 
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import Link from 'next/link';
 export default function TechnologyInsightsPage() {
@@ -304,22 +309,29 @@ export default function TechnologyInsightsPage() {
       title: 'Quantum Computing in 2025'
       description:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech'
       readTime: '15 min read'
       featured: true
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
       featured: true;
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -327,6 +339,8 @@ export default function TechnologyInsightsPage() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: 'edge-ai'
       title: 'Edge AI Revolution'
@@ -452,11 +466,12 @@ class ErrorBoundary extends React.Component {
 =======
     }
   ];
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
@@ -517,6 +532,7 @@ class ErrorBoundary extends React.Component {
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
@@ -575,6 +591,8 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       Read More <span className='ml-1'>→</span>                    </Link>      </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
@@ -605,11 +623,11 @@ import React from 'react';
                     >
                       Read More <span className="ml-1">→</span>
                     </Link>
-=======
                       Read More <span className='ml-1'>→</span>                    </Link>
 
                     </Link>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -617,10 +635,13 @@ import React from 'react';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </div>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -685,12 +706,16 @@ href={`/blog/${trend && trend.id}`}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Research Areas */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Research Focus Areas
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -704,12 +729,9 @@ href={`/blog/${trend && trend.id}`}
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                 {researchAreas.map((area, index) => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <div
@@ -766,6 +788,7 @@ href={`/blog/${trend && trend.id}`}
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
 
 =======
 
@@ -803,12 +826,9 @@ href={`/blog/${trend && trend.id}`}
             </div>
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             {/* Whitepapers */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className='mb-16'>
@@ -816,6 +836,7 @@ href={`/blog/${trend && trend.id}`}
                 Research Whitepapers
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -829,12 +850,9 @@ href={`/blog/${trend && trend.id}`}
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                 {whitepapers.map((paper, index) => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <div
@@ -858,6 +876,7 @@ href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
                     >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -868,6 +887,8 @@ href={`/blog/${trend && trend.id}`}
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       Download PDF <span className='ml-1'>→</span>                    </Link>                {whitepapers.map((paper, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -885,6 +906,7 @@ href={`/blog/${trend && trend.id}`}
                       Download PDF <span className="ml-1">→</span>
                     </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -892,10 +914,13 @@ href={`/blog/${trend && trend.id}`}
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       Download PDF <span className='ml-1'>→</span>                    </Link>
 
                     </Link>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -909,10 +934,13 @@ href={`/blog/${trend && trend.id}`}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </div>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -934,6 +962,9 @@ href={`/blog/${trend && trend.id}`}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Innovation Lab */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -941,6 +972,7 @@ href={`/blog/${trend && trend.id}`}
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -967,6 +999,9 @@ href={`/blog/${trend && trend.id}`}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research
@@ -1303,6 +1338,7 @@ href={paper && paper.downloadUrl}
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -1378,18 +1414,18 @@ className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-w
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

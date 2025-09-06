@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/routes/AuthRoutes.tsx
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import Login from "@/pages/Login";
@@ -16,9 +19,12 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Onboarding from "@/pages/Onboarding";
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import Login from "@/pages/Login",
@@ -28,21 +34,26 @@ import UpdatePassword from "@/pages/UpdatePassword",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import Onboarding from "@/pages/Onboarding",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
 
-=======
 import TalentOnboarding from "@/pages/TalentOnboarding",
 import ServiceOnboarding from "@/pages/ServiceOnboarding",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const AuthRoutes = () => {
   return (
     <Routes>
@@ -79,21 +90,26 @@ const AuthRoutes = () => {
     </Routes>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default AuthRoutes;
 
-=======
 },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default AuthRoutes,
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -318,10 +334,9 @@ export default AuthRoutes;
 =======
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default AuthRoutes;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

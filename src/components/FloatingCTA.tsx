@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/FloatingCTA.tsx
 
 <<<<<<< HEAD
@@ -24,16 +25,20 @@ import { useState, useEffect } from "react";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { Button } from "@/components/ui/button",
 import Link from "next/link";
 import { useState, useEffect } from "react";
-=======
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { X } from 'lucide-react'
 
   const [isVisible, setIsVisible] = useState(false)
@@ -84,10 +89,13 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function FloatingCTA() {
   const [ isVisible, setIsVisible ] = useState(false)
   const [ isClosed, setIsClosed ] = useState(false)
@@ -96,12 +104,15 @@ export function FloatingCTA() {
       const scrollPosition = window.scrollY
       const threshold = 600; // Show CTA after scrolling 600px
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function FloatingCTA() {
 
 import { Button } from "@/components/ui/button",
@@ -111,15 +122,19 @@ import { X } from 'lucide-react'
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (scrollPosition > threshold && !isClosed) {
 =======
@@ -130,6 +145,8 @@ xport function FloatingCTA() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [ isVisible, setIsVisible ] = useState(false),
   const [ isClosed, setIsClosed ] = useState(false),
 ;
@@ -138,21 +155,19 @@ xport function FloatingCTA() {
       const scrollPosition = window.scrollY;
       const threshold = 600; // Show CTA after scrolling 600px
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 >>>>>>>       if (scrollPosition > threshold && !isClosed) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (scrollPosition > threshold && !isClosed) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         setIsVisible(true)
@@ -161,10 +176,13 @@ xport function FloatingCTA() {
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     window.addEventListener('scroll', handleScroll)
     return () => {
@@ -188,6 +206,7 @@ xport function FloatingCTA() {
     setIsVisible(false);    setIsVisible(false)
   }
   if (!isVisible) return null
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>   return (
@@ -326,6 +345,8 @@ export function FloatingCTA() {;
 >>>>>>>     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
 
     window.addEventListener("scroll", handleScroll),
@@ -340,12 +361,7 @@ export function FloatingCTA() {;
   },
 
   if (!isVisible) return null,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -363,6 +379,7 @@ export function FloatingCTA() {;
           >
             <Link href="/signup">Register Now</Link>
           </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -385,23 +402,19 @@ ursor/fix-website-loading-errors-and-merge-6662
             <X className="w-5 h-5" />
 >>>>>>>           </button>
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <button
             onClick={handleClose}
             className='text-zion-slate hover:text-white p-1'
             aria-label='Close'          >
             <X className='w-5 h-5' />          </button>
             <X className="w-5 h-5" />
-=======
           <button 
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <X className="w-5 h-5" />
           </button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -410,6 +423,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/FloatingCTA.tsx
 <<<<<<< HEAD
 
@@ -417,6 +431,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }, [isClosed])
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)
@@ -441,12 +457,13 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
   )}
 '"
 }
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
 import { useState, useEffect } from "react",;
@@ -693,8 +710,11 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

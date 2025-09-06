@@ -120,6 +120,7 @@ export default async function handler(
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     usersData.forEach(u => {
@@ -129,12 +130,11 @@ export default async function handler(
 
 =======
 <<<<<<< HEAD
-    const geoCounts: Record<string, number> = {}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    const geoCounts: Record<string, number> = {}
 
-<<<<<<< HEAD
     const geoCounts: Record<string, number> = {};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     usersData.forEach(u => {
       geoCounts[u.country |'Unknown'] =
         (geoCounts[u.country |'Unknown'] |0) + 1;
@@ -370,7 +370,10 @@ res.status (200).json ({
       referralConversions: 2
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
 }
@@ -403,6 +406,7 @@ res.status (200).json ({
     });
   }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -432,14 +436,16 @@ res.status (200).json ({
 =======
 <<<<<<< HEAD
 =======
-    const geoCounts: Record<string, number> = {};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    const geoCounts: Record<string, number> = {};
 
 }
-=======
     const geoCounts: Record<string, number> = {};
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

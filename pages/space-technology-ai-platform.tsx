@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',
 import Head from 'next/head',
@@ -506,6 +507,8 @@ function SpaceTechnologyAIPlatform() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -513,11 +516,8 @@ import {motion} from 'framer-motion';
 import {Satellite, ArrowRight, CheckCircle, Star, TrendingUp, Globe, Zap, Shield, Users, Rocket, Phone, Mail, MapPin, Brain, Sparkles,} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 import Head from 'next/head',
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
@@ -526,7 +526,6 @@ import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-=======
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
@@ -536,15 +535,9 @@ import {
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function SpaceTechnologyAIPlatform() {
 
   const contactInfo = {
-<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -588,18 +581,14 @@ export default function SpaceTechnologyAIPlatform() {
     'Northrop Grumman'
   ];
 
-=======
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',;
   };
 
-=======
     website: 'https://ziontechgroup.com'
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const features = [
     'AI-powered satellite operationsAutonomous space explorationSpace data analyticsSatellite constellation managementSpace debris trackingReal-time monitoringPredictive maintenanceMission planning tools',
     'API accessExpert consultation'
@@ -611,9 +600,6 @@ export default function SpaceTechnologyAIPlatform() {
     'NASA APIsESA APIsSatellite ground stationsGIS systemsSlackMicrosoft TeamsCustom applications'
   ],
   const competitors = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     'Maxar ($5000-50000/month)',
     'Planet Labs ($1000-10000/month)',
     'Airbus Defence ($10000-100000/month)',
@@ -1001,8 +987,6 @@ export default function SpaceTechnologyAIPlatform() {
                   <Users className=&quot;w-5 h-5 text-blue-400&quot; />
 =======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'Maxar ($5000-50000/month)Planet Labs ($1000-10000/month)Airbus Defence ($10000-100000/month)Lockheed MartinBoeingNorthrop Grumman'
   ],
   return (
@@ -1034,16 +1018,10 @@ export default function SpaceTechnologyAIPlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     >
       <div className="min-h-screen">
         <Head>
           <title>Space Technology AI Platform - Zion Tech Group</title>
-<<<<<<< HEAD
           <meta
             name='description'
             content='Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis.'
@@ -1078,7 +1056,6 @@ export default function SpaceTechnologyAIPlatform() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
-=======
           <meta name="description" content="Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis." />
           <meta name="keywords" content="space technology, AI space exploration, satellite operations, space data analytics, autonomous space systems" />
           <meta name="author" content="Zion Tech Group" />
@@ -1113,54 +1090,32 @@ export default function SpaceTechnologyAIPlatform() {
   }
 }
               className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-blue-400" />
                 <span className="text-blue-300 text-sm font-medium">2026 Revolutionary Innovation</span>
               </div>
-<<<<<<< HEAD
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent'>
-=======
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Space Technology
                 </span>
                 <br />
                 <span className="text-white">AI Platform</span>
               </h1>
-<<<<<<< HEAD
               <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
                 Revolutionary AI platform that combines space technology with
-<<<<<<< HEAD
                 artificial intelligence to enable autonomous space exploration
-=======
                 artificial intelligence to enable autonomous space exploration,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 satellite operations, and space data analysis.
               </p>
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12'>
-=======
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
                 Revolutionary AI platform that combines space technology with artificial intelligence to enable
                 autonomous space exploration, satellite operations, and space data analysis.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <motion.div
                   whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
@@ -1194,19 +1149,12 @@ export default function SpaceTechnologyAIPlatform() {
                   <ArrowRight className="w-5 h-5" />
                 </motion.div>
               </div>
-<<<<<<< HEAD
               <div className='flex items-center justify-center space-x-8 text-gray-400'>
                 <div className='flex items-center space-x-2'>
                   <CheckCircle className='w-5 h-5 text-green-400' />
-=======
               <div className="flex items-center justify-center space-x-8 text-gray-400">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>1-month setup</span>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -1223,6 +1171,7 @@ export default function SpaceTechnologyAIPlatform() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
@@ -1230,6 +1179,8 @@ export default function SpaceTechnologyAIPlatform() {
             <motion.div
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -1242,7 +1193,6 @@ export default function SpaceTechnologyAIPlatform() {
               className=&quot;text-center mb-16&quot;
 =======
               className='text-center mb-16'
-=======
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1273,11 +1223,14 @@ export default function SpaceTechnologyAIPlatform() {
 }
               className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
@@ -1289,11 +1242,14 @@ export default function SpaceTechnologyAIPlatform() {
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {features.map((feature, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <motion.div
@@ -1306,7 +1262,6 @@ export default function SpaceTechnologyAIPlatform() {
                   className=&quot;group relative&quot;
 =======
                   className='group relative'
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -1337,11 +1292,14 @@ export default function SpaceTechnologyAIPlatform() {
 }
                   className="group relative"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300">
@@ -1354,7 +1312,6 @@ export default function SpaceTechnologyAIPlatform() {
                     </p>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -1378,7 +1335,6 @@ export default function SpaceTechnologyAIPlatform() {
               className=&quot;text-center mb-16&quot;
 =======
               className='text-center mb-16'
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1417,11 +1373,14 @@ export default function SpaceTechnologyAIPlatform() {
 }
               className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -1433,11 +1392,14 @@ export default function SpaceTechnologyAIPlatform() {
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot;>
               <motion.div
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>              <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 initial={{ opacity: 0, x: -20 }}
@@ -1466,7 +1428,6 @@ export default function SpaceTechnologyAIPlatform() {
 
 =======
                 className='space-y-6'
-=======
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
                 initial={{ opacity: 0, x: -20 }  } catch (error) {
@@ -1490,11 +1451,6 @@ export default function SpaceTechnologyAIPlatform() {
   }
 }
                 className="space-y-6"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
                 <div className="space-y-4">
@@ -1509,7 +1465,6 @@ export default function SpaceTechnologyAIPlatform() {
   }
 }
                 </div>
-<<<<<<< HEAD
                 <div className='p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30'>
                   <div className='flex items-center space-x-3'>
                     <div className='w-3 h-3 bg-green-500 rounded-full'></div>
@@ -1548,7 +1503,6 @@ export default function SpaceTechnologyAIPlatform() {
 
 =======
                 className='space-y-6'
-=======
                 <div className="p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
@@ -1557,16 +1511,11 @@ export default function SpaceTechnologyAIPlatform() {
                 </div>
               </motion.div>
               <motion.div
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className='space-y-6'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, x: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1588,11 +1537,6 @@ export default function SpaceTechnologyAIPlatform() {
   }
 }
                 className="space-y-6"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Market Statistics</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -1655,6 +1599,7 @@ export default function SpaceTechnologyAIPlatform() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1715,6 +1660,8 @@ className='space-y-6'>;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Use Cases Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -1766,7 +1713,6 @@ className='space-y-6'>;
               className="text-center mb-16"
 =======
               className='text-center mb-16'
-=======
         {/* Use Cases Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1797,12 +1743,15 @@ className='space-y-6'>;
 }
               className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -1814,6 +1763,7 @@ className='space-y-6'>;
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1824,6 +1774,8 @@ className='space-y-6'>;
               {useCases.map((useCase, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <motion.div
@@ -1871,7 +1823,6 @@ className='space-y-6'>;
 className="group relative"
 =======
                   className='group relative'
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
                 <motion.div
@@ -1902,12 +1853,15 @@ className="group relative"
 }
                   className="group relative"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
@@ -1920,6 +1874,7 @@ className="group relative"
                     </p>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1935,6 +1890,8 @@ className="group relative"
             </div>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))}
 <<<<<<< HEAD
 </div>;
@@ -1964,7 +1921,6 @@ className="group relative"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2003,6 +1959,7 @@ className="group relative"
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2015,6 +1972,8 @@ className="group relative"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2027,6 +1986,7 @@ className="group relative"
                 Join 120+ space companies already leveraging our Space Technology AI Platform to achieve unprecedented exploration capabilities and operational efficiency.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -2038,12 +1998,13 @@ className="group relative"
 className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8'>                <motion.a
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200'
-=======
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
                 <motion.a
                   href={`tel:${contactInfo.mobile}`  } catch (error) {
@@ -2063,12 +2024,15 @@ className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 
 }
                   className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call {contactInfo.mobile}</span>
@@ -2112,6 +2076,7 @@ className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 tex
                 </motion.a>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2125,11 +2090,13 @@ className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 tex
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20'>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
-=======
               <div className="p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2137,6 +2104,8 @@ className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 tex
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div>
                     <Phone className="w-6 h-6 text-blue-400 mx-auto mb-2" />
                     <p className="text-white font-medium">{contactInfo.mobile}</p>
@@ -2160,6 +2129,7 @@ className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 tex
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2425,13 +2395,11 @@ transition={{ duration: 0 && 0.6 }}
 =======
 =======
 <<<<<<< HEAD
-);
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+);
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -2440,9 +2408,12 @@ transition={{ duration: 0 && 0.6 }}
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

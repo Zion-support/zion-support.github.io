@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/external-modules.d.ts
 
 
@@ -90,6 +91,8 @@ declare module 'react-day-picker' {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 declare module "cmdk";
 declare module "@radix-ui/react-context-menu";
 declare module "vaul";
@@ -101,12 +104,14 @@ declare module "@radix-ui/react-navigation-menu";
 declare module "react-resizable-panels";
 declare module "@radix-ui/react-toggle-group";
 declare module "@radix-ui/react-toggle";
-<<<<<<< HEAD
 declare module '@tanstack/react-query';
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
 declare module "vaul",
@@ -118,6 +123,7 @@ declare module "@radix-ui/react-navigation-menu",
 declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -133,17 +139,20 @@ declare module 'react-day-picker' {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 declare module '@tanstack/react-query',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 declare module 'react-day-picker' {
-<<<<<<< HEAD
   export interface DateRange {
     from?: Date,
     to?: Date
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 declare module "cmdk",;
 declare module "@radix-ui/react-context-menu",;
 declare module "vaul",;
@@ -160,6 +169,7 @@ declare module 'react-day-picker' {;
   export interface DateRange {;
     from?: Date,;
     to?: Date;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -186,10 +196,11 @@ import {FC, SVGProps} from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   export interface DateRange {;
     from?: Date;
     to?: Date
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   // Minimal placeholder for the DayPicker component used in the app
   // The actual library provides full typings but we stub them here so the
@@ -197,12 +208,8 @@ import {FC, SVGProps} from 'react';
   // type definitions.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   export const DayPicker: any
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 declare module 'sonner';
 declare module 'lucide-react' {
 
@@ -401,6 +408,7 @@ import {FC, SVGProps} from 'react';
   export const X: LucideIcon;
   export const XCircle: LucideIcon;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/external-modules.d.ts
 
 <<<<<<< HEAD
@@ -474,12 +482,12 @@ declare module 'react - hook - form' {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   export const Zap: LucideIcon
   const icons: { [key: string]: LucideIcon }
-=======
   export const Zap: LucideIcon,;
   const icons: { [key: string]: LucideIcon };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   export default icons
 };
 declare module 'child_process';
@@ -533,15 +541,20 @@ declare module 'react-hook-form' {
     keyof TFieldValues & string
   export type Control<TFieldValues extends FieldValues = FieldValues> = any
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-  export interface UseFormReturn<
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  export interface UseFormReturn<
 
   export interface UseFormReturn<;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     TFieldValues extends FieldValues = FieldValues;
   > {
     control: Control<TFieldValues>
@@ -551,9 +564,12 @@ declare module 'react-hook-form' {
     [key: string]: any
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   export function useForm<
     TFieldValues extends FieldValues = FieldValues;
   >(options?: any): UseFormReturn<TFieldValues>
@@ -561,7 +577,6 @@ declare module 'react-hook-form' {
     TFieldValues extends FieldValues = FieldValues;
   >(options: any): any
   export interface ControllerProps<
-=======
 
   export function useForm<;
     TFieldValues extends FieldValues = FieldValues;
@@ -571,8 +586,11 @@ declare module 'react-hook-form' {
   >(options: any): any
 
   export interface ControllerProps<;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
   > {
@@ -584,15 +602,20 @@ declare module 'react-hook-form' {
   }
   export const Controller: ComponentType<ControllerProps<any, any>>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-  export interface FormProviderProps<
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  export interface FormProviderProps<
 
   export interface FormProviderProps<;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     TFieldValues extends FieldValues = FieldValues;
   > {
     children?: ReactNode
@@ -613,14 +636,16 @@ declare module 'ws';
 declare module 'recharts';
 declare module 'next-themes';
 declare module 'tailwind-merge';
+
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
-<<<<<<< HEAD
-
 =======
 =======
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   export interface DateRange {
     from?: Date,
     to?: Date
@@ -649,8 +674,11 @@ declare module 'react-day-picker' {;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any;
   export const DayPicker: any;
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 declare module 'sonner',;
 declare module 'lucide-react' {;
   import { FC, SVGProps } from 'react',;
@@ -1382,8 +1410,11 @@ declare module 'tailwind-merge';
 declare module 'next-themes';
 declare module 'tailwind-merge';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

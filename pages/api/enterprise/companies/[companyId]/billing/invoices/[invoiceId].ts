@@ -1,6 +1,31 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next";
+export const config = {
+  api: {
+    responseLimit: false
+  }
+}
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+import type { NextApiRequest, NextApiResponse } from "next";
+export const config = {
+  api: {
+    responseLimit: false,
+  },;
+};
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { companyId, invoiceId } = req.query;
 =======
 
@@ -88,8 +113,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).send(pdfBuffer)
 
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -133,6 +158,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ invoice: 'PDF buffer' });
@@ -187,6 +214,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -195,3 +223,5 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

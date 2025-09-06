@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   service.name 
@@ -44,21 +45,17 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 return (<UltraAdvancedFuturisticBackground> <Head> <title> {
   service.name
 }- Zion Tech Group</title>) )
-=======
  return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-=======
 return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-=======
  return (<UltraAdvancedFuturisticBackground> <Head> <title> {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   service.name 
 }- Zion Tech Group</title>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -67,6 +64,7 @@ import Head from 'next/head';
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,20 +226,14 @@ if (return null) {
 ;
 =======
 <<<<<<< HEAD
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function ApiObservabilityPage() {
 
-=======
-<<<<<<< HEAD
 export default function ApiObservabilityPage() {;
-=======
 export default function ApiObservabilityPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
   if (!service) return null;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -327,18 +319,15 @@ export default function ApiObservabilityPage() {
 
 =======
   );
-<<<<<<< HEAD
 }
-=======
 }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

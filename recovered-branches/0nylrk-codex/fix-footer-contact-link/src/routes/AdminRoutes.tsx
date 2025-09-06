@@ -14,20 +14,21 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
-=======
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -36,6 +37,7 @@ import PartnerManager from "@/pages/admin/PartnerManager",
 import AppMetadataManager from "@/pages/admin/AppMetadataManager",
 import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -61,13 +63,13 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",;
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import TokenManager from "@/pages/admin/TokenManager";
 import IntegrationsPage from "@/pages/admin/IntegrationsPage";
 
-=======
 import TokenManager from "@/pages/admin/TokenManager",
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const AdminRoutes = () => {
   return (
     <Routes>
@@ -141,7 +143,6 @@ const AdminRoutes = () => {
           <ProtectedRoute adminOnly={true}>
             <IntegrationsPage />
           </ProtectedRoute>
-<<<<<<< HEAD
         }
       />
     </Routes>
@@ -149,7 +150,6 @@ const AdminRoutes = () => {
 }
 export default AdminRoutes;
 
-=======
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
@@ -573,10 +573,9 @@ export default AdminRoutes;
 =======
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default AdminRoutes;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

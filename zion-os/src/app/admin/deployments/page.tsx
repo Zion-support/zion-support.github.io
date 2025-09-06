@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 } from 'lucide-react';
 =======
@@ -28,10 +29,11 @@ import {;
   MapPin,;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 'use client';
 import { useState, useEffect } from 'react';
 import {
-<<<<<<< HEAD
   Rocket
   Clock
   CheckCircle
@@ -54,7 +56,6 @@ import {
   Pause
   StopCircle
   MapPin
-=======
   Rocket,
   Clock,
   CheckCircle,
@@ -77,8 +78,11 @@ import {
   Pause,
   StopCircle,
   MapPin,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -142,6 +146,7 @@ const mockDeployments: Deployment[] = [
     country: 'Singapore'
   }
 ];
+<<<<<<< HEAD
 
 =======
 // Mock data - replace with actual API calls;
@@ -193,13 +198,17 @@ const mockDeployments: Deployment[] = [;
 export default function DeploymentsPage() {;
 =======
 <<<<<<< HEAD
-export default function DeploymentsPage() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function DeploymentsPage() {
 
 export default function DeploymentsPage() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
   const [filter, setFilter] = useState<
     'all' | 'pending' | 'deploying' | 'completed' | 'failed'
@@ -592,6 +601,7 @@ export default function DeploymentsPage() {
           >
             {label} ({count})
           </button>
+<<<<<<< HEAD
 
 "use client",;
 import { useState, useEffect } from "react",;
@@ -836,6 +846,8 @@ export default function DeploymentsPage() {;
             {label} ({count})
           </button>
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 import { useState, useEffect } from "react",;
 import {;
@@ -1066,6 +1078,7 @@ export default function DeploymentsPage() {;
             {label} ({count});
           </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1076,6 +1089,8 @@ export default function DeploymentsPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ))}
       </div>;
 <<<<<<< HEAD
@@ -1089,10 +1104,13 @@ export default function DeploymentsPage() {;
       </div>
       {/* Deployments Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
         {filteredDeployments.map((deployment) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>
         {filteredDeployments.map(deployment => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1691,7 +1709,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     ></div>
                   </div>
                 </div>
-=======
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
         {filteredDeployments.map((deployment) => (;
           <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
@@ -1737,36 +1754,27 @@ const getVerticalIcon = (vertical: string) =>: any {
                     ></div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
             {/* Deployment Details */}
-<<<<<<< HEAD
             <div className='p-6 space-y-4'>
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>
                 <div className='flex items-center gap-2 text-white/70'>
                   <Globe className='w-4 h-4' />
                   <span className='font-mono'>
-<<<<<<< HEAD
                     {deployment.domain |
                       deployment.subdomain |
                       'No domain set'}
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
-=======
                     {deployment.domain ||
                       deployment.subdomain ||
                       'No domain set'}
                   </span>
                 </div>
                 {(deployment.region || deployment.country) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className='flex items-center gap-2 text-white/70'>
                     <MapPin className='w-4 h-4' />
                     <span>
@@ -1778,22 +1786,18 @@ const getVerticalIcon = (vertical: string) =>: any {
                 <div className="flex items-center gap-2 text-white/70">
                   <span>🌐</span>
                   <span className="font-mono">
-<<<<<<< HEAD
                     {deployment.domain |deployment.subdomain |'No domain set'}
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
-=======
                     {deployment.domain || deployment.subdomain || 'No domain set'}
                   </span>
                 </div>
                 {(deployment.region || deployment.country) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className="flex items-center gap-2 text-white/70">
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
                   </div>
-=======
             <div className="p-6 space-y-4">;
               {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;
@@ -1809,14 +1813,18 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 )}
               </div>;
               {/* Features */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1828,6 +1836,8 @@ const getVerticalIcon = (vertical: string) =>: any {
                   {deployment.features?.slice(0, 4).map((feature) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='space-y-2'>
                 <div className='text-sm font-medium text-white/80'>
                   Active Features
@@ -1852,8 +1862,11 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">
                       +{deployment.features.length - 4} more
                     </span>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="space-y-2">;
                 <div className="text-sm font-medium text-white/80">Active Features</div>;
                 <div className="flex flex-wrap gap-2">;
@@ -1866,6 +1879,7 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
                       +{deployment.features.length - 4} more;
                     </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1887,10 +1901,13 @@ const getVerticalIcon = (vertical: string) =>: any {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   )}
                 </div>;
               </div>;
               {/* Timestamps */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>;
@@ -1919,6 +1936,8 @@ const getVerticalIcon = (vertical: string) =>: any {
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
                 <div className='flex items-center gap-1'>
                   <Calendar className='w-3 h-3' />
@@ -1938,6 +1957,7 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -1946,6 +1966,8 @@ const getVerticalIcon = (vertical: string) =>: any {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
                 <div className="flex items-center gap-1">;
                   <Calendar className="w-3 h-3" />;
@@ -1956,6 +1978,7 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <RefreshCw className="w-3 h-3" />;
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1973,11 +1996,14 @@ const getVerticalIcon = (vertical: string) =>: any {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 )}
               </div>;
             </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* Action Buttons */}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2094,6 +2120,8 @@ const getVerticalIcon = (vertical: string) =>: any {
               <div className="flex gap-2">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='p-6 pt-0'>
               <div className='flex gap-2'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2267,7 +2295,6 @@ const getVerticalIcon = (vertical: string) =>: any {
               </div>
             </div>
           </div>
-=======
             <div className="p-6 pt-0">;
               <div className="flex gap-2">;
                 {deployment.status === 'pending' && (;
@@ -2310,15 +2337,9 @@ const getVerticalIcon = (vertical: string) =>: any {
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ))}
       </div>
       {/* Empty State */}
-<<<<<<< HEAD
       {filteredDeployments.length === 0 && (
         <div className='text-center py-16'>
           <div className='w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full'>
@@ -2517,6 +2538,7 @@ const getVerticalIcon = (vertical: string) =>: any {
       )}
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -2549,6 +2571,10 @@ const getVerticalIcon = (vertical: string) =>: any {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {filteredDeployments.length === 0 && (;
         <div className="text-center py-16">;
           <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">;
@@ -2573,12 +2599,11 @@ const getVerticalIcon = (vertical: string) =>: any {
         </div>;
       )}
     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

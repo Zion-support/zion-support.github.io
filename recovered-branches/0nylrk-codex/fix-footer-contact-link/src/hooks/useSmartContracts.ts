@@ -1,12 +1,15 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useSmartContracts.ts
 
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -18,7 +21,6 @@ export function useSmartContracts() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
-=======
 import {useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
@@ -29,10 +31,12 @@ import {ContractFormValues} from "@/components/contracts/components/ContractForm
 export function useSmartContracts() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
@@ -44,6 +48,7 @@ export function useSmartContracts() {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -67,6 +72,9 @@ export function useSmartContracts() {;
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const generateSolidityContract = async (
     values: ContractFormValues
     talent: TalentProfile
@@ -109,7 +117,6 @@ setIsLoading(true),
       setIsLoading(true)
       const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
         body: {
-<<<<<<< HEAD
           talentName: talent.full_name;
           clientName: clientName;
           projectName: values.projectName;
@@ -121,8 +128,11 @@ setIsLoading(true),
           additionalClauses: values.additionalClauses |[]}
       });
       if (error) throw error;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           talentName: talent.full_name,
           clientName: clientName,
           projectName: values.projectName,
@@ -136,6 +146,7 @@ setIsLoading(true),
       
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -208,6 +219,8 @@ if ( {) {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (data && data.solidityCode) {
         return data.solidityCode
       } else {
@@ -221,6 +234,7 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -240,11 +254,11 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const deploySmartContract = async (
     contractCode: string,
     options: DeploymentOptions
@@ -257,8 +271,11 @@ if ( {) {
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setDeploymentStatus('deploying');
       // This would normally connect to MetaMask or other Web3 provider
       // For now, we'll just simulate success
@@ -296,7 +313,6 @@ if ( {) {
     deploymentStatus
   }
 }
-=======
       setDeploymentStatus('deploying'),
       
       // This would normally connect to MetaMask or other Web3 provider
@@ -325,9 +341,6 @@ if ( {) {
       
       return mockSmartContractInfo
     } catch (err: any) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       console.error("Error deploying smart contract:", err);
       toast.error("Failed to deploy smart contract");
       setDeploymentStatus('error');
@@ -340,9 +353,12 @@ if ( {) {
     deploySmartContract;
     isLoading;
     deploymentStatus
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       console.error("Error deploying smart contract:", err),
       toast.error("Failed to deploy smart contract"),
       setDeploymentStatus('error'),
@@ -435,6 +451,7 @@ export function useSmartContracts() {;
     deploySmartContract;
     isLoading;
     deploymentStatus;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -747,3 +764,8 @@ deploymentStatus
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

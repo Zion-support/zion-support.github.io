@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Toaster } from "./components/ui/toaster";
 
@@ -117,22 +118,21 @@ import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { Suspense } from 'react';
 import { Routes, Route  } from 'react-router-dom';
 import './App.css',
 import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
-=======
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Toaster } from "./components/ui/toaster";
 
 import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
-<<<<<<< HEAD
 import {
   AuthRoutes
   DashboardRoutes
@@ -180,9 +180,6 @@ const baseRoutes = [
   { path: "/community", element: <CommunityPage /> }
   { path: "/contact", element: <ContactPage /> }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { Suspense } from 'react',
 import { Routes, Route } from 'react-router-dom',
 import './App.css',
@@ -191,10 +188,13 @@ import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -206,6 +206,7 @@ import {
   ErrorRoutes,
   EnterpriseRoutes,
   CommunityRoutes,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -301,6 +302,8 @@ import {
   CommunityRoutes,
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DeveloperRoutes,;
 } from "./routes";
 const Home = React.lazy(() => import("./pages/Home"));
@@ -320,8 +323,11 @@ const ITOnsiteServicesPage = React.lazy(
 );
 const OpenAppRedirect = React.lazy(() => import("./pages/OpenAppRedirect"));
 const ContactPage = React.lazy(() => import("./pages/Contact"));
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DeveloperRoutes
 } from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
@@ -340,11 +346,14 @@ const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPa
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -364,9 +373,12 @@ const baseRoutes = [
   { path: '/contact', element: <ContactPage /> }],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const App = () => {
   return (
     <WhitelabelProvider>
@@ -394,24 +406,29 @@ const App = () => {
       </ThemeProvider>
     </WhitelabelProvider>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
 export default App;
 
-=======
   )
 },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default App,
 import React, { Suspense } from 'react',;
 import { Routes, Route } from 'react-router-dom',;
@@ -493,6 +510,7 @@ const App = () => {;
   );
 },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default App;
 
@@ -522,3 +540,6 @@ export default App;
 export default App;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default App;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

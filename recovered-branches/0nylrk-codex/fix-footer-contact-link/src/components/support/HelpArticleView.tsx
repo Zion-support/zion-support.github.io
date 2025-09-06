@@ -2,14 +2,24 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpArticleView.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Card} from "@/components/ui/card";
+import {ThumbsUp, ThumbsDown} from "lucide-react";
+import {toast} from "@/components/ui/use-toast";
+import {HELP_CATEGORIES} from "./help-content";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { ThumbsUp, ThumbsDown } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ========
@@ -30,16 +40,28 @@ interface HelpArticleViewProps {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+import { HELP_CATEGORIES } from "./help-content";
+interface HelpArticleViewProps {
+import { HELP_CATEGORIES } from "./help-content",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface HelpArticleViewProps {
   articleId: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
 
+=======
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // Find the article in all categories
@@ -49,6 +71,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     if (found) {
       article = found,
       break
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -69,6 +92,8 @@ const found = category.articles.find(a => a.id === articleId),
       article = found,
       break
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
@@ -77,9 +102,12 @@ import { toast } from "@/components/ui/use-toast",;
 import { HELP_CATEGORIES } from "./help-content",;
 interface HelpArticleViewProps {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   articleId: string;
 }
 
@@ -141,14 +169,18 @@ if ( {) {
 }
       article = found;
       break;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpArticleView.tsx
   if (!article) {
     return <div>Article not found</div>;
   }
+<<<<<<< HEAD
 =======
 
 
@@ -158,6 +190,19 @@ if ( {) {
   }
 
 
+=======
+  const handleFeedback = (type: "helpful" | "not-helpful") => {
+    (setFeedbackGiven(type)
+      // In a real implementation, this would send feedback to the server
+      toast({
+        title: "Thank you for your feedback!"
+        description:
+          type === "helpful"
+            ? "We're glad this article was helpful."
+            : "We'll work on improving this article."
+      }));
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type),
@@ -170,6 +215,7 @@ if ( {) {
         : "We'll work on improving this article."})
   },
   
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -196,6 +242,8 @@ const handleFeedback = (type: "helpful" | "not-helpful") => {
       }));
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div>
       <Card className="p-6">
@@ -279,6 +327,7 @@ const handleFeedback = (type: "helpful" | "not-helpful") => {
                 Contact Support
               </Button>
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -465,6 +514,8 @@ if ( {) {
 
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   const handleFeedback = (type: "helpful" | "not-helpful") => {;
     setFeedbackGiven(type),;
@@ -540,11 +591,14 @@ if ( {) {
                 Contact Support;
               </Button>;
             </div>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         </div>;
       </Card>;
@@ -552,6 +606,7 @@ if ( {) {
 <<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpArticleView.tsx
 <<<<<<< HEAD
 
@@ -607,13 +662,25 @@ function format_date (date: string): string {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric"
     month: "long"
     day: "numeric"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  });
+}
+
+  })
+  })
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 function formatDate(date: string): string {;
   return new Date(date).toLocaleDateString("en-US", {;
@@ -623,6 +690,7 @@ function formatDate(date: string): string {;
   });
 }
 ;
+<<<<<<< HEAD
 
 =======
   })
@@ -672,3 +740,5 @@ year: "numeric"
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

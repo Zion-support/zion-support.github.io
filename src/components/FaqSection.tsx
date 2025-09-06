@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/FaqSection.tsx
 
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { GradientHeading } from './GradientHeading'
@@ -18,6 +21,7 @@ import { GradientHeading } from './GradientHeading'
   AccordionItem
   AccordionTrigger
 } from '@/components/ui/accordion'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>   Accordion,
   AccordionContent,
@@ -29,17 +33,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> import { FileText } from 'lucide-react'
 =======
 =======
-import {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {
 import { GradientHeading } from './GradientHeading'
-=======
 import {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Accordion,
   AccordionContent,
   AccordionItem,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import { FileText } from 'lucide-react'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -162,12 +163,15 @@ export function FaqSection() {;
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Accordion type='single' collapsible className='w-full'>
             {faqs.map((faq, index) => (
               <AccordionItem
@@ -185,6 +189,7 @@ import {
   AccordionItem
   AccordionTrigger} from "@/components/ui/accordion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -266,6 +271,8 @@ function FaqSection() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const faqs = [
   {
     question: "How do I publish my AI product or service?"
@@ -300,12 +307,7 @@ const faqs = [
     answer:
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}]
 
-<<<<<<< HEAD
-=======
-=======
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
@@ -315,14 +317,18 @@ import {
 import { FileText } from 'lucide-react'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const faqs = [
   {
     question: "How do I publish my AI product or service?",
     answer:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -338,6 +344,8 @@ onst faqs = [
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."}
   {
     question: "What types of AI jobs can I find or post?",
@@ -368,11 +376,14 @@ onst faqs = [
     answer:
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."},
   {
     question: "What types of AI jobs can I find or post?",
@@ -405,6 +416,7 @@ onst faqs = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function FaqSection() {
 =======
 xport function FaqSection() {
@@ -414,6 +426,8 @@ xport function FaqSection() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function FaqSection() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
@@ -425,6 +439,7 @@ export function FaqSection() {
             Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -443,18 +458,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>           <div className="flex items-center mb-6">
 =======
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">
           <div className="flex items-center mb-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -613,12 +626,9 @@ function FaqSection() {
 =======
 =======
 =======
-          
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
@@ -627,7 +637,10 @@ function FaqSection() {
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -668,8 +681,11 @@ function FaqSection() {
   );
 };
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -776,6 +792,7 @@ export function FaqSection() {;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {faq.question}
                 </AccordionTrigger>;
                 <AccordionContent className="text-zion-slate-light">;
@@ -862,3 +879,5 @@ answer: export function FaqSection () {";
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

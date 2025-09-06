@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const dir = path.resolve(process.cwd(), 'data/cloud-automations');
   const data: Record<string, any> = {};
@@ -6,6 +7,22 @@ const dir = path.resolve(process.cwd(), 'data/cloud-automations');
 
 
 <<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {}
 <<<<<<< HEAD
@@ -20,8 +37,11 @@ const dir = path.resolve(process.cwd(), 'data/cloud-automations');
         if (f.endsWith(".json")) {
           const fp = path.join(dir, f);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           data[f.replace(".json", "")] = JSON.parse(
             fs.readFileSync(fp, "utf8")
 =======
@@ -75,8 +95,8 @@ function handler() {
 data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
           );
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -93,12 +113,16 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
           data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       }
     }
   } catch (e) {
 // ignore;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -143,3 +167,10 @@ res && res.status(200).json({ ok: true, data });
   res.status(200).json({ ok: true, data });
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  res.status(200).json({ ok: true, data });
+res.status(200).json({ ok: true, data });
+  res.status(200).json({ ok: true, data });
+}
+  res.status(200).json({ ok: true, data });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

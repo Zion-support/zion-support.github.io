@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react',
 
@@ -17,6 +18,10 @@ import React from 'react';
 
 import React from "react";
 
+=======
+import React from 'react';
+import React from 'react',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ProfileLoadingState() {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -25,6 +30,7 @@ export function ProfileLoadingState() {
         Loading profile...
       </div>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -86,3 +92,10 @@ export function ProfileLoadingState() {;
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

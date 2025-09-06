@@ -101,6 +101,7 @@ code {
   .content {
     padding: 1rem;
   }
+<<<<<<< HEAD
 =======
 .App {
   text-align: center;
@@ -111,4 +112,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }

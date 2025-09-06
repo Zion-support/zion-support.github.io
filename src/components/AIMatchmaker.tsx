@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/AIMatchmaker.tsx
 
 =======
@@ -7,6 +8,8 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { toast } from '@/hooks/use-toast'
 import { Button } from '@/components/ui/button'
@@ -15,17 +18,21 @@ import { AIMatchingResults } from '@/components/AIMatchingResults'
 import { findMatches, MatchResult } from '@/lib/ai-matchmaking'
 import { Textarea } from '@/components/ui/textarea'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -35,14 +42,10 @@ import { Textarea } from "@/components/ui/textarea";
 >>>>>>> import { Sparkles, Search } from 'lucide-react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Textarea } from "@/components/ui/textarea";
-=======
 import { Textarea } from "@/components/ui/textarea",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Sparkles, Search } from 'lucide-react'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
@@ -63,6 +66,7 @@ serviceType
   data: error
 })
 toast ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -94,12 +98,12 @@ interface AIMatchmakerProps {
 >>>>>>>   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   //Set empty matches to show no results found UI setMatches ([])
 }finally {
-=======
   //Set empty matches to show no results found UI setMatches ([]) ;
 }finally {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface AIMatchmakerProps {
@@ -108,12 +112,13 @@ interface AIMatchmakerProps {
   className?: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 export function AIMatchmaker({
   serviceType = ''
   onMatchSelect
@@ -124,7 +129,10 @@ export function AIMatchmaker({
   const [matches, setMatches] = useState([] as MatchResult[])
   const [hasSearched, setHasSearched] = useState(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -132,29 +140,37 @@ export function AIMatchmaker({
         description: "Tell us what you're looking for so we can find matches."
         variant: 'destructive'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
   const [query, setQuery] = useState(""),
   const [isMatchmaking, setIsMatchmaking] = useState(false),
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
-<<<<<<< HEAD
         variant: 'destructive',
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         variant: 'destructive',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       })
       return;
     }
@@ -179,10 +195,13 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         variant: 'destructive'
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
   const [query, setQuery] = useState(""),
@@ -201,6 +220,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         description: "Tell us what you're looking for so we can find matches.",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -208,6 +228,8 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         variant: "destructive"}),
       return
     }
@@ -239,6 +261,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         variant: "destructive"}),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -246,10 +269,13 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Set empty matches to show no results found UI
       setMatches([])
     } finally {
       setIsMatchmaking(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>>       // Set empty matches to show no results found UI
@@ -261,6 +287,8 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   const handleItemSelect = (item: any) => {    if (onMatchSelect) {
@@ -276,19 +304,20 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     >
       <CardHeader className='pb-2'>
         <CardTitle className='flex items-center text-white'>
-<<<<<<< HEAD
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />
 
-=======
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;
         <p className='text-sm text-zion-slate-light'>;
           Describe what you&apos;re looking for and our AI will find the best
           matches
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -571,6 +600,7 @@ if ( {) {
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -579,10 +609,13 @@ if ( {) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
           Describe what you're looking for and our AI will find the best matches
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -592,6 +625,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </p>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </CardHeader>
@@ -724,7 +759,10 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className } AIMa
               onClick={handleSearch}
               disabled={isMatchmaking}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'            >
               {isMatchmaking ? (
                 <>Analyzing your needs...</>
@@ -739,6 +777,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className } AIMa
           {hasSearched && (
             <AIMatchingResults
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
@@ -749,6 +788,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
             >;
               {isMatchmaking ? (;
@@ -775,15 +816,19 @@ ursor/fix-website-loading-errors-and-merge-6662
           {hasSearched && (;
             <AIMatchingResults;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/AIMatchmaker.tsx
@@ -921,6 +966,8 @@ if (onMatchSelect) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchmaker.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               projectDescription={query}            />
           )}
         </div>
@@ -928,13 +975,9 @@ if (onMatchSelect) {;
     </Card>
   )
 }
-<<<<<<< HEAD
-=======
 
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               projectDescription={query}
             />;
           )}
@@ -944,8 +987,11 @@ if (onMatchSelect) {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

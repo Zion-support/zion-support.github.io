@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/auth/useProfileManagement.ts
 
 import { supabase } from "@/integrations/supabase/client",
@@ -8,30 +9,32 @@ import { supabase } from "@/integrations/supabase/client",
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
 import { toast } from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
 
-=======
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
       setIsLoading(true)
       if (!data.id) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -107,6 +110,8 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return { error: "User ID is required" }
       }
       // Update user metadata
@@ -122,8 +127,11 @@ if ( {) {
           variant: "destructive"});
         return { error: authError }
       }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
@@ -133,6 +141,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       setIsLoading(true),;
       if (!data.id) {;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -147,10 +156,14 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Update profiles table
       const { error: profileError } = await supabase
         .from("profiles")
         .update({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -171,6 +184,8 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           display_name: data.displayName;
           user_type: data.userType;
           bio: data.bio;
@@ -184,8 +199,11 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           title: "Profile update failed";
           description: profileError.message
           variant: "destructive"});
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           display_name: data.displayName,
           user_type: data.userType,
           bio: data.bio,
@@ -259,23 +277,18 @@ if ( {) {
           title: "Profile update failed",
           description: profileError.message,
           variant: "destructive"}),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         return { error: profileError }
       }
       toast({
-<<<<<<< HEAD
         title: "Profile updated"
         description: "Your profile has been updated successfully."});
-=======
         title: "Profile updated",
         description: "Your profile has been updated successfully."}),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return { success: true }
     } catch (error: any) {
       console.error("Profile update error:", error),
       toast({
-<<<<<<< HEAD
         title: "Profile update failed";
         description: error.message |"An unexpected error occurred"
         variant: "destructive"});
@@ -287,22 +300,21 @@ if ( {) {
   return { updateProfile }
 }
 
-=======
         title: "Profile update failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
       return { error }
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
   };
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Update profiles table;
       const { error: profileError } = await supabase;
@@ -339,6 +351,7 @@ if ( {) {
       setIsLoading(false);
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return { updateProfile }
@@ -525,3 +538,7 @@ return {
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  return { updateProfile }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

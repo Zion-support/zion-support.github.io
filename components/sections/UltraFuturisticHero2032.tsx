@@ -44,7 +44,6 @@ import { motion  } from 'framer-motion';
 import Link from 'next/link';
 
 import {
-<<<<<<< HEAD
   Rocket
   Brain
   Atom
@@ -61,8 +60,11 @@ import {
   Mail
   MapPin;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Rocket,
   Brain,
   Atom,
@@ -80,12 +82,15 @@ import {
   MapPin,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin
 const contactInfo = {
@@ -416,19 +421,12 @@ function UltraFuturisticHero2032() {
 
 =======
             />
-<<<<<<< HEAD
           ))}
         </div>
-=======
 
           ))}
         </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Gradient Orbs */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -503,12 +501,15 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
             🚀 2032 Revolutionary Technology
           </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -516,6 +517,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           <Sparkles className="w-5 h-5 text-purple-400" />
           <span className="text-purple-300 font-medium">🚀 2032 Revolutionary Technology</span>
           <Sparkles className="w-5 h-5 text-cyan-400" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -568,30 +570,28 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
         >
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>
 
         </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Main Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             The Future of
@@ -605,6 +605,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           <br />
           <span className="text-white">Technology is Here</span>
         </motion.h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -704,12 +705,9 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Subheading */}
         <motion.p
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -743,18 +741,15 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           technologies that were once science fiction.
-=======
         </motion.p>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
         </motion.p>
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Buttons */}
 <<<<<<< HEAD
         <motion&& motion.div
@@ -778,14 +773,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           <Link
 =======
           className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <Link
             href='/services'
@@ -831,6 +819,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
         </motion.div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -854,22 +843,18 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Stats Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-<<<<<<< HEAD
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-=======
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -877,6 +862,8 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           {heroStats.map((stat, index) => (
             <motion.div
@@ -1041,14 +1028,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
         >
 =======
               className='text-center group'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div
                 className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}
@@ -1058,7 +1038,6 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
               <div className='text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2'>
                 {stat.number}
               </div>
-<<<<<<< HEAD
               <div className='text-gray-400 text-sm'>{stat.label}</div>            </motion.div>            >
               <div className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}>
                 <stat.icon className="w-8 h-8 text-white" />
@@ -1070,7 +1049,6 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
             </motion.div>
           ))}
         </motion.div>
-=======
               <div className='text-gray-400 text-sm'>{stat.label}</div>            </motion.div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1079,6 +1057,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           ))}
         </motion.div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1092,6 +1071,8 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Featured Services */}
         <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1100,6 +1081,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 <<<<<<< HEAD
           transition={{ duration: 0.8, delay: 1.2 }}
           className='mb-16'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1116,6 +1098,9 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>
             Featured Revolutionary Services
@@ -1137,6 +1122,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
                 className='group'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1279,12 +1265,9 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
                 className='group'
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               >
                 <Link
                   href={service.href}
@@ -1315,14 +1298,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Contact Information */}
         <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1359,14 +1335,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
         >
 =======
           className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>
             Ready to Transform Your Business?
@@ -1436,6 +1405,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1682,27 +1652,25 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Floating Action Button */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 2 }}
         className='fixed bottom-8 right-8 z-50'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -1712,17 +1680,20 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
         </Link>
       </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-    </section>
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    </section>
     </section>;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );      >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -1735,6 +1706,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1743,12 +1715,15 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 =======
 =======
 <<<<<<< HEAD
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  );
     </section>
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

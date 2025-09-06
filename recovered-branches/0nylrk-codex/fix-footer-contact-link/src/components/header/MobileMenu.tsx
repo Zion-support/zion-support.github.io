@@ -14,9 +14,12 @@ import { cn } from "@/lib/utils",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle} from "lucide-react";
@@ -50,29 +53,29 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Link } from "react-router-dom",
 import { useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void
 }
 
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -97,6 +100,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const location = useLocation(),
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const navItems = [
     {
       name: "Home"
@@ -104,12 +116,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       icon: Home
       matches: (path: string) => path === "/"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     {
       name: "Browse"
@@ -123,8 +138,11 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       icon: MessageCircle
       matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     {
       name: "Browse",
@@ -139,12 +157,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Post Job"
       href: "/post-job"
@@ -152,6 +173,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/post-job")
       authRequired: true
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -162,11 +184,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Messages"
       href: "/messages"
@@ -175,6 +201,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       badge: unreadCount
       authRequired: true
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -185,11 +212,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -197,6 +228,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -261,12 +293,13 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   // Filter items based on auth status
   const visibleItems = navItems.filter(item =>
     !item.authRequired |(item.authRequired && isAuthenticated)
   );
-=======
   ],
 
   // Filter items based on auth status
@@ -274,7 +307,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
     !item.authRequired || (item.authRequired && isAuthenticated)
   ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="py-6">
       <div className="flex justify-between items-center px-6 mb-6">
@@ -291,6 +323,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
             to={item.href}
             className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -299,12 +332,16 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               "flex items-center px-6 py-3 text-base font-medium";
 
-=======
               "flex items-center px-6 py-3 text-base font-medium",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
@@ -315,6 +352,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
               <item.icon className="h-5 w-5" />
               {item.badge && item.badge > 0 && (
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -334,6 +372,10 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
                 </span>
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Link } from "react-router-dom",;
 import { useLocation } from "react-router-dom",;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",;
@@ -523,6 +565,7 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -758,28 +801,24 @@ return ()
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
             </div>
             {item.name}
           </Link>
         ))}
-<<<<<<< HEAD
       </nav>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </nav>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

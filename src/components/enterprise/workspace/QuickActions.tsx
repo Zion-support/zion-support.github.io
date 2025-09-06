@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/workspace/QuickActions.tsx
 
 <<<<<<< HEAD
@@ -11,6 +12,9 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import {
   Card
@@ -85,6 +89,7 @@ export function QuickActions() {
     }
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -93,6 +98,9 @@ export function QuickActions() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -250,12 +258,7 @@ export function QuickActions() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card>
@@ -265,6 +268,7 @@ export function QuickActions() {
       </CardHeader>
       <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/workspace/QuickActions.tsx
 <<<<<<< HEAD
 
@@ -273,27 +277,27 @@ export function QuickActions() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
           {actions.map(action => (
             <Button
               key={action.id}
               variant='outline'              className={`h-auto justify-start p-4 ${action.color}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>             >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {actions.map(action => (
             <Button 
               key={action.id}
               variant="outline" 
               className={`h-auto justify-start p-4 ${action.color}`}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="flex flex-col items-start text-left">
@@ -303,23 +307,27 @@ export function QuickActions() {
                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <span className='mt-1 text-xs text-muted-foreground'>
                   {action.description}
                 </span>              </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
           {actions.map(action => (
-<<<<<<< HEAD
             <Button
-=======
             <Button 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
@@ -370,6 +378,7 @@ export function QuickActions() {;
             <Button;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -377,10 +386,13 @@ export function QuickActions() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <div className='flex flex-col items-start text-left'>
@@ -391,6 +403,8 @@ export function QuickActions() {;
             >
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-center">
                   {action.icon}
@@ -402,11 +416,15 @@ export function QuickActions() {;
           ))}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardContent>
     </Card>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
               key={action.id}
@@ -520,6 +538,8 @@ export function QuickActions() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='flex flex-col items-start text-left'>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className='flex items-center'>
@@ -597,19 +617,19 @@ const actions = [ {;
 =======
           ))}
         </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </CardContent>;
     </Card>;
   );
 };
 }
-<<<<<<< HEAD
 }
-=======
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

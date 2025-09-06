@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -21,4 +22,13 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:src.disabled/components/ui/accessibility-panel.jsx
+"use client\"; \",\"; \"react\";\"; \"framer-motion\'
+"use client"; ","; "react";"; "framer-motion""""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+"use client\"; \",\"; \"react\";\"; \"framer-motion\'
+"use client"; ","; "react";"; "framer-motion""""
+:temp_exclude/src.disabled/components/ui/accessibility-panel.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client"; ","; "react";"; "framer-motion'''

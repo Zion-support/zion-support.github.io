@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/milestones/useUploadDeliverable.ts
@@ -23,27 +24,30 @@ import {useRecordActivity} from './useRecordActivity';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {toast} from 'sonner';
 import {useRecordActivity} from './useRecordActivity';
-<<<<<<< HEAD
 export const useUploadDeliverable = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user |!projectId) return null;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const useUploadDeliverable = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -52,6 +56,8 @@ export const useUploadDeliverable = () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -62,6 +68,7 @@ export const useUploadDeliverable = () => {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
@@ -71,16 +78,21 @@ export const useUploadDeliverable = () => {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user || !projectId) return null,
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       setIsSubmitting(true)
       // Get the current milestone
@@ -89,10 +101,13 @@ export const useUploadDeliverable = () => {
         .select('*')
         .eq('id', milestoneId)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .single();
       if (fetchError) throw fetchError;
       if (!milestone) throw new Error("Milestone not found");
@@ -112,7 +127,6 @@ export const useUploadDeliverable = () => {
         .update({ deliverables })
         .eq('id', milestoneId);
       if (error) throw error;
-=======
         .single(),
       
       if (fetchError) throw fetchError,
@@ -138,8 +152,11 @@ export const useUploadDeliverable = () => {
         
       if (error) throw error,
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Create activity record
       await recordMilestoneActivity(
         milestoneId
@@ -148,9 +165,12 @@ export const useUploadDeliverable = () => {
         milestone.status
         `Deliverable added: ${file.name}`
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       );
       toast.success("Deliverable added successfully");
       return newDeliverable
@@ -168,7 +188,6 @@ export const useUploadDeliverable = () => {
   }
 }
 
-=======
       ),
       
       toast.success("Deliverable added successfully"),
@@ -180,18 +199,18 @@ export const useUploadDeliverable = () => {
       return null
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
   };
   
   return {
     uploadDeliverable;
     isSubmitting
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -250,6 +269,7 @@ export const useUploadDeliverable = () => {;
   return {;
     uploadDeliverable;
     isSubmitting;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -531,3 +551,7 @@ isSubmitting
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

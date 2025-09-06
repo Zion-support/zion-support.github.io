@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { MessageSquare } from 'lucide-react'
@@ -12,6 +13,8 @@ import { Button } from "@/components/ui/button",
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react"
 import { MessageSquare } from 'lucide-react'import { Button } from "@/components/ui/button"
 import { ChatAssistant } from "@/components/ChatAssistant"
@@ -19,6 +22,7 @@ import {logErrorToProduction} from '@/utils/productionLogger'
 export function ChatAssistantTrigger() {
 
   const [isOpen, setIsOpen] = useState(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",
 import { MessageSquare } from 'lucide-react'
@@ -31,27 +35,30 @@ import { MessageSquare } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { useState } from "react",
+import { MessageSquare } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ChatAssistant } from "@/components/ChatAssistant";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function ChatAssistantTrigger() {
 
   const [isOpen, setIsOpen] = useState(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   // Handle sending messages to the AI chat assistant
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ChatAssistant } from "@/components/ChatAssistant",
 import {logErrorToProduction} from '@/utils/productionLogger',
 export function ChatAssistantTrigger() {
 
   const [isOpen, setIsOpen] = useState(false),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Handle sending messages to the AI chat assistant
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -61,12 +68,16 @@ export function ChatAssistantTrigger() {
         headers: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
           "Content-Type": "application/json"}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          "Content-Type": "application/json"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
         })})
@@ -74,9 +85,12 @@ export function ChatAssistantTrigger() {
             role: 'Virtual Assistant';      if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         body: JSON.stringify({ ;
           messages: [{ role: "user", content: message }] ;
         })});
@@ -84,9 +98,12 @@ export function ChatAssistantTrigger() {
             role: 'Virtual Assistant';      if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
@@ -115,10 +132,13 @@ export function ChatAssistantTrigger() {;
         throw new Error("Failed to get response from AI assistant");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       return Promise.resolve()
     } catch (error) {
@@ -126,17 +146,23 @@ export function ChatAssistantTrigger() {;
       return Promise.resolve()
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return (
     <>
       <Button
         onClick = {(,) => setIsOpen(true),}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
 ;
       return Promise.resolve();
@@ -144,13 +170,17 @@ export function ChatAssistantTrigger() {;
       logErrorToProduction('Error in AI chat:', { data: error }),;
       return Promise.resolve();
     }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   return (;
     <>;
       <Button;
         onClick={() => setIsOpen(true)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -161,6 +191,8 @@ export function ChatAssistantTrigger() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -170,6 +202,7 @@ export function ChatAssistantTrigger() {;
       </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       
@@ -177,6 +210,8 @@ export function ChatAssistantTrigger() {;
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return Promise.resolve()
@@ -206,6 +241,7 @@ export function ChatAssistantTrigger() {;
       </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       {isOpen && (
         <ChatAssistant
@@ -219,6 +255,10 @@ export function ChatAssistantTrigger() {;
         <ChatAssistant
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      {isOpen && (
+        <ChatAssistant
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
           recipient={{
@@ -227,6 +267,7 @@ export function ChatAssistantTrigger() {;
             avatarUrl: 'https://placehold.co/64x64?text=AI'
 
             role: 'Virtual Assistant'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>           }}
 ursor/fix-website-loading-errors-and-merge-6662
@@ -241,6 +282,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           recipient={{;
@@ -248,26 +291,24 @@ ursor/fix-website-loading-errors-and-merge-6662
             name: 'AI Assistant';
             avatarUrl: 'https://placehold.co/64x64?text=AI';
             role: 'Virtual Assistant';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
           onSendMessage = {handleSendMessage,}
         />
       )}
-<<<<<<< HEAD
     </>
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -284,3 +325,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

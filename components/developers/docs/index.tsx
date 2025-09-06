@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -47,12 +48,12 @@ import CodeBlock from '../../../components / docs / CodeBlock';
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import type { GetServerSideProps } from 'next',
-=======
 import React from 'react';
 import type { GetServerSideProps } from 'next';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import path from 'path';
 import fs from 'fs';
 import DocsLayout from '../../../components/docs/DocsLayout';
@@ -81,6 +82,7 @@ type DocsContent = {
 <<<<<<< HEAD
 type PageProps = {
   docs: DocsContent;
+<<<<<<< HEAD
 
   const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
   const raw = fs.readFileSync(contentPath, 'utf8');
@@ -172,27 +174,24 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
   const contentPath = path.join(process.cwd(), 'datadocscontent.json');
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
-=======
 };
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const raw = fs.readFileSync(contentPath, 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
-<<<<<<< HEAD
   return { props: { docs } }
 <<<<<<< HEAD
 };
 =======
 }
-=======
   return { props: { docs } };
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function ApiDocsPage({ docs }: PageProps) {
@@ -205,6 +204,7 @@ export default function ApiDocsPage({ docs }: PageProps) {
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
           )}
           {section.code && section.code.length > 0 && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -297,6 +297,8 @@ function ApiDocsPage() {
     </DocsLayout>);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='space-y-4 mt-4'>
               {section.code.map((c, idx) => (
                 <CodeBlock key={idx} language={c.language}>
@@ -304,21 +306,23 @@ function ApiDocsPage() {
                 </CodeBlock>              ))}            <div className="space-y-4 mt-4">
               {section.code.map((c, idx) => (
                 <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))}
             </div>
           )}
         </section>
       ))}
-<<<<<<< HEAD
     </DocsLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 
@@ -333,21 +337,21 @@ function ApiDocsPage() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-<<<<<<< HEAD
     </DocsLayout>;
 );
 }
-=======
     </DocsLayout>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

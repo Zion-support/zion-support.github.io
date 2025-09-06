@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/QrCodeDownload.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 
@@ -12,15 +13,25 @@ import React from "react",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+import React from "react";
+import {QrCode} from "lucide-react";
+import {AppStoreButtons} from "./AppStoreButtons";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { QrCode } from "lucide-react";
 import { AppStoreButtons } from "./AppStoreButtons";
 
+<<<<<<< HEAD
 import React from "react";
 import { QrCode } from "lucide-react";
 import { AppStoreButtons } from "./AppStoreButtons";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { QrCode } from "lucide-react",
+import { AppStoreButtons } from "./AppStoreButtons",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
@@ -45,6 +56,7 @@ export const QrCodeDownload: React.FC = () => {
                 store of choice.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -58,6 +70,12 @@ export const QrCodeDownload: React.FC = () => {
 <AppStoreButtons
                 className="mb-8"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              <AppStoreButtons
+                className="mb-8"
+              <AppStoreButtons 
+                className="mb-8" 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
@@ -86,6 +104,7 @@ export const QrCodeDownload: React.FC = () => {
       </div>
     </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -101,6 +120,12 @@ import {AppStoreButtons} from "./AppStoreButtons";
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  );
+}
+
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 },
 import React from "react",;
@@ -227,6 +252,7 @@ export const QrCodeDownload: React.FC = () => {
 =======
 
 export default QrCodeDownload;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -257,3 +283,5 @@ export default QrCodeDownload;
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,12 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { createClient } from '@supabase/supabase-js';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function getServerSupabase() {;
@@ -29,12 +32,13 @@ const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-<<<<<<< HEAD
 export function getServerSupabase() {
   // Mock implementation - replace with actual Supabase client
   return {
@@ -48,6 +52,7 @@ export function getServerSupabase() {
     })
   };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -78,11 +83,15 @@ function getServerSupabase() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function getServerSupabase() {;
   return createClient(supabaseUrl, supabaseKey);
 }
-=======
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

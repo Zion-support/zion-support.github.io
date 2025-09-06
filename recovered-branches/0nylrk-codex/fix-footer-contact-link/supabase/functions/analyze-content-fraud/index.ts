@@ -19,8 +19,6 @@ interface AnalyzeRequest {
   contentType: string
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4"
@@ -34,6 +32,7 @@ interface AnalyzeRequest {
 }
 interface AnalysisResult {
   classification: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/analyze-content-fraud/index.ts
 =======
@@ -56,23 +55,27 @@ import { corsHeaders } from "../_shared/cors.ts",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import {corsHeaders} from "../_shared/cors.ts";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
 import { corsHeaders } from "../_shared/cors.ts",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface AnalyzeRequest {
   content: string,
   contentType: string,
   flagId?: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -80,15 +83,20 @@ interface AnalyzeRequest {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 interface AnalysisResult {
   classification: string;
   explanation: string,
   success: boolean
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import { corsHeaders } from "../_shared/cors.ts",;
@@ -102,6 +110,7 @@ interface AnalysisResult {;
   classification: string,;
   explanation: string,;
   success: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -241,8 +250,9 @@ interface AnalysisResult {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   explanation: string
 
@@ -251,7 +261,6 @@ interface AnalysisResult {;
 // Initialize environment and clients
 
 const initializeServices = () => {
-<<<<<<< HEAD
   const supabaseUrl = Deno.env.get("SUPABASE_URL");
   const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
   const openaiApiKey = Deno.env.get("OPENAI_API_KEY");
@@ -263,16 +272,12 @@ const initializeServices = () => {
     openaiApiKey
   }
 }
-=======
   const supabaseUrl = Deno.env.get("SUPABASE_URL"),
   const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"),
   const openaiApiKey = Deno.env.get("OPENAI_API_KEY"),
   
   if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
     throw new Error("Missing required environment variables")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
   
   return {
@@ -280,9 +285,12 @@ const initializeServices = () => {
     openaiApiKey
   }
 };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Initialize environment and clients;
 const initializeServices = () => {;
@@ -502,24 +510,16 @@ const _createAnalysisPrompt = (contentType: string, content: string): string => 
     openaiApiKey;
   }
 },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Validate request content
 const validateRequest = (data: unknown): AnalyzeRequest => {
   if (!data |typeof data !== 'object') {
     throw new Error("Invalid request body")
   }
-<<<<<<< HEAD
   const request = data as AnalyzeRequest;
-=======
   
   const request = data as AnalyzeRequest,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!request.content) {
     throw new Error("No content provided for analysis")
   }
@@ -542,6 +542,7 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
     followed by a brief explanation (max 1-2 sentences) of your reasoning.
     Format your response exactly like: "CLASSIFICATION: explanation"
   `
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/analyze-content-fraud/index.ts
 <<<<<<< HEAD
@@ -599,45 +600,44 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Call OpenAI API for content analysis
 const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<{classification: string, explanation: string}> => {
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-<<<<<<< HEAD
         "Content-Type": "application/json"
         "Authorization": `Bearer ${openaiApiKey}`}
-=======
         "Content-Type": "application/json",
         "Authorization": `Bearer ${openaiApiKey}`},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       body: JSON.stringify({
         model: "gpt-4o-mini"
         messages: [
-<<<<<<< HEAD
           { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." }
           { role: "user", content: prompt }
         ];
         temperature: 0.3
-=======
           { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
           { role: "user", content: prompt }
         ],
         temperature: 0.3,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         max_tokens: 150
       })
     });
     const data = await response.json();
     if (!response.ok) {
       console.error("OpenAI API error:", data.error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -709,15 +709,13 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       throw new Error(`OpenAI API error: ${data.error?.message |"Unknown error"}`)
     }
-<<<<<<< HEAD
     const analysisText = data.choices[0]?.message?.content |"";
-=======
-<<<<<<< HEAD
     
     const analysisText = data.choices[0]?.message?.content || "";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     console.log("OpenAI analysis result:", analysisText);
     // Parse the result
     let classification = "SAFE";
@@ -726,19 +724,20 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       classification = "SUSPICIOUS"
     } else if (analysisText.includes("DANGEROUS")) {
       classification = "DANGEROUS"
-<<<<<<< HEAD
     }
     // Extract explanation
     if (analysisText.includes(": ")) {
       explanation = analysisText.split(":")[1].trim()
     }
-=======
       throw new Error(`OpenAI API error: ${data.error?.message || "Unknown error"}`)
     }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     const analysisText = data.choices[0]?.message?.content || "",;
     // // // console.log("OpenAI analysis result:", analysisText),;
@@ -749,6 +748,7 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       classification = "SUSPICIOUS";
     } else if (analysisText.includes("DANGEROUS")) {;
       classification = "DANGEROUS";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     }
@@ -768,11 +768,14 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     
     // Extract explanation
     if (analysisText.includes(": ")) {
       explanation = analysisText.split(":")[1].trim()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -785,12 +788,17 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     // Extract explanation;
     if (analysisText.includes(": ")) {;
       explanation = analysisText.split(":")[1].trim();
     }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -814,20 +822,24 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return { classification, explanation }
   } catch (error) {
     console.error("Error calling OpenAI:", error),
     throw error
   }
-<<<<<<< HEAD
 }
 // Update flag in database if flagId was provided
 const updateFraudFlag = async (
   supabase: ReturnType<typeof createClient>;
   flagId: string
   classification: string
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 
 // Update flag in database if flagId was provided
@@ -835,6 +847,7 @@ const updateFraudFlag = async (
   supabase: ReturnType<typeof createClient>,
   flagId: string,
   classification: string, 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -977,6 +990,8 @@ serve(async (req) => {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   explanation: string
 ): Promise<void> => {
   if (!flagId) return
@@ -992,15 +1007,12 @@ serve(async (req) => {
     console.error("Error updating fraud flag:", error);
     throw new Error(`Error updating fraud flag: ${error.message}`)
   }
-<<<<<<< HEAD
   console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
 }
-=======
   
   // // // console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
 },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Main request handler
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -1008,12 +1020,9 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
-<<<<<<< HEAD
     console.log("Received content analysis request");
-=======
     // // // console.log("Received content analysis request"),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Initialize services
     const { supabase, openaiApiKey } = initializeServices();
     // Parse and validate request
@@ -1023,7 +1032,6 @@ serve(async (req) => {
     });
     const { content, contentType, flagId } = validateRequest(requestData);
     console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`);
-<<<<<<< HEAD
     // Create prompt and analyze with OpenAI
     const prompt = createAnalysisPrompt(contentType, content);
     const { classification, explanation } = await analyzeWithOpenAI(prompt, openaiApiKey);
@@ -1056,7 +1064,6 @@ serve(async (req) => {
   }
 });
 
-=======
     
     const { content, contentType, flagId } = validateRequest(requestData),
     // // // console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`),
@@ -1069,14 +1076,14 @@ serve(async (req) => {
       { 
         status: statusCode, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       }
     )
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {;
     console.error("Error calling OpenAI:", error),;
     throw error;
@@ -1153,6 +1160,7 @@ serve(async (req) => {;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -1552,3 +1560,7 @@ headers: {
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -10,10 +10,13 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Download, Mail, BarChart3 } from 'lucide-react'
 import Link from 'next/link'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -23,10 +26,14 @@ import Link from 'next/link'
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Download, Mail, BarChart3 } from 'lucide-react'
 import Link from "next/link",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -61,6 +68,8 @@ import Link from "next/link"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -77,6 +86,7 @@ export function BillingHeader() {
           </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>           <Button variant="outline" size="sm" className="gap-1" asChild>
@@ -85,6 +95,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Button variant="outline" size="sm" className="gap-1" asChild>
 >>>>>>>             <Link href="/dashboard/client/analytics">
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button variant='outline' size='sm' className='gap-1' asChild>
             <Link href='/dashboard/client/analytics'>
               <BarChart3 className='h-4 w-4' />              Analytics
@@ -109,12 +121,6 @@ export function BillingHeader() {
             <Mail className="h-4 w-4" />
             Contact Billing Support
           </Button>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Button variant="outline" size="sm" className="gap-1" asChild>
             <Link href="/dashboard/client/analytics">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -136,10 +142,13 @@ export function BillingHeader() {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ) <p className="text-muted-foreground">
         Manage your subscription, view invoice history, and update payment methods.
       </p>
@@ -148,12 +157,15 @@ export function BillingHeader() {
 };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -189,8 +201,11 @@ export function BillingHeader() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

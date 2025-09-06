@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/resizable.tsx
 
 =======
@@ -11,11 +12,17 @@ import * as ResizablePrimitive from &quot;react-resizable-panels&quot;
 import { cn } from &quot;@/lib/utils&quot;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { GripVertical } from &quot;lucide-react&quot;
+import * as ResizablePrimitive from &quot;react-resizable-panels&quot;
+import { cn } from &quot;@/lib/utils&quot;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GripVertical } from "lucide-react"
 import * as ResizablePrimitive from "react-resizable-panels"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -23,6 +30,8 @@ import { cn } from "@/lib/utils"
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const ResizablePanelGroup = ({
   className
   ...props
@@ -30,6 +39,7 @@ const ResizablePanelGroup = ({
   <ResizablePrimitive.PanelGroup
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -40,11 +50,15 @@ const ResizablePanelGroup = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      &quot;flex h-full w-full data-[panel-group-direction=vertical]:flex-col&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      &quot;flex h-full w-full data-[panel-group-direction=vertical]:flex-col&quot;
       "flex h-full w-full data-[panel-group-direction=vertical]:flex-col",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
@@ -61,6 +75,7 @@ const ResizableHandle = ({
   <ResizablePrimitive.PanelResizeHandle
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -71,11 +86,15 @@ const ResizableHandle = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      &quot;relative flex w-px items-center justify-center bg-border after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 data-[panel-group-direction=vertical]:h-px data-[panel-group-direction=vertical]:w-full data-[panel-group-direction=vertical]:after:left-0 data-[panel-group-direction=vertical]:after:h-1 data-[panel-group-direction=vertical]:after:w-full data-[panel-group-direction=vertical]:after:-translate-y-1/2 data-[panel-group-direction=vertical]:after:translate-x-0 [&[data-panel-group-direction=vertical]>div]:rotate-90&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      &quot;relative flex w-px items-center justify-center bg-border after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 data-[panel-group-direction=vertical]:h-px data-[panel-group-direction=vertical]:w-full data-[panel-group-direction=vertical]:after:left-0 data-[panel-group-direction=vertical]:after:h-1 data-[panel-group-direction=vertical]:after:w-full data-[panel-group-direction=vertical]:after:-translate-y-1/2 data-[panel-group-direction=vertical]:after:translate-x-0 [&[data-panel-group-direction=vertical]>div]:rotate-90&quot;
       "relative flex w-px items-center justify-center bg-border after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 data-[panel-group-direction=vertical]:h-px data-[panel-group-direction=vertical]:w-full data-[panel-group-direction=vertical]:after:left-0 data-[panel-group-direction=vertical]:after:h-1 data-[panel-group-direction=vertical]:after:w-full data-[panel-group-direction=vertical]:after:-translate-y-1/2 data-[panel-group-direction=vertical]:after:translate-x-0 [&[data-panel-group-direction=vertical]>div]:rotate-90",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
@@ -92,6 +111,7 @@ const ResizableHandle = ({
     )}
   </ResizablePrimitive.PanelResizeHandle>;
 );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -116,16 +136,20 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -231,3 +255,6 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle } const ResizableP
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

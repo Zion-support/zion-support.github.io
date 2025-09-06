@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -7,6 +8,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   LucideIcon
   BadgeCheck
@@ -16,6 +20,7 @@ import {
   BadgePlus
   BadgeDollarSign
 } from 'lucide-react'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -32,6 +37,8 @@ export type BadgeKey =
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type BadgeKey =
   | 'first_listing'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -39,6 +46,7 @@ export type BadgeKey =
   | 'profile_complete'
   | 'featured_creator'
   | 'first_action'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -53,6 +61,8 @@ export const getBadgeMeta = (key: BadgeKey) =>
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   | 'monetized'
 export interface BadgeMeta {
   key: BadgeKey
@@ -61,7 +71,6 @@ export interface BadgeMeta {
   icon: LucideIcon
   color: string
   bg: string
-<<<<<<< HEAD
 export const badgeList: BadgeMeta[] = [
   {
     key: 'first_listing'
@@ -117,10 +126,13 @@ export const getBadgeMeta = (key: BadgeKey) =>
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key)
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   | 'monetized';
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
@@ -142,6 +154,7 @@ export interface BadgeMeta {
   bg: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -200,6 +213,8 @@ export const badgeList: BadgeMeta[] = [
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const badgeList: BadgeMeta[] = [
   {
     key: "first_listing",
@@ -247,9 +262,12 @@ export const badgeList: BadgeMeta[] = [
     description: "Earned your first AI dollar in the marketplace.",
     icon: BadgeDollarSign,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     color: '#22C55E', // Soft Green
     bg: '#F2FCE2', // Soft Green
   },
@@ -260,11 +278,14 @@ export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
   }],
@@ -349,6 +370,7 @@ export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -362,3 +384,5 @@ export const getBadgeMeta = (key: BadgeKey) =>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

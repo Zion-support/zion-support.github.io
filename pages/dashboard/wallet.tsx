@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from "react";
@@ -19,6 +20,8 @@ export default function WalletPage() {_return (
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react";
@@ -26,16 +29,20 @@ import EnhancedLayout from "../../components/layout/EnhancedLayout";
 import dynamic from "next/dynamic";
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false })
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
 import dynamic from "next/dynamic",;
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -44,10 +51,13 @@ const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"),
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import EnhancedLayout from "../../components/layout/EnhancedLayout",
 import dynamic from "next/dynamic",
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -64,6 +74,8 @@ export default function WalletPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function WalletPage() {
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -73,6 +85,7 @@ export default function WalletPage() {
         <WalletPanel />
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -93,10 +106,10 @@ export default function WalletPage(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 }
@@ -154,11 +167,12 @@ export default function WalletPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

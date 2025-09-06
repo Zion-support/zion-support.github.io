@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -33,6 +34,8 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -80,6 +83,7 @@ export default function SMBSolutionsPage() {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -101,6 +105,20 @@ import { motion } from 'framer-motion';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+import React from 'react';
+import Layout from "../../components/Layout";";
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { 
   Building2, 
   Users, 
@@ -135,9 +153,13 @@ const smbServices = [
 
 export default function SMBSolutionsPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {
   const smbServices = [;
@@ -173,6 +195,7 @@ export default function SMBSolutionsPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -180,6 +203,10 @@ export default function SMBSolutionsPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
@@ -187,10 +214,15 @@ export default function SMBSolutionsPage() {
 
 =======
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   
 
+=======
+  
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -210,14 +242,8 @@ export default function SMBSolutionsPage() {
 
 =======
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -232,6 +258,7 @@ export default function SMBSolutionsPage() {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -245,6 +272,11 @@ export default function SMBSolutionsPage() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -258,6 +290,7 @@ export default function SMBSolutionsPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -268,6 +301,8 @@ export default function SMBSolutionsPage() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -309,7 +344,7 @@ export default function SMBSolutionsPage() {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
         {/* Services Section */}
         <section className="py-16 px-4">
@@ -345,9 +380,7 @@ export default function SMBSolutionsPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -390,12 +423,18 @@ export default function SMBSolutionsPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

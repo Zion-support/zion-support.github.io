@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { Clock } from 'lucide-react'
@@ -17,23 +18,15 @@ interface TalentCardAvailabilityProps {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
 import React from "react";
-=======
 import React from "react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Clock } from 'lucide-react'
 interface TalentCardAvailabilityProps {
   availabilityType: string
-<<<<<<< HEAD
 export function TalentCardAvailability({
   availabilityType
 }: TalentCardAvailabilityProps) {  // Format availability status
@@ -51,11 +44,15 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'bg-yellow-500/20 text-yellow-400'
       case 'project-based':
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return 'bg-blue-500/20 text-blue-400'
       default:
         return 'bg-gray-500/20 text-gray-400'
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Clock } from 'lucide-react'
 interface TalentCardAvailabilityProps {
@@ -64,10 +61,13 @@ interface TalentCardAvailabilityProps {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>   }; return 'bg-gray-500/20 text-gray-400'
@@ -96,6 +96,8 @@ interface TalentCardAvailabilityProps {
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }; return 'bg-gray-500/20 text-gray-400'
     }
   }
@@ -113,7 +115,6 @@ interface TalentCardAvailabilityProps {
   }
     >
       <Clock className='h-3 w-3' />
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -122,6 +123,7 @@ interface TalentCardAvailabilityProps {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from "react",;
 
@@ -129,6 +131,8 @@ import React from "react",;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Clock } from 'lucide-react';
@@ -224,22 +228,17 @@ ursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

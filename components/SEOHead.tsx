@@ -194,6 +194,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <link rel="preconnect" href="https://images.unsplash.com" />
     </Head>
   );
+<<<<<<< HEAD
 
 =======
       <meta name="theme-color" content="#1e40af" />;
@@ -383,3 +384,9 @@ export default SEOHead;
 export default SEOHead;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+};
+
+export default SEOHead;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

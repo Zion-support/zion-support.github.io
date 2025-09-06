@@ -71,6 +71,7 @@ interface EnergyField {
   pulse: number;
 export default function UltraFuturisticBackground2029({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   children,
 }: {;
@@ -84,9 +85,12 @@ export default function UltraFuturisticBackground2029({
 }: {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+  children
+}: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   children,
 }: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   children: React.ReactNode;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -173,15 +177,16 @@ interface EnergyField {
 
   pulse: number
 }
-<<<<<<< HEAD
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
 
-=======
 
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -1924,6 +1929,7 @@ ease: "easeInOut"
           }}
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -2055,26 +2061,20 @@ ease: "easeInOut"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
-=======
             duration: 10,
             repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
           }}
-=======
-<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
-=======
 
           }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Gradient overlays for depth */}
@@ -2083,7 +2083,6 @@ ease: "easeInOut"
       {/* Content */}
       <div className='relative z-10'>{children}</div>
     </div>
-<<<<<<< HEAD
   );      {/* Content */}
       <div className="relative z-10">
         {children}
@@ -2091,8 +2090,8 @@ ease: "easeInOut"
     </div>
   )
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2100,3 +2099,5 @@ ease: "easeInOut"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/DescriptionFields.tsx
 
@@ -25,24 +25,29 @@ import {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { Control } from "react-hook-form";
 import {
-<<<<<<< HEAD
   FormField
   FormItem
   FormLabel
   FormControl
   FormDescription
   FormMessage
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormDescription,
   FormMessage,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -62,6 +67,8 @@ interface DescriptionFieldsProps {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/DescriptionFields.tsx
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
@@ -142,15 +149,14 @@ export function DescriptionFields({
   return (
     <>
       <FormField
-<<<<<<< HEAD
         control;
                   field.onChange(e.target.value)
-=======
-=======
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import { Control } from 'react-hook-form',
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
@@ -176,6 +182,7 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
     <>;
       <FormField;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -188,6 +195,8 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         control={control}
         name="description"
         render={({ field }) => (
@@ -195,6 +204,7 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
             <FormLabel>Job Description</FormLabel>
             <FormControl>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               <Textarea 
@@ -203,16 +213,20 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Textarea
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Textarea 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e.target.value);
                   field.onChange(e.target.value);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -502,6 +516,8 @@ function DescriptionFields() {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 }}
                 className="min-h-[200px]"
                 placeholder="Enter a detailed description of the job role"
@@ -642,17 +658,10 @@ editorContent: string
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/DescriptionFields.tsx
 =======
         )}
-<<<<<<< HEAD
       />
     </>
-=======
       />;
     </>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

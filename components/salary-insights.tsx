@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -44,14 +45,17 @@ type InsightResponse = {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   LineChart
   BarChart
   DonutChart;
-=======
   LineChart,
   BarChart,;
   DonutChart,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../components/salary/InsightCharts';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 type InsightResponse = {
@@ -159,12 +163,9 @@ export default function SalaryInsightsPage() {;
   regionalComparison: { region: string, medianHourlyUsd: number }[]
   tags: string[]
   gptRecommendation?: string
-<<<<<<< HEAD
 export default function SalaryInsightsPage() {
-=======
 
 export default function SalaryInsightsPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -350,7 +351,6 @@ function SalaryInsightsPage() {
     } catch (e: any) {
       setError(e.message |'Unexpected error');
     } finally {
-<<<<<<< HEAD
       setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -360,6 +360,7 @@ function SalaryInsightsPage() {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -410,19 +411,13 @@ function SalaryInsightsPage() {
 const { supabase } = await import('../utils/supabase/client');
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setLoading(false);    }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     fetchInsights();
@@ -678,23 +673,15 @@ const donutData = useMemo(() => {
         history.unshift(payload);
         localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
         alert('Insight saved locally');
-<<<<<<< HEAD
-<<<<<<< HEAD
-      } catch {}
-    })();
-  }
-=======
-
-=======
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch {}
     })();
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+      } catch {}
+    })();
+  }
+
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
     })()
@@ -1370,6 +1357,7 @@ if (return [] as { label: string, value: number }[], ) {
               )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             </div>
           </div>
@@ -1393,6 +1381,8 @@ if (return [] as { label: string, value: number }[], ) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {data && (
                 <table className="w-full mt-3 text-sm">
                   <thead>
@@ -1551,6 +1541,7 @@ if (return [] as { label: string, value: number }[], ) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               )}
+<<<<<<< HEAD
 
 
 
@@ -1570,12 +1561,9 @@ if (return [] as { label: string, value: number }[], ) {
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
 =======
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -1585,11 +1573,7 @@ if (return [] as { label: string, value: number }[], ) {
                 {data.gptRecommendation}
               </p>            </div>
           )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1760,11 +1744,7 @@ if (return [] as { label: string, value: number }[], ) {
     </div>
 );
 }
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {data && (
 
             </div>
@@ -1772,9 +1752,12 @@ if (return [] as { label: string, value: number }[], ) {
 
           {data && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

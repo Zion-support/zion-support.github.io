@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/toggle-group.tsx
 
 
@@ -10,10 +11,11 @@ import { type VariantProps } from "class-variance-authority"
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from 'react';
 import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group';
 import {type, VariantProps} from 'class-variance-authority';
-<<<<<<< HEAD
 import {cn} from '@/lib/utils';
 import {toggleVariants} from '@/components/ui/toggle';
 type ToggleGroupContextProps = VariantProps<typeof toggleVariants>;
@@ -21,6 +23,7 @@ const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({
   size: 'default'
   variant: 'default'
 });
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -39,6 +42,11 @@ import { type VariantProps } from "class-variance-authority"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import * as React from "react"
+import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group"
+import { type VariantProps } from "class-variance-authority"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { cn } from "@/lib/utils"
 import { toggleVariants } from "@/components/ui/toggle"
@@ -51,6 +59,7 @@ const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -58,6 +67,8 @@ const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const ToggleGroup = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
@@ -243,13 +254,8 @@ ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
     </ToggleGroupContext.Provider>
   </ToggleGroupPrimitive.Root>
 ));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
-<<<<<<< HEAD
 const ToggleGroupItem = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Item>
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item> &
@@ -259,12 +265,12 @@ const ToggleGroupItem = React.forwardRef<
     ToggleGroupContext
   ) as ToggleGroupContextProps;
     >
-=======
-<<<<<<< HEAD
-=======
 ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const ToggleGroupItem = React.forwardRef<;
   React.ElementRef<typeof ToggleGroupPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item> &;
@@ -293,6 +299,7 @@ const ToggleGroupItem = React.forwardRef<;
       )}
       {...props}
     >;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {children}
     </ToggleGroupPrimitive.Item>;
@@ -337,28 +344,26 @@ className)
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {children}
     </ToggleGroupPrimitive.Item>
   );
 });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;
 
 export { ToggleGroup, ToggleGroupItem };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;
-<<<<<<< HEAD
 export { ToggleGroup, ToggleGroupItem }
-=======
 export { ToggleGroup, ToggleGroupItem }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

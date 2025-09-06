@@ -37,9 +37,12 @@ interface InterviewRequestFormProps {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -58,6 +61,7 @@ import {format, addDays} from "date-fns";
 import {CalendarIcon, Check, Clock} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {useInterviews} from "@/hooks/useInterviews";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface InterviewRequestFormProps {;
   talent: TalentProfile,;
@@ -102,6 +106,8 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -118,17 +124,10 @@ import { useForm } from "react-hook-form",
 import { z } from "zod",
 import { format, addDays } from "date-fns",
 import { CalendarIcon, Check, Clock } from "lucide-react",
-<<<<<<< HEAD
 import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
-=======
 import { toast } from "@/components/ui/use-toast",
 import { useInterviews } from "@/hooks/useInterviews",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface InterviewRequestFormProps {
 
   talent: TalentProfile
@@ -142,10 +141,13 @@ const formSchema = z.object({
     message: "Interview date must be in the future"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
   time: z.string().min(1, "Please select a time for the interview.");
   duration: z.string().min(1, "Please select the interview duration.");
@@ -156,8 +158,11 @@ const formSchema = z.object({
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }),
   time: z.string().min(1, "Please select a time for the interview."),
   duration: z.string().min(1, "Please select the interview duration."),
@@ -167,21 +172,25 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   notes: z.string().optional()}),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
-=======
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews(),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -200,11 +209,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setIsSubmitting(true);
     try {
       // Combine date and time
@@ -212,7 +224,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       const scheduledDate = new Date(dateTimeString);
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration);
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setIsSubmitting(true),
@@ -226,12 +237,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       const durationMinutes = parseInt(values.duration),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       await requestInterview({
         talent_id: talent.id
         client_id: userDetails.id
@@ -244,6 +258,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         title: values.title
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -254,12 +269,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-      });
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      });
       }),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Interview requested"
         description: `Your interview request with ${talent.full_name} has been sent.`})
@@ -390,10 +409,10 @@ if ( {) {
     }
   }
   const timeSlots = [
-<<<<<<< HEAD
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30"
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30"
     "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
@@ -406,6 +425,11 @@ if ( {) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ]
   return (
@@ -755,12 +779,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                       <Button
                         variant="outline"
                         className={cn(
-<<<<<<< HEAD
                           "w-full pl-3 text-left font-normal";
 
-=======
                           "w-full pl-3 text-left font-normal",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           !field.value && "text-muted-foreground"
                         )}
                       >
@@ -788,6 +809,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                 <FormMessage />
               </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -801,6 +823,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
@@ -1268,11 +1292,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 =======
               </FormItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           />
           <FormField
@@ -1368,6 +1387,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1382,8 +1402,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <FormField
           control={form.control}
           name="notes"
@@ -1393,14 +1414,19 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-                <Textarea
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <Textarea
                 <Textarea 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
                   {...field}
@@ -1421,6 +1447,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       </form>
     </Form>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1598,9 +1625,13 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

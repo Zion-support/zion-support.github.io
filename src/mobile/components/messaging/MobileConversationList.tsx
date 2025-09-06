@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -9,6 +10,8 @@ import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -18,6 +21,7 @@ import { Search } from 'lucide-react'
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
 interface Conversation {
+<<<<<<< HEAD
   id: string,
   name: string,
   avatar?: string,
@@ -49,6 +53,8 @@ interface MobileConversationListProps {;
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string
 name: string
 avatar?: string
@@ -60,8 +66,6 @@ isTyping?: boolean
   conversations: Conversation[]
   activeConversation?: string
   onSelectConversation: (id: string) => void
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 <<<<<<< HEAD
 export function MobileConversationList({
@@ -107,10 +111,12 @@ interface MobileConversationListProps {;
   activeConversation?: string,;
   onSelectConversation: (id: string) => void;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string
 name: string
 avatar?: string
@@ -123,6 +129,7 @@ isTyping?: boolean
   activeConversation?: string
   onSelectConversation: (id: string) => void
 <<<<<<< HEAD
+<<<<<<< HEAD
 xport function MobileConversationList({
   conversations
   activeConversation
@@ -133,14 +140,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function MobileConversationList({
-<<<<<<< HEAD
   conversations
   activeConversation
-=======
   conversations,
   activeConversation,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onSelectConversation
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }: MobileConversationListProps) {
@@ -157,6 +163,7 @@ export function MobileConversationList({
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
@@ -166,6 +173,8 @@ export function MobileConversationList({
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='px-4 pb-4 space-y-2'>
         <div className='flex space-x-2'>
           <Badge variant='secondary' className='rounded-full px-3'>
@@ -202,9 +211,12 @@ export function MobileConversationList({
                 </AvatarFallback>
               </Avatar>                <AvatarImage src={conversation.avatar} alt={conversation.name} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 <AvatarFallback>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <div className="px-4 pb-4 space-y-2">
         <div className="flex space-x-2">
@@ -228,11 +240,6 @@ export function MobileConversationList({
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <AvatarFallback>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   {conversation.name.charAt(0).toUpperCase()}
@@ -251,6 +258,7 @@ export function MobileConversationList({
                     ) : (
                       conversation.lastMessage
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   </p>
                   {conversation.unreadCount > 0 && (
@@ -281,6 +289,8 @@ export function MobileConversationList({
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between items-baseline">
@@ -295,6 +305,7 @@ export function MobileConversationList({
                     {conversation.isTyping 
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -324,23 +335,30 @@ export function MobileConversationList({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+                  </p>
+                  {conversation.unreadCount > 0 && (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>
-=======
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   )}
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -354,6 +372,8 @@ export function MobileConversationList({
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>
           </div>
         ))}
@@ -362,7 +382,6 @@ export function MobileConversationList({
   );
 };
 }
-=======
             <div className="border-t border-border ml-12"></div>
           </div>
         ))}
@@ -427,8 +446,11 @@ export function MobileConversationList({
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

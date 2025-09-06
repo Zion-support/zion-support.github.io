@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,8 @@ import { Clock, Briefcase } from 'lucide-react'
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { useProjects } from '@/hooks/useProjects'
 import { SEO } from '@/components/SEO'
@@ -44,8 +47,6 @@ import { Clock, Briefcase } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",
 import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
@@ -53,12 +54,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Clock, Briefcase } from 'lucide-react'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import React from 'react'
 import { useProjects } from '@/hooks/useProjects'
@@ -121,6 +117,7 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>         {isLoading ? (
@@ -135,11 +132,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {isLoading ? (
 >>>>>>>           <p>Loading projects...</p>
         ) : projects.length === 0 ? (
           <p>You don't have any projects yet.</p>
         ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -149,26 +150,34 @@ ursor/fix-website-loading-errors-and-merge-6662
             {projects.map(project => (
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <div className='grid gap-6'>
+            {projects.map(project => (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Card key={project.id}>
                 <CardHeader>
                   <CardTitle className='flex items-center gap-2'>
                     <Briefcase className='h-5 w-5 text-primary' />
                     <span>{project.job?.title |'Project'}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               <Card key={project.id}>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="grid gap-6">
             {projects.map((project) => (
-=======
-=======
           <div className="grid gap-6">
             {projects.map((project) => (
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Card key={project.id}>
 >>>>>>>                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -176,10 +185,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <span>{project.job?.title || "Project"}</span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </CardTitle>
 =======
 >>>>>>>                   </CardTitle>
@@ -193,6 +205,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </CardHeader>
                 <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     {project.job?.description || "Project details"}
 
@@ -200,6 +213,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {project.job?.description |"Project details"}
 >>>>>>>                     {project.job?.description || "Project details"}
 >>>>>>>                   </p>
+=======
+                  <p className='text-sm text-muted-foreground line-clamp-2'>
+                    {project.job?.description |'Project details'}
+                  </p>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </CardContent>
                 <CardFooter>
 <<<<<<< HEAD
@@ -224,22 +242,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
                   <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
-<<<<<<< HEAD
                     {project.job?.description |"Project details"}
-=======
                   <p className="text-sm text-muted-foreground line-clamp-2">
-=======
-=======
                   <p className="text-sm text-muted-foreground line-clamp-2">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {project.job?.description || "Project details"}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </p>
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant="outline" className="w-full">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -262,6 +278,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Card>
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  </Button>
+                </CardFooter>
+              </Card>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Link href={`/project/${project.id}`}>View Details</Link>
                   </Button>
                 </CardFooter>
@@ -442,24 +463,18 @@ function ProjectsContent() {
                   </Button>;
                 </CardFooter>;
               </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         )}
-<<<<<<< HEAD
       </main>
     </>
   )
 export default function Projects() {
   return <ProjectsContent /> }
-<<<<<<< HEAD
 export default function Projects() {
   return <ProjectsContent />
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 };
@@ -476,23 +491,25 @@ export default function Projects() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </main>;
     </>;
   );
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
 export default function Projects() {;
   return <ProjectsContent />;
 };
 }
-<<<<<<< HEAD
 }
-=======
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

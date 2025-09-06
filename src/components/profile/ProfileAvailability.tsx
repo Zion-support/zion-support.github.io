@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Availability } from '@/types/profile'
 import { Badge } from '@/components/ui/badge'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { Calendar, Clock, Check } from 'lucide-react'
@@ -19,26 +15,18 @@ import { Badge } from "@/components/ui/badge";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Availability } from "@/types/profile";
 import { Badge } from "@/components/ui/badge";
-=======
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Calendar, Clock, Check } from 'lucide-react'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
   availability: Availability
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ProfileAvailability({
   availability
 }: ProfileAvailabilityProps) {
@@ -80,14 +68,16 @@ function ProfileAvailability() {
       default:
         return '' }
   }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
       <h3 className='text-xl font-bold text-white mb-4'>Availability</h3>
@@ -108,19 +98,24 @@ function ProfileAvailability() {
       <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         <Badge
           variant="outline"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Badge
           variant="outline"
-=======
         <Badge 
           variant="outline" 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           {getStatusText(availability.status)}
         </Badge>
@@ -138,6 +133,7 @@ function ProfileAvailability() {
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -146,6 +142,9 @@ function ProfileAvailability() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {availability.availableHours &&
         availability.availableHours.length > 0 && (
           <div className='mt-4'>
@@ -164,12 +163,15 @@ function ProfileAvailability() {
                     <span>{slot.hours}</span>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Availability } from "@/types/profile",;
 import { Badge } from "@/components/ui/badge",;
 import { Calendar, Clock, Check } from 'lucide-react';
@@ -241,33 +243,42 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 =======
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {availability.availableHours && availability.availableHours.length > 0 && (
         <div className="mt-4">
           <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-            {availability.availableHours.map((slot, index,) => (              <div key={index} className="flex items-center gap-2 text-zion-slate">
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            {availability.availableHours.map((slot, index,) => (              <div key={index} className="flex items-center gap-2 text-zion-slate">
             {availability.availableHours.map((slot, index) => (
               <div key={index} className="flex items-center gap-2 text-zion-slate">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4 text-zion-cyan" />
                   <span>{slot.hours}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       
@@ -283,6 +294,8 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               ))}
             </div>
@@ -290,6 +303,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         )}
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 </div>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -423,14 +437,16 @@ export function ProfileAvailability(): any ({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       )}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -447,10 +463,17 @@ export function ProfileAvailability(): any ({;
   )
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    </div>
+  )
+}
+      )};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -545,12 +568,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

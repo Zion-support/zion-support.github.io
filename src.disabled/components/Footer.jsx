@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
@@ -29,13 +30,23 @@ import _React,{ useState } from';react' import { Link } from';';react-router-dom
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/components/Footer.jsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======
+:src.disabled/components/Footer.jsx
+import React,{ useState } from\';react\' import { Link } from\';\';react-router-dom\' import { motion } from\';\';framer-motion\' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from\';\';lucide-react\' \"export\": function FooterNewsletter() { const [email,setEmail] = useState(\'';\';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)\'';
+const React,{ useState } from";react" import { Link } from";";react-router-dom" import { motion } from";";framer-motion" import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from";";lucide-react" export: function FooterNewsletter() { const [email,setEmail] = useState("";";) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)"";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
+ursor/add-new-services-and-deploy-updates-0462
 :src.disabled/components/Footer.jsx
 import React,{ useState } from\';react\' import { Link } from\';\';react-router-dom\' import { motion } from\';\';framer-motion\' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from\';\';lucide-react\' \"export\": function FooterNewsletter() { const [email,setEmail] = useState(\'';\';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)\'';
 const React,{ useState } from";react" import { Link } from";";react-router-dom" import { motion } from";";framer-motion" import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from";";lucide-react" export: function FooterNewsletter() { const [email,setEmail] = useState("";";) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)"";'"'"
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
 import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('', ') const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/Footer.jsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:temp_exclude/src.disabled/components/Footer.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

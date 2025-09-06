@@ -14,17 +14,18 @@ import React, { useState } from 'react';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
 =======
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import {
   Dialog;
   DialogContent;
   DialogHeader;
   DialogTitle;
   DialogDescription;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -34,6 +35,7 @@ import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -42,6 +44,8 @@ import {useNavigate} from "react-router-dom";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -50,16 +54,20 @@ import {
   DialogTitle,
   DialogDescription,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Textarea } from "@/components/ui/textarea",
 import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -71,17 +79,21 @@ import { useNavigate } from "react-router-dom",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
-=======
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface MessageTalentModalProps {
 
   talent: TalentProfile
@@ -91,25 +103,31 @@ export interface MessageTalentModalProps {
   jobTitle?: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 export function MessageTalentModal({;
   talent;
   isOpen;
   onClose;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function MessageTalentModal({
   talent,
   isOpen,
   onClose,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -127,21 +145,25 @@ export function MessageTalentModal({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   jobTitle
 }: MessageTalentModalProps) {
-<<<<<<< HEAD
   const { createConversation } = useMessaging();
 
   const navigate = useNavigate();
-=======
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [message, setMessage] = useState(
     jobTitle
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
       : `Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -155,14 +177,18 @@ export function MessageTalentModal({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
-=======
   ),
   const [isSubmitting, setIsSubmitting] = useState(false),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleSendMessage = async () => {
     if (!message.trim()) {
       toast({
@@ -277,7 +303,6 @@ function MessageTalentModal() {
       return
     }
     try {
-<<<<<<< HEAD
       setIsSubmitting(true);
       // Create context data for the conversation
       const contextData = {
@@ -285,8 +310,11 @@ function MessageTalentModal() {
         description: talent.bio |talent.professional_title |""
         image_url: talent.profile_picture_url |""
       }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setIsSubmitting(true),
       
       // Create context data for the conversation
@@ -297,11 +325,14 @@ function MessageTalentModal() {
       },
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Create conversation with this talent
       await createConversation(
         talent.user_id,
@@ -310,17 +341,23 @@ function MessageTalentModal() {
         talent.id,
         contextData
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       );
       toast({
         title: "Message sent"
         description: `Your message has been sent to ${talent.full_name}.`})
       onClose();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ),
       
       toast({
@@ -329,6 +366,7 @@ function MessageTalentModal() {
       
       onClose(),
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -339,6 +377,8 @@ function MessageTalentModal() {
       console.error("Failed to send message:", error);
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Navigate to messages inbox
       navigate("/messages")
     } catch (error) {
@@ -365,12 +405,13 @@ function MessageTalentModal() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
     }
-<<<<<<< HEAD
   }
-=======
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -381,11 +422,14 @@ function MessageTalentModal() {
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />
               <AvatarFallback className="bg-zion-blue-dark text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import {;
   Dialog,;
@@ -596,11 +640,14 @@ export function MessageTalentModal({;
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -691,6 +738,7 @@ export function MessageTalentModal({;
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -766,14 +814,19 @@ export function MessageTalentModal({;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </Button>;
         </DialogFooter>;
       </DialogContent>;
@@ -891,5 +944,8 @@ return (<Dialog open= {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

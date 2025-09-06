@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react'
 import { format } from 'date-fns'
 import { MessageSquare } from 'lucide-react'import { useMessaging } from '@/context/MessagingContext'
@@ -22,9 +19,8 @@ export function ConversationDetailView() {
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement | null>(null)
         {/* Header */}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect, useRef } from 'react'
 import { format } from 'date-fns'
@@ -48,6 +44,8 @@ export function ConversationDetailView() {
   const inputRef = useRef<HTMLTextAreaElement | null>(null)
         {/* Header */}
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef } from 'react';
 import { format  } from 'date-fns';
 import { MessageSquare } from 'lucide-react'
@@ -60,9 +58,12 @@ import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef } from 'react',;
 import { format } from 'date-fns',;
 import { MessageSquare } from 'lucide-react';
@@ -142,8 +143,11 @@ export function ConversationDetailView() {;
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             </div>;
           </div>;
@@ -157,6 +161,7 @@ export function ConversationDetailView() {;
   return (
     <div className="flex-1 flex flex-col h-full">
       {/* Header */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -176,19 +181,22 @@ export function ConversationDetailView() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
-<<<<<<< HEAD
             <AvatarImage
               src = {activeConversation.other_user.avatar_url,}
               alt = {activeConversation.other_user.name,}
-=======
             <AvatarImage 
               src={activeConversation.other_user.avatar_url} 
               alt={activeConversation.other_user.name} 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <AvatarFallback className="bg-zion-blue-dark text-white">
               {activeConversation.other_user.name.charAt(0).toUpperCase()}
@@ -201,19 +209,24 @@ export function ConversationDetailView() {;
             <div className="text-xs text-zion-slate">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :
-=======
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
@@ -227,6 +240,7 @@ export function ConversationDetailView() {;
               <div className="w-16 h-16 flex-shrink-0">
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
                   <img
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -300,20 +314,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     src = {activeConversation.context_data.image_url,}
-<<<<<<< HEAD
                     alt = {activeConversation.context_data.title |"Context",}
-=======
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                     alt = {activeConversation.context_data.title || "Context",}
-=======
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="object-cover"
                     loading="lazy"
                   />
@@ -349,7 +358,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div key={group.date}>
               <DateDivider date={new Date(group.date)} />
               <div className="space-y-3">
-<<<<<<< HEAD
                 {group.messages.map((message,) => (
                   <MessageBubble
                     key = {message.id,}
@@ -359,7 +367,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
           ))
-=======
                 {group.messages.map((message) => (
                   <MessageBubble
                     key={message.id}
@@ -370,6 +377,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </div>;
           ));
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -392,6 +400,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
         <div ref={messagesEndRef} />
       </div>
@@ -399,13 +409,13 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className="p-3 border-t border-zion-purple/20">
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
           <textarea
-<<<<<<< HEAD
             value = {messageText,}
             onChange = {(e,) => setMessageText(e.target.value),}
             onKeyDown = {handleKeyDown,}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref = {inputRef,}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 
@@ -419,12 +429,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          />
+          <Button
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref={inputRef}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -445,12 +460,17 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Button 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          />
+          <Button 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             type="submit"
 >>>>>>>             className="bg-zion-purple hover: bg-zion-purple-dark text-white"
           >
             Send
           </Button>
         </form>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -462,21 +482,23 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
     </div>;
   );
 };
-=======
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
@@ -505,6 +527,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -521,3 +544,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

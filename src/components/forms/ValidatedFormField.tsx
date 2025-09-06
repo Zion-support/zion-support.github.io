@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
 
 =======
@@ -8,6 +9,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react'
 import {
   FormField
@@ -20,26 +24,35 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Select
   SelectContent
   SelectItem
   SelectTrigger
   SelectValue
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,;
   SelectValue;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
 import { cn } from '@/lib/utils'
 
@@ -83,6 +96,7 @@ interface ValidationRule {
   custom?: (value: any) => string | null
 interface ValidatedFormFieldProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -90,6 +104,8 @@ interface ValidatedFormFieldProps {
 interface ValidatedFormFieldProps {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   name: string;
   label: string;
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
@@ -102,9 +118,12 @@ interface ValidatedFormFieldProps {
   disabled?: boolean;
   showValidIcon?: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   name: string
   label: string
   type?:
@@ -125,8 +144,11 @@ interface ValidatedFormFieldProps {
   className?: string
   disabled?: boolean
   showValidIcon?: boolean
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   debounceMs?: number
 export function ValidatedFormField({
 
@@ -303,10 +325,13 @@ if ( {) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return null
   }
   const getValidationIcon = () => {
@@ -385,10 +410,13 @@ if (return null) {
 =======
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className)
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react';
 
 import { Checkbox } from '@/components/ui/checkbox';
@@ -612,6 +640,7 @@ export function ValidatedFormField({;
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const getValidationIcon = () => {
 
@@ -633,11 +662,10 @@ export function ValidatedFormField({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const getValidationIcon = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     if (!showValidIcon || !isTouched || validationState === 'idle') return null
     switch (validationState) {
       case 'validating':
@@ -671,12 +699,15 @@ export function ValidatedFormField({;
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     if (!showValidIcon || !isTouched || validationState === 'idle') return null,
 
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!showValidIcon || !isTouched || validationState === 'idle') return null,
 
     switch (validationState) {
@@ -718,6 +749,7 @@ export function ValidatedFormField({;
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     switch (type) {
@@ -780,31 +812,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     switch (type) {
       case 'textarea':
         return (
           <div className="relative">
             <Textarea
-<<<<<<< HEAD
               disabled = {disabled,}
               className = {baseClasses,}
               rows = {4,}
-=======
               disabled={disabled}
               className={baseClasses}
               rows={4}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {...form.register(name)}
             />
             <div className="absolute top-2 right-2">
               {getValidationIcon()}
             </div>
           </div>
-<<<<<<< HEAD
         )
       case 'select':
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -823,12 +849,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               <SelectContent>
                 {options.map(option => (                  <SelectItem key={option.value} value={option.value}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     {option.label}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   </SelectItem>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ),
 
       case 'select':
@@ -841,11 +870,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <SelectContent>
                 {options.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {option.label}
                   </SelectItem>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -856,6 +880,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               {getValidationIcon()}
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1018,15 +1043,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 =======
-        )
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        )
         ),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case 'checkbox':
         return (
           <div className="flex items-center space-x-2">
@@ -1038,39 +1059,46 @@ ursor/fix-website-loading-errors-and-merge-6662
             />
             <label
               htmlFor={name}
-<<<<<<< HEAD
               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'            >
-=======
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {label}
             </label>
             {getValidationIcon()}
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-        )
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        )
         ),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case 'password':
         return (
           <div className="relative">
             <Input
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'            >
@@ -1121,18 +1149,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>             />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               type = {showPassword ? 'text' : 'password',}
               disabled = {disabled,}
               className = {cn(baseClasses, 'pr-20'),}
-=======
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {...form.register(name)}
             />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1141,16 +1165,20 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 type='button'
                 variant='ghost'
                 size='sm'
                 className='h-7 w-7 p-0'
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}              >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 {showPassword ? (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1161,6 +1189,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 type="button"
                 variant="ghost"
                 size="sm"
@@ -1168,11 +1198,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
@@ -1182,6 +1207,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1267,21 +1293,20 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="relative">
             <Input
 =======
-        )
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        )
         ),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       default:
         return (
           <div className="relative">
             <Input
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               type = {type,}
               disabled = {disabled,}
               className = {baseClasses,}
@@ -1306,6 +1331,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {fieldError && (
                   <FormMessage className='text-sm text-red-500'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     {fieldError.message}
                   </FormMessage>
                 )}
@@ -1329,6 +1355,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               type={type}
               disabled={disabled}
               className={baseClasses}
@@ -1368,6 +1396,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-1">
                 {fieldError && (
                   <FormMessage className="text-sm text-red-500">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1525,25 +1554,19 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {fieldError.message}
                   </FormMessage>
                 )}
                 {description && !fieldError && (
-<<<<<<< HEAD
                   <p className='text-sm text-muted-foreground'>{description}</p>
-=======
                   <p className="text-sm text-muted-foreground">{description}</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
             )}
           </FormItem>
         )}
-<<<<<<< HEAD
       />
     )
   }
@@ -1561,6 +1584,7 @@ if ( {) {
               {fieldError && (
                 <FormMessage className='text-sm text-red-500 flex items-center gap-1'>
                   <AlertCircle className='h-3 w-3' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   {fieldError.message}
                 </FormMessage>
@@ -1802,6 +1826,8 @@ export const commonValidations = {;
   }
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />;
     );
   }
@@ -1851,30 +1877,17 @@ export const commonValidations = {;
               {fieldError && (
                 <FormMessage className="text-sm text-red-500 flex items-center gap-1">
                   <AlertCircle className="h-3 w-3" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {fieldError.message}
                 </FormMessage>
               )}
               {description && !fieldError && (
-<<<<<<< HEAD
                 <p className='text-sm text-muted-foreground'>{description}</p>
-=======
                 <p className="text-sm text-muted-foreground">{description}</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
           )}
         </FormItem>
       )}
-<<<<<<< HEAD
     />
   )
 // Validation helpers for common patterns
@@ -1919,17 +1932,13 @@ export const commonValidations = {
   }
 }
     }
-<<<<<<< HEAD
   }}
     }
   }}
 
-=======
   }},
     };
   }};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     />;
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2141,8 +2150,11 @@ export const commonValidations = {;
     }
   }};
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

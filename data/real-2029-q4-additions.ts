@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     implementationDetails:
@@ -30,6 +31,8 @@ import { RealMarketService } from './real - market - services';
   website: 'https://ziontechgroup.com',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { RealMarketService } from './real-market-services';
 
   mobile: '+1 302 464 0950'
@@ -64,7 +67,6 @@ export const real2029Q4Additions: RealMarketService[] = [;
     description:
       'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.'
     features: [
-<<<<<<< HEAD
       'Intent classification and priority scoring'
       'One-click reply drafts with tone controls'
       'Auto-tagging and routing to teams'
@@ -94,8 +96,11 @@ export const real2029Q4Additions: RealMarketService[] = [;
     variant: 'ai-futuristic'
     contactInfo: contact
     realImplementation: true
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Intent classification and priority scoring',
       'One-click reply drafts with tone controls',
       'Auto-tagging and routing to teams',
@@ -230,7 +235,6 @@ export const real2029Q4Additions: RealMarketService[] = [;
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     implementationDetails:
       'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.'
     launchDate: '2029-10-12'
@@ -248,7 +252,6 @@ export const real2029Q4Additions: RealMarketService[] = [;
     description:
       'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links; export to CSV and data warehouses.'
     features: [
-<<<<<<< HEAD
       'Branching logic and progress-save'
       'Question bank: CSAT, NPS, PMF, churn'
       'Anonymous or identified responses'
@@ -270,7 +273,6 @@ export const real2029Q4Additions: RealMarketService[] = [;
     realService: true
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery']
-=======
       'Branching logic and progress-save',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Question bank: CSAT, NPS, PMF, churn',
@@ -308,8 +310,11 @@ export const real2029Q4Additions: RealMarketService[] = [;
     realService: true,
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge'],
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery'],
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     useCases: [
       'Landing page surveys'
       'In-product polls'
@@ -704,6 +709,7 @@ export const real2029Q4Additions: RealMarketService[] = [;
     description:
       'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
     features: [
+<<<<<<< HEAD
 =======
 
       'Responsive renderer with schema-driven forms and analytics.',
@@ -1530,6 +1536,8 @@ export const real2029Q4Additions: RealMarketService[] = [;
       'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
     features: [
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Goal trees and KPI ownership'
       'Weekly executive summaries'
       'Alerting on thresholds and trends'
@@ -1564,9 +1572,12 @@ export const real2029Q4Additions: RealMarketService[] = [;
     rating: 4.4
     reviews: 16
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -1646,8 +1657,11 @@ export const real2029Q4Additions: RealMarketService[] = [;
     rating: 4.4,
     reviews: 16,
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];	{
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -2212,7 +2226,6 @@ export const real2029Q4Additions: RealMarketService[] = [
 =======
 		rating: 4 && 4.4,
 		reviews: 16
-<<<<<<< HEAD
 	}
 ];
 <<<<<<< HEAD
@@ -3063,9 +3076,6 @@ export const real2029Q4Additions: RealMarketService[] = [;
 =======
 =======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { RealMarketService } from './real-market-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -3480,12 +3490,11 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		customers: 36,;
 		rating: 4.4;
 		reviews: 16;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

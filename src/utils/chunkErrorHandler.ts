@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -13,6 +14,8 @@
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 /**
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
  * Handles automatic retry, cache clearing, and graceful degradation
@@ -26,14 +29,11 @@ interface ChunkErrorStats {
   userAgent: string;
   url: string
 class ChunkErrorHandler {
-<<<<<<< HEAD
 
   private errorStats: Map<string, ChunkErrorStats> = new Map()
   private readonly MAX_RETRIES = 3
-=======
   private errorStats: Map<string, ChunkErrorStats> = new Map();
   private readonly MAX_RETRIES = 3;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
@@ -376,6 +376,7 @@ if ( {) {
     window.location.href = window.location.href + '?_t=' + Date.now()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   }
@@ -383,6 +384,8 @@ if ( {) {
     // Create a user-friendly error message
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
@@ -433,12 +436,15 @@ if ( {) {
           font-size: 1rem
           cursor: pointer
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 /**;
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
  * Handles automatic retry, cache clearing, and graceful degradation;
@@ -682,17 +688,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>       <div style="text-align: center, padding: 2rem, max-width: 500px,">
 =======
     window.location.href = window.location.href + '?_t=' + Date.now();
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     const errorDiv = document.createElement('div')
     errorDiv.style.cssText = `
       position: fixed
@@ -708,8 +707,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       z-index: 999999
       font-family: system-ui, -apple-system, sans-serif
     `
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const errorDiv = document.createElement('div'),
     errorDiv.style.cssText = `
       position: fixed,
@@ -726,10 +723,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       font-family: system-ui, -apple-system, sans-serif,
     `,
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -741,12 +734,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         <button onclick="window.location.reload()" style="
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           background: #0070f3
           color: white
           border: none
@@ -766,11 +762,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           font-size: 1rem
           cursor: pointer
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           background: #0070f3,
           color: white,
           border: none,
@@ -792,6 +791,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           cursor: pointer,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -799,16 +799,21 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ">
           Go Home
         </button>
       </div>
+<<<<<<< HEAD
 
 =======
 >>>>>>>         ">
           Go Home
         </button>
       </div>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     `
     document.body.appendChild(errorDiv)
   }
@@ -832,6 +837,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         userAgent: navigator.userAgent
         url: window.location.href
       })
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>     }
     return this.errorStats.get(sessionKey)!
@@ -881,6 +887,8 @@ export const chunkErrorHandler = new ChunkErrorHandler()
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     `,
 
     document.body.appendChild(errorDiv)
@@ -953,19 +961,10 @@ export const chunkErrorHandler = new ChunkErrorHandler()
         userAgent: navigator.userAgent,;
         url: window.location.href;
       });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return this.errorStats.get(sessionKey)!
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
     this.clearCaches().then(() => {
@@ -992,6 +991,7 @@ export default chunkErrorHandler
           Try Again
         </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 =======
@@ -1002,10 +1002,16 @@ export default chunkErrorHandler
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        <button onclick="window.location.href='/'" style="
+export default chunkErrorHandler
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> ;
@@ -1013,6 +1019,8 @@ export default chunkErrorHandler;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Public method to manually trigger recovery;
@@ -1042,6 +1050,7 @@ export const chunkErrorHandler = new ChunkErrorHandler();
 export default chunkErrorHandler;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -1054,3 +1063,5 @@ export default chunkErrorHandler;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

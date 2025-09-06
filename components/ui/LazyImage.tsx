@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 useEffect ( () => {
   const observer = new IntersectionObserver ( ([entry]) => {
@@ -177,23 +177,22 @@ if ( {) {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 useEffect ( () => {
   const observer = new IntersectionObserver ( ([entry]) => {
   if (entry.isIntersecting) {
   return () => observer.disconnect ()
 }, [threshold]);
-<<<<<<< HEAD
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
   threshold = 0.1
   width
   height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
-=======
 
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
   threshold = 0.1,
   width,
   height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   src;
   alt;
   className = ''
@@ -300,11 +299,10 @@ if ( {) {
       {/* Placeholder */}
       <img
         src={placeholder}
-<<<<<<< HEAD
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
-=======
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -312,6 +310,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
@@ -386,14 +386,7 @@ if ( {) {
       {_isInView && (
 =======
       />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Actual Image */}
       {isInView && (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -421,6 +414,7 @@ export default LazyImage;          className="w-full h-full object-cover"
           style={{ width, height }}
         />
       )}
+<<<<<<< HEAD
 
     </div>
 
@@ -487,21 +481,21 @@ export default LazyImage;          className="w-full h-full object-cover"
         />
       )}
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   );
 }
 export default LazyImage;  )
 }
 export default LazyImage;
-<<<<<<< HEAD
 
-=======
     </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
     </div>
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

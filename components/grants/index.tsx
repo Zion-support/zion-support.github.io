@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -397,10 +398,11 @@ export default function GrantsPage() {
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState  } from 'react';
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-=======
 import {useEffect, useState} from 'react';
 import Link from 'next/link';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -409,7 +411,6 @@ import type {
   GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import type {
   GrantApplication
@@ -441,6 +442,7 @@ export default function GrantsPage() {;
   }>({});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
@@ -456,14 +458,14 @@ export default function GrantsPage() {;
       .then((d) => setItems(d.items || []))
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
 export default function GrantsPage() {
-=======
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
 export default function GrantsPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
   useEffect(() => {
@@ -485,6 +487,7 @@ export default function GrantsPage() {;
   }, [filters]);
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <EnhancedLayout>      .then((r) => r && r.json());
@@ -534,8 +537,9 @@ export default function GrantsPage() {;
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <EnhancedLayout>
-<<<<<<< HEAD
       <div className='flex items-center justify-between mb-6'>
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
         <div className='flex gap-2'>
@@ -779,17 +783,16 @@ export default function GrantsPage() {;
     </EnhancedLayout>
 );
 }
-=======
-<<<<<<< HEAD
 
   }, [filters]);
 
   return (
     <EnhancedLayout>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     <EnhancedLayout>
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

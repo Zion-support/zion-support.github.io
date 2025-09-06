@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 
@@ -8,6 +7,8 @@
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useMemo } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -169,6 +170,7 @@ export default function Services2026ShowcaseEnhancedPage() {
           return b.rating - a.rating,
         default: return a.name.localeCompare(b.name)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -609,6 +611,8 @@ function Services2026ShowcaseEnhancedPage() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -624,7 +628,6 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
-<<<<<<< HEAD
 export default function Services2026ShowcaseEnhancedPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
@@ -798,8 +801,11 @@ export default function Services2026ShowcaseEnhancedPage() {
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT')).length
   }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Services2026ShowcaseEnhancedPage(req, res) {
   try {
   const [searchTerm, setSearchTerm] = useState('');
@@ -972,6 +978,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }),
@@ -983,6 +990,8 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }),
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
@@ -1010,9 +1019,12 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 };
 =======
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen">
@@ -1021,6 +1033,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
           <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." />
           <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" />
           <link rel="icon" href="/favicon.svg" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1031,11 +1044,15 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
           {/* Open Graph */}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          {/* Open Graph */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Open Graph */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1048,11 +1065,14 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1066,11 +1086,15 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
           {/* Twitter */}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          {/* Twitter */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Twitter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1083,11 +1107,14 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
         </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1297,18 +1324,14 @@ if (return price >= 20000, ) {
                   <motion.div;
 =======
 <<<<<<< HEAD
-        {/* Enhanced Header Section */}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        {/* Enhanced Header Section */}
         {/* Enhanced Header Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
           <div className="max-w-7xl mx-auto relative z-10 text-center">
@@ -1335,7 +1358,6 @@ if (return price >= 20000, ) {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Discover our comprehensive collection of innovative micro SAAS services, AI solutions, quantum computing, and enterprise IT services that will transform your business in 2026 and beyond.
               </p>
-<<<<<<< HEAD
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
                 {Object.entries(serviceStats).map(([key, value]) => (
@@ -1346,6 +1368,7 @@ if (return price >= 20000, ) {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: key.length * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1563,6 +1586,8 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Service Statistics */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1591,21 +1616,14 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30"
                   >
                     <div className="text-3xl font-bold text-cyan-400">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                   </motion.div>
-<<<<<<< HEAD
                 ))}
               </div>
               {/* Contact Information */}
-=======
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1617,11 +1635,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Ready to Transform Your Business?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -1642,13 +1655,11 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Enhanced Search and Filters */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
               {/* Search Bar */}
-=======
         {/* Enhanced Search and Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1662,17 +1673,11 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="relative mb-6">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search for services, technologies, or use cases..."
-<<<<<<< HEAD
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full bg-gray-800/50 border border-gray-600/30 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -1686,7 +1691,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-=======
                   value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1724,18 +1728,12 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {categories.map((category) => (
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
-<<<<<<< HEAD
                     ))}
                   </select>
                 </div>
@@ -2109,7 +2107,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                       exit={{ opacity: 0, coordinate_y: -20 }}
 =======
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
-=======
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2135,16 +2132,10 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {priceRanges.map((range) => (
                       <option key={range.id} value={range.id}>
-<<<<<<< HEAD
                         {range.name}
                       </option>
                     ))}
@@ -2156,7 +2147,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-=======
                         {range.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2188,23 +2178,16 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
-<<<<<<< HEAD
                         {option.name}
                       </option>
                     ))}
                   </select>
                 </div>
                 {/* View Mode Toggle */}
-=======
                         {option.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2223,11 +2206,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
                   <div className="flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1">
@@ -2266,12 +2244,10 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
               {/* Results Count */}
               <div className="text-center">
                 <p className="text-gray-400">
                   Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
-=======
               {/* Results Count */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2284,40 +2260,26 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services
                 </p>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Enhanced Services Grid */}
-=======
         {/* Enhanced Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
               {filteredServices.length === 0 ? (
                 <motion.div
-<<<<<<< HEAD
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-=======
                   initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2333,11 +2295,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="text-center py-20"
                 >
                   <div className="text-6xl mb-4">🔍</div>
@@ -2348,7 +2305,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                 <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
                   {filteredServices.map((service, index) => (
                     <motion.div
-<<<<<<< HEAD
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -2418,6 +2374,7 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                         <div className="p - 6">;
                           {/* Service Header */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <div className="flex items - start justify - between mb - 4">;
                             <div className="text - 4xl">{service.icon}</div>;
                             {service.popular && (
@@ -2454,6 +2411,8 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2499,11 +2458,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <div className="flex items-start justify-between mb-4">
                             <div className="text-4xl">{service.icon}</div>
                             {service.popular && (
@@ -2532,7 +2486,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                             <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
                           </div>
-<<<<<<< HEAD
                           {/* Service Title and Tagline */}
                           <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
@@ -2544,7 +2497,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                           {/* Description */}
                           <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
                           {/* Key Features */}
-=======
                           {/* Description */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2556,11 +2508,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Features:</h4>
                             <ul className="space-y-1">
@@ -2568,8 +2515,11 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                                 <li key={idx} className="flex items-center text-xs text-gray-400">
                                   <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                   {feature}
                                 </li>))}
                             </ul>;
@@ -2950,7 +2900,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                             )}
                           </div>
                           {/* Service Stats */}
-=======
                                   {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2976,11 +2925,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <div className="grid grid-cols-3 gap-2 mb-4 text-xs">
                             <div className="text-center">
                               <div className="text-cyan-400 font-semibold">{service.rating}★</div>
@@ -2995,71 +2939,43 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                               <div className="text-gray-400">trial</div>
                             </div>
                           </div>
-<<<<<<< HEAD
                           {/* Market Position */}
-=======
                           {/* Market Position */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <div className="mb-4 p-3 bg-gray-800/30 rounded-lg">
                             <h4 className="text-xs font-semibold text-gray-200 mb-1">Market Position:</h4>
                             <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
                           </div>
-<<<<<<< HEAD
                           {/* ROI */}
-=======
                           {/* ROI */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <div className="mb-4 p-3 bg-green-900/20 border border-green-500/30 rounded-lg">
                             <h4 className="text-xs font-semibold text-green-400 mb-1">ROI Promise:</h4>
                             <p className="text-xs text-green-300">{service.roi}</p>
                           </div>
-<<<<<<< HEAD
                           {/* Action Buttons */}
-=======
                           {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <div className="flex space-x-2">
                             <Button
                               variant="primary"
                               size="sm"
                               className="flex-1"
-<<<<<<< HEAD
                               onClick={() => window.open(service.link, '_blank')}
-=======
                               onClick={() => window.open(service.link, '_blank')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             >
                               Learn More
                               <ArrowRight className="w-4 h-4 ml-1" />
@@ -3067,7 +2983,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                             <Button
                               variant="secondary"
                               size="sm"
-<<<<<<< HEAD
                               onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`)}
                             >
                               Contact
@@ -3090,7 +3005,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
                               onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`)  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3145,11 +3059,6 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -3162,19 +3071,12 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                 <Button
                   variant="primary"
                   size="lg"
-<<<<<<< HEAD
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
-=======
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
@@ -3182,19 +3084,12 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
                 <Button
                   variant="secondary"
                   size="lg"
-<<<<<<< HEAD
                   onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
-=======
                   onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
@@ -3209,23 +3104,19 @@ className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 ba
         </section>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

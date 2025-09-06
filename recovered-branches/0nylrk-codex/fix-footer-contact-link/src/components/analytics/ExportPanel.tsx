@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/ExportPanel.tsx
 
 import React from "react";
@@ -24,24 +25,27 @@ import React from "react";
 import {
 
 =======
-
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import React from "react";
 import {
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -83,16 +87,19 @@ export function ExportPanel() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-<<<<<<< HEAD
 export function ExportPanel() {;
-=======
 export function ExportPanel() {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { toast } = useToast();
 
 import React from "react",
@@ -104,6 +111,7 @@ export function ExportPanel() {
   
   const handleExport = (format: 'csv' | 'json') => {
     // Placeholder for actual export functionality
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -168,6 +176,8 @@ function ExportPanel() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     (toast({
       title: `Exporting as ${format.toUpperCase()}`
       description: "Your export is being prepared and will download shortly."
@@ -181,10 +191,8 @@ function ExportPanel() {
       }, 1500));
   }
 
-=======
     toast({
       title: `Exporting as ${format.toUpperCase()}`,
-<<<<<<< HEAD
       description: "Your export is being prepared and will download shortly.",
     }),
       // In a real implementation, this would trigger an API call to generate and download the export
@@ -196,7 +204,6 @@ function ExportPanel() {
       }, 1500));
   };
 
-=======
       description: "Your export is being prepared and will download shortly."}),
     
     // In a real implementation, this would trigger an API call to generate and download the export
@@ -207,11 +214,6 @@ function ExportPanel() {
     }, 1500)
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -232,10 +234,13 @@ function ExportPanel() {
             Export as CSV
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button
             variant="outline"
             className="border-zion-blue-light text-zion-slate-light"
@@ -246,8 +251,11 @@ function ExportPanel() {
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button 
             variant="outline" 
             className="border-zion-blue-light text-zion-slate-light"
@@ -412,11 +420,6 @@ export function ExportPanel() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
     </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

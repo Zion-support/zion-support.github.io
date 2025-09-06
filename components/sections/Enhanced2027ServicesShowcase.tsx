@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -259,15 +260,16 @@ case 'name':
 
 =======
 <<<<<<< HEAD
-import React, { useState } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState } from 'react',
 import React, { useState } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -288,16 +290,37 @@ import {
   Grid,
   List,;
   ChevronDown,;} from 'lucide-react';
+=======
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Atom
+  Rocket
+  Shield
+  Target
+  CheckCircle
+  ExternalLink
+  Search
+  Filter
+  Grid
+  List
+  ChevronDown;} from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Star,
   TrendingUp,
@@ -318,8 +341,11 @@ import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovat
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Rocket, Shield, Target, CheckCircle, ExternalLink;
   Search, Filter, Grid, List, ChevronDown
  } from 'lucide-react';
@@ -547,10 +573,7 @@ import { motion, AnimatePresence } from 'framer-motion';
           return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, ''));
         default: return 0
     });
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getCategoryColor = (category: string) => {
     const colors = {
       'AI & Machine Learning': 'from-purple-500 to-indigo-600'
@@ -791,7 +814,6 @@ transition={{ duration: 0 && 0.6 }}>        <motion&& motion.div
                     onChange={e => setSelectedCategory(e.target.value)}
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10'
                   >
-<<<<<<< HEAD
                     {categories.map(category => (                      <option key={category} value={category}>                  <select
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     value={selectedCategory}
@@ -800,6 +822,7 @@ transition={{ duration: 0 && 0.6 }}>        <motion&& motion.div
                   >
                     {categories.map((category) => (
                       <option key={category} value={category}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -810,10 +833,13 @@ transition={{ duration: 0 && 0.6 }}>        <motion&& motion.div
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {categories.map(category => (                      <option key={category} value={category}>
 
                       <option key={category} value={category}>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -830,6 +856,8 @@ transition={{ duration: 0 && 0.6 }}>        <motion&& motion.div
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         {category === 'all' ? 'All Categories' : category}
                       </option>;
                     ))}
@@ -1134,6 +1162,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all duration-200 ${
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1145,6 +1174,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         ? 'bg-cyan-500/20 text-cyan-400' 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       viewMode === 'list'
                         ? 'bg-cyan-500/20 text-cyan-400'
                         : 'text-gray-400 hover:text-white'
@@ -1157,6 +1188,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     }`}
                   >
                     <List className="w-5 h-5" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </button>
 =======
@@ -1171,6 +1203,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+                  </button>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </div>
             </div>
@@ -1312,11 +1349,14 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         </motion.div>
         {/* Services Grid/List */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           <p className="text-gray-400">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <AnimatePresence mode='wait'>
           {viewMode === 'grid' ? (
             <motion.div
@@ -1475,14 +1515,18 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 =======
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1496,6 +1540,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1523,14 +1569,7 @@ className="group"
                 >
 =======
                   className='group'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2'>
                     {/* Header */}
@@ -1571,6 +1610,7 @@ className="group"
                     {/* Content */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1598,6 +1638,8 @@ className="group"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1670,6 +1712,7 @@ className="group"
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                             {feature}
 =======
 
@@ -1735,6 +1778,8 @@ className="group"
                     <div className="flex flex-wrap gap-2 mb-6">
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                       {service.description}
                     </p>
@@ -1743,29 +1788,16 @@ className="group"
 
                             {feature}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </li>
                         ))}
                       </ul>
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Tags */}
                     <div className='flex flex-wrap gap-2 mb-6'>
                       {service.tags.slice(0, 3).map((tag, idx) => (
                         <span
                           key={idx}
-<<<<<<< HEAD
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >                    <div className="flex flex-wrap gap-2 mb-6">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       {service.tags.slice(0, 3).map((tag, idx) => (
@@ -1773,13 +1805,17 @@ className="group"
                           key={idx}
                           className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
 <<<<<<< HEAD
+<<<<<<< HEAD
                         >
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >
 
                         >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1787,6 +1823,8 @@ className="group"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           {tag}
                         </span>;
                       ))}
@@ -1946,6 +1984,7 @@ key="list"
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1965,10 +2004,12 @@ key="list"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-              className='space-y-4'            >              key="list"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              className='space-y-4'            >              key="list"
               className='space-y-4'            >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1976,10 +2017,13 @@ key="list"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1995,9 +2039,11 @@ key="list"
 className="space-y-4"
 =======
 <<<<<<< HEAD
-              className='space-y-4'              className="space-y-4"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              className='space-y-4'              className="space-y-4"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2005,6 +2051,8 @@ className="space-y-4"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -2064,14 +2112,7 @@ className="group"
                         </h3>
 =======
                   className='group'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'>
                     <div className='flex flex-col lg:flex-row items-start lg:items-center gap-6'>
@@ -2137,6 +2178,7 @@ className="group"
                           ))}
                         </div>
                       </div>
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -2214,6 +2256,8 @@ className="group"
                       </div>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                       {/* Content */}
 
@@ -2225,11 +2269,6 @@ className="group"
                         </div>
                       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Stats and CTA */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <div className='flex flex-col items-end space-y-3'>
@@ -2238,6 +2277,7 @@ className="group"
                           <div className='text-lg font-bold text-green-400'>
                             {service.roi}
                           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2268,12 +2308,9 @@ className="group"
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                         </div>
                         <Link
                           href={service.link}
@@ -2304,6 +2341,7 @@ className="group"
 <<<<<<< HEAD
 <<<<<<< HEAD
         </AnimatePresence>
+<<<<<<< HEAD
 
 =======
 
@@ -2358,12 +2396,9 @@ className="group"
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
@@ -2425,6 +2460,7 @@ className="group"
 
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* CTA Section */}
         <motion.div
@@ -2477,8 +2513,9 @@ className="group"
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* CTA Section */}
         <motion.div
           className='mt-20 text-center'          initial={{ opacity: 0, y: 20 }}
@@ -2486,22 +2523,20 @@ className="group"
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div
-=======
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           className="mt-20 text-center"
-=======
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;
@@ -2753,7 +2788,17 @@ export default Enhanced2027ServicesShowcase;  );
     </section>
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 
+=======
+}
+/* Search and Filters */
+};
+
+  /* Search and Filters */ 
+/* Search and Filters */ 
+  /* Search and Filters */ 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }<motion.div /> </div> </div> > {
   categories.map ( (category) => (<option key= {
   category
@@ -2800,6 +2845,7 @@ export default Enhanced2027ServicesShowcase;  );
 }</motion.div>)
 }</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)
 }{
+<<<<<<< HEAD
 
 =======
 
@@ -2929,6 +2975,8 @@ export default Enhanced2027ServicesShowcase;
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <Link href="/contact" className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25" > <span > Get Started Today</span> <ArrowRight className="w - 5 h - 5" /> </a> <Link href="/pricing" className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50" > <span > View Pricing</span> <TrendingUp className="w - 5 h - 5" /> </a> </div> </div> </motion.div> </div> </section>);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   /* CTA Section */
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>)
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2953,22 +3001,19 @@ export default Enhanced2027ServicesShowcase;
 ;
 =======
 
-=======
   /* CTA Section */ 
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
 };
-<<<<<<< HEAD
 export default Enhanced2027ServicesShowcase;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 export default Enhanced2027ServicesShowcase;  )
 };
 
 export default Enhanced2027ServicesShowcase;
-=======
 export default Enhanced2027ServicesShowcase;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,15 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { ensureAdminFromApi } from "../../../../utils/auth";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 export default async function handler(
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
@@ -80,6 +93,10 @@ function handler() {
   res.status(200).json(data);
 }
 
+<<<<<<< HEAD
+=======
+res.status(200).json(data);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -117,6 +134,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
 
@@ -151,3 +169,6 @@ res.status (200).json (data);
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

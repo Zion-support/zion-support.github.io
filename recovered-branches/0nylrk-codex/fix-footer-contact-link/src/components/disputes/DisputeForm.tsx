@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputeForm.tsx
 
 <<<<<<< HEAD
@@ -14,6 +15,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -28,6 +32,7 @@ import {useDisputes} from "@/hooks/useDisputes";
 import {toast} from "sonner";
 import {FileText} from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -36,6 +41,8 @@ import {FileText} from "lucide-react";
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -61,6 +68,7 @@ import { useDisputes } from "@/hooks/useDisputes",
 import { toast } from "sonner",
 import { FileText } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -75,6 +83,8 @@ import { FileText } from "lucide-react",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" })
@@ -84,11 +94,14 @@ const formSchema = z.object({
 type DisputeFormProps = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projectId: string
   milestoneId?: string;
   onDisputeCreated?: (disputeId: string) => void
@@ -103,8 +116,11 @@ export function DisputeForm({
   const { createDispute } = useDisputes();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [files, setFiles] = useState<File[]>([]);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projectId: string,
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
@@ -117,24 +133,28 @@ export function DisputeForm({
   onDisputeCreated, 
   onCancel 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }: DisputeFormProps) {;
   const { createDispute } = useDisputes();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [files, setFiles] = useState<File[]>([]);
-=======
 }: DisputeFormProps) {
   const { createDispute } = useDisputes(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [files, setFiles] = useState<File[]>([]),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -143,6 +163,7 @@ export function DisputeForm({
       attachments: []}})
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -232,6 +253,8 @@ export function DisputeForm({ ;
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const newFiles = Array.from(e.target.files)
       setFiles(prev => [...prev, ...newFiles]);
       form.setValue("attachments", [...files, ...newFiles])
@@ -243,8 +266,11 @@ export function DisputeForm({ ;
     setFiles(newFiles);
     form.setValue("attachments", newFiles)
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const newFiles = Array.from(e.target.files),
       setFiles(prev => [...prev, ...newFiles]),
       form.setValue("attachments", [...files, ...newFiles])
@@ -259,12 +285,15 @@ export function DisputeForm({ ;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true)
@@ -293,19 +322,21 @@ export function DisputeForm({ ;
 =======
           // // // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
-<<<<<<< HEAD
         toast.success("Your dispute has been submitted");
-=======
         
         toast.success("Your dispute has been submitted"),
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -363,11 +394,11 @@ export function DisputeForm({ ;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       console.error("Error submitting dispute:", error);
 
-=======
       console.error("Error submitting dispute:", error),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast.error("Failed to submit dispute. Please try again.")
     } finally {
       setIsSubmitting(false)
@@ -398,11 +429,14 @@ export function DisputeForm({ ;
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (
                       <SelectItem key={value} value={value}>{label}</SelectItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -816,11 +850,6 @@ if ( {) {
 <<<<<<< HEAD
 =======
                       <SelectItem key={value} value={value}>{label}</SelectItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
                   </SelectContent>
                 </Select>
@@ -864,6 +893,7 @@ if ( {) {
                         <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">
                           <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 />;
@@ -884,16 +914,22 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           <Button
                             type="button"
                             variant="ghost"
                             size="sm"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           <Button 
                             type="button" 
                             variant="ghost" 
                             size="sm" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1018,6 +1054,8 @@ if ( {) {
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             onClick={() => removeFile(index)}
                           >
                             Remove
@@ -1046,6 +1084,7 @@ if ( {) {
       </Form>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1113,12 +1152,14 @@ description: values.description
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputeForm.tsx
 =======
 <<<<<<< HEAD
-}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 };
-=======
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

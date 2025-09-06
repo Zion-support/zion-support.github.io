@@ -99,7 +99,6 @@ import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
 
 import {
-<<<<<<< HEAD
   ArrowRight
   Play
   TrendingUp
@@ -153,9 +152,12 @@ import {
   Star as StarIcon
   Sparkles
   Target as TargetIcon;} from 'lucide-react';import {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Play,
   TrendingUp,
@@ -222,8 +224,11 @@ import {
 =======
   Sparkles,;
   Target as TargetIcon,;} from 'lucide-react';import { ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -510,6 +515,7 @@ const Homepage2047: React.FC = () => {
   ];
   const stats = [
     {
+<<<<<<< HEAD
 =======
 =======
       window.removeEventListener('mousemove', handleMouseMove);
@@ -929,6 +935,8 @@ if (return allInnovativeServices) {
   const stats = [
     {
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       number: `${allInnovativeServices.length}+`
       label: 'Innovative Services'
       icon: Star
@@ -1061,6 +1069,7 @@ if (return allInnovativeServices) {
     transition: { duration: 0.6 },  }    transition: { duration: 0.6 }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
   const stagger_container = {
     animate: {
@@ -1114,6 +1123,8 @@ if (return allInnovativeServices) {
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-16 items-center&quot;>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       number: `${allInnovativeServices.length}+`,
       label: 'Innovative Services',
       icon: Star,
@@ -1124,34 +1135,21 @@ if (return allInnovativeServices) {
     { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
     { number: "24/7", label: "AI Intelligence Available", icon: Brain },
     { number: "300+", label: "Countries Served", icon: Globe }
-<<<<<<< HEAD
 
   ];
-=======
-<<<<<<< HEAD
-=======
 
   ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-<<<<<<< HEAD
     transition: { duration: 0.6 },  };
 
-=======
-<<<<<<< HEAD
     transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
-=======
     transition: { duration: 0.6 },  };
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const staggerContainer = {
     animate: {
       transition: {
@@ -1167,19 +1165,12 @@ if (return allInnovativeServices) {
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">
       {/* Futuristic Background */}
       <UltraFuturisticBackground2047 />
-<<<<<<< HEAD
       {/* Navigation */}
       <UltraFuturisticNavigation2047 />
-=======
 
       {/* Navigation */}
       <UltraFuturisticNavigation2047 />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>
         <div className='max-w-7xl mx-auto w-full'>
@@ -1251,6 +1242,7 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
                 </p>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                   className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'>;
                   <Sparkles className='w-4 h-4' />;
@@ -1321,26 +1313,16 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
 
 =======
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className='flex flex-col sm:flex-row gap-4'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Link
                   href='/2025-innovative-services-showcase-v2'
@@ -1421,9 +1403,8 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>
               </motion.div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1431,6 +1412,8 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Stats */}
               <motion&& motion.div
                 variants={staggerContainer}
@@ -1440,6 +1423,7 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
                 initial='initial'
                 animate='animate'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1447,19 +1431,23 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className='grid grid-cols-2 md:grid-cols-4 gap-6'              >                initial="initial"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 animate="animate"
                 className="grid grid-cols-2 md:grid-cols-4 gap-6"
-=======
                 className='grid grid-cols-2 md:grid-cols-4 gap-6'              >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 {stats.map((stat, index) => (
                   <motion.div
@@ -1503,7 +1491,6 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
                     <div className='text-2xl font-bold text-cyan-400 mb-1'>
                       {stat.number}
                     </div>
-<<<<<<< HEAD
                     <div className='text-sm text-gray-400'>{stat.label}</div>                  </motion.div>                    className="text-center"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >
@@ -1679,7 +1666,6 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
 =======
               </motion.div>
             </motion.div>
-=======
                     <div className='text-sm text-gray-400'>{stat.label}</div>                  </motion.div>
 
                   </motion.div>
@@ -1688,11 +1674,6 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
               </motion.div>
             </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Right Content - Featured Service */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -1704,9 +1685,8 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
             >
               <AnimatePresence mode="wait">
                 <motion.div
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1714,6 +1694,8 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0 && 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -1794,14 +1776,7 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
                   className='relative'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
                     <div className='flex items-center justify-between mb-6'>
@@ -1933,7 +1908,10 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
                       </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Link
                       href={featuredServices[currentServiceIndex]?.slug |'#'}
                       className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'
@@ -1941,6 +1919,7 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
 
                       href={featuredServices[currentServiceIndex]?.slug |'#'}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2084,14 +2063,11 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
       </section>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                     >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Learn More
                     </Link>
                   </div>
@@ -2114,14 +2090,7 @@ className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -2143,15 +2112,16 @@ className="text-center mb-16"
           >
 =======
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories
@@ -2167,6 +2137,7 @@ className="text-center mb-16"
               Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2214,6 +2185,9 @@ className="text-center mb-16"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Category Cards */}
           <motion&& motion.div
             variants={staggerContainer}
@@ -2324,6 +2298,7 @@ className="text-center mb-16"
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2436,6 +2411,9 @@ className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${category && category.color}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Featured Services Grid */}
       <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -2448,14 +2426,7 @@ className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${category && category.color}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -2477,15 +2448,16 @@ className="text-center mb-16"
           >
 =======
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -2501,6 +2473,7 @@ className="text-center mb-16"
               Discover our most revolutionary and cutting-edge technology solutions
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2536,6 +2509,9 @@ className="text-center mb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Services Grid */}
           <motion&& motion.div
             variants={staggerContainer}
@@ -2655,6 +2631,7 @@ className="text-center mb-16"
             ))}
           </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2694,12 +2671,9 @@ className="text-center mb-16"
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
           {/* View All Services CTA */}
           <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2724,14 +2698,7 @@ className="text-center mt-16"
             <Link
 =======
             className='text-center mt-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Link
@@ -2750,6 +2717,7 @@ className="text-center mt-16"
         <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+<<<<<<< HEAD
 
 =======
 
@@ -2825,6 +2793,9 @@ className="text-center mt-16"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -2853,6 +2824,7 @@ className="text-center mt-16"
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3011,25 +2983,34 @@ export default Homepage2047;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default Homepage2047;  )
 }
 export default Homepage2047;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default Homepage2047;
 
@@ -3044,13 +3025,14 @@ export default Homepage2047;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default Homepage2047;
 export default Homepage2047;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default Homepage2047;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

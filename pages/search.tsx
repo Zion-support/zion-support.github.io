@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -82,6 +83,12 @@ import React, { useState, useEffect } from 'react',
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React, { useState, useEffect } from 'react',
+origin/automation-improvements-final
+import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -209,7 +216,6 @@ const filters = [;
 export default function SearchPage() {;
 =======
 import {
-<<<<<<< HEAD
   Search
   Filter
   ArrowRight
@@ -228,8 +234,11 @@ import {
   X
   ChevronDown
   ChevronUp
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Search,
   Filter,
   ArrowRight,
@@ -249,12 +258,15 @@ import {
   ChevronDown,
   ChevronUp;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';
 const searchResults = [
   {
@@ -336,6 +348,7 @@ const filters = [
   { name: 'Recent', count: 4 }
   { name: 'Popular', count: 2 }
 ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -382,14 +395,12 @@ export default function SearchPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function SearchPage() {
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Search,
   Filter,
@@ -428,12 +439,12 @@ import {
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
->>>>>>> origin/main
+origin/main
 export default function SearchPage() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -452,6 +463,11 @@ export default function SearchPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+export default function SearchPage() {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -823,13 +839,7 @@ export default function SearchPage(req, res) {
 =======
     return matchesQuery && matchesCategory && matchesFilter;
   });
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -1157,8 +1167,6 @@ export default function SearchPage(req, res) {
     }),
     setSortBy('relevance')
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1178,10 +1186,6 @@ export default function SearchPage(req, res) {
         <title>Search - Zion Tech Group</title>
         <meta name="description" content="Search our website for information, guides, services, and more." />
       </Head>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="min-h-screen bg-gray-50">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1229,9 +1233,6 @@ export default function SearchPage(req, res) {
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 =======
               <div className="max-w-2xl mx-auto">
-<<<<<<< HEAD
-=======
-=======
       <SmartHeader />
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -1282,8 +1283,6 @@ export default function SearchPage(req, res) {
 }
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
               <div className="flex-1 max-w-2xl">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1338,43 +1337,30 @@ export default function SearchPage(req, res) {
                   />
                 </div>
               </div>
-<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Filters Section */}
         <section className="py-8 bg-white border-b">
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex flex-wrap gap-4">
-<<<<<<< HEAD
-=======
-=======
               {/* View Mode Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               <div className="flex items-center gap-2">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <button
                   onClick={() => setShowFilters(!showFilters)}
                   className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                 >
-<<<<<<< HEAD
                   <Filter className="w-4 h-4 mr-2" />
                   Filters
-=======
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
@@ -1402,7 +1388,6 @@ export default function SearchPage(req, res) {
 }
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex items-center gap-4">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <button
                   onClick={() => setShowFilters(!showFilters)  } catch (error) {
     console.error("Error:", error);
@@ -1414,8 +1399,11 @@ export default function SearchPage(req, res) {
                   <Sliders className="w-4 h-4" />
                   Filters
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {showFilters ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Head from 'next / head';
@@ -1714,10 +1702,7 @@ function SearchPage() {
                   {filters && filters.map((filter) => (;
 =======
               </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="text-sm text-gray-600">
                 {filteredResults.length} results found
               </div>
@@ -1728,10 +1713,13 @@ function SearchPage() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 transition={{ duration: 0.3 }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {Object.values(filters).some(f => f !== 'all') && (
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   )  } catch (error) {
@@ -1802,6 +1790,7 @@ function SearchPage() {
 }
                 className="mt-6 pt-6 border-t border-white/20"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1812,6 +1801,8 @@ function SearchPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className="flex flex-wrap gap-4">
                   {filters.map((filter) => (
@@ -1828,6 +1819,7 @@ function SearchPage() {
 <<<<<<< HEAD
 =======
                     >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1868,6 +1860,19 @@ function SearchPage() {
 ))}
                 </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                      {filter.name} ({filter.count})
+                    </button>
+                  ))}
+                </div>
+                  ))}                </div>
+ursor/fix-lint-push-and-merge-to-main-ae4e
+                  ))}
+                </div>
+origin/automation-improvements-final
+))}
+                </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </motion.div>
             )}
           </div>
@@ -1895,6 +1900,7 @@ function SearchPage() {
 <<<<<<< HEAD
 
                     transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2234,6 +2240,8 @@ function SearchPage() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {categories.map(category => (
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
                           {category.icon} {category.name  } catch (error) {
@@ -2485,8 +2493,6 @@ function SearchPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -2496,10 +2502,6 @@ function SearchPage() {
                           <span className="mx-2 text-gray-300">•</span>
                           <span className="text-sm text-gray-500">{result.type}</span>
                         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <h3 className="text-xl font-bold text-gray-900 mb-2">
                           <Link
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2531,6 +2533,7 @@ function SearchPage() {
                       >
                         <ArrowRight className="w-5 h-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -2553,6 +2556,10 @@ function SearchPage() {
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+                      </Link>
+                      </Link>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -2561,6 +2568,7 @@ function SearchPage() {
     category: 'all',
     status: 'all',
     priceRange: 'all',
+<<<<<<< HEAD
 <<<<<<< HEAD
     technology: 'all'
 });
@@ -3092,9 +3100,10 @@ className="mt-6 pt-6 border-t border-white/20"
               {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
 =======
 <<<<<<< HEAD
-    technology: 'all',
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    technology: 'all',
+ursor/integrate-build-improve-and-re-verify-8f7d
         </div>
       </section>
 
@@ -3402,14 +3411,11 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                           Get Quote
                         </a>
                       </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 </Link>
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -3429,6 +3435,18 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
               </div>
 
 <<<<<<< HEAD
+=======
+origin/main
+origin/automation-improvements-final
+</Link>
+                    </div>
+                      </Link>                    </div>
+ursor/fix-lint-push-and-merge-to-main-ae4e
+                  </motion.div>
+                ))}
+              </div>
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ) : (
               <motion.div
                 className="text-center py-16"
@@ -3588,6 +3606,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
   );
 }  )
 }
+<<<<<<< HEAD
 
 }
 
@@ -3783,10 +3802,10 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
-=======
 )
-=======
                         <div className="flex flex-col items-end gap-2">
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                             service.status === 'active' ? 'bg-green-500/20 text-green-300' :
@@ -3870,8 +3889,8 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 <<<<<<< HEAD
@@ -3890,6 +3909,9 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </AnimatePresence>
           )}
           {/* Initial State - Show all services when no search */}
@@ -4018,43 +4040,31 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
 =======
 =======
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   )
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-b76c
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+)
+}
+origin/main
+origin/automation-improvements-final
+)
+}
 <<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-)
-}
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
-)
-}
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

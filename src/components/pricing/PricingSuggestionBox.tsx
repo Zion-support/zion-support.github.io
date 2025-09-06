@@ -1,11 +1,13 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -16,8 +18,6 @@ import {
 } from '@/components/ui/tooltip'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-<<<<<<< HEAD
-=======
 import { Loader2, Info, ThumbsUp } from 'lucide-react'
 import { PricingSuggestion } from '@/services/pricingSuggestionService'
 interface PricingSuggestionBoxProps {
@@ -25,9 +25,12 @@ interface PricingSuggestionBoxProps {
   isLoading: boolean
   onApplySuggestion: () => void
   rateType: 'hourly' | 'fixed'
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 <<<<<<< HEAD
 import { Loader2, Info, ThumbsUp } from 'lucide-react'
@@ -61,8 +64,11 @@ interface PricingSuggestionBoxProps {;
   suggestion: PricingSuggestion | null;
   isLoading: boolean;
   onApplySuggestion: () => void;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
@@ -80,6 +86,7 @@ interface PricingSuggestionBoxProps {
   onApplySuggestion: () => void,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   rateType: "hourly" | "fixed"
 }
@@ -93,22 +100,24 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 xport const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   rateType: "hourly" | "fixed"
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   suggestion
   isLoading
   onApplySuggestion
   rateType
 }) => {  if (isLoading) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   rateType}) => {
   if (isLoading) {
@@ -122,22 +131,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   suggestion,
   isLoading,
   onApplySuggestion,
-<<<<<<< HEAD
   rateType}) => {
   if (isLoading) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   rateType,
 }) => {  if (isLoading) {
-=======
   rateType}) => {
   if (isLoading) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return (
       <Card className="border border-dashed border-muted">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -145,6 +149,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="text-center">
             <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
             <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -164,10 +169,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              Generating optimal pricing suggestion...
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </p>
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -189,6 +198,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>>   }
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ) }    )
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -211,10 +222,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className='bg-muted/50 rounded-md p-3 text-center'>
           <span className='text-2xl font-bold'>    <Card className="border-2 border-dashed border-muted-foreground/20">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       <CardContent className="p-5 space-y-4">
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -262,11 +276,14 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <CardContent className="p-5 space-y-4">
 >>>>>>>         <div className="flex items-center justify-between">
           <h4 className="font-semibold">AI Suggested Price</h4>
@@ -376,7 +393,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 =======
           </Badge>
         </div>
-<<<<<<< HEAD
         <div className='bg-muted/50 rounded-md p-3 text-center'>
           <span className='text-2xl font-bold'>
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
@@ -395,35 +411,21 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
                 <Button
                   variant='default'            ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
-=======
 
         <div className="bg-muted/50 rounded-md p-3 text-center">
           <span className="text-2xl font-bold">
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <span className="text-sm text-muted-foreground ml-1">
             {rateType === "hourly" ? "/hour" : " total"}
           </span>
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{suggestion.explanation}</p>
         </div>
-<<<<<<< HEAD
         <div className="flex items-center justify-between">
           <TooltipProvider>
             <Tooltip>
@@ -487,6 +489,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <ThumbsUp className="h-4 w-4 mr-2" /> Apply Suggestion
                 </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               </TooltipTrigger>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -500,6 +503,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+        <div className="flex items-center justify-between">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </TooltipTrigger>
 >>>>>>>               <TooltipContent>
                 <p>Apply this suggestion to your pricing field</p>
@@ -507,6 +514,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Tooltip>
           </TooltipProvider>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -529,6 +537,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>
   )
 
+=======
+        <p className='text-xs text-center text-muted-foreground pt-2'>          Based on market data & trends. You can adjust as needed.
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
 <<<<<<< HEAD
 
@@ -536,11 +547,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </p>
       </CardContent>
     </Card>
@@ -585,7 +591,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
   )
-<<<<<<< HEAD
 }
 "
         <p className="text-xs text-center text-muted-foreground pt-2">
@@ -593,19 +598,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         </p>
       </CardContent>
     </Card>
-<<<<<<< HEAD
   )
 }
 "  )
 }
 
-=======
   );
 };
 "  );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 },
 ;
   const confidenceColor = {;
@@ -661,6 +662,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -674,3 +676,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

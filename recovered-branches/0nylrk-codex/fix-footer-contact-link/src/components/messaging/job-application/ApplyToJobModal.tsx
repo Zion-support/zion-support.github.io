@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyToJobModal.tsx
 import React from "react";
 import {
@@ -11,11 +12,21 @@ import {
 import React from "react";
 import {
 
+=======
+import React from "react";
+import {
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogHeader
+  DialogTitle
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
 DialogTitle,;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -31,6 +42,8 @@ Dialog
   DialogTitle,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
@@ -52,7 +65,17 @@ export function ApplyToJobModal({
         </DialogHeader>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+        <ApplyForm
+          job={job}
+          onClose={onClose}
+          onApplySuccess={onApplySuccess}
+        />
+      </DialogContent>
+    </Dialog>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 ========
 =======
@@ -142,6 +165,7 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
           onApplySuccess={onApplySuccess}
         />;
       </DialogContent>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyToJobModal.tsx
@@ -154,6 +178,9 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    </Dialog>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 =======
 ========

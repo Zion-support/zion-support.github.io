@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,16 +10,20 @@ import { Button  } from '@/components/ui/button';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
-=======
 import { Certification } from '@/types/resume'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Edit, Trash2 } from 'lucide-react'
 import { format } from 'date-fns';
 interface CertificationsListProps {
@@ -101,6 +106,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   aria-label='Edit certification'                  variant="ghost"
                   size="icon"
                   onClick = {() => onEdit(cert),}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -212,6 +218,8 @@ interface CertificationsListProps {;
                   size="icon"
                   onClick = {() => onEdit(cert),}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -256,11 +264,6 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   variant="ghost"
                   size="icon"
                   onClick={() => onEdit(cert)}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   aria-label="Edit certification"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 >
@@ -269,8 +272,11 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                 <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   variant='ghost'
                   size='icon'
                   onClick={() => onDelete(cert.id!)}
@@ -305,16 +311,17 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
   );
 };
 }
+}
+}
+}
+}
 <<<<<<< HEAD
-=======
-}
-}
-}
-}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   variant="ghost"
                   size="icon"
                   onClick={() => onDelete(cert.id!)}
@@ -358,6 +365,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -370,3 +378,5 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

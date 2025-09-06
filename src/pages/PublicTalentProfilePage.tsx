@@ -9,7 +9,6 @@ import { logErrorToProduction } from '@/utils/productionLogger'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -18,14 +17,14 @@ import { SEO } from "@/components/SEO",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
-<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Star } from 'lucide-react'
@@ -44,6 +43,7 @@ export default function ProfilePage() {
       setIsError(false)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -51,6 +51,8 @@ export default function ProfilePage() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -59,8 +61,11 @@ import { SEO } from "@/components/SEO",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { HireNowCTA } from "@/components/profile/HireNowCTA",
 import { logErrorToProduction } from '@/utils/productionLogger',
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
@@ -80,6 +85,7 @@ export default function ProfilePage() {
       setIsError(false),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       try {
 =======
@@ -90,12 +96,15 @@ export default function ProfilePage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       try {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -107,21 +116,18 @@ export default function ProfilePage() {
           throw error
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
-          .single()
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          .single()
           .single(),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         if (error) {
           throw error
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
         setProfileData(data)
       } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -152,21 +158,21 @@ export default function ProfilePage() {
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' })
         setIsError(true)
-=======
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
         setIsError(true),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
-<<<<<<< HEAD
         setIsError(true)
-=======
         setIsError(true),
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         toast({
           title: "Error"
           description: "Failed to load profile. Please try again later."
@@ -192,15 +198,17 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 =======
       } finally {
         setIsLoading(false)
-<<<<<<< HEAD
       }
     }
     if (profileId) {
       fetchProfile()
     }
   }, [profileId])
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -261,6 +269,7 @@ export default function ProfilePage() {;
   }, [profileId]),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -289,6 +298,8 @@ export default function ProfilePage() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -303,12 +314,12 @@ export default function ProfilePage() {;
       </div>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <SEO
@@ -335,13 +346,14 @@ export default function ProfilePage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
         title={`${profileData.full_name} | Talent Profile`}
-<<<<<<< HEAD
         description = {profileData.bio |"View the profile of this talented individual.",}
-=======
         description = {profileData.bio || "View the profile of this talented individual.",}
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   return (;
     <>;
@@ -350,7 +362,10 @@ export default function ProfilePage() {;
         description={profileData.bio || "View the profile of this talented individual."}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
 =======
 >>>>>>>       />
@@ -400,6 +415,7 @@ export default function ProfilePage() {;
                         <span>{profileData.availability}</span>
                       </div>
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               {/* Skills */}
@@ -512,18 +528,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </div>
                 </div>
               </div>
-=======
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && (
                 <div className="mt-4">
@@ -540,6 +552,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -566,10 +579,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       key = {link + index,}
                       href = {link,}
 =======
-              <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
@@ -599,6 +612,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <p className="text-zion-slate-light">{profileData.experience |"No experience provided."}</p>
@@ -615,10 +629,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-              <p className="text-zion-slate-light">{profileData.experience |"No experience provided."}</p>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <p className="text-zion-slate-light">{profileData.experience |"No experience provided."}</p>
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* Social Links */}
@@ -645,32 +659,41 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Github className="h-6 w-6" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </a>
                 )}
                 {profileData.twitter_link && (
                   <a
                     href = {profileData.twitter_link,}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     target="_blank"
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </Link>
                 )}
                 {profileData.twitter_link && (;
                   <a;
                     href={profileData.twitter_link}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     target="_blank"
 >>>>>>>                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
@@ -706,6 +729,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Linkedin className="h-6 w-6" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 )}
 =======
@@ -735,14 +759,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </a>
-=======
                   </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
             </div>
@@ -752,12 +772,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             <HireNowCTA
               talentProfile={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 hourly_rate: profileData?.hourly_rate || 0
                 hourly_rate: profileData?.hourly_rate || 0,
@@ -770,23 +794,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
-<<<<<<< HEAD
                 hourly_rate: profileData?.hourly_rate || 0
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
                 hourly_rate: profileData?.hourly_rate || 0,
-=======
                 hourly_rate: profileData?.hourly_rate || 0
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
             />
             {/* Placeholder for other sidebar elements */}
-<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -826,17 +844,18 @@ if (isLoading) {"
   {'
   id: profileData?.id |'', full name: profileData?.full name |'',  professional title: profileData?.professional title |'', hourly rate: profileData?.hourly rate |0
 }/> {
-<<<<<<< HEAD
   /* Placeholder for other sidebar elements */
 }</div> </div> </div> </>)
 }'"}
-=======
   /* Placeholder for other sidebar elements */ ;
 }</div> </div> </div> </>) ;
 }'"};
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>;
         </div>;
       </div>;
@@ -1074,8 +1093,11 @@ if ( {") {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -11,11 +12,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useMemo, useState } from 'react',;
 import DatePicker from 'react-datepicker',;
 import { useRouter } from 'next/router',;
 type PaymentType = 'hourly' | 'fixed',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -802,16 +804,12 @@ if (return, ) {
     a.download = `contract-${projectName.replace(/\s+/g, '-').toLowerCase()}.txt`
     a.click()
 
-<<<<<<< HEAD
     URL.revokeObjectURL(url)
   }
-=======
     setLoading(true),
     setError(null),
     setContract(''),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -860,10 +858,6 @@ export default function ContractBuilderPage(req, res) {
     setLoading(true);
     setError(null);
     setContract('');
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     try {
       const body = {;
         talentName;
@@ -948,7 +942,6 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
@@ -1086,21 +1079,12 @@ export default function ContractBuilderPage(req, res) {
           <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
         </div>
         <div className="md:col-span-2 flex items-center gap-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
-=======
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {loading ? 'Generating…' : 'Generate contract'}
           </button>
           {error && <span className="text-red-600 text-sm">{error}</span>}
-=======
-<<<<<<< HEAD
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1112,11 +1096,6 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       </form>
       {contract && (
@@ -1130,14 +1109,17 @@ export default function ContractBuilderPage(req, res) {
           </div>
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {contract}
           </article>
         </div>
       )}
     </div>
-<<<<<<< HEAD
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -1148,6 +1130,10 @@ export default function ContractBuilderPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {contract  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1167,6 +1153,7 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1178,10 +1165,14 @@ export default function ContractBuilderPage(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

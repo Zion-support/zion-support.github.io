@@ -18,9 +18,12 @@ import { Link } from "react-router-dom",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from "react";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -62,8 +65,6 @@ export function UpcomingInterviewsCard() {;
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -71,29 +72,30 @@ import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
 import { format, isPast, parseISO } from "date-fns",
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
 import { Calendar, Clock, Video } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-=======
 import { Calendar, Clock, Video } from "lucide-react",
 import { Avatar } from "@/components/ui/avatar",
 export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews(),
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
 
     const loadInterviews = async () => {
       setIsLoading(true),
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -113,6 +115,13 @@ export function UpcomingInterviewsCard() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        const interviews = await fetchInterviews();
+        const now = new Date();
+        const interviews = await fetchInterviews(),
+        const now = new Date(),
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview =>
@@ -162,6 +171,7 @@ function UpcomingInterviewsCard() {
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -171,17 +181,25 @@ function UpcomingInterviewsCard() {
   }, []);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+    loadInterviews()
+  }, []);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
 
     loadInterviews()
   }, []),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -202,11 +220,14 @@ function UpcomingInterviewsCard() {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -362,6 +383,7 @@ export function UpcomingInterviewsCard() {;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -429,16 +451,15 @@ export function UpcomingInterviewsCard() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         </CardContent>
       </Card>
     )
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (upcomingInterviews.length === 0) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -473,10 +494,13 @@ export function UpcomingInterviewsCard() {;
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
             const formattedTime = format(interviewDate, 'h: mm a')
@@ -486,8 +510,11 @@ export function UpcomingInterviewsCard() {;
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime();
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -499,12 +526,15 @@ export function UpcomingInterviewsCard() {;
               interviewDate.getTime() > now.getTime(),
             
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -553,6 +583,7 @@ export function UpcomingInterviewsCard() {;
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -830,9 +861,13 @@ return (<img src= {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/UpcomingInterviewsCard.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

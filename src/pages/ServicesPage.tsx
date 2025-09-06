@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -79,9 +77,12 @@ const ServicesPage: React.FC = () => {
 }
 export default ServicesPage
 }
+<<<<<<< HEAD
 >>>>>>> import React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -144,6 +145,7 @@ const ServicesPage: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default ServicesPage;
 ursor/fix-website-loading-errors-and-merge-6662
@@ -158,3 +160,7 @@ export default ServicesPage;
 
 export default ServicesPage;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default ServicesPage;
+export default ServicesPage;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

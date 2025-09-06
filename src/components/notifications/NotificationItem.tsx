@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -7,6 +8,9 @@ import React from 'react';
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Tooltip
   TooltipContent
@@ -26,13 +30,13 @@ import { Notification, NotificationType } from '@/context/notifications'
 }) => {;
       className={cn(;
                   onMarkAsRead(notification.id); import React from 'react'
-<<<<<<< HEAD
-=======
-=======
 import React from 'react',
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -65,11 +69,14 @@ export const getTypeIcon = (type: NotificationType,) => {
       return <span className="text-orange-500">📦</span>
     default:
       return <span className="text-gray-500">📣</span>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -139,11 +146,6 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-orange-500">📦</span>,
     default:
       return <span className="text-gray-500">📣</span>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from 'lucide-react';
@@ -181,11 +183,6 @@ export const getTypeIcon = (type: NotificationType) => {;
     default:;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return <span className="text-gray-500">📣</span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 <<<<<<< HEAD
 };
@@ -402,29 +399,33 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (notification.action_url) {
       router.push(notification.action_url), // Changed to router.push
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   },
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (<div
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
         !notification.read ? 'bg-zion-blue-dark/30' : ''),}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   return (;
     <div;
       className={cn(;
         'p-3 border-b border-zion-blue-light relative group',;
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -437,6 +438,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
       <div className="flex items-start gap-2">
         <div className="text-xl">{getTypeIcon(notification.type)}</div>
@@ -444,6 +447,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
           <div className="flex justify-between items-center mb-1">
             <h4 className="font-medium text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
               {notification.title || 'Notification'}
@@ -451,11 +455,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 
 =======
 <<<<<<< HEAD
-              {notification.title |'Notification'}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              {notification.title |'Notification'}
               {notification.title || 'Notification'}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </h4>
             {!notification.read && (
               <Badge className="bg-zion-cyan text-xs">New</Badge>
@@ -463,6 +471,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
           </div>
           <p className="text-sm text-zion-slate-light">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
             {notification.message || 'You have a new notification'}
@@ -470,11 +479,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 
 =======
 <<<<<<< HEAD
-            {notification.message |'You have a new notification'}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            {notification.message |'You have a new notification'}
             {notification.message || 'You have a new notification'}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </p>
           <div className="flex justify-between items-center mt-1">
             <p className="text-xs text-zion-slate">
@@ -488,6 +501,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -508,16 +522,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onClick = {handleClick,}
               >
-=======
                 onClick={handleClick}
               >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
               </Button>
@@ -536,19 +546,23 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 size="icon"
                 className="h-6 w-6"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onClick={(e,) => {
-<<<<<<< HEAD
                   e.stopPropagation()
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                onClick={(e) => {
 =======
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onClick={(e) => {
+                onClick={(e) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -561,6 +575,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                   e.stopPropagation(),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  e.stopPropagation(),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   onMarkAsRead(notification.id)
                 }}
                 aria-label="Mark as read"
@@ -581,19 +598,23 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 size="icon"
                 className="h-6 w-6"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onClick={(e,) => {
-<<<<<<< HEAD
                   e.stopPropagation()
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                onClick={(e) => {
 =======
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onClick={(e) => {
+                onClick={(e) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -606,6 +627,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                   e.stopPropagation(),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  e.stopPropagation(),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   onDismiss(notification.id)
                 }}
                 aria-label="Dismiss notification"
@@ -619,24 +643,24 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
           </Tooltip>
         </TooltipProvider>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 onClick={(e,) => {;
                   e && e.stopPropagation(),;
                   onDismiss(notification && notification.id);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
     </div>;
   );
 };
-=======
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
 
-=======
 },
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
@@ -871,8 +895,11 @@ if ( {) {
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

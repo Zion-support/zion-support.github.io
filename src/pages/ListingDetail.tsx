@@ -1,11 +1,13 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { ChatWidget } from '@/components/ChatWidget';
@@ -23,15 +25,21 @@ import { PaymentButton } from '@/components/transactions/PaymentButton';
 import { ProfileContact } from '@/components/profile/ProfileContact';
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Dialog
   DialogContent
   DialogHeader
   DialogTitle
 } from '@/components/ui/dialog';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Dialog,
   DialogContent,
   DialogHeader,;
@@ -49,6 +57,7 @@ export default function ListingDetail() {
   const { user } = useAuth();
   const { formatPrice } = useCurrency();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -56,6 +65,8 @@ export default function ListingDetail() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
@@ -78,8 +89,11 @@ export default function ListingDetail() {
   const { formatPrice } = useCurrency();
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { ChatWidget } from "@/components/ChatWidget",
@@ -110,13 +124,17 @@ export default function ListingDetail() {
   const { formatPrice } = useCurrency(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!listing) {
 =======
@@ -132,6 +150,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         <div className="container mx-auto">
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!listing) {
     return (
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -148,11 +168,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   ) : (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     );  }
   const handleContact = () => {
@@ -200,7 +223,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       alt={listing.title}
                       className='object-cover'
                       fallbackSrc='/placeholder.svg'                    />
-=======
       )
 import { useState } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -293,11 +315,6 @@ export default function ListingDetail() {;
                       className="object-cover"
                       fallbackSrc="/placeholder.svg"
                     />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ) : (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
@@ -305,6 +322,7 @@ export default function ListingDetail() {;
                     </div>
                   )}
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -329,29 +347,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                           'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {listing.images && listing.images.length > 1 && (
                   <div className='flex p-4 gap-2 overflow-x-auto'>
-=======
                 
                 {listing.images && listing.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {listing.images.map((image, index) => (
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
                           'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2'
-=======
                           'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           index === selectedImageIndex
                             ? 'border-zion-purple'
                             : 'border-transparent'                        )}                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
@@ -378,6 +392,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           fallbackSrc='/placeholder.svg'                        />                          className="object-cover"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -389,6 +404,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
@@ -398,6 +415,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           src={image}
                           alt={`${listing.title} - image ${index + 1}`}
                           className="object-cover"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -437,6 +455,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           fallbackSrc="/placeholder.svg"
                         />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -584,7 +604,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>
               {/* Description Section */}
-<<<<<<< HEAD
               <div className='mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light'>
                 <h2 className='text-2xl font-bold text-white mb-4'>
                   Description
@@ -592,16 +611,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className='text-zion-slate-light whitespace-pre-line'>
                   {listing.description}
                 </p>
-=======
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
                 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -620,7 +633,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <Shield className="h-5 w-5 text-zion-cyan" />
                       </div>
                       <div>
-<<<<<<< HEAD
                         <h4 className='font-medium text-white'>
                           Enterprise Security
                         </h4>
@@ -648,6 +660,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <Shield className="h-5 w-5 text-zion-cyan" />
                       </div>
                       <div>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -655,12 +668,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <h4 className="font-medium text-white">Enterprise Security</h4>
 >>>>>>>                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -678,6 +694,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className='flex flex-wrap gap-2'>;
                     {listing && listing.tags.map((tag, i) => (;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {/* Tags */}
                 <div className='mt-8'>
                   <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>
@@ -726,7 +744,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {listing.category}
                   </Badge>
                   {listing.featured && (
-=======
                 
                 {/* Tags */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -820,11 +837,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {listing.category}
                   </Badge>
                   {listing.featured && (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       Featured
@@ -833,15 +845,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <h1 className='text-2xl font-bold text-white mb-4'>
                   {listing.title}
                 </h1>
                   <div className='flex items-center gap-2 mb-6'>
                     <div className='flex items-center'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                       {[...Array(5)].map((_, i) => (
                         <Star
@@ -852,12 +868,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 
                 <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
                 
                 {listing.rating && (
                   <div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -871,10 +890,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
                           className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -888,10 +910,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                            'h-5 w-5'
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                            'h-5 w-5'
                             'h-5 w-5',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             i < Math.floor(listing.rating!)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                               ? 'text-zion-cyan fill-zion-cyan'
@@ -928,11 +950,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                       reviews)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             "h-5 w-5",
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
@@ -941,6 +966,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -971,12 +997,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </span>
                   </div>
                 )}
                 {/* Price */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='mb-6'>
                   {listing.price !== null ? (
                     <div className='text-3xl font-bold text-white'>
@@ -1201,45 +1232,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {formatPrice(listing.price)}
                     </div>
                   ) : (
-=======
                 <div className="mb-6">
                   {listing.price !== null ? (
                     <div className="text-3xl font-bold text-white">
                       {formatPrice(listing.price)}
                     </div>
                   ) : (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div className="text-2xl font-bold text-white">
                       Custom Pricing
                     </div>
                   )}
-<<<<<<< HEAD
                 </div>
                 {/* Action Buttons */}
                 <div className='space-y-3 mb-8'>
-=======
                 </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
                   {listing.price !== null ? (
                     <PaymentButton
-<<<<<<< HEAD
-=======
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                       buttonText='Buy Now'
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
                       amount = {listing.price,}
@@ -1272,8 +1285,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     Contact Publisher
                   </Button>
                 </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={() => {
@@ -1284,7 +1295,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="space-y-3 mb-8">;
                   {listing.price !== null ? (;
                     <PaymentButton;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
@@ -1301,7 +1311,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                           description: 'Redirecting to secure checkout...'
                         });
                       }}
-<<<<<<< HEAD
                     />
                   ) : (
                     <Button
@@ -1320,7 +1329,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     Contact Publisher
                   </Button>
                 </div>
-=======
                     />;
                   ) : (;
                     <Button;
@@ -1343,11 +1351,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </Button>
                 </div>
                 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
@@ -1357,7 +1360,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <ImageWithRetry
                           src={listing.author.avatarUrl}
                           alt={listing.author.name}
-<<<<<<< HEAD
                           className='object-cover'
                           onError={e => {
                             const target = e.target as HTMLImageElement;
@@ -1367,25 +1369,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                         />
                       </div>
                     ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                           className="object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         />
                       </div>
                     ) : (
-<<<<<<< HEAD
                       <div className='h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center'>
                         <span className='text-lg font-medium text-zion-purple'>
                           {listing.author.name.charAt(0)}
@@ -1428,23 +1420,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                     )}
                     <div>
-=======
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
                         <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>
                       </div>
                     )}
                     <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <p className="font-medium text-white">{listing.author.name}</p>
 >>>>>>>                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1461,6 +1456,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {/* Additional Info */}
 
 >>>>>>>                 <div className="border-t border-zion-blue-light mt-6 pt-6">
@@ -1481,10 +1479,13 @@ ursor/fix-website-loading-errors-and-merge-6662
       <ChatWidget
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         roomId = {listing.id,}
         recipientId = {listing.author.id,}
         isOpen = {isChatOpen,}
@@ -1502,7 +1503,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>
-=======
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -1571,11 +1571,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1585,10 +1580,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             profileName={listing.author.name}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             profileType='service'          />            profileType="service"
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
@@ -1596,6 +1594,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <ProfileContact
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             profileType="service"
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1608,6 +1607,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             profileType="service"
 >>>>>>>           />
         </DialogContent>
@@ -1615,10 +1616,13 @@ ursor/fix-website-loading-errors-and-merge-6662
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }/>) : (<Button </Button>) ";
 }<Button > <MessageSquare className=" h-4 w-4 mr-2"/> Contact Publisher </Button> </div> ;
@@ -1632,6 +1636,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }onClose= {() => setIsChatOpen (false) ";
 }/> <DialogHeader> <DialogTitle className=" text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </>) ;
 }'"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 
   )
@@ -1652,3 +1657,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

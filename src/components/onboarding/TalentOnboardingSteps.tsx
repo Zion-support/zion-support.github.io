@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
@@ -9,8 +6,6 @@ import { OnboardingTracker, OnboardingStep } from './OnboardingTracker'
 export function TalentOnboardingSteps() {
   const { user } = useAuth()
   const onboardingStatus = useOnboardingStatus()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 <<<<<<< HEAD
 =======
@@ -30,6 +25,7 @@ import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -75,6 +71,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       action: 'Update',
     },
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function TalentOnboardingSteps() {
 
@@ -113,17 +111,12 @@ export function TalentOnboardingSteps() {
 
   return <OnboardingTracker steps={steps} />
 }
-=======
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
 
 export function TalentOnboardingSteps() {
   const { user } = useAuth(),
   const onboardingStatus = useOnboardingStatus(),
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const steps: OnboardingStep[] = [
     {
       id: "profile",
@@ -155,9 +148,12 @@ export function TalentOnboardingSteps() {
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       link: '/talent-dashboard',
       action: 'View Matches',
     },
@@ -165,11 +161,14 @@ export function TalentOnboardingSteps() {
   return <OnboardingTracker steps={steps} />;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       link: "/talent-dashboard",
       action: "View Matches"}],
   
@@ -212,6 +211,7 @@ export function TalentOnboardingSteps() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -222,3 +222,5 @@ export function TalentOnboardingSteps() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

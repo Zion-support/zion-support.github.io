@@ -1,21 +1,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from 'react'
 import {Command, as, CommandPrimitive} from 'cmdk'
 import {Search} from 'lucide-react'
 import {cn} from '@/lib/utils'
 import {Dialog, DialogContent, DialogHeader, DialogTitle,} from '@/components/ui/dialog'
 <<<<<<< HEAD
+<<<<<<< HEAD
 onst Command = React.forwardRef<
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react"
 import { Command as CommandPrimitive } from "cmdk"
 import { Search } from 'lucide-react'
@@ -24,11 +30,14 @@ import { cn } from "@/lib/utils"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const Command = React.forwardRef<
 >>>>>>>   React.ElementRef<typeof CommandPrimitive>
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
@@ -57,20 +66,23 @@ const Command = React && React.forwardRef<;
   <CommandPrimitive
     ref={ref}
     className={cn(
-<<<<<<< HEAD
       'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground'
       className
     )}
     {...props}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   />
 ))
 Command.displayName = CommandPrimitive.displayName
 interface CommandDialogProps
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -79,21 +91,26 @@ const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {
-=======
       "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",
       className
     )}
     {...props}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   />;
 ));
 Command.displayName = CommandPrimitive.displayName;
 interface CommandDialogProps;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -112,10 +129,11 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 
 const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Dialog {...props}>
@@ -123,6 +141,7 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
         <DialogHeader>
           <DialogTitle className="sr-only">Command Menu</DialogTitle>
         </DialogHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -135,6 +154,8 @@ const CommandInput = React.forwardRef<
           {children}
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Command className='[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5'>
           {children}
         </Command>
@@ -142,13 +163,9 @@ const CommandInput = React.forwardRef<
     </Dialog>
   )
 }
-<<<<<<< HEAD
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>
   React.ComponentPropsWithoutRef<typeof Command</typeof>Primitive.Input>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
           {children}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -158,6 +175,7 @@ const CommandInput = React.forwardRef<
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const CommandInput = React.forwardRef<
@@ -175,16 +193,18 @@ onst CommandInput = React.forwardRef<
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >(({ className, ...props }, ref) => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
     <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
     <CommandPrimitive.Input
       ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -199,6 +219,8 @@ const CommandInput = React.forwardRef<
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className={cn(
         'flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50'
         className
@@ -214,11 +236,14 @@ const CommandList = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.List
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>     ref={ref}
     className={cn("max-h-[300px] overflow-y-auto overflow-x-hidden", className)}
     {...props}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className={cn(;
         "flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",;
         className;
@@ -233,16 +258,14 @@ const CommandList = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.List>;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.List;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ref={ref}
     className={cn("max-h-[300px] overflow-y-auto overflow-x-hidden", className)}
     {...props}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   />
 ))
 CommandList.displayName = CommandPrimitive.List.displayName
@@ -252,9 +275,12 @@ const CommandEmpty = React.forwardRef<
 >((props, ref) => (
   <CommandPrimitive.Empty
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>     ref={ref}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   />;
 ));
 CommandList.displayName = CommandPrimitive.List.displayName;
@@ -288,11 +314,6 @@ const CommandSeparator = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.Separator;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ref={ref}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     className={cn("-mx-1 h-px bg-border", className)}
@@ -331,6 +352,7 @@ const CommandItem = React.forwardRef<
  </typeof> React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Item
+<<<<<<< HEAD
 >>>>>>>     ref={ref}
 ursor/fix-website-loading-errors-and-merge-6662
       {...props}
@@ -406,6 +428,8 @@ const CommandItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Item
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   />;
 ));
 CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
@@ -415,11 +439,14 @@ const CommandItem = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.Item;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ref={ref}
     className="py-6 text-center text-sm";
     {...props}
@@ -503,7 +530,6 @@ export {
     {...props}
   />
 ))
-<<<<<<< HEAD
 CommandItem.displayName = CommandPrimitive.Item.displayName
 const CommandShortcut =</HTMLSpanElement> ({
   className
@@ -514,7 +540,10 @@ const CommandShortcut =</HTMLSpanElement> ({
 }
 CommandShortcut.displayName = 'CommandShortcut'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export {
   Command
   CommandDialog
@@ -527,6 +556,7 @@ export {
   CommandSeparator
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 CommandItem.displayName = CommandPrimitive.Item.displayName
 =======
@@ -534,6 +564,8 @@ CommandItem.displayName = CommandPrimitive.Item.displayName
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 CommandItem.displayName = CommandPrimitive.Item.displayName
 
@@ -555,11 +587,14 @@ CommandShortcut.displayName = "CommandShortcut"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export {
   Command,
 =======
@@ -575,14 +610,18 @@ ursor/fix-website-loading-errors-and-merge-6662
   CommandGroup,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   CommandItem,;
   CommandShortcut,;
   CommandSeparator;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -590,13 +629,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   CommandItem,
   CommandShortcut,
   CommandSeparator}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

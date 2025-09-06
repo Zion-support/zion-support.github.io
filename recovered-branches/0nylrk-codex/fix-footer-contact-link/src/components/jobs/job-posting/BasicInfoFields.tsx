@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/BasicInfoFields.tsx
 
 <<<<<<< HEAD
@@ -16,11 +17,23 @@ import {;
 
 =======
 
+=======
+import React, { useState } from "react";
+import { Control } from "react-hook-form";
+
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -37,10 +50,13 @@ FormField
   FormControl
   FormMessage
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/BasicInfoFields.tsx
 
@@ -65,6 +81,8 @@ import { Card, CardContent  } from '@/components / ui / card';
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
@@ -78,6 +96,7 @@ import { Input } from "@/components/ui/input",
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -100,6 +119,8 @@ interface BasicInfoFieldsProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface BasicInfoFieldsProps {
   control: Control<any>
 }
@@ -111,13 +132,28 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
   const handleSuggestionApplied = (min: number, max: number) => {
     (setMinBudget(min.toString()), setMaxBudget(max.toString()));
   }
+<<<<<<< HEAD
+=======
+
+export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
+  control,
+}) => {;
+  const [minBudget, setMinBudget] = useState<string>("");
+  const [maxBudget, setMaxBudget] = useState<string>("");
+export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
+  const [minBudget, setMinBudget] = useState<string>(""),
+  const [maxBudget, setMaxBudget] = useState<string>(""),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const handleSuggestionApplied = (min: number, max: number) => {
     setMinBudget(min.toString()),
     setMaxBudget(max.toString())
   },
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-4">
       <FormField
@@ -131,10 +167,13 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
             </FormControl>
             <FormMessage />
           </FormItem>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Control } from "react-hook-form",;
 import {;
@@ -179,6 +218,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
             </FormControl>
             <FormMessage />
           </FormItem>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -542,6 +582,8 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                   {...rest}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       />
       <FormField
@@ -556,9 +598,16 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             <FormMessage />
           </FormItem>
         )}
+<<<<<<< HEAD
 />
       <FormField
 
+=======
+      />
+      <FormField
+      />;
+      <FormField;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         control={control}
         name="category"
         render={({ field }) => (
@@ -594,9 +643,23 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                 <Input
                   type="number"
                   placeholder="e.g. 30"
+<<<<<<< HEAD
 value={minBudget |rest.value}
                   onChange={(e) => {
                     setMinBudget(e.target.value);
+=======
+                  value={minBudget |rest.value}
+                  onChange={(e) => {
+                    setMinBudget(e.target.value);
+                  value={minBudget || rest.value}
+                  onChange={e => {;
+                    setMinBudget(e.target.value),;
+                  value={minBudget || rest.value}
+                  onChange={(e) => {
+                    setMinBudget(e.target.value);
+                  onChange={e => {;
+                    setMinBudget(e.target.value),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onChange(e);
                   }}
                   {...rest}
@@ -616,8 +679,18 @@ value={minBudget |rest.value}
                 <Input
                   type="number"
                   placeholder="e.g. 60"
+<<<<<<< HEAD
 value={maxBudget |rest.value}
                   onChange={(e) => {
+=======
+                  value={maxBudget |rest.value}
+                  onChange={(e) => {
+                  value={maxBudget || rest.value}
+                  onChange={e => {;
+                  value={maxBudget || rest.value}
+                  onChange={(e) => {
+                  onChange={e => {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     setMaxBudget(e.target.value);
                     onChange(e);
                   }}
@@ -630,6 +703,7 @@ value={maxBudget |rest.value}
           )}
         />
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 />;
@@ -645,18 +719,26 @@ value={maxBudget |rest.value}
 
 =======
 <Card>
+=======
+      <Card>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <CardContent className="pt-4">
           <ClientBudgetRecommender
             jobTitle={control._formValues.title |""}
             category={control._formValues.category |""}
             experienceLevel={control._formValues.experienceLevel |""}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
             jobTitle={control._formValues.title || ""}
             category={control._formValues.category || ""}
             experienceLevel={control._formValues.experienceLevel || ""}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -667,6 +749,8 @@ value={maxBudget |rest.value}
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             onSuggestionApplied={handleSuggestionApplied}
           />
         </CardContent>
@@ -750,6 +834,7 @@ value={maxBudget |rest.value}
             <FormMessage />
           </FormItem>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -846,3 +931,15 @@ return (<div className="space-y-4" > <FormField control= {
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      />
+    </div>
+  );
+}
+
+);
+      />;
+    </div>;
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

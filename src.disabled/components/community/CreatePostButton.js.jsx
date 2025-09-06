@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,15 @@ const React from";react"";export: { function }";export: default function CreateP
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+:src.disabled/components/community/CreatePostButton.js.jsx
+import React from\';react\'';\"export\": { function }\';\"export\": default function CreatePostButton({ categoryId }) { return() <Button className=\'bg-zion-cyan \"hover\": bg-zion-cyan-light: text-zion-slate-dark\'>\' Create New Post\' </Button> )} \''\';\';
+const React from";react"";export: { function }";export: default function CreatePostButton({ categoryId }) { return() <Button className="bg-zion-cyan hover: bg-zion-cyan-light: text-zion-slate-dark">" Create New Post" </Button> )} """;";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from\';react\'';\"export\": { function }\';\"export\": default function CreatePostButton({ categoryId }) { return() <Button className=\'bg-zion-cyan \"hover\": bg-zion-cyan-light: text-zion-slate-dark\'>\' Create New Post\' </Button> )} \''\';\';
+const React from";react"";export: { function }";export: default function CreatePostButton({ categoryId }) { return() <Button className="bg-zion-cyan hover: bg-zion-cyan-light: text-zion-slate-dark">" Create New Post" </Button> )} """;";'"'"
+:temp_exclude/src.disabled/components/community/CreatePostButton.js.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return() <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
 =======
 =======

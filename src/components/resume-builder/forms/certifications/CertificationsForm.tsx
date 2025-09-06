@@ -1,21 +1,24 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { Button  } from '@/components/ui/button';
 import { Form  } from '@/components/ui/form';
 import { Certification  } from '@/types/resume';
-=======
-<<<<<<< HEAD
 import { useForm } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import { Form } from '@/components/ui/form'
 import { Certification } from '@/types/resume'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Loader2 } from 'lucide-react'
 import { useResume  } from '@/hooks/useResume';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
@@ -91,6 +94,7 @@ export function CertificationsForm({
       }
     } catch (err: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useState  } from 'react';
@@ -101,20 +105,28 @@ import { Certification  } from '@/types/resume';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setError(err.message |'An error occurred')
     }
   }
   const handleEdit = (cert: Certification) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setError(err.message || 'An error occurred');
     };
   };
   const handleEdit = (cert: Certification) => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setEditingId(cert.id!);    form.reset({
       ...cert
   }
@@ -132,6 +144,7 @@ import { Certification  } from '@/types/resume';
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -142,6 +155,9 @@ import { Certification  } from '@/types/resume';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { Button } from '@/components/ui/button',;
@@ -227,6 +243,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 >>>>>>>   return (
@@ -236,6 +253,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">
@@ -248,6 +267,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       {certifications.length > 0 && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       )}
@@ -256,23 +276,28 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <CertificationsList
           certifications={certifications}
           onEdit={handleEdit}
           onDelete={handleDelete}        />
-<<<<<<< HEAD
       )}
       <div className='bg-muted/40 p-6 rounded-lg'>
         <h3 className='text-md font-medium mb-4'>
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <CertificationsList 
           certifications={certifications} 
           onEdit={handleEdit} 
           onDelete={handleDelete} 
         />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -281,10 +306,13 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )}
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -298,11 +326,14 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {editingId ? 'Update Certification' : 'Add Certification'}
 >>>>>>>         </h3>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <CertificationFormFields form={form} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -319,22 +350,18 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 >>>>>>>               <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {error && (
               <Alert variant='destructive'>
                 <AlertDescription>{error}</AlertDescription>
               </Alert>
             )}
-<<<<<<< HEAD
             <div className='flex justify-between pt-2'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
             <div className="flex justify-between pt-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <Button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 type="button"
@@ -343,12 +370,16 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                   if (editingId) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
                     setEditingId(null)
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                    setEditingId(null)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     form.reset({
                       name: ''
                       issuing_organization: ''
@@ -358,6 +389,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       credential_url: ''
                     })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                     form.reset({
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -377,12 +409,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 >>>>>>>                       name: '',
 =======
 =======
-                    setEditingId(null),
 =======
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     setEditingId(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    setEditingId(null),
                     form.reset({
                       name: '',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -390,6 +420,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -438,16 +469,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                     onBack();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-                      credential_url: ''})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                      credential_url: ''})
                       credential_url: '',
                     })
-=======
                       credential_url: ''})
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   } else {
                     onBack()
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -459,12 +486,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
               </Button>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
                   {isLoading && (
@@ -474,11 +504,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Button>
                 <Button type='button' onClick={onComplete}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                   Next
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
@@ -488,11 +521,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                 <Button type="button" onClick={onComplete}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Next
 >>>>>>>                 </Button>
               </div>
@@ -504,14 +540,18 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }> {
   editingId ? 'Cancel' : 'Back'
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)
 }'"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 
 }
@@ -530,3 +570,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

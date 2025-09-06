@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PaymentSection.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { MapPin } from "lucide-react",
 import { PaymentButton } from "@/components/transactions/PaymentButton",
@@ -47,6 +48,18 @@ import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
 
+=======
+import {MapPin} from "lucide-react";
+import {PaymentButton} from "@/components/transactions/PaymentButton";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+import {toast} from "@/hooks/use-toast";
+import { MapPin } from "lucide-react",
+import { PaymentButton } from "@/components/transactions/PaymentButton",
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { toast } from "@/hooks/use-toast";
+import { CountryPricing } from "@/data/onsiteServicePricing",
+import { toast } from "@/hooks/use-toast",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PaymentSectionProps {
   selectedCountry: CountryPricing;
 }
@@ -55,18 +68,31 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 
   const handlePaymentInitiated = () => {
     toast({
+<<<<<<< HEAD
 title: "Processing your request"
+=======
+      title: "Processing your request"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       description:
         "You'll be redirected to our secure payment portal momentarily."
     });
   }
 
+<<<<<<< HEAD
       description:
         "You'll be redirected to our secure payment portal momentarily.",
     });
   };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      title: "Processing your request",
+      description: "You'll be redirected to our secure payment portal momentarily."});
+  };
+      description: "You'll be redirected to our secure payment portal momentarily."})
+  },
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -75,11 +101,14 @@ title: "Processing your request"
         {selectedCountry.country}
       </h4>
       <p className="text-2xl font-bold text-zion-cyan mb-6">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { MapPin } from "lucide-react",;
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
@@ -103,12 +132,15 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
         {selectedCountry.country}
       </h4>;
       <p className="text-2xl font-bold text-zion-cyan mb-6">;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton
@@ -191,6 +223,7 @@ export function PaymentSection({ selectedCountry } PaymentSectionProps) {;
       </p>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ========
@@ -215,6 +248,8 @@ export function PaymentSection({ selectedCountry } PaymentSectionProps) {;
       </p>;
     </div>;
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 =======
 
@@ -265,6 +300,7 @@ function PaymentSection() {
       </p>;
     </div>);
 }
+<<<<<<< HEAD
 =======
   ),;}
  interface PaymentSectionProps {
@@ -286,3 +322,8 @@ function PaymentSection() {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

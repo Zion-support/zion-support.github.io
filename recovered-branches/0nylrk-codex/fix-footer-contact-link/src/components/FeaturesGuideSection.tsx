@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FeaturesGuideSection.tsx
 
 <<<<<<< HEAD
@@ -14,11 +15,15 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Link} from "react-router-dom";
 import {GradientHeading} from "./GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Button} from "./ui/button";
 import {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -28,6 +33,8 @@ import {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Pl
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Link } from "react-router-dom",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -43,6 +50,7 @@ import {
   Plus,
   HelpCircle
 } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -64,22 +72,26 @@ export function FeaturesGuideSection() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function FeaturesGuideSection() {
   const features = [
     {
-<<<<<<< HEAD
       id: "ai-matcher"
       title: "AI Matcher"
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system."
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -105,10 +117,13 @@ export function FeaturesGuideSection() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       instructions: [;
         "Navigate to the AI Matcher page from the homepage or marketplace";
         "Fill in your project requirements and specifications";
         "Review the AI-recommended matches tailored to your needs";
+<<<<<<< HEAD
 <<<<<<< HEAD
         "Connect with matched talents or services directly";
       ],;
@@ -175,16 +190,16 @@ function FeaturesGuideSection() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace",
         "Fill in your project requirements and specifications",
         "Review the AI-recommended matches tailored to your needs",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         "Connect with matched talents or services directly"
       ]
       link: "/match"
       buttonText: "Try AI Matcher"
-<<<<<<< HEAD
     }
     {
       id: "talent-directory"
@@ -211,8 +226,11 @@ function FeaturesGuideSection() {
 
 =======
       icon: <Zap className="h-10 w-10 text-zion-cyan" />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     {
       id: "talent-directory",
@@ -234,11 +252,14 @@ function FeaturesGuideSection() {
       description: "Discover professional services for your AI and tech needs, from development to consulting.",
       icon: <Zap className="h-10 w-10 text-zion-cyan" />,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       instructions: [
         "Browse service categories on the marketplace",
         "Compare service offerings and pricing options",
@@ -252,6 +273,7 @@ function FeaturesGuideSection() {
       link: "/services"
       buttonText: "View Services"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -262,11 +284,15 @@ function FeaturesGuideSection() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: "equipment"
       title: "Equipment Catalog"
@@ -284,6 +310,7 @@ function FeaturesGuideSection() {
       ]
       link: "/equipment"
       buttonText: "Browse Equipment"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -323,6 +350,8 @@ function FeaturesGuideSection() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     {
       id: "analytics"
@@ -334,14 +363,18 @@ function FeaturesGuideSection() {
 
 =======
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     {
       id: "analytics",
       title: "Marketplace Analytics",
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -352,6 +385,8 @@ function FeaturesGuideSection() {
         "Export reports for your business planning";
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       instructions: [
         "Access analytics from your user dashboard",
         "View interactive charts on market trends and rates",
@@ -362,26 +397,33 @@ function FeaturesGuideSection() {
       link: "/analytics"
       buttonText: "View Analytics"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     {
       id: "ai-assistant"
       title: "Zion AI Assistant"
       description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.";
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     {
       id: "ai-assistant",
       title: "Zion AI Assistant",
       description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -392,6 +434,8 @@ function FeaturesGuideSection() {
         "Get recommendations based on your project needs";
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       instructions: [
         "Click on the chat icon in the bottom right corner",
         "Ask questions about available services or talents",
@@ -403,6 +447,7 @@ function FeaturesGuideSection() {
       buttonText: "Chat with Assistant"
       action: "openChat"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -413,17 +458,22 @@ function FeaturesGuideSection() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: "publishing"
       title: "List Your Services"
       description: "Showcase your AI and tech expertise by creating your own listings on the marketplace."
       icon: <Plus className="h-10 w-10 text-zion-cyan" />
       instructions: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -507,6 +557,8 @@ function FeaturesGuideSection() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "Create or log in to your account";
         "Navigate to 'Create Listing' in your dashboard"
         "Choose between talent profile, service, or equipment listing";
@@ -520,8 +572,11 @@ function FeaturesGuideSection() {
       title: "Help & Resources"
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "Create or log in to your account",
         "Navigate to 'Create Listing' in your dashboard",
         "Choose between talent profile, service, or equipment listing",
@@ -536,6 +591,7 @@ function FeaturesGuideSection() {
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -545,6 +601,8 @@ function FeaturesGuideSection() {
         "Join community forums to connect with other users";
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       instructions: [
         "Visit our comprehensive knowledge base",
         "Watch video tutorials on specific features",
@@ -667,6 +725,7 @@ function FeaturesGuideSection() {
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 {feature.title}
@@ -680,6 +739,8 @@ function FeaturesGuideSection() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Link } from "react-router-dom",;
 import { GradientHeading } from "./GradientHeading",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -1140,11 +1201,6 @@ export function FeaturesGuideSection() {;
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {feature.title}
               </TabsTrigger>
             ))}
@@ -1210,6 +1266,7 @@ export function FeaturesGuideSection() {;
       </div>
     </section>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1284,9 +1341,9 @@ export function FeaturesGuideSection() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+};
         </Tabs>;
         <div className="mt-12 text-center">;
           <Button;
@@ -1353,11 +1410,11 @@ HelpCircle const features = [ {
 =======
     </section>;
   );
+}
+}
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

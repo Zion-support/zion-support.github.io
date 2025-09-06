@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -115,6 +116,8 @@ function handler() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -127,12 +130,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const requestedScope = (Array.isArray(scopeParam) ? scopeParam[0] : scopeParam) |state.config.scope
   const scoped = filterEventsByScope(state.events, state.config.scope)
   const events = scoped.filter((e) => (e.timestamp |0) > since)
-=======
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -143,10 +143,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   });
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST" && req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
@@ -154,22 +150,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const since = Number(Array.isArray(sinceParam) ? sinceParam[0] : sinceParam) || 0,
   const scopeParam = (req.method === "GET" ? req.query.scope : (req.body?.scope as any)) as string | string[] | undefined,
   const requestedScope = (Array.isArray(scopeParam) ? scopeParam[0] : scopeParam) || state.config.scope,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const scoped = filterEventsByScope(state.events, state.config.scope),
   const events = scoped.filter((e) => (e.timestamp || 0) > since),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return res.status(200).json({
-<<<<<<< HEAD
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
     instanceId: state.config.instanceId,
@@ -181,10 +170,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+    instanceId: state.config.instanceId,
+    lastSyncedAt: state.lastSyncedAt,
+    events,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     scope: requestedScope});
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     scope: requestedScope})
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
@@ -210,11 +202,12 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -48,14 +49,14 @@ import Link from 'next/link';
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> origin/main
-=======
-=======
+origin/main
+origin/automation-improvements-final
+
 <<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
-
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
@@ -64,6 +65,13 @@ import Link from 'next/link';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React from 'react';
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+export default function Services() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from 'next / link';
@@ -1551,6 +1559,7 @@ const itServices: Service[] = [;
     link: 'https://ziontechgroup && ziontechgroup.com/it-services'}
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Services(): any (): React && React.JSX.Element {;
   const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (;
     <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>;
@@ -1561,11 +1570,11 @@ export default function Services(): any (): React && React.JSX.Element {;
 =======
 =======
 <<<<<<< HEAD
-export default function Services(): React.JSX.Element {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function Services(): React.JSX.Element {
 
 export default function Services(): React.JSX.Element {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
     <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
       <div style={{
@@ -3314,6 +3323,7 @@ export default function Services (): React.JSX.Element {
               <div style={{ fontSize: 24, fontWeight: 700, color: '#22c55e' }}>40+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>IT Solutions</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -3324,11 +3334,12 @@ export default function Services (): React.JSX.Element {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
 
 export default function Services() {
-=======
             </div>
           </div>
         </div>
@@ -3376,19 +3387,25 @@ export default function Services() {
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
 export default function Services() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -3400,7 +3417,10 @@ export default function Services() {
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, []);
 <<<<<<< HEAD
 
@@ -3733,7 +3753,6 @@ function Services() {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
     site: 'https://ziontechgroup.com',
   };
 
@@ -5025,21 +5044,14 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
                   </button>
                 </motion.div>
               ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+origin/automation-improvements-final
       <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
       <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
       <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
@@ -5078,27 +5090,16 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
         </div>
       </section>
     </main>
-<<<<<<< HEAD
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-242d
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
 
-=======
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics"
     icon: Brain
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/main
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -5113,7 +5114,6 @@ export default function Services() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Our Services
               </h1>
@@ -5181,22 +5181,12 @@ export default function Services() {
                   </button>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
       <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
       <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
@@ -5236,19 +5226,9 @@ export default function Services() {
         </div>
       </section>
     </main>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -5284,11 +5264,6 @@ export default function Services() {
                   </p>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
@@ -5296,7 +5271,6 @@ import Footer from '../components/Footer';
 export default function Services() {
   const serviceCategories = [
     {
-<<<<<<< HEAD
       title: 'Micro SaaS Products'
       description:
         'Innovative, focused software solutions for modern businesses'
@@ -5347,7 +5321,6 @@ export default function Services() {
         'Disaster Recovery Solutions'
       ]
       href: '/it-services'
-=======
       id: 'ai-automation',
       title: 'AI Automation Platform',
       description: 'Intelligent automation solutions that streamline business processes and reduce manual work.',
@@ -5380,7 +5353,6 @@ export default function Services() {
 }
     },
     {
-<<<<<<< HEAD
       id: 'it-services',
       name: 'IT & Cloud Services',
       description: 'Comprehensive IT solutions for enterprise-grade operations',
@@ -5395,7 +5367,6 @@ export default function Services() {
         'Disaster Recovery Solutions',
       ],
       href: '/it-services',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },  ];
   const getColorClasses = (color: string) => {
     const colors = {
@@ -5412,7 +5383,6 @@ export default function Services() {
         border: 'border-purple-500/40'
         ring: 'focus:ring-purple-500'
       },      green: {
-<<<<<<< HEAD
         bg: 'bg-green-600'
         hover: 'hover:bg-green-700'
         text: 'text-green-400'
@@ -5421,8 +5391,6 @@ export default function Services() {
       }
     }
     return colors[color as keyof typeof colors] |colors.blue;  }
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
-=======
         bg: 'bg-green-600',
         hover: 'hover:bg-green-700',
         text: 'text-green-400',
@@ -5432,10 +5400,6 @@ export default function Services() {
     };
     return colors[color as keyof typeof colors] || colors.blue;  };
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
       id: 'micro-saas',
       title: 'Micro SaaS Development',
       description: 'Focused software solutions that address specific business needs with minimal complexity.',
@@ -5505,16 +5469,12 @@ export default function Services() {
 }
   ];
   const categories = ['All', 'AI Services', 'IT Solutions', 'Micro SaaS', 'Security', 'Analytics', 'Blockchain'];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
         <meta name="description" content="Explore the advanced IT and AI services offered by Zion Tech Group." />
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
         <main className="text-center max-w-4xl px-4">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Our Advanced Services</h1>
@@ -5526,9 +5486,6 @@ export default function Services() {
               <h3 className="text-2xl font-semibold mb-3">AI & Machine Learning</h3>
               <p className="text-gray-400">
                 Harness the power of artificial intelligence for automation, data analysis, and intelligent decision-making.
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
@@ -5537,9 +5494,6 @@ export default function Services() {
               <h1
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
-<<<<<<< HEAD
-=======
-=======
       <div className="min-h-screen bg-slate-950 text-white">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -5551,19 +5505,14 @@ export default function Services() {
           <div className="relative container mx-auto px-4 py-20">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Our Services
               </h1>
               <p
                 className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 350+ Innovative Solutions for Modern Businesses
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="card">
               <h3 className="text-2xl font-semibold mb-3">Cloud Solutions</h3>
               <p className="text-gray-400">
@@ -5602,9 +5551,6 @@ export default function Services() {
       </div>
     </>
   );
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </section>
           {/* Service Categories */}
           <section className='py-16 px-4' role='main'>
@@ -5854,9 +5800,6 @@ export default function Services() {
             <p className="text-lg text-slate-300 mb-8">
               Contact our experts to discuss your project requirements and discover
               how our solutions can drive your business forward.
-<<<<<<< HEAD
-=======
-=======
           </div>
         </section>
         {/* Services Grid */  } catch (error) {
@@ -5947,8 +5890,6 @@ export default function Services() {
             <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
               Let's discuss your project and find the perfect solution for your business needs.
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact" className="btn-primary">
@@ -5963,43 +5904,32 @@ export default function Services() {
       </main>
       <Footer />
     </>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   );
-<<<<<<< HEAD
   )
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 }
-=======
             </div>
           </section>
         </main>
       </ErrorBoundary>
     </>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/fix-lint-push-and-merge-to-main-ae4e
   )
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
   )
 }
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

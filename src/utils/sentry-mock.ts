@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       constructor() {}
@@ -10,6 +11,8 @@
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
@@ -102,10 +105,13 @@ const mockSentry = {
   Integrations: {
     BrowserTracing: class BrowserTracing {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       constructor() {}
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
 const noop = () => {},;
@@ -159,11 +165,14 @@ const mockSentry = {;
   Integrations: {;
     BrowserTracing: class BrowserTracing {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       constructor() {}
 >>>>>>>     }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -177,6 +186,7 @@ const mockSentry = {;
       constructor() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }
@@ -184,14 +194,18 @@ const mockSentry = {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
-=======
     },
   },
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Transport
   makeBrowserOfflineTransport: noopReturn
   makeFetchTransport: noopReturn
@@ -380,14 +394,18 @@ export const SDK_VERSION = mockSentry.SDK_VERSION
 export const Severity = mockSentry.Severity
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     }},;
   // Transport;
@@ -499,6 +517,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+// Additional exports for compatibility;
+export { mockSentry as Sentry };
+// All exports are already defined above;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }},;
   // Transport;
   makeBrowserOfflineTransport: noopReturn,;
@@ -591,8 +614,11 @@ export const Severity = mockSentry.Severity;
 export { mockSentry as Sentry };
 // All exports are already defined above;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

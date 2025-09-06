@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Heart } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -16,7 +19,10 @@ interface TalentCardSaveButtonProps {
   onToggleSave?: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TalentCardSaveButton({
 
   profileId
@@ -42,11 +48,14 @@ export function TalentCardSaveButton({
       router.push(`/auth/login?returnTo=${returnTo}`)
       return
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",
@@ -64,6 +73,7 @@ interface TalentCardSaveButtonProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function TalentCardSaveButton({
 =======
 xport function TalentCardSaveButton({
@@ -72,6 +82,8 @@ xport function TalentCardSaveButton({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TalentCardSaveButton({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   profileId,
@@ -82,12 +94,15 @@ export function TalentCardSaveButton({
 }: TalentCardSaveButtonProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { toast } = useToast()
   const router = useRouter()
   // Using router.asPath for current path
@@ -104,11 +119,14 @@ export function TalentCardSaveButton({
       const returnTo = encodeURIComponent(router.asPath)
       router.push(`/auth/login?returnTo=${returnTo}`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { toast } = useToast(),
   const router = useRouter(),
   // Using router.asPath for current path
@@ -164,6 +182,7 @@ export function TalentCardSaveButton({;
       router.push(`/auth/login?returnTo=${returnTo}`),;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       return;
 
@@ -178,11 +197,15 @@ export function TalentCardSaveButton({;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      return;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     setLocalIsSaved(!localIsSaved)
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -194,6 +217,9 @@ export function TalentCardSaveButton({;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     toast({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
       description: localIsSaved
@@ -268,10 +294,13 @@ export function TalentCardSaveButton(): any ({;
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }variant: "default"
 })
 }
@@ -279,18 +308,19 @@ export function TalentCardSaveButton(): any ({;
 }"
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }variant: "default" 
 }) 
 };
 }/> </button>) ;
 }";
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     toast({
@@ -393,6 +423,7 @@ if ( {) {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -408,3 +439,5 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

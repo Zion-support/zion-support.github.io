@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -253,28 +254,17 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
+origin/automation-improvements-final
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
 import Layout from '../components/Layout';
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 import Layout from '../components/Layout';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Training() {
-<<<<<<< HEAD
   return (
     <Layout
       title="Training & Education - Zion Tech Group"
@@ -292,13 +282,11 @@ export default function Training() {
             <p className="text-gray-600">Training page is under construction.</p>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       </div>
     </Layout>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -309,6 +297,9 @@ export default function Training() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -902,6 +893,7 @@ rating: 4.8,
   const getCategoryColor = (category: string) => {
     const colors = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -909,12 +901,17 @@ rating: 4.8,
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'ai-consciousness': 'cyan',
       'quantum-computing': 'purple',
       'autonomous-ops': 'green',
       'enterprise-it': 'blue',
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
     },
     return colors[category as keyof typeof colors] || 'gray'
@@ -929,8 +926,11 @@ rating: 4.8,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   },
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 
     <Layout>
@@ -987,10 +987,13 @@ rating: 4.8,
             </motion.div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="text-center">
             <p className="text-gray-600">Training page is under construction.</p>
           </div>
@@ -1005,7 +1008,6 @@ rating: 4.8,
 
 export default Training;
 };export default Training;
-=======
         </section>
         {/* Category Filters */  } catch (error) {
     console.error("Error:", error);
@@ -1241,8 +1243,11 @@ export default Training;
   const getCategoryColor = (category: string) => {;
     const colors = {;
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     };
     return colors[category as keyof typeof colors] || 'gray';
   };
@@ -1294,6 +1299,7 @@ export default Training;
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 {/* Category Filters */}
         <section className="py-10">
           <div className="container mx-auto px-4">
@@ -1302,6 +1308,8 @@ export default Training;
                 <button
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         {/* Category Filters */}
         <section className='py-10'>
@@ -2135,6 +2143,7 @@ className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl bor
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       </div>
     </Layout>
@@ -2215,28 +2224,33 @@ export default function Training() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </Layout>
   ),
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
       </div>
     </Layout>
 <<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  );
 <<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  );
+}
 <<<<<<< HEAD
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-}
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 export default Training;
 };export default Training;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2244,6 +2258,9 @@ export default Training;
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
@@ -2288,6 +2305,7 @@ export default Training;
   {
   once: true 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2359,30 +2377,33 @@ export default Training,
 =======
 <<<<<<< HEAD
 =======
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
->>>>>>> origin/main
+origin/main
   )
 }
 export default Training;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 };export default Training;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 };export default Training;
 
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
   );
 };
+<<<<<<< HEAD
 export default Training;
 <<<<<<< HEAD
 import Layout from '../components / Layout';
@@ -2430,19 +2451,19 @@ export default Training;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 =======
+=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
+export default Training;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 }  )
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/fix-lint-push-and-merge-to-main-ae4e
 };
 
 export default Training;
 };export default Training;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 },
 export default Training,
             >;
@@ -2474,7 +2495,10 @@ export default Training,
   );
 };
 export default Training;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -7,23 +7,25 @@
 
 =======
 
-<<<<<<< HEAD
 import React from "react";
-<<<<<<< HEAD
 import {
   Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Download, FileText, Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -32,6 +34,8 @@ import {toast} from "@/hooks/use-toast";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import {
   Table,
@@ -40,6 +44,7 @@ import {
   TableHead,
   TableHeader,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -48,10 +53,13 @@ import {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -65,22 +73,27 @@ import { toast } from "@/hooks/use-toast",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
-=======
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function InvoiceHistory() {
   // Mock invoice data
 
   const invoices = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -99,6 +112,8 @@ export function InvoiceHistory() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: "INV-1234"
       date: "May 1, 2025";
       amount: "$1,999.00";
@@ -134,17 +149,17 @@ export function InvoiceHistory() {
       amount: "$1,999.00";
       status: "paid"
       period: "Dec 2024"}]
-=======
       id: "INV-1234",;
       date: "May 1, 2025";
       amount: "$1,999.00";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       id: "INV-1234",
       date: "May 1, 2025",
       amount: "$1,999.00",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       status: "paid",
       period: "May 2025"},
     {
@@ -180,6 +195,7 @@ export function InvoiceHistory() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -187,11 +203,14 @@ export function InvoiceHistory() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleDownloadInvoice = (invoiceId: string) => {
     // In a real app, this would trigger a download of the invoice PDF
     toast({
       title: "Downloading invoice"
       description: `Downloading invoice ${invoiceId} as PDF.`})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -376,11 +395,11 @@ export function InvoiceHistory() {;
 <<<<<<< HEAD
           <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getBadgeForStatus = (status: string) => {
     switch (status) {
       case "paid": return <Badge className="bg-green-500">Paid</Badge>,
@@ -391,11 +410,8 @@ export function InvoiceHistory() {;
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="space-y-6">
@@ -530,6 +546,7 @@ export function InvoiceHistory() {;
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -696,6 +713,9 @@ function InvoiceHistory() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import {;
   Table,;
@@ -955,11 +975,10 @@ period: "Jan 2025"
 =======
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

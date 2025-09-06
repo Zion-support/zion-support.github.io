@@ -18,6 +18,7 @@ import { PaymentSection } from "./PaymentSection",
 import { ServiceDetails } from "./ServiceDetails",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -25,6 +26,8 @@ import { ServiceDetails } from "./ServiceDetails",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   onsiteServicePricing
   CountryPricing
@@ -33,8 +36,19 @@ import { CountrySelector } from "./CountrySelector";
 
 import { PaymentSection } from "./PaymentSection";
 import { ServiceDetails } from "./ServiceDetails";
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
+import {CountrySelector} from "./CountrySelector";
+import {PaymentSection} from "./PaymentSection";
+import {ServiceDetails} from "./ServiceDetails";
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { CountrySelector } from "./CountrySelector",
+import { PaymentSection } from "./PaymentSection",
+import { ServiceDetails } from "./ServiceDetails",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void;
   selectedCountry?: CountryPricing | null
@@ -71,6 +85,7 @@ export function CountryServiceSelector({
           onCountryChange={onCountryChange |(() => {})}
           selectedCountry={initialCountry |null}
         />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -79,6 +94,9 @@ onCountryChange={onCountryChange |(() => {})}
         />
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { CountrySelector } from "./CountrySelector",;
 import { PaymentSection } from "./PaymentSection",;
@@ -97,6 +115,7 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
           selectedCountry={initialCountry || null} ;
         />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         
@@ -105,10 +124,13 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -236,3 +258,10 @@ selectedCountry?: CountryPricing | null
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

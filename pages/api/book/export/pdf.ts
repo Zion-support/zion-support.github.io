@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -14,16 +15,18 @@ headless: true,
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"');
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import puppeteer from 'puppeteer',;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const config = {
   api: {
     bodyParser: {
@@ -33,6 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(405).json({ error: 'Method not allowed' })
     return
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export const config = {;
   api: {;
@@ -41,6 +45,8 @@ export const config = {;
 export default async function handler(req, res) {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const { html, pageSize } = req.body as { html: string, pageSize?: 'A4' | 'LETTER' }
   if (!html) {
@@ -133,6 +139,7 @@ export default async function handler(req, res) {
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message |'Failed to render PDF' })
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -179,9 +186,10 @@ const page = await browser.new_page (),
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const config = {;
   api: {;
     bodyParser: {;
@@ -195,10 +203,13 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 <<<<<<< HEAD
@@ -229,23 +240,15 @@ export default async function handler(req, res) {
     await page.setContent(html, { waitUntil: 'networkidle0' }),
     const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true }),
     await browser.close(),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     res.setHeader('Content-Typeapplication/pdf'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"'),
     res.status(200).send(pdfBuffer)
   } catch (e: any) {
-<<<<<<< HEAD
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message || 'Failed to render PDF' })
   };
 };
-=======
 ;
   const browser = await puppeteer.launch({;
     headless: true;
@@ -273,12 +276,12 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

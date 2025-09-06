@@ -48,20 +48,14 @@ import { User, Mail, Calendar, Shield } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
-<<<<<<< HEAD
 interface PrivatePageProps {user: SupabaseUser;
-=======
 interface PrivatePageProps {;
   user: SupabaseUser;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -69,6 +63,8 @@ interface PrivatePageProps {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default /**
  * PrivatePage - Function description
@@ -286,24 +282,15 @@ if ( {) {
 =======
     <>
       <Head>
-<<<<<<< HEAD
         <title>Private Profile - Zion Tech Marketplace</title>;
         <meta name=&quot;description&quot; content=&quot;Private user profile page&quot; />
       </Head>
       <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
-=======
         <title>Private Profile - Zion Tech Marketplace</title>
         <meta name="description" content="Private user profile page" />
       </Head>
-<<<<<<< HEAD
       <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
-=======
       <div className="container max-w-4xl mx-auto py-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -356,23 +343,16 @@ if ( {) {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             <div className=&quot;p-4 bg-muted/50 rounded-lg&quot;>
               <h4 className=&quot;font-medium mb-2&quot;>Authentication Details</h4>
               <div className=&quot;grid gap-2 text-sm&quot;>
-<<<<<<< HEAD
                 <div>
                   <span className=&quot;font-medium&quot;>Last Sign In: </span>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
               <div className="grid gap-2 text-sm">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <div>
                   <span className="font-medium">Last Sign In: </span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {user.last_sign_in_at
                     ? new Date(user.last_sign_in_at).toLocaleString()
                     : 'Never'
@@ -394,15 +374,8 @@ if ( {) {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             <div className=&quot;flex gap-2&quot;>
-=======
             <div className="flex gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Button asChild>
                 <Link href="/dashboard">
                   Go to Dashboard
@@ -419,7 +392,6 @@ if ( {) {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {const supabase = createServerSideClient(context);
   const { data, error } = await supabase.auth.getUser();
@@ -442,14 +414,16 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
       user: data.user}}
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -482,6 +456,7 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 } ;
@@ -494,11 +469,13 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } ;
+} ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

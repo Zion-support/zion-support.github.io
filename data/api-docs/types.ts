@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,6 +9,8 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
@@ -37,6 +40,7 @@ export interface ErrorCode {
 ;
 
 export interface EndpointSpec {
+<<<<<<< HEAD
 =======
 
 =======
@@ -44,6 +48,8 @@ export interface EndpointSpec {
 export interface EndpointSpec {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface CodeSample {;
@@ -62,12 +68,15 @@ export interface ErrorCode {;
 
 export interface EndpointSpec {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   description: string;
@@ -99,6 +108,7 @@ export interface EndpointSpec {;
 =======
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export interface SectionSpec {
 =======
@@ -115,10 +125,16 @@ export interface SectionSpec {;
 export interface SectionSpec {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface SectionSpec {
+
+export interface SectionSpec {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ;
@@ -136,12 +152,16 @@ export interface ApiDocsSpec {;
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-export interface ApiDocsSpec {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface ApiDocsSpec {
 
 export interface ApiDocsSpec {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
@@ -176,6 +196,7 @@ export interface ErrorCode {
 export interface EndpointSpec {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   query?: Record<string, string>;
   params?: Record<string, string>;
@@ -198,16 +219,16 @@ export interface EndpointSpec {
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string, title: string
   description: string, path: string
   method: HttpMethod, visibility: Visibility
   auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>
-=======
   id: string, title: string,
   description: string, path: string,
   method: HttpMethod, visibility: Visibility,
   auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   query?: Record<string, string>;
   params?: Record<string, string>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -220,6 +241,7 @@ export interface EndpointSpec {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
 export type Visibility = 'public' | 'partner' | 'internal',;
@@ -281,6 +303,8 @@ export interface ApiDocsSpec {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
 <<<<<<< HEAD
@@ -293,6 +317,7 @@ export interface ApiDocsSpec {;
 }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -301,6 +326,8 @@ export interface ApiDocsSpec {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
 export type Visibility = 'public' | 'partner' | 'internal',;
 export interface CodeSample {;
@@ -353,6 +380,7 @@ export interface ApiDocsSpec {;
   sections: SectionSpec[];
   lastUpdatedIso: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -368,3 +396,5 @@ export interface ApiDocsSpec {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

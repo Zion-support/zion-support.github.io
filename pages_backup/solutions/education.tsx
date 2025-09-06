@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7,6 +8,8 @@
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
 import React from 'react';
@@ -19,7 +22,7 @@ const features = [;
     icon: GraduationCap,
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -40,8 +43,7 @@ const features = [
     title: 'Learning Management System',
     description: 'Comprehensive LMS with course management and student tracking',
     benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments']
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
 import React from 'react';
@@ -55,6 +57,7 @@ const features = [;
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -62,6 +65,15 @@ const features = [;
   },
   {}
 
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+  },
+  {}
+    icon: Users,
+    title: 'Student Information Systems,',
+    description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     icon: Users,
     title: 'Student Information Systems,',
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
@@ -131,20 +143,15 @@ const features = [;
     icon: Users,
     title: 'Student Information Systems',
     description: 'Complete student data management and academic tracking'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
   },
   {}
     icon: BookOpen,
-<<<<<<< HEAD
     title: 'Digital Content Management,',
     description: 'Platforms for creating, managing, and delivering educational content and resources.',
   },
   {}
     icon: Laptop,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     title: 'Digital Content Management',
     description: 'Interactive digital content creation and distribution'
   },
@@ -240,7 +247,7 @@ const benefits = [
   'Accessible learning for all students'
 ];
 export default function EducationSolutions() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
     title: 'Virtual Classrooms',
     description: 'Online learning platform with video conferencing and collaboration',
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
@@ -248,9 +255,7 @@ export default function EducationSolutions() {
 ];
 
 export default function EducationSolutionsPage() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/fix-syntax-push-and-merge-to-main-40de
     title: 'Virtual Classrooms,',
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },
@@ -384,10 +389,15 @@ export default function EducationSolutionsPage() {;
 =======
 export default function EducationSolutions() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -397,15 +407,22 @@ export default function EducationSolutions() {
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
+<<<<<<< HEAD
 
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="bg-gradient-to-r from-indigo-600 to-blue-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -438,16 +455,37 @@ export default function EducationSolutions() {
                 Comprehensive solutions designed to enhance learning experiences
                 and streamline educational operations.
               </p>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-indigo-600" />
                   </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -576,7 +614,7 @@ export default function EducationSolutions() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -589,9 +627,13 @@ export default function EducationSolutions() {
                   </div>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -721,12 +763,17 @@ export default function EducationSolutions() {
                 </button>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
           </div>
         </section>
@@ -751,7 +798,19 @@ export default function EducationSolutions() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+    </Layout>
+    </Layout>
+    </Layout>
+    </>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+    </>
+    </Layout>
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );

@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/ITServicePricingTable.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -69,6 +70,8 @@ function ITServicePricingTable() {
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useMemo } from "react";
 import {
   onsiteServicePricing
@@ -86,11 +89,30 @@ import {
 
 import { Globe, Search, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState("");
 
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
 
+=======
+import {useState, useMemo} from "react";
+import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
+import {Input} from "@/components/ui/input";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Globe, Search, ArrowUpDown} from "lucide-react";
+import {Button} from "@/components/ui/button";
+export function ITServicePricingTable() {;
+  const [searchQuery, setSearchQuery] = useState("");
+import { useState, useMemo } from "react",
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { Input } from "@/components/ui/input",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Globe, Search, ArrowUpDown } from "lucide-react",
+import { Button } from "@/components/ui/button",
+export function ITServicePricingTable() {
+  const [searchQuery, setSearchQuery] = useState(""),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing;
 direction: "ascending" | "descending"
@@ -102,6 +124,7 @@ direction: "ascending" | "descending"
   });
   const sortedData = useMemo(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     let filteredData = [...onsiteServicePricing],
@@ -109,6 +132,11 @@ direction: "ascending" | "descending"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+    let filteredData = [...onsiteServicePricing];
+    let filteredData = [...onsiteServicePricing],
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Filter by search query
 =======
 let filteredData = [...onsiteServicePricing];
@@ -221,7 +249,11 @@ export function ITServicePricingTable() {;
       if (a[sortConfig.key] > b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? 1 : -1;
       }
+<<<<<<< HEAD
 return 0;
+=======
+      return 0;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     });
     return filteredData;
   }, [onsiteServicePricing, searchQuery, sortConfig]);
@@ -234,7 +266,15 @@ return 0;
           : "ascending"
     });
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      return 0
+    }),
+    
+    return filteredData
+  }, [onsiteServicePricing, searchQuery, sortConfig]),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
@@ -385,6 +425,7 @@ export function ITServicePricingTable() {;
                   No countries match your search
                 </TableCell>
               </TableRow>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -392,6 +433,8 @@ export function ITServicePricingTable() {;
             onChange={(e) => setSearchQuery(e && e.target.value)}
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
@@ -528,6 +571,7 @@ export function ITServicePricingTable() {;
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
+<<<<<<< HEAD
 
 
 
@@ -647,6 +691,8 @@ sortConfig.key === key && sortConfig.direction === "ascending" ? "descending" : 
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </TableBody>
         </Table>

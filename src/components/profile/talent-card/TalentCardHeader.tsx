@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { BadgeCheck } from 'lucide-react'
 import { TalentCardAvatar } from "./TalentCardAvatar";
@@ -16,7 +19,10 @@ interface TalentCardHeaderProps {
 
 export function TalentCardHeader({
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   fullName
   professionalTitle
   profilePicture
@@ -24,10 +30,13 @@ export function TalentCardHeader({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",
@@ -45,16 +54,20 @@ interface TalentCardHeaderProps {
 export function TalentCardHeader({ 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   fullName,
   professionalTitle, 
   profilePicture, 
   availabilityType,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -68,11 +81,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   yearsExperience
 >>>>>>> }: TalentCardHeaderProps) {
   return (
     <div className="flex items-start gap-4 mb-4">
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -136,15 +152,15 @@ export function TalentCardHeader({;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>             {fullName}
 =======
+=======
+      <div className='flex-1'>
+        <div className='flex items-center justify-between'>
+          <h3 className='text-lg font-semibold text-white flex items-center gap-1'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {fullName}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* AI score could be used for verification badge */}
@@ -166,21 +182,16 @@ export function TalentCardHeader({;
 
 =======
           </h3>
-<<<<<<< HEAD
           <TalentCardAvailability availabilityType={availabilityType} />
         </div>
         <p className='text-zion-cyan text-sm'>{professionalTitle}</p>
       </div>
-<<<<<<< HEAD
     </div>
   )
-=======
     </div>;
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
           
           <TalentCardAvailability availabilityType={availabilityType} />
         </div>
@@ -231,6 +242,7 @@ export function TalentCardHeader({;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -243,3 +255,5 @@ export function TalentCardHeader({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

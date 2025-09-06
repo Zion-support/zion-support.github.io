@@ -1,15 +1,18 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildIdentityProfile } from "@/utils/offworld/identity";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -26,6 +29,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildIdentityProfile } from '@/utils/offworld/identity';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   try {
     const { address } = req.query as { address?: string };
     const profile = await buildIdentityProfile(address);
@@ -98,8 +103,13 @@ try {
   try {
 
     const { address } = req.query as { address?: string }
+<<<<<<< HEAD
     const { address } = req.query as { address?: string };
 
+=======
+  try {;
+    const { address } = req.query as { address?: string };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
   } catch (e: any) {

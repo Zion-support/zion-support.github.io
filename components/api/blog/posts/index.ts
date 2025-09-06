@@ -251,12 +251,9 @@ import { BlogPost  } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
 import { requireAdmin } from '@/utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
   if (req.method === 'GET') {
-=======
   if (req.method === 'GET') {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const { status, topic, tag, author, limit, offset } = req.query;
     let posts = readPosts();
     if (status && typeof status === 'string')
@@ -302,7 +299,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       tags: body.tags |[]
       topics: body.topics |[]
       seo: {
-<<<<<<< HEAD
         metaTitle: body.seo?.metaTitle |body.title!
         metaDescription: body.seo?.metaDescription |''
         ogImageUrl: body.seo?.ogImageUrl |body.coverImageUrl |''
@@ -318,7 +314,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 return res.status(405).end();
 }
-=======
         metaTitle: body.seo?.metaTitle || body.title!,
         metaDescription: body.seo?.metaDescription || '',
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
@@ -332,19 +327,17 @@ return res.status(405).end();
     return res.status(201).json(post);
   }
 
-<<<<<<< HEAD
   return res.status(405).end();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 return res.status(405).end();
 }
 
 }
 }
-=======
   return res.status(405).end();
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

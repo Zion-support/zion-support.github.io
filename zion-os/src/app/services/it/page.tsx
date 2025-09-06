@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,11 +21,11 @@ function ITServicesPage() {
     <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
 =======
 <<<<<<< HEAD
-export default function ITServicesPage() {return (;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function ITServicesPage() {return (;
 export default function ITServicesPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
@@ -133,13 +134,14 @@ export default function ITServicesPage() {;
               <div className="text-4xl mb-6">🚀</div>;
               <h2 className="text-3xl font-bold mb-4">DevOps & CI/CD</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
-<<<<<<< HEAD
                 Accelerate your software delivery with automated deployment pipelines;
-=======
                 Accelerate your software delivery with automated deployment pipelines,;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 infrastructure as code, and DevOps culture implementation that drives innovation.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -208,13 +210,14 @@ export default function ITServicesPage() {;
               <div className="text-4xl mb-6">🛡️</div>;
               <h2 className="text-3xl font-bold mb-4">Cybersecurity</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
-<<<<<<< HEAD
                 Protect your business with comprehensive cybersecurity solutions including security audits;
-=======
                 Protect your business with comprehensive cybersecurity solutions including security audits,;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 penetration testing, compliance frameworks, and incident response planning.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -369,13 +372,14 @@ export default function ITServicesPage() {;
               <div className="text-4xl mb-6">🔄</div>;
               <h2 className="text-3xl font-bold mb-4">Digital Transformation</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
-<<<<<<< HEAD
                 Guide your organization through end-to-end digital transformation with strategic consulting;
-=======
                 Guide your organization through end-to-end digital transformation with strategic consulting,;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 legacy system modernization, and change management expertise.;
               </p>;
               <div className="space - y-4 mb - 8">;

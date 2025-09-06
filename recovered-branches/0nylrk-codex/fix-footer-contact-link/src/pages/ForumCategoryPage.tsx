@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ForumCategoryPage.tsx
@@ -15,6 +16,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -37,6 +41,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     name: "Getting Hired"
     description: "Tips, strategies, and questions about getting hired on the platform.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -46,14 +51,19 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     adminOnly: false
 
     icon: "Briefcase"
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -80,6 +90,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     adminOnly: false,
@@ -104,6 +115,11 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    adminOnly: false,
+    icon: "Briefcase"
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "project-help": {
 
     id: "project-help"
@@ -113,12 +129,15 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
     icon: "MessageSquare"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   "ai-tools": {
 
@@ -129,8 +148,11 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
     icon: "Code"
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   "ai-tools": {
     id: "ai-tools",
@@ -140,12 +162,15 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     icon: "Code"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "feedback": {
 
     id: "feedback"
@@ -155,6 +180,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
     icon: "FileText"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -165,11 +191,15 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "announcements": {
 
     id: "announcements"
@@ -179,6 +209,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
     icon: "Megaphone"
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -275,16 +306,15 @@ const postsByCategory: Record < string, ForumPost[]> = {
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ForumCategoryPage.tsx
 =======
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Mock data for posts by category
 const postsByCategory: Record<string ForumPost[]> = {
   "getting-hired": [
     {
-<<<<<<< HEAD
 
       id: "2"
       title: "How to build an effective AI talent profile?"
@@ -332,8 +362,11 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-07T11:30:00Z"
       upvotes: 19
       downvotes: 2
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: "2",
       title: "How to build an effective AI talent profile?",
       content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
@@ -362,6 +395,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-07T11:30:00Z",
       upvotes: 19,
       downvotes: 2,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -397,12 +431,13 @@ const postsByCategory: Record<string ForumPost[]> = {
     }
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       replyCount: 6
     }
   ],
   "project-help": [
     {
-<<<<<<< HEAD
       id: "3"
       title: "Looking for feedback on my automated testing approach"
       content: "I've set up a CI/CD pipeline with the following testing strategy..."
@@ -429,7 +464,6 @@ const postsByCategory: Record<string ForumPost[]> = {
       upvotes: 24
       downvotes: 0
       replyCount: 7
-=======
       id: "3",
       title: "Looking for feedback on my automated testing approach",
       content: "I've set up a CI/CD pipeline with the following testing strategy...",
@@ -508,13 +542,11 @@ const postsByCategory: Record<string ForumPost[]> = {
       upvotes: 24,
       downvotes: 0,
       replyCount: 7,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       isAnswered: true
     }
   ],
   "ai-tools": [
     {
-<<<<<<< HEAD
       id: "1"
       title: "Best practices for AI model fine-tuning"
       content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me..."
@@ -544,7 +576,6 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-05T16:40:00Z"
       upvotes: 31
       downvotes: 0
-=======
       id: "1",
       title: "Best practices for AI model fine-tuning",
       content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
@@ -620,13 +651,11 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-05T16:40:00Z",
       upvotes: 31,
       downvotes: 0,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       replyCount: 9
     }
   ],
   "feedback": [
     {
-<<<<<<< HEAD
       id: "4"
       title: "Feature request: Team collaboration tools"
       content: "It would be really helpful if we could have built-in tools for team collaboration..."
@@ -652,7 +681,6 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-04T08:10:00Z"
       upvotes: 17
       downvotes: 3
-=======
       id: "4",
       title: "Feature request: Team collaboration tools",
       content: "It would be really helpful if we could have built-in tools for team collaboration...",
@@ -982,13 +1010,11 @@ export default function ForumCategoryPage() {;
       updatedAt: "2025-04-04T08:10:00Z",
       upvotes: 17,
       downvotes: 3,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       replyCount: 5
     }
   ],
   "announcements": [
     {
-<<<<<<< HEAD
       id: "9"
       title: "Platform Update: New AI Matching Algorithm"
       content: "We're excited to announce the launch of our new and improved AI matching algorithm..."
@@ -1022,7 +1048,6 @@ export default function ForumCategoryPage() {;
     }
   ]
 }
-=======
       id: "9",
       title: "Platform Update: New AI Matching Algorithm",
       content: "We're excited to announce the launch of our new and improved AI matching algorithm...",
@@ -1057,8 +1082,11 @@ export default function ForumCategoryPage() {;
   ]
 },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const iconMap = {
   "Briefcase": Briefcase,
   "MessageSquare": MessageSquare,
@@ -1067,12 +1095,15 @@ const iconMap = {
   "Megaphone": Megaphone
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (!categoryId || !categoriesInfo[categoryId]) {
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
@@ -1081,12 +1112,16 @@ export default function ForumCategoryPage() {
   const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState("");
   if (!categoryId |!categoriesInfo[categoryId]) {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1356,19 +1391,18 @@ export default function ForumCategoryPage() {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // definitions, so avoid passing a type argument to prevent TS2347.;
   const { categoryId } = useParams();
   const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState("");
-=======
   // definitions, so avoid passing a type argument to prevent TS2347.
   const { categoryId } = useParams(),
   const { user } = useAuth(),
   const [searchQuery, setSearchQuery] = useState(""),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   if (!categoryId || !categoriesInfo[categoryId]) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
       <AppLayout>
         <div className="container py-8">
@@ -1380,17 +1414,20 @@ export default function ForumCategoryPage() {;
       </AppLayout>
     )
   }
-<<<<<<< HEAD
   const category = categoriesInfo[categoryId];
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] |MessageSquare;
   const posts = postsByCategory[categoryId] |[];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const category = categoriesInfo[categoryId],
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,
   const posts = postsByCategory[categoryId] || [],
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1398,6 +1435,8 @@ export default function ForumCategoryPage() {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Filter posts based on search query
   const filteredPosts = searchQuery
     ? posts.filter(post =>
@@ -1406,23 +1445,30 @@ export default function ForumCategoryPage() {;
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     : posts;
   // For announcements, check if user is admin
   const canCreatePost = categoryId !== "announcements" |(user?.userType === 'admin' |user?.role === 'admin');
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     : posts,
   
   // For announcements, check if user is admin
   const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin'),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1430,6 +1476,8 @@ export default function ForumCategoryPage() {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <AppLayout>
       <SEO
@@ -1477,6 +1525,7 @@ export default function ForumCategoryPage() {;
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
+<<<<<<< HEAD
 
 =======
             <Input
@@ -1485,6 +1534,8 @@ export default function ForumCategoryPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -2320,11 +2371,6 @@ return (<AppLayout> <div className="container py-8"> <h1>Category not found</h1>
             <Input;
               placeholder="Search posts in this category...";
               className="pl-10";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -2349,16 +2395,17 @@ return (<AppLayout> <div className="container py-8"> <h1>Category not found</h1>
             )}
           </div>
         )}
-<<<<<<< HEAD
       </div>
     </AppLayout>
   )
 }
-=======
       </div>;
     </AppLayout>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

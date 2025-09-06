@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -19,13 +18,15 @@ const profileSchema = z.object({
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters")
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")})
 type ProfileFormValues = z.infer<typeof profileSchema>
-<<<<<<< HEAD
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues,) => void
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -51,6 +52,7 @@ type ProfileFormValues = z.infer<typeof profileSchema>,
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void,
 
@@ -68,6 +70,10 @@ interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+interface ProfileSetupProps {
+  onComplete: (data: ProfileFormValues) => void,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   userType: string
 >>>>>>> }
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
@@ -76,20 +82,26 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
     defaultValues: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       displayName: ""
       bio: ""
       headline: ""}})
   const getTypeLabel = () => {
     switch (userType) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case "serviceProvider": return "Service Provider"
       case "talent":
         return "Talent"
@@ -101,12 +113,15 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       displayName: "",
       bio: "",
       headline: ""}}),
@@ -114,11 +129,14 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const getTypeLabel = () => {
     switch (userType) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case "serviceProvider": return "Service Provider",
       case "talent":
         return "Talent",
@@ -130,6 +148,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -139,11 +158,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 >>>>>>>     <div className="space-y-6">
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   return (
     <div className="space-y-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -155,6 +172,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <Form {...form}>
@@ -163,12 +181,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 >>>>>>>         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -192,12 +207,15 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           />
           <FormField
@@ -205,10 +223,13 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
             name="headline"
             render={({ field }: { field: any },) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               <FormItem>
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -353,11 +374,6 @@ function ProfileSetup() {
             control={form.control}
             name="headline"
             render={({ field }: { field: any }) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
@@ -431,7 +447,6 @@ function ProfileSetup() {
                 <FormMessage className="text-red-400" />
               </FormItem>
             )}
-<<<<<<< HEAD
           />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <FormField
@@ -450,18 +465,16 @@ function ProfileSetup() {
               </FormItem>)}
 =======
             render={({ field }: { field: any },) => (
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />;
           <FormField;
             control={form.control}
             name="bio"
             render={({ field }: { field: any }) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
@@ -519,6 +532,7 @@ function ProfileSetup() {
             )}
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           />
@@ -527,6 +541,9 @@ function ProfileSetup() {
           
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -539,17 +556,18 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </form>
       </Form>
     </div>
   )
-<<<<<<< HEAD
-=======
                   />;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
@@ -562,12 +580,16 @@ ursor/fix-website-loading-errors-and-merge-6662
           >;
             Complete Profile;
           </Button>;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </form>;
       </Form>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -579,6 +601,8 @@ se "talent": return "Talent";"
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 case "talent": return "Talent";"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 case "client": return "Client"
@@ -607,9 +631,12 @@ getTypeLabel () "
 }/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)
 }/> <Button > Complete Profile </Button> </form> </Form> </div>)
 }"}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   />;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
@@ -646,10 +673,11 @@ default:;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -126,14 +126,13 @@ export default function QuantumCybersecurityPlatform() {
               'Post-quantum cryptography integrationQuantum key distribution optionsAdvanced anomaly and threat detectionSecurity analytics and incident workflowsCompliance and reportingFrom $4,999/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
-<<<<<<< HEAD
             ))}
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -145,6 +144,8 @@ export default function QuantumCybersecurityPlatform() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Contact Security Team</Button>
@@ -155,6 +156,7 @@ export default function QuantumCybersecurityPlatform() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
@@ -162,11 +164,15 @@ export default function QuantumCybersecurityPlatform() {
 };
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -175,3 +181,5 @@ export default function QuantumCybersecurityPlatform() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -17,6 +18,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
   {const contact = {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
 const contact = {
@@ -2883,8 +2886,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     reviews: 3
   }
 ];
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 ;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -2903,6 +2906,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
   mobile: '+1 302 464 0950',;
@@ -3616,6 +3621,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -3631,3 +3637,5 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

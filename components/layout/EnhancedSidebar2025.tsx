@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -43,18 +44,19 @@ const contactInfo = {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 ]
-=======
  ] 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ] 
-=======
  ] 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }];
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge
@@ -141,10 +143,13 @@ const sidebarItems: SidebarItem[] = [
     ]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   {
     name: 'AI & Consciousness'
@@ -768,6 +773,7 @@ const sidebar_items: SidebarItem[] = [;
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1077,6 +1083,8 @@ const supportLinks = [
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   };
   {
     name: 'AI & Consciousness',
@@ -1249,7 +1257,6 @@ const supportLinks = [
   }
 ];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const resources = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> }
   { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> }
@@ -1259,19 +1266,16 @@ const resources = [
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
 ];
 const supportLinks = [
-<<<<<<< HEAD
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' }
   { name: 'Documentation', href: '/docs', description: 'Technical guides' }
   { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' }
   { name: 'Status Page', href: '/status', description: 'Service status' }
   { name: 'Training', href: '/training', description: 'Learn our platforms' }
-=======
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
   { name: 'Documentation', href: '/docs', description: 'Technical guides' },
   { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' },
   { name: 'Status Page', href: '/status', description: 'Service status' },
   { name: 'Training', href: '/training', description: 'Learn our platforms' },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   { name: 'Community', href: '/community', description: 'Connect with users' }
 ];
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1428,15 +1432,16 @@ const supportLinks = [
                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
               )}
             </button>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
@@ -1581,6 +1586,7 @@ const supportLinks = [
                 </div>
               )}
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1837,12 +1843,9 @@ const supportLinks = [
             </div>
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -2004,14 +2007,7 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -2036,14 +2032,7 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Service Categories */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -2066,7 +2055,10 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                         </span>
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <ChevronRight
                         className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                           expandedCategory === item && item.name ? 'rotate-90' : ''
@@ -2200,21 +2192,13 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
 =======
                       />
                     </button>
-=======
                       <ChevronRight 
                         className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                           expandedCategory === item.name ? 'rotate-90' : ''
                         }`} 
                       />
                     </button>
-<<<<<<< HEAD
-=======
                     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <AnimatePresence>
                       {expandedCategory === item.name && (
                         <motion.div
@@ -2374,14 +2358,7 @@ import { motion, AnimatePresence               } from 'framer-motion.ts;
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -2452,11 +2429,10 @@ import { motion, AnimatePresence               } from 'framer-motion.ts;
       <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
     </motion.aside>
   )
-<<<<<<< HEAD
 }
-=======
 };
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React, { useState, useEffect              } from 'react.ts;
@@ -2485,6 +2461,8 @@ import { motion, AnimatePresence               } from 'framer-motion.ts;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect              } from 'react.ts;
 import Link from 'next/link.ts;
 import { motion, AnimatePresence               } from 'framer-motion.ts;
@@ -4538,9 +4516,11 @@ export default EnhancedSidebar2025, "), ,,
 }}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))));
 =======
 }}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))))
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

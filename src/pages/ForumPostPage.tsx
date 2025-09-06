@@ -1,12 +1,15 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react"
 import Link from "next/link"
 import { useRouter } from "next/router"
@@ -24,11 +27,14 @@ import ReplyCard from "@/components/community/ReplyCard"
 import ReplyForm from "@/components/community/ReplyForm"
 import {useToast} from "@/hooks/use-toast"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -44,6 +50,7 @@ import { formatDistanceToNow, format } from "date-fns",
 import { ForumPost, ForumReply } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -66,35 +73,27 @@ const mockPost: ForumPost = {
 >>>>>>>   authorId: "user1",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
-=======
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
-<<<<<<< HEAD
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
-=======
-<<<<<<< HEAD
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?"
-=======
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   authorId: "user1",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   authorName: "Alex Johnson",
   authorAvatar: "https://i.pravatar.cc/150?img=3",
   authorRole: "Verified Talent",
   categoryId: "ai-tools",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -124,14 +123,11 @@ const mockReplies: ForumReply[] = [
 },
 >>>>>>> 
 =======
-  tags: ["machine-learning", "fine-tuning", "gpt"],
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  tags: ["machine-learning", "fine-tuning", "gpt"],
   tags: ["machine-learning", "fine-tuning", "gpt"]
-=======
   tags: ["machine-learning", "fine-tuning", "gpt"],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   createdAt: "2025-04-01T12:00:00Z",
   updatedAt: "2025-04-01T12:00:00Z",
   upvotes: 48,
@@ -139,17 +135,14 @@ const mockReplies: ForumReply[] = [
   replyCount: 4,
   isAnswered: true,
   isFeatured: true
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const mockPost: ForumPost = {
   id: "1"
   title: "Best practices for AI model fine-tuning"
@@ -169,11 +162,14 @@ const mockPost: ForumPost = {
   isFeatured: true
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> // Mock data for replies
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock data for replies
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const mockReplies: ForumReply[] = [
@@ -227,12 +223,15 @@ const mockReplies: ForumReply[] = [
   }
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
   }
 >>>>>>>   {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "reply1",
     postId: "1",
     content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
@@ -243,15 +242,9 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-01T14:30:00Z",
     upvotes: 12,
     downvotes: 0
-<<<<<<< HEAD
   },
-=======
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     id: "reply2",
@@ -266,28 +259,35 @@ const mockReplies: ForumReply[] = [
     downvotes: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   {
     id: "reply3",
     postId: "1",
     content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs."
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   {
     id: "reply3",
     postId: "1",
     content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -299,6 +299,8 @@ const mockReplies: ForumReply[] = [
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     authorId: "user4",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     authorName: "Emma Davis",
@@ -310,6 +312,7 @@ const mockReplies: ForumReply[] = [
     isAnswer: true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   {
 =======
@@ -318,14 +321,11 @@ const mockReplies: ForumReply[] = [
 >>>>>>>   {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  },
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  },
   }
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     id: "reply4",
@@ -340,24 +340,27 @@ const mockReplies: ForumReply[] = [
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
-],
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 <<<<<<< HEAD
-]
+
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ],
 
+]
+],
+
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -370,6 +373,8 @@ xport default function ForumPostPage() {
   // Cast the result instead to provide the expected shape.
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const router = useRouter()
   const postId = router.query.postId as string
   const { user } = useAuth()
@@ -380,7 +385,10 @@ xport default function ForumPostPage() {
   const isAuthor = user?.id === post?.authorId
   // Check if user is admin/mod
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const isAdminOrMod = user?.userType === 'admin' |user?.role === 'admin'
       return
     }
@@ -397,6 +405,7 @@ xport default function ForumPostPage() {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -405,6 +414,10 @@ xport default function ForumPostPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
+      return;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const router = useRouter(),
   const postId = router.query.postId as string,
   const { user } = useAuth(),
@@ -608,7 +621,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
       return
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setPost({ ...post, upvotes: post.upvotes + 1 }),
@@ -706,17 +718,11 @@ ursor/fix-website-loading-errors-and-merge-6662
   },
 
   const handlePinPost = () => {
-<<<<<<< HEAD
     if (!isAdminOrMod) return,
     
-=======
-<<<<<<< HEAD
     if (!isAdminOrMod) return;
-=======
     if (!isAdminOrMod) return,
     
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setPost({ ...post, isPinned: !post.isPinned }),
     
     toast({
@@ -725,17 +731,11 @@ ursor/fix-website-loading-errors-and-merge-6662
   },
 
   const handleLockPost = () => {
-<<<<<<< HEAD
     if (!isAdminOrMod) return,
     
-=======
-<<<<<<< HEAD
     if (!isAdminOrMod) return;
-=======
     if (!isAdminOrMod) return,
     
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setPost({ ...post, isLocked: !post.isLocked }),
     
     toast({
@@ -744,12 +744,10 @@ ursor/fix-website-loading-errors-and-merge-6662
   },
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-<<<<<<< HEAD
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),;
 };
   );
 };
-=======
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
   
   return (
@@ -1275,8 +1273,11 @@ if (return) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

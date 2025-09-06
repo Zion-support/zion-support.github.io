@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/milestones/useUpdateMilestone.ts
@@ -24,16 +25,15 @@ import {useRecordActivity} from './useRecordActivity';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
-<<<<<<< HEAD
 export const useUpdateMilestone = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -42,12 +42,16 @@ export const useUpdateMilestone = () => {
     if (!user) return false;
     try {
       setIsSubmitting(true);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -56,6 +60,8 @@ export const useUpdateMilestone = () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -67,6 +73,7 @@ export const useUpdateMilestone = () => {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -74,6 +81,8 @@ export const useUpdateMilestone = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
@@ -86,6 +95,7 @@ export const useUpdateMilestone = () => {
 
 =======
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -93,11 +103,14 @@ export const useUpdateMilestone = () => {
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Get the current status
       const { data: milestoneData, error: fetchError } = await supabase
         .from('project_milestones')
         .select('status')
         .eq('id', milestoneId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -120,11 +133,12 @@ export const useUpdateMilestone = () => {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/milestones/useUpdateMilestone.ts
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .single();
       if (fetchError) throw fetchError;
       if (!milestoneData) throw new Error("Milestone not found");
       const previousStatus = milestoneData.status;
-=======
         .single(),
       
       if (fetchError) throw fetchError,
@@ -132,12 +146,16 @@ export const useUpdateMilestone = () => {
       
       const previousStatus = milestoneData.status,
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Update the milestone status
       const { error } = await supabase
         .from('project_milestones')
         .update({ status: newStatus })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/milestones/useUpdateMilestone.ts
 
@@ -157,6 +175,8 @@ export const useUpdateMilestone = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq('id', milestoneId);
       if (error) throw error;
       // Create activity record
@@ -238,7 +258,6 @@ if (throw error) {
     } catch (err: any) {
       console.error("Error updating milestone status:", err);
       toast.error("Failed to update status: " + err.message)
-=======
         .eq('id', milestoneId),
       
       if (error) throw error,
@@ -252,22 +271,24 @@ if (throw error) {
     } catch (err: any) {
       console.error("Error updating milestone status:", err),
       toast.error("Failed to update status: " + err.message),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return false
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
   }
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
     if (!user) return false;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
     if (!user) return false,
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -275,6 +296,8 @@ if (throw error) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       setIsSubmitting(true)
       const { error } = await supabase
@@ -282,8 +305,11 @@ if (throw error) {
         .update(data)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq('id', milestoneId);
       if (error) throw error;
       // Create activity record
@@ -305,7 +331,6 @@ if (throw error) {
   }
 }
 
-=======
         .eq('id', milestoneId),
       
       if (error) throw error,
@@ -322,9 +347,6 @@ if (throw error) {
       return false
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
   };
   
@@ -332,9 +354,12 @@ if (throw error) {
     updateMilestoneStatus;
     updateMilestone;
     isSubmitting
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -401,6 +426,7 @@ export const useUpdateMilestone = () => {;
     updateMilestoneStatus,;
     updateMilestone;
     isSubmitting;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -606,3 +632,7 @@ isSubmitting
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

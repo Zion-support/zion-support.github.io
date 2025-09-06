@@ -16,15 +16,10 @@ import { useNavigate } from 'react-router-dom',
 
 =======
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate  } from 'react-router-dom';
-=======
 
-=======
 
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import {useNavigate} from 'react-router-dom';
 import {toast} from "sonner";
@@ -38,23 +33,27 @@ import {DateFields} from './DateFields';
 import {DescriptionFields} from './DescriptionFields';
 import {useJobs} from "@/hooks/useJobs";
 import {JobSchemaType} from './validation';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect, useCallback } from 'react',
 import { useNavigate } from 'react-router-dom',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "sonner",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Form } from "@/components/ui/form";
 import { useJobForm  } from './useJobForm';
 import { BasicInfoFields  } from './BasicInfoFields';
@@ -62,8 +61,11 @@ import { DateFields  } from './DateFields';
 import { DescriptionFields  } from './DescriptionFields';
 import { useJobs } from "@/hooks/useJobs";
 import { JobSchemaType } from './validation';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Form } from "@/components/ui/form",
 import { useJobForm } from './useJobForm',
 import { BasicInfoFields } from './BasicInfoFields',
@@ -71,6 +73,7 @@ import { DateFields } from './DateFields',
 import { DescriptionFields } from './DescriptionFields',
 import { useJobs } from "@/hooks/useJobs",
 import { JobSchemaType } from './validation',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -109,20 +112,20 @@ export function JobPostingForm(): any ({ jobId, onSuccess }: JobPostingFormProps
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface JobPostingFormProps {
   jobId?: string,
   onSuccess?: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
   const [editorContent, setEditorContent] = useState("");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
 
@@ -171,22 +174,24 @@ function JobPostingForm() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
-<<<<<<< HEAD
 
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
   const [editorContent, setEditorContent] = useState("");
-=======
   const navigate = useNavigate(),
   const { createJob, updateJob, getJobById } = useJobs(),
   const [isFormLoading, setIsFormLoading] = useState(false),
   const [editorContent, setEditorContent] = useState(""),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const {
     form,
     isLoading,
@@ -199,6 +204,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     submitJob
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -208,17 +214,25 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
   const { isSubmitting } = formState;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  } = useJobForm({ jobId, onSuccess });
+  const { handleSubmit, setValue, formState } = form;
+  const { isSubmitting } = formState;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } = useJobForm({ jobId, onSuccess }),
 
   const { handleSubmit, setValue, formState } = form,
   const { isSubmitting } = formState,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     if (jobId) {
       setIsFormLoading(true),
@@ -245,11 +259,14 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
                 } catch (e) {
                   // Skip fields that don't exist in our form
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useCallback } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { toast } from "sonner",;
@@ -451,11 +468,6 @@ if ( {) {
 
 =======
                   // Skip fields that don't exist in our form;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }
               }
             })
@@ -472,46 +484,52 @@ if ( {) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-  const handleEditorChange = useCallback((value: string) => {
-    setEditorContent(value)
-    setValue('description', value)
-
-=======
-
-  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),
-
-
-  const handleEditorChange = useCallback((value: string) => {
-    setEditorContent(value)
-    setValue('description', value)
-
-=======
-  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
-=======
-  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const handleEditorChange = useCallback((value: string) => {
-    setEditorContent(value)
-    setValue('description', value)
 <<<<<<< HEAD
+
+  const handleEditorChange = useCallback((value: string) => {
+    setEditorContent(value)
+    setValue('description', value)
+
+=======
+
+  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),
+
+
+  const handleEditorChange = useCallback((value: string) => {
+    setEditorContent(value)
+    setValue('description', value)
+
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
+  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),
+
+  const handleEditorChange = useCallback((value: string) => {
+    setEditorContent(value)
+    setValue('description', value)
   }, [setValue]);
   const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading(true);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [setValue]),
 
   const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading(true),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const jobData = await submitJob(values)
       if (jobId) {
@@ -519,16 +537,22 @@ if ( {) {
         toast.success("Job updated successfully!")
       } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         await createJob(jobData);
         toast.success("Job posted successfully!");
         form.reset();
         setEditorContent("")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         await createJob(jobData),
         toast.success("Job posted successfully!"),
         form.reset(),
@@ -612,17 +636,11 @@ if ( {) {
         toast.success("Job posted successfully!"),;
         form.reset(),;
         setEditorContent("");
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       if (onSuccess) {
         onSuccess()
       }
     } catch (error: any) {
-<<<<<<< HEAD
       console.error("Error creating/updating job:", error);
       toast.error(error.message |"Failed to post job")
     } finally {
@@ -631,17 +649,21 @@ if ( {) {
     }
   }
   if (isLoading |isFormLoading) {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       console.error("Error creating/updating job:", error),
       toast.error(error.message || "Failed to post job")
     } finally {
       setIsFormLoading(false)
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -656,6 +678,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     return <div className="flex items-center justify-center p-8">Loading...</div>
   }
@@ -671,6 +695,7 @@ if ( {) {
         </div>
         <BasicInfoFields control={form.control} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -681,13 +706,17 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <DateFields
           startDate={startDate}
-=======
         <DateFields 
           startDate={startDate} 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
@@ -704,6 +733,7 @@ if ( {) {
               id="isRemote"
               checked={isRemote}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               className="mr-2"
@@ -716,6 +746,8 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="mr-2"
     } catch (error: any) {;
       console.error("Error creating/updating job:", error);
@@ -867,18 +899,12 @@ if ( {) {
               type="checkbox";
               id="isRemote";
               checked={isRemote}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="mr-2"
               onChange={(e) => setIsRemote(e.target.checked)}
             />
             Remote
           </Label>
         </div>
-<<<<<<< HEAD
         <DescriptionFields
           control={form.control}
           handleEditorChange={handleEditorChange}
@@ -886,8 +912,11 @@ if ( {) {
         />
         <Button type="submit" disabled={isSubmitting |isFormLoading}>
           {isSubmitting |isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <DescriptionFields 
           control={form.control} 
           handleEditorChange={handleEditorChange}
@@ -896,16 +925,20 @@ if ( {) {
         <Button type="submit" disabled={isSubmitting || isFormLoading}>
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>
       </form>
     </Form>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1104,16 +1137,15 @@ if (isLoading || isFormLoading) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
 }
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,6 +38,8 @@ export default function CareersPage() {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const metadata = {title: 'Careers - Zion Tech Group';
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.';
   keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'}
@@ -121,7 +124,6 @@ export default function CareersPage() {const openPositions = [;
       icon: '💰'}
     {title: 'Health & Wellness';
       description: 'Comprehensive health coverage and wellness programs.';
-=======
 export const metadata = {;
   title: 'Careers - Zion Tech Group',;
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',;
@@ -186,6 +188,7 @@ export default function CareersPage() {;
       title: 'Health & Wellness',;
       description: 'Comprehensive health coverage and wellness programs.',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -193,6 +196,8 @@ export default function CareersPage() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: '🏥'}];
   return (
     <div className="space - y-16">;

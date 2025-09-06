@@ -152,7 +152,15 @@ return (<Dialog open= {;
   quote.budget min ';
 }` : 'Not specified') ;
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) ;
+<<<<<<< HEAD
 
 };
 '"
 
+=======
+:temp_broken_files/quotes/QuoteDetails.tsx
+};"'"
+};
+'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/QuoteDetails.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

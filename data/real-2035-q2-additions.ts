@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     implementationDetails:
@@ -20,6 +21,8 @@ import { EnhancedRealMicroSaasService } from './enhanced - real - micro - saas -
   website: 'https://ziontechgroup.com',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
   mobile: '+1 302 464 0950'
@@ -55,7 +58,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     description:
       'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.'
     features: [
-<<<<<<< HEAD
       'Intent classification + prioritization'
       'On-brand response drafting'
       'Automatic polite follow-ups'
@@ -83,8 +85,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     variant: 'network-futuristic'
     contactInfo: contact
     realImplementation: true
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Intent classification + prioritization',
       'On-brand response drafting',
       'Automatic polite follow-ups',
@@ -154,7 +159,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     variant: 'network-futuristic',
     contactInfo: contact,
     realImplementation: true,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     implementationDetails:
       'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
     launchDate: '2025-08-20'
@@ -1387,7 +1391,76 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
       'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+      'Repo scanner'
+      'Flag inventory'
+      'Risk detection'
+      'PR suggestions'
+      'CI integration'
+    ]
+    popular: false
+    icon: '🚩'
+    color: 'from-rose-600 to-pink-700'
+    textColor: 'text-rose-300'
+    link: 'https://ziontechgroup.com/services/feature-flag-auditor'
+    marketPosition: 'Proactive hygiene vs manual debt'
+    targetAudience: 'Platform + app teams'
+    trialDays: 7
+    setupTime: '30 minutes'
+    category: 'Developer Tools'
+    realService: true
+    technology: ['Git APIs', 'Static analysis']
+    integrations: ['GitHub', 'GitLab', 'Flagsmith']
+    useCases: ['Cleanup debt', 'Reduce risk']
+    roi: 'Avoid outages; reduce toil'
+    competitors: ['LaunchDarkly add-ons']
+    marketSize: '$1B flags'
+    growthRate: '10% CAGR'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Scanner + PR bot'
+    launchDate: '2025-08-20'
+    customers: 8
+    rating: 4.4
+    reviews: 3
+  }
+      'Repo scanner',
+      'Flag inventory',
+      'Risk detection',
+      'PR suggestions',
+      'CI integration',
+    ],
+    popular: false,
+    icon: '🚩',
+    color: 'from-rose-600 to-pink-700',
+    textColor: 'text-rose-300',
+    link: 'https://ziontechgroup.com/services/feature-flag-auditor',
+    marketPosition: 'Proactive hygiene vs manual debt',
+    targetAudience: 'Platform + app teams',
+    trialDays: 7,
+    setupTime: '30 minutes',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Git APIs', 'Static analysis'],
+    integrations: ['GitHub', 'GitLab', 'Flagsmith'],
+    useCases: ['Cleanup debt', 'Reduce risk'],;
+    roi: 'Avoid outages; reduce toil',
+    competitors: ['LaunchDarkly add-ons'],
+    marketSize: '$1B flags',
+    growthRate: '10% CAGR',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Scanner + PR bot',
+    launchDate: '2025-08-20',
+    customers: 8,
+    rating: 4.4,
+    reviews: 3,
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: 'postgres-index-advisor-pro'
     name: 'Postgres Index Advisor Pro'
@@ -1515,6 +1588,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     reviews: 5
   }
   {
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1746,6 +1820,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     id: 'api - breaking - change - watcher',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher'
     tagline: 'Schema diffs with CI gates and notifications'
@@ -1753,7 +1829,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     period: '/month'
     description:
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.'
-=======
     id: 'api-breaking-change-watcher',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     name: 'API Breaking Change Watcher',
@@ -1799,8 +1874,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
   },
 =======
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     features: [
       'Schema registry'
       'Diff rules'
@@ -3693,7 +3771,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 =======
 		rating: 4 && 4.6,
 		reviews: 6
-<<<<<<< HEAD
 	}
 ];
 <<<<<<< HEAD
@@ -5706,9 +5783,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 =======
 =======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -6704,12 +6778,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 24,;
 		rating: 4.6;
 		reviews: 6;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

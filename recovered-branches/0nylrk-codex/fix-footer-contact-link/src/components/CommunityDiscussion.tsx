@@ -1,15 +1,27 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/CommunityDiscussion.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React, { useState } from "react";
+import { MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { MessageCircle } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ========
@@ -28,6 +40,8 @@ interface DiscussionPost {
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/CommunityDiscussion.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
@@ -38,12 +52,17 @@ interface DiscussionPost {
   time: string;
   title: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface DiscussionPost {
   id: number,
   author: string,
@@ -52,11 +71,14 @@ interface DiscussionPost {
   title: string,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   body: string
 }
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/CommunityDiscussion.tsx
@@ -66,13 +88,17 @@ interface DiscussionPost {
 const initial_posts: DiscussionPost[] = [;
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export const CommunityDiscussion: React.FC = () => {
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 1,
     author: "Anna Zhou",
     time: "2h ago",
     title: "What AI trends are you most excited for in 2025?",
+<<<<<<< HEAD
     body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
   },
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/CommunityDiscussion.tsx
@@ -87,6 +113,17 @@ const initialPosts: DiscussionPost[] = [
   {
 
 id: 1
+=======
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
+  {
+    id: 2,
+    author: "David Kim",
+    time: "50m ago",
+    title: "Quick tip: How to rank your Zion listing higher",
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
+
+    id: 1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: "Anna Zhou"
     time: "2h ago"
     title: "What AI trends are you most excited for in 2025?"
@@ -101,6 +138,7 @@ id: 1
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."
   }
 ];
+<<<<<<< HEAD
 export const CommunityDiscussion: React.FC = () => {
 <<<<<<< HEAD
 const initialPosts: DiscussionPost[] = [;
@@ -141,6 +179,15 @@ const initialPosts: DiscussionPost[] = [;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/CommunityDiscussion.tsx
 =======
 const [posts, setPosts] = useState(initialPosts);
+=======
+export const CommunityDiscussion: React.FC = () => {;
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+export const CommunityDiscussion: React.FC = () => {
+  const [posts, setPosts] = useState(initialPosts);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [showNew, setShowNew] = useState(false);
   const [newTitle, setNewTitle] = useState("");
   const [newBody, setNewBody] = useState("");
@@ -161,6 +208,7 @@ const [posts, setPosts] = useState(initialPosts);
     setNewBody("");
     setShowNew(false);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 =======
@@ -186,6 +234,12 @@ const [posts, setPosts] = useState(initialPosts);
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+  const [posts, setPosts] = useState(initialPosts),
+  const [showNew, setShowNew] = useState(false),
+  const [newTitle, setNewTitle] = useState(""),
+  const [newBody, setNewBody] = useState(""),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const handleAddPost = () => {
     if (!newTitle.trim() || !newBody.trim()) return,
@@ -202,7 +256,10 @@ const [posts, setPosts] = useState(initialPosts);
     setShowNew(false)
   },
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
@@ -237,12 +294,15 @@ const [posts, setPosts] = useState(initialPosts);
             <Textarea
               placeholder="What's on your mind?"
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/CommunityDiscussion.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { MessageCircle } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -459,6 +519,7 @@ export const CommunityDiscussion: React.FC = () => {
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/CommunityDiscussion.tsx
 
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]";
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -469,6 +530,8 @@ export const CommunityDiscussion: React.FC = () => {
               rows={3}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
@@ -489,6 +552,7 @@ export const CommunityDiscussion: React.FC = () => {
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             />;
 
@@ -500,6 +564,10 @@ export const CommunityDiscussion: React.FC = () => {
 =======
 disabled={!newTitle.trim() |!newBody.trim()}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                disabled={!newTitle.trim() |!newBody.trim()}
+                disabled={!newTitle.trim() || !newBody.trim()}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 Post
               </Button>
@@ -523,6 +591,7 @@ disabled={!newTitle.trim() |!newBody.trim()}
                     .join("")
                     .toUpperCase()
                     .slice(0, 2)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -769,6 +838,9 @@ setShowNew (false);
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/CommunityDiscussion.tsx
 =======
 </AvatarFallback>
+=======
+                </AvatarFallback>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Avatar>
               <div>
                 <div className="flex gap-2 items-center">
@@ -795,6 +867,7 @@ setShowNew (false);
         homepage.
       </div>
     </div>
+<<<<<<< HEAD
 
   );
 }
@@ -804,3 +877,29 @@ setShowNew (false);
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+
+);
+                </AvatarFallback>;
+              </Avatar>;
+              <div>;
+                <div className="flex gap-2 items-center">;
+                  <span className="font-semibold text-white">{post.author}</span>;
+                  <span className="text-xs text-zion-slate-light">{post.time}</span>;
+                </div>;
+                <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>;
+                <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        ))}
+      </div>;
+      <div className="mt-8 text-xs text-zion-slate-dark text-center">;
+        🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
+      </div>;
+    </div>;
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

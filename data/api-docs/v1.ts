@@ -1,7 +1,10 @@
 import { ApiDocsSpec } from './types';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -29,13 +32,15 @@ export default v1;
 =======
 =======
 const baseUrl = 'https://api.zion.os';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 const baseUrl = 'https://api.zion.os';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const v1: ApiDocsSpec = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   product: 'Zion OS'
   versions: ['v1']
   defaultVersion: 'v1'
@@ -102,7 +107,6 @@ const v1: ApiDocsSpec = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           ],
           versions: ['v1']
-=======
   openapi: '3.0.0',
   info: {
     title: 'Zion OS API',
@@ -123,7 +127,6 @@ const v1: ApiDocsSpec = {
               }
             }
           }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }
 <<<<<<< HEAD
       ]
@@ -527,21 +530,18 @@ export default v1;
 =======
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ]
 }
 export default v1;
 
-=======
   ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 
 export default v1;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,10 @@ import React from 'react';
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from 'react',
+import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
@@ -38,16 +43,27 @@ import EnhancedFooter from '../components/EnhancedFooter';
 <<<<<<< HEAD
   const features = [
     {
+<<<<<<< HEAD
 =======
 
+=======
+      icon: Shield
+      title: "Quantum-Resistant Encryption"
+      description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
+      color: "from-blue-500 to-cyan-500"
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: Shield,
       title: "Quantum-Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
       color: "from-blue-500 to-cyan-500";
     };
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       icon: Lock
       title: "Zero-Trust Architecture"
@@ -408,6 +424,7 @@ export default function QuantumCybersecurityPage() {
       </Head>
       <EnhancedNavigation />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -443,6 +460,9 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -495,6 +515,7 @@ export default function QuantumCybersecurityPage() {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -525,6 +546,9 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Features */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -553,6 +577,7 @@ export default function QuantumCybersecurityPage() {
             </p>
           </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -572,6 +597,9 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -605,9 +633,8 @@ export default function QuantumCybersecurityPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -625,6 +652,8 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Benefits */}
       <section className="py-20 bg-slate-50">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -667,11 +696,8 @@ export default function QuantumCybersecurityPage() {
             >
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Quantum Cybersecurity?</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-<<<<<<< HEAD
                 Our advanced security platform provides comprehensive protection against both current and future threats.
-=======
                 Our advanced security platform provides comprehensive protection against both current and future threats. 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 Stay ahead of the curve with quantum-resistant technology.
               </p>
               <div className="space-y-4">
@@ -718,6 +744,7 @@ export default function QuantumCybersecurityPage() {
               </div>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -737,6 +764,9 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -762,6 +792,7 @@ export default function QuantumCybersecurityPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -813,6 +844,9 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Threat Landscape */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -841,6 +875,7 @@ export default function QuantumCybersecurityPage() {
             </p>
           </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -860,6 +895,9 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {threats.map((threat, index) => (
               <motion.div
@@ -893,9 +931,8 @@ export default function QuantumCybersecurityPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -913,6 +950,8 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Compliance */}
       <section className="py-20 bg-slate-900">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -985,6 +1024,7 @@ export default function QuantumCybersecurityPage() {
             </p>
           </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1004,6 +1044,9 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1018,6 +1061,7 @@ export default function QuantumCybersecurityPage() {
               <p className="text-white/70 text-sm">Service Organization Control compliance for security, availability, and confidentiality</p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1037,6 +1081,9 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1050,6 +1097,7 @@ export default function QuantumCybersecurityPage() {
               <p className="text-white/70 text-sm">General Data Protection Regulation compliance for EU data privacy</p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1069,6 +1117,9 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1082,6 +1133,7 @@ export default function QuantumCybersecurityPage() {
               <p className="text-white/70 text-sm">Information security management system certification</p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1101,6 +1153,9 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1116,6 +1171,7 @@ export default function QuantumCybersecurityPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1199,6 +1255,9 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Pricing */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -1227,6 +1286,7 @@ export default function QuantumCybersecurityPage() {
             </p>
           </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1246,6 +1306,9 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
@@ -1262,6 +1325,7 @@ export default function QuantumCybersecurityPage() {
                     Most Popular;
                   </div>;
                 )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1331,8 +1395,9 @@ export default function QuantumCybersecurityPage() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-slate-900 mb-2">
@@ -1341,14 +1406,7 @@ export default function QuantumCybersecurityPage() {
                   </div>
                   <p className="text-slate-600">{plan.description}</p>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3">
@@ -1377,9 +1435,8 @@ export default function QuantumCybersecurityPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1397,6 +1454,8 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">;
@@ -1817,14 +1876,13 @@ export default function QuantumCybersecurityPage() {
       <EnhancedFooter />
     </>
   )
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
 };
-=======
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

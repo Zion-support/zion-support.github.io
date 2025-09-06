@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
@@ -7,6 +8,15 @@
 
 
 =======
+=======
+export function getConfig() {
+  return {
+    tokenName: 'Zion Token',
+    tokenSymbol: 'ZION',
+    decimals: 18,
+    totalSupply: 1000000
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface TokenTransaction {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
@@ -16,12 +26,15 @@ export interface TokenTransaction {;
   reason: string;
   timestamp: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 // Mock data storage - replace with actual database
@@ -29,11 +42,14 @@ let transactions: TokenTransaction[] = [];
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -41,8 +57,11 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     reason
     timestamp: Date.now()
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -52,12 +71,15 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
   };
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   transactions.push(transaction);
   return transaction;
 }
@@ -67,16 +89,22 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     userId
     amount: -amount, // Negative for redemption
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     type: 'redeem'
     reason
     timestamp: Date.now()
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     type: 'redeem',
     reason,
 <<<<<<< HEAD
@@ -92,6 +120,7 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     timestamp: Date.now();
   };
   
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   transactions.push(transaction);
@@ -109,6 +138,8 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
   };
   
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   transactions.push(transaction);
   return transaction;
 }
@@ -236,14 +267,12 @@ export function setConfig(
   // Update the configuration
   Object.assign(current, partial);
 }
+
+
+
 <<<<<<< HEAD
-
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

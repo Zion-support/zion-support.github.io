@@ -35,9 +35,12 @@ import { useAuth } from "@/hooks/useAuth",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {useDisputes} from "@/hooks/useDisputes";
@@ -67,6 +70,7 @@ export function DisputeDetail() {
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputeDetail.tsx
 
 
@@ -75,6 +79,8 @@ export function DisputeDetail() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { useDisputes } from "@/hooks/useDisputes",
@@ -90,7 +96,6 @@ import { format, formatDistanceToNow } from "date-fns",
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { toast } from "sonner";
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -181,7 +186,6 @@ export function DisputeDetail() {
   const isAdmin = user?.userType === "admin";
   useEffect(() => {
     if (!disputeId) return;
-=======
 import { toast } from "sonner",
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -190,7 +194,6 @@ export function DisputeDetail() {
   const navigate = useNavigate(),
   const { user } = useAuth(),
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [dispute, setDispute] = useState<any>(null),
   const [messages, setMessages] = useState<DisputeMessage[]>([]),
@@ -208,8 +211,11 @@ export function DisputeDetail() {
   useEffect(() => {
     if (!disputeId) return,
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const loadDisputeData = async () => {
       setIsLoading(true),
       try {
@@ -219,6 +225,7 @@ export function DisputeDetail() {
           navigate("/dashboard/disputes"),
           return
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -237,12 +244,20 @@ export function DisputeDetail() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        setDispute(disputeData);
+        const messagesData = await getDisputeMessages(disputeId);
+        setDispute(disputeData),
+        
+        const messagesData = await getDisputeMessages(disputeId),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         setMessages(messagesData)
       } catch (error) {
         console.error("Error loading dispute data:", error),
         toast.error("Failed to load dispute")
       } finally {
         setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -253,6 +268,8 @@ export function DisputeDetail() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
     loadDisputeData()
@@ -263,15 +280,16 @@ export function DisputeDetail() {
     if (success && dispute) {
       setDispute({ ...dispute, status })
     }
-<<<<<<< HEAD
   }
   const handleResolveDispute = async () => {
     if (!disputeId) return;
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -338,6 +356,7 @@ export function DisputeDetail() {;
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const handleResolveDispute = async () => {
     if (!disputeId) return,
@@ -351,10 +370,13 @@ export function DisputeDetail() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const handleResolveDispute = async () => {
     if (!disputeId) return,
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -373,17 +395,20 @@ export function DisputeDetail() {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary"),
       return
     }
-<<<<<<< HEAD
     const success = await resolveDispute(disputeId, resolution);
-=======
     
     const success = await resolveDispute(disputeId, resolution),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (success && dispute) {
       setDispute({
         ...dispute
@@ -395,6 +420,7 @@ export function DisputeDetail() {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -403,12 +429,17 @@ export function DisputeDetail() {;
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleSendMessage = async () => {
     if (!disputeId |!message.trim()) return;
     setIsSending(true);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleSendMessage = async () => {
@@ -416,11 +447,14 @@ export function DisputeDetail() {;
     
     setIsSending(true),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
@@ -433,6 +467,7 @@ export function DisputeDetail() {;
       console.error("Error sending message:", error)
     } finally {
       setIsSending(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -491,6 +526,8 @@ export function DisputeDetail() {;
     return (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   if (isLoading) {
@@ -500,11 +537,7 @@ export function DisputeDetail() {;
         <p>Loading dispute details...</p>
       </div>
     )
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },;
   const handleResolveDispute = async () => {;
     if (!disputeId) return,;
@@ -550,6 +583,7 @@ export function DisputeDetail() {;
       </div>;
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputeDetail.tsx
 
 <<<<<<< HEAD
@@ -571,9 +605,10 @@ export function DisputeDetail() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!dispute) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
@@ -587,6 +622,7 @@ export function DisputeDetail() {;
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -610,16 +646,15 @@ export function DisputeDetail() {;
     return (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case "open": return "default";
       case "under_review": return "secondary"
-=======
       case "open": return "default",
       case "under_review": return "secondary",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       case "resolved": return "outline", // Changed from "success" to "outline"
       case "closed": return "outline",
       default: return "default"
-<<<<<<< HEAD
     }
   }
   return (
@@ -629,7 +664,6 @@ export function DisputeDetail() {;
           <div className="flex items-center gap-2">
             <h1 className="text-2xl font-bold">Dispute Case</h1>
             <Badge variant={getStatusBadgeVariant(dispute.status)}>
-=======
 ;
   if (!dispute) {;
     return (;
@@ -969,6 +1003,7 @@ if ( {) {
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -980,6 +1015,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -1011,6 +1048,7 @@ if ( {) {
           </AlertDescription>
         </Alert>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1061,6 +1099,9 @@ if ( {) {
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -1913,11 +1954,14 @@ if ( {) {
                       </div>
                     )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div>
                       <h3 className="font-medium mb-2">Admin Notes</h3>
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
@@ -1935,8 +1979,11 @@ if ( {) {
                                 </Avatar>
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name |'Admin'}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
                     <div>;
                       <h3 className="font-medium mb-2">Admin Notes</h3>;
@@ -1956,12 +2003,15 @@ if ( {) {
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                 </span>
                               </div>
                               <span className="text-xs opacity-70">
@@ -1986,6 +2036,7 @@ if ( {) {
                           onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2152,19 +2203,15 @@ if ( {) {
                             if (message && message.trim()) {;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                 getDisputeMessages(disputeId!).then(setMessages);
 
                                 setMessage("")
                               })
-=======
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setMessage("")
                               })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>;
                       <div className="mt-4 space-y-4">;
                         <Textarea;
@@ -2182,6 +2229,7 @@ if ( {) {
                                 setMessage("");
                               });
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputeDetail.tsx
 
 <<<<<<< HEAD
@@ -2192,6 +2240,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             }
                           }}
                         >
@@ -2269,6 +2319,7 @@ if ( {) {
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2728,9 +2779,13 @@ formatDistanceToNow (new Date (dispute.created at), {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputeDetail.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

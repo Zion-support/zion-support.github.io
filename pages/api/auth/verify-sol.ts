@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 const cookieHeader = req.headers.cookie || '';
@@ -64,6 +65,8 @@ function handler() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import nacl from 'tweetnacl',;
 import bs58 from 'bs58',;
@@ -95,14 +98,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e?.message || 'Verify failed' })
   };
 };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nacl from 'tweetnacl';
 import bs58 from 'bs58';
 import jwt from 'jsonwebtoken';
-<<<<<<< HEAD
 
   }
 }
@@ -144,7 +149,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ ok: true })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |'Verify failed' })
-=======
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
 export default async function handler(req, res) {
   try {
@@ -166,14 +170,14 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }
+}
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  }
-}
-=======
-  }
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

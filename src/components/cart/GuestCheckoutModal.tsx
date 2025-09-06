@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -7,6 +8,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -24,7 +28,6 @@ import {
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
 interface GuestCheckoutModalProps {
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -36,11 +39,13 @@ interface GuestCheckoutModalProps {
 
   open: boolean
   onOpenChange: (open: boolean) => void
-=======
   open: boolean;
   onOpenChange: (open: boolean) => void;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onSubmit: (details: { email: string; address: string }) => void
 export default function GuestCheckoutModal({
   open
@@ -77,8 +82,11 @@ class ErrorBoundary extends React.Component {
       setIsSubmitting(false)
     }
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -163,12 +171,7 @@ export default function GuestCheckoutModal({;
 =======
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -187,6 +190,7 @@ export default function GuestCheckoutModal({;
             Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -247,6 +251,8 @@ export default function GuestCheckoutModal({;
               Shipping Address;
             </Label>;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <form onSubmit={handleSubmit} className='space-y-4'>
           <div className='space-y-2'>
             <Label
@@ -301,8 +307,11 @@ export default function GuestCheckoutModal({;
               disabled={isSubmitting |!email |!address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
@@ -312,9 +321,12 @@ export default function GuestCheckoutModal({;
             </Label>
             <Input
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               id='guest-email'
               type='email'
               value={email || ''}
@@ -358,11 +370,14 @@ export default function GuestCheckoutModal({;
               disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               id="guest-email"
               type="email"
               value={email || ''}
@@ -413,6 +428,7 @@ export default function GuestCheckoutModal({;
             >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               {isSubmitting ? (
 =======
@@ -427,6 +443,8 @@ export default function GuestCheckoutModal({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {isSubmitting ? (
                 'Processing...'
               ) : (
@@ -438,27 +456,31 @@ export default function GuestCheckoutModal({;
               )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </Button>
           </DialogFooter>
         </form>
       </DialogContent>
     </Dialog>
   )
+}
+}
+};
+};
 <<<<<<< HEAD
-}
-}
-=======
-};
-};
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </Button>;
           </DialogFooter>;
         </form>;
@@ -483,8 +505,11 @@ export default function GuestCheckoutModal({;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

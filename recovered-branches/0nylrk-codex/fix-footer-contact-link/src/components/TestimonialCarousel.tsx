@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/TestimonialCarousel.tsx
@@ -15,10 +16,14 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -36,6 +41,8 @@ const testimonials = [;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/TestimonialCarousel.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const testimonials = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   {
@@ -95,10 +102,13 @@ const testimonials = [
 =======
     avatar: "https://i.pravatar.cc/150?img=67"
     company: "EcoTech"}]
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Carousel,
   CarouselContent,
@@ -108,6 +118,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
 import { Quote } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -121,6 +132,8 @@ import { Quote } from "lucide-react",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
@@ -149,6 +162,7 @@ const testimonials = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -156,6 +170,8 @@ const testimonials = [
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -314,6 +330,7 @@ function TestimonialCarousel() {
     </section>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -326,12 +343,16 @@ function TestimonialCarousel() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {;
   Carousel,;
   CarouselContent,;
@@ -543,11 +564,10 @@ company: "AI Systems"
     </section>;
   );
 }
+;
+;
 <<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

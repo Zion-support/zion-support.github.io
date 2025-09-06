@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -154,18 +155,17 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
-=======
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState } from "../../../utils/sync/storage",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState()
   if (req.method === "GET") {
     return res.status(200).json({
-<<<<<<< HEAD
       route: "/multiverse/hub"
       instanceId: state.config.instanceId
       peers: state.config.peers
@@ -176,9 +176,6 @@ lastSyncedAt: state.lastSyncedAt})
 
   }
   return res.status(405).json({ error: "Method not allowed" })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -208,26 +205,17 @@ export default async function handler(req, res) {
   const state = readState(),
   if (req.method === "GET") {
     return res.status(200).json({
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
       peers: state.config.peers,
       scope: state.config.scope,
       optIn: state.config.optIn,
       paused: state.config.paused,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 lastSyncedAt: state.lastSyncedAt})
   }
 
   return res.status(405).json({ error: "Method not allowed" });
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       lastSyncedAt: state.lastSyncedAt})
     } catch (error) {
     console.error("Error:", error);
@@ -286,6 +274,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -294,10 +283,14 @@ export default async function handler(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

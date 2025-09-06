@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 realImplementation: true;
@@ -26,9 +27,9 @@ launch_date: '2025 - 01 - 25';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 realImplementation: true;
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
@@ -415,6 +416,7 @@ reviews: 167;
     rating: 4 && 4.8;
     reviews: 167
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',;
@@ -662,6 +664,8 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 ];
 <<<<<<< HEAD
@@ -693,9 +697,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
 =======
 =======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIAutomationService {;
   id: string,;
@@ -1015,12 +1016,11 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     customers: 234,;
     rating: 4.8;
     reviews: 167;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

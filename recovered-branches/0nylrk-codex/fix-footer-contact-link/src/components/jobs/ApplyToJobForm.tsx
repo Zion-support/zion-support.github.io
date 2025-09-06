@@ -49,9 +49,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -66,6 +69,7 @@ import {AlertCircle, FileText, Loader2} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {Job} from "@/types/jobs";
 import {toast} from "sonner";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ApplyToJobFormProps {;
   job: Job,;
@@ -95,6 +99,8 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -107,34 +113,21 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
-<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
-=======
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplyToJobFormProps {
 
   job: Job
 
   onSuccess?: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
-<<<<<<< HEAD
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
 
@@ -146,10 +139,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const [error, setError] = useState<string | null>(null);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-=======
   const { user } = useAuth(),
   const { applyToJob } = useJobApplications(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { resumes, isLoading: isResumesLoading } = useResume(),
   const navigate = useNavigate(),
   
@@ -161,8 +152,11 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!user) {
       toast.error("You must be logged in to apply")
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
@@ -185,13 +179,15 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setError("Please provide a cover letter"),
       return
     }
-<<<<<<< HEAD
     setIsSubmitting(true);
     setError(null);
     try {
       const success = await applyToJob(job.id, coverLetter, selectedResumeId |undefined);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     setIsSubmitting(true),
     setError(null),
@@ -200,6 +196,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       const success = await applyToJob(job.id, coverLetter, selectedResumeId || undefined),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -207,6 +204,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         toast.success("Your application has been submitted!");
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (success) {
         toast.success("Your application has been submitted!"),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -316,14 +315,15 @@ if ( {) {
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
   }
 
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -583,11 +583,14 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
           type="button"
           variant="outline"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -943,11 +946,6 @@ handleSubmit
         <Button;
           type="button";
           variant="outline";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           disabled={isSubmitting}
           onClick={() => {
             if (onSuccess) onSuccess()
@@ -964,18 +962,19 @@ handleSubmit
           ) : (
             "Submit Application"
           )}
-<<<<<<< HEAD
         </Button>
       </div>
     </form>
   )
 }
-=======
         </Button>;
       </div>;
     </form>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

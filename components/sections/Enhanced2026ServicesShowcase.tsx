@@ -26,8 +26,36 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
 
+=======
+import {
+  ArrowRight
+  Brain
+  Zap
+  Shield
+  Rocket
+  Sparkles
+  Star
+  TrendingUp
+  Globe
+  Cpu
+  Lock
+  Cloud;
+  ArrowRight,
+  Brain,
+  Zap,
+  Shield,
+  Rocket,
+  Sparkles,
+  Star,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Lock,;
+  Cloud,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
 =======
@@ -194,6 +222,7 @@ const Enhanced2026ServicesShowcase = () => {
       color: 'from-yellow-500 to-orange-500'
     }
   ];
+<<<<<<< HEAD
 
 =======
 
@@ -630,8 +659,9 @@ const Enhanced2026ServicesShowcase = () => {;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Background Effects */}
@@ -950,14 +980,7 @@ const Enhanced2026ServicesShowcase = () => {;
         {_/* Category Overview */}
 =======
           className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -976,14 +999,7 @@ const Enhanced2026ServicesShowcase = () => {;
             Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business
           </p>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Category Overview */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <motion.div
@@ -992,20 +1008,17 @@ const Enhanced2026ServicesShowcase = () => {;
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-16&quot;
         >
           {_categories.map((category, _index) => (
 =======
 <<<<<<< HEAD
-          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {categories.map((category, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1027,14 +1040,7 @@ const Enhanced2026ServicesShowcase = () => {;
             </motion.div>
 =======
               className='group text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div
                 className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
@@ -1053,12 +1059,10 @@ const Enhanced2026ServicesShowcase = () => {;
               <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
               <p className="text-2xl font-bold text-cyan-400">{category.count}</p>
             </motion.div>
-<<<<<<< HEAD
           ))}
         </motion.div>
         {/* Featured Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-=======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
@@ -1072,12 +1076,15 @@ const Enhanced2026ServicesShowcase = () => {;
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -1089,6 +1096,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
               whileHover={{ scale: 1.02, y: -5 }}
               className='group relative'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1107,12 +1115,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               className='group relative'
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div
@@ -1160,6 +1165,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 {/* Description */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1170,6 +1176,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 <p className="text-gray-300 text-sm mb-4 leading-relaxed">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1215,6 +1223,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     {service.features.slice(0, 2).map((feature, i) => (
                       <li key={i} className="flex items-center text-gray-400 text-xs">
                         <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                         {feature}
 =======
@@ -1264,6 +1273,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   <div>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                   {service.description}
                 </p>
@@ -1272,29 +1283,25 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
                         {feature}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
                     ))}
                   </ul>
                 </div>
+                {/* Price and CTA */}
+                <div className='flex items-center justify-between'>
+
+                {/* Price and CTA */}
+                <div className='flex items-center justify-between'>
+
 <<<<<<< HEAD
-                {/* Price and CTA */}
-                <div className='flex items-center justify-between'>
-=======
-
-                {/* Price and CTA */}
-                <div className='flex items-center justify-between'>
-
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div>
                     <span className='text-2xl font-bold text-cyan-400'>
                       {service.price}
@@ -1332,6 +1339,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             </motion.div>
           ))}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1374,12 +1382,9 @@ href={`/${service && service.id}`}
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Call to Action */}
         <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1402,14 +1407,7 @@ href={`/${service && service.id}`}
         >
 =======
           className='text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1663,18 +1661,20 @@ export default Enhanced2026ServicesShowcase;
 =======
 =======
   );
-<<<<<<< HEAD
 }
-=======
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default Enhanced2026ServicesShowcase;  )
 }
 export default Enhanced2026ServicesShowcase;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -1692,16 +1692,17 @@ export default Enhanced2026ServicesShowcase;
 =======
 <<<<<<< HEAD
 =======
-export default Enhanced2026ServicesShowcase;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default Enhanced2026ServicesShowcase;
 
 }
 }
-=======
 export default Enhanced2026ServicesShowcase;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

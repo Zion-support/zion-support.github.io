@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
 =======
@@ -14,11 +15,17 @@ import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
 =======
 =======
-import {Link} from "react-router-dom";
-import {Button} from "@/components/ui/button";
 =======
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {Link} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import { Link } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -32,6 +39,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function EnterpriseCallToAction() {
   return (
     <div className="mt-12 text-center">
@@ -44,9 +53,16 @@ export function EnterpriseCallToAction() {
         Need volume pricing or custom SLAs? Contact our enterprise sales team.
       </p>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button";
 =======
@@ -80,6 +96,7 @@ export function EnterpriseCallToAction() {;
       </p>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/EnterpriseCallToAction.tsx
 =======
@@ -136,3 +153,7 @@ function EnterpriseCallToAction() {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

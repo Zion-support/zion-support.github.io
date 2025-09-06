@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentRegistrationForm.tsx
 
 <<<<<<< HEAD
@@ -72,6 +73,8 @@ interface CategorizedSkills {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -89,11 +92,14 @@ import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -102,7 +108,6 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Switch } from "@/components/ui/switch",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -112,7 +117,6 @@ import {
   FormField;
   FormItem;
   FormLabel;
-=======
 import { Badge } from "@/components/ui/badge",
 import { Separator } from "@/components/ui/separator",
 import {
@@ -122,23 +126,15 @@ import {
   FormField,
   FormItem,
   FormLabel,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
-=======
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define form schema
 
 const talentProfileSchema = z.object({
@@ -148,13 +144,11 @@ const talentProfileSchema = z.object({
   location: z.string().min(2, "Location is required"),
   skills: z.string().min(2, "Enter at least one skill"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-<<<<<<< HEAD
     message: "Hourly rate must be a number"})
   availability: z.enum(["available", "limited", "unavailable"]);
   enhancedProfile: z.boolean().default(true)})
 type TalentFormValues = z.infer<typeof talentProfileSchema>;
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
-=======
     message: "Hourly rate must be a number"}),
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().default(true)}),
@@ -163,7 +157,6 @@ type TalentFormValues = z.infer<typeof talentProfileSchema>,
 
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface CategorizedSkills {
   programming: string[]
   devops: string[]
@@ -171,8 +164,11 @@ interface CategorizedSkills {
   softSkills: string[]
   other: string[]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -234,6 +230,7 @@ interface CategorizedSkills {;
   softSkills: string[],;
   other: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentRegistrationForm.tsx
 
 
@@ -246,11 +243,14 @@ interface CategorizedSkills {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 interface EnhancedProfile {
   summary: string
   categorizedSkills: CategorizedSkills
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -262,6 +262,8 @@ export function TalentRegistrationForm() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
   const { user } = useAuth();
@@ -270,10 +272,8 @@ export function TalentRegistrationForm() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
-=======
 
 export function TalentRegistrationForm() {
-<<<<<<< HEAD
   // Remove the useToast() hook since we're importing the toast function directly;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -281,7 +281,6 @@ export function TalentRegistrationForm() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
-=======
   // Remove the useToast() hook since we're importing the toast function directly
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -289,10 +288,12 @@ export function TalentRegistrationForm() {
   const [isGenerating, setIsGenerating] = useState(false),
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentProfileSchema)
@@ -322,17 +323,23 @@ export function TalentRegistrationForm() {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Handle removing skill tags
   const handleRemoveSkill = (skill: string) => {
     setSkillTags(skillTags.filter((s) => s !== skill))
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Handle removing skill tags
@@ -341,16 +348,20 @@ export function TalentRegistrationForm() {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle key press in skills input (add on enter)
   const handleSkillKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddSkill()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -361,6 +372,8 @@ export function TalentRegistrationForm() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   // Handle avatar upload
@@ -373,17 +386,18 @@ export function TalentRegistrationForm() {
       }
       reader.readAsDataURL(file)
     }
-<<<<<<< HEAD
   }
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
     if (!formData.bio |formData.bio.length < 20) {
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export function TalentRegistrationForm() {;
   // Remove the useToast() hook since we're importing the toast function directly;
@@ -465,6 +479,7 @@ export function TalentRegistrationForm() {;
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -485,17 +500,23 @@ export function TalentRegistrationForm() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues(),
     if (!formData.bio || formData.bio.length < 20) {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -542,6 +563,8 @@ export function TalentRegistrationForm() {;
     if (!formData && formData.bio || formData && formData.bio.length < 20) {;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     try {
       setIsGenerating(true);
@@ -559,12 +582,8 @@ export function TalentRegistrationForm() {;
       });
       if (error) {
         throw new Error(error.message)
-<<<<<<< HEAD
       }
       setGeneratedContent(data as EnhancedProfile);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },;
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {;
@@ -625,16 +644,15 @@ export function TalentRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
 
       setGeneratedContent(data as EnhancedProfile),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Enhanced Profile Generated"
         description: "AI has created a professional bio and suggested additional skills for your profile."})
@@ -648,9 +666,12 @@ export function TalentRegistrationForm() {;
       setIsGenerating(false)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Apply generated content to form
   const applyGeneratedContent = () => {
@@ -659,7 +680,6 @@ export function TalentRegistrationForm() {;
       // Extract all skills from categorized skills and properly type cast them
       const allCategorizedSkills = generatedContent.categorizedSkills;
       const newSkills: string[] = []
-=======
   },
 
   // Apply generated content to form
@@ -671,14 +691,18 @@ export function TalentRegistrationForm() {;
       const allCategorizedSkills = generatedContent.categorizedSkills,
       const newSkills: string[] = [],
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
           categorySkills.forEach(skill => {
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
               newSkills.push(skill)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1007,6 +1031,8 @@ export function TalentRegistrationForm() {;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       setGeneratedContent(data as EnhancedProfile),;
       toast({;
@@ -1044,6 +1070,7 @@ export function TalentRegistrationForm() {;
           categorySkills.forEach(skill => {;
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {;
               newSkills.push(skill);
+<<<<<<< HEAD
 <<<<<<< HEAD
             }
           }),;
@@ -1141,10 +1168,11 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }
           })
         }
-<<<<<<< HEAD
       });
       if (newSkills.length > 0) {
         setSkillTags([...skillTags, ...newSkills])
@@ -1171,13 +1199,14 @@ if ( {) {
       case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
     }
-<<<<<<< HEAD
   }
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
@@ -1197,6 +1226,7 @@ if ( {) {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -1205,6 +1235,9 @@ if ( {) {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -1229,15 +1262,20 @@ if ( {) {
       console.error("Failed to send notification email:", error)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
     if (skillTags.length === 0) {
@@ -1248,16 +1286,21 @@ if ( {) {
       return
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-    setIsSubmitting(true);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    setIsSubmitting(true);
 
     setIsSubmitting(true),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       // For actual implementation with Supabase
       if (!user?.id) {
@@ -1265,17 +1308,22 @@ if ( {) {
       }
       // Enhance profile if not already done
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       let finalSummary = "";
       let finalSkills = skillTags;
-=======
       let finalSummary = "",
       let finalSkills = skillTags,
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (values.enhancedProfile && !generatedContent) {
         try {
           const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
@@ -1286,6 +1334,7 @@ if ( {) {
                 bio: values.bio
                 skills: skillTags
                 location: values.location
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1344,6 +1393,8 @@ if ( {) {
       await supabase && supabase.functions.invoke('send-email', {;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               }
             }
           });
@@ -1358,7 +1409,6 @@ if ( {) {
                 categorySkills.forEach(skill => {
                   if (typeof skill === 'string' && skill) {
                     aiSkills.push(skill)
-=======
   },;
   // Send notification email;
   const sendEnhancementNotification = async (userId: string, email: string) => {;
@@ -1593,6 +1643,7 @@ if ( {) {
                   if (typeof skill === 'string' && skill) {;
                     aiSkills.push(skill);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1640,28 +1691,32 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   }
                 })
               }
-<<<<<<< HEAD
             });
             // Create a unique set of skills
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
-=======
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
           finalSummary = ""
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1689,30 +1744,30 @@ if ( {) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         } catch (error) {;
           console.error("Error enhancing profile:", error),;
           // Continue with submission even if enhancement fails;
           finalSummary = "";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       } else if (generatedContent) {
         finalSummary = generatedContent.summary
       }
-<<<<<<< HEAD
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser()
       const userEmail = userData.user?.email;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = userData.user?.email,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1720,6 +1775,8 @@ if ( {) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
@@ -1733,6 +1790,7 @@ if ( {) {
         setIsSubmitting(false)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1743,12 +1801,16 @@ if ( {) {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-      }, 1500);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      }, 1500);
       }, 1500),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Here would be the actual code to save the profile to Supabase
       /*
       const { error } = await supabase
@@ -1764,6 +1826,7 @@ if ( {) {
           hourly_rate: Number(values.hourlyRate)
           availability_status: values.availability
           // Other fields would be handled here
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1943,13 +2006,13 @@ if ( {) {
     } catch (error: any) {
       console.error("Error creating profile:", error);
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         });
       if (error) throw error;
-=======
         }),
 
       if (error) throw error,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       */
     } catch (error: any) {
       console.error("Error creating profile:", error),
@@ -1959,6 +2022,7 @@ if ( {) {
         description: error.message |"There was an error creating your profile. Please try again."
         variant: "destructive"})
       setIsSubmitting(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1988,6 +2052,8 @@ if ( {) {
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
 
@@ -2003,8 +2069,11 @@ if ( {) {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardContent className="space-y-8">
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
@@ -2464,11 +2533,6 @@ if (throw error) {
         <Form {...form}>;
           <form onSubmit={form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Basic Information */}
               <div className="space-y-4">
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>
@@ -2932,10 +2996,7 @@ if (throw error) {
                     </Button>
                   </div>
                 )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Generated Content Display */}
                 {generatedContent && (
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
@@ -3641,6 +3702,7 @@ if (throw error) {
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ========
@@ -3949,9 +4011,13 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentRegistrationForm.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

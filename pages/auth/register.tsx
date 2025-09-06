@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 
@@ -73,6 +72,8 @@ const RegisterPage = () =>: any {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -122,8 +123,6 @@ if ( {) {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -132,7 +131,6 @@ import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
 import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
 const RegisterPage = () => {
   const router = useRouter()
   useEffect(() => {
@@ -463,7 +461,6 @@ export default RegisterPage,
               alt=&quot;Zion Tech&quot;
 =======
   }
-=======
 const RegisterPage = () => {;
   const router = useRouter();
   useEffect(() => {;
@@ -482,12 +479,7 @@ const RegisterPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -502,14 +494,16 @@ const RegisterPage = () => {;
               src="/logos/zion-logo.png"
               alt="Zion Tech"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               width={48}
               height={48}
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.style.display = 'none'
               }}
-=======
               width={48  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -528,11 +522,6 @@ const RegisterPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
 <<<<<<< HEAD
             <h2 className=&quot;mt-6 text-center text-3xl font-extrabold text-gray-900&quot;>
@@ -548,19 +537,12 @@ const RegisterPage = () => {;
               Create your account
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
-<<<<<<< HEAD
               Or{' '}
-=======
               Or{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
@@ -596,19 +578,12 @@ const RegisterPage = () => {;
               and{' '}
 =======
           <SignupForm onSuccess={handleSuccess} />
-<<<<<<< HEAD
           {/* Social signup options */}
-=======
           {/* Social signup options */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -622,13 +597,11 @@ const RegisterPage = () => {;
           </div>
           <div className="text-center mt-4">
             <p className="text-xs text-gray-500">
-<<<<<<< HEAD
               By creating an account, you agree to our{' '}
               <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">
                 Terms of Service
               </Link>{' '}
               and{' '}
-=======
               By creating an account, you agree to our{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -646,11 +619,6 @@ const RegisterPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Privacy Policy
@@ -662,25 +630,22 @@ const RegisterPage = () => {;
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 
 export default RegisterPage
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default RegisterPage;
 
-=======
 },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 export default RegisterPage,;
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default RegisterPage,
             />;
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">;
@@ -748,9 +713,12 @@ export default RegisterPage,
 },;
 export default RegisterPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

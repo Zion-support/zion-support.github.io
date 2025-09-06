@@ -9,6 +9,7 @@ function fixDoubleCommas(filePath) {
     const content = fs.readFileSync(filePath, "utf8");
     let modified = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
@@ -20,11 +21,11 @@ function fixDoubleCommas(filePath) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    // Fix double commas in import statements
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    // Fix double commas in import statements
 
     // Fix double commas in import statements;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

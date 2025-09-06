@@ -2,10 +2,18 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/ExperienceFilter.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ChevronDown, ChevronUp } from "lucide-react",
 =======
 const handleChange = (values: number[]) => {
+=======
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Slider} from "@/components/ui/slider";
+import {ExperienceFilterProps} from "@/types/filters";
+export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
+  const handleChange = (values: number[]) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setExperienceRange([values[0], values[1]]);
   };
 import { ChevronDown, ChevronUp } from "lucide-react",
@@ -22,7 +30,16 @@ export function ExperienceFilter({
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0], values[1]]);
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Slider } from "@/components/ui/slider",
+import { ExperienceFilterProps } from "@/types/filters",
+export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
+  const handleChange = (values: number[]) => {
+    setExperienceRange([values[0], values[1]])
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -48,10 +65,15 @@ export function ExperienceFilter({
             <span>{experienceRange[1]} years</span>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <Slider
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <Slider
+          <Slider 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Slider } from "@/components/ui/slider",;
 import { ExperienceFilterProps } from "@/types/filters",;
@@ -141,6 +163,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/ExperienceFilter.tsx
           <Slider;
 
@@ -155,6 +178,9 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          <Slider;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             value={[experienceRange[0], experienceRange[1]]}
 =======
           <Slider ;            value={[experienceRange[0], experienceRange[1]]}

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -429,15 +430,15 @@ Production-ready evaluations for retrieval-augmented generation. Track accuracy,
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
 
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <>
@@ -585,8 +586,8 @@ import Link from 'next/link';
 			</section>
 		</>
 	)
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 href='mailto:kleber@ziontechgroup && ziontechgroup.com'
               className='px-5 py-3 rounded-lg border border-white/20'>;
               Email: kleber@ziontechgroup && ziontechgroup.com;
@@ -650,3 +651,6 @@ href='mailto:kleber@ziontechgroup && ziontechgroup.com'
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

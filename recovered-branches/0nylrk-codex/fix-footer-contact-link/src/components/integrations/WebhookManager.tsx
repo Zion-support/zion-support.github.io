@@ -28,9 +28,12 @@ import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -54,8 +57,6 @@ export function WebhookManager() {;
 export function WebhookManager() {
   const { ;
     webhooks;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -64,7 +65,6 @@ import { Label } from "@/components/ui/label",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { PlusCircle, Save, Trash, Play } from "lucide-react",
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
-<<<<<<< HEAD
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 export function WebhookManager() {
@@ -92,13 +92,11 @@ export function WebhookManager() {
 =======
     testWebhook
   } = useWebhooks();
-=======
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
 export function WebhookManager() {
   const { 
     webhooks,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     loading, 
     error,
     testResult,
@@ -109,8 +107,11 @@ export function WebhookManager() {
     testWebhook
   } = useWebhooks(),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [newWebhook, setNewWebhook] = useState({
 
     name: ""
@@ -119,6 +120,7 @@ export function WebhookManager() {
     eventTypes: [] as WebhookEventType[]
 
     secret: ""
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -131,24 +133,31 @@ export function WebhookManager() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  });
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  });
   }),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const eventOptions: { value: WebhookEventType, label: string }[] = [
     { value: "new_application", label: "New Application Received" }
     { value: "quote_received", label: "Quote Request Received" }
     { value: "milestone_approved", label: "Milestone Approved" }
     { value: "talent_hired", label: "Talent Hired" }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   useEffect(() => {
     fetchWebhooks()
@@ -156,8 +165,11 @@ export function WebhookManager() {
 
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ],
   
   useEffect(() => {
@@ -167,6 +179,7 @@ export function WebhookManager() {
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return,
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -191,6 +204,8 @@ export function WebhookManager() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added"),
       return
@@ -200,36 +215,44 @@ export function WebhookManager() {
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
       selectedEvent: "" as WebhookEventType
     })
-<<<<<<< HEAD
   }
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
       ...newWebhook
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
     })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleCreateWebhook = async () => {
     if (!newWebhook.name |!newWebhook.url |newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields");
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields"),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -240,17 +263,21 @@ export function WebhookManager() {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return
     }
     await createWebhook(
-<<<<<<< HEAD
       newWebhook.name
       newWebhook.url
       newWebhook.eventTypes
       newWebhook.secret |undefined
     );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       newWebhook.name, 
       newWebhook.url, 
       newWebhook.eventTypes, 
@@ -258,12 +285,15 @@ export function WebhookManager() {
     ),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Reset form
     setNewWebhook({
       name: ""
@@ -273,25 +303,32 @@ export function WebhookManager() {
       secret: ""
     })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -299,6 +336,8 @@ export function WebhookManager() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-8">
       <Card>
@@ -322,23 +361,28 @@ export function WebhookManager() {
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Input
                 id="webhook-url"
                 placeholder="https://example.com/webhook"
-=======
               <Input 
                 id="webhook-url" 
                 placeholder="https://example.com/webhook"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -446,6 +490,7 @@ export function WebhookManager() {;
                 id="webhook-url";
                 placeholder="https://example.com/webhook";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
               <Input 
@@ -461,6 +506,8 @@ export function WebhookManager() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
               />
@@ -505,6 +552,7 @@ export function WebhookManager() {;
           </div>
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -789,13 +837,17 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Input
               id="webhook-secret"
-=======
             <Input 
               id="webhook-secret" 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
@@ -841,6 +893,7 @@ if ( {) {
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
                       <div className="flex-shrink-0">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1010,13 +1063,17 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <Button
                           variant="outline"
-=======
                         <Button 
                           variant="outline" 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
@@ -1034,6 +1091,7 @@ if ( {) {
                         {webhook.event_types.map(event => (
                           <ClickableBadge key={event} variant="secondary">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1044,11 +1102,15 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                            {eventOptions.find(e => e.value === event)?.label |event}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                            {eventOptions.find(e => e.value === event)?.label |event}
                             {eventOptions.find(e => e.value === event)?.label || event}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           </ClickableBadge>
                         ))}
                       </div>
@@ -1082,6 +1144,7 @@ if ( {) {
                       <SelectItem value="test_event">Test (generic)</SelectItem>
                       {webhook.event_types.map(event => (
                         <SelectItem key={event} value={event}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1321,12 +1384,12 @@ if ( {) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           Test {eventOptions.find(e => e.value === event)?.label |event}
                         </SelectItem>
-=======
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       ))}
                     </SelectContent>
                   </Select>
@@ -1353,6 +1416,7 @@ if ( {) {
                   <span className="font-medium">Response:</span>
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -1362,11 +1426,15 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
-                    {testResult.responseBody |'<empty>'}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    {testResult.responseBody |'<empty>'}
                     {testResult.responseBody || '<empty>'}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </pre>
                 </div>
               </div>

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -8,17 +11,23 @@ import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
 import { Progress  } from '@/components/ui/progress';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AlertTriangle, Package, Zap } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface BundleInfo {
@@ -52,19 +61,24 @@ export function BundleAnalyzer() {
     // Only show in development or when explicitly enabled
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     const show =
       process.env.NODE_ENV === 'development' |
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const show =
       process.env.NODE_ENV === 'development' |
-=======
     const show = null;
       process.env.NODE_ENV === 'development' ||
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return;
@@ -108,16 +122,20 @@ export function BundleAnalyzer() {
       setBundleInfo({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         totalSize
         gzippedSize
         chunkCount: chunkData.length
         loadTime: totalLoadTime / chunkData.length
         cacheHitRate: cacheHitRate * 100
       })
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
@@ -162,13 +180,14 @@ export function BundleAnalyzer() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -202,6 +221,7 @@ export function BundleAnalyzer() {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -211,6 +231,9 @@ export function BundleAnalyzer() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -329,6 +352,7 @@ export function BundleAnalyzer() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
@@ -344,23 +368,27 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Button
-<<<<<<< HEAD
           variant='outline'
           size='sm'
           onClick={toggleAnalyzer}
           className='bg-background/80 backdrop-blur-sm'        >
           <Package className='w-4 h-4 mr-2' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           Bundle Analyzer
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant="outline"
           size="sm"
           onClick={toggleAnalyzer}
@@ -368,11 +396,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         >
           <Package className="w-4 h-4 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Bundle Analyzer
 >>>>>>>         </Button>
       </div>
@@ -401,10 +432,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 variant='ghost'
                 size='sm'
                 onClick={collectBundleInfo}
@@ -418,11 +452,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={toggleAnalyzer}
                 className='h-6 w-6 p-0'              >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 ✕
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 variant="ghost"
                 size="sm"
                 onClick={collectBundleInfo}
@@ -438,11 +475,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className="h-6 w-6 p-0"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 ✕
 >>>>>>>               </Button>
             </div>
@@ -485,11 +525,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                         </span>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='text-xs font-medium mb-2'>Largest Chunks:</div>
                 <div className='space-y-1'>
                   {chunks.map((chunk, index) => (
@@ -502,6 +545,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           {index + 1}.
                         </span>
                         <span className='truncate' title={chunk.name}>                          {chunk.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                         </span>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -516,6 +560,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="text-xs font-medium mb-2">Largest Chunks:</div>
                 <div className="space-y-1">
                   {chunks.map((chunk, index) => (
@@ -524,11 +570,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <span className="w-4 text-muted-foreground">{index + 1}.</span>
                         <span className="truncate" title={chunk.name}>
                           {chunk.name}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -537,11 +578,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                         )}
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <Badge
                         className={getSizeColor(chunk.size)}
                         variant='outline'
                       >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                         {formatSize(chunk.size)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -573,12 +618,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-                      <Badge className={getSizeColor(chunk.size)} variant="outline">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                      <Badge className={getSizeColor(chunk.size)} variant="outline">
                         {formatSize(chunk.size)}
                       </Badge>
                     </div>
@@ -593,7 +635,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               )}
             </>
           ) : (
-<<<<<<< HEAD
             <div className='text-xs text-muted-foreground'>
               {isCollecting
                 ? 'Analyzing bundle...'
@@ -604,15 +645,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Card>
     </div>
   )
-<<<<<<< HEAD
-=======
 } 
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="text-xs text-muted-foreground">
               {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
             </div>;
@@ -622,6 +663,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>;
   );
 } ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -637,3 +679,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

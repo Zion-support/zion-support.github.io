@@ -11,11 +11,12 @@ import { UseFormReturn } from "react-hook-form",
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/PaymentTermsFields.tsx
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { UseFormReturn } from "react-hook-form";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -24,6 +25,7 @@ import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSu
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -37,6 +39,9 @@ import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { UseFormReturn } from "react-hook-form",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { 
   FormField;
   FormItem;
@@ -45,6 +50,7 @@ import {
   FormDescription;
   FormMessage 
 } from "@/components/ui/form",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -56,11 +62,15 @@ import { Input } from "@/components/ui/input",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-import { Input } from "@/components/ui/input";
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { Input } from "@/components/ui/input";
 import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { 
   Select;
   SelectContent;
@@ -71,6 +81,7 @@ import {
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
 import { TalentProfile } from "@/types/talent",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -83,17 +94,21 @@ import { ContractFormValues } from "./ContractForm",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
 import { ContractFormValues } from "./ContractForm";
-=======
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PaymentTermsFieldsProps {
 
   form: UseFormReturn<ContractFormValues>
@@ -101,6 +116,7 @@ interface PaymentTermsFieldsProps {
 
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -121,24 +137,25 @@ import {ContractFormValues} from "./ContractForm";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function PaymentTermsFields({
   form;
   talent;
   handleMilestonesGenerated
-=======
 
-<<<<<<< HEAD
 export function PaymentTermsFields({ ;
   form;
   talent;
-=======
 export function PaymentTermsFields({ 
   form,
   talent,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   handleMilestonesGenerated 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }: PaymentTermsFieldsProps) {
   return (
     <>
@@ -164,11 +181,14 @@ export function PaymentTermsFields({
               <FormMessage />
             </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { UseFormReturn } from "react-hook-form",;
 import {;
   FormField,;
@@ -272,6 +292,7 @@ export function PaymentTermsFields({;
               </Select>
               <FormMessage />
             </FormItem>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -418,6 +439,8 @@ export function PaymentTermsFields({ ;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         />
         <FormField
@@ -445,19 +468,22 @@ export function PaymentTermsFields({ ;
       {form.watch("paymentTerms") === "milestone" && (
         <div className="pt-2">
           <MilestoneSuggestions
-<<<<<<< HEAD
             projectName={form.getValues("projectName") |"Project"}
             scopeSummary={form.getValues("scopeSummary") |""}
             startDate={form.getValues("startDate") |new Date()}
             endDate={form.getValues("endDate")}
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" :
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             projectName={form.getValues("projectName") || "Project"}
             scopeSummary={form.getValues("scopeSummary") || ""}
             startDate={form.getValues("startDate") || new Date()}
             endDate={form.getValues("endDate")}
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" : 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -590,6 +616,8 @@ handleMilestonesGenerated
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
             onMilestonesGenerated={handleMilestonesGenerated}
           />

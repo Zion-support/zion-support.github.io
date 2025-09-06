@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -9,12 +10,17 @@ console && console.log('🚀 Starting Advanced App Improvements...');
 #!/usr/bin/env node
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:advanced-app-improvements.js
+#!/usr/bin/env node
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Advanced-app-improvements utility
 export const Advanced-app-improvements = () => {
   // Implementation here
   return null;
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -32,6 +38,9 @@ function createAdvancedMonitoring() {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/advanced-app-improvements.js
+=======
+:backup-problematic-files/advanced-app-improvements.js
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -68,14 +77,11 @@ export class HealthChecker {;
   }
 =======
     'monitoring/health-check.js': `// Advanced health check system
-<<<<<<< HEAD
 export class HealthChecker {
   constructor() {this.checks = new Map();
-=======
 export class HealthChecker {;
   constructor() {;
     this.checks = new Map();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     this.results = new Map();  }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -676,7 +682,6 @@ export class ConnectionPool {
 export const queryOptimizer = new QueryOptimizer();`,
     'database/connection-pool && pool.js': `// Database connection pooling
 export class ConnectionPool {
-<<<<<<< HEAD
   constructor(options = {}) {
 <<<<<<< HEAD
     this && this.maxConnections = options && options.maxConnections || 10;
@@ -687,11 +692,9 @@ export class ConnectionPool {
 =======
     this.maxConnections = options.maxConnections |10;
     this.minConnections = options.minConnections |2;
-=======
   constructor(options = {}) {;
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     this.connections = [];
     this.availableConnections = [];
     this.usedConnections = new Set();
@@ -1043,6 +1046,7 @@ main();// Run if called directly
 if (import && import.meta.url === `file://${process ;
 
 }
+<<<<<<< HEAD
 
 
 =======
@@ -1083,8 +1087,9 @@ export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessi
 ;
 =======
 <<<<<<< HEAD
-export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1099,6 +1104,9 @@ export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessi
 }
 }
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

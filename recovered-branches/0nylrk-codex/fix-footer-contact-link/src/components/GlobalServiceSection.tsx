@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/GlobalServiceSection.tsx
@@ -29,22 +30,24 @@ import { Button } from "./ui/button",
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
-=======
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
 import { Button } from "./ui/button",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const services = [
   {
     title: "Servers"
@@ -86,16 +89,17 @@ const services = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   {
-<<<<<<< HEAD
     title: "Networking"
     description: "Connectivity solutions including switches, routers, and network security devices";
     icon: <Network className="h-10 w-10" />}
-=======
     title: "Networking",
     description: "Connectivity solutions including switches, routers, and network security devices",
     icon: <Network className="h-10 w-10" />},
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     title: "24x7x365 Support"
     description: "Around-the-clock technical support with rapid response times guaranteed"
@@ -143,6 +147,7 @@ export function GlobalServiceSection() {
     </section>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -188,12 +193,16 @@ export function GlobalServiceSection() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
 import { Button } from "./ui/button",;
@@ -416,11 +425,10 @@ icon: <Recycle className="h-10 w-10" />
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/GlobalServiceSection.tsx
 =======
 }
+;
+;
 <<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

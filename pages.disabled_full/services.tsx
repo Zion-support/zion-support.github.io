@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +66,14 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+main
+main
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+main
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react';
 import Link from 'next/link';
@@ -1611,6 +1620,7 @@ export default function Services() {
 		</Layout>
 	);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
@@ -1668,3 +1678,11 @@ export default function Services() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+origin/chore/merge-open-prs
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

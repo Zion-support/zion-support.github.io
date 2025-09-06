@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -23,9 +20,12 @@ export default function CompanyWorkspace() {;
   const { user } = useAuth();
   const { company, isLoading, error } = useCompanyWorkspace(companySlug);
   const { isWhitelabel, tenant, brandName } = useWhitelabel();
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -36,29 +36,33 @@ import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useWhitelabel } from "@/context/WhitelabelContext";
 export default function CompanyWorkspace() {
   const { companySlug } = useParams() as { companySlug?: string }
   const { user } = useAuth();
   const { company, isLoading, error } = useCompanyWorkspace(companySlug);
   const { isWhitelabel, tenant, brandName } = useWhitelabel();
-=======
 import { useWhitelabel } from "@/context/WhitelabelContext",
 export default function CompanyWorkspace() {
   const { companySlug } = useParams() as { companySlug?: string },
   const { user } = useAuth(),
   const { company, isLoading, error } = useCompanyWorkspace(companySlug),
   const { isWhitelabel, tenant, brandName } = useWhitelabel(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
 
@@ -81,6 +85,7 @@ export default function CompanyWorkspace() {
   const hasAccess = true, // For demo purposes, always grant access
   if (!hasAccess) {
     return <Navigate to="/unauthorized" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -124,16 +129,19 @@ import {useWhitelabel} from "@/context/WhitelabelContext";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return (
     <ProtectedRoute>
-<<<<<<< HEAD
       <SEO
-=======
       <SEO 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -205,6 +213,7 @@ export default function CompanyWorkspace() {;
     <ProtectedRoute>;
       <SEO;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -219,6 +228,8 @@ export default function CompanyWorkspace() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
@@ -232,6 +243,7 @@ export default function CompanyWorkspace() {;
       <Footer />
     </ProtectedRoute>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -460,16 +472,15 @@ export default function CompanyWorkspace() {_const { companySlug} = useParams() 
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CompanyWorkspace.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
 }
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
@@ -18,6 +19,8 @@ useEffect(() => { refresh() }, []);
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react',;
 import type { NextPage } from 'next',;
 import type { Review } from '../../types/reviews',;
@@ -35,12 +38,9 @@ const AdminReviewsPage: NextPage = () => {
       setAll(data.reviews),
       setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import type { Review } from '../../types/reviews';
-<<<<<<< HEAD
 
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') |'dev-admin-key')
 const AdminReviewsPage: NextPage = () => {
@@ -66,7 +66,6 @@ const AdminReviewsPage: NextPage = () => {
     body: JSON.stringify({ action, reviewId })});
     if (res.ok) refresh()
   }
-=======
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
 const AdminReviewsPage: NextPage = () => {;
   const [pending, setPending] = useState<Review[]>([]);
@@ -81,10 +80,6 @@ const AdminReviewsPage: NextPage = () => {;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
     } catch (error) {
@@ -108,6 +103,7 @@ const AdminReviewsPage: NextPage = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -121,6 +117,8 @@ const AdminReviewsPage: NextPage = () => {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -164,6 +162,7 @@ const AdminReviewsPage: NextPage = () => {;
     </main>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 },
@@ -187,6 +186,8 @@ export default AdminReviewsPage,
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default AdminReviewsPage;
 import React, { useEffect, useState } from 'react',
@@ -261,6 +262,7 @@ export default AdminReviewsPage,
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className=&quot;enhanced-card&quot;>
         <h2 className=&quot;text-xl font-semibold mb-2&quot;>All Reviews</h2>
         <pre className=&quot;text-xs whitespace-pre-wrap&quot;>{JSON.stringify(all, null, 2)}</pre>
@@ -274,17 +276,18 @@ export default AdminReviewsPage
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 export default AdminReviewsPage,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 },
-<<<<<<< HEAD
 
 export default AdminReviewsPage,;
-=======
 export default AdminReviewsPage,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

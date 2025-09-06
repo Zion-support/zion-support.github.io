@@ -13,39 +13,38 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-=======
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TalentPool() {
   // Mock talent data
 
   const talents = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: "talent-1"
       name: "Jessica Lee"
       role: "UI/UX Designer"
@@ -70,17 +69,17 @@ export function TalentPool() {
       match: 88
     }
   ];
-=======
       id: "talent-1",
       name: "Jessica Lee",
-<<<<<<< HEAD
       role: "UI/UX Designer",;
       skills: ["Figma", "Sketch", "User Testing"];
-=======
       role: "UI/UX Designer",
       skills: ["Figma", "Sketch", "User Testing"],
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       status: "available",
       match: 95
     },
@@ -119,8 +118,11 @@ import {Button} from "@/components/ui/button";
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getStatusBadge = (status: string) => {
     switch (status) {
       case "available": return <Badge className="bg-green-500">Available</Badge>,
@@ -133,17 +135,22 @@ import {Button} from "@/components/ui/button";
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Card>
@@ -175,9 +182,12 @@ import {Button} from "@/components/ui/button";
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Badge key={index} variant="secondary" className="text-xs">
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/TalentPool.tsx
@@ -558,11 +568,6 @@ return (<Card> <CardHeader> <div className="flex items-center justify-between" >
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Badge key={index} variant="secondary" className="text-xs">
                     {skill}
                   </Badge>
@@ -574,18 +579,19 @@ return (<Card> <CardHeader> <div className="flex items-center justify-between" >
               </div>
             </div>
           ))}
-<<<<<<< HEAD
         </div>
       </CardContent>
     </Card>
   )
 }
-=======
         </div>;
       </CardContent>;
     </Card>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

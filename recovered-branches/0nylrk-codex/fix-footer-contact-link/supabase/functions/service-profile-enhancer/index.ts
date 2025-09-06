@@ -14,8 +14,6 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface ServiceProfileData {
@@ -30,13 +28,15 @@ interface ServiceProfileData {
 
   services?: string[]
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -45,11 +45,14 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ServiceProfileData {
   name: string,
   title: string,
   bio: string,
   services?: string[],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -60,6 +63,8 @@ interface ServiceProfileData {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   location: string
 }
 serve(async (req) => {
@@ -67,6 +72,7 @@ serve(async (req) => {
     // CORS headers
 
     const headers = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -79,10 +85,16 @@ serve(async (req) => {
       "Content-Type": "application/json"}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      "Access-Control-Allow-Origin": "*";
+      "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type";
+      "Content-Type": "application/json"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
       "Content-Type": "application/json"},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -119,36 +131,45 @@ serve(async (req) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Handle CORS preflight request
     if (req.method === "OPTIONS") {
       return new Response(null, { headers, status: 204 })
     }
-<<<<<<< HEAD
     const reqData = await req.json();
     const providerData = reqData.providerData as ServiceProfileData;
-=======
 
     const reqData = await req.json(),
     const providerData = reqData.providerData as ServiceProfileData,
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Validate input
     if (!providerData |!providerData.bio) {
       return new Response(
         JSON.stringify({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           error: "Missing required service provider data"});
         { headers, status: 400 }
       )
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           error: "Missing required service provider data"}),
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 interface ServiceProfileData {;
@@ -249,21 +270,18 @@ serve(async (req) => {;
         { headers, status: 400 }
       );
     }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Get OpenAI API key from environment
     const apiKey = Deno.env.get("OPENAI_API_KEY"),
     if (!apiKey) {
       return new Response(
         JSON.stringify({
-<<<<<<< HEAD
           error: "OpenAI API key not configured"});
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           error: "OpenAI API key not configured"}),
 ;
     // Get OpenAI API key from environment;
@@ -272,6 +290,7 @@ serve(async (req) => {;
       return new Response(;
         JSON.stringify({;
           error: "OpenAI API key not configured"}),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -288,6 +307,8 @@ serve(async (req) => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         { headers, status: 500 }
       )
     }
@@ -300,6 +321,7 @@ serve(async (req) => {;
     Business/Service Title: ${providerData.title}
     Location: ${providerData.location}
     Current Bio: ${providerData.bio}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -328,21 +350,23 @@ serve(async (req) => {;
 
 =======
 <<<<<<< HEAD
-    ${providerData.services && providerData.services.length > 0
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    ${providerData.services && providerData.services.length > 0
     ${providerData.services && providerData.services.length > 0 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       ? `Current Services: ${providerData.services.join(", ")}`
       : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
-<<<<<<< HEAD
     Only respond with JSON in this exact format: {
       "summary": "Professional summary goes here..."
       "services": ["Service 1", "Service 2", "Service 3", ...]
     }
     `;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     Only respond with JSON in this exact format:
     {
       "summary": "Professional summary goes here...",
@@ -423,22 +447,17 @@ serve(async (req) => {;
 =======
     `,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
-<<<<<<< HEAD
         Authorization: `Bearer ${apiKey}`;
         "Content-Type": "application/json"}
-=======
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       body: JSON.stringify({
         model: "gpt-4",
         messages: [
           {
-<<<<<<< HEAD
             role: "system"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             content: "You are an expert at creating professional service descriptions for marketplaces."}
@@ -453,8 +472,11 @@ serve(async (req) => {;
         temperature: 0.7
         max_tokens: 800})});
     const responseData = await response.json();
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             role: "system",
             content: "You are an expert at creating professional service descriptions for marketplaces."},
           {
@@ -465,6 +487,7 @@ serve(async (req) => {;
 
     const responseData = await response.json(),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -477,18 +500,20 @@ serve(async (req) => {;
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!response.ok) {
       console.error("OpenAI API error:", responseData),
       return new Response(
         JSON.stringify({
-<<<<<<< HEAD
-<<<<<<< HEAD
           error: "Failed to generate enhanced profile content"
-=======
           error: "Failed to generate enhanced profile content",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           details: responseData});
         { headers, status: 500 }
       )
@@ -501,6 +526,7 @@ serve(async (req) => {;
           summary: parsedContent.summary
           services: parsedContent.services});
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -509,6 +535,9 @@ serve(async (req) => {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          error: "Failed to generate enhanced profile content",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           details: responseData}),
     ${providerData.services && providerData.services.length > 0;
       ? `Current Services: ${providerData.services.join(", ")}`;
@@ -595,6 +624,7 @@ if ( {) {
           summary: parsedContent.summary,;
           services: parsedContent.services}),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     try {
 
@@ -613,6 +643,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         { headers, status: 200 }
       )
     } catch (error) {
@@ -631,19 +663,17 @@ if ( {) {
 =======
       return new Response(
         JSON.stringify({
-<<<<<<< HEAD
-<<<<<<< HEAD
           error: "Failed to parse AI response"
           raw: responseData.choices[0]?.message?.content});
-=======
           error: "Failed to parse AI response",
-=======
           error: "Failed to parse AI response",
-<<<<<<< HEAD
           raw: responseData.choices[0]?.message?.content});
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           raw: responseData.choices[0]?.message?.content}),
       );
     } catch (error) {;
@@ -652,6 +682,7 @@ if ( {) {
         JSON.stringify({;
           error: "Failed to parse AI response",;
           raw: responseData.choices[0]?.message?.content}),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         JSON && JSON.stringify({
@@ -723,6 +754,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         { headers, status: 500 }
       )
     }
@@ -730,14 +763,12 @@ if ( {) {
     console.error("Function error:", error),
     return new Response(
       JSON.stringify({
-<<<<<<< HEAD
         error: "Internal server error"});
       {
         headers: {
           "Content-Type": "application/json"
           "Access-Control-Allow-Origin": "*"}
         status: 500
-=======
         error: "Internal server error"}),
       { 
         headers: {
@@ -745,11 +776,14 @@ if ( {) {
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {;
     console.error("Function error:", error),;
     return new Response(;
@@ -760,6 +794,7 @@ if ( {) {
           "Content-Type": "application/json",;
           "Access-Control-Allow-Origin": "*"},;
         status: 500;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -989,12 +1024,16 @@ raw: responseData.choices[0]?.message?.content
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     )
   }
 });
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

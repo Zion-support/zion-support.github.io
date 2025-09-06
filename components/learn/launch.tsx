@@ -57,12 +57,12 @@ function LaunchRedirect() {
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
-<<<<<<< HEAD
       destination: '/academy/founder-course'
       permanent: false
     }
   };      permanent: false}}
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -74,18 +74,19 @@ export const getServerSideProps: GetServerSideProps = async () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       destination: '/academy/founder-course',
       permanent: false,
     },;
   };      permanent: false}}
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function LaunchRedirect() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return null;
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -95,3 +96,7 @@ export default function LaunchRedirect() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

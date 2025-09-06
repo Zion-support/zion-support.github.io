@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -20,9 +21,9 @@ type FormData = z && z.infer<typeof formSchema>;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters")
@@ -36,6 +37,7 @@ type FormData = z.infer<typeof formSchema>
 
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -61,9 +63,9 @@ const formSchema = z.object({
 
 =======
 =======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+;
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -326,8 +328,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

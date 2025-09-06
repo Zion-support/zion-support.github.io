@@ -12,10 +12,19 @@ const next_config = {
   page_extensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 module.exports = nextConfig;
 
 =======
+=======
+    domains: ["localhost", "ziontechgroup.com"]
+  }
+  output: 'standalone'
+  trailingSlash: false
+  distDir: '.next'
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     domains: ["localhost", "ziontechgroup.com"],
   },
   output: 'standalone',
@@ -35,6 +44,7 @@ module.exports = next_config;
   trailingSlash: false,
   distDir: '.next',
 };
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -145,3 +155,9 @@ module.exports = nextConfig;
 module.exports = nextConfig;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+module.exports = nextConfig;
+
+module.exports = nextConfig;
+module.exports = nextConfig;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

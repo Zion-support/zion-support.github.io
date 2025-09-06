@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/RedeemTokensCard.tsx
@@ -15,12 +16,16 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Gift, ArrowRight, ExternalLink} from "lucide-react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -30,6 +35,8 @@ import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Dia
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -42,6 +49,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -60,6 +68,9 @@ import {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type RewardOption = {
   id: string
   title: string
@@ -68,6 +79,7 @@ type RewardOption = {
   type: 'credit' | 'feature' | 'course'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -78,12 +90,16 @@ type RewardOption = {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week'
@@ -92,6 +108,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     cost: 100
     type: 'feature'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -102,11 +119,15 @@ const REWARD_OPTIONS: RewardOption[] = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: 'resume-review'
     title: 'AI Resume Review'
@@ -114,6 +135,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     cost: 50
     type: 'feature'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -124,11 +146,15 @@ const REWARD_OPTIONS: RewardOption[] = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: 'platform-credit'
     title: '$5 Platform Credit'
@@ -138,6 +164,7 @@ const REWARD_OPTIONS: RewardOption[] = [
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -148,31 +175,33 @@ const REWARD_OPTIONS: RewardOption[] = [
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet();
   const [open, setOpen] = useState(false);
-=======
 ],
 
-<<<<<<< HEAD
 export function RedeemTokensCard() {;
   const { wallet, spendTokens } = useWallet();
   const [open, setOpen] = useState(false);
-=======
 export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet(),
   const [open, setOpen] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleRedeem = async (option: RewardOption) => {
     if (!wallet |wallet.balance < option.cost) return
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -181,11 +210,15 @@ export function RedeemTokensCard() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Card>
@@ -246,6 +279,7 @@ export function RedeemTokensCard() {
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -260,6 +294,9 @@ export function RedeemTokensCard() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -684,11 +721,10 @@ flex items-center gap-2"> <Gift className=" h-5 w-5"/> Redeem Rewards </CardTitl
 =======
     </Card>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

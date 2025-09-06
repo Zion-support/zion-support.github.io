@@ -5,18 +5,20 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -24,6 +26,8 @@ import {toast} from '@/hooks/use-toast';
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -145,8 +149,11 @@ export function useMessages(;
       );
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
@@ -189,6 +196,7 @@ export function useMessages(;
       if (unreadMessages.length > 0) {;
         await markAsRead(conversationId);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -202,12 +210,15 @@ export function useMessages(;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -220,12 +231,16 @@ export function useMessages(;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   };
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   /**
    * Send a message to an existing conversation
    */
@@ -273,6 +288,7 @@ export function useMessages(;
         setActiveMessages(prev => [...prev, data as Message])
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -288,6 +304,10 @@ export function useMessages(;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      // Update conversations list
+      await fetchConversations();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   /**;
    * Send a message to an existing conversation;
@@ -319,6 +339,7 @@ export function useMessages(;
         setActiveMessages(prev => [...prev, data as Message]);
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       // Update conversations list
@@ -333,10 +354,13 @@ export function useMessages(;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       // Update conversations list
       await fetchConversations(),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -349,21 +373,25 @@ export function useMessages(;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Return the sent message
       return data
     } catch (error) {
       console.error('Error sending message:', error),
       toast({
-<<<<<<< HEAD
         title: "Failed to send message";
         description: "Please try again later"
         variant: "destructive"
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   /**
@@ -535,14 +563,10 @@ if ( {) {
 =======
 
     markAsRead
-=======
-<<<<<<< HEAD
         title: "Failed to send message",
         description: "Please try again later",
         variant: "destructive"
       })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       // Update conversations list;
       await fetchConversations(),;
@@ -605,6 +629,7 @@ if ( {) {
     loadMessages;
     sendMessage;
     markAsRead;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -879,6 +904,8 @@ return updatedConversations.reduce ( (total, conv) => total + (conv.unread count
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

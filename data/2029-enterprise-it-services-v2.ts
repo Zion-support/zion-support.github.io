@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -9,9 +10,10 @@ export interface EnterpriseITService2029V2 {
 address: string;
 =======
 =======
+=======
+export interface EnterpriseITService2029V2 {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface EnterpriseITService2029V2 {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   description: string;
@@ -550,6 +552,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
     funding: 'Series B funding, $180M valuation'
     exit: 'IPO or enterprise acquisition'
     contact: {
+<<<<<<< HEAD
 
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
 
@@ -681,20 +684,20 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Quantum computing resourcesQuantum-safe encryptionHybrid quantum-classical computingQuantum networking capabilitiesQuantum storage solutionsQuantum security protocolsPerformance optimizationScalable quantum resources'
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-=======
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -840,6 +843,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       website: 'https://ziontechgroup.com'
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
+<<<<<<< HEAD
 
   id: string,;
   name: string,;
@@ -1132,10 +1136,12 @@ export interface EnterpriseITService2029V2 {;
 ;
 =======
 =======
+=======
+    }
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface EnterpriseITService2029V2 {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   description: string,;
@@ -1364,13 +1370,12 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
       email: 'kleber@ziontechgroup.com',;
       website: 'https://ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

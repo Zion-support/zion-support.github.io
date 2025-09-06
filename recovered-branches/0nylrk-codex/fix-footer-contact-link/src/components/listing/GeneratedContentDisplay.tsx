@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/listing/GeneratedContentDisplay.tsx
 
 <<<<<<< HEAD
@@ -45,26 +46,28 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-=======
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { ArrowRight } from "lucide-react";
 
 import {
-<<<<<<< HEAD
   Card
   CardContent
   CardFooter
   CardHeader
   CardTitle
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Card,
   CardContent,
   CardFooter,
@@ -96,17 +99,20 @@ interface GeneratedContentDisplayProps {;
 
 =======
   CardTitle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/card";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -122,10 +128,14 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -135,6 +145,8 @@ interface GeneratedContent {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     min: number;
 
     max: number;
@@ -143,8 +155,11 @@ interface GeneratedContent {
 
 }
 interface GeneratedContentDisplayProps {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     min: number,
     max: number
   },
@@ -166,6 +181,7 @@ interface GeneratedContent {;
 ;
 interface GeneratedContentDisplayProps {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -183,19 +199,22 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   content: GeneratedContent;
   onApply: () => void
 }
-<<<<<<< HEAD
 export function GeneratedContentDisplay({
   content
   onApply
 }: GeneratedContentDisplayProps) {
-=======
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -444,57 +463,29 @@ function GeneratedContentDisplay() {
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
           <p className="text-white">{content.description}</p>
         </div>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
-<<<<<<< HEAD
               <Badge
                 key={index}
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30"
               >
-=======
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {tag}
               </Badge>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
@@ -515,20 +506,24 @@ function GeneratedContentDisplay() {
         </Button>
       </CardFooter>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
@@ -537,14 +532,18 @@ function GeneratedContentDisplay() {
         </Button>;
       </CardFooter>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Card>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -607,3 +606,5 @@ onApply: () => void
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

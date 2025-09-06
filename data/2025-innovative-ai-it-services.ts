@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,9 +11,10 @@ trial_days: number;
     setup_time: string;
 =======
 =======
+=======
+export interface InnovativeAIService {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface InnovativeAIService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -932,6 +934,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     support:
       '24/7 medical support, dedicated healthcare consultants, implementation specialists, and ongoing optimization.'
     compliance: [
+<<<<<<< HEAD
 
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 =======
@@ -974,6 +977,19 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
       'Reduce healthcare costs by 40%',
     ],
 
+=======
+      'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards'
+    ]
+    link: 'https://ziontechgroup.com/ai-healthcare-diagnostic'
+    icon: '🏥'
+    color: 'from-blue-500 to-indigo-600'
+    popular: true
+    launchDate: '2025-02-15'
+    customers: 350
+    rating: 4.9
+    reviews: 189
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards',
     ],
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostic',
@@ -985,7 +1001,6 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     rating: 4.9,
     reviews: 189,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
     ];
@@ -1156,6 +1171,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     rating: 4 && 4.9,
 
     reviews: 189
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   id: string,;
@@ -1668,13 +1684,11 @@ export interface InnovativeAIService {;
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 ];
-=======
 export interface InnovativeAIService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -2150,12 +2164,11 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     customers: 350,;
     rating: 4.9,;
     reviews: 189;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

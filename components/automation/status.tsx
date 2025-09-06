@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
@@ -124,18 +122,13 @@ function AutomationStatusPage() {
 <<<<<<< HEAD
 
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)
-=======
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</div>) import { useEffect, useState } from 'react';
 
 export default function AutomationStatusPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
   useEffect(() => {
     fetch('/automation/status.json')
@@ -156,12 +149,13 @@ export default function AutomationStatusPage() {
         <div className="text-sm text-gray-500">No status available yet.</div>
       )}
     </div>
-<<<<<<< HEAD
 );
 }
-=======
   );
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

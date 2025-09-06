@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -37,18 +38,25 @@ import {
 import {
 =======
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu
   X
   ChevronDown
@@ -187,6 +195,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 =======
 import {
 =======
@@ -195,6 +204,8 @@ import {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu,
   X,
   ChevronDown,
@@ -313,6 +324,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -320,6 +332,8 @@ import {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -1373,7 +1387,6 @@ const companyLinks = [
         price: '$2,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'Holographic Event Platform'
         href: '/holographic-event-platform'
         description: 'Immersive holographic experiences'
@@ -1386,7 +1399,6 @@ const companyLinks = [
       { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
     ]
   }
-=======
         name: 'Holographic Event Platform',
         href: '/holographic-event-platform',
         description: 'Immersive holographic experiences',
@@ -1399,18 +1411,11 @@ const companyLinks = [
       { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
     ]
   }
-<<<<<<< HEAD
 
 ];
-=======
-<<<<<<< HEAD
-=======
 
 ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -1468,6 +1473,7 @@ const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1479,12 +1485,16 @@ export default function UltraFuturisticNavigation2034() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export default function UltraFuturisticNavigation2034() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function UltraFuturisticNavigation2034() {
 
 export default function UltraFuturisticNavigation2034() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -1614,11 +1624,15 @@ export default function UltraFuturisticNavigation2034() {;
             <div className='flex items-center space-x-2'>
               <Phone className='w-4 h-4 text-cyan-400' />
               <span className='hover:text-cyan-400 transition-colors'>
+<<<<<<< HEAD
 
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {contactInfo.mobile}
               </span>
             </div>
@@ -1718,6 +1732,7 @@ export default function UltraFuturisticNavigation2034() {;
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               className='flex items-center space-x-3'
+<<<<<<< HEAD
 
 =======
 =======
@@ -1838,6 +1853,9 @@ className="flex items-center space-x-3"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -1900,6 +1918,7 @@ className="flex items-center space-x-3"
             </motion && motion.div>;
             {/* Desktop Navigation */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   {link.name}
@@ -1911,6 +1930,8 @@ className="flex items-center space-x-3"
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='hidden lg:flex items-center space-x-8'>
               {quickLinks.map(link => (
                 <Link
@@ -1936,21 +1957,19 @@ className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {link.name}
                 </Link>
               ))}
-=======
-=======
 
                 >
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {link.name}
                 </Link>
               ))}
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -2264,18 +2283,12 @@ function UltraFuturisticNavigation2034() {
                     <Link
 =======
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
-=======
-<<<<<<< HEAD
 
                 >
                   {link.name}
                 </Link>
               ))}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             >
                               {service.name}
                             </Link>
@@ -2381,6 +2394,7 @@ function UltraFuturisticNavigation2034() {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2428,12 +2442,9 @@ function UltraFuturisticNavigation2034() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -2486,6 +2497,7 @@ className="block text-gray-300 hover:text-cyan-400 transition-colors duration-20
                   </Link>
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2494,9 +2506,9 @@ className="block text-gray-300 hover:text-cyan-400 transition-colors duration-20
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
                 {/* Mobile Services Accordion */}
                 {serviceCategories.map((category) => (
                   <div key={category.title} className="border-b border-cyan-500/20 pb-4">
@@ -2509,6 +2521,7 @@ className="block text-gray-300 hover:text-cyan-400 transition-colors duration-20
                         activeDropdown === category.title ? 'rotate-180' : ''
                       }`} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -2519,6 +2532,9 @@ className="block text-gray-300 hover:text-cyan-400 transition-colors duration-20
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -2689,10 +2705,7 @@ className='mt - 3 ml - 4 space - y-2';
                     </AnimatePresence>
                   </div>
                 ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <Link
                   href='/contact'
                   onClick={() => setIsOpen(false)}
@@ -2770,7 +2783,6 @@ className='mt - 3 ml - 4 space - y-2';
 =======
         </AnimatePresence>
       </nav>
-<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
@@ -2778,12 +2790,12 @@ className='mt - 3 ml - 4 space - y-2';
     </>
   );
 }
-=======
 
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2791,3 +2803,5 @@ className='mt - 3 ml - 4 space - y-2';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,9 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 
 <<<<<<< HEAD
 =======
+=======
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Calendar
+  Clock
+  Users
+  CheckCircle
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Video
+  MessageSquare
+  Building
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Calendar,
   Clock,
   Users,
@@ -15,9 +34,12 @@ import {
   Video,
   MessageSquare,
   Building,;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "lucide-react";
 const timeSlots = [
   { time: "9:00 AM", available: true, type: "Video Call" }

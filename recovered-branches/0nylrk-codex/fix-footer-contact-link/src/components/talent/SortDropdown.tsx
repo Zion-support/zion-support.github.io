@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 
@@ -22,6 +23,15 @@ import { SortDesc, ChevronDown  } from './lucide-react';
 =======
 import React from "react",
 import { Button } from "@/components/ui/button",
+=======
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {SORT_OPTIONS} from "@/data/sortOptions";
+import {SortDesc, ChevronDown} from "lucide-react";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import React from "react",
+import { Button } from "@/components/ui/button",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SORT_OPTIONS } from "@/data/sortOptions";
 import { SortDesc, ChevronDown } from "lucide-react";
 import {
@@ -31,6 +41,16 @@ import {
   DropdownMenuItem
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
+<<<<<<< HEAD
+=======
+import { SORT_OPTIONS } from "@/data/sortOptions",
+import { SortDesc, ChevronDown } from "lucide-react",
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 interface SortDropdownProps {
   sortOption: string;
@@ -232,6 +252,7 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -240,6 +261,12 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
                 ? "bg-zion-purple/20 text-zion-purple"
                 : ""
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              sortOption === option.value
+                ? "bg-zion-purple/20 text-zion-purple"
+                : ""
+              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }`}
           >
             {option.label}
@@ -248,9 +275,14 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
       </DropdownMenuContent>
     </DropdownMenu>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { SORT_OPTIONS } from "@/data/sortOptions",;
@@ -297,6 +329,7 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
         ))}
       </DropdownMenuContent>;
     </DropdownMenu>;
+<<<<<<< HEAD
 
   );
 <<<<<<< HEAD
@@ -345,3 +378,9 @@ setSortOption: (option: string) => void
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -4,6 +4,7 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Head from 'next/head';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -315,18 +316,14 @@ function Update202508150404() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react'
 
-=======
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React from 'react',
-=======
 import React from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Update202508150404() {
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -375,7 +372,6 @@ export default function Update202508150404() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <section className='mx-auto max-w-4xl'>
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-8'>
-<<<<<<< HEAD
               <h2 className='text-2xl font-bold mb-4 text-cyan-400'>
                 Security & Monitoring
               </h2>
@@ -443,12 +439,6 @@ export default function Update202508150404() {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <h2 className='text-2xl font-bold mb-4 text-green-400'>
                 Automation Metrics
               </h2>
@@ -471,20 +461,19 @@ export default function Update202508150404() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
   );}
 
 =======
 <<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   );
   } catch (error) {
     console.error("Error:", error);
@@ -492,9 +481,12 @@ export default function Update202508150404() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

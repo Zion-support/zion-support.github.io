@@ -1,19 +1,23 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useRouter  } from 'next/router';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-import React, { useState, useEffect, useRef } from 'react';
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState, useEffect, useRef } from 'react';
+import { useRouter  } from 'next/router';
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
 import { Input } from '@/components/ui/input'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Search, X } from 'lucide-react'
 import { Input  } from '@/components/ui/input';
 import { AutocompleteSuggestions  } from '@/components/search/AutocompleteSuggestions';
@@ -41,6 +45,7 @@ interface SearchBarProps {
   /**
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   /**
 =======
@@ -53,16 +58,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>   /**
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
    * The current value of the search input
    */
 
   value: string;  value: string
 
-=======
    * The current value of the search input;
    */;
   value: string;  value: string,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   /**
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
    * Function to call when the search input changes
@@ -115,11 +120,15 @@ export function SearchBar({
 
 export function SearchBar({
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   value
   onChange
   onSelectSuggestion
   placeholder = 'Search...'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
@@ -129,11 +138,12 @@ export function SearchBar({
   const [highlightedIndex, setHighlightedIndex] = useState(-1)
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   value,
   onChange,
   onSelectSuggestion,;
   placeholder = 'Search...';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
@@ -254,6 +264,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
             const relatedTarget = e.relatedTarget as HTMLElement
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             if (
@@ -261,13 +272,17 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
               !containerRef.current?.contains(relatedTarget)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             if (
               !relatedTarget |
               !containerRef.current?.contains(relatedTarget)
-=======
             if (true) {}
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ) {
               setFocused(false)
               setHighlightedIndex(-1)
@@ -282,6 +297,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           autoComplete='search'
           onKeyDown={e => {            if (!focused |suggestions.length === 0) {
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -299,6 +315,8 @@ import { useDebounce } from '@/hooks/useDebounce';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef } from 'react',;
 import { useRouter } from 'next/router',;
 import { Search, X } from 'lucide-react';
@@ -533,6 +551,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>           aria-autocomplete="list"
@@ -549,18 +568,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
-<<<<<<< HEAD
             if (!focused |suggestions.length === 0) {
               if (e.key === 'Escape') {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 e.preventDefault()
                 setFocused(false)
                 setHighlightedIndex(-1)
@@ -633,19 +656,24 @@ ursor/fix-website-loading-errors-and-merge-6662
               default:
                 break }              default: break
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 <<<<<<< HEAD
-
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             if (!focused || suggestions.length === 0) {
               if (e.key === 'Escape') {
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 e.preventDefault(),
                 setFocused(false),
                 setHighlightedIndex(-1),
@@ -772,24 +800,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                 inputRef.current?.blur();
                 break;
               default: break;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }
           }}
         />
         {value && (
           <button
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white'
             onClick={() => onChange('')}
             aria-label='Clear search'          >
             <X className='h-4 w-4' />          </button>
             <X className="h-4 w-4" />
             onClick={() => onChange('')}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             aria-label="Clear search"
           >
@@ -800,19 +827,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
           </button>
         )}
-<<<<<<< HEAD
       </div>
       <AutocompleteSuggestions
         suggestions = {suggestions,}
@@ -842,16 +865,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 }/> </div>)
 }'"  )
 }
-<<<<<<< HEAD
-=======
 ;
 }
 }
 }
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
       <AutocompleteSuggestions;
         suggestions={suggestions}
@@ -899,8 +923,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
@@ -20,6 +21,9 @@ import React from 'react';
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {DayPicker} from "react-day-picker";
@@ -32,14 +36,18 @@ export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
 =======
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react",
 import { DayPicker } from "react-day-picker",
 import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -50,6 +58,9 @@ export type CalendarProps = React.ComponentProps<typeof DayPicker>,
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function Calendar({
   className,
   classNames,
@@ -68,9 +79,12 @@ function Calendar({
         nav: "space-x-1 flex items-center"
         nav_button: cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           buttonVariants({ variant: "outline" })
           "h-7 w-7 bg-transparent p-0 opacity-50 hover: opacity-100"
         )
@@ -95,7 +109,6 @@ function Calendar({
         ...classNames}}
       components={{
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />
-=======
           buttonVariants({ variant: "outline" }),
           "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
         ),
@@ -126,11 +139,14 @@ function Calendar({
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { DayPicker } from "react-day-picker",;
@@ -182,6 +198,7 @@ function Calendar({;
         ...classNames}}
       components={{;
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
@@ -332,25 +349,26 @@ export { Calendar }
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
       {...props}
     />
   )
 }
-<<<<<<< HEAD
 Calendar.displayName = "Calendar";
 export { Calendar }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 Calendar.displayName = "Calendar",
 
 export { Calendar },
 Calendar.displayName = "Calendar";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export { Calendar };
@@ -455,3 +473,6 @@ day hidden: "invisible";
 export { Calendar };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export { Calendar };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

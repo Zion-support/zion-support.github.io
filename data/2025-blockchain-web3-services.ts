@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -14,6 +15,10 @@ export interface BlockchainWeb3Service {;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface BlockchainWeb3Service {
+export interface BlockchainWeb3Service {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -548,12 +553,15 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     support:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 =======
       'Community support, developer documentation, custom development services, and enterprise solutions.',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Community support, developer documentation, custom development services, and enterprise solutions.'
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001']
     link: 'https://ziontechgroup.com/web3-social-media-platform'
@@ -565,10 +573,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     rating: 4.6
     reviews: 18000
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup.com/web3-social-media-platform',
@@ -580,7 +591,6 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     rating: 4.6,
     reviews: 18000,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
     ];
@@ -722,6 +732,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     rating: 4 && 4.6,
 
     reviews: 18000
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   id: string,;
@@ -1020,13 +1031,11 @@ export interface BlockchainWeb3Service {;
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 ];
-=======
 export interface BlockchainWeb3Service {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1288,12 +1297,11 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     customers: 25000,;
     rating: 4.6,;
     reviews: 18000;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

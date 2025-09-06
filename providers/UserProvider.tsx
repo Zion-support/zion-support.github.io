@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:providers/UserProvider.tsx
 =======
 
@@ -52,8 +53,9 @@ export type UserContextValue = {;
   logout: () => void;
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, {
-<<<<<<< HEAD
   createContext
   useContext
   useEffect
@@ -61,7 +63,6 @@ import React, {
   useState;} from 'react';} from 'react';
 export type UserRole = 'client' | 'talent';
 export type User = {
-=======
   createContext,
   useContext,
   useEffect,
@@ -70,45 +71,30 @@ export type User = {
 
 export type UserRole = 'client' | 'talent';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 export type UserRole = 'client' | 'talent';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export type User = {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   role: UserRole;
   avatarUrl?: string;
   onboardingCompleted: boolean;
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 export type UserContextValue = {
   user: User | null;
   setUser: (user: User | null) => void;
   logout: () => void;
   completeOnboarding: () => void;};}
-=======
-<<<<<<< HEAD
 };
 
-=======
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export type UserContextValue = {;
   user: User | null;
   setUser: (user: User | null) => void;
   logout: () => void;
-<<<<<<< HEAD
   completeOnboarding: () => void;};};
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const UserContext = createContext<UserContextValue | undefined>(undefined);
 const DEFAULT_USER: User = {
   id: 'u_001'
@@ -119,16 +105,17 @@ const DEFAULT_USER: User = {
 export function UserProvider({ children }: { children: React.ReactNode }) {  const [user, setUser] = useState<User | null>(null);  const [user, setUser] = useState<User | null>(null);
   useEffect(() => {
     try {
-=======
-<<<<<<< HEAD
 ;
 export type UserContextValue = {;
   user: User | null;
   setUser: (user: User | null) => void;
   logout: () => void;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   completeOnboarding: () => void;
 }
 ;
@@ -143,6 +130,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
   const [user, setUser] = useState<User | null>(null);
   useEffect(() => {;
     try {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -189,6 +177,8 @@ export type UserContextValue = {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const raw = localStorage.getItem('zion.user');
       if (raw) {
         setUser(JSON.parse(raw));
@@ -397,11 +387,7 @@ export function UserProvider({ children } { children:React.ReactNode }) {;
       setUser(DEFAULT_USER);
     }
   }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   useEffect(() => {
     try {
       if (user) localStorage.setItem('zion.user', JSON.stringify(user));
@@ -449,17 +435,18 @@ export function UserProvider({ children } { children:React.ReactNode }) {;
         setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),    }),    })
     [user]
   );
-<<<<<<< HEAD
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 export function useUser() {
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {;
     try {;
       if (user) localStorage.setItem('zion.user', JSON.stringify(user));
@@ -475,6 +462,7 @@ export function useUser() {
     setUser;
     logout: () => setUser(null);
     completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true } : prev)}), [user]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -503,6 +491,8 @@ export function useUser() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -510,6 +500,7 @@ export function useUser() {;
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:providers/UserProvider.tsx
 
@@ -639,12 +630,13 @@ function use_user() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/providers/UserProvider.tsx
 =======
 <<<<<<< HEAD
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
+}
 <<<<<<< HEAD
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

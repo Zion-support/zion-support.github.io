@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -34,6 +35,30 @@ import React from 'react';
 
 import {
 
+=======
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+import React from 'react';
+ursor/integrate-build-improve-and-re-verify-8f7d
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+origin/main
+origin/automation-improvements-final
+import {
+  Code
+  Check
+  Globe
+  Shield
+  Zap
+  Database
+  Cpu
+  Cloud
+  XCircle
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Code,
   Check,
   Globe,
@@ -43,9 +68,12 @@ import {
   Cpu,
   Cloud,
   XCircle,;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
@@ -97,6 +125,7 @@ export default function APIPage() {
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -216,16 +245,22 @@ export default function APIPage() {
     "model": "gpt-4"
     "temperature": 0.7
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }'`
         }
       ]
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }'`,
         },
       ],
     },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -234,6 +269,8 @@ export default function APIPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
 ;
   const response_examples = {
@@ -780,6 +817,7 @@ export default function APIPage() {;
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
 
 =======
                 >;
@@ -809,6 +847,8 @@ export default function APIPage() {;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import Layout from '../components/Layout';
 export default function APIPage() {
@@ -828,6 +868,7 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -863,6 +904,11 @@ export default function APIPage() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;

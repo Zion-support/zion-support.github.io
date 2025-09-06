@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {useForm, type, UseFormReturn} from "react-hook-form";
@@ -20,9 +17,12 @@ import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -31,12 +31,15 @@ import { z } from "zod",
 import { Mail } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -48,7 +51,6 @@ import {
   FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-=======
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import {
@@ -60,6 +62,7 @@ import {
   FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -75,34 +78,46 @@ const forgotPasswordSchema = z.object({
 =======
 
 =======
+=======
+// Form validation schema
+
+const forgotPasswordSchema = z.object({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   email: z.string().email("Please enter a valid email")})
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
 export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth();
   const [submitted, setSubmitted] = useState(false);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   email: z.string().email("Please enter a valid email")}),
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function ForgotPassword() {;
   const { resetPassword, isLoading } = useAuth();
   const [submitted, setSubmitted] = useState(false);
-=======
 export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth(),
   const [submitted, setSubmitted] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(forgotPasswordSchema)
@@ -114,6 +129,7 @@ export default function ForgotPassword() {
     setSubmitted(true)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -122,11 +138,15 @@ export default function ForgotPassword() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <>
@@ -570,6 +590,7 @@ function ForgotPassword() {
                   </form>
                 </Form>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -579,6 +600,8 @@ function ForgotPassword() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
             </div>
           </div>
@@ -600,12 +623,13 @@ function ForgotPassword() {
     </>
   )
 }
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -679,6 +703,7 @@ export default function ForgotPassword() {;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -718,3 +743,5 @@ return (<> <Header /> <div className="flex min-h-screen bg-zion-blue"> <div clas
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

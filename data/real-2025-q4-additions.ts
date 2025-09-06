@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -6,9 +7,11 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export interface Q4Service {;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface Q4Service {;
 export interface Q4Service {
+<<<<<<< HEAD
 <<<<<<< HEAD
 id: string, name: string,
   tagline: string, price: string,
@@ -17,6 +20,8 @@ id: string, name: string,
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -52,12 +57,13 @@ id: string, name: string,
   category: string, realService: boolean,
   technology?: string[];
   integrations?: string[];
-<<<<<<< HEAD
   useCases?: string[],
-=======
   useCases?: string[];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   roi?: string;
   competitors?: string[],
   marketSize?: string;
@@ -1687,8 +1693,6 @@ export const real2025Q4Additions = [
 =======
 
   reviews?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
 const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -1899,6 +1903,7 @@ export const real2025Q4Additions = [
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -1946,6 +1951,8 @@ export const real2025Q4Additions = [
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -2184,10 +2191,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     reviews: 28,
   },
 ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const real2025Q4Additions = [
   {
     id: 'ai-governed-rag-platform',
@@ -2206,12 +2210,9 @@ export const real2025Q4Additions = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
-<<<<<<< HEAD
     marketPosition:;
       'Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.',
-=======
     marketPosition: 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,
     setupTime: '1–2 days',
@@ -2612,6 +2613,9 @@ export const real2025Q4Additions = [
     reviews: 9
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

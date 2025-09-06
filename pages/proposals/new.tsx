@@ -37,7 +37,6 @@ import React, { useMemo, useState } from 'react';
 import AIAssistant from '../../components/ui/AIAssistant';
 
 const NewProposal: NextPage = () => {
-<<<<<<< HEAD
   const [jobBrief, setJobBrief] = useState('')
   const [resumeSummary, setResumeSummary] = useState('')
   const [relevantExperience, setRelevantExperience] = useState('')
@@ -46,7 +45,6 @@ const NewProposal: NextPage = () => {
   const pitchPrompt = useMemo(() => (
     `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief |'(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary |'(Not provided)'}\n\nRelevant Experience:\n${relevantExperience |'(Not provided)'}\n\nReturn markdown only.`
   ), [jobBrief, relevantExperience, resumeSummary])
-=======
   const [jobBrief, setJobBrief] = useState(''),
   const [resumeSummary, setResumeSummary] = useState(''),
   const [relevantExperience, setRelevantExperience] = useState(''),
@@ -55,9 +53,12 @@ const NewProposal: NextPage = () => {
   const pitchPrompt = useMemo(() => (
     `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
   ), [jobBrief, relevantExperience, resumeSummary]),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div>
       <Head>
@@ -88,6 +89,7 @@ const NewProposal: NextPage = () => {
           buttonLabel="Generate Pitch Based on Profile & Job"
           title="Generate Proposal"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -102,6 +104,11 @@ const NewProposal: NextPage = () => {
           authorizationToken={operatorToken}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          defaultPrompt={pitchPrompt}
+          onAccept={setCoverLetter}
+          authorizationToken={operatorToken}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           defaultPrompt={pitchPrompt  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -117,6 +124,7 @@ const NewProposal: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -153,6 +161,8 @@ export default NewProposal,
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
       </div>
 <<<<<<< HEAD
@@ -162,8 +172,6 @@ export default NewProposal,
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 export default NewProposal;
 <<<<<<< HEAD
@@ -212,18 +220,16 @@ const NewProposal: NextPage = () => {
 export default NewProposal,
 =======
 
-=======
 },
 export default NewProposal,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 },
-<<<<<<< HEAD
 
 export default NewProposal,;
-=======
 export default NewProposal,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

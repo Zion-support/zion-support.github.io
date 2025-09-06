@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -72,29 +73,25 @@ function handler() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {},
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ |{}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   const { address } = req.query as { address?: string }
   if (!address) return res.status(400).json({ error: 'Missing address' })
   const data = store[String(address).toLowerCase()] |null
 
   return res.status(200).json({ data })
-=======
   const { address } = req.query as { address?: string },
   if (!address) return res.status(400).json({ error: 'Missing address' }),
   const data = store[String(address).toLowerCase()] || null,
   return res.status(200).json({ data });
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 const store: Record<string, any> = (global as any).ZION_DID_STORE || {};
 export default function handler(req: any, res: any) {
   res.status(200).json({ store });
@@ -118,6 +115,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -129,10 +127,14 @@ export default function handler(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

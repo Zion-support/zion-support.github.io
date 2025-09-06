@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -167,21 +168,19 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-import Layout from '../components/Layout';
 =======
-=======
+import React from "react";
+import Layout from "../components/Layout";
+import React from 'react';
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../components/Layout';
->>>>>>> origin/automation-improvements-final
+import Layout from '../components/Layout';
+origin/automation-improvements-final
 
-=======
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -241,7 +240,6 @@ export default function Contact() {
 }
   };
   return (
-<<<<<<< HEAD
     <Layout
       title="Contact Us - Zion Tech Group"
       description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more."
@@ -249,10 +247,10 @@ export default function Contact() {
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-<<<<<<< HEAD
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               Contact Us
             </h1>
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
@@ -277,6 +275,19 @@ import Layout from "../components/Layout";
 import React from "react";
 import Layout from "../components/Layout";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+origin/automation-improvements-final
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get in touch with our team for your technology needs.
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+origin/main
+
+import React from "react";
+import Layout from "../components/Layout";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Contact() {
   return (
     <>
@@ -300,9 +311,12 @@ export default function Contact() {
             <p className="text-gray-500 text-sm">
               (Contact form functionality would be implemented here)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </p>
           </div>
           <Link href="/services" className="btn-secondary">
@@ -312,6 +326,7 @@ export default function Contact() {
       </div>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -333,6 +348,10 @@ export default function Contact() {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 const ContactPage: React.FC = () => {
   return (
@@ -418,6 +437,7 @@ name='description'
                   <ContactForm />
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -834,6 +854,8 @@ function Contact() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -1145,33 +1167,25 @@ function Contact() {
                   </li>
                 </ul>
               </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </Layout>;
-=======
     </>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

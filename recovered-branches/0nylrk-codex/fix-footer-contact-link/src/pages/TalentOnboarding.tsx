@@ -33,9 +33,12 @@ class ErrorBoundary extends React.Component {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {TalentOnboardingForm} from "@/components/profile/TalentOnboardingForm";
 import {Header} from "@/components/Header";
@@ -44,6 +47,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function TalentOnboarding() {;
   const { user, isLoading } = useAuth();
+<<<<<<< HEAD
 <<<<<<< HEAD
   // If not authenticated, redirect to login;
   if (!isLoading && !user) {;
@@ -64,23 +68,21 @@ export default function TalentOnboarding() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function TalentOnboarding() {
   const { user, isLoading } = useAuth();
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 export default function TalentOnboarding() {
   const { user, isLoading } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />
@@ -105,6 +107,7 @@ export default function TalentOnboarding() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -115,6 +118,9 @@ export default function TalentOnboarding() {
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",;
 import { Header } from "@/components/Header",;
@@ -256,8 +262,11 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

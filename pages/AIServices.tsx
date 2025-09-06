@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -105,6 +106,8 @@ function AIServices() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion } from 'framer-motion';
@@ -396,20 +399,18 @@ const stats = [
 }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AIServices() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import Layout from "../components/Layout";
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
 import Layout from '../components/Layout';
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -429,6 +430,13 @@ import Layout from "../components/Layout";
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/automation-improvements-final
+
+import React from "react";
+import Layout from "../components/Layout";
+origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function AIServices() {
   return (
     <Layout
@@ -1198,11 +1206,9 @@ function AIServices() {
       description="Comprehensive AI services including machine learning, computer vision, NLP, and cutting-edge quantum AI solutions."
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     >
-<<<<<<< HEAD
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-<<<<<<< HEAD
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               AI Services
             </h1>
@@ -1215,7 +1221,6 @@ function AIServices() {
             <p className="text-gray-600">
               AI Services page is under construction.
             </p>
-=======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
@@ -1223,8 +1228,7 @@ function AIServices() {
           </div>
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
->>>>>>> origin/automation-improvements-final
-=======
+origin/automation-improvements-final
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -1617,7 +1621,6 @@ AI Services
   }
 }
             </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         </section>
         {/* Stats Section */  } catch (error) {
@@ -1906,8 +1909,11 @@ AI Services
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1931,12 +1937,14 @@ AI Services
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -2031,6 +2039,7 @@ export default function AIServices() {
     </Layout>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -2066,3 +2075,11 @@ export default function AIServices() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+origin/main
+origin/automation-improvements-final
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

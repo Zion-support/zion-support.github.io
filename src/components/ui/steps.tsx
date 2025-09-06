@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   className?: string
@@ -10,6 +11,8 @@ export function Step({
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           if (index < currentStep) status = "complete"
           if (index === currentStep) status = "current"
 interface StepProps {
@@ -17,12 +20,14 @@ interface StepProps {
   label: string,
   description?: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 import React from "react";
 import { cn } from "@/lib/utils";
 import { CheckIcon } from 'lucide-react'
@@ -33,6 +38,7 @@ interface StepProps {
   label: string
   description?: string
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>   className?: string
 }
@@ -55,6 +61,8 @@ export function Step({
 >>>>>>>   return (
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { cn } from "@/lib/utils",
 import { CheckIcon } from 'lucide-react'
@@ -63,35 +71,25 @@ interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   className?: string
 }
 export function Step({
-<<<<<<< HEAD
   status,
   label,
   description,
-=======
-<<<<<<< HEAD
   status
   label
   description
-=======
   status,
   label,
   description,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   className}: StepProps) {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <li
 
       className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -112,24 +110,29 @@ export function Step({
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium" {
 ursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "relative flex items-center"
         {
           "opacity-60": status === "incomplete"}
-=======
         "relative flex items-center",
         {
           "opacity-60": status === "incomplete"},
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className
       )}
     >
       <div
         className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {
@@ -144,23 +147,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>               status === "complete"}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium" {
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
               status === "incomplete"
             "bg-zion-blue border-zion-cyan text-white":
               status === "current"
-=======
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
           {
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
               status === "incomplete",
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -172,6 +171,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {/* Step number would go here */}
 =======
@@ -180,6 +180,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { CheckIcon } from 'lucide-react';
@@ -220,11 +222,6 @@ export function Step({;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Step number would go here */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </span>
@@ -233,6 +230,7 @@ export function Step({;
       <div className="ml-4 min-w-0">
         <h3
           className={cn("text-sm font-medium", {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -287,18 +285,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             "text-white": status === "current" || status === "complete"})}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             "text-zion-slate-light": status === "incomplete"
-<<<<<<< HEAD
             "text-white": status === "current" |status === "complete"})}
-=======
             "text-zion-slate-light": status === "incomplete",
-=======
-=======
             "text-zion-slate-light": status === "incomplete",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             "text-white": status === "current" || status === "complete"})}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {label}
@@ -311,6 +304,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -322,8 +316,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface StepsProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   currentStep: number
@@ -334,12 +329,15 @@ export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 interface StepsProps {;
   currentStep: number,;
@@ -360,29 +358,37 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>>     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           if (!React.isValidElement(child)) return null
           let status: "incomplete" | "current" | "complete" = "incomplete"
           if (index < currentStep) status = "complete"
           if (index === currentStep) status = "current"
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           if (!React.isValidElement(child)) return null,
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
@@ -403,15 +409,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
           
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
       </ol>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -432,11 +442,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="hidden md:flex md:mt-4">
 >>>>>>>         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -445,22 +459,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 }"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
 }/> </div> </div> </div>)
 }"}
-=======
 }/> </div> </div> </div>) 
 }"};
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
@@ -607,8 +624,11 @@ if (status = "current") {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/lib/ai-matchmaking.ts
 
 =======
@@ -19,14 +20,17 @@ export interface MatchResultItem {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-// AI Matchmaking utility functions
-<<<<<<< HEAD
-export interface MatchResultItem {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+// AI Matchmaking utility functions
+export interface MatchResultItem {
 
 export interface MatchResultItem {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   description: string;
@@ -121,12 +125,9 @@ const sample_data: MatchResultItem[] = [;
 
   image?: string
 }
-<<<<<<< HEAD
 export interface MatchResult {
-=======
 
 export interface MatchResult {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   item: MatchResultItem;
   score: number;
 
@@ -142,7 +143,6 @@ const sampleData: MatchResultItem[] = [
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
 
-<<<<<<< HEAD
     price: 120
 
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"]
@@ -173,10 +173,13 @@ export async function findMatches(
   query: string;
 
   type: string = ""
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // AI Matchmaking utility functions;
 export interface MatchResultItem {;
   id: string,;
@@ -196,6 +199,7 @@ export interface MatchResult {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -206,6 +210,8 @@ export interface MatchResult {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -236,6 +242,7 @@ const sampleData: MatchResultItem[] = [
 
 // Function to find matches based on query and type
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   type: string = "",
@@ -250,21 +257,25 @@ export async function findMatches(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export async function findMatches(;
   query: string;
-=======
 export async function findMatches(
   query: string,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   type: string = "",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   limit: number = 5
 ): Promise<MatchResult[]> {
   try {
     // In production, we would call an API endpoint here
     // For now, we'll simulate a response with sample data
     // Simulate API call delay
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -292,11 +303,11 @@ export async function findMatches(
 
 =======
 <<<<<<< HEAD
-    await new Promise(resolve => setTimeout(resolve, 1000));
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    await new Promise(resolve => setTimeout(resolve, 1000));
     await new Promise(resolve => setTimeout(resolve, 1000)),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Filter by type if provided
     let filteredItems = sampleData,
     if (type && type !== "all") {
@@ -308,7 +319,6 @@ export async function findMatches(
     const matches: MatchResult[] = filteredItems.map(item => ({
       item
       score: Math.floor(Math.random() * 40) + 60, // Random score between 60 and 99
-<<<<<<< HEAD
       matchedSkills: item.skills?.slice(0, 2) |[];
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     }));
@@ -320,7 +330,6 @@ export async function findMatches(
     return []
   }
 }
-=======
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     })),
@@ -331,11 +340,14 @@ export async function findMatches(
     console.error("Error in matchmaking:", error),
     return []
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Sample data for testing when API is not available;
 const sampleData: MatchResultItem[] = [;
@@ -395,6 +407,7 @@ export async function findMatches(;
   } catch (error) {;
     console.error("Error in matchmaking:", error);
     return [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -585,3 +598,8 @@ export async function findMatches(;
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

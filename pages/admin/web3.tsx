@@ -12,39 +12,40 @@ import Head from 'next/head';
 export default function AdminWeb3Page() {
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-  useEffect(() => {
-    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null
-    setUsers(raw ? JSON.parse(raw) : [])
-
-  const save = (list: any) => {
-    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list))
-    setUsers(list)
-
-=======
-
-
-=======
-  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([])
-=======
-  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  useEffect(() => {
-    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null
-    setUsers(raw ? JSON.parse(raw) : [])
 <<<<<<< HEAD
-  }, [])
-=======
-  }, []),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  useEffect(() => {
+    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null
+    setUsers(raw ? JSON.parse(raw) : [])
+
   const save = (list: any) => {
     if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list))
     setUsers(list)
+
+=======
+
+
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([])
+  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),
+  useEffect(() => {
+    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null
+    setUsers(raw ? JSON.parse(raw) : [])
+  }, [])
+  }, []),
+  const save = (list: any) => {
+    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list))
+    setUsers(list)
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   const metrics = {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const metrics = {
     total: users.length
@@ -53,7 +54,6 @@ export default function AdminWeb3Page() {
     enabled: users.filter(u => u.enabled).length
     disabled: users.filter(u => !u.enabled).length}
 
-=======
   },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const metrics = {
@@ -63,6 +63,7 @@ export default function AdminWeb3Page() {
     sol: users.filter(u => u.chain === 'sol').length,
     enabled: users.filter(u => u.enabled).length,
     disabled: users.filter(u => !u.enabled).length},
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -74,6 +75,8 @@ export default function AdminWeb3Page() {
 return (
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -88,6 +91,7 @@ return (
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Users</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -97,11 +101,15 @@ return (
           {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -114,6 +122,8 @@ return (
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <ul className="space-y-2">
             {users.map((u, i) => (
               <li key={i} className="flex items-center justify-between">
@@ -194,9 +204,6 @@ export default function AdminWeb3Page(req, res) {
                   }} />
                 </label>
               </li>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             ))}
           </ul>
         </div>
@@ -278,8 +285,6 @@ function AdminWeb3Page() {
 =======
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page(req, res) {
@@ -340,11 +345,12 @@ export default function AdminWeb3Page(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/fraud/messageCheck.ts
 
 =======
@@ -72,6 +73,8 @@ if ( {) {
 
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/fraud/messageCheck.ts
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Message checking functionality
 import { FraudSeverity  } from '@/types/fraud';
 import { analyzeContent  } from './analyzeContent';
@@ -79,12 +82,9 @@ import { MessageAnalysisResult } from './types';
 /**
  * Check message for suspicious content
  */
-<<<<<<< HEAD
 
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {
-=======
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues
   let severity: FraudSeverity = 'safe'
@@ -97,14 +97,16 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   return {
     ...analysis;
     severity
-<<<<<<< HEAD
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -130,6 +132,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   return {;
     ...analysis;
     severity;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -178,3 +181,7 @@ if (analysis.reasons.length > 0) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/fraud/messageCheck.ts
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

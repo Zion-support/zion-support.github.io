@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -13,18 +16,19 @@ import { Loader2 } from 'lucide-react'
 import { CreateResumeFormProps } from './types'
 export const CreateResumeForm = ({
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { Loader2 } from 'lucide-react'
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -35,6 +39,7 @@ export const CreateResumeForm = ({
   isLoading
 }: CreateResumeFormProps) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -42,10 +47,15 @@ import { CreateResumeFormProps } from "./types",
 export const CreateResumeForm = ({ 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { CreateResumeFormProps } from "./types",
+export const CreateResumeForm = ({ 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onCreateResume,
   onCancel,
   isLoading,
 }: CreateResumeFormProps) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -53,6 +63,8 @@ export const CreateResumeForm = ({
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [newResumeTitle, setNewResumeTitle] = useState('')
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return;
@@ -143,6 +155,7 @@ export const CreateResumeForm = ({
               Create
             </Button>
           </div>
+<<<<<<< HEAD
 import { CreateResumeFormProps } from "./types",
 export const CreateResumeForm = ({ 
   onCreateResume,
@@ -191,14 +204,14 @@ export const CreateResumeForm = ({
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { CreateResumeFormProps } from "./types",
 export const CreateResumeForm = ({ 
   onCreateResume,
   onCancel,
   isLoading 
 }: CreateResumeFormProps) => {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [newResumeTitle, setNewResumeTitle] = useState(''),
 
   const handleSubmit = async () => {
@@ -257,11 +270,14 @@ export const CreateResumeForm = ({;
           </div>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button
 =======
           
@@ -271,6 +287,7 @@ export const CreateResumeForm = ({;
             onClick={onCancel}
             className="mt-4"
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -286,6 +303,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            Cancel
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </Button>
 >>>>>>>         </div>
       </CardContent>
@@ -293,8 +313,11 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text-center"> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className=" text-muted-foreground mb-6">Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={
   handleSubmit
@@ -303,12 +326,16 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
 }> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 '"}
   )
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -316,10 +343,14 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 '"},;
 ;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -336,3 +367,6 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

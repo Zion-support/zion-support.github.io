@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import fs from 'fs';
 import path from 'path';
@@ -17,6 +18,8 @@ if (req.method === 'POST') {
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
@@ -51,7 +54,6 @@ if ( {) {
 }
 =======
 
-<<<<<<< HEAD
 const p = path.join(
   process.cwd()
   'data'
@@ -68,7 +70,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(500).json({ error: 'Failed to read pagespeed report' });
     }
 
-=======
 const p = path.join(process.cwd(), 'datareportspagespeedweekly-pagespeed.json');
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -77,7 +78,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to read pagespeed' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 if (req.method === 'POST') {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -177,11 +177,8 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 =======
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
-<<<<<<< HEAD
 }
-=======
 }
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -220,7 +217,10 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

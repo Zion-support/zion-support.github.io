@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const templates = {
@@ -67,14 +68,12 @@ const templates = {
       { name: 'Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 }]}};
 =======
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const templates = {
   lulu: {
     sizes: [
@@ -91,15 +90,10 @@ const templates = {
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   res.status(200).json(templates)
-=======
-=======
   res.status(200).json(templates);
 };
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const templates = {;
   lulu: {;
     sizes: [;
@@ -120,9 +114,8 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     sizes: [;
       { name: 'US Letter', width_in: 8.5, height_in: 11, bleed_in: 0.125, margin_in: 0.75 },
@@ -148,3 +141,6 @@ function handler() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

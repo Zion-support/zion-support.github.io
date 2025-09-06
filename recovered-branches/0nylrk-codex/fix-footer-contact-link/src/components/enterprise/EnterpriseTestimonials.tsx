@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/EnterpriseTestimonials.tsx
 import React from "react";
@@ -68,6 +68,11 @@ import {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from "react";
+import { Quote } from "lucide-react";
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -75,13 +80,15 @@ import {
   CarouselPrevious,;
 } from "@/components/ui/carousel";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
   Carousel
   CarouselContent
   CarouselItem
@@ -114,8 +121,11 @@ const testimonials = [
     image: "/placeholder.svg"
   }
 ];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Quote } from "lucide-react",
 import {
@@ -145,6 +155,7 @@ const testimonials = [
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -155,6 +166,8 @@ export function EnterpriseTestimonials() {;
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function EnterpriseTestimonials() {
   return (
@@ -190,6 +203,7 @@ export function EnterpriseTestimonials() {
                       <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -198,6 +212,8 @@ export function EnterpriseTestimonials() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         {testimonial.title}, {testimonial.company}
                       </p>
                     </div>
@@ -214,12 +230,14 @@ export function EnterpriseTestimonials() {
       </div>
     </section>;
   );
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -430,6 +448,7 @@ function EnterpriseTestimonials() {
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
                       <img;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         src={testimonial.image}
                         alt={testimonial.author}
                         className="h-full w-full object-cover";
@@ -515,3 +534,7 @@ image: "/placeholder.svg"
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

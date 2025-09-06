@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 
 =======
@@ -10,6 +11,16 @@ import React from "react",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {cn} from "@/lib/utils";
+import React from "react",
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface QuickReplyButtonProps {
   text: string;
   onClick: () => void
@@ -32,6 +43,7 @@ export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProp
       variant="outline"
       size="sm"
       className={cn(
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/QuickReplyButton.tsx
 
 <<<<<<< HEAD
@@ -45,6 +57,12 @@ export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProp
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/QuickReplyButton.tsx
         "transition-colors duration-200"
 
+=======
+        "border-zion-purple/30 hover: bg-zion-purple hover:text-white"
+
+        "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
+        "transition-colors duration-200"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "border-zion-purple/30 hover:bg-zion-purple hover:text-white",
         "transition-colors duration-200"
 import React from "react",;
@@ -63,6 +81,7 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
       className={cn(;
         "border-zion-purple/30 hover:bg-zion-purple hover:text-white";
         "transition-colors duration-200";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -194,11 +213,14 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 
         "transition-colors duration-200",
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )}
       onClick={onClick}
     >
       {text}
     </Button>
+<<<<<<< HEAD
 
   );
 }
@@ -206,3 +228,10 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

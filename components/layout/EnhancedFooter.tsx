@@ -12,11 +12,8 @@ const EnhancedFooter: React.FC = () => {;
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
@@ -32,6 +29,19 @@ const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe;
+  Twitter, Linkedin, Facebook, Instagram;
+  ArrowRight, Rocket, Brain, Cpu, Shield;
+  Star, Users, TrendingUp, Zap
+ } from 'lucide-react';
+const contactInfo = null;
+  ];
+const EnhancedFooter: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const company = null;
@@ -108,10 +118,13 @@ export default function EnhancedFooter() {
   const services = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { name: 'AI Services', href: '/ai-services' }
     { name: 'IT Services', href: '/it-services' }
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
@@ -119,17 +132,23 @@ export default function EnhancedFooter() {
     { name: 'Security', href: '/security' }
     { name: 'Case Studies', href: '/case-studies' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
     { name: 'Micro SaaS', href: '/micro-saas' },;
     { name: 'Security', href: '/security' },;
     { name: 'Case Studies', href: '/case-studies' },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   const company = [
     { name: 'About Us', href: '/about' }
@@ -149,6 +168,7 @@ export default function EnhancedFooter() {
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -324,13 +344,14 @@ export default function EnhancedFooter() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <footer className="bg-gray-900 text-white">;
@@ -781,6 +802,8 @@ export default EnhancedFooter;
                       <Icon className=&quot;w-5 h-5&quot; />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <footer className;
                   return (
                     <a
@@ -862,7 +885,6 @@ export default EnhancedFooter;
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               Get exclusive insights into the latest AI, quantum computing, and IT innovations. 
               Be the first to know about new services and breakthrough technologies.
-=======
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -875,7 +897,6 @@ export default EnhancedFooter;
             <p className="text-gray-300 mb-6">
               Leading technology solutions provider helping businesses transform
               their digital presence.
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </p>
             <div className="flex space-x-4">
               <a
@@ -1023,21 +1044,18 @@ export default EnhancedFooter;
 
 =======
   );
-<<<<<<< HEAD
 }
 export default EnhancedFooter;
-=======
 };
 
 export default EnhancedFooter;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

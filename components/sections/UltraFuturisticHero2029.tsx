@@ -26,6 +26,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -42,6 +43,21 @@ import {
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+import {
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Atom
+  Rocket
+  Target
+  Shield
+  Cpu
+  Globe
+  Sparkles;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Star,
   TrendingUp,
@@ -244,7 +260,6 @@ export default function UltraFuturisticHero2029() {
 =======
   Globe,;
   Sparkles,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 export default function UltraFuturisticHero2029() {
   const features = [
@@ -274,7 +289,6 @@ export default function UltraFuturisticHero2029() {
       color: 'from-indigo-500 to-blue-600'
     }
     {
-<<<<<<< HEAD
       icon: Cpu
       text: 'Autonomous IT Operations'
       color: 'from-cyan-500 to-teal-600'
@@ -283,7 +297,6 @@ export default function UltraFuturisticHero2029() {
     { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' }
     { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' }
     { icon: Shield, text: 'Enterprise Security', color: 'from-indigo-500 to-blue-600' }
-=======
       icon: Cpu,
       text: 'Autonomous IT Operations',
       color: 'from-cyan-500 to-teal-600',;
@@ -294,6 +307,7 @@ export default function UltraFuturisticHero2029() {
     { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' },
     { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' },
     { icon: Shield, text: 'Enterprise Security', color: 'from-indigo-500 to-blue-600' },
+<<<<<<< HEAD
 <<<<<<< HEAD
     { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
 <<<<<<< HEAD
@@ -479,6 +493,8 @@ export default function UltraFuturisticHero2029() {
         </div>
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
   const stats = [
     { number: '500+', label: 'Innovative Services', icon: Sparkles }
@@ -486,13 +502,14 @@ export default function UltraFuturisticHero2029() {
     { number: '99.9%', label: 'Success Rate', icon: Star }
     { number: '24/7', label: 'AI Operations', icon: Zap }
   ];
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
       {/* Animated Background */}
@@ -509,15 +526,12 @@ export default function UltraFuturisticHero2029() {
                 opacity: [0.2, 0.8, 0.2]
               }}
               transition={{
-<<<<<<< HEAD
                 duration: Math.random() * 10 + 10
                 repeat: Infinity
                 ease: 'linear'
-=======
                 duration: Math.random() * 10 + 10,
                 repeat: Infinity,
                 ease: 'linear',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               }}
               style={{
                 left: Math.random() * 100 + '%'
@@ -546,19 +560,12 @@ export default function UltraFuturisticHero2029() {
                 left: Math.random() * 100 + '%'
                 top: Math.random() * 100 + '%'}}
             />
-<<<<<<< HEAD
           ))}
         </div>
-=======
 
           ))}
         </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Grid Pattern */}
         <div className='absolute inset-0 opacity-10'>
           <div
@@ -568,21 +575,14 @@ export default function UltraFuturisticHero2029() {
               backgroundSize: '50px 50px'
             }}
           />
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
         {/* Gradient Orbs */}
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse' />
         <div className='absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000' />
       </div>
       {/* Content */}
-<<<<<<< HEAD
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}        </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -940,16 +940,10 @@ export default function UltraFuturisticHero2029() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Main Heading */}
-=======
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}
 
         {/* Main Heading */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -980,15 +974,8 @@ export default function UltraFuturisticHero2029() {
         {_/* CTA Buttons */}
 =======
           className='mb-8'
-<<<<<<< HEAD
-=======
 
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               2029
@@ -1008,14 +995,7 @@ export default function UltraFuturisticHero2029() {
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services.
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Buttons */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <motion.div
@@ -1045,14 +1025,7 @@ export default function UltraFuturisticHero2029() {
         {_/* Features Grid */}
 =======
           className='flex flex-col sm:flex-row gap-4 justify-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <Link
             href='/services'
@@ -1082,14 +1055,7 @@ export default function UltraFuturisticHero2029() {
             <Zap className="w-5 h-5" />
           </Link>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Features Grid */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <motion.div
@@ -1097,20 +1063,17 @@ export default function UltraFuturisticHero2029() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className=&quot;grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16&quot;
         >
           {_features.map(_(feature, _index) => (
 =======
 <<<<<<< HEAD
-          className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'        >          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'        >          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
           className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'        >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {features.map((feature, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1142,15 +1105,16 @@ export default function UltraFuturisticHero2029() {
           className="grid grid-cols-2 md:grid-cols-4 gap-8"
 =======
               className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/50'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <div
                 className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform`}
@@ -1176,28 +1140,22 @@ export default function UltraFuturisticHero2029() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
               </div>
-<<<<<<< HEAD
               <p className='text-xs text-gray-300 group-hover:text-white transition-colors text-center leading-tight'>                {feature.text}            >
               <div className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform`}>
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
               <p className="text-xs text-gray-300 group-hover:text-white transition-colors text-center leading-tight">
                 {feature.text}
-=======
               <p className='text-xs text-gray-300 group-hover:text-white transition-colors text-center leading-tight'>                {feature.text}
 
                 {feature.text}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </p>
             </motion.div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           ))}
         </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1226,22 +1184,18 @@ export default function UltraFuturisticHero2029() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
           className='grid grid-cols-2 md:grid-cols-4 gap-8'        >          className="grid grid-cols-2 md:grid-cols-4 gap-8"
-=======
           className='grid grid-cols-2 md:grid-cols-4 gap-8'        >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1249,6 +1203,8 @@ export default function UltraFuturisticHero2029() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -1373,14 +1329,7 @@ className='text - center group';
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
 =======
               className='text-center group'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform'>
                 <stat.icon className='w-8 h-8 text-cyan-400' />
@@ -1388,7 +1337,6 @@ className='text - center group';
               <div className='text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                 {stat.number}
               </div>
-<<<<<<< HEAD
               <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>                {stat.label}            >
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform">
                 <stat.icon className="w-8 h-8 text-cyan-400" />
@@ -1398,28 +1346,15 @@ className='text - center group';
               </div>
               <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
                 {stat.label}
-=======
               <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>                {stat.label}
 
                 {stat.label}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </motion.div>
           ))}
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -1435,6 +1370,7 @@ className='text - center group';
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1442,10 +1378,12 @@ className='text - center group';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-              className='w-1 h-3 bg-cyan-400 rounded-full mt-2'            />          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              className='w-1 h-3 bg-cyan-400 rounded-full mt-2'            />          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
               className='w-1 h-3 bg-cyan-400 rounded-full mt-2'            />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1453,6 +1391,8 @@ className='text - center group';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -1484,6 +1424,7 @@ className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
           </motion.div>
         </motion.div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1518,6 +1459,9 @@ className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Floating Elements */}
       <motion&& motion.div
               </div>;
@@ -1626,14 +1570,7 @@ className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
 =======
         transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         className='absolute top-20 right-20 w-32 h-32 border border-cyan-500/20 rounded-full'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       />
       <motion.div
         animate={{ rotate: -360 }}
@@ -1641,7 +1578,6 @@ className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
         className='absolute bottom-20 left-20 w-24 h-24 border border-purple-500/20 rounded-full'
       />
     </section>
-<<<<<<< HEAD
   );      />
       <motion.div
         animate={{ rotate: -360 }}
@@ -1651,16 +1587,14 @@ className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
     </section>
   )
 }
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

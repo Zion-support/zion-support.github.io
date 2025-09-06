@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -57,12 +58,11 @@ return (
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import ServiceLanding from '../components/sections/ServiceLanding',;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
-<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPredictiveMaintenancePlatform() {
 	return (
@@ -86,22 +86,25 @@ export default function AIPredictiveMaintenancePlatform() {
 				"APIs and event webhooks"
 			]}
 			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
-=======
 export default function AIPredictiveMaintenancePlatform() {
   return <div>AI Predictive Maintenance Platform</div>;
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
 			title="AI Predictive Maintenance Platform"
 			description="Predict equipment failures, schedule maintenance proactively, and reduce downtime with sensor analytics and AI models."
 			subtitle="Reliability at lower cost"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -113,6 +116,9 @@ export default function AIPredictiveMaintenancePlatform() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+			pricePerMonthUSD={499}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 			pricePerMonthUSD={499  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -127,6 +133,7 @@ export default function AIPredictiveMaintenancePlatform() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -136,6 +143,8 @@ export default function AIPredictiveMaintenancePlatform() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 			implementationWeeks="2-4 weeks"
 			roiNote="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%"
 			features={[
@@ -148,21 +157,27 @@ export default function AIPredictiveMaintenancePlatform() {
 				"Visualizations and alerting",
 				"APIs and event webhooks"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 			]}
 			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
 			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
 		/>
 	)
 };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -190,6 +205,7 @@ export default function AIPredictiveMaintenancePlatform() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -197,6 +213,8 @@ export default function AIPredictiveMaintenancePlatform() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
 		/>
 	)
@@ -217,6 +235,7 @@ export default function AIPredictiveMaintenancePlatform() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -226,3 +245,5 @@ export default function AIPredictiveMaintenancePlatform() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

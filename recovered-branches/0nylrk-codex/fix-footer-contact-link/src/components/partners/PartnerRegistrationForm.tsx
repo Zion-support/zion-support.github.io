@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerRegistrationForm.tsx
 
 <<<<<<< HEAD
@@ -14,6 +15,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -28,6 +32,7 @@ import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -37,6 +42,8 @@ import {supabase} from "@/integrations/supabase/client";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." })
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal(""))
@@ -52,10 +59,13 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>;
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { z } from "zod",
 import { useForm } from "react-hook-form",
@@ -70,6 +80,7 @@ import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -82,6 +93,8 @@ import { supabase } from "@/integrations/supabase/client",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
@@ -98,6 +111,7 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export function PartnerRegistrationForm() {
@@ -109,17 +123,20 @@ export function PartnerRegistrationForm() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
-=======
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema)
     defaultValues: {
@@ -138,6 +155,7 @@ export function PartnerRegistrationForm() {
       .from('partner_profiles')
       .select('id')
       .eq('user_id', user.id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -169,6 +187,8 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .single();
     if (existingPartner) {
       toast({
@@ -180,7 +200,6 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
     }
     return false
   }
-=======
       .single(),
 
     if (existingPartner) {
@@ -194,8 +213,11 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
     return false
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
@@ -203,6 +225,7 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
         description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -212,6 +235,8 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     setIsSubmitting(true);
     try {
@@ -236,15 +261,17 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
             payout_method: data.payout_method
             bio: data.bio
             status: 'pending', // Partners need approval
-<<<<<<< HEAD
           }
         ])
         .select();
       if (error) throw error;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { z } from "zod",;
 import { useForm } from "react-hook-form",;
@@ -517,18 +544,17 @@ if (return) {
             payout_method: data.payout_method,;
             bio: data.bio,;
             status: 'pending', // Partners need approval;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         ])
         .select(),
 
       if (error) throw error,
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Application submitted!"
         description: "Your partner application has been submitted for review."
@@ -539,6 +565,7 @@ if (return) {
         .select('code')
         .eq('user_id', user.id)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         .single(),
@@ -548,12 +575,16 @@ if (return) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-        .single();
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        .single();
         .single(),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (!existingCode) {
         await supabase.rpc('generate_referral_code', { user_id: user.id })
       }
@@ -600,6 +631,7 @@ if (return) {
                     <FormMessage />
                   </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -609,6 +641,11 @@ if (return) {
               <FormField
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+                )}
+              />
+              <FormField
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ]);
         .select(),;
       if (error) throw error,;
@@ -654,6 +691,7 @@ if (return) {
     } finally {;
       setIsSubmitting(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerRegistrationForm.tsx
 
@@ -949,6 +987,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 control={form.control}
                 name="website"
                 render={({ field }) => (
@@ -1003,6 +1043,7 @@ if ( {) {
                       <FormMessage />
                     </FormItem>
                   )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1406,16 +1447,12 @@ if ( {) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 />
                 <FormField
-=======
                 />;
                 <FormField;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   control={form.control}
                   name="linkedin"
                   render={({ field }) => (
@@ -1517,6 +1554,7 @@ if ( {) {
               />
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ========
@@ -1589,12 +1627,12 @@ if ( {) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button
               type="submit"
-=======
             <Button 
               type="submit" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}
             >
@@ -1606,6 +1644,7 @@ if ( {) {
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1681,12 +1720,14 @@ data: existingCode
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerRegistrationForm.tsx
 =======
 <<<<<<< HEAD
-}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 };
-=======
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

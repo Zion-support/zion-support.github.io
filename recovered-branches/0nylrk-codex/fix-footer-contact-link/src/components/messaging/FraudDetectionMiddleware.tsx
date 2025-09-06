@@ -25,7 +25,6 @@ interface FraudDetectionMiddlewareProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
 import React, { useCallback } from 'react';
 import { checkMessage, monitorContent  } from '@/services/fraud';
 import { toast  } from '@/hooks/use-toast';
@@ -33,15 +32,17 @@ import { supabase } from '@/integrations/supabase/client';
 // Props for the middleware component
 interface FraudDetectionMiddlewareProps {
   children: React.ReactNode
-<<<<<<< HEAD
 }
 // Interface for the context
 interface FraudDetectionContextType {
   scanMessageContent: (
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
@@ -49,6 +50,7 @@ import { supabase } from '@/integrations/supabase/client',;
 // Props for the middleware component;
 interface FraudDetectionMiddlewareProps {;
   children: React.ReactNode;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -62,6 +64,8 @@ interface FraudDetectionMiddlewareProps {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 // Interface for the context;
@@ -78,6 +82,7 @@ interface FraudDetectionContextType {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -85,6 +90,8 @@ interface FraudDetectionContextType {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     userId: string
     messageId: string
@@ -102,6 +109,7 @@ interface FraudDetectionContextType {;
 
 export const FraudDetectionContext = React.createContext(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -112,18 +120,19 @@ export const FraudDetectionContext = React.createContext(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   undefined as FraudDetectionContextType | undefined;
 );
-=======
   undefined as FraudDetectionContextType | undefined
-<<<<<<< HEAD
 );
-=======
 ),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
@@ -134,6 +143,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -144,18 +154,19 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // First do a quick local check using the fraud detection service;
       const quickCheck = checkMessage(content);
-=======
       // First do a quick local check using the fraud detection service
-<<<<<<< HEAD
       const quickCheck = checkMessage(content);
-=======
       const quickCheck = checkMessage(content),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // If the quick check finds suspicious content, flag it
       if (quickCheck.isSuspicious) {
         // Flag the content for review
@@ -227,6 +238,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           messageId,
           content
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -237,12 +249,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-        );
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        );
         ),
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // If it's dangerous, show a warning to the user
         if (quickCheck.severity === 'dangerous') {
           toast({
@@ -250,6 +266,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             description: "Your message contains content that may violate our terms of service."
             variant: "destructive"
             duration: 5000
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -262,10 +279,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             isSafe: false
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          });
+          return {
+            isSafe: false
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }),
           
           return { 
             isSafe: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -284,17 +307,19 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           }
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           };
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // For suspicious but not dangerous content, log but let it pass through
       if (quickCheck.severity === 'suspicious') {
         console.log('Suspicious content detected but allowed:', content)
@@ -309,6 +334,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         console.error('Error analyzing message:', error);
         return { isSafe: true }, // Default to safe on error
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -330,31 +356,39 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (data.classification === 'dangerous') {
         toast({
           title: "Message Blocked"
           description: data.explanation |"This message contains prohibited content."
           variant: "destructive"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         });
         return {
           isSafe: false
           explanation: data.explanation
-=======
         }),
         return { 
           isSafe: false,
           explanation: data.explanation
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       if (data.classification === 'dangerous') {;
         toast({;
@@ -365,6 +399,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return {;
           isSafe: false,;
           explanation: data.explanation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -382,6 +417,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       }
       */
@@ -457,7 +494,6 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
       return { isSafe: true }
-<<<<<<< HEAD
     } catch (error) {
       console.error('Error in fraud detection:', error);
       // On error, let the message pass through but log the error
@@ -480,13 +516,15 @@ export const useFraudDetection = () => {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware')
   }
   return context
-<<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } catch (error) {;
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
@@ -533,6 +571,7 @@ export const useFraudDetection = () => {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
   return context;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -832,3 +871,6 @@ explanation: data.explanation
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

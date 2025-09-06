@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/tokenRewards.ts
 
 =======
@@ -8,19 +9,21 @@
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export async function rewardOnboarding(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
 
     method: 'POST'
     headers: { 'Content-Type': 'application/json' }
 
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export async function rewardOnboarding(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -74,30 +77,29 @@ export async function rewardFiveStarReview(userId: string) {
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
 }
 export async function rewardReferral(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
-<<<<<<< HEAD
 
     method: 'POST'
     headers: { 'Content-Type': 'application/json' }
 
-=======
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     body: JSON.stringify({ userId, amount: 20, reason: 'Referral' })})
 }
 export async function rewardFiveStarReview(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
-<<<<<<< HEAD
 
     method: 'POST'
     headers: { 'Content-Type': 'application/json' }
 
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
     method: 'POST',;
@@ -133,6 +135,11 @@ function reward_referral() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export async function rewardOnboarding(userId: string) {;
   await fetch('/functions/v1/token-manager/earn', {;
@@ -154,6 +161,7 @@ export async function rewardFiveStarReview(userId: string) {;
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })});
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -204,3 +212,7 @@ export async function rewardFiveStarReview(userId:string) {;
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

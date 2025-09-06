@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -18,11 +21,14 @@ import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -34,11 +40,14 @@ import { Switch } from "@/components/ui/switch",
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Separator } from "@/components/ui/separator";
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
@@ -51,6 +60,7 @@ import {
   FormLabel
   FormMessage
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -58,6 +68,10 @@ import { Separator } from "@/components/ui/separator",
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Separator } from "@/components/ui/separator",
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Form,
   FormControl,
@@ -65,6 +79,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -78,8 +93,9 @@ import { supabase } from "@/integrations/supabase/client",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { useAuth } from "@/hooks/useAuth",
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormMessage,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/form'
   Card
   CardContent
@@ -182,8 +198,6 @@ availability: z.enum (["available", "limited", "unavailable"])
 enhancedProfile: z.boolean () .default (true)
 })
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other'
-<<<<<<< HEAD
-=======
 import { Separator } from "@/components/ui/separator",
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
 import {
@@ -193,7 +207,6 @@ import {
   FormField,
   FormItem,
   FormLabel,
-=======
 }
 //Handle removing skill tags const handleRemoveSkill = (skill: string) => {
   setSkillTags (skillTags.filter ( (s) => s !== skill) ) 
@@ -210,10 +223,13 @@ export function TalentRegistrationForm() {
     useState<EnhancedProfile | null>(null)
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react'
@@ -287,13 +303,10 @@ interface CategorizedSkills {;
   platforms: string[],;
   softSkills: string[],;
   other: string[];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 //Handle removing skill tags const handleRemoveSkill = (skill: string) => {
   setSkillTags (skillTags.filter ( (s) => s !== skill) )
 }
-<<<<<<< HEAD
 //Handle key press in skills input (add on enter) const handleSkillKeyPress = (e: React.KeyboardEvent) => {
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
@@ -304,16 +317,17 @@ export function TalentRegistrationForm() {
   const [generatedContent, setGeneratedContent] =
     useState<EnhancedProfile | null>(null)
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null)
-=======
-=======
 }
 ;
 interface EnhancedProfile {;
   summary: string,;
   categorizedSkills: CategorizedSkills;
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
@@ -329,15 +343,19 @@ export function TalentRegistrationForm() {
 =======
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentProfileSchema) as any
     defaultValues: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -350,6 +368,8 @@ export function TalentRegistrationForm() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       name: user?.displayName |''
       title: ''
       bio: ''
@@ -360,9 +380,12 @@ export function TalentRegistrationForm() {
       enhancedProfile: true
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       name: user?.displayName || '',
       title: '',
       bio: '',
@@ -372,8 +395,11 @@ export function TalentRegistrationForm() {
       availability: 'available',
       enhancedProfile: true,
     },
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   })
   // Handle adding skill tags
   const handleAddSkill = () => {
@@ -509,7 +535,6 @@ if ( {) {
       )
       if (error) {
         throw new Error(error.message)
-<<<<<<< HEAD
       }
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
@@ -538,9 +563,6 @@ if ( {) {
           description:
             'AI has created a professional bio and suggested additional skills for your profile.'
         })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       name: user?.displayName || "",
       title: "",
       bio: "",
@@ -656,17 +678,10 @@ export function TalentRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
 
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         setGeneratedContent(data as EnhancedProfile)
         toast({
           title: 'Enhanced Profile Generated',
@@ -676,8 +691,6 @@ export function TalentRegistrationForm() {;
       } else {
         // Fallback for mock/development mode
         logWarn('Mock AI response - using fallback content')
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         setGeneratedContent(data as EnhancedProfile),
         
         toast({
@@ -686,16 +699,12 @@ export function TalentRegistrationForm() {;
       } else {
         // Fallback for mock/development mode
         logWarn('Mock AI response - using fallback content'),
-<<<<<<< HEAD
         setGeneratedContent({
           summary: "Experienced professional with expertise in modern technologies and best practices.",
           categorizedSkills: {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         setGeneratedContent({
           summary: "Experienced professional with expertise in modern technologies and best practices.",
           categorizedSkills: {
-<<<<<<< HEAD
             programming: ['JavaScript', 'TypeScript', 'React'],
             devops: ['Docker', 'CI/CD', 'AWS'],
             platforms: ['Node.js', 'Next.js', 'Vercel'],
@@ -708,8 +717,6 @@ export function TalentRegistrationForm() {;
           description:
             'AI has created a professional bio and suggested additional skills for your profile.',
         })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             programming: ["JavaScript", "TypeScript", "React"],
             devops: ["Docker", "CI/CD", "AWS"],
             platforms: ["Node.js", "Next.js", "Vercel"],
@@ -721,15 +728,9 @@ export function TalentRegistrationForm() {;
         toast({
           title: "Enhanced Profile Generated",
           description: "AI has created a professional bio and suggested additional skills for your profile."})
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
     } catch (error: any) {
-<<<<<<< HEAD
       logErrorToProduction('Error generating enhanced profile:', {
         data: error
       })
@@ -1003,9 +1004,12 @@ export function TalentRegistrationForm() {;
       const allCategorizedSkills = generatedContent.categorizedSkills
       const newSkills: string[] = []
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       // Safely extract and flatten skills from each category
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       logErrorToProduction('Error generating enhanced profile:', { data: error }),
       toast({
         title: "Generation failed",
@@ -1025,24 +1029,21 @@ export function TalentRegistrationForm() {;
       const allCategorizedSkills = generatedContent.categorizedSkills,
       const newSkills: string[] = [],
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Safely extract and flatten skills from each category
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
           categorySkills.forEach(skill => {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (
               typeof skill === 'string' &&
               skill &&
               !skillTags.includes(skill)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+            if (true) {}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ) {
               newSkills.push(skill)
             }
@@ -1071,6 +1072,7 @@ export function TalentRegistrationForm() {;
         return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1404,6 +1406,8 @@ if ( {) {
 =======
   }
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
               newSkills.push(skill)
 ;
@@ -1475,17 +1479,13 @@ if ( {) {
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     try {
       await supabase.functions.invoke('send-email', {
         body: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1499,6 +1499,12 @@ if ( {) {
           subject: "Your Zion Talent Profile Has Been Enhanced",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          to: email
+          subject: 'Your Zion Talent Profile Has Been Enhanced'
+          to: email,
+          subject: "Your Zion Talent Profile Has Been Enhanced",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           html: `
           <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
             <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>
@@ -1511,6 +1517,7 @@ if ( {) {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         }
@@ -1518,15 +1525,17 @@ if ( {) {
         },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-          `
-<<<<<<< HEAD
-        }
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          `
+        }
           `,
         },
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       })
     } catch (error) {
       logErrorToProduction('Failed to send notification email:', {
@@ -1536,6 +1545,7 @@ if ( {) {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1546,6 +1556,9 @@ if ( {) {
           `
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          `
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   // Send notification email;
   const sendEnhancementNotification = async (userId: string, email: string) => {;
@@ -1574,6 +1587,7 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
     if (skillTags.length === 0) {
@@ -1587,26 +1601,28 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (skillTags.length === 0) {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
         title: 'Skills required'
         description: 'Please add at least one skill to your profile.'
         variant: 'destructive'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       })
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: 'Skills required',
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       })
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return;
@@ -1622,6 +1638,7 @@ if ( {) {
         throw new Error('User not authenticated')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       }
       // Enhance profile if not already done
@@ -1633,6 +1650,8 @@ if ( {) {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
         variant: "destructive"}),
@@ -1645,15 +1664,16 @@ if ( {) {
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error("User not authenticated")
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       // Enhance profile if not already done
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       let finalSummary = ''
       let finalSkills = skillTags
       if (values.enhancedProfile && !generatedContent) {
@@ -1685,12 +1705,15 @@ if ( {) {
                   if (typeof skill === 'string' && skill) {
                     aiSkills.push(skill)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
         variant: "destructive"}),
@@ -1771,9 +1794,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
       
       // Enhance profile if not already done
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       let finalSummary = "",
       let finalSkills = skillTags,
       
@@ -1885,15 +1911,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 categorySkills.forEach(skill => {;
                   if (typeof skill === 'string' && skill) {;
                     aiSkills.push(skill);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }
                 })
               }
-<<<<<<< HEAD
             })
             // Create a unique set of skills
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
@@ -1910,6 +1930,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser()
       const userEmail = (userData as any).user?.email
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>       // Create the talent profile
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1930,6 +1951,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
@@ -1951,25 +1974,22 @@ ursor/fix-website-loading-errors-and-merge-6662
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = (userData as any).user?.email,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
         toast({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          title: 'Profile Created Successfully'
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          title: 'Profile Created Successfully'
           title: 'Profile Created Successfully',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           description:
             'Your talent profile has been published and is now visible in the directory.'
         })
+<<<<<<< HEAD
 <<<<<<< HEAD
           title: "Profile Created Successfully",
           description: "Your talent profile has been published and is now visible in the directory."}),
@@ -1991,10 +2011,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          title: "Profile Created Successfully",
+          description: "Your talent profile has been published and is now visible in the directory."}),
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // Send notification email if we have user email
         if (userEmail && values.enhancedProfile && user?.id) {
           sendEnhancementNotification(user.id, userEmail)
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2014,16 +2040,21 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         setIsSubmitting(false)
       }, 1500)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         setIsSubmitting(false)
       }, 1500),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>       // Here would be the actual code to save the profile to Supabase
 ursor/fix-website-loading-errors-and-merge-6662
@@ -2035,6 +2066,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Here would be the actual code to save the profile to Supabase
 >>>>>>>       /*
       const { error } = await supabase
@@ -2052,6 +2085,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           // Other fields would be handled here
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         })
@@ -2062,12 +2096,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         })
       if (error) throw error
-=======
         }),
 
       if (error) throw error,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2084,6 +2120,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      */
+
+    } catch (error: any) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       logErrorToProduction('Error creating profile:', { data: error })
       toast({
         title: 'Error Creating Profile'
@@ -2451,6 +2492,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                             className='w-full h-full object-cover'
                             loading='lazy'                          />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                         </AspectRatio>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       ) : (
@@ -2463,6 +2505,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       logErrorToProduction('Error creating profile:', { data: error }),
       toast({
         title: "Error Creating Profile",
@@ -2634,11 +2678,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                             className="w-full h-full object-cover"
                             loading="lazy"
                           />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </AspectRatio>
                       ) : (
                         <div className="flex items-center justify-center h-full">
@@ -2647,7 +2686,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       )}
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <label className='flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors'>
                       <Upload className='mr-2 h-4 w-4' />
                       <span>Upload Photo</span>
@@ -2677,6 +2719,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <FormLabel className='text-zion-slate-light'>
                         About Yourself
                       </FormLabel>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                       <FormControl>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -2727,6 +2770,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
@@ -2756,6 +2801,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <FormItem>
                       <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -2770,6 +2816,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <FormControl>
                         <Textarea
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
@@ -2780,6 +2828,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </FormControl>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -2788,16 +2837,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormField
                   control={form && form.control}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <FormMessage className='text-red-400' />
                       <FormDescription className='text-zion-slate'>
                         {field.value?.length |0}/1000 characters
                       </FormDescription>
                     </FormItem>
                   )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 />
                 {/* AI Enhancement Option */}
                 <FormField
@@ -2811,12 +2858,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <FormMessage className="text-red-400" />
                       <FormDescription className="text-zion-slate">
                         {field.value?.length || 0}/1000 characters
@@ -2824,11 +2874,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </FormItem>
                   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 />;
                 {/* AI Enhancement Option */}
                 <FormField;
@@ -2842,6 +2895,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           AI Profile Enhancement
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                         </FormLabel>
 =======
@@ -2852,6 +2906,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         </FormLabel>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <FormDescription className="text-zion-slate-light">
@@ -2862,6 +2918,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <Switch
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       </FormControl>
                     </FormItem>
@@ -2871,10 +2928,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           aria-label='AI profile enhancement'
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           className='data-[state=checked]:bg-zion-purple'                        />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                       </FormControl>
                     </FormItem>
@@ -2883,29 +2943,28 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           aria-label="AI profile enhancement"
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           className="data-[state=checked]:bg-zion-purple"
                         />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </FormControl>
                     </FormItem>
                   )}
                 />
-<<<<<<< HEAD
                 {form.watch('enhancedProfile') && (
                   <div className='flex justify-end'>
                     <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       type='button'
                       variant='outline'
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
@@ -2917,22 +2976,28 @@ ursor/fix-website-loading-errors-and-merge-6662
                         : 'Generate Enhanced Profile'}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 
                 {form.watch("enhancedProfile") && (
                   <div className="flex justify-end">
                     <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -2941,6 +3006,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     >
                       <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2960,6 +3026,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Button>
                   </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2975,6 +3043,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
                                 >
@@ -2984,6 +3053,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         type='button'
                         size='sm'
                         className='bg-zion-purple hover:bg-zion-purple-dark text-white'
@@ -3014,11 +3085,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                                 className='flex items-center gap-2'
                               >                                <Badge
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
                                 >
                                   {category}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -3039,22 +3113,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                             {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (;
                               <div key={category} className="flex items-center gap-2">;
                                 <Badge;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
                                 >
                                   {category}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                 </Badge>
                                 <div className='flex flex-wrap gap-1'>
                                   {skills.map((skill: string) => (
                                     <Badge
                                       key={skill}
                                       className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'                                    >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                                       {skill}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -3067,6 +3140,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                               </div>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                 </Badge>;
                                 <div className="flex flex-wrap gap-1">;
                                   {skills.map((skill: string) => (;
@@ -3074,11 +3149,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                                       key={skill}
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none";
                                     >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                       {skill}
                                     </Badge>
                                   ))}
@@ -3093,12 +3163,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                           <FormControl>
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="Add a skill..."
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
               <Separator className='bg-zion-blue-light/50' />
 <<<<<<< HEAD
@@ -3139,7 +3212,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                           Skills
                         </FormLabel>
                         <div className='flex gap-2'>
-=======
               </div>;
               <Separator className="bg-zion-blue-light/50" />;
               {/* Skills and Availability */}
@@ -3154,11 +3226,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Skills</FormLabel>
                         <div className="flex gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <FormControl>
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
@@ -3171,6 +3238,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     )}
                   </div>
@@ -3180,6 +3248,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             type='button'
                             variant='outline'
                             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
@@ -3213,7 +3283,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <p className='text-zion-slate text-sm italic'>
                         No skills added yet
                       </p>
-=======
                             type="button"
                             variant="outline"
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -3257,17 +3326,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                     {skillTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                   </div>
                 </div>
                 {/* Availability Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='space-y-4'>
                   <h3 className='text-lg font-medium text-white'>
                     Availability
@@ -3360,10 +3427,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                               >
                                 <div className='h-2 w-2 rounded-full bg-red-500'></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                                 Currently Unavailable
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Availability</h3>
                   <FormField
@@ -3421,6 +3491,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -3432,6 +3503,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                 Currently Unavailable
                               </label>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -3451,6 +3524,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <Button
 =======
@@ -3459,17 +3533,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                 <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <CardFooter className='border-t border-zion-blue-light pt-6'>
               <div className='flex flex-col sm:flex-row gap-4 w-full sm:justify-between'>
-=======
 
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   type="button"
@@ -3480,21 +3550,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Button
                   type='submit'
                   className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
                   disabled={isSubmitting}                >
                   {isSubmitting ? 'Creating Profile...' : 'Create Profile'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 </Button>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Button 
                   type="submit"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -3502,11 +3578,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Profile"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </Button>
 >>>>>>>               </div>
             </CardFooter>
@@ -3518,17 +3597,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 //Generate enhanced profile with AI return
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-//Generate enhanced profile with AI return
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+//Generate enhanced profile with AI return
 //Generate enhanced profile with AI return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }//Call the Supabase Edge Function const {
   data, error '
 }= await supabase.functions.invoke ('talent-profile-enhancer', {
@@ -3572,16 +3656,21 @@ if (Array.isArray (categorySkills) ) {
   <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   new Date () .getFullYear ()
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  new Date () .getFullYear ()
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  new Date () .getFullYear ()
   new Date () .getFullYear () 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }Zion Marketplace</p>
 }
 //Handle form submission const onSubmit = async (values: TalentFormValues) => {
@@ -3699,6 +3788,7 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
 }/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)
 }'"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -4131,14 +4221,16 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }'"}
 <<<<<<< HEAD
 =======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+;
 
 }
 }
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

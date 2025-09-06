@@ -1,11 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import {
@@ -28,6 +29,7 @@ interface TabDefinition {
   label: string;
   icon: LucideIcon
 export function DeveloperPortal() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -55,8 +57,9 @@ import { WebhooksManager } from "@/components/developers/WebhooksManager";
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
 import { ApiLogs } from "@/components/developers/ApiLogs";
 =======
-  const { user } = useAuth();
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  const { user } = useAuth();
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState<string>('documentation')
   // Define the tabs
@@ -66,8 +69,6 @@ import { ApiLogs } from "@/components/developers/ApiLogs";
     { id: 'webhooks', label: 'Webhooks', icon: Webhook },
     { id: 'logs', label: 'Logs', icon: List },
   ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -89,14 +90,18 @@ export function DeveloperPortal() {
   const { user } = useAuth(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
   // Define the tabs
   const tabs: TabDefinition[] = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -108,6 +113,8 @@ export function DeveloperPortal() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { id: 'documentation', label: 'Documentation', icon: BookOpen }
     { id: 'api-keys', label: 'API Keys', icon: Key }
     { id: 'webhooks', label: 'Webhooks', icon: Webhook }
@@ -120,19 +127,18 @@ export function DeveloperPortal() {
         <h1 className='text-3xl font-bold text-white flex items-center'>
           <Terminal className='mr-3' size={32} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { id: "documentation", label: "Documentation", icon: BookOpen },
     { id: "api-keys", label: "API Keys", icon: Key },
     { id: "webhooks", label: "Webhooks", icon: Webhook },
     { id: "logs", label: "Logs", icon: List }],
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
@@ -141,10 +147,13 @@ export function DeveloperPortal() {
           <Terminal className="mr-3" size={32} />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Developer Portal
 =======
 >>>>>>>           Developer Portal
@@ -156,11 +165,14 @@ export function DeveloperPortal() {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {activeTab === "documentation" && <ApiDocumentation />}
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Tabs */}
       <div className='border-b border-zinc-800 mb-8'>
         <div className='flex flex-wrap -mb-px'>
@@ -203,7 +215,6 @@ export function DeveloperPortal() {
       </div>
       {/* Tab content */}
       <div>
-=======
       
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">
@@ -313,11 +324,6 @@ export function DeveloperPortal() {;
       </div>;
       {/* Tab content */}
       <div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {activeTab === "documentation" && <ApiDocumentation />}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {activeTab === "api-keys" && <ApiKeysManager />}
@@ -329,6 +335,7 @@ export function DeveloperPortal() {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -336,6 +343,9 @@ export function DeveloperPortal() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function ProtectedDeveloperPortal() {
 =======
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -358,26 +368,30 @@ xport default function ProtectedDeveloperPortal() {
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 };
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function ProtectedDeveloperPortal() {;
@@ -401,8 +415,11 @@ export default function ProtectedDeveloperPortal() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

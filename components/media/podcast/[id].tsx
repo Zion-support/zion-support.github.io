@@ -187,22 +187,14 @@ if (return <div > Loading…</div>) {
 =======
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function EpisodePage() {
-=======
 export default function EpisodePage() {;
-=======
 
 export default function EpisodePage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const router = useRouter();
   const { id } = router.query as { id?: string };
   const [episode, setEpisode] = useState<any>(null);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const router = useRouter();
   const { id } = router.query as { id?: string }
@@ -239,6 +231,7 @@ export default function EpisodePage() {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -249,6 +242,8 @@ export default function EpisodePage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );      {episode.audio?.mp3Url && (
         <audio controls className="w-full">
           <source src={episode.audio.mp3Url} type="audio/mpeg" />
@@ -261,8 +256,8 @@ export default function EpisodePage() {
     </div>
 );
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -270,3 +265,5 @@ export default function EpisodePage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

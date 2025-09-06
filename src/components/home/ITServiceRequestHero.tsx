@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { Loader2 } from 'lucide-react'
@@ -7,6 +8,8 @@ import { Loader2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { GradientHeading } from '@/components/GradientHeading'
@@ -15,15 +18,16 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { useToast } from '@/hooks/use-toast'
 import axios from 'axios'
-<<<<<<< HEAD
 import { Loader2 } from 'lucide-react'
 
 import { useTranslation } from 'react-i18next'
-=======
 import { Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { logErrorToProduction } from '@/utils/productionLogger'; export function ITServiceRequestHero() { export function ITServiceRequestHero(...args[]):  {
   const [location, setLocation] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -87,10 +91,13 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" }
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" }
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" }
@@ -98,17 +105,23 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
   ]
 import { motion  } from 'framer-motion'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 import { motion  } from 'framer-motion';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Link  } from 'react-router-dom';"
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },"
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },"
@@ -145,10 +158,13 @@ export function ITServiceRequestHero() {
     setIsSubmitting(true)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const res = await axios.post('/api/onsite-request', {
         name
@@ -171,12 +187,15 @@ export function ITServiceRequestHero() {
         setLocation('')
         setDetails('')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import Image from "next/image",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -214,6 +233,7 @@ export function ITServiceRequestHero() {
     setIsSubmitting(true),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     try {
 =======
@@ -228,6 +248,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const res = await axios.post("/api/onsite-request", {
         name,
@@ -238,12 +260,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         location,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         details,
       })
       if (res.status === 200) {
@@ -259,11 +284,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         setLocation('')
         setDetails('')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         details}),
 
       if (res.status === 200) {
@@ -278,6 +306,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         setDetails("")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -285,10 +314,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     } catch (err: any) {
       logErrorToProduction(err)
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -314,21 +346,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: 'Submission Failed'
         description: 'There was an error submitting your request.'
         variant: 'destructive'
-=======
         title: 'Submission Failed',
         description: 'There was an error submitting your request.',
         variant: 'destructive',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       })
     } finally {
       setIsSubmitting(false)
     }
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Submission Failed",
         description: "There was an error submitting your request.",
         variant: "destructive"})
@@ -336,6 +371,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       setIsSubmitting(false)
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -346,11 +382,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <section
@@ -368,6 +402,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto">
           <div className="flex flex-col md:flex-row items-center gap-4">
             <Image
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -396,6 +431,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 value={email}
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               src='/logos/zion-logo.png'
               alt='Zion logo'
               width={200}
@@ -406,9 +443,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 value={name}
                 onChange={e => setName(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required
-<<<<<<< HEAD
-=======
-=======
               src="/logos/zion-logo.png"
               alt="Zion logo"
               width={200}
@@ -421,8 +455,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onChange={(e) => setName(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               />
               <p className='text-xs text-zion-slate-light'>
                 {t(
@@ -434,16 +466,20 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Input
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 type='email'
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               />
@@ -454,13 +490,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <p className='text-xs text-zion-slate-light'>
@@ -488,10 +524,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Input
                 value={phone}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onChange={e => setPhone(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'              />
               <p className='text-xs text-zion-slate-light'>
@@ -512,11 +551,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onChange={e => setLocation(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               />
               <p className='text-xs text-zion-slate-light'>
                 {t(
@@ -555,9 +597,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                 disabled={isSubmitting}
                 className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105'              >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               src="/logos/zion-logo.png"
               alt="Zion logo"
               width={200}
@@ -582,10 +627,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-xs text-zion-slate-light">{t('onsite_form.email_helper', "We'll confirm your request here.")}</p>
               <Input
                 value={phone}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onChange={(e) => setPhone(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
               />
@@ -603,16 +651,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                 required
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
               <Textarea
                 value={details}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -625,6 +677,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onChange={e => setDetails(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]'              />
               <p className='text-xs text-zion-slate-light'>
@@ -638,11 +692,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 disabled={isSubmitting}
                 className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105'              >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onChange={(e) => setDetails(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]"
               />
@@ -652,6 +709,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105"
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -667,6 +725,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {isSubmitting && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
@@ -677,15 +737,19 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <p className='text-xs text-center text-zion-slate-light mt-3'>
             {t(
               'onsite_form.privacy_notice'
               'Rest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.'
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -694,11 +758,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             {t('onsite_form.privacy_noticeRest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <p className="text-xs text-center text-zion-slate-light mt-3">
+            {t('onsite_form.privacy_noticeRest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </p>
         </div>
       </div>
     </section>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -707,17 +776,20 @@ ursor/fix-website-loading-errors-and-merge-6662
   setIsSubmitting (false)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }catch (err: any) {
   logErrorToProduction (err)
 toast ({
-<<<<<<< HEAD
 }finally {
   setIsSubmitting (false)
-=======
 }finally {;
   setIsSubmitting (false) ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };"
 py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image <Input type="email" value= {
   email
@@ -751,6 +823,7 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -760,6 +833,9 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import Image from "next/image",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -969,8 +1045,11 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

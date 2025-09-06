@@ -1,20 +1,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState } from 'react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-import React, { useState } from 'react'
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState } from 'react'
 import React, { useState } from "react",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { MessageCircle } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -23,6 +29,8 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
@@ -35,22 +43,21 @@ interface DiscussionPost {
   body: string
 const initialPosts: DiscussionPost[] = [
   {
-<<<<<<< HEAD
     id: 1,  time: string
   title: string
 
-=======
-=======
     id: 1,  time: string,
-=======
 import React, { useState } from "react",
 import { MessageCircle } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 interface DiscussionPost {
@@ -58,6 +65,7 @@ interface DiscussionPost {
   author: string,
   avatar?: string,
   time: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -104,18 +112,14 @@ const initial_posts: DiscussionPost[] = [;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   body: string
 }
 const initialPosts: DiscussionPost[] = [
   {
-<<<<<<< HEAD
-=======
     id: 1,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     author: 'Anna Zhou',
     time: '2h ago',
     title: 'What AI trends are you most excited for in 2025?',
@@ -203,11 +207,14 @@ export const CommunityDiscussion: React.FC = () => {;
   const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("")
   const [newBody, setNewBody] = useState("")
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: "Anna Zhou",
     time: "2h ago",
     title: "What AI trends are you most excited for in 2025?",
@@ -226,6 +233,7 @@ export const CommunityDiscussion: React.FC = () => {
   const [newBody, setNewBody] = useState(""),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const handleAddPost = () => {
 
@@ -236,6 +244,9 @@ export const CommunityDiscussion: React.FC = () => {
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 1
     author: 'Anna Zhou'
     time: '2h ago'
@@ -256,6 +267,7 @@ export const CommunityDiscussion: React.FC = () => {
   const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("")
   const [newBody, setNewBody] = useState("")
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   const handleAddPost = () => {
 =======
 =======
@@ -264,6 +276,9 @@ export const CommunityDiscussion: React.FC = () => {
   const handleAddPost = () => {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const handleAddPost = () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!newTitle.trim() |!newBody.trim()) return
     setPosts([
       {
@@ -280,14 +295,20 @@ export const CommunityDiscussion: React.FC = () => {
     setShowNew(false)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!newTitle.trim() || !newBody.trim()) return,
     setPosts([
       {
         id: Date.now(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         author: 'You',
         time: 'Now',
         title: newTitle,
@@ -300,12 +321,15 @@ export const CommunityDiscussion: React.FC = () => {
     setShowNew(false)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
 >>>>>>>     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         author: "You",
         time: "Now",
         title: newTitle,
@@ -316,11 +340,6 @@ export const CommunityDiscussion: React.FC = () => {
     setShowNew(false)
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -338,14 +357,18 @@ export const CommunityDiscussion: React.FC = () => {
         <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale'
           size='sm'
           onClick={() => setShowNew(v => !v)}        >
           {showNew ? 'Cancel' : 'New Post'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>         </Button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -353,16 +376,13 @@ export const CommunityDiscussion: React.FC = () => {
 >>>>>>>       </div>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
           size="sm"
           onClick={() => setShowNew((v) => !v)}
         >
           {showNew ? "Cancel" : "New Post"}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </Button>
       </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -372,10 +392,13 @@ export const CommunityDiscussion: React.FC = () => {
             <Input
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               placeholder='Title (e.g., Share an AI tool, Ask for help...)'
               className='mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate'
               value={newTitle}
@@ -409,11 +432,14 @@ export const CommunityDiscussion: React.FC = () => {
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
           size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           onClick={() => setShowNew((v) => !v)}
         >
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               placeholder="Title (e.g., Share an AI tool, Ask for help...)"
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
@@ -527,11 +553,6 @@ export const CommunityDiscussion: React.FC = () => {;
         <Button;
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
           size="sm";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           onClick={() => setShowNew((v) => !v)}
         >
           {showNew ? "Cancel" : "New Post"}
@@ -547,7 +568,10 @@ export const CommunityDiscussion: React.FC = () => {;
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
               maxLength={80}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <Textarea
               placeholder="What's on your mind?"
@@ -568,6 +592,7 @@ export const CommunityDiscussion: React.FC = () => {;
                 className="bg-zion-blue text-white hover:bg-zion-blue-dark"
                 onClick = {() => setShowNew(false),}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               >
                 Cancel
               </Button>
@@ -583,6 +608,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />;
             <Textarea;
               placeholder="What's on your mind?";
@@ -598,25 +625,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 size="sm"
                 className="bg-zion-blue text-white hover:bg-zion-blue-dark"
                 onClick={() => setShowNew(false)}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 Cancel
               </Button>
               <Button
-<<<<<<< HEAD
                 size='sm'
                 className='bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale'                onClick={handleAddPost}                size="sm"
-=======
                 size="sm"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
                 disabled={!newTitle.trim() |!newBody.trim()}
@@ -631,9 +646,12 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Card>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='flex flex-col gap-6'>
         {posts.map(post => (
           <Card
@@ -714,12 +732,14 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="flex flex-col gap-6">
         {posts.map((post) => (
           <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
@@ -783,6 +803,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -795,3 +816,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

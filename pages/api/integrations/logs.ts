@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -20,9 +21,9 @@ if (req && req.method !== "GET")
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -43,6 +44,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     : state.logs;
   res.status(200).json({ logs });
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -97,10 +99,9 @@ function handler() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -124,6 +125,7 @@ export default function handler(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -137,3 +139,5 @@ export default function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

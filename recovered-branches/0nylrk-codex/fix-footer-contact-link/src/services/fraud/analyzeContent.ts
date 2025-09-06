@@ -65,44 +65,39 @@ const contentLower = content && content.toLowerCase();
 =======
 
 // Content analysis functionality
-<<<<<<< HEAD
 import { suspiciousPhrases  } from './constants';
 import { AnalysisResult } from './types';
-=======
 import { suspiciousPhrases } from './constants',
 import { AnalysisResult } from './types',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 /**
  * Analyzes text content for suspicious patterns
  */
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 export const analyzeContent = (content: string): AnalysisResult => {;
   const contentLower = content.toLowerCase();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const analyzeContent = (content: string): AnalysisResult => {
-<<<<<<< HEAD
   const contentLower = content.toLowerCase();
   const reasons: string[] = []
-=======
   const contentLower = content.toLowerCase(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const reasons: string[] = [],
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
     if (contentLower.includes(phrase.toLowerCase())) {
       reasons.push(`Contains suspicious phrase: "${phrase}"`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   // Check for links (simplified check)
@@ -118,8 +113,11 @@ export const analyzeContent = (content: string): AnalysisResult => {
   const capitalRatio = (content.match(/[A-Z]/g) |[]).length / content.length;
   if (capitalRatio > 0.3 && content.length > 20) {
     reasons.push('Excessive capitalization')
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Content analysis functionality;
 import { suspiciousPhrases } from './constants',;
 import { AnalysisResult } from './types',;
@@ -150,6 +148,7 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length,;
   if (capitalRatio > 0.3 && content.length > 20) {;
     reasons.push('Excessive capitalization');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -297,6 +296,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Check for poor grammar with repetitive punctuation
   if (/[!?]{3}/.test(content)) {
@@ -306,10 +307,11 @@ if ( {) {
     isSuspicious: reasons.length > 0
     reasons
   }
-<<<<<<< HEAD
 }
 
-=======
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

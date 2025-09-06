@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
@@ -15,6 +16,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -68,20 +72,23 @@ interface JobApplicationsTableProps {
   jobId: string
 }
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
-<<<<<<< HEAD
 
   const {
     applications
     isLoading
     error
     updateApplicationStatus
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { 
     applications, 
     isLoading, 
     error, 
     updateApplicationStatus, ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -93,6 +100,8 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     refetch;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     markApplicationAsViewed;
     refetch
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -114,10 +123,13 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
       if (application && !application.viewed_at) {
         await markApplicationAsViewed(applicationId)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -208,23 +220,18 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
       const application = applications.find(app => app.id === applicationId),;
       if (application && !application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } finally {
       setProcessingId(null)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   };
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application)
     setShowScoreDialog(true)
@@ -258,7 +265,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
 
   if (isLoading) {
     return <LoadingState />
-=======
   },;
   const handleViewScore = (application: JobApplication) => {;
     setSelectedApplication(application),;
@@ -274,6 +280,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   if (isLoading) {;
     return <LoadingState />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
 <<<<<<< HEAD
 
@@ -284,6 +291,8 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   if (error) {
     return <ErrorState error={error} />
@@ -291,6 +300,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   if (applications.length === 0) {
     return <EmptyState />
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -538,8 +548,9 @@ return (<> <ApplicationsTable applications= {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <ApplicationsTable

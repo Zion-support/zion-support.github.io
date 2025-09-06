@@ -12,6 +12,7 @@ export default function UltimateRedundancyRedirect() {
       </main>
     </>
   )
+<<<<<<< HEAD
 
 ;
 =======
@@ -65,8 +66,9 @@ export default function UltimateRedundancyRedirect() {
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 import Head from 'next/head';
 export default function UltimateRedundancyRedirect(req, res) {
   try {
@@ -85,12 +87,9 @@ export default function UltimateRedundancyRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -99,3 +98,6 @@ export default function UltimateRedundancyRedirect(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

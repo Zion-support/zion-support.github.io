@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -76,11 +77,15 @@ export default function ServicesShowcase2026() {
     ...revolutionary2026Services;
 =======
 <<<<<<< HEAD
-import React, { useState, useMemo } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState, useMemo } from 'react',
 import React, { useState, useMemo } from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
@@ -103,7 +108,6 @@ export default function ServicesShowcase2026() {;
 
 =======
 import {
-<<<<<<< HEAD
   Search
   Filter
   Star
@@ -120,8 +124,11 @@ import {
   Atom
   Sparkles
   Target;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Search,
   Filter,
   Star,
@@ -512,7 +519,6 @@ particleCount={600}
 =======
   Sparkles,;
   Target,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
@@ -672,6 +678,7 @@ export default function ServicesShowcase2026() {;
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 href='https://ziontechgroup && ziontechgroup.com/2026-services-showcase'
           />        </Head>          <title>Zion Tech Group - 2026 Revolutionary Services Showcase | 1500+ Solutions</title>;
           <meta;
@@ -800,20 +807,16 @@ href='https://ziontechgroup && ziontechgroup.com/2026-services-showcase'
 Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Navigation */}
         <UltraAdvancedNavigation />
-=======
 
         </Head>
 
         {/* Navigation */}
         <UltraAdvancedNavigation />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Hero Section */}
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -1070,14 +1073,7 @@ value={searchTerm}
 =======
                   </select>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Sort By */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className='relative'>
@@ -1133,6 +1129,7 @@ value={searchTerm}
                         </span>
                       )}
                     </div>
+<<<<<<< HEAD
 
 =======
 
@@ -1150,6 +1147,9 @@ value={searchTerm}
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -1419,7 +1419,6 @@ onChange={e => setSortBy(e && e.target.value)}
 =======
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>
-<<<<<<< HEAD
                         <span className='text-gray-400 text-lg font-normal'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1519,6 +1518,7 @@ onChange={e => setSortBy(e && e.target.value)}
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                             {feature}
 =======
 
@@ -1616,6 +1616,8 @@ onChange={e => setSortBy(e && e.target.value)}
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                       {service.name}
                     </h3>
@@ -1634,23 +1636,11 @@ onChange={e => setSortBy(e && e.target.value)}
 
                             {feature}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </li>
                         ))}
                       </ul>
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Category and Technology */}
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
@@ -1663,19 +1653,22 @@ onChange={e => setSortBy(e && e.target.value)}
                       <span className="text-xs text-gray-500">
                       </span>
                     </div>
-<<<<<<< HEAD
                     {/* CTA Button */}
                     <a
                       href={service.link}
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                     {/* CTA Button */}
                     <a
                       href={service.link}
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1689,6 +1682,8 @@ onChange={e => setSortBy(e && e.target.value)}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     >
                       Learn More
                     </a>
@@ -1719,9 +1714,8 @@ onChange={e => setSortBy(e && e.target.value)}
 </div>;
 =======
             </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1729,6 +1723,8 @@ onChange={e => setSortBy(e && e.target.value)}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -1749,6 +1745,7 @@ onChange={e => setSortBy(e && e.target.value)}
                 <p className='text-gray-400'>
                   Try adjusting your search terms or filters
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1762,6 +1759,8 @@ onChange={e => setSortBy(e && e.target.value)}
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </p>              </motion.div>                className="text-center py-16"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
@@ -1773,7 +1772,6 @@ onChange={e => setSortBy(e && e.target.value)}
             )}
           </div>
         </section>
-=======
                 </p>              </motion.div>
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1787,6 +1785,7 @@ onChange={e => setSortBy(e && e.target.value)}
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1804,11 +1803,14 @@ onChange={e => setSortBy(e && e.target.value)}
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1958,12 +1960,9 @@ onChange={e => setSortBy(e && e.target.value)}
             <motion.div
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -2087,6 +2086,7 @@ onChange={e => setSortBy(e && e.target.value)}
       </div>
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
@@ -2201,12 +2201,10 @@ className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold round
     </UltraAdvancedFuturisticBackground>);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -2217,10 +2215,13 @@ className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold round
 }
 }
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

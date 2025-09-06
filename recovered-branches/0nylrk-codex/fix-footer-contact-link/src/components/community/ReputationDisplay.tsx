@@ -15,21 +15,21 @@ import { Progress } from "@/components/ui/progress",
 =======
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Trophy } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
-=======
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Trophy} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
-=======
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -39,16 +39,21 @@ import { Progress } from "@/components/ui/progress",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReputationDisplayProps {
 
   reputation: number
   size?: 'sm' | 'md' | 'lg'
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const ReputationDisplay = ({
   reputation;
   size = 'md'
@@ -57,16 +62,16 @@ export const ReputationDisplay = ({
   const currentLevel = Math.floor(reputation / 100);
   const nextMilestone = (currentLevel + 1) * 100;
   const progress = ((reputation % 100) / 100) * 100;
-=======
 
-<<<<<<< HEAD
 export const ReputationDisplay = ({ ;
   reputation;
-=======
 export const ReputationDisplay = ({ 
   reputation,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   size = 'md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
@@ -82,8 +87,11 @@ export const ReputationDisplay = ({
 
 =======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Styling based on size
   const sizeClasses = {
     sm: {
@@ -91,20 +99,26 @@ export const ReputationDisplay = ({
       icon: "w-3 h-3"
       progress: "h-1"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     md: {
       container: "text-sm"
       icon: "w-4 h-4"
       progress: "h-2"
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     md: {
       container: "text-sm",
@@ -112,18 +126,22 @@ export const ReputationDisplay = ({
       progress: "h-2" 
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     lg: {
       container: "text-base"
       icon: "w-5 h-5"
       progress: "h-3"
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -135,12 +153,16 @@ export const ReputationDisplay = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-1">
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>
@@ -154,6 +176,7 @@ export const ReputationDisplay = ({
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -169,17 +192,13 @@ import {Progress} from "@/components/ui/progress";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default ReputationDisplay;
 
-=======
 },
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ReputationDisplay,
 import { Trophy } from "lucide-react",;
 import { Progress } from "@/components/ui/progress",;
@@ -397,10 +416,9 @@ export default ReputationDisplay;
   );
 };
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ReputationDisplay;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

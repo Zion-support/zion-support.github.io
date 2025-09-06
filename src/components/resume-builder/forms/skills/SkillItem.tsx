@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { Trash2 } from 'lucide-react'
@@ -14,22 +15,23 @@ import { Button } from '@/components/ui/button'
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> import { Trash2 } from 'lucide-react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Badge } from '@/components/ui/badge',
 import { Button } from '@/components/ui/button',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Trash2 } from 'lucide-react'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -37,6 +39,7 @@ import { SkillItemProps } from './types'
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -89,12 +92,12 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {;
         <span className="ml-1 text-xs opacity-60">({skill && skill.proficiency}/5)</span>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Badge
       key = {skill.id,}
-=======
     <Badge 
       key={skill.id} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       variant="secondary"
       className="flex items-center gap-1 py-1.5 px-3"
     >
@@ -113,7 +116,6 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {;
       </Button>
     </Badge>
   )
-<<<<<<< HEAD
 }
 "
 import {Badge} from '@/components/ui/badge'
@@ -141,10 +143,10 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
       >
         <Trash2 className="h-3 w-3" />
       </Button>
-<<<<<<< HEAD
     </Badge>
   )
 
+<<<<<<< HEAD
     </Badge>;
 =======
 <<<<<<< HEAD
@@ -168,15 +170,17 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+},
     </Badge>;
   );
 } };
 };
-=======
 },
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

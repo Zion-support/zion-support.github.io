@@ -40,7 +40,6 @@ export function MilestoneCreator(): any ({;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/components/MilestoneCreator.tsx
 =======
 
-<<<<<<< HEAD
 import React from 'react';
 import { AddMilestoneForm } from '../AddMilestoneForm';
 interface MilestoneCreatorProps {
@@ -54,13 +53,14 @@ interface MilestoneCreatorProps {
   projectEndDate?: string | null;
   projectType?: string
 }
-<<<<<<< HEAD
 export function MilestoneCreator({
-=======
 
 export function MilestoneCreator({;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onSubmit;
   isSubmitting;
   onCancel;
@@ -83,13 +83,14 @@ export function MilestoneCreator({;
   projectType
 }: MilestoneCreatorProps) {
   return (
-<<<<<<< HEAD
     <AddMilestoneForm
-=======
     <AddMilestoneForm 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
@@ -157,11 +158,14 @@ export function MilestoneCreator({;
   return (;
     <AddMilestoneForm;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}

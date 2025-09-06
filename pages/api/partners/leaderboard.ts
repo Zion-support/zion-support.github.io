@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -171,9 +172,9 @@ if (continue) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -181,13 +182,10 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
-<<<<<<< HEAD
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-=======
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       "placeholder-key";
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   try {
@@ -234,12 +232,13 @@ export default async function handler(
         ]
       });
     }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -380,16 +379,10 @@ export default async function handler(req, res) {
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
-<<<<<<< HEAD
     const { data, error } = await supabase
       .from("referral_events")
       .select("partner_code, event, created_at")
@@ -408,7 +401,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ leaders });
 
   } catch (e: any) {
-=======
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');
@@ -435,11 +427,6 @@ export default async function handler(req, res) {
       .slice(0, 10);
     return res.status(200).json({ leaders });
   } catch (error) {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -43,22 +44,29 @@ const contactInfo = {
 };
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Phone
   Mail
   MapPin
@@ -80,8 +88,11 @@ import {
   Youtube
   Github;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Phone,
   Mail,
   MapPin,
@@ -104,12 +115,15 @@ import {
   Github,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 const contactInfo = {
@@ -742,7 +756,10 @@ export default function UltraFuturisticFooter2026() {
   return (
     <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Background Effects */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className='absolute inset-0 overflow-hidden'>;
@@ -781,6 +798,7 @@ export default function UltraFuturisticFooter2026() {
 <<<<<<< HEAD
 
           <div className="lg:col-span-2">
+<<<<<<< HEAD
 =======
 export default function UltraFuturisticFooter2026() {
   return (
@@ -797,6 +815,8 @@ export default function UltraFuturisticFooter2026() {
           <div className="lg:col-span-2">
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 ];
 
@@ -804,12 +824,15 @@ export default function UltraFuturisticFooter2026() {
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -908,6 +931,7 @@ export default function UltraFuturisticFooter2026() {
             </motion.div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -974,6 +998,9 @@ export default function UltraFuturisticFooter2026() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Service Categories */}
           {serviceCategories && serviceCategories.map((category, index) => (;
             <motion&& motion.div
@@ -1166,11 +1193,9 @@ function UltraFuturisticFooter2026() {
           <motion&& motion.div
 =======
         </div>
-<<<<<<< HEAD
         {/* Additional Links */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Company Links */}
-=======
 
         {/* Additional Links */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1178,6 +1203,7 @@ function UltraFuturisticFooter2026() {
 
           {/* Company Links */}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1194,6 +1220,8 @@ function UltraFuturisticFooter2026() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             initial={{ opacity: 0, y: 20 }}
@@ -1272,9 +1300,8 @@ function UltraFuturisticFooter2026() {
               ))}
             </ul>
           </motion.div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1292,6 +1319,8 @@ function UltraFuturisticFooter2026() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Resources */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1371,9 +1400,8 @@ function UltraFuturisticFooter2026() {
               ))}
             </ul>
           </motion.div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1391,6 +1419,8 @@ function UltraFuturisticFooter2026() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Social Media */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1419,6 +1449,7 @@ function UltraFuturisticFooter2026() {
                 <Link
                   key={index}
                   href={social.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               ))}
@@ -1473,33 +1504,22 @@ className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
         <motion&& motion.div
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
                 >
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />                  className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
                 >
                   <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
                 </Link>
-=======
 
                 </Link>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Newsletter Signup */}
         <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1564,15 +1584,16 @@ className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
         >
 =======
           className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <div className='text-center'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1732,28 +1753,14 @@ className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
             </div>
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className='border-t border-gray-800 pt-8'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>
@@ -1825,6 +1832,7 @@ className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1934,12 +1942,11 @@ className='hover:text-cyan-400 transition-colors duration-300'>;
     </footer>);
 =======
 <<<<<<< HEAD
+=======
+    </footer>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
     </footer>;
 );
 }
@@ -1963,11 +1970,14 @@ className='hover:text-cyan-400 transition-colors duration-300'>;
 }
 }
 }
-=======
     </footer>
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

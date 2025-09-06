@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -12,6 +12,8 @@ export interface ResumeOption {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Resume } from "@/types/resume";
 export interface ResumeOption {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -21,8 +23,8 @@ export interface ResumeOption {;
   resume?: Resume;
   file?: File
 }
-<<<<<<< HEAD
 export interface ResumeSelectorProps {
+<<<<<<< HEAD
 
 
 
@@ -32,15 +34,19 @@ export interface ResumeSelectorProps {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Resume } from "@/types/resume",
 export interface ResumeOption {
   id: string,
@@ -58,6 +64,7 @@ export interface ResumeOption {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export interface ResumeSelectorProps {;
 
@@ -72,11 +79,9 @@ export interface ResumeSelectorProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-export interface ResumeSelectorProps {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface ResumeSelectorProps {;
   onResumeSelected: (resumeOption: ResumeOption) => void;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }

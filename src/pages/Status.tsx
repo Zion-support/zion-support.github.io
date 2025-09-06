@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { logWarn } from '@/utils/productionLogger'
@@ -11,11 +12,15 @@ import { logWarn } from '@/utils/productionLogger'
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { logWarn } from '@/utils/productionLogger'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SEO } from "@/components/SEO",
 import { useState, useEffect } from "react",
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -26,17 +31,21 @@ import { logWarn } from '@/utils/productionLogger';
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { logWarn } from '@/utils/productionLogger';
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { logWarn } from '@/utils/productionLogger',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ServiceStatus {
 >>>>>>> 
   name: string
@@ -44,6 +53,7 @@ interface ServiceStatus {
   description: string
   lastChecked: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -93,9 +103,9 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
   }
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
         return <CheckCircle className="h-5 w-5 text-green-500" />
         return <Clock className="h-5 w-5 text-blue-500" />
       default:;
@@ -106,13 +116,8 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 
   )
 }
-<<<<<<< HEAD
-=======
 
-=======
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",
@@ -519,6 +524,7 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -534,3 +540,5 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

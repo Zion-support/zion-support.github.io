@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/routes/ErrorRoutes.tsx
 
 import { Fragment } from "react",
@@ -9,27 +10,28 @@ import { Route, Routes } from "react-router-dom",
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import NotFound from "@/pages/NotFound";
 import Unauthorized from "@/pages/Unauthorized";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
-<<<<<<< HEAD
 import NotFound from "@/pages/NotFound";
 import Unauthorized from "@/pages/Unauthorized";
 
-=======
 import NotFound from "@/pages/NotFound",
 import Unauthorized from "@/pages/Unauthorized",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const ErrorRoutes = () => {
   return (
     <Routes>
@@ -39,21 +41,26 @@ const ErrorRoutes = () => {
     </Routes>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default ErrorRoutes;
 
-=======
 },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default ErrorRoutes,
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -157,10 +164,9 @@ const ErrorRoutes = () => {;
     </Routes>;
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ErrorRoutes;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

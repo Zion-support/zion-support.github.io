@@ -18,7 +18,6 @@ import {supabase} from '@/integrations / supabase / client';
 
 =======
 
-<<<<<<< HEAD
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import { useLocation  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
@@ -41,12 +40,13 @@ export type AnalyticsEventType =
   | 'login';
 // Interface for analytics events
 export interface AnalyticsEvent {
-<<<<<<< HEAD
   type: AnalyticsEventType
-=======
   type: AnalyticsEventType,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   path?: string;
   component?: string;
   elementId?: string;
@@ -56,6 +56,7 @@ export interface AnalyticsEvent {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -64,12 +65,16 @@ export interface AnalyticsContextType {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-export interface AnalyticsContextType {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface AnalyticsContextType {
 
 export interface AnalyticsContextType {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
   trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
   pageViews: number
@@ -78,6 +83,7 @@ export interface AnalyticsContextType {;
   clearEvents: () => void
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -87,6 +93,8 @@ export interface AnalyticsContextType {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 );
@@ -102,11 +110,13 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
     setPageViews((prev) => prev + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
 import { useLocation } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -237,29 +247,22 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string, any> = {}) => {
 =======
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 ),
 
-<<<<<<< HEAD
 export function AnalyticsProvider({ children }: { children: ReactNode }) {;
   const [pageViews, setPageViews] = useState(0);
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null);
   const location = useLocation();
   const { user } = useAuth();
-=======
 export function AnalyticsProvider({ children }: { children: ReactNode }) {
   const [pageViews, setPageViews] = useState(0),
   const [events, setEvents] = useState<AnalyticsEvent[]>([]),
   const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null),
   const location = useLocation(),
   const { user } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Track page views when location changes
   useEffect(() => {
@@ -268,7 +271,6 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Function to track general analytics events
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -278,6 +280,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
       timestamp: Date.now()
       userId: user?.id
       metadata
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -290,11 +293,17 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
     setLastEvent(event);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+    setEvents((prevEvents) => [...prevEvents, event]);
+    setLastEvent(event);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     setEvents((prevEvents) => [...prevEvents, event]),
     setLastEvent(event),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -302,6 +311,8 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       // Store event in Supabase for persistent analytics
       await supabase.from('analytics_events').insert([{
@@ -310,19 +321,25 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         user_id: user?.id
         metadata: metadata
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }]);
       console.log(`Analytics event tracked: ${type}`, metadata)
     } catch (error) {
       console.error('Error logging analytics event:', error)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   // Function to track conversion events
@@ -347,6 +364,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         lastEvent;
         events;
         clearEvents
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -486,14 +504,19 @@ export interface AnalyticsContextType {;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }]),
       
       // // // console.log(`Analytics event tracked: ${type}`, metadata)
     } catch (error) {
       console.error('Error logging analytics event:', error)
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined;
@@ -616,6 +639,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {;
         events,;
         clearEvents;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   };
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/AnalyticsContext.tsx
@@ -664,20 +688,22 @@ export const useAnalytics = (): AnalyticsContextType => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }}
     >
       {children}
     </AnalyticsContext.Provider>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const useAnalytics = (): AnalyticsContextType => {
-=======
 
 export const useAnalytics = (): AnalyticsContextType => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
@@ -685,6 +711,7 @@ export const useAnalytics = (): AnalyticsContextType => {;
   // Cast is used here because the context default is undefined until provided
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.
   return context as AnalyticsContextType
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -700,11 +727,10 @@ export const useAnalytics = (): AnalyticsContextType => {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/AnalyticsContext.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 export const useAnalytics = (): AnalyticsContextType => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -850,10 +876,9 @@ setLastEvent (null)
   // Cast is used here because the context default is undefined until provided;
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
   return context as AnalyticsContextType;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

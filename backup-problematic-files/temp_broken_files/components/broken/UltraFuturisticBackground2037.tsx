@@ -4,16 +4,13 @@ interface UltraFuturisticBackground2037Props {intensity?: 'low' | 'medium' | 'hi
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon';
   children?: React.ReactNode;
 }
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2037.tsx
-<<<<<<< HEAD
+:components/broken/UltraFuturisticBackground2037.tsx
 export default function UltraFuturisticBackground2037({intensity = 'medium';
   theme = 'quantum-neon';
-=======
 ;
 export default function UltraFuturisticBackground2037({;
   intensity = 'medium',;
   theme = 'quantum-neon',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   children;
 }: UltraFuturisticBackground2037Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {;
@@ -306,7 +303,6 @@ export default function UltraFuturisticBackground2037({;
               ctx.moveTo(particle1.x, particle1.y);
               ctx.lineTo(particle2.x, particle2.y);
               ctx.stroke();
-=======
 
 ;
 export default function UltraFuturisticBackground2037({;
@@ -957,6 +953,7 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
               ctx.lineTo(particle2.x, particle2.y),
               ctx.stroke()
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -966,6 +963,10 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }
           });
         });
@@ -995,9 +996,13 @@ ref={canvasRef}
           background: 'transparent'
           filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD:components/broken/UltraFuturisticBackground2037.tsx
+=======
+:components/broken/UltraFuturisticBackground2037.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }}
       />;
       {children}
@@ -1005,8 +1010,11 @@ ref={canvasRef}
   );
 }
 export default UltraFuturisticBackground2037;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }}      />
       {children}
     </div>
@@ -1014,6 +1022,7 @@ export default UltraFuturisticBackground2037;
 },
 
 export default UltraFuturisticBackground2037,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1023,3 +1032,7 @@ export default UltraFuturisticBackground2037,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2037.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

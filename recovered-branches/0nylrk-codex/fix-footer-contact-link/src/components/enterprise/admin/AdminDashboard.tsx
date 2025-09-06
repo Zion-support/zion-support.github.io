@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminDashboard.tsx
 
 <<<<<<< HEAD
@@ -6,17 +7,23 @@
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
 import { UsageStats } from "./UsageStats",
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { AdminHeader } from "./AdminHeader";
 import { TeamManagement } from "./TeamManagement";
 import { UsageStats } from "./UsageStats";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -24,6 +31,8 @@ import { UsageStats } from "./UsageStats";
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { RoleManagement } from "./RoleManagement";
 import { TeamActivity } from "./TeamActivity";
 
@@ -31,16 +40,22 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AdminDashboard() {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">
       <AdminHeader />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
@@ -54,6 +69,7 @@ import {
   TabsTrigger} from "@/components/ui/tabs",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -65,6 +81,8 @@ import {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
@@ -73,12 +91,15 @@ import {
           <TabsTrigger value="activity">Team Activity</TabsTrigger>
         </TabsList>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
         </TabsContent>
@@ -88,8 +109,11 @@ import {
         <TabsContent value="usage" className="space-y-8">
           <UsageStats />
         </TabsContent>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
@@ -103,6 +127,7 @@ import {
           <UsageStats />
         </TabsContent>
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -115,29 +140,32 @@ import {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
         </TabsContent>
       </Tabs>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-=======
-<<<<<<< HEAD
     </div>;
   );
 }
-=======
     </div>
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 import React from "react",;
 import { AdminHeader } from "./AdminHeader",;
@@ -295,8 +323,11 @@ team"className=" mt-8"> <TabsList className=" grid w-full grid-cols-4 mb-8"> <Ta
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 {
   /* Robots Meta */
@@ -177,6 +177,8 @@ const SEO: React.FC<SEOProps> = ({;
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 {
   /* Robots Meta */
 }{
@@ -210,7 +212,6 @@ const SEO: React.FC<SEOProps> = ({;
 }{
   type === 'article' && (<> {
   publishedTime && <meta property="article:published time" content= {
-<<<<<<< HEAD
   publishedTime
 }/>
 }{
@@ -224,7 +225,6 @@ const SEO: React.FC<SEOProps> = ({;
 }{
   section && <meta property="article:section" content= {
   section
-=======
   publishedTime 
 }/>
 }{
@@ -238,21 +238,17 @@ const SEO: React.FC<SEOProps> = ({;
 }{
   section && <meta property="article:section" content= {
   section 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }/>
 }{
   tags.map ( (tag, index) => (<meta key= {
   index
 }property="article:tag" content= {
-<<<<<<< HEAD
   tag
 }/>
 }</>)
-=======
   tag 
 }/>
 }</>) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }{
   /* Structured Data */
 }<script
@@ -525,12 +521,13 @@ const SEO: React.FC < SEOProps> = ({
           ))}
         </>
       )}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Additional Meta Tags */}
       <meta
         name='viewport'
@@ -643,14 +640,7 @@ const SEO: React.FC < SEOProps> = ({
         content='black-translucent'
       />
       <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Structured Data */}
       <script
         type='application/ld+json'
@@ -688,6 +678,7 @@ const SEO: React.FC < SEOProps> = ({
                   '@type': 'Offer'
                   itemOffered: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -710,6 +701,8 @@ const SEO: React.FC < SEOProps> = ({
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     '@type': 'Service'
                     name: 'AI & Machine Learning Solutions'
       <title>{fullTitle}</title>
@@ -803,6 +796,7 @@ const SEO: React.FC < SEOProps> = ({
                 {
                   '@type': 'Offer'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -811,6 +805,8 @@ const SEO: React.FC < SEOProps> = ({
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     '@type': 'Service',
                     name: 'AI & Machine Learning Solutions',
                   },
@@ -824,9 +820,12 @@ const SEO: React.FC < SEOProps> = ({
                 },
                 {
                   '@type': 'Offer',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Quantum Computing Services'
@@ -942,15 +941,16 @@ const SEO: React.FC < SEOProps> = ({
       />
       {/* Canonical URL */}
       <link rel='canonical' href={fullUrl} />
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1042,7 +1042,6 @@ const SEO: React.FC < SEOProps> = ({
           }}
         />
       )}
-<<<<<<< HEAD
     </Head>
   )
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1069,6 +1068,7 @@ export default SEO;  );
 
 
 export default SEO;
+<<<<<<< HEAD
 
 
 =======
@@ -1198,14 +1198,15 @@ export default SEO;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
     </Head>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
     </Head>
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

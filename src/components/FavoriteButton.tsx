@@ -1,14 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-import React from 'react';
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react';
 import React from 'react'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Heart } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
@@ -27,7 +30,6 @@ interface FavoriteButtonProps {
   itemId: string;
   className?: string
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
-<<<<<<< HEAD
 
 =======
 =======
@@ -39,15 +41,21 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   const [loginOpen, setLoginOpen] = React.useState(false)
   const handleClick = (e: React.MouseEvent) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { isWishlisted, toggle } = useWishlist();
   const { isAuthenticated } = useAuth();
   const [loginOpen, setLoginOpen] = React.useState(false);
   const handleClick = (e: React.MouseEvent) => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
       return;
@@ -65,6 +73,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   const active = isWishlisted(itemId)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -75,6 +84,9 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
 import React from 'react';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 import { useWishlist } from '@/hooks/useWishlist',;
@@ -117,6 +129,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 >>>>>>>   return (
@@ -126,6 +139,8 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
@@ -133,6 +148,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
         <Tooltip>
           <TooltipTrigger asChild>
             <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -145,6 +161,11 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              className = {cn(
+                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors'
+                className
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
               onClick={handleClick}
               aria-label={
@@ -192,20 +213,25 @@ className: {`w-4 h-4 transition-all duration-300 ${
 '`
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className={cn(
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
                 className
-=======
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     const wasWishlisted = isWishlisted(itemId),;
     toggle(itemId),;
@@ -287,8 +313,11 @@ className: {`w-4 h-4 transition-all duration-300 ${
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -48,16 +49,19 @@ const contactInfo = {
 const serviceCategories = [
 =======
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Phone,
   Mail,
@@ -445,12 +449,15 @@ export default function UltraFuturisticNavigation2033() {
   Menu, X, Search, ChevronDown, Home, Briefcase, 
   DollarSign, BookOpen, Users, MessageCircle
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {
   Phone
@@ -1178,12 +1185,9 @@ const quickLinks = [
   { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' }
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' }
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
-<<<<<<< HEAD
 export default function UltraFuturisticNavigation2033() {
-=======
 
 export default function UltraFuturisticNavigation2033() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOpen, setIsOpen] = useState(false);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1517,6 +1521,7 @@ function UltraFuturisticNavigation2033() {
                 >
                   <span>Services</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1546,21 +1551,22 @@ function UltraFuturisticNavigation2033() {
                     <motion&& motion.div
                       initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
 =======
+=======
+                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>              {/* Services Mega Menu */}
+              <div className="relative group">
+                <button
+                  onMouseEnter={() => setActiveCategory('services')}
+                  onMouseLeave={() => setActiveCategory(null)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
                 >
                   <span>Services</span>
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
-=======
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>
 
                 </button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Mega Menu */}
                 <AnimatePresence>
                   {activeCategory === 'services' && (
@@ -1586,15 +1592,16 @@ function UltraFuturisticNavigation2033() {
                     >
 =======
                       className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     >
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
                         {serviceCategories.map(category => (
@@ -1637,7 +1644,6 @@ function UltraFuturisticNavigation2033() {
                                     </div>
                                     <p className='text-sm text-gray-400'>
                                       {service.description}
-<<<<<<< HEAD
                                     </p>                                  </div>                    >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1784,17 +1790,19 @@ function UltraFuturisticNavigation2033() {
                                     </div>
                                     <p className="text-sm text-gray-400">{service.description}</p>
                                   </div>
-=======
                                     </p>                                  </div>
 
                                   </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                 </Link>
                               ))}
                             </div>
@@ -1805,6 +1813,7 @@ function UltraFuturisticNavigation2033() {
                   )}
                 </AnimatePresence>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1844,6 +1853,9 @@ function UltraFuturisticNavigation2033() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Quick Links */}
               {quickLinks.map((link) => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1860,34 +1872,28 @@ function UltraFuturisticNavigation2033() {
 =======
                   key={link.name}
                   href={link.href}
-<<<<<<< HEAD
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >              {quickLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {link.name}
                 </Link>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               ))}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
 
                 >
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {link.name}
                 </Link>
               ))}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Contact Button */}
               <motion&& motion.div
                 whileHover={{ scale: 1 && 1.05 }}
@@ -1978,6 +1984,7 @@ function UltraFuturisticNavigation2033() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
 =======
             <div className='lg:hidden'>;
@@ -2133,12 +2140,9 @@ function UltraFuturisticNavigation2033() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -2148,15 +2152,8 @@ function UltraFuturisticNavigation2033() {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
-<<<<<<< HEAD
-=======
 
             >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className='px-4 py-6 space-y-6'>
                 {/* Mobile Services */}
                 <div className='space-y-4'>
@@ -2257,14 +2254,7 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
 className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
 =======
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Mobile Quick Links */}
                 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white'>
@@ -2379,20 +2369,21 @@ className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
 =======
                   </div>
                 </div>
+                {/* Mobile Contact Button */}
+                <div className='pt-4'>
+
+                {/* Mobile Contact Button */}
+                <div className='pt-4'>
+
 <<<<<<< HEAD
-                {/* Mobile Contact Button */}
-                <div className='pt-4'>
-=======
-
-                {/* Mobile Contact Button */}
-                <div className='pt-4'>
-
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Link
                     href="/contact"
                     onClick={closeMenu}
@@ -2475,34 +2466,38 @@ className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
   {
   scale: 0.95
 }> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
-<<<<<<< HEAD
   /* Mobile Menu */
 }<AnimatePresence>) )
 }</div> </div>) )
 }</div>) )
 }</div> </div> > Get Started </a> </div> </div> </motion.div>)
 }</AnimatePresence> </nav> </>) }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   /* Mobile Menu */ 
 }<AnimatePresence>) ) 
 }</div> </div>) ) 
 }</div>) ) 
 }</div> </div> > Get Started </a> </div> </div> </motion.div>) 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-}</AnimatePresence> </nav> </>)
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}</AnimatePresence> </nav> </>)
 }</AnimatePresence> </nav> </>) }
-=======
 }</AnimatePresence> </nav> </>)
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

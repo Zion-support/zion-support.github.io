@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/EmptyMatchesCard.tsx
@@ -16,19 +15,18 @@ export function EmptyMatchesCard({
   onRefresh
   isProcessing
 }: EmptyMatchesCardProps) {
-=======
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export interface EmptyMatchesCardProps {;
   onRefresh: () => void;
   isProcessing: boolean;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -37,6 +35,7 @@ import { Sparkles, RefreshCcw } from "lucide-react",
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
   isProcessing: boolean
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -79,6 +78,11 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+
+export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">
@@ -104,6 +108,7 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
             Find AI Matches
           </>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -112,16 +117,20 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       </Button>
-<<<<<<< HEAD
     </Card>
   );
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Sparkles, RefreshCcw } from "lucide-react",;
@@ -199,6 +208,7 @@ export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardPro
       </Button>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -273,12 +283,16 @@ isProcessing: boolean
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/EmptyMatchesCard.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Card>;
   );
 }
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

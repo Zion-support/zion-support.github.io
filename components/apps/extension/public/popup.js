@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 const API_BASE = 'http: //localhost:4000',
@@ -20,11 +21,17 @@ const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:40
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000',
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000'
+const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -38,6 +45,8 @@ function setUserId(id) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
 }
@@ -45,7 +54,6 @@ document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.getElementById('prompt').value = btn.dataset.text |''
   })
-=======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function setUserId(id) {
@@ -103,6 +111,7 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
   const data = await res.json(),
   document.getElementById('result').textContent = JSON.stringify(data.items || [], null, 2)
 }),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
@@ -244,6 +253,8 @@ document.getElementById ('result').text_content = 'Signed in (local).';
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 })
 document.getElementById('askBtn').addEventListener('click', async () => {
@@ -290,18 +301,21 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
 })
 document.getElementById('signIn').addEventListener('click', async () => {
   // Placeholder sign-in: generate a random user id and store it.
-<<<<<<< HEAD
   const id = crypto.randomUUID()
   setUserId(id)
 document.getElementById('result').textContent = 'Signed in (local).';
 })
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const id = crypto.randomUUID(),
   setUserId(id),
   document.getElementById('result').textContent = 'Signed in (local).';
 }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -310,3 +324,5 @@ document.getElementById('result').textContent = 'Signed in (local).';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,6 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+import Head from 'next/head',
+import Link from 'next/link';
+
+import React from 'react'
+
+import React from 'react',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function PerformanceOptimization() {
   return (
     <>
@@ -264,6 +273,7 @@ export default function PerformanceOptimization() {
       </div>
     </>
   )
+<<<<<<< HEAD
 
 import React from 'react';
 export default function PerformanceOptimization(req, res) {
@@ -1052,13 +1062,13 @@ export default function PerformanceOptimization() {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import Link from 'next/link';
-=======
 };
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 export default function PerformanceOptimization(req, res) {
   try {
@@ -1335,6 +1345,7 @@ export default function PerformanceOptimization(req, res) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1354,3 +1365,5 @@ export default function PerformanceOptimization(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

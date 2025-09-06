@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/EmptyFraudState.tsx
 
 
@@ -18,6 +19,11 @@ interface EmptyFraudStateProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -30,8 +36,13 @@ interface EmptyFraudStateProps {
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+import { Button } from "@/components/ui/button",
+import { ShieldAlert } from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface EmptyFraudStateProps {
   hasFilters: boolean,
   onResetFilters: () => void
@@ -40,7 +51,10 @@ interface EmptyFraudStateProps {
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
   hasFilters,
   onResetFilters 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }) => {
   return (
     <div className="text-center py-12">
@@ -53,6 +67,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       </p>
       {hasFilters && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -61,6 +76,18 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+        <Button variant="outline" onClick={onResetFilters}>
+          Clear Filters
+        </Button>
+      )}
+    </div>
+  );
+}
+
+    </div>;
+);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -147,6 +174,7 @@ export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({ ;
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
       )}
     </div>;
+<<<<<<< HEAD
   ),;
 },; interface EmptyFraudStateProps {
   hasFilters: boolean;
@@ -174,3 +202,7 @@ onResetFilters
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

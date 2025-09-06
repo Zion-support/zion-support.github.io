@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -22,8 +21,12 @@ req: NextApiRequest
 ) {
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { readReviews, readProjects } from '../../../utils/dataStore';
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
 import { TALENT_PROFILES } from '../../../data/talent';
@@ -32,6 +35,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  }
+  try {
+  try {;
+    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     const { targetType, targetId } = req.query as {
       targetType?: string;
@@ -80,6 +91,16 @@ const { targetType, targetId } = req.query as {
     if (!targetType |!targetId) {
 
       return res.status(400).json({ error: "Missing targetType or targetId" });
+<<<<<<< HEAD
+=======
+    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
+    if (!targetType || !targetId) {
+      return res.status(400).json({ error: 'Missing targetType or targetId' })
+    }
+    if (targetType !== 'talent' && targetType !== 'client') {
+      return res.status(400).json({ error: 'Invalid targetType' })
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     }
     if (targetType !== "talent" && targetType !== "client") {
@@ -88,6 +109,7 @@ const { targetType, targetId } = req.query as {
 const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
     const filtered = all.filter((r) => {
+<<<<<<< HEAD
 if (r.removed |!r.approved) return false;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const filtered = all && all.filter((r) => {
@@ -103,6 +125,13 @@ if (r.removed |!r.approved) return false;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      if (r.removed |!r.approved) return false;
+      const matchesTarget =
+        r.toRole === (targetType as "talent" | "client") && r.toId === targetId;
+      if (r.removed || !r.approved) return false;
+      const matchesTarget = r.toRole === (targetType as 'talent' | 'client') && r.toId === targetId;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (!matchesTarget) return false;
       const counterpartExists = all && all.some(
         (x) =>
@@ -126,6 +155,7 @@ r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetI
     });
     // Map to public reviews (mask anonymous author)
     const publicReviews: PublicReview[] = filtered
+<<<<<<< HEAD
 
 =======
 
@@ -219,6 +249,13 @@ if (return false) {
       )
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      .sort(
+        (a, b) =>
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      )
+      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .map((r) => {
         let authorName = r && r.fromId;
         if (r && r.fromRole === "talent") {
@@ -255,7 +292,61 @@ if (author_name = "Anonymous") {
 
         return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+          ...r
+          authorName
+        }
+      });
+    const totalReviews = publicReviews.length;
+    const averageRating = totalReviews
+      ? Math.round(
+          (publicReviews.reduce((sum, r) => sum + r.rating, 0) / totalReviews) *
+            10
+        ) / 10
+      : 0;
+    const projects = await readProjects();
+    const totalCompletedProjects = projects.filter(
+      (p) =>
+        p.status === "Completed" &&
+        ((targetType === "talent" && p.talentSlug === targetId) |
+          (targetType === "client" && p.clientId === targetId))
+    ).length;
+    const summary: ReviewsSummary = {
+      averageRating
+      totalReviews
+      totalCompletedProjects
+      mostRecent: publicReviews.slice(0, 5)
+    }
+    return res.status(200).json({ summary, reviews: publicReviews });
+
+  } catch (error: any) {
+    return res
+      .status(500)
+      .json({ error: "Internal server error", details: error?.message });
+          ...r,
+          authorName}
+      });
+    const totalReviews = publicReviews.length;
+    const averageRating = totalReviews
+      ? Math.round((publicReviews.reduce((sum, r) => sum + r.rating, 0) / totalReviews) * 10) / 10
+      : 0;
+    const projects = await readProjects();
+    const totalCompletedProjects = projects.filter((p) => p.status === 'Completed' && (
+      (targetType === 'talent' && p.talentSlug === targetId) ||
+      (targetType === 'client' && p.clientId === targetId)
+    )).length;
+    const summary: ReviewsSummary = {
+      averageRating,
+    totalReviews,
+      totalCompletedProjects,
+      mostRecent: publicReviews.slice(0, 5)
+    };
+    return res.status(200).json({ summary, reviews: publicReviews })
+  } catch (error: any) {
+    return res.status(500).json({ error: 'Internal server error', details: error?.message })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ reviews: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -394,6 +485,7 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
 =======
 
@@ -518,6 +610,8 @@ author_name,
     return res;
       .status (500);
       .json ({ error: "Internal server error", details: error?.message });
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 <<<<<<< HEAD
 

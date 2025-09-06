@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -9,6 +9,8 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { HelpCategory } from './types'
 import {
@@ -19,7 +21,10 @@ import {
   Briefcase
 } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
     id: 'getting-started'
@@ -35,6 +40,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         lastUpdated: '2023-11-15'
         tags: ['account', 'registration', 'setup']
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -43,10 +49,14 @@ export const HELP_CATEGORIES: HelpCategory[] = [
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { HelpCategory } from "./types",
 import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -54,6 +64,8 @@ import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const HELP_CATEGORIES: HelpCategory[] = [
 =======
 xport const HELP_CATEGORIES: HelpCategory[] = [
@@ -205,9 +217,6 @@ xport const HELP_CATEGORIES: HelpCategory[] = [
         tags: ["mediation", "dispute", "resolution"]
       },
       {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 id: 'dispute-prevention',
         title: 'Tips for preventing disputes',
         content:
@@ -217,8 +226,6 @@ id: 'dispute-prevention',
       },
     ],;
   },;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         id: "dispute-prevention",
         title: "Tips for preventing disputes",
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",
@@ -254,8 +261,11 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         content: "The Zion AI Marketplace platform is designed to be intuitive and easy to navigate. Here's a quick overview of the main sections:\n\n• Home: Your personalized dashboard with recommended matches\n• Marketplace: Browse all available services and talent\n• Jobs: View open positions or post new job opportunities\n• Messages: Communicate with clients, talent, or support\n• Profile: Manage your personal or company information\n• Settings: Configure your account preferences and security options\n\nUse the search bar at the top of any page to quickly find specific services, talent, or content. The navigation menu adapts based on your account type to show the most relevant options.",;
         lastUpdated: "2023-12-01",;
         tags: ["navigation", "interface"];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     ]
   },
@@ -446,12 +456,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ]
   }
   {
@@ -593,6 +606,7 @@ id: 'dispute-prevention'
 ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 ];
 >>>>>>> 
@@ -630,6 +644,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     ],;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },;
@@ -695,6 +711,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       }
     ];
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -886,10 +903,12 @@ id: 'dispute - prevention',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
+];
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -20,15 +20,15 @@ export type SitemapItem = {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
 // Define the types for our sitemap structure
-<<<<<<< HEAD
 
 export type SitemapItem = {
-=======
 export type SitemapItem = {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   path: string;
   label: string;
   description?: string;
@@ -940,6 +940,7 @@ export const getAccessibleRoutes = (
     if (userType === 'creator' |userType === 'jobSeeker') {
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/config/sitemap.ts
 
 <<<<<<< HEAD
@@ -949,6 +950,8 @@ export const getAccessibleRoutes = (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Define the types for our sitemap structure;
 export type SitemapItem = {;
   path: string,;
@@ -1551,6 +1554,7 @@ export const getAccessibleRoutes = (;
     if (userType === 'creator' || userType === 'jobSeeker') {;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1703,6 +1707,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     if (userType === 'employer' |userType === 'buyer') {
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
@@ -1711,22 +1717,18 @@ if ( {) {
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   return accessibleRoutes
 }
 
-=======
 ;
   return accessibleRoutes;
-=======
   
   return accessibleRoutes
-=======
 ;
   return accessibleRoutes;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

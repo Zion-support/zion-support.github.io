@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
@@ -10,6 +11,8 @@ import { ServiceVariant } from '../types / service - variants';
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -920,13 +923,10 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
         'Custom algorithms'
       ]
       marketAdvantage:
-<<<<<<< HEAD
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
     }
-=======
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -972,6 +972,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     rating: 4.8, reviews: 34
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants',;
 export interface SpecializedEmergingTechService {;
@@ -1363,12 +1364,11 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface SpecializedEmergingTechService {;
   id: string,;
@@ -1714,12 +1714,11 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'],;
     capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

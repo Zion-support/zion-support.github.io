@@ -144,12 +144,9 @@ export type ProposalType =
   | 'AI Ethics'
   | 'Digital ID';
   | 'Education';
-<<<<<<< HEAD
 export type ProposalForm = {
-=======
 
 export type ProposalForm = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   targetInstitution: string;
   type: ProposalType;
   regionalScope: string;
@@ -157,19 +154,16 @@ export type ProposalForm = {;
   supportingMultiverses: string;
   language?: string;
   customPrompt?: string;};export type ProposalForm = {
-<<<<<<< HEAD
   targetInstitution: string
   type: ProposalType
   regionalScope: string
   budgetOrGoals: string
   supportingMultiverses: string
-=======
   targetInstitution: string,
   type: ProposalType,
   regionalScope: string,
   budgetOrGoals: string,
   supportingMultiverses: string,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   language?: string;
   customPrompt?: string
 }
@@ -182,13 +176,14 @@ export default function ProposalGenerator() {
     supportingMultiverses: ''
     language: 'English'
     customPrompt:
-<<<<<<< HEAD
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
-=======
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -304,7 +299,6 @@ export default function ProposalGenerator() {
       console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.');
     } finally {
-<<<<<<< HEAD
       setIsGenerating(false);    }      const data = await res.json();
       setDraftMarkdown(data.markdown |'');
       setDraftJson(data.json |null);
@@ -316,6 +310,7 @@ export default function ProposalGenerator() {
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
       setIsGenerating(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -339,19 +334,13 @@ export default function ProposalGenerator() {
 async function handleExport() {
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setIsGenerating(false);    }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   async function handleExport() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -391,12 +380,15 @@ const data = await res.json();
     } catch (e) {
       console.error(e);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setStatusMessage('Export failed');    }      const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl })
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -406,8 +398,8 @@ const data = await res.json();
       console.error(e);
       setStatusMessage('Export failed')
     }
-<<<<<<< HEAD
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -421,10 +413,13 @@ const data = await res.json();
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setStatusMessage('Export failed');    }
 
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -446,6 +441,10 @@ const data = await res.json();
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
@@ -721,31 +720,21 @@ const data = await res.json();
   return (
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className='space-y-4'>      const data = await res.json();
       setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
     } catch (e) {
       console.error(e);
-<<<<<<< HEAD
 
       setStatusMessage('Submission failed')
-=======
       setStatusMessage('Submission failed')
-=======
         <div className='space-y-4'>
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   return (
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className='space-y-4'>
-<<<<<<< HEAD
           <div>
             <label className='block text-sm font-medium'>
               Target institution
@@ -781,7 +770,6 @@ const data = await res.json();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               value={form.type}
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
-=======
 
 <<<<<<< HEAD
 
@@ -801,12 +789,15 @@ const data = await res.json();
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -982,7 +973,6 @@ const data = await res.json();
           </div>
           <div className='flex gap-2'>
             <button
-<<<<<<< HEAD
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
               className="w-full border rounded px-3 py-2"
               value={form.regionalScope}
@@ -1052,14 +1042,8 @@ const data = await res.json();
           <div className="flex gap-2">
             <button
               className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
-=======
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onClick={handleGenerate}
               disabled={isGenerating}
             >
@@ -1215,14 +1199,7 @@ const data = await res.json();
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>;
           )}
@@ -1630,19 +1607,16 @@ function handleSubmitBridge() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

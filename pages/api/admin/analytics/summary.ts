@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -33,6 +34,8 @@ import { ensureAdminFromApi } from '../../../../utils / auth',
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -96,8 +99,6 @@ if (continue, ) {
       } catch {}
     }
     return rows
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -108,7 +109,16 @@ type EventRow = {
     }
     return rows;
 
+<<<<<<< HEAD
 =======
+=======
+  name: string;
+  page?: string;
+  userType?: string;
+  properties?: Record<string, any>;
+  at: string;
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 <<<<<<< HEAD
       } catch {}
@@ -143,15 +153,17 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
       } catch {
         // Skip invalid JSON lines
       }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     return rows;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch {
     return [];
   }
@@ -171,7 +183,6 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
   return 'other';
 =======
 
-<<<<<<< HEAD
 function featureFromPath(page?: string): string {
 if (!page) return 'other'
   const p = page.toLowerCase()
@@ -208,6 +219,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     .sort((a, b) => b.value - a.value);
@@ -302,6 +314,8 @@ function handler() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     .sort((a, b) => b.value - a.value)
   const days = Object.keys(byDay).sort()
   const line = days.map((d) => ({ date: d, value: byDay[d] }))
@@ -310,7 +324,6 @@ function handler() {
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 }
 
-=======
     .sort((a, b) => b.value - a.value),
 
   const days = Object.keys(byDay).sort(),
@@ -321,9 +334,12 @@ function handler() {
 ;
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);
@@ -343,6 +359,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -358,3 +375,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

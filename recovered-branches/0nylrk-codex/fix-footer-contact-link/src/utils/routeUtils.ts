@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/routeUtils.ts
 
 =======
@@ -15,18 +16,23 @@ import { completeSitemap, SitemapItem } from "@/config/sitemap",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-import { completeSitemap, SitemapItem } from "@/config/sitemap";
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { completeSitemap, SitemapItem } from "@/config/sitemap";
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path);
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
@@ -41,10 +47,15 @@ import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -55,19 +66,15 @@ export const isProtectedRoute = (path: string): boolean => {
 
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
-<<<<<<< HEAD
   const route = findRouteByPath(path)
-=======
   const route = findRouteByPath(path),
-<<<<<<< HEAD
   return route?.requiredAuth === true;
 };
 
@@ -75,20 +82,20 @@ export const isProtectedRoute = (path: string): boolean => {
 export const canAccessRoute = (;
   path: string;
   isAuthenticated: boolean;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return route?.requiredAuth === true
-<<<<<<< HEAD
 }
-=======
 },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Check if a route is accessible by a specific user type
 export const canAccessRoute = (
   path: string,
   isAuthenticated: boolean,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -112,12 +119,15 @@ export const isProtectedRoute = (path: string): boolean => {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   userType?: string | null
 ): boolean => {
   const route = findRouteByPath(path)
   // If route doesn't exist in our sitemap
   if (!route) return true, // Default to accessible
   // If route requires authentication and user is not authenticated
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/routeUtils.ts
 
@@ -136,17 +146,20 @@ export const isProtectedRoute = (path: string): boolean => {
     return route && route.requiredRoles.includes(userType as any)
 =======
 <<<<<<< HEAD
-  if (route.requiredAuth && !isAuthenticated) return false;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  if (route.requiredAuth && !isAuthenticated) return false;
   if (route.requiredAuth && !isAuthenticated) return false,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // If route requires specific roles and user doesn't have one
   if (route.requiredRoles && route.requiredRoles.length > 0) {
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return true
 }
@@ -404,12 +417,8 @@ if ( {) {
     }
   }
   return breadcrumbs
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 // Find a route by path in the complete sitemap;
 export const findRouteByPath = (path: string): SitemapItem | undefined => {;
@@ -464,10 +473,9 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   }
 ;
   return breadcrumbs;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

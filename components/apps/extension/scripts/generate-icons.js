@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -16,6 +17,8 @@ const root = new URL('.',
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 #!/usr/bin/env node const root = new URL('.',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import.meta.url).pathname,
@@ -25,6 +28,9 @@ const outDir = resolve(root, '../public/icons'),
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true }),
 const sizes = [16, 32, 48, 128],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
@@ -89,10 +95,11 @@ for (const size of sizes) {
 =======
 =======
   console.log('generated', out)
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

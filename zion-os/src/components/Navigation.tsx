@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,19 +33,19 @@ function Navigation() {
   return (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-=======
 "use client",;
 import { useState, useEffect, useRef } from "react",;
 import Link from "next/link",;
 export function Navigation() {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
   const [isSearchOpen, setIsSearchOpen] = useState(false),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
@@ -230,6 +231,7 @@ export function Navigation() {;
           </div>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -248,6 +250,9 @@ export function Navigation() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
@@ -342,10 +347,13 @@ export function Navigation() {;
 =======
     </nav>;
   );
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

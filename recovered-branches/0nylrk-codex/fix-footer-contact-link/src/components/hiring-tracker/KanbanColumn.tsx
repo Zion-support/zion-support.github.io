@@ -14,31 +14,27 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Droppable} from "react-beautiful-dnd";
 import {JobApplication} from "@/types/jobs";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {CandidateCard} from "./CandidateCard";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
-=======
 import { Badge } from "@/components/ui/badge",
 import { CandidateCard } from "./CandidateCard",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface KanbanColumnProps {
 
   id: string
@@ -49,26 +45,32 @@ interface KanbanColumnProps {
   count: number
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 export function KanbanColumn({;
   id;
   title;
   description;
   applications;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function KanbanColumn({
   id,
   title,
   description,
   applications,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ========
@@ -105,6 +107,8 @@ export function KanbanColumn(): any ({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   count
 }: KanbanColumnProps) {
   // Add color based on column type
@@ -172,6 +176,7 @@ function KanbanColumn() {
         return "outline"
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -186,11 +191,11 @@ function KanbanColumn() {
 
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getColumnBgColor = (columnId: string) => {
     switch (columnId) {
       case "hired": return "bg-green-50",
@@ -200,6 +205,7 @@ function KanbanColumn() {
       default:
         return "bg-muted/30"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -293,13 +299,17 @@ export function KanbanColumn({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
       <CardHeader className="pb-2">
@@ -323,19 +333,24 @@ export function KanbanColumn({;
             >
               {applications.map((application, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-                <CandidateCard
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <CandidateCard
                 <CandidateCard 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Droppable } from "react-beautiful-dnd",;
 import { JobApplication } from "@/types/jobs",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -619,21 +634,13 @@ return (<Card className= {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 =======
                 <CandidateCard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   key={application.id}
                   application={application}
                   index={index}
                 />
               ))}
               {provided.placeholder}
-<<<<<<< HEAD
-=======
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {applications.length === 0 && (
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">
                   <p className="text-center text-sm text-muted-foreground">
@@ -643,18 +650,19 @@ return (<Card className= {
               )}
             </div>
           )}
-<<<<<<< HEAD
         </Droppable>
       </CardContent>
     </Card>
   )
 }
-=======
         </Droppable>;
       </CardContent>;
     </Card>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

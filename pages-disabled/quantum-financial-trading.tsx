@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,12 +40,12 @@ export default function AISustainabilityPlatformPage() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import SEO from '../components/SEO';
-=======
 import React from "react";
 import SEO from "../components/SEO";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AISustainabilityPlatformPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -109,6 +110,7 @@ function AISustainabilityPlatformPage() {
         </p>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   );
@@ -124,15 +126,16 @@ function AISustainabilityPlatformPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
-=======
     </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

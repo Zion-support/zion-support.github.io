@@ -1,7 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
+=======
+import React, { useState } from 'react';
+import Button from '../components/Button';
+import Card from '../components/Card';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const Contact: React.FC = () => {
   return (
@@ -105,6 +111,7 @@ const Contact: React.FC = () => {
 <<<<<<< HEAD
     // Handle form submission
     console.log('Form submitted:', formData);
+<<<<<<< HEAD
     
     // Simulate API call
     setTimeout(() => {
@@ -146,6 +153,14 @@ const Contact: React.FC = () => {
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+=======
+    alert('Thank you for your message! We will get back to you soon.');
+  };
+
+  return (
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+      <div className="container mx-auto px-4 py-16">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-xl text-gray-600">Get in touch with our team to discuss your project</p>
@@ -218,6 +233,7 @@ const Contact: React.FC = () => {
                   placeholder="Tell us about your project..."
                 />
               </div>
+<<<<<<< HEAD
 
               <button
                 type="submit"
@@ -226,6 +242,11 @@ const Contact: React.FC = () => {
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
+=======
+              <Button variant="primary" size="lg" className="w-full">
+                Send Message
+              </Button>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </form>
           </div>
 
@@ -278,6 +299,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Business Hours</h3>
@@ -563,6 +585,8 @@ export default Contact;
                 </div>
               </div>
             </div>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       </div>

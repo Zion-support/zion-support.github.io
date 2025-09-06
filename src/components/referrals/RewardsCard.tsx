@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -9,6 +9,8 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Card
   CardContent
@@ -18,6 +20,7 @@ import {
 } from '@/components/ui/card'
 import { ReferralReward } from '@/types/referrals'
 import { formatDate } from '@/utils/referralUtils'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -32,11 +35,12 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 interface RewardsCardProps {
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
 import { BadgeDollarSign, Badge } from 'lucide-react'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import { BadgeDollarSign, Badge } from 'lucide-react'
 interface RewardsCardProps {
@@ -47,17 +51,12 @@ import { ReferralReward } from "@/types/referrals"
 import { formatDate } from "@/utils/referralUtils"
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-<<<<<<< HEAD
-=======
-=======
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
 import { BadgeDollarSign, Badge } from 'lucide-react'
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface RewardsCardProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -117,6 +116,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       <Card>
         <CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           <CardTitle className='flex items-center gap-2'>
@@ -142,13 +142,12 @@ ursor/fix-website-loading-errors-and-merge-6662
     ) }            Your Rewards
 =======
 =======
+=======
+          <CardTitle className='flex items-center gap-2'>
+            <BadgeDollarSign className='h-5 w-5' />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Your Rewards
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </CardTitle>
@@ -161,11 +160,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>
       </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>     )
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ) }            Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -176,6 +178,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -183,12 +186,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     )
 >>>>>>>   }
   if (rewards.length === 0) {
     return (
       <Card>
         <CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -213,13 +219,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className='text-sm text-muted-foreground mt-1'>              Refer users to earn rewards once they complete onboarding            Your Rewards
 =======
 =======
+=======
+          <CardTitle className='flex items-center gap-2'>
+            <BadgeDollarSign className='h-5 w-5' />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Your Rewards
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </CardTitle>
@@ -227,11 +232,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardHeader>
         <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           <div className="flex flex-col items-center justify-center p-4 text-center">
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='flex flex-col items-center justify-center p-4 text-center'>
             <p className='text-muted-foreground'>No rewards yet</p>
             <p className='text-sm text-muted-foreground mt-1'>              Refer users to earn rewards once they complete onboarding            Your Rewards
@@ -239,6 +247,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardDescription>Rewards earned from successful referrals</CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -246,6 +255,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="flex flex-col items-center justify-center p-4 text-center">
 >>>>>>>             <p className="text-muted-foreground">No rewards yet</p>
             <p className="text-sm text-muted-foreground mt-1">
@@ -254,6 +265,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -275,27 +287,18 @@ ursor/fix-website-loading-errors-and-merge-6662
           Your Rewards
 >>>>>>>         </CardTitle>
 =======
-    )
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    ) }    )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    )
   }
   return (
     <Card>
       <CardHeader>
-<<<<<<< HEAD
         <CardTitle className='flex items-center gap-2'>
           <BadgeDollarSign className='h-5 w-5' />
-=======
         <CardTitle className="flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Your Rewards
         </CardTitle>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -304,10 +307,13 @@ ursor/fix-website-loading-errors-and-merge-6662
       <CardContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='space-y-4'>          {rewards.map((reward, index) => (
             <div
               key={reward.id}
@@ -352,12 +358,13 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
-<<<<<<< HEAD
-=======
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="space-y-4">
           {rewards.map((reward, index) => (
             <div 
@@ -630,6 +637,7 @@ if ( {) {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -642,3 +650,5 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

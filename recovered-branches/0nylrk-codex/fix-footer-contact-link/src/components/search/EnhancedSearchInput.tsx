@@ -16,14 +16,18 @@ import { Input } from "@/components/ui/input",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
 import {SearchSuggestion} from "@/types/search";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface EnhancedSearchInputProps {;
   value: string,;
@@ -53,10 +57,11 @@ export function EnhancedSearchInput(): any ({ ;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
 import { Input } from "@/components/ui/input",
-<<<<<<< HEAD
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
 import { SearchSuggestion } from "@/types/search";
 interface EnhancedSearchInputProps {
@@ -80,6 +85,7 @@ export function EnhancedSearchInput({
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -92,6 +98,10 @@ import { SearchSuggestion } from "@/types/search",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
+import { SearchSuggestion } from "@/types/search",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -101,6 +111,7 @@ interface EnhancedSearchInputProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export function EnhancedSearchInput({ 
@@ -108,13 +119,17 @@ export function EnhancedSearchInput({
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function EnhancedSearchInput({ ;
   value;
-=======
 export function EnhancedSearchInput({ 
   value,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onChange, 
   placeholder = "Search...", 
   searchSuggestions 
@@ -126,6 +141,7 @@ export function EnhancedSearchInput({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -133,6 +149,8 @@ export function EnhancedSearchInput({
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Filter suggestions based on input value
   useEffect(() => {
     if (!value) {
@@ -150,7 +168,6 @@ export function EnhancedSearchInput({
 =======
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
       return
-<<<<<<< HEAD
     }
     const filtered = searchSuggestions.filter(suggestion =>
       suggestion.text.toLowerCase().includes(value.toLowerCase())
@@ -168,7 +185,6 @@ export function EnhancedSearchInput({
     function handleClickOutside(event: MouseEvent) {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
         setIsFocused(false)
-<<<<<<< HEAD
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -180,10 +196,13 @@ export function EnhancedSearchInput({
     inputRef.current?.blur()
   }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -231,6 +250,7 @@ export function EnhancedSearchInput({;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -243,6 +263,8 @@ export function EnhancedSearchInput({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
     
@@ -260,6 +282,7 @@ export function EnhancedSearchInput({;
 
 =======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -267,6 +290,8 @@ export function EnhancedSearchInput({;
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="relative w-full" ref={containerRef}>
       <div className="relative">
@@ -355,8 +380,11 @@ export function EnhancedSearchInput({ ;
           ref={inputRef}
           type="text"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -375,6 +403,7 @@ export function EnhancedSearchInput({ ;
         <Input;
           ref={inputRef}
           type="text";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -475,6 +504,8 @@ export function EnhancedSearchInput({ ;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onFocus={() => setIsFocused(true)}

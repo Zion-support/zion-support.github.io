@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import Image, { type ImageProps } from 'next/image';
 import { cn } from '@/lib/utils';
@@ -9,6 +12,7 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string;
   alt?: string;
   /** Source to use if the main src fails */
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from 'react',;
 import Image, { type ImageProps } from 'next/image',;
@@ -32,6 +36,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import Image, { type ImageProps } from 'next/image'
 import { cn } from '@/lib/utils';
@@ -49,8 +55,6 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   fallbackSrc?: string
   /** CSS class for the retry button */
   retryClassName?: string;  retryClassName?: string
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from 'react',;
 import Image, { type ImageProps } from 'next/image',;
 import { cn } from '@/lib/utils',;
@@ -61,13 +65,12 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   fallbackSrc?: string,;
   /** CSS class for the retry button */;
   retryClassName?: string;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>>   fallbackSrc?: string
   /** CSS class for the retry button */
@@ -87,26 +90,31 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
  */
 export function ImageWithRetry({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   src
   alt = ''
   fallbackSrc = '/images/image-placeholder.svg'
   className
   retryClassName
-=======
   src,
   alt = '',
   fallbackSrc = '/images/image-placeholder.svg',
   className,
   retryClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }: ImageWithRetryProps) {
   const [currentSrc, setCurrentSrc] = useState(src)
   const [failed, setFailed] = useState(false)
@@ -151,6 +159,7 @@ export function ImageWithRetry({
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   src
   alt = ''
@@ -162,22 +171,25 @@ export default ImageWithRetry
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default ImageWithRetry
 
-=======
   src,
   alt = '',
   fallbackSrc = '/images/image-placeholder.svg',
   className,
   retryClassName,
-=======
 export default ImageWithRetry;
 ;
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ...props
 }: ImageWithRetryProps) {
   const [currentSrc, setCurrentSrc] = useState(src),
@@ -221,6 +233,7 @@ export default ImageWithRetry;
 export default ImageWithRetry;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -239,3 +252,5 @@ export default ImageWithRetry;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

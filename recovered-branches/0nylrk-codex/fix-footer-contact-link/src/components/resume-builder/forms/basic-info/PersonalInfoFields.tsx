@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   FormField,
 ========
@@ -11,6 +12,8 @@ FormField,
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   FormField
   FormItem
@@ -22,6 +25,7 @@ import { Input } from "@/components/ui/input";
 
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
+<<<<<<< HEAD
 
 import {
   FormField,
@@ -49,24 +53,32 @@ interface PersonalInfoFieldsProps {
   control: Control < BasicInfoFormData>;
 }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PersonalInfoFieldsProps {
 =======
 } from "@/components/ui/form";
@@ -92,10 +104,13 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
             </FormControl>
             <FormMessage />
           </FormItem>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
@@ -168,6 +183,7 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
             </FormControl>
             <FormMessage />
           </FormItem>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -259,6 +275,8 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
         name="phone"
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       />
       <FormField
@@ -302,6 +320,7 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
         )}
       />
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -403,3 +422,10 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

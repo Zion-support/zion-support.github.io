@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',
 import Head from 'next/head',
@@ -103,6 +104,8 @@ export default function QuantumServicesPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -116,12 +119,9 @@ export default function QuantumServicesPage() {
     'R&D ideation for quantum-ready workloads',;
   ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-<<<<<<< HEAD
 import Button from '../components/ui/Button';
 import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react';
 export default function QuantumServicesPage() {
@@ -144,22 +144,27 @@ export default function QuantumServicesPage() {
     }
   ];
 
-=======
 import Button from '../components/ui/Button',
 import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react',
 export default function QuantumServicesPage() {
   const features = [
     'Quantum-inspired optimization & annealing strategiesHybrid quantum-classical pipelines (QAOA, VQE) where applicableQuantum-safe cryptography assessments and roadmapsR&D ideation for quantum-ready workloads'],
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const solutions = [
     { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
     { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' },
     { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }],
 <<<<<<< HEAD
+<<<<<<< HEAD
 return (
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <UltraAdvancedFuturisticBackground colorScheme="quantum" intensity="high">
@@ -369,19 +374,18 @@ return (
 }
             </div>
           </section>
-<<<<<<< HEAD
           <section className='text-center'>
             <div className='inline-flex items-center justify-center gap-3 text-gray-300'>
               <Shield className='w-5 h-5 text-purple-400' />
               <span>
                 Post-quantum readiness assessments and migration planning
               </span>            </div>
-=======
           <section className="text-center">
             <div className="inline-flex items-center justify-center gap-3 text-gray-300">
               <Shield className="w-5 h-5 text-purple-400" />
               <span>Post-quantum readiness assessments and migration planning</span>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -389,10 +393,13 @@ return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </section>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -526,13 +533,11 @@ return (
 ;
 =======
 <<<<<<< HEAD
-);
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+);
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -540,9 +545,12 @@ return (
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

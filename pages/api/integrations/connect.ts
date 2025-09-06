@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     return res.status(405).json({ error: "Method not allowed" });
@@ -134,6 +135,22 @@ export default function handler(req, res) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { writeState } from '[^']*';
+import { getProviderById } from '[^']*';
+import { ProviderConnection, SyncRules } from '[^']*';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req.method !== "POST")
+import type { NextApiRequest, NextApiResponse } from "next";
+import { writeState } from "../../../lib/integrations/fileStore";
+import { getProviderById } from "../../../lib/integrations/registry";
+import { ProviderConnection, SyncRules } from "../../../lib/integrations/types";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST");
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return res.status(405).json({ error: "Method not allowed" });
   const { providerId, syncRules } = req.body as {
     providerId?: string;
@@ -180,6 +197,7 @@ res.status (200).json ({
   });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -187,6 +205,10 @@ res.status (200).json ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const connection = {
     providerId: req.body?.providerId || 'unknown',
@@ -252,5 +274,8 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -18,9 +18,12 @@ import { formatDistanceToNow } from "date-fns",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -32,6 +35,7 @@ import {Link} from "react-router-dom";
 import {ApplicationStatus} from "@/types/jobs";
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
+<<<<<<< HEAD
 <<<<<<< HEAD
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
@@ -68,6 +72,8 @@ function MyApplications() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -75,20 +81,16 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Loader2, MessageSquare, ExternalLink } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications();
 
-=======
 import { Link } from "react-router-dom",
 import { ApplicationStatus } from "@/types/jobs",
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -107,6 +109,7 @@ export function MyApplications() {
         return <Badge variant="outline">{status}</Badge>
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (isLoading) {
 ========
@@ -124,12 +127,12 @@ export function MyApplications() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/MyApplications.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
@@ -198,6 +201,7 @@ export function MyApplications() {
             <div className="space-y-3">
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -271,6 +275,11 @@ export function MyApplications() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  {application.cover_letter}
+                </p>
+              )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -350,6 +359,7 @@ export function MyApplications() {;
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   {application.cover_letter}
@@ -365,16 +375,21 @@ export function MyApplications() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {application.cover_letter}
                 </p>
               )}
               
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
@@ -386,6 +401,7 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -697,12 +713,12 @@ default: return <Badge variant="outline"> {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/MyApplications.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Button
                   variant="default"
-=======
                 <Button 
                   variant="default" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   size="sm"
                   className="text-xs"
                   asChild
@@ -716,14 +732,15 @@ default: return <Badge variant="outline"> {
           </CardContent>
         </Card>
       ))}
-<<<<<<< HEAD
     </div>
   )
 }
-=======
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

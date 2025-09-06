@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import {Education} from '@/types/resume';
@@ -15,22 +16,32 @@ import {EducationItem} from './EducationItem';
 import { Education  } from '@/types/resume';
 import { EducationItem } from './EducationItem';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Education  } from '@/types/resume';
+import { EducationItem } from './EducationItem';
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
   educationEntries: Education[],;
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -40,6 +51,8 @@ interface EducationListProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function EducationList({
   educationEntries
@@ -63,6 +76,7 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
   if (!educationEntries || educationEntries && educationEntries.length === 0) {;
     return null;
   }
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationList.tsx
 
 <<<<<<< HEAD
@@ -140,6 +154,9 @@ export function EducationList({
     return null;
   }
 
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Education</h3>
@@ -153,6 +170,7 @@ export function EducationList({
         />
       ))}
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -221,3 +239,10 @@ export function EducationList({ educationEntries, onEdit, onDelete } EducationLi
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

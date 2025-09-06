@@ -9,9 +9,12 @@ import {
   DialogHeader
   DialogTitle
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
@@ -19,8 +22,11 @@ import {
   DialogContent,
   DialogHeader,;
   DialogTitle;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -216,6 +222,7 @@ export function ContactPublisherModal({  isOpen,  isOpen
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown = {handleKeyDown,}          aria-modal="true"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -545,6 +552,8 @@ import { LoginModal } from '@/components/auth/LoginModal';
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown = {handleKeyDown,}          aria-modal="true"
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import FocusLock from 'react-focus-lock',;
 import {;
@@ -658,11 +667,6 @@ export function ContactPublisherModal({;
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown={handleKeyDown}
           aria-modal="true"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           aria-labelledby="contact-publisher-title"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         >
@@ -684,11 +688,14 @@ export function ContactPublisherModal({;
               {publisherEmail}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   <FormLabel>Subject</FormLabel>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </a>
           </div>
         )}
@@ -699,12 +706,15 @@ export function ContactPublisherModal({;
               name="subject"
               render={({ field }: { field: any },) => (                <FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                   <FormLabel>Subject</FormLabel>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <FormControl>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </Link>
           </div>
         )}
@@ -715,11 +725,6 @@ export function ContactPublisherModal({;
               name="subject"
               render={({ field }: { field: any }) => (
                 <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -734,16 +739,20 @@ export function ContactPublisherModal({;
               )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   <FormLabel>Message</FormLabel>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <FormField
               control = {form.control,}
               name="message"
               render={({ field }: { field: any },) => (                <FormItem>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   <FormLabel>Message</FormLabel>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -751,17 +760,14 @@ export function ContactPublisherModal({;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />;
             <FormField;
               control={form.control}
               name="message"
               render={({ field }: { field: any }) => (
                 <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <FormLabel>Message</FormLabel>
                   <FormControl>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -776,9 +782,12 @@ export function ContactPublisherModal({;
               )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <Button
               onClick = {handleSend,}
@@ -794,22 +803,31 @@ export function ContactPublisherModal({;
     </Dialog>
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </>
   ) </>
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </>;
   ) </>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />;
             <Button;
               onClick={handleSend}
@@ -831,6 +849,7 @@ export function ContactPublisherModal({;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -843,3 +862,5 @@ export function ContactPublisherModal({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

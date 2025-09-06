@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
 
 =======
@@ -9,6 +10,37 @@
 
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
+=======
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Switch  } from '@/components/ui/switch';
+import { Button  } from '@/components/ui/button';
+import { Label  } from '@/components/ui/label';
+import { ShieldAlert, Info } from 'lucide-react';
+import {
+
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import { Switch } from "@/components/ui/switch";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { ShieldAlert, Info } from "lucide-react";
+import {
+  Accordion
+  AccordionContent
+  AccordionItem
+  AccordionTrigger
+} from "@/components/ui/accordion";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
+
+export function FraudDetectionSettings() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Switch} from '@/components/ui/switch';
 import {Button} from '@/components/ui/button';
@@ -19,6 +51,7 @@ import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 export function FraudDetectionSettings() {;
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
 
 
@@ -26,11 +59,14 @@ export function FraudDetectionSettings() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
 
 <<<<<<< HEAD
@@ -39,6 +75,16 @@ export function FraudDetectionSettings() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+  const handleSavePreferences = async () => {
+    if (!user?.id) return;
+    setIsSaving(true);
+    try {
+      // In a real implementation, we would save these preferences to the database
+      // For now, we'll just simulate a successful save
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
@@ -59,9 +105,12 @@ export function FraudDetectionSettings() {
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),
   const [isSaving, setIsSaving] = useState(false),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -122,17 +171,21 @@ const handleSavePreferences = async () => {
 
 =======
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Settings saved"
         description: "Your fraud detection preferences have been updated."
       });
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -145,6 +198,10 @@ const handleSavePreferences = async () => {
 =======
 console.error("Error saving preferences:", error);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      console.error("Error saving preferences:", error);
+      console.error('Error saving preferences:', error),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Error"
         description: "Failed to save your preferences. Please try again."
@@ -172,8 +229,13 @@ console.error("Error saving preferences:", error);
     } finally {
       setIsSaving(false);
     }
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Card className="mb-8">
@@ -457,8 +519,16 @@ export function FraudDetectionSettings() {;
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+  )
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -854,5 +924,9 @@ mb-8"> <CardHeader className=" space-y-1"> <div className=" flex items-center ga
 =======
   );
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

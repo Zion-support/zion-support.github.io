@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -34,15 +35,20 @@ import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
 =======
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -79,6 +85,8 @@ import Layout from './layout / Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight
   Play
   Star
@@ -123,7 +131,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 } from 'lucide-react';
 import Link from 'next/link';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket
-=======
   ArrowRight,
   Play,
   Star,
@@ -168,15 +175,19 @@ import Link from 'next/link';import {
 } from 'lucide-react';
 import Link from 'next/link';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3, ;
   Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight;
 } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 // Import our new innovative services
@@ -189,17 +200,14 @@ import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-s
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Import our new innovative services
-<<<<<<< HEAD
 import { innovative2046AIServices  } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices  } from '../data/innovative-2046-it-services';
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices } from '../data/innovative-2046-it-services';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
 // Enhanced loading component with quantum effects;
 const QuantumLoadingFallback = () => (;
@@ -305,6 +313,7 @@ const QuantumLoadingFallback = () => (
             scale: [0, 1, 0]
           }}
           transition={{
+<<<<<<< HEAD
 =======
 
 
@@ -415,15 +424,19 @@ const QuantumLoadingFallback = () => (
 ease: "easeInOut"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: Math.random() * 4 + 3
             repeat: Infinity
             ease: 'easeInOut'
-=======
             duration: Math.random() * 4 + 3,
             repeat: Infinity,
             ease: 'easeInOut',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }}
           style={{
             left: Math.random() * 100 + '%',
@@ -431,14 +444,7 @@ ease: "easeInOut"
 />
       ))}
     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {/* Quantum loading animation */}
 <<<<<<< HEAD
     <motion&& motion.div
@@ -569,14 +575,7 @@ ease: "easeInOut"
         className=&quot;text-4xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent&quot;
 =======
       className='text-center relative z-10'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     >
       <div className='relative'>
         <motion.div
@@ -1493,10 +1492,7 @@ if ( {) {
   if (isLoading) {
     return <QuantumLoadingFallback />;
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const allServices = [
     ...innovative2046AIServices
     ...innovative2046ITServices
@@ -1520,7 +1516,6 @@ if ( {) {
         {/* Enhanced animated background */}
         <div className='absolute inset-0'>
           {/* Quantum grid effect */}
-<<<<<<< HEAD
           <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>  ];
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
@@ -1536,42 +1531,26 @@ if ( {) {
         <div className="absolute inset-0">
           {/* Quantum grid effect */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-=======
           <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
               className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               animate={{
                 x: [0, Math.random() * 100 - 50]
                 y: [0, Math.random() * 100 - 50]
                 opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
-<<<<<<< HEAD
                 duration: Math.random() * 10 + 10
                 repeat: Infinity
                 ease: 'easeInOut'
-=======
                 duration: Math.random() * 10 + 10,
                 repeat: Infinity,
                 ease: 'easeInOut',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               }}
               style={{
                 left: Math.random() * 100 + '%'
@@ -1590,9 +1569,9 @@ if ( {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 top: Math.random() * 100 + '%'}}
             />
-<<<<<<< HEAD
           ))}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         {/* Hero Section */}
@@ -1607,31 +1586,21 @@ if ( {) {
                 className=&quot;text-6xl md:text-8xl font-bold text-white mb-8&quot;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           ))}
         </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Hero Section */}
         <section
           id='hero'
           className='relative z-10 min-h-screen flex items-center justify-center px-4'
         >
-<<<<<<< HEAD
           <div className='text-center max-w-6xl mx-auto'>            <motion.div        <section id="hero" className="relative z-10 min-h-screen flex items-center justify-center px-4">
           <div className="text-center max-w-6xl mx-auto">
-=======
           <div className='text-center max-w-6xl mx-auto'>            <motion.div
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1681,11 +1650,8 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                   Zion Tech Group
                 </span>
               </motion.h1>
-<<<<<<< HEAD
               <motion.p
-=======
               <motion.p 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
@@ -1812,6 +1778,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
             >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -1838,6 +1805,8 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-center'>
                 <div className='flex flex-col items-center'>
                   <Phone className='w-6 h-6 text-cyan-400 mb-2' />
@@ -1921,6 +1890,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
           <div className="max-w-7xl mx-auto">
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -1944,6 +1914,11 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+            <motion.div
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
@@ -1961,15 +1936,16 @@ className="text-center mb-16"
             >
 =======
               className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -1990,6 +1966,7 @@ className="text-center mb-16"
                 Discover our cutting-edge quantum AI, neural interface, and space technology solutions that are transforming industries worldwide.
               </p>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2035,12 +2012,9 @@ className="text-center mb-16"
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             {/* Search and Filter */}
             <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2062,15 +2036,16 @@ className="text-center mb-16"
             >
 =======
               className='mb-12'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>
                 <div className='relative flex-1 max-w-md'>
@@ -2089,6 +2064,7 @@ className="text-center mb-16"
                 </div>
                 <div className='flex gap-2'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2097,6 +2073,8 @@ className="text-center mb-16"
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {categories.map(category => (                    <button            >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2127,6 +2105,7 @@ className="text-center mb-16"
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <button
+<<<<<<< HEAD
 =======
 
 =======
@@ -2139,10 +2118,13 @@ className="text-center mb-16"
                     <button
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {categories.map(category => (                    <button
 
                     <button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -2155,6 +2137,8 @@ className="text-center mb-16"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       key={category}
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${;
@@ -2203,14 +2187,7 @@ className="text-center mb-16"
                 </div>
               </div>
             </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Services Grid */}
             <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2219,6 +2196,7 @@ className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0 && 0.4 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2230,10 +2208,12 @@ className="text-center mb-16"
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 =======
 <<<<<<< HEAD
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2241,6 +2221,8 @@ className="text-center mb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -2258,6 +2240,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 <<<<<<< HEAD
                   whileHover={{ y: -10, scale: 1.02 }}
                   className='group'
+<<<<<<< HEAD
 
 =======
 
@@ -2285,6 +2268,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>
                     <div className='flex items-start justify-between mb-4'>
@@ -2297,7 +2283,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                         <span className='inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full'>
                           {service.category}
                         </span>
-<<<<<<< HEAD
                         <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (                >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full">
@@ -2318,6 +2303,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
                           {[...Array(5)].map((_, i) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -2325,16 +2311,21 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (
 
                           {[...Array(5)].map((_, i) => (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -2356,11 +2347,18 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                       </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+                    <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>                          <span className="text-gray-400 text-sm ml-1">({service.reviews})</span>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         </div>
                       </div>
                     </div>
@@ -2542,6 +2540,7 @@ className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                 </motion.div>
               ))}
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2908,12 +2907,9 @@ className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             {/* Call to Action */}
             <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2931,15 +2927,16 @@ className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
               className='text-center mt-20'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <div className='bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-cyan-400/30'>
                 <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -3177,26 +3174,19 @@ export default Homepage2046;
 =======
 =======
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Homepage2046;  )
 }
 export default Homepage2046;
 
-<<<<<<< HEAD
-=======
+export default Homepage2046;
 export default Homepage2046;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default Homepage2046;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

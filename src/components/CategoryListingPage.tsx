@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/CategoryListingPage.tsx
 
 
@@ -50,6 +51,8 @@ import ListingGridSkeleton from '@/components / skeletons / ListingGridSkeleton'
 import { safe_storage } from '@/utils / safe_storage';
 // Example listing type;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react'
 import { GradientHeading } from '@/components/GradientHeading'
 import { ListingScoreCard } from '@/components/ListingScoreCard'
@@ -62,13 +65,10 @@ import {
   SelectItem
 } from '@/components/ui/select'
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
-<<<<<<< HEAD
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
 import { safeStorage } from "@/utils/safeStorage";
-=======
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
 import { safeStorage } from '@/utils/safeStorage'
-=======
 import { useState, useEffect } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
@@ -78,8 +78,6 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/u
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
 import { safeStorage } from "@/utils/safeStorage",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Example listing type
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface Listing {
@@ -103,12 +101,15 @@ interface Listing {
   createdAt: string
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CategoryListingPageProps {
 
   title: string
@@ -219,6 +220,7 @@ function CategoryListingPage() {
     .filter(listing => {
       // Apply search filter
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       const matchesSearch =
@@ -227,15 +229,19 @@ function CategoryListingPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const matchesSearch =
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
-=======
       const matchesSearch = null;
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         (listing.tags &&
           listing.tags.some(tag =>
             tag.toLowerCase().includes(searchQuery.toLowerCase())
@@ -244,24 +250,33 @@ function CategoryListingPage() {
       if (selectedFilter === 'all') return matchesSearch
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (selectedFilter === 'high-rating')
         return matchesSearch && (listing.rating |0) >= 4
       if (selectedFilter === 'best-match')
         return matchesSearch && (listing.aiScore |0) >= 85
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (true) {}
         return matchesSearch && (listing.rating || 0) >= 4
       if (true) {}
         return matchesSearch && (listing.aiScore || 0) >= 85
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return matchesSearch
     })
     .sort((a, b,) => {
@@ -336,12 +351,15 @@ if (return matches_search) {
             <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
@@ -368,11 +386,14 @@ interface Listing {
   price?: number | null,
   createdAt: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { ListingScoreCard } from "@/components/ListingScoreCard",;
@@ -683,6 +704,7 @@ export function CategoryListingPage({ ;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               {description}
             </p>
@@ -704,12 +726,17 @@ export function CategoryListingPage({ ;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {description}
             </p>
           </div>
           {/* Filters and Search */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
               <div className='relative'>
@@ -772,10 +799,13 @@ export function CategoryListingPage({ ;
                     >                      {option.label}
                     </SelectItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                   ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="relative">
@@ -823,11 +853,6 @@ export function CategoryListingPage({ ;
                     <SelectItem key={option.value} value={option.value} className="text-white">;
                       {option.label}
                     </SelectItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </SelectContent>
@@ -837,23 +862,29 @@ export function CategoryListingPage({ ;
           {/* Results Count */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='mb-6'>
             <p className='text-zion-slate-light'>
-=======
           <div className="mb-6">
             <p className="text-zion-slate-light">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Showing {processedListings.length} results
               {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 ))}
@@ -867,6 +898,8 @@ export function CategoryListingPage({ ;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Listings Grid */}
           <div aria-busy={isLoading}>
             {isLoading ? (
@@ -887,10 +920,13 @@ export function CategoryListingPage({ ;
                     reviewCount = {listing.reviewCount,}
                   />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           {/* Listings Grid */}
           <div aria-busy={isLoading}>;
@@ -912,11 +948,6 @@ export function CategoryListingPage({ ;
                     rating={listing.rating}
                     reviewCount={listing.reviewCount}
                   />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
@@ -925,6 +956,7 @@ export function CategoryListingPage({ ;
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
                 <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1210,16 +1242,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   variant='outline'
                   onClick={() => {
                     setSearchQuery('')
                     setSelectedFilter(filterOptions[0]?.value |'all') }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                   variant="outline"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   onClick={() => {
@@ -1229,6 +1259,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1236,10 +1267,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   Clear all filters
                 </Button>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1250,6 +1284,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </div>
         </div>
@@ -1339,6 +1375,7 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }</div> </div> </div> </>)
 }'"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
                 >
@@ -1349,6 +1386,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>;
             ) : (;
               <div className="text-center py-20">;
@@ -1736,8 +1775,11 @@ case 'z - a': return (<> <div className="min - h-screen bg - zion - blue py - 12
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

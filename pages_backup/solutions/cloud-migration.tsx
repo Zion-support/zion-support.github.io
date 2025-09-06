@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -40,15 +41,25 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -68,10 +79,15 @@ import { Cloud,
 } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
+<<<<<<< HEAD
 
 =======
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const phases = [;
   {}
 <<<<<<< HEAD
@@ -552,14 +568,8 @@ export default function CloudMigrationPage() {
 
 =======
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
@@ -592,6 +602,7 @@ export default function CloudMigrationPage() {
       </div>;
     </Layout>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -605,6 +616,11 @@ export default function CloudMigrationPage() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?

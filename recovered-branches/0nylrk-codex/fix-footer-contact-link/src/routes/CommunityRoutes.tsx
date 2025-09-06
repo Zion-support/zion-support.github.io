@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/routes/CommunityRoutes.tsx
@@ -6,6 +7,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "../components/ProtectedRoute";
@@ -15,9 +18,12 @@ import ForumPostPage from "../pages/ForumPostPage";
 import CreatePostPage from "../pages/CreatePostPage";
 import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
@@ -26,21 +32,26 @@ import ForumCategoryPage from "../pages/ForumCategoryPage",
 import ForumPostPage from "../pages/ForumPostPage",
 import CreatePostPage from "../pages/CreatePostPage",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
 
-=======
 import EditPostPage from "../pages/EditPostPage",
 import CommunityProfilePage from "../pages/CommunityProfilePage",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const CommunityRoutes = () => {
   return (
     <Routes>
@@ -100,6 +111,7 @@ const CommunityRoutes = () => {;
             <EditPostPage />
           </ProtectedRoute>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -108,18 +120,22 @@ const CommunityRoutes = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       />
     </Routes>
   )
 }
 export default CommunityRoutes;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "../components/ProtectedRoute",;
@@ -276,8 +292,11 @@ export default CommunityRoutes;
 },;
 export default CommunityRoutes;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

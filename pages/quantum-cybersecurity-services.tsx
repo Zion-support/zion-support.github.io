@@ -1,35 +1,45 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import { quantumCybersecurityServices  } from '../data/2026-quantum-cybersecurity-services';
 import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services',
 import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026',
 import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function QuantumCybersecurityServices() {
   return (
     <>
@@ -50,49 +60,58 @@ export default function QuantumCybersecurityServices() {
         <meta name="author" content="ZionTech Group" />
         <meta name="robots" content="index, follow" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         {/* Open Graph */}
-=======
         {/* Open Graph */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta property="og:title" content="Quantum Cybersecurity Services - ZionTech Group" />
         <meta property="og:description" content="Unbreakable security powered by quantum computing and advanced AI algorithms." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/quantum-cybersecurity-services" />
         <meta property="og:site_name" content="ZionTech Group" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
         {/* Contact Information */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         {/* Contact Information */}
-=======
         {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta name="contact:phone" content="+1 302 464 0950" />
         <meta name="contact:email" content="kleber@ziontechgroup.com" />
         <meta name="contact:address" content="364 E Main St STE 1008 Middletown DE 19709" />
         <meta name="contact:website" content="https://ziontechgroup.com" />
       </Head>
-<<<<<<< HEAD
 
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
           <div className="text-center z-10 max-w-6xl mx-auto">
@@ -154,21 +173,22 @@ export default function QuantumCybersecurityServices() {
 
       <UltraFuturisticBackground2026 intensity="high" theme="cyberpunk">
         {/* Hero Section */}
-=======
       <UltraFuturisticBackground2026 intensity="high" theme="cyberpunk">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
           <div className="text-center z-10 max-w-6xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.h1
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -315,17 +335,10 @@ className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto 
 }
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed"
             >
-<<<<<<< HEAD
               Unbreakable security powered by quantum computing and advanced AI
               algorithms. Protect your business from tomorrow's threats today.            </motion.p>
-=======
               Unbreakable security powered by quantum computing and advanced AI algorithms. Protect your business from tomorrow's threats today.
             </motion.p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -373,7 +386,6 @@ className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto 
 =======
               </Link>
             </motion.div>
-<<<<<<< HEAD
             {/* Key Benefits */}
             <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -476,7 +488,6 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
               className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
 =======
               className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'
-=======
             {/* Key Benefits */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -500,12 +511,15 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
 }
               className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
                 <div className="text-4xl mb-4">🔐</div>
@@ -525,6 +539,7 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -549,6 +564,8 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
 className="text-center mb-16"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Services Section */}
         <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -556,7 +573,6 @@ className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
-=======
         {/* Services Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -582,6 +598,7 @@ className="text-center mb-16"
 }
               className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -595,6 +612,8 @@ className="text-center mb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -605,6 +624,7 @@ className="text-center mb-16"
                 Protect your digital assets with the most advanced security technology available, powered by quantum computing and AI.
               </p>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -682,6 +702,8 @@ className="text-center mb-16"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -691,7 +713,6 @@ className="text-center mb-16"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {quantumCybersecurityServices.map((service, index) => (
                 <motion.div
@@ -720,11 +741,6 @@ className="text-center mb-16"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
 <<<<<<< HEAD
                   <UltraFuturisticServiceCard2026 
@@ -742,9 +758,12 @@ className="text-center mb-16"
                   />
                 </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))}
 
 =======
@@ -803,7 +822,6 @@ className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -837,12 +855,15 @@ className="text-center mb-16"
 }
               className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -850,6 +871,7 @@ className="text-center mb-16"
                 </span>
               </h2>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -865,6 +887,8 @@ className="text-center mb-16"
               <motion.div
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 initial={{ opacity: 0, x: -30 }}
@@ -875,7 +899,6 @@ className="text-center mb-16"
                 className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8"
 =======
                 className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8'
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, x: -30 }  } catch (error) {
@@ -900,12 +923,15 @@ className="text-center mb-16"
 }
                 className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <h3 className="text-2xl font-bold text-white mb-4">The Quantum Threat</h3>
                 <p className="text-gray-300 mb-4">
@@ -950,7 +976,10 @@ className="text-center mb-16"
 =======
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -964,7 +993,6 @@ className="text-center mb-16"
                 className="bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8"
 =======
                 className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8'
-=======
                 initial={{ opacity: 0, x: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -987,12 +1015,15 @@ className="text-center mb-16"
 }
                 className="bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <h3 className="text-2xl font-bold text-white mb-4">Our Quantum Solution</h3>
                 <p className="text-gray-300 mb-4">
@@ -1012,6 +1043,7 @@ className="text-center mb-16"
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1068,6 +1100,8 @@ className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl 
 className="text-center mb-16"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Security Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -1075,7 +1109,6 @@ className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
-=======
         {/* Security Features Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1101,6 +1134,7 @@ className="text-center mb-16"
 }
               className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1114,6 +1148,8 @@ className="text-center mb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -1121,6 +1157,7 @@ className="text-center mb-16"
                 </span>
               </h2>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1135,6 +1172,8 @@ className="text-center mb-16"
               <motion.div
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 initial={{ opacity: 0, y: 30 }}
@@ -1301,7 +1340,6 @@ className="text-center mb-16"
               >
 =======
                 className='text-center'
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -1406,11 +1444,6 @@ className="text-center mb-16"
   }
 }
                 className="text-center"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-6xl mb-4">📊</div>
@@ -1420,6 +1453,7 @@ className="text-center mb-16"
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1761,6 +1795,8 @@ className="text-center mb-16"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
@@ -1768,7 +1804,6 @@ className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
         {/* Contact Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1797,11 +1832,6 @@ className="text-center mb-16"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -1813,8 +1843,11 @@ className="text-center mb-16"
                 Don't wait for quantum computers to break your security. Contact us now to implement quantum-resistant protection.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
                 <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>
                   <div className='text-3xl mb-4'>📱</div>
@@ -1825,13 +1858,17 @@ className="text-center mb-16"
                     href='tel:+13024640950'
                     className='text-indigo-400 hover:text-indigo-300 transition-colors'
                   >
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
                   <div className="text-3xl mb-4">📱</div>
                   <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
                   <a href="tel:+13024640950" className="text-indigo-400 hover:text-indigo-300 transition-colors">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     +1 302 464 0950
@@ -1842,6 +1879,8 @@ className="text-center mb-16"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     +1 302 464 0950
                   </Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1897,6 +1936,7 @@ className="text-center mb-16"
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1911,9 +1951,11 @@ className="text-center mb-16"
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 =======
 <<<<<<< HEAD
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1921,6 +1963,8 @@ className="text-center mb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
@@ -1950,6 +1994,7 @@ className="text-center mb-16"
         </section>
       </UltraFuturisticBackground2026>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2025,8 +2070,9 @@ href='https://ziontechgroup && ziontechgroup.com'
                   className='border - 2 border - indigo - 400 text - indigo - 400 px - 8 py - 4 rounded - xl text - lg font - semibold hover:bg - indigo - 400 hover:text - black transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30'                >;
 =======
 <<<<<<< HEAD
-  );
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  );
   )
             >;
               <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">;
@@ -2096,6 +2142,7 @@ href='https://ziontechgroup && ziontechgroup.com'
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2108,3 +2155,5 @@ href='https://ziontechgroup && ziontechgroup.com'
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

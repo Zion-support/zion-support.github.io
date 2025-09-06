@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ComparisonSection.tsx
 
 <<<<<<< HEAD
@@ -9,14 +10,18 @@ import { Button } from "./ui/button";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button";
-=======
 import { GradientHeading } from './GradientHeading'
 import { Button } from './ui/button'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { CheckCircle2 } from 'lucide-react'
 
 import {
@@ -27,6 +32,7 @@ import {
   TableHeader
   TableRow
 } from './ui/table'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -41,6 +47,8 @@ xport function ComparisonSection() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ComparisonSection() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
@@ -283,8 +291,6 @@ function ComparisonSection() {
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
-<<<<<<< HEAD
-=======
 
                   </TableRow>
 
@@ -344,15 +350,19 @@ export function ComparisonSection() {
 =======
                   </TableRow>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 ))}
               </TableBody>
             </Table>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ComparisonSection.tsx
 
@@ -369,6 +379,8 @@ export function ComparisonSection() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20'>
             <div className='flex items-start'>
               <CheckCircle2 className='mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1' />
@@ -412,6 +424,7 @@ export function ComparisonSection() {
             </div>
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ComparisonSection.tsx
 >>>>>>>             </Button>
           </div>
@@ -431,6 +444,8 @@ import { Button } from "./ui/button",;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ComparisonSection.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
             <div className="flex items-start">
@@ -445,15 +460,19 @@ import { Button } from "./ui/button",;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </Button>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -619,20 +638,22 @@ export function ComparisonSection() {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </section>;
   );
 };
 }
-=======
     </section>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button",;
 import { CheckCircle2 } from 'lucide-react';
@@ -732,6 +753,7 @@ export function ComparisonSection() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ComparisonSection.tsx
 
 =======
@@ -760,3 +782,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

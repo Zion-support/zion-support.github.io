@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,11 +45,14 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -257,28 +261,22 @@ import {;
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-<<<<<<< HEAD
-=======
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/main
+origin/automation-improvements-final
 import {
-<<<<<<< HEAD
   BookOpen
   Clock
   User
@@ -476,7 +474,6 @@ import {
   SleepyFace2
   YawningFace2
   DizzyFace2
-=======
   BookOpen,
   Clock,
   User,
@@ -674,8 +671,11 @@ import {
   SleepyFace2,
   YawningFace2,
   DizzyFace2,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "lucide-react";
 const guides = [;
   {;
@@ -779,20 +779,25 @@ const categories = [;
   { name: "Performance", count: 1, icon: Zap },;
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function GuidesPage() {;
 =======
 <<<<<<< HEAD
-export default function GuidesPage() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function GuidesPage() {
 
 interface GuidesProps {
   className?: string;
 }
 
 const Guides: React.FC<GuidesProps> = ({ className }) => {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout>;
       <Head>;
@@ -1566,6 +1571,10 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+import Layout from '../components/Layout';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 =======
 
@@ -1587,6 +1596,7 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1617,6 +1627,11 @@ export default function GuidesPage() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </Layout>;

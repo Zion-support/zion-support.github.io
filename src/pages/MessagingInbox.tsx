@@ -9,11 +9,7 @@ import { ConversationsList, ConversationDetailView } from '@/components / messag
 import { useIsMobile } from '@/hooks / use - mobile';
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext';
@@ -25,7 +21,6 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -41,6 +36,7 @@ import { toast  } from 'sonner';
 import { Button  } from '@/components/ui/button';
 import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -48,6 +44,9 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react'
 import { useMessaging } from '@/context/MessagingContext',
@@ -58,16 +57,16 @@ import { toast } from 'sonner',
 import { Button } from '@/components/ui/button',
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
 <<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import { useRouter } from 'next/router', // Changed from react-router-dom
-import {logErrorToProduction} from '@/utils/productionLogger',
 <<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useRouter } from 'next/router', // Changed from react-router-dom
+import {logErrorToProduction} from '@/utils/productionLogger',
 export default function MessagingInbox() {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 
@@ -81,6 +80,8 @@ export default function MessagingInbox() {
 import {logErrorToProduction} from '@/utils/productionLogger',
 xport default function MessagingInbox() {
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const {
     conversations
     activeConversation
@@ -108,44 +109,56 @@ export default function MessagingInbox() {
   const [activeCall, setActiveCall] = useState<string | null>(null);
   useEffect((,) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   const { 
     conversations,
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const { 
+    conversations,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     activeConversation, ;
     setActiveConversation;
     markAsRead;
     fetchConversations;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     activeConversation, 
     setActiveConversation, 
     markAsRead,
     fetchConversations,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     isLoading
   } = useMessaging(),
   const isMobile = useIsMobile(),
   const router = useRouter(), // Changed from navigate
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     // Fetch conversations when component mounts
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
   useEffect(() => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   const [activeCall, setActiveCall] = useState<string | null>(null);
   
   useEffect((,) => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
   const [activeCall, setActiveCall] = useState<string | null>(null),
@@ -160,6 +173,11 @@ export default function MessagingInbox() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  const [activeCall, setActiveCall] = useState<string | null>(null),
+  
+  useEffect(() => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Fetch conversations when component mounts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const loadData = async () => {
@@ -169,6 +187,7 @@ export default function MessagingInbox() {
         logErrorToProduction('Failed to load conversations:', { data: error })
         toast.error("Failed to load messages. Please try again.")
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -185,10 +204,11 @@ export default function MessagingInbox() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     loadData()
   }, [fetchConversations]);
-=======
     };
     
     loadData()
@@ -209,20 +229,18 @@ export default function MessagingInbox() {
     
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     },
     
     loadData()
   }, [fetchConversations]),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const startVideoCall = () => {
     if (!activeConversation) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast.error("Please select a conversation first"),
       return
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -234,6 +252,8 @@ export default function MessagingInbox() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
     // Show toast notification
@@ -245,45 +265,52 @@ export default function MessagingInbox() {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>     
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
 =======
 =======
-    
-    const roomId = `msg-${activeConversation.id}`,
-    setActiveCall(roomId),
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    
+    const roomId = `msg-${activeConversation.id}`,
+    setActiveCall(roomId),
     
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     });
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }),
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -306,6 +333,9 @@ export default function MessagingInbox() {
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>>     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -315,6 +345,7 @@ export default function MessagingInbox() {
               <MessageSquare className="h-6 w-6" />
               Messages
             </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -335,18 +366,15 @@ export default function MessagingInbox() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {activeConversation && (
               <Button
                 onClick = {startVideoCall,}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {activeConversation && (
               <Button 
                 onClick={startVideoCall}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
@@ -357,6 +385,7 @@ export default function MessagingInbox() {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
@@ -365,12 +394,9 @@ export default function MessagingInbox() {
 >>>>>>>             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
 =======
 =======
-          
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -383,22 +409,26 @@ export default function MessagingInbox() {
                 <ConversationsList
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   conversations = {conversations,}
                   activeConversation = {activeConversation,}
                   setActiveConversation = {setActiveConversation,}
                   markAsRead = {markAsRead,}
                 />
               )}
-<<<<<<< HEAD
-=======
               
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext',;
@@ -507,11 +537,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Conversation Detail */}
 >>>>>>>               <ConversationDetailView />
             </div>
@@ -523,10 +556,13 @@ ursor/fix-website-loading-errors-and-merge-6662
     </ProtectedRoute>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
 loadData () ;
@@ -578,6 +614,7 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
   )
 }
@@ -597,3 +634,8 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

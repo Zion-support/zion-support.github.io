@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {GradientHeading} from "@/components/GradientHeading";
 import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
 =======
@@ -14,11 +15,17 @@ import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 <<<<<<< HEAD
 =======
 =======
-import {GradientHeading} from "@/components/GradientHeading";
-import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
 =======
+import { GradientHeading } from "@/components/GradientHeading";
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {GradientHeading} from "@/components/GradientHeading";
+import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
+import { GradientHeading } from "@/components/GradientHeading",
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -32,6 +39,8 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function NewsletterSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="newsletter">
@@ -48,9 +57,16 @@ export function NewsletterSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "@/components/GradientHeading",;
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 =======
@@ -109,6 +125,7 @@ function NewsletterSection() {
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/NewsletterSection.tsx
     </section>;
   );
+<<<<<<< HEAD
 =======
 
     </section>);
@@ -146,3 +163,7 @@ function NewsletterSection() {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

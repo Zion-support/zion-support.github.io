@@ -65,7 +65,15 @@ isLoading: boolean ;
   icon: <Award className="h-5 w-5 text-muted-foreground" />;";"description: "Credits earned from referrals",
 }];
 }</CardContent> </Card>) ) ;
+<<<<<<< HEAD
 
 }</div>) ;
 }'"
 
+=======
+:temp_broken_files/referrals/ReferralStats.tsx
+}</div>) ;"}'"
+}</div>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/referrals/ReferralStats.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/integrations/supabase/client.ts
 
 <<<<<<< HEAD
@@ -9,25 +10,34 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {createClient} from '@supabase/supabase-js';
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 if (!supabaseUrl |!supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { createClient } from '@supabase/supabase-js',;
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
 if (!supabaseUrl || !supabaseAnonKey) {;
   throw new Error('Missing Supabase environment variables');
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 // Utility to detect network connectivity. navigator.onLine is not reliable in
 // all environments, so we also try a small request with a short timeout.
@@ -36,15 +46,20 @@ export const checkOnline = async (): Promise<boolean> => {
     return false
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-  try {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  try {
   try {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const controller = new AbortController();
     const id = setTimeout(() => controller.abort(), 3000);
     await fetch('https://clients3.google.com/generate_204', {
@@ -74,6 +89,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 });
 // Helper function to get profiles table
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -82,6 +98,10 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 import {createClient} from '@supabase/supabase-js';
 
 
+=======
+export const getFromProfiles = () => supabase.from('profiles');
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { createClient } from '@supabase/supabase-js',;
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
@@ -237,6 +257,7 @@ export const checkOnline = async (): Promise<boolean> => {;
     return false;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
@@ -248,6 +269,8 @@ export const checkOnline = async ():Promise<boolean> => {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   try {;
     const controller = new AbortController(),;
     const id = setTimeout(() => controller.abort(), 3000),;
@@ -331,10 +354,9 @@ export const getFromProfiles = () => supabase.from('profiles'),;
 =======
 });
 // Helper function to get profiles table;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const getFromProfiles = () => supabase.from('profiles');
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

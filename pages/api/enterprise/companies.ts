@@ -1,6 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req.method === "GET") {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { store } from "../../../utils/data/enterpriseStore";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "GET") {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const companies = store.listCompanies();
     return res.status(200).json(companies);
   }
@@ -18,6 +30,7 @@
   }
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
+<<<<<<< HEAD
 
 =======
 if (req && req.method === "GET") {
@@ -167,6 +180,10 @@ export default function handler(req, res) {
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 
+=======
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ companies: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -237,7 +254,12 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

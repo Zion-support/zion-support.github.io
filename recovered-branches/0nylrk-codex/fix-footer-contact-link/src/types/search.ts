@@ -5,14 +5,14 @@
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface SearchSuggestion {
-=======
 export interface SearchSuggestion {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   text: string;
 
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent'
@@ -20,15 +20,20 @@ export interface SearchSuggestion {;
   iconUrl?: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-export interface SearchHighlight {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface SearchHighlight {
 
 export interface SearchHighlight {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   before: string;
 
   match: string
@@ -37,18 +42,19 @@ export interface SearchHighlight {;
 }
 export interface FilterOptions {
   productTypes: {
-<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 
     label: string
     value: string
-=======
     label: string,
     value: string;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }[];
   locations: {
     label: string
@@ -61,16 +67,21 @@ export interface FilterOptions {
   }[];
   ratingOptions: number[]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 export interface SearchSuggestion {;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   text: string,;
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',;
   iconUrl?: string;
@@ -181,11 +192,10 @@ export interface FilterOptions {;
     value: string;
   }[];
   ratingOptions: number[];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

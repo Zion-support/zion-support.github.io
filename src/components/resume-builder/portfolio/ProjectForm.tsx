@@ -1,11 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -16,10 +17,13 @@ import { Textarea } from '@/components/ui/textarea';
 import { logErrorToProduction } from '@/utils/productionLogger'; import {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Form
   FormControl
   FormField
@@ -27,17 +31,23 @@ import { logErrorToProduction } from '@/utils/productionLogger'; import {
   FormLabel
   FormMessage
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,;
   FormMessage;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject } from '@/types/resume'
 import { usePortfolio } from '@/hooks/usePortfolio'
@@ -144,12 +154,14 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
       setIsLoading(false)
     }
   }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -263,45 +275,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-<<<<<<< HEAD
           name='title'
-=======
           name="title"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
-<<<<<<< HEAD
                 <Input
                   placeholder='E.g., AI Chatbot, E-commerce Website'
                   {...field}                />
-=======
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
         />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <FormField
@@ -336,7 +328,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
                   {...field}
-=======
         />;
         <FormField;
           control={form.control}
@@ -350,16 +341,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className="min-h-[100px]"
                   {...field} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           render={({ field }: { field: any }) => (
@@ -543,20 +538,16 @@ ursor/fix-website-loading-errors-and-merge-6662
               </FormItem>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
         <FormField
           control={form.control}
           name='technologies'
-=======
         />;
         <FormField;
           control={form.control}
           name="technologies"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Technologies Used</FormLabel>
@@ -567,36 +558,22 @@ ursor/fix-website-loading-errors-and-merge-6662
             </FormItem>
           )}
         />
-<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
             control={form.control}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             name='github_url'
             render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel className='flex items-center gap-2'>
                   <Github className='h-4 w-4' />
-=======
-<<<<<<< HEAD
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             name="github_url"
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Github className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -605,7 +582,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormMessage />
               </FormItem>
             )}
-<<<<<<< HEAD
           />
           <FormField
             control={form.control}
@@ -613,7 +589,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel className='flex items-center gap-2'>
                   <Link className='h-4 w-4' />
-=======
           />;
           <FormField;
             control={form.control}
@@ -622,11 +597,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Link className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Demo URL
                 </FormLabel>
                 <FormControl>
@@ -647,6 +617,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   Demo URL
@@ -671,6 +642,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                 Screenshot URL
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
         </div>
 <<<<<<< HEAD
@@ -690,10 +663,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormLabel className='flex items-center gap-2'>
                 <FileImage className='h-4 w-4' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 Screenshot URL
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />;
         </div>;
         <FormField;
@@ -703,11 +679,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <FormItem>
               <FormLabel className="flex items-center gap-2">
                 <FileImage className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Screenshot URL
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </FormLabel>
@@ -718,12 +689,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             </FormItem>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
         {/* Future file upload field would go here */}
         <div className='flex justify-end space-x-2 pt-4'>
           <Button type='button' variant='outline' onClick={onCancel}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             Cancel
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -734,16 +709,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />;
         {/* Future file upload field would go here */}
         
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Cancel
           </Button>
           <Button type="submit" disabled={isLoading}>
@@ -755,16 +727,20 @@ ursor/fix-website-loading-errors-and-merge-6662
       </form>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Form>;
   );
 };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -774,17 +750,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Form>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

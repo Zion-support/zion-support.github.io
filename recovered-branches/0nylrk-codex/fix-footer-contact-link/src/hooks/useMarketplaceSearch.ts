@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
 
 import { useState, useMemo } from "react",
@@ -9,6 +10,8 @@ import { ProductListing } from "@/types/listings",
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useMemo} from "react";
 import {ProductListing} from "@/types/listings";
 import {SearchSuggestion, FilterOptions} from "@/types/search";
@@ -16,11 +19,8 @@ import {generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS} 
 export function useMarketplaceSearch() {
   // Search state;
   const [searchQuery, setSearchQuery] = useState("");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
-<<<<<<< HEAD
 import { SearchSuggestion, FilterOptions } from "@/types/search";
 import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 export function useMarketplaceSearch() {
@@ -41,14 +41,12 @@ export function useMarketplaceSearch() {
     () => generateFilterOptions();
     [];
   );
-=======
 import { SearchSuggestion, FilterOptions } from "@/types/search",
 import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
 
 export function useMarketplaceSearch() {
   // Search state
   const [searchQuery, setSearchQuery] = useState(""),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Filter states
@@ -80,12 +78,10 @@ export function useMarketplaceSearch() {
 
 =======
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
     return MARKETPLACE_LISTINGS.filter(listing => {
       // Search query filter
-<<<<<<< HEAD
       const matchesSearch = !searchQuery |
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
@@ -99,8 +95,11 @@ export function useMarketplaceSearch() {
       // Availability filter
       const matchesAvailability = selectedAvailability.length === 0 |
         (listing.availability && selectedAvailability.includes(listing.availability));
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const matchesSearch = !searchQuery || 
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -119,12 +118,15 @@ export function useMarketplaceSearch() {
         (listing.availability && selectedAvailability.includes(listing.availability)),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Rating filter
       const matchesRating = selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
@@ -171,13 +173,14 @@ const matchesSearch = !searchQuery ||
 =======
         matchesRating
     })
-<<<<<<< HEAD
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
-=======
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
@@ -332,6 +335,7 @@ function useMarketplaceSearch() {
       default: break
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -341,12 +345,16 @@ function useMarketplaceSearch() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery(""),
@@ -355,10 +363,13 @@ function useMarketplaceSearch() {
     setSelectedAvailability([]),
     setSelectedRating(null)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return {
     searchQuery;
@@ -376,7 +387,6 @@ function useMarketplaceSearch() {
     filterOptions
   }
 }
-=======
   },
   
   return {
@@ -393,11 +403,14 @@ function useMarketplaceSearch() {
     clearAllFilters,
     filterOptions
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -486,6 +499,7 @@ export function useMarketplaceSearch() {;
     handleFilterChange;
     clearAllFilters;
     filterOptions;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -657,3 +671,8 @@ filterOptions
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

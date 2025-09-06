@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
@@ -9,24 +10,27 @@ import { Bot, Users, TrendingUp, Star } from 'lucide-react'
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-=======
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
-=======
 import React from "react"
 import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate"
 import { Bot, Users, TrendingUp, Star } from 'lucide-react'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function AITalentMatchingPage() {
 
   const benefits = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -52,6 +56,8 @@ xport default function AITalentMatchingPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: Bot
       title: "AI-Powered Matching"
       description: "Advanced algorithms match the right talent with the right opportunities"
@@ -86,7 +92,6 @@ xport default function AITalentMatchingPage() {
       title="AI Talent Matching"
       subtitle="Find the perfect talent with our AI-powered matching system"
       description="Our advanced AI technology analyzes skills, experience, and cultural fit to match the right candidates with the right opportunities, ensuring successful placements and satisfied clients."
-<<<<<<< HEAD
       benefits={benefits}
       features={features}
       stats={stats}
@@ -95,9 +100,6 @@ xport default function AITalentMatchingPage() {
     />
   )
 }
-=======
-=======
-=======
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
@@ -105,8 +107,11 @@ import { Bot, Users, TrendingUp } from 'lucide-react'
 export default function AITalentMatchingPage() {
   const benefits = [
     {
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className="h-8 w-8" />},
@@ -238,10 +243,13 @@ export default function AITalentMatchingPage() {;
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       benefits={benefits}
 =======
 >>>>>>>       benefits={benefits}
@@ -259,8 +267,8 @@ export default function AITalentMatchingPage() {;
       ctaLink="/contact"
     />;
   );
-<<<<<<< HEAD
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 };
@@ -279,3 +287,7 @@ export default function AITalentMatchingPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

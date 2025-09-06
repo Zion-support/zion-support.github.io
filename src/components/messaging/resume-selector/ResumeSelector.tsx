@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
@@ -27,11 +30,14 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [isLoading, setIsLoading] = useState(false)
   const { resume, fetchResume } = useResume()
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -40,6 +46,7 @@ import { Label } from "@/components/ui/label",
 import { Plus, Loader2 } from 'lucide-react'
 import { useResume } from "@/hooks/useResume",
 import { exportResumeToPDF } from "@/utils/pdfExport",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -51,6 +58,8 @@ import { exportResumeToPDF } from "@/utils/pdfExport",
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast";
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { UploadSection  } from './UploadSection';
@@ -66,9 +75,12 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [isLoading, setIsLoading] = useState(false)
   const { resume, fetchResume } = useResume()
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   // Fetch resume data when component mounts
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast",
 import { ResumePreviewCard } from './ResumePreviewCard',
 import { UploadSection } from './UploadSection',
@@ -85,17 +97,12 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   
   const { resume, fetchResume } = useResume(),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Fetch resume data when component mounts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   useEffect(() => {
     const loadResumes = async () => {
-<<<<<<< HEAD
       setIsLoading(true)
+<<<<<<< HEAD
 >>>>>>>       try {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         await fetchResume()
@@ -121,6 +128,9 @@ import React, { useState, useEffect } from 'react',;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      setIsLoading(true),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       try {
         await fetchResume()
       } catch (error) {
@@ -147,22 +157,24 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
 
 =======
         setIsLoading(false)
-<<<<<<< HEAD
       }
     }
             return;
       }
-<<<<<<< HEAD
 }
 
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ;
 };
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> import React, { useState, useEffect } from 'react',;
@@ -170,6 +182,8 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from "@/components/ui/button",;
@@ -461,6 +475,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -476,3 +491,5 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -20,11 +23,14 @@ import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { s
 import { logErrorToProduction } from '@/utils/productionLogger'
 import { EmptyState } from "@/components/ui/empty-state"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter  } from 'next/router';
@@ -40,11 +46,14 @@ import { toast } from "@/hooks/use-toast",
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface PartnerProfile {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { supabase } from "@/integrations/supabase/client";
 import { logErrorToProduction  } from '@/utils/productionLogger';
 import { EmptyState } from "@/components/ui/empty-state";
@@ -83,14 +92,9 @@ interface PartnerProfile {
   fraud_flags?: number,
 <<<<<<< HEAD
 
-=======
 import { supabase } from "@/integrations/supabase/client",
 import { logErrorToProduction } from '@/utils/productionLogger',
 import { EmptyState } from "@/components/ui/empty-state",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -99,37 +103,23 @@ interface PartnerProfile {
   created_at: string,
   niche: string,
   audience_size: string,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   social_media?: Record<string, string>
   website?: string
   bio?: string
   payout_method?: string
   fraud_flags?: number
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   social_media?: Record<string string>,
   website?: string,
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   commission_rate?: number
 =======
 >>>>>>>   commission_rate?: number
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 export default function PartnerManager() {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [partners, setPartners] = useState<PartnerProfile[]>([])
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([])
   const [isLoading, setIsLoading] = useState(true)
@@ -162,31 +152,39 @@ export default function PartnerManager() {
         return <Badge variant="outline">{status}</Badge>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   partners
   isLoading
   onViewDetails, }
 
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   partners, 
   isLoading, ;
   onViewDetails, };
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -1048,6 +1046,7 @@ function PartnerTable({;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -1060,3 +1059,5 @@ function PartnerTable({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

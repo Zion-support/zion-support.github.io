@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { useRouter } from 'next/router',
@@ -18,16 +19,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+import { useRouter  } from 'next/router';
+import { useState, useEffect, useCallback, useMemo  } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
 >>>>>>> import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
@@ -45,10 +52,13 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "nvidia-a100-server";
     title: "NVIDIA A100 GPU Training Server";
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -61,10 +71,13 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     author: { name: "NVIDIA", id: "nvidia" },
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -232,10 +245,6 @@ const EquipmentFilterControls = ({
     </Button>
   </div>
 ),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Equipment card
@@ -244,23 +253,29 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
@@ -450,9 +465,12 @@ function EquipmentPageContent() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Loading state
 =======
 >>>>>>>   // Loading state
@@ -473,9 +491,12 @@ function EquipmentPageContent() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 }
@@ -488,6 +509,7 @@ export default function EquipmentPage() {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 ;
 
@@ -496,6 +518,8 @@ export default function EquipmentPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -702,8 +726,11 @@ export default function EquipmentPage() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

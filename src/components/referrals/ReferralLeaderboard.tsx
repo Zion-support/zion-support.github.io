@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   rank: number
@@ -13,6 +13,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Card
   CardContent
@@ -45,25 +47,15 @@ interface LeaderboardEntry {
   rank: number
   name: string
   referrals: number
-<<<<<<< HEAD
   rank: number
   name: string
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Award } from 'lucide-react'
 
 interface LeaderboardEntry {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   rank: number,
   name: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   referrals: number
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -73,27 +65,36 @@ export function ReferralLeaderboard() {
   const leaderboardData: LeaderboardEntry[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { rank: 1, name: 'Alex Johnson', referrals: 24 }
     { rank: 2, name: 'Jamie Smith', referrals: 18 }
     { rank: 3, name: 'Taylor Wong', referrals: 15 }
     { rank: 4, name: 'Casey Brown', referrals: 12 }
     { rank: 5, name: 'Jordan Lee', referrals: 10 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { rank: 1, name: 'Alex Johnson', referrals: 24 },
     { rank: 2, name: 'Jamie Smith', referrals: 18 },
     { rank: 3, name: 'Taylor Wong', referrals: 15 },
     { rank: 4, name: 'Casey Brown', referrals: 12 },
     { rank: 5, name: 'Jordan Lee', referrals: 10 },
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ]
   return (
     <Card>
@@ -212,7 +213,6 @@ export function ReferralLeaderboard() {;
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Award className="h-5 w-5" />
-=======
     { rank: 1, name: "Alex Johnson", referrals: 24 },
     { rank: 2, name: "Jamie Smith", referrals: 18 },
     { rank: 3, name: "Taylor Wong", referrals: 15 },
@@ -226,33 +226,43 @@ export function ReferralLeaderboard() {;
           <Award className="h-5 w-5" />
           Leaderboard
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </CardTitle>
         <CardDescription>Top referrers this month</CardDescription>
       </CardHeader>
       <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='space-y-2'>
           {leaderboardData.map(entry => (
             <div
               key={entry.rank}
               className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors'              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="space-y-2">
           {leaderboardData.map((entry) => (
             <div 
               key={entry.rank}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -266,6 +276,8 @@ export function ReferralLeaderboard() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
 >>>>>>>               <div className="flex items-center gap-3">
                 <div 
@@ -284,7 +296,6 @@ export function ReferralLeaderboard() {;
 =======
 =======
                       : "bg-muted text-muted-foreground"
-<<<<<<< HEAD
                 >
                   {entry.rank}
                 </div>
@@ -299,22 +310,31 @@ export function ReferralLeaderboard() {;
           ))}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardContent>
     </Card>
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardContent>;
     </Card>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from 'lucide-react';
 interface LeaderboardEntry {;
@@ -411,6 +431,7 @@ export function ReferralLeaderboard() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -423,3 +444,5 @@ export function ReferralLeaderboard() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

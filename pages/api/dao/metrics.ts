@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from "next";
@@ -55,9 +56,9 @@ const cachePath = path && path.join(process && process.cwd(), "data", "dao", "me
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -65,18 +66,12 @@ const configPath = path.join(process.cwd(), "data", "dao", "config.json");
 const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 async function fetchJson(url: string) {
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const configPath = path.join(process.cwd(), 'datadaoconfig.json'),;
 const cachePath = path.join(process.cwd(), 'datadaometrics.json'),;
 async function fetchJson(url: string) {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
 <<<<<<< HEAD
@@ -116,11 +111,7 @@ function readJson(p: string) {;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function readJson(p: string) {
 <<<<<<< HEAD
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
@@ -142,7 +133,6 @@ function writeJson(p: string, v: any) {
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
 =======
   return JSON.parse(fs.readFileSync(p, "utf-8"));
-=======
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -150,11 +140,6 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
@@ -163,16 +148,17 @@ function writeJson(p: string, v: any) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -215,23 +201,27 @@ export default async function handler(req, res) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export default async function handler(req, res) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   try {;
-=======
 ;
 export default async function handler(req, res) {
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   try {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  try {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -240,6 +230,10 @@ export default async function handler(req, res) {
 =======
 
 
+=======
+    if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
+      return res.status(200).json({ ...cache, cached: true });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 
 
@@ -483,7 +477,6 @@ if ( {) {
     return res
       .status(500)
       .json({ error: e?.message ?? "Failed to load DAO metrics" });
-=======
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {;
       return res.status(200).json({ ...cache, cached: true });
       } catch (error) {
@@ -548,11 +541,14 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
     const uniqueAddresses = new Set(txs.flatMap((t: any) => [t.from?.toLowerCase(), t.to?.toLowerCase()]).filter(Boolean));
     const participationRate = uniqueAddresses.size ? Math.min(100, Math.round((uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 100)) : 0;

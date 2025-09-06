@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAISearch.ts
@@ -26,20 +27,18 @@ export interface SearchResult {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAISearch.ts
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { TALENT_PROFILES } from "@/data/talentData",
-<<<<<<< HEAD
 import { JOB_POSTS } from "@/data/jobsData";
 import { PROJECTS } from "@/data/projectsData";
 export interface SearchResult {
-=======
-<<<<<<< HEAD
 import {useState} from "react";
 import {TALENT_PROFILES} from "@/data/talentData";
 import {JOB_POSTS} from "@/data/jobsData";
 import {PROJECTS} from "@/data/projectsData";
 export interface SearchResult {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   type: "talent" | "job" | "project";
 
@@ -61,21 +60,20 @@ interface SearchFilters {
 =======
   availability?: string | null
 }
-<<<<<<< HEAD
 export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false);
-=======
-=======
 
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
-=======
 import { useState } from "react",
 import { TALENT_PROFILES } from "@/data/talentData",
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { JOB_POSTS } from "@/data/jobsData",
 import { PROJECTS } from "@/data/projectsData",
 export interface SearchResult {
@@ -110,6 +108,7 @@ export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -117,6 +116,8 @@ export function useAISearch() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const search = async (query: string) => {
     setLoading(true),
@@ -124,6 +125,7 @@ export function useAISearch() {
       const response = await fetch(
         "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const matchSkill = (skills: string[] | undefined) => {
@@ -156,6 +158,8 @@ function useAISearch() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           method: "POST"
           headers: { "Content-Type": "application/json" }
           body: JSON.stringify({ query })}
@@ -163,8 +167,11 @@ function useAISearch() {
       const data = await response.json();
       const filters: SearchFilters = data.filters |{}
       const items: SearchResult[] = [];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query })}
@@ -173,6 +180,7 @@ function useAISearch() {
       const filters: SearchFilters = data.filters || {},
 
       const items: SearchResult[] = [],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -207,19 +215,18 @@ function useAISearch() {
           if (!matchSkill(t.skills)) return;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const matchSkill = (skills: string[] | undefined) => {
         if (!filters.skills |filters.skills.length === 0) return true
         return skills?.some((s) =>
           filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()))
         )
-<<<<<<< HEAD
       }
       if (!filters.type |filters.type === "talent" |filters.type === "all") {
-=======
       },
 
       if (!filters.type || filters.type === "talent" || filters.type === "all") {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         TALENT_PROFILES.forEach((t) => {
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return,
           if (!matchSkill(t.skills)) return,
@@ -308,17 +315,18 @@ if (return true, ) {
       setResults([])
     } finally {
       setLoading(false)
-<<<<<<< HEAD
     }
   }
 
-<<<<<<< HEAD
   return { results, loading, search }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]),;
@@ -565,12 +573,11 @@ return {
       setLoading(false);
     }
   };
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return { results, loading, search }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

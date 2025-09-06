@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -21,9 +18,12 @@ import {HeroSection} from "@/components/HeroSection";
 import {QuickAccess} from "@/components/home/QuickAccess";
 import {FeatureCTAs} from "@/components/home/FeatureCTAs";
 import {FeatureHighlights} from "@/components/home/FeatureHighlights";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -36,6 +36,7 @@ import { SEO } from "@/components/SEO",
 import { HeroSection } from "@/components/HeroSection",
 import { QuickAccess } from "@/components/home/QuickAccess",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -44,17 +45,21 @@ import { QuickAccess } from "@/components/home/QuickAccess",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-=======
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",
 import { FeatureHighlights } from "@/components/home/FeatureHighlights",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -77,6 +82,7 @@ export default function Home() {
       <Footer />
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -128,6 +134,9 @@ import {FeatureHighlights} from "@/components/home/FeatureHighlights";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -270,11 +279,13 @@ export default function Home() {;
 =======
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

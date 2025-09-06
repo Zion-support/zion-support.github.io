@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const cuttingEdgeITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -852,6 +856,7 @@ export const cuttingEdgeITServices2025 = [
     ]
     compliance: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -862,14 +867,19 @@ export const cuttingEdgeITServices2025 = [
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'DevOps Best Practices'
       'Security Standards'
       'Quality Assurance Protocols'
     ]
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'DevOps Best Practices',
       'Security Standards',
       'Quality Assurance Protocols',
@@ -914,19 +924,20 @@ export const cuttingEdgeITServices2025 = [
 ;
 =======
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-<<<<<<< HEAD
   }
 ];
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -1133,6 +1144,7 @@ export const cuttingEdgeITServices2025 = [;
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
@@ -1155,3 +1167,7 @@ export const cuttingEdgeITServices2025 = [;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

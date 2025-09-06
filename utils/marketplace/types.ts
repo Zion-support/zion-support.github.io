@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export interface Offer {;
@@ -10,17 +11,20 @@ export interface Offer {;
 
 
 =======
-// Marketplace types
-<<<<<<< HEAD
-export interface Offer {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+// Marketplace types
+export interface Offer {
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-export interface Offer {;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface Offer {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -30,6 +34,8 @@ export interface Offer {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -49,7 +55,6 @@ export interface Offer {;
 =======
   scopeSummary: string;
   paymentTerms: PaymentTerms;
-<<<<<<< HEAD
   agreementUrl?: string;
   status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED';
   changeRequestNote?: string;
@@ -66,12 +71,7 @@ export interface PaymentTerms {
   }>;
 }
 export interface Project {
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 export interface PaymentTerms {;
   type: 'hourly' | 'fixed' | 'milestone';
   amount?: number;
@@ -84,10 +84,13 @@ export interface PaymentTerms {;
 }
 
 export interface Project {;
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   summary: string;
@@ -95,47 +98,55 @@ export interface Project {;
   talentSlug: string;
   startDateIso: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
   timeline: any[];
   documents: ProjectDocument[];
   notes: ProjectNote[];
 }
 export interface ProjectDocument {
-=======
 
-<<<<<<< HEAD
 export interface ProjectDocument {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   url?: string;
   uploadedAtIso: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-export interface ProjectNote {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface ProjectNote {
 
 export interface ProjectNote {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   authorId: string;
   authorRole: string;
   content: string;
   createdAtIso: string;
 }
-=======
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -148,3 +159,5 @@ export interface ProjectNote {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

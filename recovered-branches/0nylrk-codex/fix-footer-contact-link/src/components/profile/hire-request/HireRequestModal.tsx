@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/HireRequestModal.tsx
 
 =======
@@ -28,6 +29,9 @@ import { UserProfile } from "@/types/auth",
 =======
 import React from "react";
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Dialog
   DialogContent
@@ -38,6 +42,7 @@ import { HireRequestForm } from "./HireRequestForm";
 
 import { TalentProfile } from "@/types/talent";
 import { UserProfile } from "@/types/auth";
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -51,6 +56,17 @@ import { TalentProfile } from "@/types/talent";
 import { UserProfile } from "@/types/auth";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {HireRequestForm} from "./HireRequestForm";
+import {TalentProfile} from "@/types/talent";
+import {UserProfile} from "@/types/auth";
+import React from "react",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { HireRequestForm } from "./HireRequestForm",
+import { TalentProfile } from "@/types/talent",
+import { UserProfile } from "@/types/auth",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface HireRequestModalProps {
   talent: TalentProfile | null;
   isOpen: boolean;
@@ -69,6 +85,7 @@ export function HireRequestModal({
   userDetails
 }: HireRequestModalProps) {
   const handleClose = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -146,6 +163,16 @@ onClose();
   },
 
   if (!talent) return null,
+=======
+    onClose();
+  }
+  if (!talent) return null;
+  };
+    onClose()
+  },
+
+  if (!talent) return null,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -153,6 +180,7 @@ onClose();
       <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-white">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -164,6 +192,8 @@ onClose();
         <HireRequestForm
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
 import { HireRequestForm } from "./HireRequestForm",;
@@ -239,6 +269,7 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails } HireRe
         <DialogHeader>;
           <DialogTitle className="text-xl font-bold text-white">;
             Hire {talent.full_name}
+<<<<<<< HEAD
           </DialogTitle>;
         </DialogHeader>;
         ;
@@ -294,6 +325,15 @@ return (</DialogTitle> </DialogHeader> <HireRequestForm talent= {
 =======
 <HireRequestForm 
 
+=======
+          </DialogTitle>
+        </DialogHeader>
+        <HireRequestForm
+            Hire {talent.full_name}
+          </DialogTitle>
+        </DialogHeader>
+        <HireRequestForm 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}

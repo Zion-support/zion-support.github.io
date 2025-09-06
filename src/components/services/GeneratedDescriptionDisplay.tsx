@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -10,6 +10,8 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import { useToast } from '@/hooks/use-toast'
 import { Button } from '@/components/ui/button'
@@ -22,6 +24,7 @@ import {
 } from '@/components/ui/card'
 import { Textarea } from '@/components/ui/textarea'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -30,11 +33,15 @@ import { Textarea } from '@/components/ui/textarea'
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
 import { Textarea } from "@/components/ui/textarea",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -55,6 +62,8 @@ interface GeneratedDescriptionDisplayProps {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Check, Pencil } from 'lucide-react'
 interface GeneratedDescriptionDisplayProps {;
   description: string;
@@ -62,12 +71,13 @@ interface GeneratedDescriptionDisplayProps {;
   description: string
   onSave: (editedDescription: string,) => void
 }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function GeneratedDescriptionDisplay({
   description
   onSave
@@ -83,6 +93,7 @@ export function GeneratedDescriptionDisplay({
       description: 'Your edited description has been saved.'
     })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -119,9 +130,9 @@ export function GeneratedDescriptionDisplay({
 =======
 =======
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 export function GeneratedDescriptionDisplay({ 
   description, 
   onSave 
@@ -138,24 +149,23 @@ export function GeneratedDescriptionDisplay({
       description: "Your edited description has been saved."
     })
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button
             variant='outline'
             size='sm'
             onClick={() => setIsEditing(!isEditing)}
             className='border-zion-blue-light text-zion-slate-light hover:text-white'          >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             {isEditing ? (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -163,17 +173,14 @@ export function GeneratedDescriptionDisplay({
 >>>>>>>               <>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button 
             variant="outline" 
             size="sm" 
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white"
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {isEditing ? (
               <>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -185,6 +192,7 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />
                 Edit
               </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -201,6 +209,8 @@ export function GeneratedDescriptionDisplay({
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </Button>
         </CardTitle>
@@ -213,6 +223,7 @@ export function GeneratedDescriptionDisplay({
             className='bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none'          />
         ) : (
           <div className='bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             {editedDescription}
           </div>
@@ -234,6 +245,8 @@ export function GeneratedDescriptionDisplay({
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -322,6 +335,7 @@ export function GeneratedDescriptionDisplay({;
         ) : (
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -341,14 +355,22 @@ export function GeneratedDescriptionDisplay({;
 
 =======
 <<<<<<< HEAD
+=======
+            {editedDescription}
+          </div>
+        )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardContent>
       {isEditing && (
         <CardFooter>
           <Button
             onClick={handleSave}
             className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'          >
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
@@ -364,19 +386,25 @@ export function GeneratedDescriptionDisplay({;
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             Save Changes
           </Button>
         </CardFooter>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Card>
   )
   isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>)
@@ -387,17 +415,20 @@ export function GeneratedDescriptionDisplay({;
 }</CardContent> {
   isEditing && (<CardFooter> <Button onClick={
   handleSave "
-<<<<<<< HEAD
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)
 }</Card>)
 }'"
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) 
 }</Card>) 
 }'";
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -406,11 +437,14 @@ export function GeneratedDescriptionDisplay({;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Card>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -428,3 +462,5 @@ export function GeneratedDescriptionDisplay({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

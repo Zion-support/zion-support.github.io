@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -13,18 +14,29 @@ import { Cloud, Server, Shield, Zap } from 'lucide-react';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { Cloud, Server, Shield, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { Cloud, Server, Shield, Zap } from 'lucide-react';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -33,6 +45,8 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'l
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -67,8 +81,12 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const cloudServices = [
   {
@@ -114,9 +132,13 @@ const cloudServices = [
 =======
 export default function CloudServicesPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -151,6 +173,7 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -158,6 +181,10 @@ export default function CloudServicesPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout
       title="Cloud Solutions - Zion Tech Group"
@@ -165,10 +192,15 @@ export default function CloudServicesPage() {
 
 =======
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   
 
+=======
+  
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -189,14 +221,8 @@ export default function CloudServicesPage() {
 
 =======
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -211,6 +237,7 @@ export default function CloudServicesPage() {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -224,6 +251,11 @@ export default function CloudServicesPage() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -237,6 +269,7 @@ export default function CloudServicesPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -247,6 +280,8 @@ export default function CloudServicesPage() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -288,7 +323,7 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -329,9 +364,7 @@ export default function CloudServicesPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -374,12 +407,18 @@ export default function CloudServicesPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

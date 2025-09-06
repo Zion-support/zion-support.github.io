@@ -5,22 +5,23 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Download} from "lucide-react";
 import {AppPlatform, AppMetadataValues} from "./MetadataManager";
 import {toast} from "sonner";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -30,17 +31,21 @@ import { Download } from "lucide-react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AppPlatform, AppMetadataValues } from "./MetadataManager";
 import { toast } from "sonner";
-=======
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -51,6 +56,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 
   const handleExport = (format: 'json' | 'csv') => {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -102,21 +108,22 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       let content: string
       let fileName: string
-=======
       let content: string,
       let fileName: string,
       
-<<<<<<< HEAD
       if (format === 'json') {;
         content = JSON.stringify(metadata, null, 2);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (format === 'json') {
         content = JSON.stringify(metadata, null, 2),
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
@@ -128,16 +135,22 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata.version,
           metadata.platform
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ];
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
         // Add keywords as additional rows
         content += '\n\nKeywords: \n' + metadata.keywords.join()
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ],
         
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),
@@ -145,6 +158,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         // Add keywords as additional rows
         content += '\n\nKeywords:\n' + metadata.keywords.join(),
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -155,10 +169,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       // Create download link
-<<<<<<< HEAD
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' })
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
@@ -168,8 +183,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       link.click();
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),
       const url = URL.createObjectURL(blob),
       const link = document.createElement('a'),
@@ -180,6 +198,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       document.body.removeChild(link),
       URL.revokeObjectURL(url),
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -264,32 +283,29 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast.success(`Exported ${format.toUpperCase()} file successfully`)
     } catch (error) {
       console.error("Export failed:", error),
       toast.error(`Failed to export ${format.toUpperCase()} file`)
-<<<<<<< HEAD
     };
   };
-=======
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const trackAnalytics = () => {
     // // // console.log("Tracking app installation analytics..."),
     toast.success("Analytics tracking enabled")
-<<<<<<< HEAD
   }
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -327,6 +343,7 @@ if ( {) {
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -347,6 +364,10 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -639,10 +660,9 @@ return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export &
 =======
     </Card>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

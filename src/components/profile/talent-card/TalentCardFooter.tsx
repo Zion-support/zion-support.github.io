@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router'
 interface TalentCardFooterProps {
   profile: TalentProfile,
@@ -63,11 +66,14 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     if (onViewProfile) {
       onViewProfile(profile.id || '')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -76,10 +82,13 @@ import { TalentProfile } from "@/types/talent",
 import { HireRequestModal } from "@/components/profile/hire-request",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuthStatus } from "@/hooks/talent";
 import type { UserProfile } from "@/types/auth";
 import { useRouter } from 'next/router';
@@ -90,9 +99,12 @@ interface TalentCardFooterProps {
   onRequestHire?: (profile: TalentProfile,) => void
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuthStatus } from "@/hooks/talent",
 import type { UserProfile } from "@/types/auth",
 import { useRouter } from 'next/router',
@@ -113,8 +125,11 @@ interface TalentCardFooterProps {;
   profile: TalentProfile,;
   onViewProfile: (id: string) => void,;
   onRequestHire?: (profile: TalentProfile) => void;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
 
@@ -148,12 +163,15 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Handle view profile
   const handleViewProfile = (e: React.MouseEvent,) => {
@@ -164,6 +182,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     if (onViewProfile) {
       onViewProfile(profile.id |'')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>     }
   }
 ursor/fix-website-loading-errors-and-merge-6662
@@ -171,6 +190,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   // Handle view profile;
   const handleViewProfile = (e: React.MouseEvent) => {;
@@ -180,14 +201,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     // Also call the onViewProfile callback if provided;
     if (onViewProfile) {;
       onViewProfile(profile.id || '');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
@@ -208,6 +224,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* Action Buttons */}
         <div className="flex gap-2">
@@ -225,68 +242,64 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         {/* Action Buttons */}
         <div className="flex gap-2">
 =======
-        </div>
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
-=======
+        </div>
         </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Action Buttons */}
         <div className="flex gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button
             variant="default"
             size="sm"
             onClick = {handleRequestHire,}
+<<<<<<< HEAD
 <<<<<<< HEAD
             onClick={handleRequestHire}
             onClick = {handleRequestHire,}
 >>>>>>>             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button 
             variant="default" 
             size="sm" 
-<<<<<<< HEAD
             onClick={handleRequestHire}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
             onClick = {handleRequestHire,}
-=======
             onClick={handleRequestHire}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >
             Hire
           </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <Button
             variant="outline"
             size="sm"
-=======
           <Button 
             variant="outline" 
             size="sm" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onClick = {handleViewProfile,}
+<<<<<<< HEAD
 <<<<<<< HEAD
           
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Button 
             variant="outline" 
             size="sm" 
             onClick={handleViewProfile}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -300,6 +313,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 >>>>>>>           >
             View
@@ -309,10 +324,13 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Hire Request Modal */}
       <HireRequestModal
         talent = {profile,}
@@ -326,7 +344,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
-=======
       
       {/* Hire Request Modal */}
       <HireRequestModal;
@@ -350,8 +367,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

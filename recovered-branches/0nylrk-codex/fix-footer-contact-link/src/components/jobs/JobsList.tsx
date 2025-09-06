@@ -18,9 +18,12 @@ import { Loader2, Edit, X, Eye } from "lucide-react",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
@@ -31,6 +34,7 @@ import {Badge} from "@/components/ui/badge";
 import {Loader2, Edit, X, Eye} from "lucide-react";
 import {format} from "date-fns";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface JobsListProps {;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobsList.tsx
@@ -53,6 +57,8 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -61,22 +67,24 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from "lucide-react",
-<<<<<<< HEAD
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
-=======
 import { format } from "date-fns",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -101,36 +109,32 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 export function JobsList({ filter, onSelectJob }: JobsListProps) {;
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
-<<<<<<< HEAD
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-=======
   const { user } = useAuth(),
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
 
     const fetchJobs = async () => {
-<<<<<<< HEAD
       if (!user) return;
-=======
       if (!user) return,
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       try {
         let query = supabase
           .from("jobs")
@@ -171,22 +175,24 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
         }
-<<<<<<< HEAD
         const { data, error } = await query;
         if (error) throw error;
-=======
 
         const { data, error } = await query,
 
         if (error) throw error,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         setJobs(data as Job[])
       } catch (error) {
         console.error("Error fetching jobs:", error)
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -198,11 +204,17 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
   }, [user, filter]);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+    fetchJobs()
+  }, [user, filter]);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
 
     fetchJobs()
   }, [user, filter]),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -273,6 +285,8 @@ export function JobsList({ filter, onSelectJob } JobsListProps) {;
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -310,17 +324,22 @@ export function JobsList({ filter, onSelectJob } JobsListProps) {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -353,11 +372,14 @@ export function JobsList({ filter, onSelectJob } JobsListProps) {;
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -935,11 +957,6 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobsList.tsx
 =======
                 <Badge key={index} variant="outline" className="text-xs">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {skill}
                 </Badge>
               ))}
@@ -975,14 +992,15 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
           </CardFooter>
         </Card>
       ))}
-<<<<<<< HEAD
     </div>
   )
 }
-=======
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

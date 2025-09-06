@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,15 @@ export: function WaitlistSection () { const [email,setEmail] = useState (") cons
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+:src.disabled/components/WaitlistSection.jsx
+"export\": function WaitlistSection () { const [email,setEmail] = useState (\') const handleSubmit = e => { e.preventDefault () \'';\"";
+export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = e => { e.preventDefault () "";"";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+"export\": function WaitlistSection () { const [email,setEmail] = useState (\') const handleSubmit = e => { e.preventDefault () \'';\"";
+export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = e => { e.preventDefault () "";"";"""
+:temp_exclude/src.disabled/components/WaitlistSection.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
 =======
 =======

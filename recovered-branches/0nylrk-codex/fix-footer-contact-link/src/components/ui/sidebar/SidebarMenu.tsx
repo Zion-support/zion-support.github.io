@@ -13,22 +13,19 @@ import { cn } from "@/lib/utils",
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
 import React from "react";
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
-=======
 import React from "react",
 import { cn } from "@/lib/utils",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import {cn} from "@/lib/utils";
-=======
 import React from "react",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
   className?: string,
   children?: React.ReactNode
@@ -39,6 +36,7 @@ export function SidebarMenu({
   ...props
 }: SidebarMenuProps) {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react",;
@@ -137,23 +135,20 @@ export function SidebarMenu({ className, children, ...props } SidebarMenuProps) 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <ul className={cn("space-y-1", className)} {...props}>
       {children}
     </ul>
-=======
     <ul 
       className={cn("space-y-1", className)} 
-=======
     <ul 
       className={cn("space-y-1", className)} 
-<<<<<<< HEAD
       {...props}
     >
       {children}
     </ul>
   )
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
@@ -171,6 +166,7 @@ export function SidebarMenu({ className, children, ...props }: SidebarMenuProps)
       {children}
     </ul>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;}
  interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
   className?: string;
@@ -185,12 +181,14 @@ children?: React.ReactNode
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/SidebarMenu.tsx
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  );
-<<<<<<< HEAD
-}
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  );
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

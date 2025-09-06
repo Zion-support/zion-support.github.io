@@ -37,6 +37,7 @@ class ErrorMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -47,6 +48,13 @@ class ErrorMonitor {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -80,6 +88,7 @@ class ErrorMonitor {
         type: 'health_check_failure',
         message: error.message,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         timestamp: new Date().toISOString()
@@ -94,6 +103,14 @@ class ErrorMonitor {
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+        timestamp: new Date().toISOString()
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         timestamp: new Date().toISOString(),
       });
     }
@@ -168,16 +185,30 @@ class ErrorMonitor {
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+    for (const file of criticalFiles) {
+      const filePath = path.join(this.projectRoot, file);
+      if (!fs.existsSync(filePath)) {
+        this.monitoringReport.errorsDetected.push({
+          type: 'missing_critical_file',
+          file: file,
+          message: `Critical file ${file} is missing`,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
      is missing`,
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
      is missing`,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           timestamp: new Date().toISOString(),
         });
         this.monitoringReport.metrics.totalErrors += 1;
@@ -188,20 +219,46 @@ class ErrorMonitor {
     const errors = [];
     const lines = output.split('\n');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+    for (const line of lines) {
+      if (line.includes('error TS')) {
+        const match = line.match(
+          /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/
+        );
+        if (match) {
+          errors.push({
+            type: 'typescript_error',
+            file: match[1].trim(),
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            message: match[4].trim(),
+            timestamp: new Date().toISOString()
+            timestamp: new Date().toISOString()
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+            timestamp: new Date().toISOString(),
+          });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             timestamp: new Date().toISOString(),
           });
 
     );
+<<<<<<< HEAD
 
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -218,39 +275,68 @@ class ErrorMonitor {
       }
     }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return errors;
   }
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    for (const line of lines) {
+      const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
+      if (match) {
+        errors.push({
+          type: 'eslint_error',
+          file: match[1].trim(),
+          line: parseInt(match[2]),
+          column: parseInt(match[3]),
+          message: match[4].trim(),
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           timestamp: new Date().toISOString()
         });
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     );
       }
     }
+<<<<<<< HEAD
 
 =======
     );
       }
     }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           timestamp: new Date().toISOString(),
         });
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -262,6 +348,13 @@ class ErrorMonitor {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return errors;
   }
   updateHealthStatus() {
@@ -283,6 +376,7 @@ class ErrorMonitor {
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
@@ -305,6 +399,20 @@ class ErrorMonitor {
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -323,6 +431,7 @@ class ErrorMonitor {
       await automation.run();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       console.log('✅ Error fixer completed');
 
@@ -335,12 +444,23 @@ class ErrorMonitor {
       console.log('✅ Error fixer completed');
       console.log('✅ Error fixer completed');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      console.log('✅ Error fixer completed');
+      console.log('✅ Error fixer completed');
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+      console.log('✅ Error fixer completed');
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -356,6 +476,14 @@ class ErrorMonitor {
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+        timestamp: new Date().toISOString()
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         timestamp: new Date().toISOString(),
       });
     }
@@ -382,6 +510,7 @@ class ErrorMonitor {
       fs.mkdirSync(reportDir, { recursive: true });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -392,6 +521,13 @@ class ErrorMonitor {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(
@@ -431,6 +567,7 @@ class ErrorMonitor {
     process.exit(0);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -439,19 +576,33 @@ class ErrorMonitor {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+}
+module.exports = ErrorMonitor;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 module.exports = ErrorMonitor;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 module.exports = ErrorMonitor;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

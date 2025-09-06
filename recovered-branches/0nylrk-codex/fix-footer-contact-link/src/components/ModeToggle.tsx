@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -21,6 +22,39 @@ const useTheme = () => ({;
 });
 export function ModeToggle() {;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ModeToggle.tsx
+=======
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+import { Moon, Sun } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+import {Moon, Sun} from "lucide-react"
+import {Button} from "@/components/ui/button"
+// Create a simplified theme hook for offline mode
+const useTheme = () => ({
+  theme: "dark",
+  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`);
+});
+
+export function ModeToggle() {;
+  const { theme, setTheme } = useTheme();
+import { Moon, Sun } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+// Create a simplified theme hook for offline mode
+
+const useTheme = () => ({
+  theme: "dark"
+  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
+});
+  theme: "dark",
+  setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`)
+}),
+
+export function ModeToggle() {
+  const { theme, setTheme } = useTheme(),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const { theme, setTheme } = useTheme();
 =======
@@ -102,8 +136,14 @@ export function ModeToggle() {;
       <span className="sr-only">Toggle theme</span>
     </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 =======
@@ -141,6 +181,7 @@ function ModeToggle() {
       <span className="sr-only">Toggle theme</span>;
     </Button>;
   );
+<<<<<<< HEAD
 
 }
 ;
@@ -177,3 +218,7 @@ return (<Button variant="ghost" size="icon" onClick= {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -29,15 +29,19 @@ interface AIListingFormProps {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -47,21 +51,16 @@ import {Sparkles} from "lucide-react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
-<<<<<<< HEAD
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from "lucide-react";
-=======
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles } from "lucide-react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -69,15 +68,16 @@ interface AIListingFormProps {
     category: string
     keyFeatures: string
     targetAudience: string
-<<<<<<< HEAD
   }) => void;
   isLoading: boolean
 
-=======
   }) => void,
   isLoading: boolean,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   initialValues?: {
     title?: string,
     category?: string,
@@ -88,36 +88,38 @@ interface AIListingFormProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title || "");
   const [category, setCategory] = useState(initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
-=======
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
-<<<<<<< HEAD
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title |"");
   const [category, setCategory] = useState(initialValues.category |"");
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"");
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
-=======
   const { toast } = useToast(),
   const [title, setTitle] = useState(initialValues.title || ""),
   const [category, setCategory] = useState(initialValues.category || ""),
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleSubmit = () => {
     if (!title |!category) {
       toast({
@@ -135,17 +137,22 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
     })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="space-y-4">
@@ -191,6 +198,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -200,18 +208,21 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           disabled={isLoading}
         />
       </div>
-<<<<<<< HEAD
       <Button
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
-=======
       <Button 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -559,14 +570,13 @@ export function AIListingForm(_{_onSubmit, _isLoading, _initialValues = {} }: AI
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
       <Button;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
@@ -577,6 +587,7 @@ export function AIListingForm(_{_onSubmit, _isLoading, _initialValues = {} }: AI
             Generate Optimized Content
           </>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -754,15 +765,19 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/listing/AIListingForm.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </Button>
     </div>
   )
 }
-=======
       </Button>;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

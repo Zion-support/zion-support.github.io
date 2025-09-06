@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/talent/useSavedTalents.ts
 
 import { useState, useEffect } from "react",
@@ -37,6 +38,8 @@ if (!isAuthenticated || !userDetails && userDetails.id) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
@@ -47,12 +50,9 @@ export function useSavedTalents() {;
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
   const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
 import { toast } from "@/hooks/use-toast";
 import { useAuthStatus } from "@/hooks/talent";
 export function useSavedTalents() {
@@ -60,7 +60,6 @@ export function useSavedTalents() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-=======
 import { toast } from "@/hooks/use-toast",
 import { useAuthStatus } from "@/hooks/talent",
 export function useSavedTalents() {
@@ -68,23 +67,16 @@ export function useSavedTalents() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
   const [isLoading, setIsLoading] = useState(true),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Fetch saved talents
   useEffect(() => {
-<<<<<<< HEAD
-=======
     const fetchSavedTalents = async () => {
       if (!isAuthenticated || !userDetails.id) {
         setIsLoading(false),
         return
-<<<<<<< HEAD
       }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     const fetchSavedTalents = async () => {
-<<<<<<< HEAD
       if (!isAuthenticated |!userDetails.id) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         setIsLoading(false);
@@ -187,13 +179,9 @@ if ( {) {
 =======
           } else {
             setSavedTalents([])
-=======
-<<<<<<< HEAD
       if (!isAuthenticated || !userDetails.id) {
         setIsLoading(false),
         return
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
@@ -234,6 +222,7 @@ export function useSavedTalents() {;
             setSavedTalents(talentData || []);
           } else {;
             setSavedTalents([]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             const { data: talent_data, error: talent_error } = await supabase;
@@ -357,11 +346,14 @@ export function useSavedTalents() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         }
       } catch (error) {
         console.error('Error fetching saved talents:', error),
         toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -373,18 +365,23 @@ export function useSavedTalents() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           title: "Error loading favorites";
           description: "There was a problem loading your saved talents."
-=======
           title: "Error loading favorites",
           description: "There was a problem loading your saved talents.",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant: "destructive"
         })
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -406,11 +403,17 @@ export function useSavedTalents() {;
   }, [isAuthenticated, userDetails.id]);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+    fetchSavedTalents()
+  }, [isAuthenticated, userDetails.id]);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     fetchSavedTalents()
   }, [isAuthenticated, userDetails.id]),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -466,29 +469,29 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/talent/useSavedTalents.ts
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Toggle save talent
   const toggleSaveTalent = async (talent: TalentProfile) => {
     if (!isAuthenticated |!userDetails.id |!talent.id) {
       toast({
-<<<<<<< HEAD
         title: "Authentication required";
         description: "Please log in to save talents to your favorites"
-=======
         title: "Authentication required",
         description: "Please log in to save talents to your favorites",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         variant: "destructive"
       }),
       return
     }
-<<<<<<< HEAD
     const isSaved = savedTalentIds.includes(talent.id);
-=======
     
     const isSaved = savedTalentIds.includes(talent.id),
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       if (isSaved) {
         // Remove from saved_talents
@@ -503,13 +506,15 @@ if ( {) {
 <<<<<<< HEAD
 =======
           .eq('user_id', userDetails.id)
-<<<<<<< HEAD
           .eq('talent_id', talent.id);
         if (error) throw error;
         setSavedTalents(prev => prev.filter(t => t.id !== talent.id));
         setSavedTalentIds(prev => prev.filter(id => id !== talent.id));
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .eq('talent_id', talent.id),
           
         if (error) throw error,
@@ -517,6 +522,7 @@ if ( {) {
         setSavedTalents(prev => prev.filter(t => t.id !== talent.id)),
         setSavedTalentIds(prev => prev.filter(id => id !== talent.id)),
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -537,6 +543,8 @@ if ( {) {
           description: `${talent && talent.full_name} has been removed from your favorites`})
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         toast({
           title: "Removed from favorites"
           description: `${talent.full_name} has been removed from your favorites`})
@@ -546,6 +554,7 @@ if ( {) {
         const { error } = await supabase
           .from('saved_talents')
           .insert({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/talent/useSavedTalents.ts
 
@@ -561,13 +570,18 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             user_id: userDetails.id
             talent_id: talent.id});
         if (error) throw error;
         setSavedTalents(prev => [...prev, talent]);
         setSavedTalentIds(prev => [...prev, talent.id]);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             user_id: userDetails.id,
             talent_id: talent.id}),
           
@@ -576,6 +590,7 @@ if ( {) {
         setSavedTalents(prev => [...prev, talent]),
         setSavedTalentIds(prev => [...prev, talent.id]),
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -602,6 +617,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         toast({
           title: "Added to favorites"
           description: `${talent.full_name} has been added to your favorites`})
@@ -609,16 +626,18 @@ if ( {) {
     } catch (error) {
       console.error('Error toggling saved talent:', error),
       toast({
-<<<<<<< HEAD
         title: "Error";
         description: "There was a problem updating your favorites. Please try again."
         variant: "destructive"
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   // Check if talent is saved
@@ -653,15 +672,16 @@ if ( {) {
 =======
 
     isTalentSaved
-=======
-<<<<<<< HEAD
         title: "Error",
         description: "There was a problem updating your favorites. Please try again.",
         variant: "destructive"
       })
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       } catch (error) {;
         console.error('Error fetching saved talents:', error),;
         toast({;
@@ -921,11 +941,6 @@ toast ({
     isLoading;
     toggleSaveTalent;
     isTalentSaved;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

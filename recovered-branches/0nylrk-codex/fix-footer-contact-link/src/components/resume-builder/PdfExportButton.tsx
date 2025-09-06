@@ -13,8 +13,6 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu;
@@ -26,12 +24,14 @@ import { DropdownMenu;
   DropdownMenuRadioGroup;
   DropdownMenuRadioItem;
   DropdownMenuCheckboxItem } from '@/components/ui/dropdown-menu';
-=======
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
 import { Resume  } from '@/types/resume';
@@ -41,6 +41,7 @@ import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -56,11 +57,12 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const [includePortfolio, setIncludePortfolio] = useState(true);
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
@@ -69,6 +71,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [includePortfolio, setIncludePortfolio] = useState(true);
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -76,6 +79,8 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import {;
@@ -133,15 +138,9 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const [includePortfolio, setIncludePortfolio] = useState(true),
   const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
   const handleExport = async () => {
-<<<<<<< HEAD
     if (isExporting) return;
     setIsExporting(true);
     try {
@@ -162,8 +161,11 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       // Clean up
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (isExporting) return,
     
     setIsExporting(true),
@@ -191,12 +193,15 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       URL.revokeObjectURL(url),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Success!"
         description: "Your resume has been downloaded as a PDF."})
@@ -292,11 +297,8 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
 <<<<<<< HEAD
 =======
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <DropdownMenu>
@@ -348,6 +350,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     </DropdownMenu>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -364,6 +367,9 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false),;
@@ -465,6 +471,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -745,3 +752,7 @@ h-4 w-4"/>)
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

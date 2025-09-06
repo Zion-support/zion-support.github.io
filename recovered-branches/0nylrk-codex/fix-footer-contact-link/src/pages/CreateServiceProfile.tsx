@@ -14,20 +14,20 @@ import { ServiceProviderRegistrationForm } from "@/components/profile/ServicePro
 =======
 =======
 
-<<<<<<< HEAD
 import React from "react";
-<<<<<<< HEAD
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
-=======
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -37,6 +37,8 @@ import { ServiceProviderRegistrationForm } from "@/components/profile/ServicePro
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CreateServiceProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -52,6 +54,7 @@ export default function CreateServiceProfile() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -83,10 +86,9 @@ export default function CreateServiceProfile() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 export default function CreateServiceProfile() {;
@@ -158,11 +160,13 @@ function CreateServiceProfile() {
 =======
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -54,6 +55,8 @@ const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react';
 import Head from 'next/head';
@@ -65,14 +68,11 @@ export default function AISEOOptimizationPage() {
   if (!service) return null
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react',;
 import Layout from '../components/layout/Layout',;
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
 export default function AISEOOptimization() {
@@ -96,6 +96,7 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-rea
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -109,6 +110,11 @@ export default function AISEOOptimizationPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default function AISEOOptimizationPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
+  if (!service) return null,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout>
       <Head>
@@ -137,6 +143,7 @@ export default function AISEOOptimizationPage() {
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-emerald-400 mt-0.5"><Check /><span>{feat}</span></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -146,6 +153,9 @@ export default function AISEOOptimizationPage() {
                 ))}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                ))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -160,6 +170,7 @@ export default function AISEOOptimizationPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -171,6 +182,8 @@ export default function AISEOOptimizationPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
@@ -182,6 +195,7 @@ export default function AISEOOptimizationPage() {
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -193,15 +207,19 @@ export default function AISEOOptimizationPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Boost Rankings<ArrowRight /></a>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Boost Rankings<ArrowRight /></a>
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Boost Rankings<ArrowRight /></Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-emerald-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
@@ -213,15 +231,16 @@ export default function AISEOOptimizationPage() {
       </div>
     </Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
@@ -325,11 +344,12 @@ if (return null, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

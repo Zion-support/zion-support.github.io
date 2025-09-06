@@ -10,17 +10,19 @@ import { Button } from "@/components/ui/button",
 
 =======
 
-<<<<<<< HEAD
 import React, { useState } from "react";
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
 import {DisputeForm} from "./DisputeForm";
 import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -36,6 +38,10 @@ import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { 
   Dialog;
   DialogContent;
@@ -45,6 +51,7 @@ import {
   DialogOverlay
 } from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -77,6 +84,8 @@ import { ShieldAlert } from "lucide-react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useNavigate } from "react-router-dom";
 import { ShieldAlert } from "lucide-react";
 interface RaiseDisputeButtonProps {
@@ -98,14 +107,16 @@ export function RaiseDisputeButton({
 }: RaiseDisputeButtonProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
-=======
 import { useNavigate } from "react-router-dom",
 import { ShieldAlert } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
@@ -116,6 +127,7 @@ interface RaiseDisputeButtonProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export function RaiseDisputeButton({ 
@@ -123,13 +135,17 @@ export function RaiseDisputeButton({
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function RaiseDisputeButton({ ;
   projectId;
-=======
 export function RaiseDisputeButton({ 
   projectId,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   milestoneId, 
   variant = "outline", 
   size,
@@ -156,18 +172,18 @@ export function RaiseDisputeButton({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
-<<<<<<< HEAD
   }
 
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Button
@@ -188,21 +204,25 @@ export function RaiseDisputeButton({
             </DialogDescription>
           </DialogHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-          <DisputeForm
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          <DisputeForm
           
           <DisputeForm 
-=======
           <DisputeForm 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -403,11 +423,14 @@ function RaiseDisputeButton() {
 =======
           <DisputeForm;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}

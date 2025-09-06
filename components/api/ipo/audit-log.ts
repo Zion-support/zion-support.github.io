@@ -22,8 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 import { readJsonFile } from '../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../utils/api/auth';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (!requireSuperadminApi(req, res)) return;
@@ -47,6 +45,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.setHeader('Content-Dispositionattachment, filename="audit-log.json"');
   res.status(200).send(JSON.stringify(data, null, 2))
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -87,12 +86,11 @@ function handler() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!requireSuperadminApi(req, res)) return;
   const data = readJsonFile('audit-log.json', [] as unknown[]);
   res.setHeader('Content-Type', 'application/json');
@@ -104,14 +102,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Dispositionattachment, filename="audit-log.json"');
   res.status(200).send(JSON.stringify(data, null, 2))
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 =======
 =======
@@ -15,12 +13,15 @@
   return (
     <Popover open={open} onOpenChange={(v,) => setOpen(v ?? false)}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -41,6 +42,7 @@ export const NotificationCenter: React.FC = () => {
     filteredNotifications,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>     unreadCount, 
@@ -51,6 +53,8 @@ export const NotificationCenter: React.FC = () => {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     unreadCount, 
     markAsRead, 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -68,22 +72,28 @@ export const NotificationCenter: React.FC = () => {
   const enqueueSnackbar = useEnqueueSnackbar(),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleFilterChange = (newFilter: FilterType,) => {
     setFilter(newFilter as any)
   }
   return (
     <Popover open={open} onOpenChange={(v,) => setOpen(v ?? false)}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
     if (open && !loadedOnce) {
@@ -168,6 +178,7 @@ export const NotificationCenter: React.FC = () => {;
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <PopoverTrigger asChild>
 =======
@@ -178,6 +189,8 @@ export const NotificationCenter: React.FC = () => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <PopoverTrigger asChild>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
@@ -186,11 +199,13 @@ export const NotificationCenter: React.FC = () => {;
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>
-=======
   }, [open, loadedOnce, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
     try {;
@@ -214,20 +229,26 @@ export const NotificationCenter: React.FC = () => {;
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <NotificationHeader
           unreadCount = {unreadCount,}
           onMarkAllAsRead = {handleMarkAllAsRead,}
@@ -237,9 +258,7 @@ export const NotificationCenter: React.FC = () => {;
           onFilterChange = {handleFilterChange,}
         />
         <NotificationList
-=======
         <NotificationHeader 
-<<<<<<< HEAD
           unreadCount = {unreadCount,}
           onMarkAllAsRead = {handleMarkAllAsRead,}
         />
@@ -248,8 +267,11 @@ export const NotificationCenter: React.FC = () => {;
           onFilterChange = {handleFilterChange,}
         />
         <NotificationList 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           loading = {loading,}
           error = {error,}
           notifications = {filteredNotifications,}
@@ -261,6 +283,7 @@ export const NotificationCenter: React.FC = () => {;
       </PopoverContent>
     </Popover>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               {unreadCount > 9 ? '9+' : unreadCount}
@@ -301,15 +324,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
-=======
         <NotificationHeader 
-=======
 };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
         />
@@ -338,6 +364,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -352,3 +379,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

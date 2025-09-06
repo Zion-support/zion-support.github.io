@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import { Button } from "@/components/ui/button",
 
@@ -23,6 +24,18 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from 'react';
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {ArrowLeft} from "lucide-react";
+import React from 'react',
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom",
+import { ArrowLeft } from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function BackToDirectoryButton() {
   return (
     <div className="container mx-auto px-4 md: px-6 mb-12">
@@ -36,9 +49,16 @@ export function BackToDirectoryButton() {
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
@@ -74,6 +94,7 @@ export function BackToDirectoryButton() {;
       </Button>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/BackToDirectoryButton.tsx
 =======
@@ -133,3 +154,7 @@ function BackToDirectoryButton() {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

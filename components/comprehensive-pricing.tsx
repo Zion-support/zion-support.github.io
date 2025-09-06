@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Head from 'next/head';
 
@@ -869,14 +870,13 @@ stagger_children: 0.1,
 
 =======
 <<<<<<< HEAD
-import React, { useState } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState } from 'react',
 import React, { useState } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import {
-<<<<<<< HEAD
   Check
   Star
   Zap
@@ -948,7 +948,6 @@ import {
   Crown
   Gem
   Diamond;
-=======
   Check,
   Star,
   Zap,
@@ -1020,19 +1019,15 @@ import {
   Crown,
   Gem,;
   Diamond,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
-<<<<<<< HEAD
   revolutionaryMicroSaasServices
   revolutionaryServiceCategories;
-=======
   revolutionaryMicroSaasServices,;
   revolutionaryServiceCategories,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -1127,11 +1122,12 @@ export default function ComprehensivePricingPage() {;
         return a.name.localeCompare(b.name);    }      default: return a.name.localeCompare(b.name)
     }
   });
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -1247,6 +1243,7 @@ export default function ComprehensivePricingPage() {;
     },      icon: <Shield className="w-6 h-6" />
     }
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1455,31 +1452,31 @@ if ( {) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       metric: '2000%+'
       label: 'Average ROI'
       description: 'Proven business value'
       icon: <TrendingUp className='w-6 h-6' />
     },      icon: <TrendingUp className="w-6 h-6" />
     }
-=======
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
-<<<<<<< HEAD
       icon: <TrendingUp className='w-6 h-6' />,
     },      icon: <TrendingUp className="w-6 h-6" />
     }
-=======
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -1505,6 +1502,7 @@ if ( {) {
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1738,25 +1736,19 @@ if ( {) {
                   Comprehensive
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         duration: 0.5
       }
     }
-=======
         duration: 0.5,
       },
     },
 
-<<<<<<< HEAD
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
   };
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>
       <div className='min-h-screen'>
@@ -1809,7 +1801,6 @@ if ( {) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-<<<<<<< HEAD
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Comprehensive
                 </span>
@@ -1831,6 +1822,7 @@ if ( {) {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 transition={{ duration: 0.8 }}
@@ -1850,10 +1842,14 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1926,6 +1922,8 @@ if ( {) {
               </motion && motion.div>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 Transparent pricing for all our revolutionary micro SaaS
                 services. Choose the perfect plan for your business with
                 guaranteed ROI and enterprise-grade reliability.
@@ -1936,13 +1934,7 @@ if ( {) {
               {/* Market Stats */}
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -1959,10 +1951,8 @@ if ( {) {
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
-<<<<<<< HEAD
                 ))}
               </motion.div>
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </div>
@@ -1970,6 +1960,7 @@ if ( {) {
                 ))}
               </motion.div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1983,6 +1974,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -2018,21 +2011,11 @@ if ( {) {
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
 =======
                 transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               >              <motion.div
-=======
               >              <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-=======
               >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -2177,19 +2160,21 @@ variant="primary"
 {/* Pricing Tiers */}
         <section id="pricing-tiers" className="py-20">
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
             <motion.div
               className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div 
               className="text-center mb-16"
-<<<<<<< HEAD
 
               initial={{ opacity: 0, y: 20 }}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2212,6 +2197,11 @@ variant="primary"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+              initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -2315,6 +2305,7 @@ variant="primary"
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2344,6 +2335,10 @@ variant="primary"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            <motion.div
+            <motion.div 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
@@ -2749,6 +2744,7 @@ variant="primary"
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -2769,6 +2765,9 @@ variant="primary"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Services Pricing Grid */}
 <<<<<<< HEAD
         <section id="services-pricing" className="py-20">
@@ -2777,7 +2776,6 @@ variant="primary"
           <div className='container mx-auto px-4'>
             {/* Filters and Controls */}
             <motion.div
-<<<<<<< HEAD
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2792,6 +2790,7 @@ variant="primary"
             <motion&& motion.div 
 
               className="mb-8"
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -2877,15 +2876,12 @@ variant="primary"
                     <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className='mb-8'              initial={{ opacity: 0, y: 20 }}
 
               initial={{ opacity: 0, y: 20 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -3223,16 +3219,16 @@ variant="primary"
               }
               variants={containerVariants}
               initial='hidden'
-<<<<<<< HEAD
-<<<<<<< HEAD
               whileInView='visible'              viewport={{ once: true }}            <motion.div
               className={viewMode === 'grid'
-=======
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -3241,6 +3237,7 @@ variant="primary"
 <<<<<<< HEAD
 <<<<<<< HEAD
               whileInView="visible"
+<<<<<<< HEAD
 
               whileInView='visible'              viewport={{ once: true }}
 =======
@@ -3253,10 +3250,13 @@ variant="primary"
               viewport={{ once: true }}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               whileInView='visible'              viewport={{ once: true }}
 
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -3264,6 +3264,8 @@ variant="primary"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -3271,6 +3273,7 @@ variant="primary"
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3291,17 +3294,21 @@ variant="primary"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
@@ -3310,6 +3317,8 @@ variant="primary"
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
@@ -3412,6 +3421,7 @@ variant="primary"
 <<<<<<< HEAD
                           ))}
                         </div>
+<<<<<<< HEAD
 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -3440,6 +3450,8 @@ variant="primary"
 =======
                         </div>
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <div className='text-center space-y-2'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           <Button
@@ -3857,22 +3869,27 @@ variant="primary"
                 transition={{ duration: 0.6 }}
               >              <motion.div
                 className="text-center py-16"
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div className="text-6xl mb-4">🔍</div>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
                   No Services Found
@@ -4121,22 +4138,25 @@ variant="primary"
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>
-=======
 
                 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -4430,10 +4450,12 @@ variant="primary"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );  )
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -4441,3 +4463,5 @@ variant="primary"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

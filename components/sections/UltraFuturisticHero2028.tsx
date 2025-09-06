@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -53,15 +54,18 @@ export default function UltraFuturisticHero2028() {
 ];
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Rocket,
   Brain,
@@ -82,12 +86,15 @@ import {
   Target,;
   Crown,;} from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {
   Rocket
@@ -110,6 +117,7 @@ import {
   Crown;} from 'lucide-react';
 export default function UltraFuturisticHero2028() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -121,13 +129,17 @@ export default function UltraFuturisticHero2028() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const features = [import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-=======
   const features = [import {;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight, Star, TrendingUp, Users, Award, Play;
   CheckCircle, DollarSign, Clock, Target, Crown
 export default function UltraFuturisticHero2028() {
@@ -149,20 +161,26 @@ export default function UltraFuturisticHero2028() {
     }
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: Shield
       text: 'Quantum Internet Security'
       color: 'from-red-500 to-orange-500'
     },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' }
     { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' }
     { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: Shield,
       text: 'Quantum Internet Security',
       color: 'from-red-500 to-orange-500',;
@@ -170,12 +188,15 @@ export default function UltraFuturisticHero2028() {
     { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' },
     { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { icon: Shield, text: 'Quantum Internet Security', color: 'from-red-500 to-orange-500' }
   const stats = [
     { value: '50+', label: 'Cutting-Edge Services', icon: Rocket }
@@ -457,14 +478,7 @@ import { motion } from 'framer-motion';
             <span className="text-cyan-400 font-mono text-sm">2028 Future Technology</span>
             <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Main Heading */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <motion.div
@@ -485,15 +499,16 @@ import { motion } from 'framer-motion';
 
 =======
           className='mb-8'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight'>
             <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent'>
@@ -553,6 +568,7 @@ import { motion } from 'framer-motion';
             Experience revolutionary 2028 technology with AI Consciousness Evolution, Quantum Time Manipulation, and Autonomous AI Civilization. We're building tomorrow's solutions today.
           </p>
         </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">;
 import React from 'react';
@@ -757,12 +773,9 @@ function UltraFuturisticHero2028() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -774,6 +787,7 @@ function UltraFuturisticHero2028() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -782,10 +796,12 @@ function UltraFuturisticHero2028() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-            className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2'          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2'          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
             className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -793,6 +809,8 @@ function UltraFuturisticHero2028() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -833,6 +851,7 @@ className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4
             <span>Watch Demo</span>
           </motion.button>
         </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -902,12 +921,9 @@ className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -1001,15 +1017,16 @@ className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4
           className="mb-16"
 =======
                 className='group relative'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className='bg-gradient-to-br from-gray-900/80 to-black/80 border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-gray-900/90 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 backdrop-blur-sm'>
                   <div
@@ -1031,7 +1048,6 @@ className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
                   </div>
-<<<<<<< HEAD
                   <h3 className='text-lg font-semibold text-white text-center group-hover:text-cyan-400 transition-colors'>                    {feature.text}              >
                 <div className="bg-gradient-to-br from-gray-900/80 to-black/80 border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-gray-900/90 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 backdrop-blur-sm">
                   <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
@@ -1039,16 +1055,10 @@ className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4
                   </div>
                   <h3 className="text-lg font-semibold text-white text-center group-hover:text-cyan-400 transition-colors">
                     {feature.text}
-=======
                   <h3 className='text-lg font-semibold text-white text-center group-hover:text-cyan-400 transition-colors'>                    {feature.text}
 
                     {feature.text}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </h3>
                 </div>
               </motion.div>
@@ -1056,6 +1066,7 @@ className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4
             ))}
           </div>
         </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1079,12 +1090,9 @@ className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -1217,6 +1225,7 @@ className='text - center group';
                 className='text-center group'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 1.4 }}
           className='mb-16'
 
@@ -1226,12 +1235,9 @@ className='text - center group';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300'>
                   <stat.icon className='w-10 h-10 text-cyan-400' />
@@ -1239,7 +1245,6 @@ className='text - center group';
                 <div className='text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                   {stat.value}
                 </div>
-<<<<<<< HEAD
                 <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'>                  {stat.label}              >
                 <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300">
                   <stat.icon className="w-10 h-10 text-cyan-400" />
@@ -1249,45 +1254,33 @@ className='text - center group';
                 </div>
                 <div className="text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors">
                   {stat.label}
-=======
                 <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'>                  {stat.label}
 
                   {stat.label}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </motion.div>
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.4 }}
           className='mb-16'
-<<<<<<< HEAD
-=======
 
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-2xl font-bold text-white mb-6'>
               Trusted by Industry Leaders
@@ -1314,6 +1307,7 @@ className='text - center group';
 
           </div>
         </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1368,12 +1362,9 @@ className='text - center group';
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Bottom CTA */}
         <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1382,6 +1373,7 @@ className='text - center group';
 <<<<<<< HEAD
           transition={{ duration: 0.8, delay: 1.6 }}
           className='text-center'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1398,6 +1390,9 @@ className='text - center group';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <div className='inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm'>
             <div className='flex items-center space-x-2'>
@@ -1516,28 +1511,14 @@ className='text - center group';
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2 }}
         className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -1565,6 +1546,7 @@ className='text - center group';
         </motion.div>
       </motion.div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -1693,12 +1675,10 @@ className='text - center group';
     </section>);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1708,10 +1688,13 @@ className='text - center group';
 }
 }
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

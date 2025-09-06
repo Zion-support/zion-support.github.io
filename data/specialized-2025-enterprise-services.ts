@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,8 @@ import { ServiceVariant } from '../types / service - variants';
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -863,14 +866,15 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Scenario modeling'
     ]
     marketAdvantage:
-<<<<<<< HEAD
       'Advanced predictive analytics platform with custom ML model development'
   }
-=======
       'Advanced predictive analytics platform with custom ML model development',
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 ;
 export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform';
@@ -1304,6 +1308,7 @@ export default specializedEnterpriseServices;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',;
 export interface SpecializedEnterpriseService {;
   id: string,;
@@ -1689,6 +1694,8 @@ export default specializedEnterpriseServices;
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants',;
 export interface SpecializedEnterpriseService {;
   id: string,;
@@ -2064,6 +2071,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
     marketAdvantage: 'Advanced predictive analytics platform with custom ML model development';
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -2078,3 +2086,6 @@ export default specializedEnterpriseServices;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default specializedEnterpriseServices;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

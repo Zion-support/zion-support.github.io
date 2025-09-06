@@ -3,8 +3,16 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type {
 
+=======
+import type {
+  GrantApplication
+  UpdateGrantPayload;
+  GrantApplication,;
+  UpdateGrantPayload,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -69,6 +77,7 @@ function grantPath(id: string) {
   );  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
@@ -93,6 +102,8 @@ function readGrant(id: string): GrantApplication | null {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function writeGrant(record: GrantApplication) {
 
 =======
@@ -112,18 +123,15 @@ function writeGrant(record: GrantApplication) {
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 =======
   ensureDir()
-=======
 
 function writeGrant(record: GrantApplication) {
   ensureDir(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { id } = req && req.query as { id: string };
 <<<<<<< HEAD
@@ -169,12 +177,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string };
 =======
 <<<<<<< HEAD
-  const { id } = req.query as { id: string }
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  const { id } = req.query as { id: string }
   const { id } = req.query as { id: string };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return
@@ -396,10 +407,11 @@ if ( {) {
   res.status(405).end('Method Not Allowed');  res.setHeader('AllowGET, PUT');
 
   res.status(405).end('Method Not Allowed')
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

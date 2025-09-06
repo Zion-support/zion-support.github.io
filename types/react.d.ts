@@ -48,9 +48,7 @@ declare module "react" {
   exist so that isolated compilation of individual files (e.g., in CI or code;
   review bots) will not fail when full React type declarations are not;
   present.  They purposefully model just enough surface-area used throughout;
-<<<<<<< HEAD
   the code-base.  If you have `@types/react` available in `node_modules`;
-<<<<<<< HEAD
   TypeScript will prefer those and ignore this file, because paths declared in;
   `typeRoots` are merged with normal type resolution.;
 */;
@@ -76,18 +74,19 @@ declare namespace React {// Keep JSX namespace for intrinsic elements – this p
   // errors when `@types/react` is not present.;
   export interface IntrinsicElements {;
     [elemName: string]: any;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   the code-base.  If you have `@types/react` available in `node_modules`,;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   TypeScript will prefer those and ignore this file, because paths declared in;
   `typeRoots` are merged with normal type resolution.;
 */;
 declare module "react" {;
   // Basic ReactElement stub (JSX trees ultimately compile into this).;
   export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -136,11 +135,11 @@ declare module "react" {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     type: T;
     props: P;
     key: React.Key | null;
-<<<<<<< HEAD
-=======
   }
 ;
   // Function Component (very trimmed-down).;
@@ -160,16 +159,18 @@ declare module "react" {;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
-=======
     type: T,;
     props: P,;
     key: React.Key | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -233,6 +234,7 @@ TypeScript will prefer those and ignore this file, because paths declared in `ty
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -245,11 +247,14 @@ TypeScript will prefer those and ignore this file, because paths declared in `ty
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 declare namespace React {;
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements";
   // errors when `@types/react` is not present.;
   export interface IntrinsicElements {;
     [elemName: string]: any;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -260,6 +265,8 @@ declare namespace React {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -268,6 +275,7 @@ declare namespace React {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -284,6 +292,8 @@ declare namespace React {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

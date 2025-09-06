@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -35,18 +36,25 @@ import {
 import {
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Rocket
   Brain
   Atom
@@ -132,6 +140,7 @@ import React from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 =======
 import {
 =======
@@ -140,6 +149,8 @@ import {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Rocket,
   Brain,
   Atom,
@@ -207,9 +218,12 @@ import {
   GlobeIcon,;
   CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
@@ -856,13 +870,8 @@ export default function UltraFuturisticFooter2034() {;
 =======
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle };
 ];
-<<<<<<< HEAD
 export default function UltraFuturisticFooter2034() {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Animated Background Elements */}
@@ -922,22 +931,21 @@ export default function UltraFuturisticFooter2034() {
 =======
             <div className="lg:col-span-1">
               <motion.div
-=======
-<<<<<<< HEAD
 
 export default function UltraFuturisticFooter2034() {
   return (
 
               <motion.div
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
               <motion.div
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
@@ -955,15 +963,16 @@ export default function UltraFuturisticFooter2034() {
               >
 =======
                 className='space-y-6'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className='flex items-center space-x-3'>
                   <div className='relative'>
@@ -1060,6 +1069,7 @@ className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
                         {stat.value}
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                   ))}
@@ -1099,6 +1109,8 @@ className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
                       className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1110,7 +1122,6 @@ className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
                 </div>
-=======
                       <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>
 
                     </motion.div>
@@ -1118,11 +1129,6 @@ className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
                   ))}
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Contact Info */}
 <<<<<<< HEAD
                 <div className="space-y-3">
@@ -1132,15 +1138,16 @@ className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
                 <div className='space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
                     <Phone className='w-4 h-4' />
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <span>{contactInfo.mobile}</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">
@@ -1205,6 +1212,7 @@ className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
             {/* Services */}
             <div className='lg:col-span-2'>              <motion.div            <div className="lg:col-span-2">
               <motion.div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1233,6 +1241,9 @@ className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -1274,15 +1285,16 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                     >
 =======
                       className='space-y-4'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     >
                       <div className='flex items-center space-x-2'>
                         <category.icon className='w-5 h-5 text-cyan-400' />
@@ -1319,7 +1331,6 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                             <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm'>
                               {service.name}
                             </span>
-<<<<<<< HEAD
                             <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>                              {service.price}                    >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <div className="flex items-center space-x-2">
@@ -1573,6 +1584,7 @@ function UltraFuturisticFooter2034() {
                             <span className="text - xs text - gray - 500 group - hover:text - cyan - 400 transition - colors">;
                               {service.price}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>;
               </motion && motion.div>;
             </div>;
@@ -1583,15 +1595,12 @@ function UltraFuturisticFooter2034() {
             <div className="lg:col-span-1">
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>                              {service.price}
 
                               {service.price}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </span>
                           </Link>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1602,6 +1611,7 @@ function UltraFuturisticFooter2034() {
                 </div>
               </motion.div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1626,11 +1636,12 @@ function UltraFuturisticFooter2034() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Quick Links & Social */}
             <div className='lg:col-span-1'>              <motion.div            <div className="lg:col-span-1">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
-=======
 
             {/* Quick Links & Social */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1638,6 +1649,7 @@ function UltraFuturisticFooter2034() {
 
               <motion.div
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1650,6 +1662,8 @@ function UltraFuturisticFooter2034() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
@@ -1669,15 +1683,16 @@ function UltraFuturisticFooter2034() {
                 className="space-y-8"
 =======
                 className='space-y-8'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {/* Quick Links */}
@@ -1738,6 +1753,7 @@ function UltraFuturisticFooter2034() {
                         className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
                       >
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1804,6 +1820,8 @@ className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transit
 =======
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <span className='text-sm'>{link.name}</span>                      </Link>              >
                 {/* Quick Links */}
                 <div>
@@ -1835,7 +1853,6 @@ target="_blank"
 =======
                   </div>
                 </div>
-=======
                         <span className='text-sm'>{link.name}</span>                      </Link>
 
                       </Link>
@@ -1844,11 +1861,6 @@ target="_blank"
                   </div>
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Company Links */}
                 <div>
                   <h4 className='text-lg font-semibold text-white mb-4'>
@@ -1862,7 +1874,6 @@ target="_blank"
                         className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
                       >
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
-<<<<<<< HEAD
                         <span className='text-sm'>{link.name}</span>                      </Link>                      <Link
                         key={link.name}
                         href={link.href}
@@ -1874,7 +1885,6 @@ target="_blank"
                     ))}
                   </div>
                 </div>
-=======
                         <span className='text-sm'>{link.name}</span>                      </Link>
 
                       </Link>
@@ -1883,11 +1893,6 @@ target="_blank"
                   </div>
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Social Links */}
                 <div>
                   <h4 className='text-lg font-semibold text-white mb-4'>
@@ -1902,7 +1907,6 @@ target="_blank"
                         rel='noopener noreferrer'
                         className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
                       >
-<<<<<<< HEAD
                         <social.icon className='w-5 h-5' />                      </Link>                      <Link
                         key={social.name}
                         href={social.href}
@@ -1913,6 +1917,7 @@ target="_blank"
                       >
                         <social.icon className="w-5 h-5" />
                       </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1938,29 +1943,19 @@ target="_blank"
           <motion&& motion.div
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <social.icon className='w-5 h-5' />                      </Link>
 
                       </Link>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
                   </div>
                 </div>
               </motion.div>
             </div>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Certifications */}
           <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2188,42 +2183,25 @@ target="_blank"
                   <CheckCircle className='w-4 h-4 text-green-400 mr-2' />
                   <span className='text-xs text-gray-300 text-center'>
                     {cert}
-<<<<<<< HEAD
                   </span>                </motion.div>                  className="flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200"
                 >
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span className="text-xs text-gray-300 text-center">{cert}</span>
-=======
                   </span>                </motion.div>
 
                 </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Bottom Bar */}
         <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
-<<<<<<< HEAD
               <div className='flex items-center space-x-6 text-sm text-gray-400'>;
-=======
               <div className='flex items-center space-x-6 text-sm text-gray-400'>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Link
@@ -2254,6 +2232,7 @@ target="_blank"
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2365,23 +2344,22 @@ function UltraFuturisticFooter2034() {
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
 import React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
-<<<<<<< HEAD
 export default function UltraFuturisticFooter2034() {return (";
-=======
 ;
 export default function UltraFuturisticFooter2034() {;
   return (";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <footer className = "py-8 text-center text-sm text-gray-400">;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;
   )}"';
-=======
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2389,3 +2367,5 @@ export default function UltraFuturisticFooter2034() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

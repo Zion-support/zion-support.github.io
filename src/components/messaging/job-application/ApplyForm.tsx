@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       let fullMessage = message
 import React, { useState } from 'react'
 import { Button } from "@/components/ui/button"
@@ -19,11 +22,14 @@ import { ResumeTab } from "./ResumeTab"
 import { Job } from "./types"
 import {logErrorToProduction} from '@/utils/productionLogger'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
@@ -37,6 +43,7 @@ import { MessageTab } from "./MessageTab",
 import { ResumeTab } from "./ResumeTab",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface ApplyFormProps {
 =======
@@ -46,16 +53,13 @@ interface ApplyFormProps {
 >>>>>>> interface ApplyFormProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Job } from "./types";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ApplyFormProps {
-=======
 import { Job } from "./types",
 import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplyFormProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   job: Job,
@@ -64,9 +68,12 @@ interface ApplyFormProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 =======
 >>>>>>> 
@@ -79,19 +86,22 @@ interface ApplyFormProps {
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { createConversation } = useMessaging(),
   const { applyToJob } = useJobApplications(),
-=======
-<<<<<<< HEAD
   const { createConversation } = useMessaging()
   const { applyToJob } = useJobApplications()
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [message, setMessage] = useState(
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
-<<<<<<< HEAD
 
 =======
   const { createConversation } = useMessaging(),
@@ -107,17 +117,23 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
     setSelectedResume(resume);    setSelectedResumeId(resume.id)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { createConversation } = useMessaging(),
   const { applyToJob } = useJobApplications(),
   const [message, setMessage] = useState(
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ),
   const [proposalLink, setProposalLink] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -135,11 +151,14 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
 =======
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleApply = async () => {
 =======
   
@@ -152,18 +171,22 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         variant: "destructive"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       return
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-      })
-<<<<<<< HEAD
-      return
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      })
+      return
       return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     try {
       setIsSubmitting(true)
@@ -213,6 +236,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         await onApplySuccess(job.id)
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       toast({
@@ -226,6 +250,12 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      toast({
+        title: "Application sent"
+        description: `Your application for "${job.title}" has been sent.`})
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }),
       return
     }
@@ -358,16 +388,15 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
       
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       toast({
         title: "Application sent",
         description: `Your application for "${job.title}" has been sent.`}),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       onClose()
 >>>>>>>     } catch (error) {
       logErrorToProduction('Failed to send application:', { data: error })
@@ -381,17 +410,18 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-  }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
 <<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   return (
 <<<<<<< HEAD
 =======
@@ -413,6 +443,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         </TabsList>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             message = {message,}
 =======
@@ -425,12 +456,11 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 >>>>>>>             message = {message,}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-        <TabsContent value="message">
-<<<<<<< HEAD
-          <MessageTab
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        <TabsContent value="message">
+          <MessageTab
           <MessageTab 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             message = {message,}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             setMessage = {setMessage,}
@@ -440,10 +470,13 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         </TabsContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <TabsContent value="resume">
           <ResumeTab
             onResumeSelected = {handleResumeSelected,}
@@ -452,12 +485,15 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         </TabsContent>
       </Tabs>
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <TabsContent value="message">
@@ -511,7 +547,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
         
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <TabsContent value="resume">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <ResumeTab 
@@ -520,6 +555,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
           />
         </TabsContent>
       </Tabs>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -544,12 +580,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         <Button
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
         <Button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -563,6 +596,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           type="button"
@@ -570,15 +604,19 @@ ursor/fix-website-loading-errors-and-merge-6662
           disabled = {isSubmitting,}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           type="button"
           onClick = {handleApply,}
           disabled = {isSubmitting,}
-=======
           type="button" 
           onClick={handleApply}
           disabled={isSubmitting}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
         >
           {isSubmitting ? (
@@ -591,26 +629,30 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   return
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId |undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>
       </div>
     </>
   )
   if (!message.trim () ) {
   toast ({
-<<<<<<< HEAD
   return
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId |undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
-=======
   return;
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId || undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 if (!applicationSuccess) {
 }//Format message with proposal link if provided let fullMessage = message
 if (proposalLink) {'
@@ -664,9 +706,12 @@ return (<> <Tabs value= {
 }</Button> </div> </>)
 }'"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>;
       </div>;
     </>;
@@ -805,8 +850,11 @@ return (<> <Tabs value= {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

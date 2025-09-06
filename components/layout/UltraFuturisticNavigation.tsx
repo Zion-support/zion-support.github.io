@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -99,15 +100,14 @@ interface UltraFuturisticNavigationProps {
 export default function UltraFuturisticNavigation(): any ({ className = '' }: UltraFuturisticNavigationProps) {;
 =======
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -119,7 +119,6 @@ import {
   Brain
   Atom
   Shield;
-=======
   Menu,
   X,
   ChevronDown,
@@ -131,27 +130,24 @@ import {
   Brain,
   Atom,;
   Shield,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 interface UltraFuturisticNavigationProps {
   className?: string;
 export default function UltraFuturisticNavigation({
-<<<<<<< HEAD
   className = ''
-=======
   className = '',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
 interface UltraFuturisticNavigationProps {
   className?: string
 }
-<<<<<<< HEAD
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
-=======
 
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -242,11 +238,14 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name: 'View All Services'
           href: '/services'
           icon: Rocket
@@ -268,8 +267,11 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     { name: 'About', href: '/about' }
     { name: 'Contact', href: '/contact' }
     { name: 'Pricing', href: '/pricing' }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name: 'View All Services',
           href: '/services',
           icon: Rocket,
@@ -284,6 +286,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -313,11 +316,11 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
           {/* Logo */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { name: 'Pricing', href: '/pricing' },  ];
 
   ];
-=======
-<<<<<<< HEAD
     { name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },
         { name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' },
@@ -329,15 +332,15 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Pricing', href: '/pricing' }
-=======
     { name: 'Pricing', href: '/pricing' },  ];
 
   ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -361,6 +364,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className='flex items-center space-x-3'
+<<<<<<< HEAD
 
 =======
 
@@ -420,6 +424,9 @@ className="flex items-center space-x-3"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl'>
               <Rocket className='w-7 h-7 text-white' />
@@ -482,6 +489,7 @@ className="flex items-center space-x-3"
                     </button>                      <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                     </button>
+<<<<<<< HEAD
 
 =======
 
@@ -934,12 +942,9 @@ function UltraFuturisticNavigation() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                     {/* Dropdown Menu */}
                     <AnimatePresence>
                       {activeDropdown === item.name && (
@@ -969,7 +974,6 @@ function UltraFuturisticNavigation() {
                                   >
                                     <dropdownItem.icon className='w-5 h-5 text-white' />
                                   </div>
-<<<<<<< HEAD
                                   <div>
                                     <div className='text-white font-medium group-hover/item:text-cyan-300 transition-colors'>
                                       {dropdownItem.name}
@@ -990,12 +994,6 @@ function UltraFuturisticNavigation() {
                                       <div className="text-xs text-gray-400">Explore our complete portfolio</div>
                                     )}
                                   </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                 </Link>
                               ))}
                             </div>
@@ -1007,16 +1005,9 @@ function UltraFuturisticNavigation() {
                 ) : (
                   <Link
                     href={item.href}
-<<<<<<< HEAD
                     className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'                  >                    className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50"
-=======
                     className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'                  >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
                     {item.name}
                   </Link>
@@ -1024,14 +1015,7 @@ function UltraFuturisticNavigation() {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>
             {/* Contact Info */}
@@ -1044,20 +1028,21 @@ function UltraFuturisticNavigation() {
                 <Phone className="w-4 h-4 text-cyan-400" />
               </div>
             </div>
+            {/* CTA Button */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
+            {/* CTA Button */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
 <<<<<<< HEAD
-            {/* CTA Button */}
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-=======
-
-            {/* CTA Button */}
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link
                 href="/contact"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1092,6 +1077,7 @@ function UltraFuturisticNavigation() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
 =======
           <div className='lg:hidden'>;
@@ -1192,12 +1178,9 @@ function UltraFuturisticNavigation() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -1227,6 +1210,7 @@ function UltraFuturisticNavigation() {
                     <div>
                       <button
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1244,6 +1228,8 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                       >
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         onClick={() =>
                           setActiveDropdown(
                             activeDropdown === item.name ? null : item.name
@@ -1257,6 +1243,7 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                         }`} />
                       </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -1266,6 +1253,9 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {activeDropdown === item.name && (
                         <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1302,14 +1292,7 @@ className="ml-4 mt-2 space-y-2"
                         >
 =======
                           className='ml-4 mt-2 space-y-2'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         >
                           {item.dropdownItems?.map(dropdownItem => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1329,6 +1312,7 @@ className="ml-4 mt-2 space-y-2"
                                 <dropdownItem.icon className='w-4 h-4 text-white' />
                               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1336,6 +1320,9 @@ className="ml-4 mt-2 space-y-2"
                           transition={{ duration: 0.2 }}
                           className="ml-4 mt-2 space-y-2"
                         >
+=======
+                              <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem.name}                        >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           {item.dropdownItems?.map((dropdownItem) => (
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1365,16 +1352,10 @@ className="ml-4 mt-2 space-y-2"
                               </div>
                               <span className="text-gray-300 hover:text-white transition-colors">
                                 {dropdownItem.name}
-=======
                               <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem.name}
 
                                 {dropdownItem.name}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               </span>
                             </Link>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1387,6 +1368,7 @@ className="ml-4 mt-2 space-y-2"
 <<<<<<< HEAD
 <<<<<<< HEAD
                       href={item.href}
+<<<<<<< HEAD
 
 =======
 
@@ -1444,18 +1426,14 @@ className="ml-4 mt-2 space-y-2"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}                      className="block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
                       onClick={() => setIsOpen(false)}
-=======
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
 
                       onClick={() => setIsOpen(false)}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       {item.name}
                     </Link>
@@ -1463,10 +1441,7 @@ className="ml-4 mt-2 space-y-2"
                 </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Mobile Contact Info */}
 <<<<<<< HEAD
               <div className="pt-6 border-t border-gray-700/50 space-y-3">
@@ -1476,15 +1451,16 @@ className="ml-4 mt-2 space-y-2"
               <div className='pt-6 border-t border-gray-700/50 space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-300'>
                   <Phone className='w-4 h-4 text-cyan-400' />
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <span>{contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -1715,13 +1691,8 @@ className="ml-4 mt-2 space-y-2"
 =======
       </AnimatePresence>
     </nav>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1733,10 +1704,13 @@ className="ml-4 mt-2 space-y-2"
 }
 }
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

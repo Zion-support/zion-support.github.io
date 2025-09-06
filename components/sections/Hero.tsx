@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -61,10 +62,10 @@ interface HeroProps {;
   secondary_action?: {
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
 interface HeroProps {
@@ -95,6 +96,7 @@ interface HeroProps {
     label: string;
     color: string;
   }>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,8 +165,9 @@ const Hero: React.FC<HeroProps> = ({;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const Hero: React.FC<HeroProps> = ({
   title
   subtitle
@@ -205,6 +208,7 @@ const Hero: React.FC<HeroProps> = ({
             {title}
           </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -215,6 +219,8 @@ const Hero: React.FC<HeroProps> = ({
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
     text: string
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -503,22 +509,16 @@ const Hero: React.FC < HeroProps> = ({
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
             {subtitle}
           </p>
-<<<<<<< HEAD
           {/* Action Buttons */}
           {(primaryAction |secondaryAction) && (
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
             {subtitle}
 
           </p>
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               {primaryAction && (
                 <Button
@@ -528,7 +528,6 @@ const Hero: React.FC < HeroProps> = ({
                   style={{ animationDelay: '0.2s' }}
                 >
                   {primaryAction.text}
-<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>              {primaryAction && (
                 <Button
                   href={primaryAction.href}
@@ -541,6 +540,7 @@ const Hero: React.FC < HeroProps> = ({
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
               )}
               {secondaryAction && (;
                 <Button
@@ -548,15 +548,12 @@ const Hero: React.FC < HeroProps> = ({
                   variant="outline"
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>
 
                 </Button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
               {secondaryAction && (
                 <Button
@@ -796,6 +793,7 @@ const Hero: React.FC < HeroProps> = ({
           )}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* Stats Section */}
         {stats && (
@@ -812,12 +810,9 @@ const Hero: React.FC < HeroProps> = ({
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Stats Section */}
         {stats && (
           <div
@@ -834,7 +829,6 @@ const Hero: React.FC < HeroProps> = ({
                   </div>
                   <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
                 </div>
-<<<<<<< HEAD
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}            {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="relative">
@@ -846,12 +840,16 @@ const Hero: React.FC < HeroProps> = ({
                 <div className="text-gray-400 text-xs sm:text-sm md:text-base font-medium">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {stat.label}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}
 
                   {stat.label}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -867,12 +865,15 @@ const Hero: React.FC < HeroProps> = ({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ))}
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -909,8 +910,9 @@ const Hero: React.FC < HeroProps> = ({
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Trust Indicators */}
         <div
           className='mt-16 md:mt-20 animate-fade-in'
@@ -962,12 +964,15 @@ const Hero: React.FC < HeroProps> = ({
           <div className='w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse' />        </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Decorative Elements */}      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1014,6 +1019,7 @@ const Hero: React.FC < HeroProps> = ({
 }
 export default Hero;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -1100,11 +1106,11 @@ export default Hero;
 
 <<<<<<< HEAD
 =======
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
+}
+}
 
       {/* Decorative Elements */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1113,6 +1119,7 @@ export default Hero;
       </div>
 
       {/* Decorative Elements */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1129,3 +1136,5 @@ export default Hero;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,15 @@ const React from";react" const ContactForm = () => { const [formData,setFormData
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+:src.disabled/components/ContactForm.js.jsx
+import React from\';react\' const ContactForm = () => { const [formData,setFormData] = useState({ \"firstName\": \',\"lastName\": \',\"email\": \',\"comp\": \',\"phone\": \',\"service\": \',\"message\": \'}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState(\'idle\') const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus(\'idle\') try {\''\'';
+const React from";react" const ContactForm = () => { const [formData,setFormData] = useState({ firstName: ",lastName: ",email: ",comp: ",phone: ",service: ",message: "}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState("idle") const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ .prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus("idle") try {"""";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from\';react\' const ContactForm = () => { const [formData,setFormData] = useState({ \"firstName\": \',\"lastName\": \',\"email\": \',\"comp\": \',\"phone\": \',\"service\": \',\"message\": \'}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState(\'idle\') const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus(\'idle\') try {\''\'';
+const React from";react" const ContactForm = () => { const [formData,setFormData] = useState({ firstName: ",lastName: ",email: ",comp: ",phone: ",service: ",message: "}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState("idle") const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ .prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus("idle") try {"""";"""
+:temp_exclude/src.disabled/components/ContactForm.js.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
 =======
 =======

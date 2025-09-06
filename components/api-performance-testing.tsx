@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function ApiPerformanceTestingPage() {
 
@@ -53,6 +54,15 @@ export default function ApiPerformanceTestingPage() {;
     "CI checks and PR annotations",;
     "Synthetic traffic for staging",;
   ];
+=======
+import React from 'react',
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function ApiPerformanceTestingPage() {
 
   const features = [
@@ -62,6 +72,7 @@ export default function ApiPerformanceTestingPage() {
     "CI checks and PR annotations"
     "Synthetic traffic for staging"
   ];
+<<<<<<< HEAD
 return (
     <>;
       <SEO
@@ -123,10 +134,19 @@ function ApiPerformanceTestingPage() {
     "k6 / Gatling - compatible test runner",
     "SLO - aware latency reports",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  return (
+
+export default function ApiPerformanceTestingPage() {
+  const features = [
+    "k6/Gatling-compatible test runner",
+    "SLO-aware latency reports",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -331,6 +351,11 @@ function ApiPerformanceTestingPage() {
 
   return (
 
+=======
+
+return (
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <>
       <SEO
         title="API Performance Testing"
@@ -452,4 +477,7 @@ function ApiPerformanceTestingPage() {
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

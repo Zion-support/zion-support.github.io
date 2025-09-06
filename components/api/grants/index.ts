@@ -45,13 +45,10 @@ const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
 function ensureDir() {
 =======
 import type {
-<<<<<<< HEAD
   CreateGrantPayload
   GrantApplication;
-=======
   CreateGrantPayload,;
   GrantApplication,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -350,12 +347,15 @@ created_at: now,
       res.status(201).json({ id, record });
     } catch (e: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       res.status(500).json({ error: e?.message |'Failed to create grant' });
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
@@ -423,18 +423,13 @@ created_at: now,
 
   res.status(405).end('Method Not Allowed')
 }
-=======
       res.status(500).json({ error: e?.message || 'Failed to create grant' });
     }
     return;
   }
 
   res.setHeader('Allow', 'GET, POST');
-<<<<<<< HEAD
   res.status(405).end('Method Not Allowed');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' })
     }
@@ -448,9 +443,11 @@ created_at: now,
 }
 }
 }
-=======
   res.status(405).end('Method Not Allowed');
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

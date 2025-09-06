@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
@@ -15,6 +16,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
@@ -32,6 +36,7 @@ import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, A
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -41,6 +46,8 @@ export function WebhooksManager() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function WebhooksManager() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const {;
@@ -52,6 +59,7 @@ export function WebhooksManager() {
     toggleWebhook;
     deleteWebhook;
     testWebhook;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -90,6 +98,8 @@ const [showCreateDialog, setShowCreateDialog] = useState(false);
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",
@@ -109,12 +119,15 @@ import { ScrollArea } from "@/components/ui/scroll-area",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function WebhooksManager() {
   const {
@@ -127,6 +140,7 @@ export function WebhooksManager() {
     deleteWebhook,
     testWebhook,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     clearTestResult
 <<<<<<< HEAD
@@ -134,8 +148,9 @@ export function WebhooksManager() {
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     clearTestResult
-<<<<<<< HEAD
   } = useWebhooks();
   const [showCreateDialog, setShowCreateDialog] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
@@ -148,8 +163,11 @@ export function WebhooksManager() {
 
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]);
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } = useWebhooks(),
   
   const [showCreateDialog, setShowCreateDialog] = useState(false),
@@ -164,11 +182,14 @@ export function WebhooksManager() {
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   // Load webhooks on mount
   useEffect(() => {
@@ -176,6 +197,7 @@ export function WebhooksManager() {
   }, []),
 
   const handleCreateWebhook = async () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -187,17 +209,22 @@ export function WebhooksManager() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    if (webhookName.trim() === "" |webhookUrl.trim() === "" |selectedEvents.length === 0) return;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    if (webhookName.trim() === "" |webhookUrl.trim() === "" |selectedEvents.length === 0) return;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     await createWebhook(
       webhookName
       webhookUrl
       selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -209,6 +236,8 @@ export function WebhooksManager() {
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     );
     setShowCreateDialog(false);
     resetWebhookForm()
@@ -216,8 +245,11 @@ export function WebhooksManager() {
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ),
     
     setShowCreateDialog(false),
@@ -228,6 +260,7 @@ export function WebhooksManager() {
     await toggleWebhook(webhookId, !currentStatus)
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const handleDeleteWebhook = async (webhookId: string) => {
@@ -269,36 +302,33 @@ export function WebhooksManager() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleDeleteWebhook = async (webhookId: string) => {
     await deleteWebhook(webhookId)
     setShowDeleteConfirm(null)
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleTestWebhook = async (webhookId: string) => {
     await testWebhook(webhookId, testEventType),
     setShowTestResult(true)
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const resetWebhookForm = () => {
     setWebhookName(""),
     setWebhookUrl(""),
     setWebhookSecret(""),
     setSelectedEvents([])
-<<<<<<< HEAD
   }
-=======
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Event type options
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [
     { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' }
@@ -314,6 +344,7 @@ export function WebhooksManager() {
     )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -324,12 +355,16 @@ export function WebhooksManager() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -406,20 +441,25 @@ export function WebhooksManager() {
                     {eventOptions.map((event) => (
                       <div key={event.value} className="flex items-center space-x-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <Checkbox
                           id={event.value}
-=======
                         <Checkbox 
                           id={event.value} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
@@ -826,6 +866,7 @@ export function WebhooksManager() {;
                         <Checkbox;
                           id={event.value} ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                     {eventOptions && eventOptions.map((event) => (;
                       <div key={event && event.value} className="flex items-center space-x-2">;
@@ -854,6 +895,8 @@ export function WebhooksManager() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
@@ -888,6 +931,7 @@ export function WebhooksManager() {;
             </DialogContent>
           </Dialog>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1128,6 +1172,8 @@ function WebhooksManager() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1170,6 +1216,7 @@ function WebhooksManager() {
             </DialogContent>;
           </Dialog>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
 
@@ -1223,6 +1270,8 @@ function WebhooksManager() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Webhooks List */}
         <div className="space-y-4">
           {loading ? (
@@ -1309,18 +1358,22 @@ function WebhooksManager() {
         </Button>
       </CardFooter>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Test Webhook Dialog */}
-<<<<<<< HEAD
       <Dialog
         open={showTestDialog !== null}
-=======
       <Dialog 
         open={showTestDialog !== null} 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         onOpenChange={(open) => {
           if (!open) {
             setShowTestDialog(null);
@@ -1328,7 +1381,6 @@ function WebhooksManager() {
             if (showTestResult) {
               setShowTestResult(false);
               clearTestResult()
-=======
 
 <<<<<<< HEAD
 ========
@@ -1735,11 +1787,6 @@ if ( {) {
 =======
 =======
               clearTestResult();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }
           }
         }}
@@ -1822,6 +1869,7 @@ if ( {) {
                 </Button>
                 <Button variant="outline" onClick={() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1830,18 +1878,23 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   setShowTestResult(false);
 
-=======
                   setShowTestResult(false),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   clearTestResult()
                 }}>
                   Test Another Event
                 </Button>
               </DialogFooter>
             </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1854,6 +1907,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Badge>;
                   </div>;
                   <div className="space-y-2 mt-4">;
@@ -1975,11 +2030,14 @@ if ( {) {
               </DialogFooter>;
             </>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         </DialogContent>
       </Dialog>
@@ -2002,6 +2060,7 @@ if ( {) {
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2101,6 +2160,8 @@ if ( {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="bg-red-600 hover: bg-red-700"
             >
               Delete
@@ -2111,7 +2172,6 @@ if ( {) {
     </Card>
   )
 }
-=======
               className="bg-red-600 hover: bg-red-700";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >;
@@ -2282,5 +2342,8 @@ clearTestResult ();
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

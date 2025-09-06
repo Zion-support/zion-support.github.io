@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading",
 import { Clock, Map, DollarSign } from "lucide-react",
 
@@ -29,6 +30,15 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Clock, Map, DollarSign } from "lucide-react";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { GradientHeading } from "@/components/GradientHeading";
+import { Clock, Map, DollarSign } from "lucide-react";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Clock, Map, DollarSign} from "lucide-react";
+import { GradientHeading } from "@/components/GradientHeading",
+import { Clock, Map, DollarSign } from "lucide-react",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function PageHero() {
   return (
     <div className="text-center mb-12">
@@ -86,9 +96,16 @@ export function PageHero() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Clock, Map, DollarSign } from "lucide-react";
 =======
@@ -154,6 +171,7 @@ export function PageHero() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/PageHero.tsx
 =======
@@ -244,3 +262,7 @@ function PageHero() {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

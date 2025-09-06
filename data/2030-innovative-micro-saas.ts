@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ];      mobile: '+1 302 464 0950';
@@ -34,6 +35,8 @@ export interface InnovativeMicroSaas2030 {
   launch_date: string;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaas2030 {;
   id: string;
@@ -901,21 +904,18 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.'
     launchDate: '2030-03-01'
     customers: 89
     rating: 4.7
     reviews: 52
   }
-=======
       'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.',
     launchDate: '2030-03-01',
     customers: 89,
     rating: 4.7,
     reviews: 52,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -930,12 +930,8 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     rating: 4.7
 
     reviews: 52
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaas2030 {;
   id: string,;
@@ -1198,12 +1194,11 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     customers: 89,;
     rating: 4.7;
     reviews: 52;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

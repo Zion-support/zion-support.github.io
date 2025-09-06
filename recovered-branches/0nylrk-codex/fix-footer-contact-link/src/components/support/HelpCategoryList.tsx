@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
 
 =======
@@ -24,6 +25,9 @@ import { HelpCategory } from "./types",
 =======
 import React from "react";
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Card
   CardContent
@@ -33,8 +37,16 @@ import {
 } from "@/components/ui/card";
 
 import { HelpCategory } from "./types";
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HelpCategory} from "./types";
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HelpCategory } from "./types",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
@@ -89,6 +101,7 @@ category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
           )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ========
@@ -135,6 +148,12 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
 =======
 );
     : categories;
+=======
+      );
+    : categories;
+      )
+    : categories,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   if (filteredCategories.length === 0) {
     return (
@@ -168,10 +187,13 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HelpCategory } from "./types",;
@@ -310,6 +332,7 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -417,6 +440,8 @@ if (filteredCategories.length === 0) {
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ))}
     </div>
   );

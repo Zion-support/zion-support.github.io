@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/label.tsx
 <<<<<<< HEAD
 
@@ -20,31 +21,28 @@ import * as LabelPrimitive from "@radix-ui/react-label"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type, VariantProps } from "class-variance-authority";
-=======
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {cva, type, VariantProps} from "class-variance-authority"
 
 import {cn} from "@/lib/utils"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const labelVariants = cva(
   "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70"
 );
@@ -55,6 +53,7 @@ const Label = React.forwardRef<
     VariantProps<typeof labelVariants>
 >(({ className, ...props }, ref) => (
   <LabelPrimitive.Root
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -75,6 +74,8 @@ const label_variants = cva (
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
@@ -85,6 +86,7 @@ Label.displayName = LabelPrimitive.Root.displayName
 export { Label };
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -92,6 +94,8 @@ export { Label };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -163,25 +167,29 @@ const Label = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <LabelPrimitive.Root;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/label.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
   />
 ));
 Label.displayName = LabelPrimitive.Root.displayName;
-<<<<<<< HEAD
 export { Label }
-=======
 export { Label }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
@@ -228,6 +236,9 @@ export { Label } React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & Va
 Label.displayName = LabelPrimitive.Root.displayName;
 export { Label }
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/TeamManagement.tsx
 
 <<<<<<< HEAD
@@ -6,6 +7,8 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from 'react'; import {
@@ -25,14 +28,19 @@ import {
   DialogTitle
   DialogTrigger
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-import React, { useState } from 'react'; import {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState } from 'react'; import {
 import {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Table,
   TableBody,
   TableCell,
@@ -49,10 +57,12 @@ import {
   DialogTitle,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogTrigger,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -70,7 +80,10 @@ export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false)
   const [newMemberEmail, setNewMemberEmail] = useState('')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Mock team members data
   const teamMembers = [
     {
@@ -107,9 +120,12 @@ export function TeamManagement() {
     }
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Table,
   TableBody,
@@ -125,10 +141,13 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState } from "react",
 import {
@@ -158,6 +177,7 @@ export function TeamManagement() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Mock team members data
 =======
 >>>>>>>   // Mock team members data
@@ -166,6 +186,8 @@ export function TeamManagement() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Mock team members data
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const teamMembers = [
@@ -194,12 +216,15 @@ export function TeamManagement() {
       id: 4,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       name: 'Taylor Brown',
       email: 'taylor@example.com',
       role: 'Viewer',
@@ -208,11 +233,14 @@ export function TeamManagement() {
     },
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       name: "Taylor Brown",
       email: "taylor@example.com",
       role: "Viewer",
@@ -221,16 +249,20 @@ export function TeamManagement() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       return
@@ -244,27 +276,35 @@ export function TeamManagement() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: 'Email required'
         description: 'Please enter an email address for the new team member.'
         variant: 'destructive'
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
       return
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: 'Email required',
         description: 'Please enter an email address for the new team member.',
         variant: 'destructive',
       })
       return;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -279,17 +319,19 @@ export function TeamManagement() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Invitation sent'
       description: `An invitation has been sent to ${newMemberEmail}`
-=======
       title: 'Invitation sent',
       description: `An invitation has been sent to ${newMemberEmail}`,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     })
     setNewMemberEmail('')
     setIsAddingMember(false)
@@ -423,9 +465,6 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   }
-=======
-<<<<<<< HEAD
-=======
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
@@ -433,8 +472,11 @@ if ( {) {
     }
 
     toast({
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -457,6 +499,7 @@ if ( {) {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -466,11 +509,9 @@ if ( {) {
 >>>>>>>     <div className="space-y-6">
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   return (
     <div className="space-y-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -498,10 +539,13 @@ if ( {) {
                 <Input
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   id='email'
                   type='email'
                   placeholder='colleague@company.com'
@@ -509,12 +553,15 @@ if ( {) {
                   value={newMemberEmail}
                   onChange={e => setNewMemberEmail(e.target.value)}                />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               </div>
 >>>>>>>               <div className="grid grid-cols-4 items-center gap-4">
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   id="email"
                   type="email"
                   placeholder="colleague@company.com"
@@ -522,11 +569,6 @@ if ( {) {
                   value={newMemberEmail}
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -555,6 +597,7 @@ if ( {) {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       <div className='rounded-md border'>
@@ -563,15 +606,11 @@ if ( {) {
         <Table>
 >>>>>>>           <TableHeader>
 =======
-      <div className='rounded-md border'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      <div className='rounded-md border'>
 
       <div className="rounded-md border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Table>
           <TableHeader>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -586,6 +625,7 @@ if ( {) {
           <TableBody>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             {teamMembers.map(member => (              <TableRow key={member.id}>
@@ -594,21 +634,18 @@ if ( {) {
                 <TableCell>
 >>>>>>>                   <div className="flex items-center gap-2">
 =======
-            {teamMembers.map(member => (              <TableRow key={member.id}>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TableCell>
                   <div className="flex items-center gap-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-sm font-medium">
                         {member.name
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -621,19 +658,15 @@ if ( {) {
                     </div>
 >>>>>>>                     <div>
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           .split(' ')
                           .map(n => n[0])
                           .join('')}                      </span>
-=======
                           .split(" ")
                           .map((n) => n[0])
                           .join("")}
                       </span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                     <div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -649,6 +682,7 @@ if ( {) {
                   <Badge
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                     variant={member.status === 'active' ? 'default' : 'outline'}                  >
@@ -657,15 +691,11 @@ if ( {) {
                     {member.status}
 >>>>>>>                   </Badge>
 =======
-                    variant={member.status === 'active' ? 'default' : 'outline'}                  >
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    variant={member.status === 'active' ? 'default' : 'outline'}                  >
                     variant={member.status === "active" ? "default" : "outline"}
                   >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {member.status}
                   </Badge>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -675,6 +705,7 @@ if ( {) {
                   <div className="flex justify-end gap-2">
                     {member.status === "pending" ? (
                       <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -687,10 +718,13 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         variant='ghost'
                         size='sm'
                         onClick={() => handleResendInvite(member.email)}                      >
                         <Mail className='h-4 w-4 mr-1' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                         Resend
                       </Button>
@@ -698,28 +732,29 @@ if ( {) {
                       <Button
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         variant="ghost"
                         size="sm"
                         onClick={() => handleResendInvite(member.email)}
                       >
                         <Mail className="h-4 w-4 mr-1" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         Resend
                       </Button>
                     ) : (
                       <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         variant='ghost'
                         size='sm'
                         className='text-destructive hover:text-destructive'
                         onClick={() => handleRemoveMember(member.id)}                      >
                         <Trash className='h-4 w-4' />
                       </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                     )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -766,6 +801,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
@@ -1443,17 +1480,11 @@ export function TeamManagement() {;
             ))}
 =======
                       </Button>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                   </div>
                 </TableCell>
               </TableRow>
             ))}
-<<<<<<< HEAD
           </TableBody>
         </Table>
       </div>
@@ -1481,8 +1512,11 @@ export function TeamManagement() {;
 }</div> </TableCell> </TableRow>) )
 }</TableBody> </Table> </div> </div>)
 }'"}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </TableBody>;
         </Table>;
       </div>;
@@ -1539,8 +1573,11 @@ setIsAddingMember (false);
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

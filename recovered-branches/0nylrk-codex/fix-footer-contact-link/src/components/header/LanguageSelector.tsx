@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/LanguageSelector.tsx
 
 <<<<<<< HEAD
@@ -10,27 +11,45 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
 =======
 import {
 DropdownMenu
+=======
+import {
+  DropdownMenu
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+<<<<<<< HEAD
+=======
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+DropdownMenuTrigger,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 export function LanguageSelector() {;
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react',
 import { useTranslation } from 'react-i18next',
@@ -44,6 +63,7 @@ import {
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
 
 export function LanguageSelector() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -197,6 +217,12 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 =======
 const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+=======
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+  const { t } = useTranslation(),
+  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage(),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <DropdownMenu>
@@ -210,12 +236,21 @@ const { t } = useTranslation();
         {supportedLanguages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
+<<<<<<< HEAD
 className={`cursor-pointer ${
               currentLanguage === lang.code
                 ? "bg-zion-purple/20 text-zion-cyan"
                 : "text-white hover:bg-zion-purple/10"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            className={`cursor-pointer ${
+              currentLanguage === lang.code
+                ? "bg-zion-purple/20 text-zion-cyan"
+                : "text-white hover:bg-zion-purple/10"
+            className={`cursor-pointer ${;
+              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }`}
             onClick={() => changeLanguage(lang.code)}
           >
@@ -226,15 +261,23 @@ className={`cursor-pointer ${
           </DropdownMenuItem>
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+      </DropdownMenuContent>
+    </DropdownMenu>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </DropdownMenuContent>;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/LanguageSelector.tsx
     </DropdownMenu>;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

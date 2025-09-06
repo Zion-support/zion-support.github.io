@@ -41,9 +41,12 @@ export function ApplicationRow({
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {Calendar, User, FileText, BarChart} from "lucide-react";
@@ -54,6 +57,7 @@ import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {StatusBadge} from "./StatusBadge";
 import {ScoreBadge} from "./ScoreBadge";
 import {ApplicationActions} from "./ApplicationActions";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ApplicationRowProps {;
   application: JobApplication,;
@@ -70,6 +74,8 @@ export function ApplicationRow(): any ({;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { Calendar, User, FileText, BarChart } from "lucide-react",
@@ -78,17 +84,10 @@ import { Avatar } from "@/components/ui/avatar",
 import { TableRow, TableCell } from "@/components/ui/table",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { StatusBadge } from "./StatusBadge",
-<<<<<<< HEAD
 import { ScoreBadge } from "./ScoreBadge";
 import { ApplicationActions } from "./ApplicationActions";
-=======
 import { ScoreBadge } from "./ScoreBadge",
 import { ApplicationActions } from "./ApplicationActions",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplicationRowProps {
 
   application: JobApplication
@@ -98,16 +97,14 @@ interface ApplicationRowProps {
 
   onViewScore: (application: JobApplication) => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function ApplicationRow({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   application;
   processingId;
   onViewApplication;
   onStatusChange;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onViewScore;
 }: ApplicationRowProps) {;
@@ -131,12 +128,13 @@ export function ApplicationRow({;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ApplicationRow({
   application,
   processingId,
   onViewApplication,
   onStatusChange,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onViewScore
 }: ApplicationRowProps) {
   return (
@@ -198,11 +196,14 @@ export function ApplicationRow({
       <TableCell className="text-right">
         <ApplicationActions
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 import { Calendar, User, FileText, BarChart } from "lucide-react",;
@@ -475,6 +476,7 @@ function ApplicationRow() {
       <TableCell className="text-right">
         <ApplicationActions
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -548,6 +550,8 @@ onViewScore: (application: JobApplication) => void
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           application={application}
           processingId={processingId}
           onViewApplication={onViewApplication}

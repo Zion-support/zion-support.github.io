@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Check } from 'lucide-react'
@@ -18,15 +21,19 @@ export function FeatureHighlights({
   style,
 }: FeatureHighlightsProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from 'lucide-react'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -37,6 +44,8 @@ interface FeatureHighlightsProps {
   className?: string;
   style?: React && React.CSSProperties;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { cn } from "@/lib/utils";
 interface FeatureHighlightsProps {
   className?: string;
@@ -83,10 +92,13 @@ export function FeatureHighlights({
     }
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   const highlightsData = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { cn } from "@/lib/utils",
 interface FeatureHighlightsProps {
   className?: string,
@@ -94,10 +106,6 @@ interface FeatureHighlightsProps {
 }
 
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const highlightsData = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
@@ -127,12 +135,15 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       features: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'White-labeled talent portal with your company branding',
         'Dedicated account management and priority support',
         'Custom talent pools and preferred provider networks',
@@ -143,11 +154,14 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
     },
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
@@ -157,6 +171,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       ]
     }
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -170,11 +185,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -187,6 +200,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 '"`
@@ -194,6 +208,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           {highlightsData.map((category, index) => (
             <Card
@@ -370,15 +386,11 @@ export function FeatureHighlights() {
       </div>
     </section>
   )}
-<<<<<<< HEAD
 '"`
 )
-=======
 ;
 '"`;
 );
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -647,6 +659,7 @@ function FeatureHighlights() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -662,3 +675,5 @@ function FeatureHighlights() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

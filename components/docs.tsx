@@ -14,6 +14,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function DocsPage() {
 
@@ -29,16 +30,18 @@ export default function DocsPage() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function DocsPage() {
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function DocsPage() {
 export default /**
  * DocsPage - Function description
@@ -138,7 +141,6 @@ icon: <CheckCircle className="w-6 h-6" />,
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const contact = {
     mobile: '+1 302 464 0950'
@@ -206,20 +208,26 @@ icon: <CheckCircle className="w-6 h-6" />,
     }
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: 'Community Forum'
       description: 'Connect with other developers and users'
       icon: <ExternalLink className='w-6 h-6' />
       href: '/community'
       color: 'text-yellow-400'
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: 'Community Forum',
       description: 'Connect with other developers and users',
       icon: <ExternalLink className='w-6 h-6' />,
@@ -227,12 +235,15 @@ icon: <CheckCircle className="w-6 h-6" />,
       color: 'text-yellow-400',
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch =
@@ -260,6 +271,7 @@ export default function DocsPage() {;
   });
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -353,6 +365,8 @@ export default function DocsPage() {;
       case 'Beginner':;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case 'Beginner':
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         return 'bg-green-500/20 text-green-400';
@@ -421,14 +435,9 @@ export default function DocsPage() {;
 =======
       case 'Advanced': return 'bg-red-500/20 text-red-400'
       default: return 'bg-gray-500/20 text-gray-400'
-<<<<<<< HEAD
   }
-=======
   };
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric'
@@ -437,10 +446,8 @@ export default function DocsPage() {;
     });  };      day: 'numeric'
     })
   }
-=======
 
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
@@ -679,7 +686,6 @@ icon: <ExternalLink className='w - 6 h - 6' />,
                         className='text-cyan-400 hover:underline'
                       >
                         {l.name}
-<<<<<<< HEAD
                       </a>                    </li>      </Head>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -697,6 +703,7 @@ icon: <ExternalLink className='w - 6 h - 6' />,
                     <li key={l.name}>
                       <a href={l.href} className="text-cyan-400 hover:underline">{l.name}</a>
                     </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
                         href={l && l.href}
                         className='text-cyan-400 hover:underline'>;
@@ -716,15 +723,12 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       </a>                    </li>
 
                     </li>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </ul>
               </Card>
@@ -759,6 +763,7 @@ icon: <ExternalLink className='w - 6 h - 6' />,
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -782,6 +787,8 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </ul>
           </Card>
           <Card className='p-6 bg-black/40 border border-gray-700/50'>
@@ -951,17 +958,19 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 =======
   );
 }
-<<<<<<< HEAD
-=======
 ;
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
               ))}
             </ul>
           </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -978,3 +987,5 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 import { useState, useEffect  } from 'react';
 import { Card, CardContent  } from '@/components/ui/card';
@@ -9,6 +9,11 @@ import { Button  } from '@/components/ui/button';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { useState, useEffect  } from 'react';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react'
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -17,10 +22,13 @@ import { ProjectForm } from './ProjectForm'
 import { PortfolioProject } from '@/types/resume'
 import { usePortfolio } from '@/hooks/usePortfolio'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FilePlus, Loader2 } from 'lucide-react'
 import { ProjectCard  } from './ProjectCard';
 import { ProjectForm  } from './ProjectForm';
@@ -52,6 +60,7 @@ export function PortfolioBuilder() {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -62,6 +71,9 @@ export function PortfolioBuilder() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -101,11 +113,6 @@ export function PortfolioBuilder() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
@@ -116,6 +123,7 @@ export function PortfolioBuilder() {;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -124,6 +132,9 @@ export function PortfolioBuilder() {;
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -131,6 +142,7 @@ export function PortfolioBuilder() {;
           <h1 className="text-2xl font-bold">Portfolio Projects</h1>
           <p className="text-muted-foreground">Showcase your best work and projects</p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -143,16 +155,16 @@ export function PortfolioBuilder() {;
         <Card>
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button
           onClick={() => setShowAddProject(true)}
           className='gap-2'
           disabled={showAddProject |!!editingProject}        >
           <FilePlus className='h-4 w-4' />
-<<<<<<< HEAD
           Add Project
         </Button>
       </div>
-=======
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -163,24 +175,25 @@ export function PortfolioBuilder() {;
         </Button>
       </div>
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
           Add Project
         </Button>
       </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CardContent className='pt-6'>
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -202,11 +215,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-            <ProjectForm              project={editingProject |undefined}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <ProjectForm              project={editingProject |undefined}
             <ProjectForm              project={editingProject || undefined}
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false)
@@ -233,6 +250,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
+<<<<<<< HEAD
 
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
@@ -343,6 +361,8 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -356,8 +376,11 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
         <Card>
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
@@ -395,6 +418,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
             <ProjectCard
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               key={project.id}
 =======
@@ -405,6 +429,8 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               key={project.id}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               project={project}
@@ -423,6 +449,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         !showAddProject && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           <Card className='text-center py-12'>
 >>>>>>>             <CardContent>
@@ -437,14 +464,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>>               <div className="flex flex-col items-center gap-4">
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Card className='text-center py-12'>
-=======
           <Card className="text-center py-12">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <CardContent>
               <div className="flex flex-col items-center gap-4">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -455,6 +478,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -470,6 +494,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Button
                   onClick={() => setShowAddProject(true)}
                   className='mt-2'                >            <CardContent>
@@ -481,18 +507,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
-<<<<<<< HEAD
                 <Button
                   onClick={() => setShowAddProject(true)}
-=======
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button 
                   onClick={() => setShowAddProject(true)} 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="mt-2"
 >>>>>>>                 >
                   Add Your First Project
@@ -504,26 +527,31 @@ ursor/fix-website-loading-errors-and-merge-6662
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
 }
-<<<<<<< HEAD
-=======
 ;
 }
 }
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -538,3 +566,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

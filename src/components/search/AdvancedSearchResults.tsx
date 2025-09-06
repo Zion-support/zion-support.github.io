@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
@@ -38,9 +39,9 @@ interface SearchResult {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import React, { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
 import {
@@ -140,12 +141,15 @@ const HighlightText: React.FC<{
           <mark key={index} className='bg-yellow-200 text-black px-1 rounded'>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useMemo } from 'react',;
 import { useRouter } from 'next/router',;
 import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react';
@@ -222,6 +226,7 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
           <mark key={index} className="bg-yellow-200 text-black px-1 rounded">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {part}
 =======
@@ -245,12 +250,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {part}
           </mark>
         ) : (
           part
         )
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   date?: string;
@@ -278,6 +286,8 @@ const HighlightText: React.FC<{
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </span>
   )
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -472,14 +482,10 @@ const SearchResultCard: React.FC<{;
 =======
 =======
             }          />
-<<<<<<< HEAD
         </div>
       )}
       <div className='flex-1'>
         <div className='flex items-start justify-between mb-2'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     </span>;
   );
 },;
@@ -509,16 +515,11 @@ const SearchResultCard: React.FC<{;
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       )}
       
       <div className="flex-1">
         <div className="flex items-start justify-between mb-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div>
             <h3 className="font-semibold text-lg mb-1">
               <HighlightText text={result.title} searchTerm={searchTerm} />
@@ -537,7 +538,10 @@ const SearchResultCard: React.FC<{;
           )}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <p className='text-muted-foreground mb-3 line-clamp-2'>
           <HighlightText text={result.description} searchTerm={searchTerm} />
         </p>
@@ -545,6 +549,7 @@ const SearchResultCard: React.FC<{;
           <div className='flex gap-2 flex-wrap'>
             {result.category && (
               <Badge variant='outline' className='text-xs'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 {result.category}
               </Badge>
@@ -560,6 +565,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <p className="text-muted-foreground mb-3 line-clamp-2">
           <HighlightText text={result.description} searchTerm={searchTerm} />
@@ -739,39 +746,26 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex gap-2 flex-wrap">;
             {result.category && (;
               <Badge variant="outline" className="text-xs">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {result.category}
               </Badge>
             )}
             {result.tags?.slice(0, 3).map((tag, index) => (
-<<<<<<< HEAD
               <Badge key={index} variant='outline' className='text-xs'>                <HighlightText text={tag} searchTerm={searchTerm} />
               </Badge>
             ))}
           </div>
-=======
               <Badge key={index} variant="outline" className="text-xs">
                 <HighlightText text={tag} searchTerm={searchTerm} />
               </Badge>
             ))}
           </div>
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
               <span className="text-sm">{result.rating.toFixed(1)}</span>
             </div>
           )}
-<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -800,8 +794,11 @@ const FilterSidebar: React.FC<{
       maxPrice: values[1] ?? 10000
     })
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>;
       </div>;
     </div>;
@@ -837,6 +834,7 @@ const FilterSidebar: React.FC<{;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -862,6 +860,8 @@ const FilterSidebar: React.FC<{;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <div>
@@ -872,20 +872,13 @@ const FilterSidebar: React.FC<{;
               <Checkbox
                 id={option.id}
                 checked={filters.types.includes(option.id)}
-<<<<<<< HEAD
                 onCheckedChange={checked =>
                   handleTypeChange(option.id, !!checked)
                 }              />
               <label htmlFor={option.id} className='text-sm'>
-=======
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
               <label htmlFor={option.id} className="text-sm">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {option.label}
               </label>
             </div>
@@ -897,11 +890,14 @@ const FilterSidebar: React.FC<{;
       <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           </SelectTrigger>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h3 className='font-semibold mb-3'>Category</h3>
         <Select
           value={filters.category}
@@ -914,21 +910,19 @@ const FilterSidebar: React.FC<{;
         >          <SelectTrigger>
             <SelectValue placeholder='All Categories' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           </SelectTrigger>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h3 className="font-semibold mb-3">Category</h3>
         <Select value={filters.category} onValueChange={(value) => 
           onFiltersChange({ ...filters, category: value === 'all' ? '' : value })
         }>
           <SelectTrigger>
             <SelectValue placeholder="All Categories" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </SelectTrigger>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <SelectContent>
@@ -987,6 +981,7 @@ const FilterSidebar: React.FC<{;
             step={50}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             className='mb-2'          />
@@ -995,18 +990,22 @@ const FilterSidebar: React.FC<{;
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='mb-2'          />
           <div className='flex justify-between text-sm text-muted-foreground'>
-=======
             className="mb-2"
           />
           <div className="flex justify-between text-sm text-muted-foreground">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <span>${filters.minPrice}</span>
 >>>>>>>             <span>${filters.maxPrice}</span>
           </div>
@@ -1014,6 +1013,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
       <Separator />
       <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1029,6 +1029,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h3 className='font-semibold mb-3'>Minimum Rating</h3>
         <Select
           value={filters.minRating.toString()}
@@ -1036,18 +1038,20 @@ ursor/fix-website-loading-errors-and-merge-6662
             onFiltersChange({ ...filters, minRating: parseFloat(value) })
           }
         >          <SelectTrigger>
-=======
         <h3 className="font-semibold mb-3">Minimum Rating</h3>
         <Select value={filters.minRating.toString()} onValueChange={(value) => 
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
         }>
           <SelectTrigger>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <SelectValue />
 >>>>>>>           </SelectTrigger>
           <SelectContent>
@@ -1064,12 +1068,15 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
 }
 // No Results Component;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 // No Results Component
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1084,6 +1091,7 @@ const NoResultsState: React.FC<{
     'UI/UX Design'
     'Blockchain Development'
   ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1120,6 +1128,8 @@ const NoResultsState: React.FC<{
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 
 // No Results Component
@@ -1137,11 +1147,14 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
   ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="text-center py-12">
       <div className="mb-6">
@@ -1152,10 +1165,13 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         </p>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         >          <SelectTrigger>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='max-w-md mx-auto space-y-4'>
         <div>
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>
@@ -1166,8 +1182,11 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 variant='outline'
                 size='sm'
                 onClick={() => onNewSearch(suggestion)}              >
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       <div className="max-w-md mx-auto space-y-4">
         <div>
@@ -1250,6 +1269,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 onClick={() => onNewSearch(suggestion)}
               >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1264,11 +1284,14 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {suggestion}
               </Button>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1284,20 +1307,24 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='text-sm text-muted-foreground'>
           <p>Tips for better results:</p>
           <ul className='mt-2 space-y-1'>
-=======
 
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <li>• Try different keywords</li>
 >>>>>>>             <li>• Check your spelling</li>
             <li>• Use fewer filters</li>
@@ -1309,9 +1336,12 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 // Main Search Results Page Component
 export const AdvancedSearchResults: React.FC = () => {
@@ -1325,7 +1355,10 @@ export const AdvancedSearchResults: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [showFilters, setShowFilters] = useState(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [filters, setFilters] = useState<SearchFilters>({
     types: []
     category: ''
@@ -1343,12 +1376,15 @@ export const AdvancedSearchResults: React.FC = () => {
     return Array.from(categories).sort()
   }, [results])
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 
 // Main Search Results Page Component
@@ -1372,10 +1408,6 @@ export const AdvancedSearchResults: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [filters, setFilters] = useState<SearchFilters>({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     types: [],
@@ -1385,12 +1417,15 @@ export const AdvancedSearchResults: React.FC = () => {
     minRating: 0,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     sort: 'relevance',
   });
   const suggestions = generateSearchSuggestions();
@@ -1401,8 +1436,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     })
     return Array.from(categories).sort()
   }, [results])
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     sort: 'relevance'
   }),
 
@@ -1417,6 +1450,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     return Array.from(categories).sort()
   }, [results]),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1481,6 +1515,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     if (router.isReady && router.query.q) {
 =======
 <<<<<<< HEAD
+=======
+  // Sync search term with URL
+  useEffect(() => {
+    if (router.isReady && router.query.q) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const urlTerm = router.query.q as string
       setSearchTerm(urlTerm)
     }
@@ -1570,23 +1609,27 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
   // Active filters count
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const activeFiltersCount =
     filters.types.length +
     (filters.category ? 1 : 0) +
     (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) +
-=======
   const activeFiltersCount = null;
     filters.types.length +
     (filters.category ? 1 : 0) +
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     (filters.minRating > 0 ? 1 : 0)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const urlTerm = router.query.q as string,
       setSearchTerm(urlTerm)
           </div>;
@@ -1729,6 +1772,7 @@ export const AdvancedSearchResults: React.FC = () => {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 >>>>>>>   return (
@@ -1746,6 +1790,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="container mx-auto px-4 py-6">
       {/* Search Header */}
@@ -1760,6 +1806,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               searchSuggestions={suggestions}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           </div>
 =======
@@ -1770,15 +1817,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Search className="h-4 w-4" />
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
-              placeholder='Search products, talent, services, and more...'            />
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              placeholder='Search products, talent, services, and more...'            />
               placeholder="Search products, talent, services, and more..."
             />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
@@ -1795,10 +1838,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='flex items-center gap-2'>
               {/* Sort Options */}
               <Select
@@ -1806,6 +1852,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onValueChange={value => setFilters({ ...filters, sort: value })}
               >
                 <SelectTrigger className='w-40'>                  <SelectValue />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 </SelectTrigger>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1818,6 +1865,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value='rating'>Highest Rated</SelectItem>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             <div className="flex items-center gap-2">
               {/* Sort Options */}
@@ -1826,11 +1875,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               }>
                 <SelectTrigger className="w-40">
                   <SelectValue />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="relevance">Relevance</SelectItem>
@@ -1844,6 +1888,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex border rounded-md">
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'ghost'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1909,6 +1954,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       available_categories = {available_categories, }
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   size='sm'
                   onClick={() => setViewMode('grid')}                >
                   <GridIcon className='h-4 w-4' />
@@ -1918,7 +1965,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   size='sm'
                   onClick={() => setViewMode('list')}                >
                   <List className='h-4 w-4' />
-=======
                   size="sm"
                   onClick={() => setViewMode('grid')}
                 >
@@ -1930,11 +1976,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   onClick={() => setViewMode('list')}
                 >
                   <List className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </Button>
               </div>
               {/* Mobile Filter Toggle */}
@@ -1954,10 +1995,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <FilterSidebar
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       filters = {filters,}
                       onFiltersChange = {handleFiltersChange,}
                       availableCategories = {availableCategories,}
@@ -1968,6 +2012,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         )}
       </div>
       {searchTerm && (
@@ -1975,6 +2020,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       filters={filters}
                       onFiltersChange={handleFiltersChange}
                       availableCategories={availableCategories}
@@ -2010,11 +2057,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       </div>
       {searchTerm && (
@@ -2027,7 +2069,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {activeFiltersCount > 0 && (
                   <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     variant='ghost'
                     size='sm'
                     onClick={() =>
@@ -2061,7 +2106,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
           {/* Main Content */}
           <div className='flex-1'>
-=======
                     variant="ghost"
                     size="sm"
                     onClick={() => setFilters({
@@ -2086,17 +2130,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>;
           {/* Main Content */}
           <div className="flex-1">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Loader2 className="h-8 w-8 animate-spin" />
               </div>
             ) : results.length === 0 && searchTerm ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2110,6 +2150,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <NoResultsState
                 searchTerm={searchTerm}
                 onNewSearch={handleSearch}              />
@@ -2130,12 +2172,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                       viewMode = {viewMode,}
                     />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                   ))}
                 </div>
                 {/* Load More Button */}
                 {hasMore && (
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <NoResultsState 
                 searchTerm={searchTerm} 
                 onNewSearch={handleSearch}
@@ -2154,22 +2199,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                       searchTerm={searchTerm}
                       viewMode={viewMode}
                     />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </div>
                 {/* Load More Button */}
                 {hasMore && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='text-center'>
                     <Button
                       onClick={loadMore}
                       disabled={loading}
                       variant='outline'                    >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                       {loading ? (
                   ))}
@@ -2180,12 +2224,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className="text-center">
                     <Button 
                       onClick={loadMore} 
                       disabled={loading}
                       variant="outline"
                     >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>                       {loading ? (
@@ -2197,6 +2244,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {loading ? (
                         <>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2220,6 +2269,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 setCurrentPage (data.page)
@@ -2227,6 +2277,8 @@ setHasMore (data.hasMore)
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
 }
@@ -2236,16 +2288,17 @@ export default AdvancedSearchResults
 }</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>)
 }
 //Main Search Results Page Component setTotalCount (data.totalCount)
-<<<<<<< HEAD
 setCurrentPage (data.page)
 setHasMore (data.hasMore)
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
-=======
 setCurrentPage (data.page);
 setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
   /* Mobile Filter Toggle */
 }<Sheet open= {
@@ -2298,25 +2351,31 @@ export default AdvancedSearchResults
 '"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default AdvancedSearchResults
 export default AdvancedSearchResults
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default AdvancedSearchResults
 export default AdvancedSearchResults
 
-=======
 export default AdvancedSearchResults, ;
 export default AdvancedSearchResults;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 };
 export default AdvancedSearchResults;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2332,3 +2391,5 @@ export default AdvancedSearchResults;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

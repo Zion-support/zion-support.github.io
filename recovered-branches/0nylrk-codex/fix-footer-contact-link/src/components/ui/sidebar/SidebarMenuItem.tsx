@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {cn} from "@/lib/utils";
 =======
@@ -19,19 +20,22 @@ import { cn } from "@/lib/utils",
 <<<<<<< HEAD
 =======
 =======
-import React from "react";
-<<<<<<< HEAD
-import { cn } from "@/lib/utils";
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from "react";
+import { cn } from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-import {cn} from "@/lib/utils";
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {cn} from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
@@ -47,11 +51,17 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+  className?: string,
+  children?: React.ReactNode
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
   className?: string;
   children?: React.ReactNode;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -108,6 +118,8 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function SidebarMenuItem({
   className
@@ -118,12 +130,13 @@ export function SidebarMenuItem({
     <li className={cn("", className)} {...props}>
       {children}
     </li>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

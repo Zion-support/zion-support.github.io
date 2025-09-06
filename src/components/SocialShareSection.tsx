@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -6,6 +7,8 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from './ui/button'
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
 import { toast } from "./ui/use-toast";
@@ -13,13 +16,14 @@ import { useTranslation } from 'react-i18next';
 export function SocialShareSection() {
   const { t } = useTranslation();
   // Current URL is not available during SSR, guard with typeof check
-<<<<<<< HEAD
 
   const shareUrl =
-=======
   const shareUrl = null;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     typeof window !== 'undefined'
       ? encodeURIComponent(window.location.href)
       : ''
@@ -54,11 +58,14 @@ export function SocialShareSection() {
         })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from "./ui/button",
@@ -95,6 +102,7 @@ export function SocialShareSection() {
           description: "The link has been copied to your clipboard"})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -104,6 +112,11 @@ export function SocialShareSection() {
         toast({
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      })
+      .catch(() => {
+        toast({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           title: t('errors.failed_to_copy')
           description: 'Please try again or copy the URL manually'
           variant: 'destructive'
@@ -137,6 +150,7 @@ export function SocialShareSection() {
     }
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -144,33 +158,43 @@ export function SocialShareSection() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          title: t('errors.failed_to_copy'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       })
       .catch(() => {
         toast({
           title: t('errors.failed_to_copy'),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           description: 'Please try again or copy the URL manually',
           variant: 'destructive',
         })
       })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           description: "Please try again or copy the URL manually",
           variant: "destructive"
         })
       })
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const shareLinks = [
@@ -181,6 +205,8 @@ export function SocialShareSection() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const shareLinks = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
@@ -204,12 +230,15 @@ export function SocialShareSection() {
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       name: 'Copy Link',
       icon: <Link className='h-5 w-5' aria-hidden='true' />,
       color: 'bg-zion-blue-dark hover:bg-zion-blue-dark/80',
@@ -217,16 +246,20 @@ export function SocialShareSection() {
     },
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       name: "Copy Link",
       icon: <Link className="h-5 w-5" aria-hidden="true" />,
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
       onClick: copyLinkToClipboard
     }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -237,11 +270,9 @@ export function SocialShareSection() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <section className="py-12 bg-zion-blue">
@@ -253,9 +284,12 @@ export function SocialShareSection() {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='flex flex-wrap gap-3'>
             {shareLinks.map((link, index) => (              <Button
                 key = {index,}
@@ -281,22 +315,31 @@ export function SocialShareSection() {
   title: t ('errors.failed to copy')
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }</div> </div> </div> </section>)
 }'"
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 }</div> </div> </div> </section>) ;
 }'";
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="flex flex-wrap gap-3">
             {shareLinks.map((link, index) => (
               <Button
@@ -429,8 +472,11 @@ export function SocialShareSection() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

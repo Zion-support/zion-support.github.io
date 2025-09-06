@@ -14,31 +14,27 @@ import { Checkbox } from "@/components/ui/checkbox",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {Filter, X, Star} from "lucide-react";
 import {FilterOptions} from "@/types/search";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
-<<<<<<< HEAD
 import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
-=======
 import { Filter, X, Star } from "lucide-react",
 import { FilterOptions } from "@/types/search",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface FilterSidebarProps {
   filters: {
 
@@ -47,6 +43,7 @@ interface FilterSidebarProps {
     selectedAvailability: string[]
     selectedRating: number | null
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   onClearFilters: () => void
@@ -54,41 +51,44 @@ interface FilterSidebarProps {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   filterOptions: FilterOptions
   onFilterChange: (filterType: string, value: string) => void
   onRatingChange: (rating: number | null) => void
 
-=======
   },
   filterOptions: FilterOptions,
   onFilterChange: (filterType: string, value: string) => void,
   onRatingChange: (rating: number | null) => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onClearFilters: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function FilterSidebar({;
   filters;
   filterOptions;
   onFilterChange;
   onRatingChange;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function FilterSidebar({
   filters,
   filterOptions,
   onFilterChange,
   onRatingChange,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onClearFilters
 }: FilterSidebarProps) {
   return (
@@ -98,24 +98,29 @@ export function FilterSidebar({
           <Filter className="mr-2 h-5 w-5" /> Filters
         </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button
           variant="outline"
           size="sm"
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-=======
         <Button 
           variant="outline" 
           size="sm"
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
@@ -184,6 +189,7 @@ export function FilterSidebar({;
           size="sm";
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return (
 
@@ -223,6 +229,8 @@ export function FilterSidebar({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           onClick={onClearFilters}
         >
           Clear All

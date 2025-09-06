@@ -5,9 +5,6 @@
 
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -24,9 +21,12 @@ export default function Partners() {;
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -38,8 +38,11 @@ import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 export default function Partners() {
@@ -47,7 +50,6 @@ export default function Partners() {
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
 export default function Partners() {
@@ -55,11 +57,14 @@ export default function Partners() {
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
@@ -176,7 +181,18 @@ export default function Partners() {
             Apply to Join
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+          <Button
+            size="lg"
+            variant="outline"
+            className="text-zion-cyan border-zion-cyan"
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="text-zion-cyan border-zion-cyan"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -515,6 +531,7 @@ export default function Partners() {;
             variant="outline";
             className="text-zion-cyan border-zion-cyan";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -523,6 +540,8 @@ export default function Partners() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             onClick={() => navigate('/login')}
           >
             Partner Login
@@ -531,6 +550,7 @@ export default function Partners() {;
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -581,6 +601,9 @@ export default function Partners() {;
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Authenticated user view - Partner Dashboard
   return (
     <div className="container max-w-7xl py-10">
@@ -631,6 +654,7 @@ export default function Partners() {;
       </Tabs>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -934,9 +958,13 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Partners.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

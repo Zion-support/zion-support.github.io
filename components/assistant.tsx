@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -137,8 +138,9 @@ export default function Assistant() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect, useMemo, useState} from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import {useEffect, useMemo, useState} from 'react';
 interface Message {
@@ -147,13 +149,11 @@ interface Message {
 export default function Assistant() {
   const params =
     typeof window !== 'undefined'
-<<<<<<< HEAD
       ? new URLSearchParams(window.location.search)
       : new URLSearchParams();  const tenantId = params.get('tenantId') |'';
   const brand = params.get('brand') |'Zion AI';
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
 export default function Assistant() {
-=======
       ? new URLSearchParams(window.location.search);
       : new URLSearchParams();  const tenantId = params.get('tenantId') || '';
   const brand = params.get('brand') || 'Zion AI';
@@ -161,7 +161,6 @@ export default function Assistant() {
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
 
 export default function Assistant() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') |'';
   const brand = params.get('brand') |'Zion AI';
@@ -229,10 +228,7 @@ return (
       }
     ]);
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='min-h-full h-full w-full flex flex-col bg-white'>
       <div className='px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2'>
@@ -526,7 +522,6 @@ if ( {) {
         </button>
       </form>
     </div>
-<<<<<<< HEAD
   );      >
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
@@ -539,16 +534,14 @@ if ( {) {
     </div>
 );
 }
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

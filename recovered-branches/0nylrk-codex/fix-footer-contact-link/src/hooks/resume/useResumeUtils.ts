@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -11,6 +12,11 @@ import { toast } from '@/hooks/use-toast';
 // Utility function to format dates for DB operations
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { format  } from 'date-fns';
+import { toast } from '@/hooks/use-toast';
+// Utility function to format dates for DB operations
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {format} from 'date-fns';
 import {toast} from '@/hooks/use-toast';
 // Utility function to format dates for DB operations
@@ -23,6 +29,7 @@ export const formatDateForDB = (date: Date | string | undefined) => {
 export const handleResumeError = (e: any, errorMessage: string) => {;
   console.error(`Error: ${errorMessage}`, e);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -30,6 +37,8 @@ export const handleResumeError = (e: any, errorMessage: string) => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format } from 'date-fns',
 import { toast } from '@/hooks/use-toast',
 // Utility function to format dates for DB operations
@@ -39,6 +48,7 @@ export const formatDateForDB = (date: Date | string | undefined) => {
 },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -46,6 +56,8 @@ export const formatDateForDB = (date: Date | string | undefined) => {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export const formatDateForDB = (date: Date | string | undefined) => {
   if (!date) return undefined
@@ -121,45 +133,35 @@ export const showSuccessToast = (title: string, description: string) => {
 <<<<<<< HEAD
 =======
   console.error(`Error: ${errorMessage}`, e),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   toast({
-<<<<<<< HEAD
     title: "Error"
     description: `${errorMessage}: ${e.message}`;
-=======
     title: "Error",
     description: `${errorMessage}: ${e.message}`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     variant: "destructive"
   }),
   return false
-<<<<<<< HEAD
 }
-=======
 },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Success notification
 export const showSuccessToast = (title: string, description: string) => {
   toast({
-<<<<<<< HEAD
     title
     description
   }),
   return true
-<<<<<<< HEAD
 }
 
-=======
-=======
     title,
-<<<<<<< HEAD
-=======
     description
   }),
   return true
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 import { format } from 'date-fns',;
 import { toast } from '@/hooks/use-toast',;
@@ -183,6 +185,7 @@ export const showSuccessToast = (title: string, description: string) => {;
   toast({;
     title,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     title,
@@ -191,10 +194,13 @@ export const showSuccessToast = (title: string, description: string) => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description;
   });
   return true
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -216,3 +222,7 @@ export default UseResumeUtils;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+export default UseResumeUtils;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

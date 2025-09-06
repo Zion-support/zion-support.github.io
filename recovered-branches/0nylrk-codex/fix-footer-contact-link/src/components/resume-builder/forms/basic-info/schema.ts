@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/schema.ts
 
 =======
@@ -10,14 +11,18 @@ export const basicInfoSchema = z.object({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {z} from "zod";
 export const basicInfoSchema = z.object({
-=======
 import {z} from "zod";
 export const basicInfoSchema = z.object({;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   fullName: z.string().min(1, "Full name is required");
   title: z.string().min(1, "Professional title is required");
   email: z.string().email("Invalid email address");
@@ -25,6 +30,7 @@ export const basicInfoSchema = z.object({;
   location: z.string().optional();
   website: z.string().url().optional().or(z.literal(""));
   linkedin: z.string().optional();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -70,14 +76,19 @@ export type BasicInfoFormData = z.infer < typeof basicInfoSchema>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   github: z.string().optional()
   hourlyRate: z.number().positive().optional()});
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { z } from "zod",
 export const basicInfoSchema = z.object({
   fullName: z.string().min(1, "Full name is required"),
@@ -87,6 +98,7 @@ export const basicInfoSchema = z.object({
   location: z.string().optional(),
   website: z.string().url().optional().or(z.literal("")),
   linkedin: z.string().optional(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -103,6 +115,11 @@ export const basicInfoSchema = z.object({
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  github: z.string().optional(),
+  hourlyRate: z.number().positive().optional()}),
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>,
 import { z } from "zod",;
 export const basicInfoSchema = z.object({;
@@ -115,6 +132,7 @@ export const basicInfoSchema = z.object({;
   linkedin: z.string().optional(),;
   github: z.string().optional(),;
   hourlyRate: z.number().positive().optional()});
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
@@ -163,3 +181,6 @@ hourlyRate: z.number () .positive () .optional ()
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

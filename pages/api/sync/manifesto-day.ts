@@ -1,13 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import {
+  readState
+  writeState
+  upsertEvent
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
 
   readState,
   writeState,
   upsertEvent,;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -18,6 +28,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "../../../utils/sync/storage";
 
 import { signPayload } from "../../../utils/sync/signature";
@@ -33,7 +45,21 @@ if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const state = readState();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  if (!state.config.optIn |state.config.paused) {
+    return res.status(403).json({ error: "Sync disabled for this instance" });
+  }
+  const { milestoneId, title, timestamp } = req.body as {
+    milestoneId: string;
+    title: string;
+    timestamp?: number;
+  }
+  if (!milestoneId |!title)
+    return res.status(400).json({ error: "milestoneId, title required" });
+  const version = nextVersionFor(state, milestoneId);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -48,6 +74,7 @@ export default async function handler(req, res) {
   try {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
+<<<<<<< HEAD
 =======
   if (!state && state.config.optIn || state && state.config.paused) {
     return res && res.status(403).json({ error: "Sync disabled for this instance" });
@@ -187,6 +214,8 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
     } catch (error) {
@@ -205,11 +234,18 @@ export default async function handler(req, res) {
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number },
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" }),
   const version = nextVersionFor(state, milestoneId),
+<<<<<<< HEAD
 
   const event = {
     eventId: uuidv4()
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
 payload: {
+=======
+  const event = {
+    eventId: uuidv4()
+    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
+    payload: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: milestoneId
       subjectId: milestoneId
       score: 0
@@ -229,8 +265,11 @@ payload: {
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
     originInstanceId: state.config.instanceId,
     version,
@@ -241,9 +280,12 @@ payload: {
   const headers: Record<string, string> = {},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -257,8 +299,22 @@ await Promise && Promise.all(
       .filter((p) => !p && p.paused)
       .map(async (peer) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+        try {
+          await axios.post(url, body, { headers, timeout: 5000 });
+        } catch {}
+      })
+  );
+  return res
+    .status(200)
+    .json({ status: "created", version, eventId: event.eventId });
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {  } catch (error) {
     console.error("Error:", error);
@@ -370,11 +426,15 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -390,3 +450,57 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+  const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number },;
+  if (!milestoneId || !title) return res.status( error: "milestoneId, title required" ).json({$2});
+  const version = nextVersionFor(state, milestoneId);
+  const event = {;
+    eventId: uuidv4();
+    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category;
+    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },;
+    originInstanceId: state.config.instanceId,;
+    version,;
+    timestamp: timestamp || Date.now()},;
+  upsertEvent(state, event);
+  writeState(state);
+  const body = { ...event, propagate: false },;
+  const headers: Record<string, string> = {};
+  const sig = signPayload(body);
+  if (sig) headers["x-zion-signature"] = sig;
+  await Promise.all(;
+    state.config.peers;
+      .filter((p) => !p.paused);
+      .map(async (peer) => {;
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+        try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      });
+  );
+  return res.status(200).json({ status: "created", version, eventId: event.eventId });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

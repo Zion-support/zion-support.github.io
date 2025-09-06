@@ -13,29 +13,25 @@ import { Heart } from "lucide-react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Heart} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useToast} from "@/hooks/use-toast";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Heart } from "lucide-react",
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
-=======
 import { cn } from "@/lib/utils",
 import { useToast } from "@/hooks/use-toast",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TalentCardSaveButtonProps {
 
   profileId: string
@@ -45,10 +41,13 @@ interface TalentCardSaveButtonProps {
   isAuthenticated: boolean
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TalentCardSaveButton({
   profileId
   profileName;
@@ -59,17 +58,17 @@ export function TalentCardSaveButton({
 }: TalentCardSaveButtonProps) {
   const { toast } = useToast();
   const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
-=======
 
 export function TalentCardSaveButton({ 
-<<<<<<< HEAD
   profileId, ;
   profileName;
-=======
   profileId, 
   profileName,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isSaved, 
   onToggleSave,
   isAuthenticated 
@@ -86,8 +85,11 @@ export function TalentCardSaveButton({
 
 =======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle save toggle
 
   const handleSaveToggle = (e: React.MouseEvent) => {
@@ -97,6 +99,7 @@ export function TalentCardSaveButton({
         title: "Authentication required"
         description: "Please log in to save talents to your favorites"
         variant: "destructive"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -116,6 +119,8 @@ import {useToast} from "@/hooks/use-toast";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       });
       return
     }
@@ -123,7 +128,6 @@ import {useToast} from "@/hooks/use-toast";
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
     }
-<<<<<<< HEAD
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites"
       description: localIsSaved
@@ -132,11 +136,13 @@ import {useToast} from "@/hooks/use-toast";
       variant: "default"
     })
   }
-=======
     
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }),
       return
 import React from "react",;
@@ -233,10 +239,13 @@ export function TalentCardSaveButton(): any ({ ;
 =======
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
       description: localIsSaved 
@@ -268,8 +277,11 @@ export function TalentCardSaveButton(): any ({ ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <button
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
@@ -302,6 +314,7 @@ export function TalentCardSaveButton(): any ({ ;
     </button>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -324,6 +337,9 @@ export function TalentCardSaveButton(): any ({ ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     toast({;
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
@@ -347,6 +363,7 @@ export function TalentCardSaveButton(): any ({ ;
       />;
     </button>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -528,3 +545,7 @@ if (!isAuthenticated) {
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

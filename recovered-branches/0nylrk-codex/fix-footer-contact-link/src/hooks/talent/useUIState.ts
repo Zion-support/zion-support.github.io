@@ -5,11 +5,10 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { TalentProfile } from '@/types/talent';
 export function useUIState() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 import {useState} from 'react';
@@ -22,6 +21,11 @@ export function useUIState() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {useState} from 'react';
+import {TalentProfile} from '@/types/talent';
+export function useUIState() {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
@@ -108,8 +112,11 @@ function useUIState() {
 =======
     selectedTalent;
     setSelectedTalent;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { TalentProfile } from '@/types/talent',;
 export function useUIState() {;
@@ -142,6 +149,7 @@ export function useUIState() {;
     setIsHireModalOpen,;
     selectedTalent,;
     setSelectedTalent,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -211,6 +219,8 @@ export function useUIState() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     expandedSections;
     toggleSection;
 

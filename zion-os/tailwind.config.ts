@@ -3,6 +3,7 @@
 import type { Config } from 'tailwindcss';
 const config: Config = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -19,20 +20,20 @@ const config: Config = {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   content: [;
     &quot;./src/pages/**/*.{js,ts,jsx,tsx,mdx}&quot;,
     &quot;./src/components/**/*.{js,ts,jsx,tsx,mdx}&quot;,
     &quot;./src/app/**/*.{js,ts,jsx,tsx,mdx}&quot;],
-=======
   content: [
-<<<<<<< HEAD
     &quot;./src/pages/**/*.{js,ts,jsx,tsx,mdx}&quot;
     &quot;./src/components/**/*.{js,ts,jsx,tsx,mdx}&quot;
     &quot;./src/app/**/*.{js,ts,jsx,tsx,mdx}&quot;]
-=======
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -40,6 +41,8 @@ const config: Config = {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   theme: {
     extend: {
       colors: {
@@ -68,9 +71,10 @@ const config: Config = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   plugins: []}
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default config;

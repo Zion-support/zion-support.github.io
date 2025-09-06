@@ -68,17 +68,20 @@ export function ApiKeysManager() {;
 
 =======
 
-<<<<<<< HEAD
 import {useState} from "react";
 import {Check, Clock, Key, MoreVertical, RefreshCw, X} from "lucide-react";
 import {format} from "date-fns";
 import {useApiKeys, type, ApiKeyScope} from "@/hooks/useApiKeys";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -90,6 +93,8 @@ import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -106,6 +111,7 @@ import CodeBlock from "./CodeBlock",
 export function ApiKeysManager() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -119,6 +125,8 @@ export function ApiKeysManager() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const {
     keys;
 
@@ -135,15 +143,15 @@ export function ApiKeysManager() {
 
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
-=======
   const { ;
     keys;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   const { 
     keys,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     loading, 
     newApiKey,
     fetchApiKeys, 
@@ -160,8 +168,11 @@ export function ApiKeysManager() {
 
 =======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Create key form state
   const [keyName, setKeyName] = useState(""),
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -170,10 +181,13 @@ export function ApiKeysManager() {
   useState(() => {
     fetchApiKeys()
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
 
   const handleCreateKey = async () => {
@@ -183,8 +197,11 @@ export function ApiKeysManager() {
     setKeyName("");
     setSelectedScopes([])
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }),
   
   const handleCreateKey = async () => {
@@ -196,6 +213,7 @@ export function ApiKeysManager() {
     setSelectedScopes([])
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -222,25 +240,25 @@ export function ApiKeysManager() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleRegenerateKey = async (keyId: string) => {
     await regenerateApiKey(keyId)
     setShowRegenerateConfirm(null)
-<<<<<<< HEAD
   }
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleRevokeKey = async (keyId: string) => {
     await revokeApiKey(keyId)
     setShowDeleteConfirm(null)
-<<<<<<< HEAD
   }
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Scope options
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
     { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' }
@@ -256,6 +274,7 @@ export function ApiKeysManager() {
         : [...prev, scope]
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -267,16 +286,21 @@ export function ApiKeysManager() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getExampleCode = (key: string) => {
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
   -H "Content-Type: application/json"`
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -302,22 +326,23 @@ export function ApiKeysManager() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Reset form when dialog closes
   const handleDialogClose = () => {
     setKeyName(""),
     setSelectedScopes([]),
     setShowCreateDialog(false)
-<<<<<<< HEAD
   }
-=======
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -362,21 +387,26 @@ export function ApiKeysManager() {
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <Checkbox
                           id={scope.value}
-=======
                         <Checkbox 
                           id={scope.value} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
 import { format } from "date-fns",;
@@ -992,11 +1022,6 @@ function ApiKeysManager() {
 =======
                         <Checkbox;
                           id={scope.value} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
@@ -1145,6 +1170,7 @@ function ApiKeysManager() {
           Refresh
         </Button>
       </CardFooter>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1355,6 +1381,9 @@ function ApiKeysManager() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog
         open={showRegenerateConfirm !== null}

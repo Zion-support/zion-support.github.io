@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json());
@@ -28,6 +29,8 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import useSWR from 'swr',
 import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../../components/layout/EnhancedLayout',
@@ -84,14 +87,18 @@ class ErrorBoundary extends React.Component {
 
 =======
   return { props: {} };}
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -249,6 +256,8 @@ export default function AdminDisputesDashboard() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
@@ -260,8 +269,6 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     },
     {} as Record<string, string>
   );
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
@@ -269,10 +276,6 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     if (k) acc[k] = decodeURIComponent(v || '');
     return acc;
   }, {} as Record<string, string>),;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   let role = 'guest';
   try {
     const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
@@ -281,9 +284,6 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   return { props: {} };};
 
 export default function AdminDisputesDashboard() {;
@@ -291,8 +291,6 @@ export default function AdminDisputesDashboard() {;
   const [statusFilter, setStatusFilter] = useState<
     'All' | 'Open' | 'Under Review' | 'Resolved'
   >('Open');
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   if (role !== 'admin') {;
     return { redirect: { destination: '/', permanent: false }   } catch (error) {
@@ -311,26 +309,24 @@ export default function AdminDisputesDashboard() {;
   }
 }
 },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AdminDisputesDashboard() {
   const { data } = useSWR('/api/disputes', fetcher),
   const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const disputes = useMemo(() => {
-<<<<<<< HEAD
     const list = data?.disputes |[];
     if (statusFilter === 'All') return list;
     return list.filter((d: any) => d.status === statusFilter);  }, [data, statusFilter]);
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const list = data?.disputes || [],
     if (statusFilter === 'All') return list,
     return list.filter((d: any) => d.status === statusFilter)
   }, [data, statusFilter]),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -339,6 +335,8 @@ export default function AdminDisputesDashboard() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <EnhancedLayout>
       <div className="max-w-6xl mx-auto">
@@ -420,12 +418,15 @@ export default function AdminDisputesDashboard() {
                   </td>
                 </tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -555,12 +556,8 @@ if (return list) {
       </div>
     </EnhancedLayout>
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 },;
 export default function AdminDisputesDashboard(req, res) {
   try {
@@ -647,6 +644,7 @@ export default function AdminDisputesDashboard(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -662,3 +660,5 @@ export default function AdminDisputesDashboard(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

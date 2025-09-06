@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const partners: Partner[] = [ {
@@ -306,9 +307,9 @@ function SummitPage() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 const partners: Partner[] = [ {
   name: 'Gov Partner'
 }
@@ -346,32 +347,32 @@ setForm ({
 })
 }finally {
   setSubmitting (false)
-<<<<<<< HEAD
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<
     'youtube' | 'twitch' | 'twitter'
-=======
 
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<
     'youtube' | 'twitch' | 'twitter';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   >('youtube');
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =
     useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({
-<<<<<<< HEAD
     name: ''
     email: ''
     role: ''
     country: ''
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: '',
     email: '',
     role: '',
     country: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
   });
   const [submitting, set_submitting] = React.useState (false);
@@ -390,13 +391,14 @@ export default function SummitPage() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
   const [submitting, setSubmitting] = React.useState(false);
   const [result, setResult] = React.useState<{
     ok?: boolean;
     error?: string;
   } | null>(null);
-<<<<<<< HEAD
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name'
@@ -445,9 +447,6 @@ export default function SummitPage() {
   }
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import Head from 'next/head';
 import React from 'react';
 type Speaker = {
@@ -497,7 +496,6 @@ export default function SummitPage() {
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
   const [submitting, setSubmitting] = React.useState(false),
   const [result, setResult] = React.useState<{ ok?: boolean, error?: string } | null>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
@@ -694,7 +692,6 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
           title="YouTube livestream"
           allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
           allowFullScreen
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         />
       )
       } catch (error) {
@@ -703,14 +700,12 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
   }
 }
     if (platform === 'twitch') {
-<<<<<<< HEAD
         />
       );
     }
       />
     );  }
 
-=======
       return (
         <iframe
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
@@ -741,8 +736,11 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
       />
     )
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
         />;
       </Head>;
@@ -783,8 +781,11 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
         <meta name="description" content="Zion Global Summit: AI, Talent, Trust — Globalized" />
       </Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
         <div className='max-w-4xl'>
           <p className='uppercase tracking-widest text-neon-blue'>
@@ -825,8 +826,11 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
         >
           <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
           <ol className='space-y-3 list-decimal list-inside'>            <li>Opening Keynote — Launching Zion Protocol</li>
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <section className="relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue">
         <div className="max-w-4xl">
           <p className="uppercase tracking-widest text-neon-blue">Zion Global Summit 2025</p>
@@ -851,6 +855,7 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
           <ol className="space-y-3 list-decimal list-inside">
             <li>Opening Keynote — Launching Zion Protocol</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -859,6 +864,8 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
@@ -891,6 +898,7 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
 =======
         </section>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'>;
@@ -1031,6 +1039,8 @@ if ( {) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <section
         id='speakers'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -1082,9 +1092,12 @@ if ( {) {
 
 =======
                 />
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-6">Speakers</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1092,6 +1105,7 @@ if ( {) {
             <div key={s.name} className={`p-4 rounded-lg border ${s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>
               <div className="flex items-center gap-4">
                 <img src={s.avatarUrl} alt={s.name} className="w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1108,6 +1122,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div>
                   <div className="font-semibold">{s.name}</div>
                   <div className="text-sm opacity-70">{s.title}</div>
@@ -1648,7 +1664,6 @@ if ( {) {
 }
         </div>
       </section>
-<<<<<<< HEAD
       <section
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -1661,16 +1676,10 @@ if ( {) {
           >
             Become a Sponsor
           </a>
-=======
       <section id="partners" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">Partners</h2>
           <a href="#register" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800">Become a Sponsor</Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           {partners.map((p) => (
@@ -1688,7 +1697,6 @@ if ( {) {
 }
         </div>
       </section>
-<<<<<<< HEAD
       <section
         id='livestream'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -1696,16 +1704,10 @@ if ( {) {
         <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
           <h2 className='text-2xl font-bold'>Livestream</h2>
           <div className='flex flex-wrap items-center gap-2'>
-=======
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
           <div className="flex flex-wrap items-center gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <select
               aria-label="Platform"
               className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
@@ -1762,22 +1764,15 @@ if ( {) {
 }
         </div>
       </section>
-<<<<<<< HEAD
       <section
         id='register'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
       >
         <h2 className='text-2xl font-bold mb-4'>Register</h2>
         <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>
-=======
       <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
         <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <label className="block text-sm mb-1">Name</label>
             <input
@@ -1876,7 +1871,6 @@ if ( {) {
           </div>
         </form>
       </section>
-<<<<<<< HEAD
       <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>
         <h2 className='text-xl font-semibold'>
           AI Session Summaries (Optional)
@@ -1887,14 +1881,10 @@ if ( {) {
       </section>
     </>
 );
-<<<<<<< HEAD
-=======
 
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
@@ -2275,6 +2265,7 @@ export default function SummitPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2290,3 +2281,5 @@ export default function SummitPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

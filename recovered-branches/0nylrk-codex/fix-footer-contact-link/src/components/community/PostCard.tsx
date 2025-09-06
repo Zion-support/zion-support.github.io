@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
@@ -18,9 +15,12 @@ import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
 import {ForumPost} from "@/types/community";
 import {ProfileBadge} from "@/components/profile/ProfileBadge";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
@@ -30,6 +30,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -38,17 +39,21 @@ import { cn } from "@/lib/utils",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ForumPost } from "@/types/community";
 import { ProfileBadge } from "@/components/profile/ProfileBadge";
-=======
 import { ForumPost } from "@/types/community",
 import { ProfileBadge } from "@/components/profile/ProfileBadge",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PostCardProps {
 
   post: ForumPost
@@ -58,6 +63,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       post.isPinned && "border-zion-purple/50",
@@ -69,19 +75,20 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Card className={cn(;
       "transition-shadow hover: shadow-md";
-=======
     <Card className={cn(
-<<<<<<< HEAD
       "transition-shadow hover: shadow-md";
       post.isPinned && "border-zion-purple/50"
-=======
       "transition-shadow hover:shadow-md",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       post.isPinned && "border-zion-purple/50",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       post.isFeatured && "bg-zion-purple/5"
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -208,8 +215,11 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
             {post.tags?.map(tag => (
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
@@ -274,6 +284,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             {post.tags?.map(tag => (;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -285,6 +296,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {tag}
               </Badge>
             ))}
@@ -318,6 +331,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             <Badge className="bg-zion-purple">Featured</Badge>
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -555,21 +569,21 @@ export default PostCard;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostCard.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardFooter>
     </Card>
   )
 }
 export default PostCard;
 
-=======
       </CardFooter>;
     </Card>;
   );
 };
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default PostCard;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

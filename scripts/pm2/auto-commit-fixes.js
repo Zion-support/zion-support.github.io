@@ -8,26 +8,28 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-class AutoCommitFixes {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log'); this.startTime = Date.now(); this.commitsMade = 0; this.filesChanged = 0}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+class AutoCommitFixes {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log'); this.startTime = Date.now(); this.commitsMade = 0; this.filesChanged = 0}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}
 ;
 class AutoCommitFixes {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log'); this.startTime = Date.now(); this.commitsMade = 0; this.filesChanged = 0};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
 ; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)};
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 #!/usr/bin/env node,;
 const fs = require('fs'),;
@@ -52,6 +54,7 @@ class AutoCommitFixes {,;
     } catch (error) {,;
       console.error('Error writing to log: file:', error.message);
     },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -147,3 +150,5 @@ class AutoCommitFixes {,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ProfileDetail.tsx
 
 <<<<<<< HEAD
@@ -6,6 +7,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -26,9 +29,12 @@ export default function ProfileDetail() {
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useParams } from "react-router-dom",
 import { supabase } from "@/integrations/supabase/client",
@@ -39,16 +45,21 @@ import { Footer } from "@/components/Footer",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { 
   MapPin;
   Clock;
@@ -62,8 +73,11 @@ import {
   Globe
 } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
@@ -71,7 +85,6 @@ export default function ProfileDetail() {
   const { profileId } = useParams();
   const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
-=======
 import { HireNowCTA } from "@/components/profile/HireNowCTA",
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
@@ -81,11 +94,14 @@ export default function ProfileDetail() {
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
@@ -101,6 +117,7 @@ export default function ProfileDetail() {
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -162,12 +179,16 @@ export default function ProfileDetail() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-          .single();
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          .single();
           .single(),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         if (error) {
           throw new Error(error.message)
         }
@@ -189,6 +210,7 @@ export default function ProfileDetail() {;
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -334,17 +356,25 @@ if ( {) {
   }, [profileId]);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+    fetchProfile()
+  }, [profileId]);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
 
     fetchProfile()
   }, [profileId]),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -367,6 +397,7 @@ if ( {) {
     )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -374,6 +405,9 @@ if ( {) {
   }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { useParams } from "react-router-dom",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -514,6 +548,7 @@ export default function ProfileDetail() {;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -538,18 +573,20 @@ export default function ProfileDetail() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <SEO
         title={`${profileData.full_name} | Zion AI Marketplace`}
-<<<<<<< HEAD
         description={profileData.bio |"Check out this talent's profile on Zion!"}
-=======
         description={profileData.bio || "Check out this talent's profile on Zion!"}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
@@ -602,6 +639,7 @@ export default function ProfileDetail() {;
                       <span className="text-zion-slate-light font-normal">/hr</span>
                     </div>
                   )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -782,19 +820,23 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </CardContent>
             </Card>
-=======
                 </div>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -982,14 +1024,15 @@ if ( {) {
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
                         <LinkIcon className="h-4 w-4" />
-<<<<<<< HEAD
                         {link.title |link.url}
                       </a>
-=======
                         {link.title || link.url}
                       </Link>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     ))}
                   </div>
                 ) : (
@@ -1002,6 +1045,7 @@ if ( {) {
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
               talentProfile={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1057,6 +1101,8 @@ if ( {) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
@@ -1341,12 +1387,10 @@ if ( {) {
 =======
 =======
 
-=======
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               }}
             />
             {/* Contact Information */}
@@ -1373,17 +1417,10 @@ if ( {) {
                     </Link>
                   </div>
                 )}
-<<<<<<< HEAD
               </div>
             </div>
-=======
               </div>;
             </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>
@@ -1406,6 +1443,7 @@ if ( {) {
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1418,6 +1456,8 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ProfileDetail.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </a>
                 )}
               </div>
@@ -1429,7 +1469,6 @@ if ( {) {
     </>
   )
 }
-=======
                   </Link>
                 )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1524,8 +1563,11 @@ try {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -42,10 +43,9 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-import Link from 'next/link';
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import Link from 'next/link';
 import Link from 'next/link',;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const features = [
@@ -56,6 +56,7 @@ const features = [;
   { key: 'custom_sla', label: 'Custom SLA' },
   { key: 'branded_onboarding', label: 'Branded onboarding' },
   { key: 'admin_dashboards', label: 'Admin dashboards' }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 const tiers = [;
   {
@@ -113,6 +114,8 @@ export default function EnterprisePlans() {_return (
               <a href=&quot;mailto:sales@zion.ai&quot; style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</Link>
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const features = [
   { key: 'private_portal', label: 'Private hiring portal' }
@@ -234,6 +237,7 @@ export default function EnterprisePlans() {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -242,6 +246,9 @@ export default function EnterprisePlans() {
 import Link from 'next/link';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import Link from 'next/link';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const features = [;
   { key: 'private_portal', label: 'Private hiring portal' },;
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },;
@@ -346,6 +353,7 @@ export default function EnterprisePlans(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -360,6 +368,8 @@ export default function EnterprisePlans(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </tbody>
           </table>
         </div>
@@ -411,13 +421,8 @@ export default function EnterprisePlans(req, res) {
         </div>
       </section>
     </main>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 }
@@ -500,11 +505,12 @@ function EnterprisePlans() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

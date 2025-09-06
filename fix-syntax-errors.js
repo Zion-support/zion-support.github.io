@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }},
@@ -44,6 +45,8 @@ if (.ends_with (") {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 #!/usr/bin/env node
 
 import fs from "fs";
@@ -168,21 +171,25 @@ if ( {) {
     console.error(`Error processing ${file}:`, error.message);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 });
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
-=======
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }},
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }},
-<<<<<<< HEAD
 ,
 // Run all fixes,
 fixFooter();
@@ -192,8 +199,11 @@ fixApiDocs();
 fixCareers();
 ,
 console.log('🎉 Syntax error fixes completed');
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
@@ -210,6 +220,7 @@ fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -221,3 +232,5 @@ fixCareers(),;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

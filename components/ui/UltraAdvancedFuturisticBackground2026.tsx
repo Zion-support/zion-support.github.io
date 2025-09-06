@@ -384,6 +384,7 @@ this.maxLife = this.life
         ctx.fill();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       }
     }
@@ -455,21 +456,14 @@ this.maxLife = this.life
     class NeuralNode {;
 =======
 <<<<<<< HEAD
-        ctx.restore();      }        ctx.restore()
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        ctx.restore();      }        ctx.restore()
         ctx.restore();      }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Neural network node class
     class NeuralNode {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -615,27 +609,17 @@ constructor(x: number, y: number) {
             ctx.stroke();
           }
         });
-<<<<<<< HEAD
         ctx.restore();      }            ctx.stroke()
           }
         });
         ctx.restore()
-<<<<<<< HEAD
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         ctx.restore();      }
 
       }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Quantum field class
     class QuantumField {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -746,33 +730,23 @@ constructor(x: number, y: number) {
 =======
           ctx.stroke();
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
         ctx.restore();      }          ctx.stroke()
         }
         ctx.restore()
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
-=======
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ctx.restore();      }
 
       }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Holographic layer class
     class HolographicLayer {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1023,6 +997,7 @@ this.color = getColorSchemeColor()
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         ctx.restore();      }
 
@@ -1037,19 +1012,21 @@ this.color = getColorSchemeColor()
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
         ctx.restore();      }        
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
         
         ctx.restore()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ctx.restore();      }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
@@ -1073,17 +1050,11 @@ this.color = getColorSchemeColor()
 =======
       }
     }
-=======
 
       }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
@@ -1959,25 +1930,29 @@ if ( {) {
 =======
 =======
               ctx.restore();
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }
           });
         });
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       animationFrameId = requestAnimationFrame(animate);
               ctx.restore()
             }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       animationFrameId = requestAnimationFrame(animate);    };            }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           })
@@ -1988,14 +1963,16 @@ if ( {) {
     };
 =======
     }
-=======
 
       animationFrameId = requestAnimationFrame(animate);    };
 
     };
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     animate();
       />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2102,24 +2079,14 @@ if ( {) {
     enableNeuralNetworks
     enableMultidimensional
   ]);
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     >
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
         style={{ zIndex: -1 }}
       />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Additional visual effects */}
       {enableMultidimensional && (
         <div className='absolute inset-0 pointer-events-none'>
@@ -2185,7 +2152,6 @@ export default UltraAdvancedFuturisticBackground2026;
               rotate: [360, 180, 0],
               opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],            }}
             transition={{
-<<<<<<< HEAD
               duration: 10
               repeat: Infinity
               ease: 'easeInOut',            }}
@@ -2225,6 +2191,7 @@ ease: "easeInOut"
             }}
             transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
               duration: 10,
               repeat: Infinity,
 {children}
@@ -2259,13 +2226,12 @@ export default UltraAdvancedFuturisticBackground2026;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               duration: 10
               repeat: Infinity
-=======
               duration: 10,
               repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',              ease: "easeInOut"
             }}
           />
@@ -2280,19 +2246,15 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
   )
 }
 export default UltraAdvancedFuturisticBackground2026;
-<<<<<<< HEAD
 
-=======
               duration: 10,
               repeat: Infinity,
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
             }}
           />
         </div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2300,3 +2262,5 @@ export default UltraAdvancedFuturisticBackground2026;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

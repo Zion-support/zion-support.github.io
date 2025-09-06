@@ -13,9 +13,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -35,11 +38,8 @@ export function OnChainExport() {;
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
   const { toast } = useToast();
   const { user } = useAuth();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react";
 import {
@@ -116,7 +116,6 @@ function OnChainExport() {
 <<<<<<< HEAD
 =======
 
-=======
 import { Button } from "@/components/ui/button",
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react",
 import {
@@ -132,9 +131,7 @@ export function OnChainExport() {
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
   const { toast } = useToast(),
   const { user } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
@@ -148,9 +145,9 @@ export function OnChainExport() {
         return
       }
       // Request accounts
-<<<<<<< HEAD
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
       const address = accounts[0];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
@@ -163,11 +160,17 @@ export function OnChainExport() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
+      const address = accounts[0],
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Sign message to verify ownership
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`
       await ethereum.request({
         method: 'personal_sign'
         params: [address, message]
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -181,14 +184,18 @@ export function OnChainExport() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       });
       setIsConnected(true);
-=======
       }),
       
       setIsConnected(true),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Wallet connected"
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
@@ -200,12 +207,15 @@ export function OnChainExport() {
       })
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleExportTokens = async () => {
     setIsExporting(true);
@@ -214,8 +224,11 @@ export function OnChainExport() {
       // Simulate token export
       await new Promise(resolve => setTimeout(resolve, 2000));
       setExportStatus('success');
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const handleExportTokens = async () => {
@@ -228,12 +241,15 @@ export function OnChainExport() {
       
       setExportStatus('success'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Tokens exported"
         description: "Your ZION$ tokens have been exported to your wallet"})
@@ -480,19 +496,13 @@ export function OnChainExport() {;
 =======
     } finally {
       setIsExporting(false)
-<<<<<<< HEAD
     };
   };
-=======
     }
-<<<<<<< HEAD
   }
 
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card>
       <CardHeader>
@@ -550,6 +560,7 @@ export function OnChainExport() {;
             </Button>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -560,18 +571,21 @@ export function OnChainExport() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 }
-=======
 };
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -853,8 +867,11 @@ h-5 w-5"/>)
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

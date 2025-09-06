@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/reviews/ReviewsModerationTable.tsx
 
 
@@ -6,6 +7,8 @@
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
@@ -14,7 +17,6 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client";
 import { Review, ReviewStatus } from "@/types/reviews";
 import {
-<<<<<<< HEAD
 
   Table
   TableBody
@@ -115,9 +117,12 @@ export function ReviewsModerationTable({
       .toUpperCase()
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Table,
   TableBody,
   TableCell,
@@ -126,9 +131,12 @@ export function ReviewsModerationTable({
   TableRow,;
 } from '@/components/ui/table';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'; import {
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
@@ -157,10 +165,6 @@ import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 import {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Dialog,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   DialogContent,
@@ -169,12 +173,15 @@ import {
   DialogHeader,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogTitle,
 } from '@/components/ui/dialog'
   DropdownMenu,
@@ -244,9 +251,12 @@ export function ReviewsModerationTable({
 =======
       })
       onRefresh()
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogTitle} from "@/components/ui/dialog",
 import {
   DropdownMenu,
@@ -320,6 +330,7 @@ export function ReviewsModerationTable({
       onRefresh(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       setViewDetailsOpen(false)
 =======
@@ -329,6 +340,8 @@ export function ReviewsModerationTable({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setViewDetailsOpen(false)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     },
@@ -338,12 +351,15 @@ export function ReviewsModerationTable({
         description: `Failed to update review: ${error.message}`,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         variant: 'destructive',
       })
     },
@@ -356,6 +372,7 @@ export function ReviewsModerationTable({
       .toUpperCase()
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         variant: "destructive"})
     }}),
@@ -363,6 +380,8 @@ export function ReviewsModerationTable({
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         variant: "destructive"})
     }}),
 
@@ -376,6 +395,7 @@ export function ReviewsModerationTable({
       .toUpperCase()
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   if (isLoading) {
@@ -724,6 +744,8 @@ export function ReviewsModerationTable({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -746,6 +768,7 @@ export function ReviewsModerationTable({;
     )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/reviews/ReviewsModerationTable.tsx
 
 =======
@@ -756,6 +779,10 @@ export function ReviewsModerationTable({;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+  const handleApprove = (reviewId: string) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     updateReviewStatus({ reviewId, status: 'approved' })
   }
   const handleReject = (reviewId: string) => {
@@ -799,22 +826,26 @@ export function ReviewsModerationTable({;
                       <AvatarImage
                         src={review.reviewer_profile.avatar_url}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                         alt={review.reviewer_profile.display_name |''}                      />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                        alt={review.reviewer_profile.display_name |''}                      />
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                        alt={review.reviewer_profile.display_name |''}                      />
   }
 
   const handleApprove = (reviewId: string) => {
-=======
                         alt={review.reviewer_profile.display_name || ''}                      />
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     updateReviewStatus({ reviewId, status: "approved" })
   },
 
@@ -1171,11 +1202,6 @@ export function ReviewsModerationTable({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
                       />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ) : (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <AvatarFallback>
@@ -1191,19 +1217,24 @@ export function ReviewsModerationTable({;
                     ) : (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                       <span className='text-sm font-medium'>
                         {review.reviewer_profile?.display_name |'User'}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <span className='text-sm font-medium'>
                         {review.reviewer_profile?.display_name |'User'}
-=======
                       <span className="text-sm font-medium">
                         {review.reviewer_profile?.display_name || "User"}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       </span>
                     )}
                   </div>
@@ -1322,12 +1353,15 @@ export function ReviewsModerationTable({;
                       <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/reviews/ReviewsModerationTable.tsx
 
                       </Button>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         size='sm'
                         variant='outline'
                         className='h-8 w-8 p-0'
@@ -1343,10 +1377,13 @@ export function ReviewsModerationTable({;
                         disabled={isPending}                      >
                         <X className='h-4 w-4 text-red-500' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                       </Button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
@@ -1363,11 +1400,6 @@ export function ReviewsModerationTable({;
                         disabled={isPending}
                       >
                         <X className="h-4 w-4 text-red-500" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </Button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </>
@@ -1388,12 +1420,15 @@ export function ReviewsModerationTable({;
                       </DropdownMenuItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       )}
                     </DropdownMenuContent>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {review.status === 'approved' && (
                         <DropdownMenuItem
                           onClick={() =>
@@ -1417,12 +1452,15 @@ export function ReviewsModerationTable({;
                         >                          Mark as approved
                         </DropdownMenuItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                       )}
                       )}
 >>>>>>>                     </DropdownMenuContent>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {review.status === "approved" && (
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
                           Mark as rejected
@@ -1432,11 +1470,6 @@ export function ReviewsModerationTable({;
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
                           Mark as approved
                         </DropdownMenuItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       )}
                     </DropdownMenuContent>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1463,6 +1496,7 @@ export function ReviewsModerationTable({;
             </DialogHeader>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             <div className='space-y-4'>
@@ -1476,24 +1510,29 @@ export function ReviewsModerationTable({;
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='space-y-4'>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center gap-2'>
-=======
 
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1508,10 +1547,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-                        alt={selectedReview.reviewer_profile.display_name |''}                      />
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                        alt={selectedReview.reviewer_profile.display_name |''}                      />
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ) : (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <AvatarFallback>
@@ -1523,6 +1562,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <User className='h-4 w-4' />
                         )}
                       </AvatarFallback>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1603,6 +1643,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         alt={selectedReview.reviewer_profile.display_name || ""}
                       />;
                     ) : (;
@@ -1611,11 +1653,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                           ? getInitials(selectedReview.reviewer_profile.display_name);
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </Avatar>
@@ -1624,16 +1661,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {selectedReview.is_anonymous
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         ? 'Anonymous'
                         : selectedReview.reviewer_profile?.display_name |
                           'User'}
-=======
                         ? "Anonymous"
                         : selectedReview.reviewer_profile?.display_name || "User"}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </div>
                     <Badge variant="outline">
                       {selectedReview.status}
@@ -1662,11 +1704,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   {selectedReview.communication_rating && (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='border rounded-md p-3 bg-muted/20'>
                 <p className='whitespace-pre-wrap'>
                   {selectedReview.review_text}
@@ -1676,10 +1721,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <h4 className='text-sm font-medium'>Additional Ratings</h4>
                 <div className='flex flex-wrap gap-2'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                   {selectedReview.communication_rating && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
               <div className="border rounded-md p-3 bg-muted/20">
                 <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>
@@ -1688,11 +1736,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-2">
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
                 <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {selectedReview.communication_rating && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <Badge variant="outline">
@@ -1713,9 +1756,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Badge
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       variant={
                         selectedReview.would_work_again
                           ? 'default'
@@ -1724,6 +1770,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {selectedReview.would_work_again
                         ? 'Would work again'
                         : 'Would not work again'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                     </Badge>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1878,14 +1925,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       variant={selectedReview.would_work_again ? "default" : "secondary"}
                     >
                       {selectedReview.would_work_again ? "Would work again" : "Would not work again"}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </Badge>
                   )}
                 </div>
@@ -1904,7 +1948,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <>
                   <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     variant='destructive'
                     onClick={() => handleReject(selectedReview.id)}
                     disabled={isPending}                  >
@@ -1943,10 +1990,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                   Mark as Approved
                 </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     variant="destructive"
                     onClick={() => handleReject(selectedReview.id)}
                     disabled={isPending}
@@ -1977,11 +2027,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 >;
                   Mark as Approved;
                 </Button>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </DialogFooter>
@@ -1990,9 +2035,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </>
   )
 }
@@ -2002,21 +2050,30 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
   return (<div className="flex"> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {
   star
 }/>) )
 }</div>)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
   star ;
 }/>) ) ;
 }</div>) ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   reviews.map ( (review) => (<TableRow key= {
@@ -2051,6 +2108,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
   selectedReview.reviewer profile.display name |""
 }/>) : (<AvatarFallback> {"
   selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2337,10 +2395,10 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 >>>>>>> }</Avatar> <div> </Badge> </div> </div> <div> {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-}</AvatarFallback>)
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}</AvatarFallback>)
 }</AvatarFallback>) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</Avatar> <div> </Badge> </div> </div> <div> {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   renderStars (selectedReview.rating) "
@@ -2371,6 +2429,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</DialogFooter> </DialogContent> </Dialog>)
 }</>)
 }"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2647,3 +2706,8 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    </>;
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

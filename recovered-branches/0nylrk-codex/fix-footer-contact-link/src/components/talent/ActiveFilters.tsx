@@ -13,13 +13,17 @@ import { ClickableBadge } from "@/components/ui/clickable-badge",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ActiveFiltersProps {;
   selectedSkills: string[],;
@@ -64,9 +68,10 @@ export function ActiveFilters(): any ({;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 interface ActiveFiltersProps {
@@ -82,14 +87,16 @@ interface ActiveFiltersProps {
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void;
-=======
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ActiveFiltersProps {
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
@@ -102,6 +109,7 @@ interface ActiveFiltersProps {
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   clearFilters: () => void
 }
@@ -109,12 +117,11 @@ interface ActiveFiltersProps {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   clearFilters: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function ActiveFilters({;
   selectedSkills;
   toggleSkill;
@@ -126,9 +133,12 @@ export function ActiveFilters({;
   setPriceRange;
   experienceRange;
   setExperienceRange;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ActiveFilters({
   selectedSkills,
   toggleSkill,
@@ -140,6 +150,7 @@ export function ActiveFilters({
   setPriceRange,
   experienceRange,
   setExperienceRange,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   clearFilters
@@ -156,10 +167,11 @@ export function ActiveFilters({
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
-<<<<<<< HEAD
 
   const hasActiveFilters =
     selectedSkills.length > 0 |
@@ -170,8 +182,11 @@ export function ActiveFilters({
     priceRange[0] !== 50 |
     priceRange[1] !== 200;
   if (!hasActiveFilters) return null;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const hasActiveFilters = 
     selectedSkills.length > 0 || 
     selectedAvailability.length > 0 || 
@@ -183,12 +198,15 @@ export function ActiveFilters({
   
   if (!hasActiveFilters) return null,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
@@ -200,6 +218,7 @@ export function ActiveFilters({
         <ClickableBadge
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+<<<<<<< HEAD
 
 =======
         <ClickableBadge
@@ -208,6 +227,8 @@ export function ActiveFilters({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { Button } from "@/components/ui/button",;
@@ -378,11 +399,6 @@ export function ActiveFilters({;
         <ClickableBadge;
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           onClick={() => toggleSkill(skill)}
         >
           {skill}
@@ -507,6 +523,7 @@ export function ActiveFilters({;
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ========
@@ -526,6 +543,9 @@ export function ActiveFilters({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -566,6 +586,7 @@ export function ActiveFilters({;
       </Button>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -731,3 +752,7 @@ if (!hasActiveFilters) return null;
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -158,11 +159,12 @@ import {;
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Star
   Zap
@@ -280,8 +282,6 @@ import {
   Users as UsersIcon2
   Target as TargetIcon
   Zap as ZapIcon2;
-=======
-<<<<<<< HEAD
 import {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -429,7 +429,6 @@ function Revolutionary2025Pricing() {
 =======
   Target as TargetIcon,;
   Zap as ZapIcon2,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 
@@ -513,6 +512,7 @@ export default function Revolutionary2025Pricing() {
     if (billingCycle === 'yearly') {
       return Math.floor(basePrice * 0.8); // 20% discount for yearly
     }
+<<<<<<< HEAD
 
 =======
 
@@ -656,16 +656,14 @@ export default function Revolutionary2025Pricing() {
 };
 =======
 <<<<<<< HEAD
-    return basePrice;  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    return basePrice;  }
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-=======
     return basePrice;  };
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
@@ -720,12 +718,15 @@ export default function Revolutionary2025Pricing(req, res) {
     return basePrice
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Pricing tiers for comparison
   const pricingTiers = [
     {
@@ -735,6 +736,7 @@ export default function Revolutionary2025Pricing(req, res) {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -846,6 +848,8 @@ export default function Revolutionary2025Pricing(req, res) {
           </title>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Access to 25+ Core Services'
         'Basic AI Integration'
         'Standard Support (24/7)'
@@ -918,7 +922,6 @@ export default function Revolutionary2025Pricing(req, res) {
     timeToValue: '< 30 days'
     globalReach: '150+ countries',  }
 
-=======
         'Access to 25+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ],
       icon: <Sparkles className="w-8 h-8" />,
@@ -973,12 +976,10 @@ export default function Revolutionary2025Pricing(req, res) {
     timeToValue: '< 30 days',
     globalReach: '150+ countries'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className="min-h-screen">
         <Head>
-<<<<<<< HEAD
           <title>
             Revolutionary 2025 Pricing - Zion Tech Group | Competitive AI & IT
             Solutions
@@ -1316,6 +1317,7 @@ if ( {) {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             >;
               <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent mb - 6'>;
                 Revolutionary 2025 Pricing;
@@ -1336,6 +1338,8 @@ if ( {) {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <title>Revolutionary 2025 Pricing - Zion Tech Group | Competitive AI & IT Solutions</title>
           <meta name="description" content="Explore competitive pricing for Zion Tech Group's revolutionary 2025 services. AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950" />
           <meta name="keywords" content="AI pricing, quantum computing pricing, zero trust security pricing, edge computing pricing, 5G pricing, neuromorphic computing pricing, AI branding pricing, holographic events pricing" />
@@ -1371,11 +1375,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -1390,7 +1389,10 @@ if ( {) {
                 deliver 10x better performance at 50% lower costs than traditional solutions.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Billing Toggle */}
               <div className='flex items-center justify-center gap-4 mb-12'>;
                 <span className='text-gray-400'>Monthly</span>;
@@ -1414,6 +1416,7 @@ if ( {) {
 
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
                     }`}
+<<<<<<< HEAD
 =======
 
 =======
@@ -1455,6 +1458,8 @@ if ( {) {
                     }`}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Billing Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1485,6 +1490,7 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1496,10 +1502,13 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   />
                 </button>
                 <span className="text-gray-400">Yearly (Save 20%)</span>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1512,6 +1521,8 @@ if ( {) {
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Market Analysis */}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1525,18 +1536,12 @@ if ( {) {
                   animate={{ opacity: 1, scale: 1 }}
 =======
               <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12'>
-=======
               {/* Market Analysis */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
@@ -1661,6 +1666,7 @@ if ( {) {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
@@ -1910,6 +1916,8 @@ viewport={{ once: true }} className="text-center mb-16">
                   } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Pricing Tiers */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -1920,7 +1928,6 @@ viewport={{ once: true }} className="text-center mb-16">
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
         {/* Pricing Tiers */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1946,11 +1953,6 @@ viewport={{ once: true }} className="text-center mb-16">
 }
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Choose Your Transformation Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1958,7 +1960,6 @@ viewport={{ once: true }} className="text-center mb-16">
                 our revolutionary AI and quantum computing services.
               </p>
             </motion.div>
-<<<<<<< HEAD
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
@@ -1970,7 +1971,6 @@ viewport={{ once: true }} className="text-center mb-16">
                     tier.popular
                       ? 'scale-105 border-2 border-blue-500'                      : 'border border-gray-700'
                   } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
-=======
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
@@ -2009,12 +2009,15 @@ viewport={{ once: true }} className="text-center mb-16">
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -2022,6 +2025,7 @@ viewport={{ once: true }} className="text-center mb-16">
                         Most Popular
                       </div>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2036,6 +2040,8 @@ viewport={{ once: true }} className="text-center mb-16">
                     </div>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   )}
                   <div className='text-center mb-8'>
                     <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl mb-4'>
@@ -2057,8 +2063,11 @@ viewport={{ once: true }} className="text-center mb-16">
                     )}
                   </div>
                   <ul className='space-y-4 mb-8'>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2077,6 +2086,7 @@ viewport={{ once: true }} className="text-center mb-16">
 }
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   <ul className="space-y-4 mb-8">
 =======
@@ -2086,6 +2096,8 @@ viewport={{ once: true }} className="text-center mb-16">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <h3 className='text-2xl font-bold text-white mb-2'>
                       {tier.name}
                     </h3>
@@ -2102,8 +2114,11 @@ viewport={{ once: true }} className="text-center mb-16">
                     )}
                   </div>
                   <ul className='space-y-4 mb-8'>
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                     <p className="text-gray-400 mb-6">{tier.description}</p>
                     <div className="mb-4">
@@ -2133,12 +2148,15 @@ viewport={{ once: true }} className="text-center mb-16">
                   </div>
                   <ul className="space-y-4 mb-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
@@ -2165,7 +2183,6 @@ viewport={{ once: true }} className="text-center mb-16">
   }
 }
                   </ul>
-<<<<<<< HEAD
                   <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>                    {tier.cta}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </button>
@@ -2360,7 +2377,6 @@ className='text-center mb-16'>;
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
                   <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200">
                     {tier.cta  } catch (error) {
     console.error("Error:", error);
@@ -2402,11 +2418,6 @@ className='text-center mb-16'>;
 }
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Individual Service Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -2415,7 +2426,10 @@ className='text-center mb-16'>;
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Category Filter */}
             <div className='flex flex - wrap justify - center gap - 4 mb - 12'>;
               {service_categories.map (category => (                <button;
@@ -2529,7 +2543,6 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                   <div className='flex items-start justify-between mb-4'>
                     <div className='flex items-center gap-3'>
                       <div className='text-3xl'>{service.icon}</div>
-=======
             {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2615,11 +2628,6 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="text-3xl">{service.icon}</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                           {service.name  } catch (error) {
@@ -2637,6 +2645,7 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                         <Star className="w-3 h-3" />
                         Popular
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2672,6 +2681,8 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                         ${getPrice(service)}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     )}
                   </div>
                   {/* Service Description */}
@@ -2683,7 +2694,6 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                     <div className='flex items-center gap-2'>
                       <span className='text-2xl font-bold text-blue-400'>
                         ${getPrice(service)}
-=======
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2711,6 +2721,7 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2723,6 +2734,8 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       </span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
@@ -2732,6 +2745,7 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2763,6 +2777,8 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                   {/* Key Features */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {/* Key Features */}
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-gray-300 mb-2'>
@@ -2777,8 +2793,11 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                           <div className='w-1.5 h-1.5 bg-blue-500 rounded-full'></div>                          {feature}
                         </div>
                       ))}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {/* Key Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2832,11 +2851,6 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {service.features.length > 3 && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <div className="text-xs text-gray-500 mt-1">
@@ -2844,6 +2858,7 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                           +{service.features.length - 3} more features
                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2851,6 +2866,8 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       )}
                   <div className="mb-4 p-3 bg-gray-800/50 rounded-lg">
                     <h4 className="text-xs font-semibold text-gray-300 mb-1">Market Position:</h4>
@@ -2886,8 +2903,11 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                   <div className='flex items-center gap-3'>
                     <button className='flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'>
                       <ExternalLink className='w-4 h-4 mr-2' />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2941,18 +2961,22 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                     <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                       <ExternalLink className="w-4 h-4 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       Learn More
                     </button>
                     <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
                       <Phone className="w-4 h-4" />
                     </button>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -3002,6 +3026,8 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
               whileInView={{ opacity: 1, y: 0 }}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {/* Hover Effects */}
                   <div className='absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>                </motion.div>
               ))}
@@ -3015,7 +3041,6 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
                   {/* Hover Effects */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3061,6 +3086,7 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -3073,6 +3099,8 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -3100,7 +3128,6 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                 Contact our team to discuss your specific needs and get a custom quote.
                 We offer flexible pricing and payment options to fit your budget.
               </p>
-<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30'>
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-3' />
@@ -3131,9 +3158,12 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'>
                   <Phone className='w-5 h-5 mr-2' />
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30">
                   <Phone className="w-8 h-8 text-blue-400 mx-auto mb-3" />
@@ -3155,6 +3185,7 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                   <Phone className="w-5 h-5 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -3170,6 +3201,8 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Get Custom Quote
                 </button>
                 <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
@@ -3194,6 +3227,7 @@ viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-
         </section>
       </div>
     </UltraQuantumHolographicBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -3336,13 +3370,11 @@ transition={{ duration: 0 && 0.8 }}
                   <BookOpen className='w - 5 h - 5 mr - 2' />                  Download Pricing Guide;
 =======
 <<<<<<< HEAD
-);
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+);
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -3400,6 +3432,7 @@ transition={{ duration: 0 && 0.8 }}
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -3415,3 +3448,5 @@ transition={{ duration: 0 && 0.8 }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

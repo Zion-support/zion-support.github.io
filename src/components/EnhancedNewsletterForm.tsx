@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useState, useRef } from 'react'
@@ -37,7 +40,10 @@ export function EnhancedNewsletterForm() {
       })
       const data = await res.json().catch(() => ({}))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
@@ -60,12 +66,15 @@ export function EnhancedNewsletterForm() {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState, useRef } from "react",
@@ -104,6 +113,7 @@ export function EnhancedNewsletterForm() {
       const data = await res.json().catch(() => ({})),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>>       if (res.ok) {
@@ -113,6 +123,8 @@ export function EnhancedNewsletterForm() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (res.ok) {
         // Handle different success statuses
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -121,12 +133,15 @@ export function EnhancedNewsletterForm() {
         } else {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           toast.success(data.message || 'Thanks for subscribing!')
         }
         setIsSubmitted(true)
@@ -144,11 +159,14 @@ export function EnhancedNewsletterForm() {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           toast.success(data.message || "Thanks for subscribing!")
         }
         setIsSubmitted(true),;
@@ -167,6 +185,7 @@ export function EnhancedNewsletterForm() {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
@@ -175,11 +194,9 @@ export function EnhancedNewsletterForm() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
@@ -192,6 +209,7 @@ export function EnhancedNewsletterForm() {
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -229,6 +247,8 @@ export function EnhancedNewsletterForm() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {isSubmitted ? (;
         <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>;
           <p className='text-white font-medium'>Thank you for subscribing!</p>;
@@ -265,15 +285,11 @@ export function EnhancedNewsletterForm() {
 =======
             We&apos;ll keep you updated with the latest from Zion.
           </p>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       ) : (
@@ -284,11 +300,14 @@ export function EnhancedNewsletterForm() {
           <Input
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             type='email'
             id='enhanced-newsletter-email'
             name='email'
@@ -323,12 +342,14 @@ export function EnhancedNewsletterForm() {
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             type="email"
             id="enhanced-newsletter-email"
             name="email"
@@ -420,6 +441,7 @@ export function EnhancedNewsletterForm() {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
@@ -438,3 +460,6 @@ export function EnhancedNewsletterForm() {
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

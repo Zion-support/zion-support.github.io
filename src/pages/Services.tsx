@@ -1,5 +1,6 @@
 <<<<<<< HEAD:src/pages/Services.tsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import Card from '../components/Card';
 import { Link } from 'react-router-dom';
@@ -92,6 +93,7 @@ const Services: React.FC = () => {
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/pages/Services.tsx
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -109,6 +111,8 @@ const Services: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Cloud Services</h3>
             <p className="text-gray-600">Scalable cloud infrastructure and deployment solutions.</p>
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         {/* Main Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -116,37 +120,44 @@ const Services: React.FC = () => {
             title="AI & Machine Learning"
             description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
             icon="🤖"
+            features={["Machine Learning Models", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]}
           />
           <ServiceCard
             title="Cybersecurity"
             description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
             icon="🔒"
+            features={["Threat Detection", "Security Audits", "Compliance Management", "Incident Response"]}
           />
           <ServiceCard
             title="Cloud Infrastructure"
             description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
             icon="☁️"
+            features={["Cloud Migration", "Infrastructure Optimization", "Auto-scaling", "Cost Management"]}
           />
           <ServiceCard
             title="Digital Transformation"
             description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
             icon="🚀"
+            features={["Process Automation", "Digital Strategy", "Change Management", "Technology Integration"]}
           />
           <ServiceCard
             title="Data Analytics"
             description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
             icon="📊"
+            features={["Business Intelligence", "Data Visualization", "Real-time Analytics", "Custom Dashboards"]}
           />
           <ServiceCard
             title="IoT Solutions"
             description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
             icon="🌐"
+            features={["Device Management", "Real-time Monitoring", "Data Collection", "Smart Automation"]}
           />
         </div>
 
         {/* Service Categories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
 =======
       </div>
@@ -169,6 +180,8 @@ const Services: React.FC = () => {
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card
               title="Consulting Services"
@@ -196,23 +209,11 @@ const Services: React.FC = () => {
             />
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Industry Solutions */}
-        <div className="text-center">
+        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-=======
-      </div>
-      {/* Process Section */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
-            <p className="text-xl text-gray-600">How we deliver exceptional results for your business</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🏥</span>
@@ -249,11 +250,10 @@ const Services: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold">Government</h3>
             </div>
-<<<<<<< HEAD
-=======
           </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
         </div>
+<<<<<<< HEAD
       </div>
 
       {/* CTA Section */}
@@ -293,6 +293,28 @@ const Services: React.FC = () => {
             </Link>
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
+=======
+
+        {/* CTA Section */}
+        <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
+              >
+                Get Free Consultation
+              </Link>
+              <Link 
+                to="/pricing" 
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
+              >
+                View Pricing
+              </Link>
+            </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       </div>

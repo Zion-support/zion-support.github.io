@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
@@ -31,20 +30,19 @@ export default function AdminKycPage() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
-=======
 import React, { useEffect, useState } from 'react',;
 import Head from 'next/head',;
 import type { KycProfile } from '../../utils/kyc',;
-=======
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AdminKycPage() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -83,6 +81,8 @@ export default function AdminKycPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [queue, setQueue] = useState<KycProfile[]>([])
   const [reason, setReason] = useState<string>('')
   async function load() {
@@ -105,11 +105,14 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
     const data = await res.json();
     if (data.ok) load()
   }
+<<<<<<< HEAD
     if (data.ok) load()
   }
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [queue, setQueue] = useState<KycProfile[]>([]);
   const [reason, setReason] = useState<string>('');
   async function load() {
@@ -136,9 +139,12 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
@@ -166,6 +172,7 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
               <div className="flex items-center justify-between">
                 <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   )  } catch (error) {
@@ -187,34 +194,33 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
 <div className="font-semibold">{p.fullLegalName |p.businessName |p.userId}</div>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className="font-semibold">{p.fullLegalName |p.businessName |p.userId}</div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
                   {p.flags && p.flags.length > 0 && (
                     <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
                   )}
-=======
                   <div className="font-semibold">{p.fullLegalName || p.businessName || p.userId}</div>
                   <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
                   {p.flags && p.flags.length > 0 && (
                     <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <div className="flex gap-2">
                   <button onClick={() => act(p.userId, 'approve')} className="px-3 py-1 rounded bg-green-600 text-white">Approve</button>
@@ -226,6 +232,7 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
                 <div className="font-medium text-sm mb-1">Documents</div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -236,11 +243,15 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                  {(p.documents |[]).map((d) => (
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  {(p.documents |[]).map((d) => (
                   {(p.documents || []).map((d) => (
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div key={d.id} className="border rounded p-2 text-xs">
                       <div>Kind: {d.kind}</div>
                       <div>Filename: {d.filename}</div>
@@ -262,6 +273,7 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
         </div>
       </main>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -374,20 +386,21 @@ function act() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ),
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

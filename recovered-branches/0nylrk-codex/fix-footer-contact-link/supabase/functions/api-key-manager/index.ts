@@ -9,8 +9,6 @@ import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
@@ -18,20 +16,22 @@ import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-=======
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -40,10 +40,13 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -54,6 +57,8 @@ interface CreateKeyRequest {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 interface CreateKeyRequest {;
@@ -61,6 +66,7 @@ interface CreateKeyRequest {;
   scopes: string[],;
   expiresAt?: string | null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -70,11 +76,14 @@ interface CreateKeyRequest {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 interface RegenerateKeyRequest {;
   keyId: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -116,6 +125,8 @@ const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   expiresAt?: string | null
 }
@@ -123,17 +134,16 @@ interface RegenerateKeyRequest {
   keyId: string
 }
 // Create a Supabase client
-<<<<<<< HEAD
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const supabase = createClient(supabaseUrl, supabaseKey);
-=======
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -239,13 +249,14 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req.method === 'OPTIONS') {
     return new Response('ok', {
       headers: {
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-<<<<<<< HEAD
   }
   try {
     // Extract auth token from request
@@ -959,8 +970,11 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500
         headers: { 'Content-Type': 'application/json' }})
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
@@ -1217,6 +1231,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1228,6 +1243,8 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     if (!keyIds |keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
@@ -1262,11 +1279,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 =======
         headers: { 'Content-Type': 'application/json' }})
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Get logs for those keys
     const ids = keyIds.map(k => k.id);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1336,13 +1349,15 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       status: 500
 
       headers: { 'Content-Type': 'application/json' }})
-<<<<<<< HEAD
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     // Get logs for those keys;
     const ids = keyIds.map(k => k.id),;
@@ -1367,6 +1382,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     return new Response(JSON.stringify({ error: 'Internal server error' }), {;
       status: 500;
       headers: { 'Content-Type': 'application/json' }});
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1819,3 +1835,8 @@ async function createApiKey (userId: string, name: string, scopes: string[], exp
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

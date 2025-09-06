@@ -15,15 +15,14 @@ export default function InviteBanner(): any ({;
       {onJoin && (;
 =======
 import React from 'react';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type Props = {
   message: string;
   onJoin?: () => void;
@@ -44,6 +43,7 @@ export default function InviteBanner({
           disabled={!canJoin}
           className={`px-3 py-2 rounded ${canJoin ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-400'}`}
         >          Join Meetingtype Props = {
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -88,10 +88,10 @@ function InviteBanner() {
           className={`px - 3 py - 2 rounded ${can_join ? 'bg - cyan - 600 text - white' : 'bg - gray - 700 text - gray - 400'}`}
         >          Join Meetingtype Props = {
 <<<<<<< HEAD
-  message: string
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  message: string
   message: string,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   onJoin?: () => void;
   canJoin?: boolean
 }
@@ -166,24 +166,22 @@ function InviteBanner() {
           Join Meeting
         </button>
       )}
-<<<<<<< HEAD
     </div>;
   );
 }
 
 }
 }
-=======
     </div>
   );
-<<<<<<< HEAD
+}
 }
 <<<<<<< HEAD
-=======
-}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

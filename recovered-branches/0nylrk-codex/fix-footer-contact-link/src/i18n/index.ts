@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/index.ts
 
 export default i18n;
@@ -19,6 +20,8 @@ import arTranslation from './locales/ar/translation ;
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/index.ts
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import i18n from 'i18next';
 import { initReactI18next  } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector',
@@ -107,10 +110,13 @@ import ar_translation from './locales / ar / translation.json';
 =======
 
 
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import i18n from 'i18next',;
 import { initReactI18next } from 'react-i18next',;
 import LanguageDetector from 'i18next-browser-languagedetector',;
@@ -285,10 +291,9 @@ i18n.on('languageChanged', (lng) => {;
   // If user is authenticated, save language preference to profile;
   // This will be implemented in the LanguageContext;
 }),;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default i18n;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

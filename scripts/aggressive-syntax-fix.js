@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
 
 =======
@@ -27,6 +28,8 @@ if (process && process.env.NODE_ENV !== 'production') {
   logger && logger.add(new winston && winston.transports.Console({
     format: winston && winston.format.simple()
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const winston = require('winston');
 const logger = winston.createLogger({
 
@@ -57,6 +60,7 @@ const { glob } = require('glob');
 class AggressiveSyntaxFixer {
     constructor() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
 
 
@@ -76,6 +80,11 @@ class AggressiveSyntaxFixer {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        this.projectRoot = process.cwd(),
+        this.fixedFiles = [],
+        this.errors = []
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const winston = require('winston'),;
 const logger = winston.createLogger({;
   level: 'info',;
@@ -105,6 +114,7 @@ class AggressiveSyntaxFixer {;
         this.fixedFiles = [],;
         this.errors = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -117,6 +127,8 @@ class AggressiveSyntaxFixer {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 ;
     log(message) {;
@@ -171,6 +183,7 @@ class AggressiveSyntaxFixer {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -178,6 +191,8 @@ class AggressiveSyntaxFixer {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         this.projectRoot = process.cwd()
         this.fixedFiles = []
@@ -374,18 +389,19 @@ class AggressiveSyntaxFixer {;
 
         return errorPatterns.some(pattern => pattern.test(content))
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     createValidFile(filePath) {
 
         const ext = path.extname(filePath)
         const fileName = path.basename(filePath, ext)
         const dirName = path.dirname(filePath)
         // Convert invalid characters to valid ones
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -530,14 +546,14 @@ default function ${validFileName}() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_')
 if (ext === '.tsx' |ext === '.jsx') {
 
-=======
         const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
         
 if (ext === '.tsx' || ext === '.jsx') {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             return `import React from 'react';
 default function ${validFileName}() {
   return (
@@ -559,10 +575,13 @@ const ${validFileName} = {
   // TODO: Implement ${validFileName} functionality
 }`
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     createValidFile(filePath) {;
         const ext = path.extname(filePath),;
@@ -650,11 +669,6 @@ const ${validFileName} = {;
 const ${validFileName} = {;
   // TODO: Implement ${validFileName} functionality;
 }`;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
         return `// ${validFileName} placeholder
 const ${validFileName} = {}`
@@ -722,15 +736,21 @@ if (require.main === module) {
     main()
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 module.exports = AggressiveSyntaxFixer
 // Graceful shutdown handling
 process.on('SIGINT', () => {
   console.log('\n🛑 Received SIGINT, shutting down gracefully...')
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 module.exports = AggressiveSyntaxFixer, 
 
@@ -738,17 +758,19 @@ module.exports = AggressiveSyntaxFixer,
 process.on('SIGINT', () => {
   // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Add cleanup logic here
   process.exit(0)
 })
 process.on('SIGTERM', () => {
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 ;
@@ -1099,18 +1121,12 @@ module.exports = AggressiveSyntaxFixer, ;
   process.exit(0)
 });
 
-=======
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here
   process.exit(0)
 }),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 module.exports = AggressiveSyntaxFixer,;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1182,8 +1198,11 @@ process.on('SIGTERM', () => {;
   process.exit(0);
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

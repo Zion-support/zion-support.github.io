@@ -9,26 +9,32 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ) {
   const method = (req.method |'POST').toUpperCase();
-=======
 ) {;
   const method = (req.method || 'POST').toUpperCase();
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
 import { Star } from 'lucide-react';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,13 +48,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const method = (req.method |'POST').toUpperCase()
-=======
   const method = (req.method || 'POST').toUpperCase(),;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
@@ -191,21 +201,18 @@ function handler() {
     prompt
     'You are a recruiting ops specialist with excellent writing skills.'
   );
-<<<<<<< HEAD
   return res.status(200).json({ email: text });  const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
 
   return res.status(200).json({ email: text })
 }
-<<<<<<< HEAD
-=======
   return res.status(200).json({ email: text });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
-=======
   return res.status(200).json({ email: text });
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

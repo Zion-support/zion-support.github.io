@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Review} from "@/types/reviews";
 import {ReviewCard} from "./ReviewCard";
 =======
@@ -14,11 +15,17 @@ import { ReviewCard } from "./ReviewCard",
 <<<<<<< HEAD
 =======
 =======
-import {Review} from "@/types/reviews";
-import {ReviewCard} from "./ReviewCard";
 =======
+import { Review } from "@/types/reviews";
+import { ReviewCard } from "./ReviewCard";
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {Review} from "@/types/reviews";
+import {ReviewCard} from "./ReviewCard";
+import { Review } from "@/types/reviews",
+import { ReviewCard } from "./ReviewCard",
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -29,6 +36,8 @@ import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
@@ -110,6 +119,7 @@ export function ReviewsList({
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Review } from "@/types/reviews",;
 import { ReviewCard } from "./ReviewCard",;
@@ -165,6 +175,18 @@ export function ReviewsList({ reviews, isLoading, onReportReview } ReviewsListPr
       </div>
     );
   }
+=======
+          ))}
+      </div>
+    );
+  }
+            <div className="h-20 bg-muted rounded mb-3"></div>
+            <div className="flex gap-2">
+              <div className="h-6 w-16 bg-muted rounded"></div>
+              <div className="h-6 w-16 bg-muted rounded"></div>
+            </div>
+          </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Review } from "@/types/reviews",;
 import { ReviewCard } from "./ReviewCard",;
 interface ReviewsListProps {;
@@ -193,6 +215,7 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
               <div className="h-6 w-16 bg-muted rounded"></div>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -351,11 +374,17 @@ onReportReview: (reviewId: string, reason: string) => Promise<boolean>
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewsList.tsx
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ))}
       </div>;
     );
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (reviews.length === 0) {
     return (
       <div className="text-center py-8 border rounded-lg bg-muted/20">
@@ -369,6 +398,7 @@ onReportReview: (reviewId: string, reason: string) => Promise<boolean>
 return (
     <div className="space-y-4">
       {reviews.map((review) => (
+<<<<<<< HEAD
 
         <ReviewCard key={review.id} review={review} onReport={onReportReview} />
       ))}
@@ -379,3 +409,18 @@ return (
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        <ReviewCard key={review.id} review={review} onReport={onReportReview} />
+        <ReviewCard 
+          key={review.id} 
+          review={review} 
+          onReport={onReportReview} 
+        />
+      ))}
+    </div>
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

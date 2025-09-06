@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
@@ -9,6 +10,13 @@ import React from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+
+</Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+import React from 'react';
+
+ </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
   index
 }</span>) )
@@ -145,6 +153,7 @@ import { FileText;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -201,6 +210,9 @@ const ReportsPage: React.FC = () => {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const ReportsPage: React.FC = () => {
   const reports = [;
     {
@@ -451,6 +463,7 @@ const ReportsPage: React.FC = () => {;
         {/* Featured Report */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
 =======
 
 
@@ -458,6 +471,10 @@ const ReportsPage: React.FC = () => {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+            <motion.div
+            <motion.div 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -694,6 +711,7 @@ icon: <Globe className="w - 8 h - 8" />,
             ))}
           </div>
         </section>
+<<<<<<< HEAD
 
 =======
 
@@ -750,6 +768,9 @@ icon: <Globe className="w - 8 h - 8" />,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -768,6 +789,7 @@ icon: <Globe className="w - 8 h - 8" />,
               </p>
             </motion.div>
             {/* Category Pills */}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1448,10 +1470,10 @@ export default ReportsPage;
             </motion.div>
             {/* Category Pills */}
 <<<<<<< HEAD
-            <motion.div
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <motion.div
             <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="flex flex-wrap justify-center gap-4 mb-12"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial={{ opacity: 0, y: 30 }}
@@ -1493,14 +1515,7 @@ export default ReportsPage;
                 </button>
               ))}
             </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {reports.filter(report => !report.featured).map((report, index) => (
@@ -1592,6 +1607,7 @@ export default ReportsPage;
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
@@ -1601,12 +1617,9 @@ export default ReportsPage;
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1675,9 +1688,10 @@ export default ReportsPage
 }
 export default ReportsPage;
 
-<<<<<<< HEAD
-=======
 export default ReportsPage;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

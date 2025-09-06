@@ -1,25 +1,31 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Data store utilities
 export const dataStore = {
   // Add data store functionality here
-<<<<<<< HEAD
   getData: () => []
   setData: (data: any) => null
   updateData: (id: string, data: any) => null
   deleteData: (id: string) => null
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -29,6 +35,8 @@ export const dataStore = {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface Project {
   id: string;
   title: string;
@@ -164,6 +172,7 @@ export const getReviewsByProject = (projectId: string) => store.getReviewsByProj
 export const getAllReviews = () => store.getAllReviews();
 export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -178,3 +187,5 @@ export const counterpartRole = (role: 'client' | 'talent') => store.counterpartR
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

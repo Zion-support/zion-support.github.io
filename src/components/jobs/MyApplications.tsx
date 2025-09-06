@@ -7,9 +7,12 @@
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react"
 import { useJobApplications } from "@/hooks/useJobApplications"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -25,11 +28,14 @@ export function MyApplications() {
       case "new": return <Badge variant="secondary">New</Badge>
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -39,11 +45,14 @@ import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       default:
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
@@ -85,7 +94,6 @@ import {ApplicationStatus} from "@/types/jobs";
     switch (status) {
       case "new": return <Badge variant="secondary">New</Badge>
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>
-=======
 import Link from "next/link",
 import { ApplicationStatus } from "@/types/jobs",
 export function MyApplications() {
@@ -104,11 +112,6 @@ export function MyApplications() {
         return <Badge className="bg-green-100 text-green-800">Hired</Badge>,
       case "rejected":
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       default:
         return <Badge variant="outline">{status}</Badge>
     }
@@ -147,21 +150,27 @@ export function MyApplications() {
     <div className="grid gap-4 md:grid-cols-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-      {applications.map((application,) => (
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      {applications.map((application,) => (
       {applications.map((application) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -174,11 +183,15 @@ export function MyApplications() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                {application.job?.title |"Unknown Job"}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                {application.job?.title |"Unknown Job"}
                 {application.job?.title || "Unknown Job"}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </CardTitle>
               {getStatusBadge(application.status)}
             </div>
@@ -191,6 +204,7 @@ export function MyApplications() {
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>>                   {application.cover_letter}
@@ -201,6 +215,17 @@ export function MyApplications() {
                   variant="outline"
                   size="sm"
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+import { useState } from "react",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
+import { formatDistanceToNow } from "date-fns",;
+import Link from "next/link",;
+import { ApplicationStatus } from "@/types/jobs",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
   const getStatusBadge = (status: ApplicationStatus,) => {;
@@ -413,26 +438,24 @@ export function MyApplications() {;
 =======
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {application.cover_letter}
                 </p>
               )}
-<<<<<<< HEAD
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
                   size="sm"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <div className="flex justify-between items-center">
                 <Button 
                   variant="outline" 
                   size="sm" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -440,6 +463,8 @@ export function MyApplications() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="text-xs"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   asChild
@@ -448,6 +473,7 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -669,15 +695,13 @@ default: return <Badge variant="outline"> {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/MyApplications.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Button
                   variant="default"
-=======
                 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button 
                   variant="default" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   size="sm"
                   className="text-xs"
                   asChild
@@ -691,25 +715,21 @@ default: return <Badge variant="outline"> {;
           </CardContent>
         </Card>
       ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>
   )
 }
-=======
     </div>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     </div>;
   );
-<<<<<<< HEAD
 };
-=======
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

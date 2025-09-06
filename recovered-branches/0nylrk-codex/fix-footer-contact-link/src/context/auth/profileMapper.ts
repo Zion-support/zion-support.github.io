@@ -11,16 +11,17 @@ import type { UserProfile } from "@/types/auth",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
 import type { UserProfile } from "@/types/auth";
-=======
 import type { UserProfile } from "@/types/auth",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use
@@ -45,6 +46,7 @@ export interface SupabaseUser {
  * Maps Supabase profile data to our app's user model
  */
 export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -114,6 +116,8 @@ import type { UserProfile } from "@/types/auth",;
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return {;
     id: user.id;
     email: user.email || "";
@@ -129,9 +133,7 @@ import type { UserProfile } from "@/types/auth",;
     role: profile.user_type // Map user_type to role for backward compatibility
   }
 }
-=======
   return {
-<<<<<<< HEAD
     id: user.id;
     email: user.email |"";
     displayName: profile.display_name |"";
@@ -148,7 +150,6 @@ import type { UserProfile } from "@/types/auth",;
     role: profile.user_type // Map user_type to role for backward compatibility
   }
 }
-=======
     id: user.id,
     email: user.email || "",
     displayName: profile.display_name || "",
@@ -218,8 +219,11 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

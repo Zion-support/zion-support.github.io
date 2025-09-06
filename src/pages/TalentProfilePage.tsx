@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React, { useState, useEffect } from "react",
@@ -15,9 +16,10 @@ import { useRouter } from 'next/router',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
-=======
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { TalentProfile } from '@/components/profile/TalentProfile'
@@ -84,11 +86,8 @@ export default function TalentProfilePage() {
         name: '';
         points: 0;
       };  const userProfile: UserProfile = user ? {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { TalentProfile } from "@/components/profile/TalentProfile",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
@@ -105,16 +104,18 @@ import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // Create a compatible UserProfile from UserDetails or the authenticated user
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 export default function TalentProfilePage() {
-=======
 import { toast } from "@/hooks/use-toast",
 import { SEO } from "@/components/SEO",
 export default function TalentProfilePage() {
@@ -126,9 +127,7 @@ export default function TalentProfilePage() {
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
   const router = useRouter()
   // Get id from Next.js router query params
   const { id } = router.query as { id?: string }
@@ -138,6 +137,7 @@ export default function TalentProfilePage() {
   const { userDetails } = useAuthStatus()
   const { isAuthenticated, user } = useAuth()
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Create a compatible UserProfile from UserDetails or the authenticated user
 =======
 =======
@@ -145,6 +145,9 @@ export default function TalentProfilePage() {
   // Create a compatible UserProfile from UserDetails or the authenticated user
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  // Create a compatible UserProfile from UserDetails or the authenticated user
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const userProfile: UserProfile = user
     ? {
         id: user.id |''
@@ -179,12 +182,16 @@ export default function TalentProfilePage() {
     name: user.name |''
     points: user.points |0
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
   const userProfile: UserProfile = user ? {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const userProfile: UserProfile = user ? {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: user.id || '',
     displayName: user.displayName || '',
     email: user.email || '', // Ensure email is always a string
@@ -197,6 +204,7 @@ export default function TalentProfilePage() {
     points: user.points || 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>   } : {
@@ -205,6 +213,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } : {
 >>>>>>>     id: userDetails?.id |''
     displayName: userDetails?.name |''
@@ -213,6 +223,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     profileComplete: false, // Default value since userDetails doesn't have this property
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // Handle loading error gracefully
   useEffect(() => {
@@ -222,11 +233,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     created_at: new Date().toISOString(); // Default value since userDetails doesn't have this property
     updated_at: new Date().toISOString(); // Default value since userDetails doesn't have this property    role: '', // Default empty string since userDetails doesn't have this property
     name: ''
     points: 0
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
 
@@ -234,31 +248,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>   // Handle loading error gracefully
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
     updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
     role: '', // Default empty string since userDetails doesn't have this property
     name: '',
     points: 0
-<<<<<<< HEAD
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Handle loading error gracefully
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   useEffect(() => {
     if (error) {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
         title: 'Error loading profile'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -266,6 +274,9 @@ ursor/fix-website-loading-errors-and-merge-6662
         title: 'Error loading profile',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        title: 'Error loading profile',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description:
           'There was a problem loading this talent profile. Please try again.'
         variant: 'destructive'
@@ -325,10 +336,13 @@ ursor/fix-website-loading-errors-and-merge-6662
     return <ProfileErrorState error={error} />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleRequestHire = () => {
     if (!isAuthenticated) {
@@ -754,9 +768,6 @@ return (<> <SEO title= {
         onMessageTalent = {handleMessageTalent,}
       />
       <BackToDirectoryButton />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"})
@@ -825,18 +836,11 @@ export default function TalentProfilePage() {;
 ;
   if (error || !profile) {;
     return <ProfileErrorState error={error} />;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         title: 'Authentication required',
         description: 'Please sign in to hire this talent.',
         variant: 'default',
@@ -979,8 +983,6 @@ return (<> <SEO title= {
         onMessageTalent = {handleMessageTalent,}
       />
       <BackToDirectoryButton />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         title: "Authentication required",
         description: "Please sign in to hire this talent.",
         variant: "default"}),
@@ -1306,6 +1308,7 @@ return (<> <SEO title= {
       <BackToDirectoryButton />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       {/* Sticky action buttons that appear when scrolling */}
@@ -1317,6 +1320,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Sticky action buttons that appear when scrolling */}
 >>>>>>>       <StickyAction>
         <div className="p-2 flex gap-2">
@@ -1358,18 +1363,22 @@ ursor/fix-website-loading-errors-and-merge-6662
       </StickyAction>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       <HireRequestModal
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-      {/* Request to Hire Modal */}
-<<<<<<< HEAD
-      <HireRequestModal
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      {/* Request to Hire Modal */}
+      <HireRequestModal
       <HireRequestModal 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {(,) => setIsHireModalOpen(false),}
@@ -1393,15 +1402,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+;
       
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Request to Hire Modal */}
@@ -1428,6 +1438,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -1440,3 +1451,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

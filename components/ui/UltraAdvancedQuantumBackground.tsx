@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -34,6 +34,8 @@ canvas && canvas.height = window && window.innerHeight;
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -334,6 +336,7 @@ this.maxLife = 100
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -479,21 +482,14 @@ if (return) {
 =======
 =======
 <<<<<<< HEAD
-          this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
           this.y = Math.random() * canvas.height;        }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       draw() {
         if (!ctx) return;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1095,6 +1091,7 @@ for (let i = 0, i < 8, i++) {
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1130,10 +1127,12 @@ for (let i = 0, i < 8, i++) {
 =======
 =======
 <<<<<<< HEAD
-            ctx.stroke();          }            ctx.stroke()
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            ctx.stroke();          }            ctx.stroke()
             ctx.stroke();          }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1141,6 +1140,8 @@ for (let i = 0, i < 8, i++) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         }
       }
@@ -1505,6 +1506,7 @@ if ( {) {
           scale: [1, 1.4, 1];
           opacity: [0.2, 0.6, 0.2]}}
         transition={{
+<<<<<<< HEAD
 
 =======
 
@@ -1608,20 +1610,24 @@ ease: 'easeInOut',
           delay: 2;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           duration: 6
           repeat: Infinity
           ease: 'easeInOut'
           delay: 2,          ease: "easeInOut"
           delay: 2
-=======
           duration: 6,
           repeat: Infinity,
           ease: 'easeInOut',
           delay: 2,
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }}
         transition={{
           duration: 5
@@ -1677,15 +1683,16 @@ ease: 'easeInOut',
       />;
 =======
       />
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -1727,7 +1734,10 @@ export default UltraAdvancedQuantumBackground;            ease: "linear",
 =======
       <div className='relative z-10'>{children}</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Quantum Energy Waves */}
       <div className='absolute bottom - 0 left - 0 right - 0 h - 32 overflow - hidden'>;
         <motion.div;
@@ -1767,6 +1777,7 @@ export default UltraAdvancedQuantumBackground;            ease: "linear",
 <<<<<<< HEAD
     </div>
   );
+<<<<<<< HEAD
 }
 export default UltraAdvancedQuantumBackground;  )
 }
@@ -1818,30 +1829,28 @@ ease: 'linear',          }}
     </div>);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default UltraAdvancedQuantumBackground;            ease: "linear"
-=======
 };
-=======
 
         style={{ zIndex: 1 }}
       />
 
       {/* Content Layer */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             delay: 2
           }}
         />
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>
   );
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1861,6 +1870,7 @@ export default UltraAdvancedQuantumBackground);
 ;
 export default UltraAdvancedQuantumBackground;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1873,8 +1883,9 @@ export default UltraAdvancedQuantumBackground;
 =======
 =======
 <<<<<<< HEAD
-
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 
         style={{ zIndex: 1 }}
       />
@@ -1885,11 +1896,11 @@ export default UltraAdvancedQuantumBackground;
         />
       </div>
     </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
     </div>
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ProjectDetails.tsx
 
 <<<<<<< HEAD
@@ -14,6 +15,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {format} from "date-fns";
@@ -36,6 +40,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -57,6 +62,8 @@ function ProjectDetailsContent() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ProjectDetails.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -87,10 +94,13 @@ function ProjectDetailsContent() {
       const projectData = await getProjectById(projectId);
       if (projectData) {
         setProject(projectData);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
 import { format } from "date-fns",
@@ -142,6 +152,7 @@ import {
   User,
   XCircle} from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -152,6 +163,8 @@ import {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -183,6 +196,7 @@ function ProjectDetailsContent() {
 
 =======
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -190,6 +204,8 @@ function ProjectDetailsContent() {
         
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
@@ -198,6 +214,7 @@ function ProjectDetailsContent() {
           description: "The requested project could not be found."
           variant: "destructive"})
         navigate("/dashboard")
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -237,6 +254,8 @@ function ProjectDetailsContent() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { useParams, useNavigate, Link } from "react-router-dom",;
 import { format } from "date-fns",;
@@ -484,6 +503,7 @@ if ( {) {
           variant: "destructive"}),;
         navigate("/dashboard");
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -503,24 +523,31 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       setIsLoading(false)
     }
-<<<<<<< HEAD
     loadProject()
   }, [projectId]);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     loadProject()
   }, [projectId]),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const fetchProjectNotes = async (projectId: string) => {
     try {
       const { data, error } = await supabase
@@ -531,10 +558,13 @@ if ( {) {
         `)
         .eq("project_id", projectId)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .order("created_at", { ascending: false })
       if (error) throw error;
       setNotes(data |[])
@@ -545,8 +575,11 @@ if ( {) {
   const handleSubmitNote = async () => {
     if (!newNote.trim() |!project |!user) return;
     setIsSubmittingNote(true);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .order("created_at", { ascending: false }),
       
       if (error) throw error,
@@ -563,11 +596,14 @@ if ( {) {
     setIsSubmittingNote(true),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { data, error } = await supabase
         .from("project_notes")
@@ -576,17 +612,23 @@ if ( {) {
           user_id: user.id
           content: newNote})
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .select();
       if (error) throw error;
       // Refresh notes
       fetchProjectNotes(project.id);
       setNewNote("");
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .select(),
       
       if (error) throw error,
@@ -596,11 +638,14 @@ if ( {) {
       setNewNote(""),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Note added"
         description: "Your note has been added to the project."})
@@ -614,10 +659,13 @@ if ( {) {
       setIsSubmittingNote(false)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleStatusChange = async (newStatus: ProjectStatus) => {
     if (!project) return
@@ -626,8 +674,11 @@ if ( {) {
       setProject({
         ...project;
         status: newStatus})
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const handleStatusChange = async (newStatus: ProjectStatus) => {
@@ -641,11 +692,14 @@ if ( {) {
         status: newStatus}),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
@@ -654,6 +708,7 @@ if ( {) {
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -663,12 +718,16 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {
       case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
@@ -689,6 +748,7 @@ if ( {) {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1048,11 +1108,11 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="container mx-auto py-8">
@@ -1085,6 +1145,7 @@ if ( {) {
     )
   }
   // Check if user is either the client or the talent
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1122,22 +1183,32 @@ if ( {) {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  const isClient = user?.id === project.client_id;
+  const isTalent = user?.id === project.talent_id;
+  const isClient = user?.id === project.client_id,
+  const isTalent = user?.id === project.talent_id,
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!isClient && !isTalent) {
     navigate("/unauthorized"),
     return null
   }
-<<<<<<< HEAD
   const isOfferPending = project.status === "offer_sent";
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const isOfferPending = project.status === "offer_sent",
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1145,6 +1216,8 @@ if ( {) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <SEO
@@ -2243,18 +2316,24 @@ if ( {) {
                         </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       )}
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     loadProject();
   }, [projectId]),;
@@ -2808,11 +2887,14 @@ if ( {) {
               </CardContent>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -3033,6 +3115,7 @@ if ( {) {
                 </CardFooter>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -3234,6 +3317,8 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ProjectDetails.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </Card>
           </div>
         </div>
@@ -3250,8 +3335,11 @@ export default function ProjectDetails() {
   )
 };
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </Card>;
           </div>;
         </div>;
@@ -3307,7 +3395,6 @@ function ProjectDetails() {
     </>;
   );
 }
-=======
             </Card>;
           </div>;
         </div>;
@@ -3473,8 +3560,11 @@ default: return <Badge variant="outline"> {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

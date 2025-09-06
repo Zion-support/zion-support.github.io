@@ -33,15 +33,19 @@ class ErrorBoundary extends React.Component {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {IntegrationsHub} from "@/components/integrations/IntegrationsHub";
 import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function IntegrationsPage() {;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/IntegrationsPage.tsx
@@ -65,21 +69,16 @@ export default function IntegrationsPage() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",
-<<<<<<< HEAD
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-=======
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function IntegrationsPage() {
   return (
     <ProtectedRoute adminOnly={true}>
@@ -95,6 +94,7 @@ export default function IntegrationsPage() {
       <Footer />
     </ProtectedRoute>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -116,6 +116,9 @@ export default function IntegrationsPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -205,13 +208,12 @@ function IntegrationsPage() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/IntegrationsPage.tsx
 =======
   );
+}
+;
+}
+;
 <<<<<<< HEAD
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-}
-;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

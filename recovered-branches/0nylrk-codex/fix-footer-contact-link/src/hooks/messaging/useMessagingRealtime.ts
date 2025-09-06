@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessagingRealtime.ts
 
 // Allow either UserProfile or UserDetails
@@ -23,18 +24,24 @@ export function useMessagingRealtime (
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 // Allow either UserProfile or UserDetails
@@ -70,14 +77,13 @@ export function useMessagingRealtime(;
             setActiveMessages(prev => [...prev, payload && payload.new as Message])
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Allow either UserProfile or UserDetails
 
-<<<<<<< HEAD
 type UserWithProfile = UserProfile | UserDetails | null;
 export function useMessagingRealtime(
-=======
 export function useMessagingRealtime(;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   user: UserWithProfile;
   activeConversation: Conversation | null;
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
@@ -134,8 +140,11 @@ export function useMessagingRealtime(;
 
     return () => {
       supabase.removeChannel(subscription)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { UserProfile, UserDetails } from '@/types/auth',;
@@ -309,11 +318,6 @@ description: payload.new.content.substring (0, 50) + (payload.new.content.length
       .subscribe();
     return () => {;
       supabase.removeChannel(subscription);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }, [user, activeConversation, fetchConversations, setActiveMessages])
 }

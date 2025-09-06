@@ -16,9 +16,6 @@ import { toast } from "@/hooks/use-toast",
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -26,38 +23,35 @@ import {JobMatch} from "@/types/jobs";
 export function useJobSuggestions(talentId?: string) {;
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
 import { JobMatch } from "@/types/jobs";
 export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-=======
 import { JobMatch } from "@/types/jobs",
 export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
-<<<<<<< HEAD
       if (!talentId) return;
       try {
         setIsLoading(true);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (!talentId) return,
       
       try {
         setIsLoading(true),
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -65,6 +59,8 @@ export function useJobSuggestions(talentId?: string) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // Get job matches with job details
         const { data, error } = await supabase
           .from("job_talent_matches")
@@ -83,17 +79,20 @@ export function useJobSuggestions(talentId?: string) {
             job:job_id (*)
           `)
           .eq("talent_id", talentId)
-<<<<<<< HEAD
           .order("created_at", { ascending: false });
         if (error) throw error;
         setJobMatches(data |[])
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .order("created_at", { ascending: false }),
           
         if (error) throw error,
         
         setJobMatches(data || [])
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -105,21 +104,25 @@ export function useJobSuggestions(talentId?: string) {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       } catch (error) {
         console.error("Error fetching job matches:", error),
         toast({
-<<<<<<< HEAD
           title: "Error";
           description: "Failed to load job suggestions"
-=======
           title: "Error",
           description: "Failed to load job suggestions",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant: "destructive"})
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -187,11 +190,17 @@ if (throw error) {
   }, [talentId]);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+    fetchSuggestedJobs()
+  }, [talentId]);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     fetchSuggestedJobs()
   }, [talentId]),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -199,26 +208,34 @@ if (throw error) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
         status
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       const { error } = await supabase
         .from("job_talent_matches")
         .update(updates)
         .eq("id", matchId);
       if (error) throw error;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       },
       
       const { error } = await supabase
@@ -228,6 +245,7 @@ if (throw error) {
         
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -258,6 +276,8 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Update local state
       setJobMatches(matches =>
         matches.map(match =>
@@ -265,13 +285,14 @@ if (throw error) {
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
-<<<<<<< HEAD
       );
-=======
       ),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Show appropriate message
       if (status === 'applied') {
         toast({
@@ -297,14 +318,9 @@ if (throw error) {
 =======
       console.error("Error updating job match status:", error),
       toast({
-<<<<<<< HEAD
         title: "Error";
         description: "Failed to update job status"
         variant: "destructive"})
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   // Filter matches by status
@@ -344,14 +360,15 @@ if (throw error) {
 =======
 
       declinedMatches
-=======
-<<<<<<< HEAD
         title: "Error",
         description: "Failed to update job status",
         variant: "destructive"})
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -503,6 +520,7 @@ if ( {) {
       viewedMatches;
       appliedMatches;
       declinedMatches;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -667,6 +685,8 @@ job:job id (*) `)
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
 }

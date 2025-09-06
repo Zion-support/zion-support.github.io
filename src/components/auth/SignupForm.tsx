@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -21,9 +24,12 @@ import { fireEvent  } from '@/lib/analytics';
 import {logErrorToProduction} from '@/utils/productionLogger';
 const signupSchema = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   path: ["confirmPassword"]}),
 
@@ -55,9 +61,12 @@ type SignupFormData = z.infer<typeof signupSchema>
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from '@hookform/resolvers/zod',
@@ -454,6 +463,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
               <span className={cn('font-medium', 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 passwordStrength.strength >= 4 ? 'text-green-600' :
 =======
@@ -461,6 +471,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 passwordStrength.strength >= 4 ? 'text-green-600' :
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
@@ -503,6 +515,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
             {errors.password.message}
           </p>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -551,6 +564,8 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
 
 >>>>>>> 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
 
 
@@ -582,8 +597,11 @@ type SignupFormData = z.infer<typeof signupSchema>
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
       {/* Confirm Password Field */}
       <div className="space-y-2">
@@ -653,6 +671,7 @@ type SignupFormData = z.infer<typeof signupSchema>
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
@@ -664,3 +683,5 @@ type SignupFormData = z.infer<typeof signupSchema>
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

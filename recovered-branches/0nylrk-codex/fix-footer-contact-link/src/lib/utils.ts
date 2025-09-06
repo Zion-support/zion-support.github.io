@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/lib/utils.ts
@@ -37,13 +38,13 @@ export function cn(...inputs:ClassValue[]) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import clsx, { type ClassValue } from &quot;clsx&quot;
 import { twMerge } from &quot;tailwind-merge&quot;
-=======
 import clsx, { type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 };

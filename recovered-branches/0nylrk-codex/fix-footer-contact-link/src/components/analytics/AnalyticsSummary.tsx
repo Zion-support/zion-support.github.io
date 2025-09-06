@@ -14,31 +14,27 @@ import { supabase } from "@/integrations/supabase/client",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Card, CardContent} from "@/components/ui/card";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Card, CardContent } from "@/components/ui/card",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
-=======
 import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
 
@@ -49,6 +45,7 @@ export function AnalyticsSummary() {
       const { data: pageViewsData, error: pageViewsError } = await supabase
         .from('analytics_events')
         .select('count')
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -69,37 +66,44 @@ import {formatDistanceToNow} from "date-fns";
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq('event_typepage_view');
         .single();
-=======
         .eq('event_typepage_view')
-<<<<<<< HEAD
         .single();
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;
-=======
         .single(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Get unique visitors (by counting distinct user IDs)
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
         .from('analytics_events')
         .select('user_id')
         .eq('event_typepage_view')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .is('user_idnot.null');
       if (uniqueVisitorsError) throw uniqueVisitorsError;
 
       const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) |[]);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .is('user_idnot.null'),
         
       if (uniqueVisitorsError) throw uniqueVisitorsError,
@@ -107,16 +111,20 @@ import {formatDistanceToNow} from "date-fns";
       const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Get conversion count
       const { data: conversionsData, error: conversionsError } = await supabase
         .from('analytics_events')
         .select('count')
         .eq('event_typeconversion')
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -126,22 +134,30 @@ import {formatDistanceToNow} from "date-fns";
       if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+        .single();
+      if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .single(),
         
       if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Get most recent event to calculate "last updated"
       const { data: lastEventData, error: lastEventError } = await supabase
         .from('analytics_events')
         .select('created_at')
         .order('created_at', { ascending: false })
         .limit(1)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -151,21 +167,29 @@ import {formatDistanceToNow} from "date-fns";
       if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+        .single();
+      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .single(),
         
       if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return {
         totalPageViews: pageViewsData?.count |0
         uniqueVisitors: uniqueUserIds.size |0
         conversions: conversionsData?.count |0
         lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -180,10 +204,16 @@ import {formatDistanceToNow} from "date-fns";
   });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+    }
+    refetchInterval: 300000, // Refetch every 5 minutes
+  });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     refetchInterval: 300000, // Refetch every 5 minutes
   }),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   // Calculate conversion rate
@@ -196,16 +226,19 @@ import {formatDistanceToNow} from "date-fns";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Calculate conversion rate
   const conversionRate = stats && stats.totalPageViews > 0
     ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
-<<<<<<< HEAD
     : '0.00';
-=======
     : '0.00',
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
       <StatCard
@@ -241,6 +274,7 @@ import {formatDistanceToNow} from "date-fns";
         icon={
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -249,19 +283,23 @@ import {formatDistanceToNow} from "date-fns";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       />
     </div>
   )
-<<<<<<< HEAD
 }
 interface StatCardProps {
   title: string
   value: React.ReactNode
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent } from "@/components/ui/card",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -544,6 +582,7 @@ if (throw lastEventError) {
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -557,6 +596,8 @@ if (throw lastEventError) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 interface StatCardProps {;
@@ -564,6 +605,7 @@ interface StatCardProps {;
   value: React.ReactNode;
   icon: React.ReactNode;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/AnalyticsSummary.tsx
 <<<<<<< HEAD
@@ -574,6 +616,8 @@ interface StatCardProps {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   icon: React.ReactNode
 }

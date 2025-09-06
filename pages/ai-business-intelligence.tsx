@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -230,12 +231,10 @@ const AIBusinessIntelligence: React.FC = () => {
                 href='#demo'
 =======
 <<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
@@ -243,11 +242,7 @@ import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
  } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-=======
-<<<<<<< HEAD
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -257,17 +252,197 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function AIBusinessIntelligencePage() {
 
   const features = [
     {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+      icon: Brain
+      title: 'Predictive Analytics'
+      description:
+        'Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.'
+      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      icon: BarChart3
+      title: 'Real-time Dashboards'
+      description:
+        'Monitor key performance indicators in real-time with customizable, interactive dashboards.'
+      color: 'from-blue-500 to-cyan-500'
+    }
+    {
+      icon: TrendingUp
+      title: 'Performance Optimization'
+      description:
+        'Automatically identify bottlenecks and optimize business processes for maximum efficiency.'
+      color: 'from-green-500 to-emerald-500'
+    }
+    {
+      icon: Users
+      title: 'Customer Insights'
+      description:
+        'Deep understanding of customer behavior, preferences, and lifetime value through AI analysis.'
+      color: 'from-orange-500 to-red-500'
+    }
+    {
+      icon: Target
+      title: 'Strategic Planning'
+      description:
+        'Data-driven decision making with scenario modeling and risk assessment capabilities.'
+      color: 'from-indigo-500 to-purple-500'
+    }
+    {
+      icon: Zap
+      title: 'Automated Reporting'
+      description:
+        'Generate comprehensive reports automatically, saving hours of manual work each week.'
+      color: 'from-yellow-500 to-orange-500'
+    }
+  ];
+const AIBusinessIntelligence: React.FC = () => {
+  const benefits = [
+    'Increase revenue by 25-40% through data-driven insights'
+    'Reduce operational costs by 15-30% with process optimization'
+    'Improve customer retention by 20-35% with predictive analytics'
+    'Accelerate decision-making by 60% with real-time data'
+    'Reduce manual reporting time by 80% with automation'
+    'Achieve 99.9% data accuracy with AI-powered validation',  ];
+  const useCases = [
+    {
+      industry: 'Retail & E-commerce'
+      description:
+        'Customer segmentation, inventory optimization, and demand forecasting'
+      results:
+        '35% increase in conversion rates, 25% reduction in inventory costs'
+    }
+    {
+      industry: 'Financial Services'
+      description:
+        'Risk assessment, fraud detection, and portfolio optimization'
+      results: '40% improvement in risk prediction, 60% faster fraud detection'
+    }
+    {
+      industry: 'Healthcare'
+      description:
+        'Patient outcome prediction, resource allocation, and treatment optimization'
+      results:
+        '30% improvement in patient outcomes, 20% reduction in operational costs'
+    }
+    {
+      industry: 'Manufacturing'
+      description:
+        'Predictive maintenance, quality control, and supply chain optimization'
+      results: '45% reduction in downtime, 35% improvement in product quality'
+    },  ];
+  const pricing = [
+    {
+      plan: 'Starter'
+      price: '$499'
+      period: '/month'
+      description: 'Perfect for small businesses getting started with AI'
+      features: [
+        'Basic predictive analytics'
+        '5 customizable dashboards'
+        'Standard reporting'
+        'Email support'
+        'Up to 10 users'
+      ]
+      popular: false
+    }
+    {
+      plan: 'Professional'
+      price: '$1,299'
+      period: '/month'
+      description: 'Advanced features for growing businesses'
+      features: [
+        'Advanced predictive analytics'
+        'Unlimited dashboards'
+        'Custom reporting'
+        'Priority support'
+        'Up to 50 users'
+        'API access'
+        'Custom integrations'
+      ]
+      popular: true
+    }
+    {
+      plan: 'Enterprise'
+      price: 'Custom'
+      period: ''
+      description: 'Full-scale solution for large organizations'
+      features: [
+        'Everything in Professional'
+        'Custom AI models'
+        'Dedicated support team'
+        'Unlimited users'
+        'On-premise deployment'
+        'Custom training'
+        'SLA guarantees'
+      ]
+      popular: false
+    }
+  ];
+
+      icon: Brain,
+      title: "Predictive Analytics",
+      description: "Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: BarChart3,
+      title: "Real-time Dashboards",
+      description: "Monitor key performance indicators in real-time with customizable, interactive dashboards.",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Optimization",
+      description: "Automatically identify bottlenecks and optimize business processes for maximum efficiency.",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: Users,
+      title: "Customer Insights",
+      description: "Deep understanding of customer behavior, preferences, and lifetime value through AI analysis.",
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      icon: Target,
+      title: "Strategic Planning",
+      description: "Data-driven decision making with scenario modeling and risk assessment capabilities.",
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Zap,
+      title: 'Automated Reporting',
+      description:
+        'Generate comprehensive reports automatically, saving hours of manual work each week.',
+      color: 'from-yellow-500 to-orange-500',
+    },;
+  ];
+
+const AIBusinessIntelligence: React.FC = () => {
+      title: "Automated Reporting",
+      description: "Generate comprehensive reports automatically, saving hours of manual work each week.",
+      color: "from-yellow-500 to-orange-500"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const benefits = [
     "Increase revenue by 25-40% through data-driven insights",
     "Reduce operational costs by 15-30% with process optimization",
@@ -909,15 +1084,21 @@ const AIBusinessIntelligence: React.FC = () => {
   }
 }
   ],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
         <title>AI Business Intelligence - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta
           name='description'
           content='Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights to drive growth and efficiency.'
@@ -947,8 +1128,11 @@ const AIBusinessIntelligence: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center'
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta name="description" content="Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights to drive growth and efficiency." />
         <meta name="keywords" content="AI business intelligence, predictive analytics, business analytics, data insights, machine learning, business intelligence platform" />
         <meta property="og:title" content="AI Business Intelligence - Zion Tech Group" />
@@ -1241,11 +1425,14 @@ export default function AIBusinessIntelligencePage(req, res) {
 }
             className="text-center"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
@@ -1560,7 +1747,6 @@ initial={{ opacity: 0, x: -20 }}
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
       {/* Features */}
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -1960,7 +2146,6 @@ initial={{ opacity: 0, x: -20 }}
                       <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
                       <span className='text-slate-700'>{feature}</span>                    </li>
                   ))}
-=======
       </section>
       {/* Features */  } catch (error) {
     console.error("Error:", error);
@@ -2434,12 +2619,15 @@ initial={{ opacity: 0, x: -20 }}
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </ul>
                 <a
 
@@ -2467,7 +2655,6 @@ initial={{ opacity: 0, x: -20 }}
                 </Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </motion.div>
-<<<<<<< HEAD
             ))}
 <<<<<<< HEAD
           </div>;
@@ -2518,7 +2705,6 @@ initial={{ opacity: 0, x: -20 }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2551,12 +2737,15 @@ initial={{ opacity: 0, x: -20 }}
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -2692,15 +2881,10 @@ initial={{ opacity: 0, x: -20 }}
 =======
       <EnhancedFooter />
     </>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
 
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -2708,9 +2892,12 @@ initial={{ opacity: 0, x: -20 }}
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

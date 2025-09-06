@@ -1,7 +1,28 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+import { Header } from '@/components/Header';
+import { TrustedBySection } from '@/components/TrustedBySection';
+import { TestimonialCarousel } from '@/components/TestimonialCarousel';
+import { FloatingCTA } from '@/components/FloatingCTA';
+import { HeroSection } from '@/components/HeroSection';
+import { CategoriesSection } from '@/components/CategoriesSection';
+import { BenefitsSection } from '@/components/BenefitsSection';
+import { HowItWorksSection } from '@/components/HowItWorksSection';
+import { WaitlistSection } from '@/components/WaitlistSection';
+import { BlogSection } from '@/components/BlogSection';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { FeaturedListingsSection } from '@/components/FeaturedListingsSection';
+import { FeaturesGuideSection } from '@/components/FeaturesGuideSection';
+import { SocialShareSection } from '@/components/SocialShareSection';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '@/context/LanguageContext';
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight
   Users
   Zap
@@ -12,15 +33,35 @@
   BarChart3
   Smartphone
 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  ArrowRight,
+  Users,
+  Zap,
+  Settings,
+  Search,
+  MessageSquare,
+  Sparkles,
+  BarChart3,;
+  Smartphone;
+} from 'lucide-react';
+export default function LandingPage() {;
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export default function LandingPage() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Header } from "@/components/Header",
 import { TrustedBySection } from "@/components/TrustedBySection",
 import { TestimonialCarousel } from "@/components/TestimonialCarousel",
@@ -45,11 +86,16 @@ export default function LandingPage() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Tools and features showcase
 
   const toolsFeatures = [
     {
+<<<<<<< HEAD
 
 =======
   
@@ -57,6 +103,8 @@ export default function LandingPage() {
 
   const toolsFeatures = [
     {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: t('home.tool_ai_matcher')
       description: t('home.tool_ai_matcher_desc')
       icon: <Sparkles className='h-6 w-6 text-zion-cyan' />
@@ -104,6 +152,47 @@ export default function LandingPage() {
         canonical='https://app.ziontechgroup.com/'      />
       <Header />
       <HeroSection />
+<<<<<<< HEAD
+=======
+      title: t("home.tool_ai_matcher"),
+      description: t("home.tool_ai_matcher_desc"),
+      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
+      link: "/match"
+    },
+    {
+      title: t("home.tool_talent"),
+      description: t("home.tool_talent_desc"),
+      icon: <Users className="h-6 w-6 text-zion-purple" />,
+      link: "/talent"
+    },
+    {
+      title: t("home.tool_services"),
+      description: t("home.tool_services_desc"),
+      icon: <Zap className="h-6 w-6 text-zion-cyan" />,
+      link: "/services"
+    },
+    {
+      title: t("home.tool_equipment"),
+      description: t("home.tool_equipment_desc"),
+      icon: <Settings className="h-6 w-6 text-zion-purple" />,
+      link: "/equipment"
+    },
+    {
+      title: t("home.tool_analytics"),
+      description: t("home.tool_analytics_desc"),
+      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,
+      link: "/analytics"
+    },
+    {
+      title: "Mobile App",
+      description: "Take Zion with you on the go with our mobile app for iOS and Android",
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
+      link: "/mobile-launch"
+    }
+  ],
+
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className='min-h-screen bg-zion-blue text-white'>
       <SEO
         title={t('home.seo_title')}
@@ -112,7 +201,10 @@ export default function LandingPage() {
         canonical='https://app.ziontechgroup.com/'      />
       <Header />
       <HeroSection />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className="min-h-screen bg-zion-blue text-white">
       <SEO 
         title={t("home.seo_title")} 
@@ -122,6 +214,7 @@ export default function LandingPage() {
       />
       <Header />
       <HeroSection />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       
@@ -232,6 +325,9 @@ function LandingPage() {
       <HeroSection />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Quick Access Tools Section */}
       <section className='py-16 bg-zion-blue-dark'>;
         <div className='container mx-auto px-4'>;
@@ -355,8 +451,11 @@ export default function LandingPage() { const { t  } = useTranslation(),
             </p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div
             className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}
           >
@@ -366,9 +465,21 @@ export default function LandingPage() { const { t  } = useTranslation(),
                 href={feature.link}
                 className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'              >
                 <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4'>
+<<<<<<< HEAD
 >>>>>>>                   {feature.icon}
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
+            {toolsFeatures.map((feature, index) => (
+              <Link 
+                key={index} 
+                href={feature.link} 
+                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
+              >
+                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {feature.icon}
 >>>>>>>                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
@@ -377,9 +488,43 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <span>{t("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      <CategoriesSection />
+      <BenefitsSection />
+      <CategoriesSection />
+      <BenefitsSection />
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />
+      <CategoriesSection />
+      <BenefitsSection />
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />
+      <HowItWorksSection />
+      <FeaturedListingsSection />
+      <TestimonialCarousel />
+      <TrustedBySection />
+      <BlogSection />
+      {/* Add social share section to encourage users to spread the word */}
+      <SocialShareSection />
+      {/* Add social share section to encourage users to spread the word */}
+      <SocialShareSection />
+      <FloatingCTA />
+    </div>
+  );
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </Link>
 import { Header } from "@/components/Header",;
@@ -524,6 +669,7 @@ export default function LandingPage() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -633,3 +779,5 @@ const LandingPage: React.FC = () => {
 
 export default LandingPage;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

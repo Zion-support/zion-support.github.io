@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 } from "../../../../utils/auth";
 export default async function handler(
@@ -71,24 +69,19 @@ import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import {
   parseUserFromRequest
   ensureInvolvedOrAdmin
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import {
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "../../../../utils/auth";
 export default async function handler(
-<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { id } = req.query;
   if (typeof id !== "string")
     return res.status(400).json({ error: "Invalid id" });
@@ -122,6 +115,7 @@ export default async function handler(
       body
       createdAt: now
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -211,6 +205,8 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
@@ -219,6 +215,7 @@ if ( {) {
 res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -231,6 +228,8 @@ res.setHeader("Allow", "POST");
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -264,10 +263,13 @@ export default async function handler(req, res) {
       body,;
       createdAt: now}),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
@@ -279,16 +281,22 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
   } catch (error) {
     console.error("Error:", error);
@@ -312,6 +320,7 @@ export default async function handler(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -324,3 +333,5 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

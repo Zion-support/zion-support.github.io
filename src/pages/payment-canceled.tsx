@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
@@ -7,13 +8,14 @@ import { useRouter } from 'next/router'; // Changed from useNavigate
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Button } from '@/components/ui/button'
-=======
 import React from 'react';
 import { Button } from '@/components/ui/button';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useRouter } from 'next/router'; // Changed from useNavigate
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react',
@@ -29,17 +31,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { XCircle } from 'lucide-react'
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { XCircle } from 'lucide-react'
@@ -48,12 +47,16 @@ export default function PaymentCanceled() {
   const router = useRouter(), // Changed from navigate
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -65,12 +68,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             <XCircle className="h-6 w-6 text-red-600" />
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>
         <p className="text-zion-slate-light mb-6">
           Your payment process was canceled. No charges have been made to your account.
         </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>         <div className="flex flex-col space-y-3">
 ursor/fix-website-loading-errors-and-merge-6662
@@ -80,6 +87,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             onClick={(,) => router.push('/payments')} // Changed to router.push
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>
         
@@ -87,11 +96,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           Your payment process was canceled. No charges have been made to your account.
         </p>
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="flex flex-col space-y-3">
           <Button
             onClick={() => router.push('/payments')} // Changed to router.push
@@ -102,27 +106,36 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button
             variant="outline"
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
 export default function PaymentCanceled() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button 
             variant="outline";
             onClick={() => router.push('/dashboard')} // Changed to router.push;
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white';
 export default function PaymentCanceled() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const router = useRouter(); // Changed from navigate
   return (
     <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>
@@ -148,10 +161,13 @@ export default function PaymentCanceled() {;
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <Button 
@@ -161,17 +177,11 @@ export default function PaymentCanceled() {;
 <<<<<<< HEAD
 =======
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Return to Dashboard
           </Button>
         </div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
   );            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -200,12 +210,8 @@ import React from 'react',;
       </div>
   )
 }
-<<<<<<< HEAD
-=======
 ;
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 import React from 'react',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -359,6 +365,7 @@ function PaymentCanceled() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -371,3 +378,5 @@ function PaymentCanceled() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

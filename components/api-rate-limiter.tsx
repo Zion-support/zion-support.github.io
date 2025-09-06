@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Button from '../components/ui/Button';
@@ -81,18 +82,17 @@ import Button from '../components / ui / Button';
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
   Shield
   Zap
   BarChart3
@@ -105,8 +105,11 @@ import {
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
 export default function APIRateLimiterPage() {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Shield,
   Zap,
   BarChart3,
@@ -177,8 +180,11 @@ function APIRateLimiterPage() {
   AlertTriangle,;
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 export default function APIRateLimiterPage() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
   const [timeWindow, setTimeWindow] = useState('1m');
@@ -211,27 +217,30 @@ export default function APIRateLimiterPage() {;
     setApiKey(key);  }
   const testRateLimiting = async () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!endpoint.trim() |!rateLimit |!timeWindow) return;
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
   ];
-=======
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
-<<<<<<< HEAD
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
   ];
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const generateApiKey = () => {
     const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
     setApiKey(key)
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
@@ -265,11 +274,14 @@ export default function APIRateLimiterPage() {;
   ];
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const testRateLimiting = async () => {
@@ -282,6 +294,8 @@ export default function APIRateLimiterPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const testRateLimiting = async () => {
     if (!endpoint.trim() |!rateLimit |!timeWindow) return;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -670,28 +684,18 @@ if (break) {
       case 'rate_limited':
         return <AlertTriangle className='w-5 h-5 text-red-400' />;
       default:
-<<<<<<< HEAD
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }      case 'rate_limited':
         return <AlertTriangle className="w-5 h-5 text-red-400" />;
       default:
         return <AlertTriangle className="w-5 h-5 text-yellow-400" />
     }
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }
 
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'success':
@@ -701,14 +705,15 @@ if (break) {
       default:
         return 'text-yellow-400';    }        return 'text-yellow-400'
     }
-<<<<<<< HEAD
   }
-=======
 
   };
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
@@ -1394,7 +1399,6 @@ if (break) {
                     Rate Limit
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
-<<<<<<< HEAD
                     {rateLimits.map(limit => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
                     Rate Limit
                   ">
@@ -1402,16 +1406,10 @@ if (break) {
                   </label>
                   <div className="grid grid-cols-2 gap-3">
                     {rateLimits.map((limit) => (
-=======
                     {rateLimits.map(limit => (                      <button
 
                       <button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         key={limit.value}
                         onClick={() => setRateLimit(limit.value)}
                         className={`p-3 rounded-lg border text-left transition-all ${
@@ -1427,10 +1425,10 @@ if (break) {
                         <div className="text-xs text-gray-400 mt-1">{limit.description}</div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       </button>
-<<<<<<< HEAD
                     ))}
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 {_/* Time Window */}
@@ -1452,23 +1450,19 @@ if (break) {
                         <div className=&quot;text-xs text-gray-400 mt-1&quot;>{window.description}</div>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                     ))}
                   </div>
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Time Window */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
                     Time Window
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
-<<<<<<< HEAD
                     {timeWindows.map(window => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
                     Time Window
                   ">
@@ -1476,16 +1470,10 @@ if (break) {
                   </label>
                   <div className="grid grid-cols-2 gap-3">
                     {timeWindows.map((window) => (
-=======
                     {timeWindows.map(window => (                      <button
 
                       <button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         key={window.value}
                         onClick={() => setTimeWindow(window.value)}
                         className={`p-3 rounded-lg border text-left transition-all ${
@@ -1501,15 +1489,17 @@ if (break) {
                         <div className="text-xs text-gray-400 mt-1">{window.description}</div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       </button>
-<<<<<<< HEAD
                     ))}
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 =======
                 {_/* API Key Generation */}
@@ -1537,6 +1527,7 @@ if (break) {
                 </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1550,6 +1541,8 @@ if (break) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {/* API Key Generation */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -1646,6 +1639,7 @@ if (break) {
               </div>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1703,6 +1697,9 @@ className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white">;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Test Results */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
@@ -1711,6 +1708,7 @@ className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white">;
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
                   <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1952,6 +1950,11 @@ className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white">;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+                  Test Results
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </h3>
                 {testResults.length > 0 && (
                   <Button
@@ -1987,6 +1990,7 @@ className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white">;
                       className={`p-4 rounded-lg border ${
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                         </div>
                       </div>
@@ -1998,6 +2002,8 @@ className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white">;
                         result.status === 'success' ? 'border-green-500/30 bg-green-500/10' : 'border-red-500/30 bg-red-500/10';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         result.status === 'success'
                           ? 'border-green-500/30 bg-green-500/10'
                           : 'border-red-500/30 bg-red-500/10'
@@ -2042,21 +2048,20 @@ className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           <span className="ml-2 text-white">{result.responseTime.toFixed(0)}ms</span>
 <<<<<<< HEAD
-                        </div>
-                      </div>
-                      {result.status === 'rate_limited' && (
-
-=======
-=======
-
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                       </div>
                       {result.status === 'rate_limited' && (
+
+=======
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
+                        </div>
+                      </div>
+                      {result.status === 'rate_limited' && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           </span>;
@@ -2136,21 +2141,17 @@ className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white">;
                         <div className="mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>
                           <strong>Rate Limited:</strong> Request exceeded the
                           limit of {rateLimit} requests per {timeWindow}                        <div className="mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
                         </div>
-=======
 
                         </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       )}
                     </div>;
                   ))}
@@ -2233,6 +2234,7 @@ className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white">;
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -2244,11 +2246,15 @@ className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white">;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2281,6 +2287,10 @@ className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white">;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+              Advanced Rate Limiting Features
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Enterprise-grade rate limiting with intelligent algorithms and
@@ -2883,29 +2893,20 @@ const endpoint = '${endpoint |'/api/users'}';
 // Make API request with rate limiting
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   headers: {
-<<<<<<< HEAD
-<<<<<<< HEAD
     'Authorization': \`Bearer \${apiKey}\`
     'X-RateLimit-Limit': '${rateLimit}'
     'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
-=======
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'  }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
-<<<<<<< HEAD
     'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
-=======
     'X-RateLimit-Window': '${timeWindow}'  }
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
 console.log('Response:', response.data);
@@ -3510,23 +3511,17 @@ api_key = '${apiKey |'your_api_key_here'}'
 endpoint = '${endpoint |'/api/users'}'
 # Make API request with rate limiting
 headers = {
-<<<<<<< HEAD
     'Authorization': f'Bearer {api_key}'
     'X-RateLimit-Limit': '${rateLimit}'
-=======
     'Authorization': f'Bearer {api_key}',
     'X-RateLimit-Limit': '${rateLimit}',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     'X-RateLimit-Window': '${timeWindow}'
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
-<<<<<<< HEAD
 response = requests.get(
-=======
 
 response = requests.get(;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     f'https://api.zion.tech{endpoint}';
 )
 print('Response:', response.json())
@@ -3551,12 +3546,9 @@ headers = {
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
-<<<<<<< HEAD
 response = requests.get(
-=======
 
 response = requests.get(;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     f'https://api.zion.tech{endpoint}';
 )
 print('Response:', response.json())
@@ -3624,12 +3616,11 @@ print('Rate Limit Info:', {
 }
 =======
     </>;
-<<<<<<< HEAD
   );    </>
   )
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -3637,3 +3628,5 @@ print('Rate Limit Info:', {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

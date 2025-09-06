@@ -1,15 +1,20 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-export interface JobData {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface JobData {
 export interface JobData {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   description: string;
@@ -38,13 +43,14 @@ export interface TalentProfile {
   }
   deadline: string
 }
-<<<<<<< HEAD
 export interface TalentProfile {
-=======
 
 export interface TalentProfile {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   full_name: string;
   professional_title: string;
@@ -67,13 +73,14 @@ export interface TalentMatch {
 
   availability_type?: string
 }
-<<<<<<< HEAD
 export interface TalentMatch {
-=======
 
 export interface TalentMatch {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   talent_id: string;
   job_id: string;
   match_score: number;
@@ -90,13 +97,14 @@ export interface TalentMatch {;
 
   created_at: string
 }
-<<<<<<< HEAD
 export interface MatchResult {
-=======
 
 export interface MatchResult {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   talentId: string;
   score: number;
 
@@ -104,6 +112,7 @@ export interface MatchResult {;
 
   reason?: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -113,6 +122,9 @@ export interface JobData {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface JobData {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string,;
   title: string,;
   description: string,;
@@ -175,8 +187,11 @@ export interface JobData {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

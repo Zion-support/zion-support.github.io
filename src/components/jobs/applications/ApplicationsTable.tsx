@@ -1,32 +1,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
 import { ClickableBadge } from '@/components/ui/clickable-badge'
 import {  Table,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { 
   Table,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   TableRow,
 } from '@/components/ui/table'
 import { ApplicationActions } from './ApplicationActions'
@@ -61,8 +55,6 @@ interface ApplicationsTableProps {
 
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   TableRow
 } from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions",
@@ -83,14 +75,13 @@ interface ApplicationsTableProps {
 
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || "Candidate",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 =======
@@ -292,6 +283,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
           height={32} // for h-8 w-8
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       ) : (
 =======
@@ -303,25 +295,22 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
         <User className="h-4 w-4" />
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='rounded-full object-cover'
           onError={() => setAvatarError(true)}
           priority={false}        />
-=======
           className="rounded-full object-cover"
           onError={() => setAvatarError(true)}
           priority={false}
         />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ) : (
         <User className="h-4 w-4" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       )}
     </AvatarPrimitive>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -331,12 +320,17 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
 export function ApplicationsTable({
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+export function ApplicationsTable({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   applications
   processingId
   onViewApplication
   onStatusChange
   onViewScore
 }: ApplicationsTableProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   onStatusChange,
@@ -348,22 +342,20 @@ export function ApplicationsTable({
   
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   applications,
   processingId,
   onViewApplication,
-=======
 },
 
 export function ApplicationsTable({ 
   applications, 
   processingId, 
   onViewApplication, 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [hireModalOpen, setHireModalOpen] = useState(false)
   const [selectedApplication, setSelectedApplication] =
     useState<JobApplication | null>(null)
@@ -383,9 +375,7 @@ export function ApplicationsTable({
 <<<<<<< HEAD
 =======
   }
-<<<<<<< HEAD
 
-=======
 },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -396,9 +386,6 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
@@ -414,11 +401,6 @@ export function ApplicationsTable({
     })
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 <<<<<<< HEAD
 =======
@@ -442,6 +424,7 @@ export function ApplicationsTable({
           <TableBody>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <TableCell>
                   <div className="flex items-center gap-3">
@@ -456,21 +439,16 @@ export function ApplicationsTable({
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
 =======
 <<<<<<< HEAD
-            {applications.map(application => (              <TableRow key={application.id}>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            {applications.map(application => (              <TableRow key={application.id}>
             {applications.map((application) => (
               <TableRow key={application.id}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <div>
-<<<<<<< HEAD
                       <div className='font-medium'>
                         {application.talent_profile?.full_name |'Candidate'}
                       </div>
@@ -478,6 +456,7 @@ export function ApplicationsTable({
                         {application.talent_profile?.professional_title |
                           'Applicant'}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
@@ -486,17 +465,22 @@ export function ApplicationsTable({
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div className="font-medium">
                         {application.talent_profile?.full_name || "Candidate"}
                       </div>
                       <div className="text-xs text-muted-foreground mt-0.5">
                         {application.talent_profile?.professional_title || "Applicant"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>>                       </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </div>
@@ -510,10 +494,13 @@ export function ApplicationsTable({
                 </TableCell>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <TableCell className='hidden lg:table-cell'>
                   {application.match_score !== undefined &&
                   application.match_score !== null ? (
@@ -522,12 +509,15 @@ export function ApplicationsTable({
                       className='cursor-pointer'
                       onClick={() => onViewScore(application)}                    >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                       {application.match_score}%
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       {application.match_score}%
 >>>>>>>                     </ClickableBadge>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
                     <ClickableBadge 
@@ -535,11 +525,6 @@ export function ApplicationsTable({
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
                     >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {application.match_score}%
                     </ClickableBadge>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -547,6 +532,7 @@ export function ApplicationsTable({
                     <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
                 </TableCell>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -558,6 +544,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> };"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <TableCell className='text-right'>
                   <div className='flex items-center justify-end gap-2'>
                     <ClickableBadge
@@ -601,13 +589,10 @@ ursor/fix-website-loading-errors-and-merge-6662
   () => setAvatarError (true)
 }priority= {
   false "
-<<<<<<< HEAD
 }h-4 w-4"/>)
 }</AvatarPrimitive>)
-=======
 }h-4 w-4"/>) ;
 }</AvatarPrimitive>) ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
@@ -638,12 +623,15 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
 }/> </>)
 }'"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <TableCell className="text-right">
                   <div className="flex items-center justify-end gap-2">
                     <ClickableBadge 
@@ -861,6 +849,7 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -873,3 +862,5 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

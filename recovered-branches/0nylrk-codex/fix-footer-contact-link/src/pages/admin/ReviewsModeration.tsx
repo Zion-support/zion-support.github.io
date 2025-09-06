@@ -19,9 +19,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
@@ -33,12 +36,15 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Star, AlertTriangle} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 <<<<<<< HEAD
+<<<<<<< HEAD
 function ReviewsModerationContent() {;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/ReviewsModeration.tsx
 
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
@@ -47,7 +53,6 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useState, useEffect } from "react",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Star, AlertTriangle } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
@@ -56,6 +61,7 @@ function ReviewsModerationContent() {
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -70,6 +76,10 @@ import { toast } from "@/components/ui/use-toast",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Star, AlertTriangle } from "lucide-react",
+import { toast } from "@/components/ui/use-toast",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
@@ -79,8 +89,11 @@ function ReviewsModerationContent() {
 
 =======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const fetchReviews = async () => {
     setIsLoading(true),
     try {
@@ -97,6 +110,7 @@ function ReviewsModerationContent() {
         variant: "destructive"})
       setIsLoading(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -150,6 +164,8 @@ function ReviewsModerationContent() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   useEffect(() => {
     fetchReviews()
@@ -158,7 +174,6 @@ function ReviewsModerationContent() {
     fetchReviews()
   }
 
-=======
   },
 
   useEffect(() => {
@@ -170,6 +185,7 @@ function ReviewsModerationContent() {
     fetchReviews()
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -283,6 +299,8 @@ function ReviewsModerationContent() {;
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <SEO
@@ -338,6 +356,7 @@ function ReviewsModerationContent() {;
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -349,6 +368,8 @@ function ReviewsModerationContent() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default function ReviewsModeration() {
   return (
@@ -357,10 +378,13 @@ export default function ReviewsModeration() {
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -475,7 +499,6 @@ export default function ReviewsModeration() {;
   return (
 =======
   );
-<<<<<<< HEAD
 }
 ;
 export default function ReviewsModeration() {;
@@ -511,10 +534,13 @@ function ReviewsModerationContent() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export default function ReviewsModeration() {
@@ -655,5 +681,8 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/ReviewsModeration.tsx
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

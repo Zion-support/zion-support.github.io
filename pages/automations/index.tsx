@@ -25,15 +25,16 @@ import Link from 'next/link';
 
 const AutomationsIndex: NextPage = () => {
   const items = [
-<<<<<<< HEAD
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' }
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }]
-=======
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -64,7 +65,6 @@ const AutomationsIndex: NextPage = () => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </Link>
-<<<<<<< HEAD
         ))}
       </div>
     </main>
@@ -101,11 +101,7 @@ const AutomationsIndex: NextPage = () => {
 export default AutomationsIndex,
 =======
 
-<<<<<<< HEAD
-=======
 export default AutomationsIndex,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -117,6 +113,7 @@ export default AutomationsIndex,;
   );
 },;
 export default AutomationsIndex;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -133,3 +130,5 @@ export default AutomationsIndex;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

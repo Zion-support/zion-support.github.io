@@ -16,13 +16,17 @@ import { Badge } from "@/components/ui/badge",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {StarIcon} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ListingScoreCardProps {;
   title: string,;
@@ -64,9 +68,10 @@ export function ListingScoreCard(): any ({ ;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { StarIcon } from "lucide-react";
 interface ListingScoreCardProps {
@@ -107,14 +112,16 @@ export function ListingScoreCard({
   return (
     <div className={cn(
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group"
-=======
 import { Button } from "@/components/ui/button",
 import { StarIcon } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -131,6 +138,7 @@ interface ListingScoreCardProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export function ListingScoreCard({ 
@@ -138,13 +146,17 @@ export function ListingScoreCard({
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ListingScoreCard({ ;
   title;
-=======
 export function ListingScoreCard({ 
   title,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   description, 
   image, 
   category, 
@@ -160,6 +172,7 @@ export function ListingScoreCard({
     <div className={cn(
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -168,6 +181,8 @@ export function ListingScoreCard({
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}>
       {image && (
@@ -291,26 +306,31 @@ export function ListingScoreCard({ ;
                   key={star}
                   className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     "h-4 w-4"
                     star <= Math.round(rating)
                       ? "text-zion-cyan fill-zion-cyan"
 
                       : "text-zion-slate-light"
-=======
                     "h-4 w-4", 
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -404,6 +424,7 @@ export function ListingScoreCard({;
                       ? "text-zion-cyan fill-zion-cyan";
                       : "text-zion-slate-light";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                   className={cn(
@@ -479,6 +500,8 @@ export function ListingScoreCard({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   )}
                 />
               ))}
@@ -493,26 +516,20 @@ export function ListingScoreCard({;
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
-<<<<<<< HEAD
               </Badge>
             ))}
           </div>
-<<<<<<< HEAD
         )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               </Badge>;
             ))}
           </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote
         </Button>

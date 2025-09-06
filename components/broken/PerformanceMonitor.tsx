@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
@@ -599,16 +597,15 @@ export default PerformanceMonitor
 <<<<<<< HEAD
 
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
-=======
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
-=======
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
@@ -634,6 +631,7 @@ if (ms < 1000) return `$ {
   Math.round (ms)
 }ms`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -645,12 +643,16 @@ if (ms < 1000) return `$ {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
@@ -684,6 +686,7 @@ if (metrics.cls < 0.1) score += 100;
 else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -696,14 +699,18 @@ else score += 25
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 else score += 25
 }
-=======
 else score += 25 
 
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -729,6 +736,7 @@ if (score >= 50) return 'Needs Improvement';
 <<<<<<< HEAD
 }
 export default PerformanceMonitor;
+<<<<<<< HEAD
 
 }
 
@@ -925,3 +933,7 @@ export default PerformanceMonitor;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

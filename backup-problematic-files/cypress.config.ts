@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { define_config } from 'cypress;
 
@@ -18,47 +19,41 @@ export default define_config ({,
 import { define_config } from 'cypress;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { defineConfig } from 'cypress;
 import { defineConfig } from 'cypress;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { defineConfig } from 'cypress;
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export default define_config ({,
   e2e: {,
 <<<<<<< HEAD
 =======
   baseUrl: 'http://localhost:3000',
-<<<<<<< HEAD
-<<<<<<< HEAD
     supportFile: cypress/support/e2e.ts',
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
     supportFile: cypress/support/e2e.ts',
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 supportFile: cypress/support/e2e.ts',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { defineConfig } from 'cypress';
 export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:5000',
     supportFile: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -66,12 +61,15 @@ export default defineConfig({
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { defineConfig } from 'cypress;
 ;
 export default defineConfig({,";
   e2e: {,'
   baseUrl: 'http://localhost:3000',
     supportFile: cypress/support/e2e.ts',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default defineConfig({,
@@ -105,6 +103,14 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: cypress/support/e2e.ts',    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
+    supportFile: cypress/support/e2e.ts',    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
+ursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     viewportWidth: 1280,
     viewportHeight: 720,
   base_url: 'http://localhost:3000',
@@ -124,6 +130,7 @@ import { define_config } from 'cypress'; export default define_config ({ e2e: { 
       open_mode: 0;
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -171,26 +178,35 @@ import { defineConfig } from 'cypress;
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    specPattern: 'src/**/*.cy.{js,jsx,ts,tsx}',
+  },
+});
+origin/chore/fix-build-nav-links
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setupNodeEvents(on, config) {,
       // implement node event listeners here
     }
   }
 }),
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     specPattern: 'src/**/*.cy.{js,jsx,ts,tsx}',
   },
 });
->>>>>>> origin/chore/fix-build-nav-links
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/chore/fix-build-nav-links
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 import { defineConfig } from 'cypress;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 }),
@@ -201,6 +217,12 @@ import { defineConfig } from 'cypress;
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+}),
+ursor/fix-lint-push-and-merge-to-main-ae4e
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default defineConfig({
   e2e: {
   baseUrl: 'http://localhost:3000'
@@ -224,6 +246,7 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
     }
   }
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -250,3 +273,6 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

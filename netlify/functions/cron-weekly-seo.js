@@ -7,6 +7,7 @@ const html = await resp && resp.text();
 =======
 const { upsertFile } = require('./_lib/github');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -14,6 +15,9 @@ const { upsertFile } = require('./_lib/github');
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 async function scorePage(url) {
   const t0 = Date.now();
   try {
@@ -132,6 +136,7 @@ if ( {) {
     return {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -145,6 +150,8 @@ if ( {) {
       body: JSON.stringify ({ ok: true, pages: results.length }),
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       statusCode: 200
       body: JSON.stringify({ ok: true, pages: results.length })
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -275,7 +282,6 @@ exports && exports.handler = async function() {
 },
 =======
 
-=======
       statusCode: 200,
       body: JSON.stringify({ ok: true, pages: results.length }),
     };
@@ -321,6 +327,7 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -380,3 +387,5 @@ exports.handler = async function() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

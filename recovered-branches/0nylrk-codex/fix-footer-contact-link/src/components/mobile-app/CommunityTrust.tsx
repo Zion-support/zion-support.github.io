@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React from "react",
@@ -15,6 +16,13 @@ import React from "react";
 
 import { Star } from "lucide-react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from "react";
+import { Star } from "lucide-react";
+
+import React from "react",
+import { Star } from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
@@ -23,6 +31,7 @@ export const CommunityTrust: React.FC = () => {
     { value: "96%", label: "User Satisfaction" }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {Star} from "lucide-react";
 
@@ -40,12 +49,18 @@ import React from "react";
 import { Star } from "lucide-react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+import {Star} from "lucide-react";
+import React from "react",
+import { Star } from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -121,6 +136,14 @@ export const CommunityTrust: React.FC = () => {
     { value: "12M+", label: "Matches Made" }
 ];
 
+=======
+    { value: "12M+", label: "Matches Made" };
+  ];
+    { value: "12M+", label: "Matches Made" }
+  ];
+  ],
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -148,11 +171,14 @@ export const CommunityTrust: React.FC = () => {
               </div>
               <div className="text-zion-slate-light">{stat.label}</div>
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Star } from "lucide-react",;
 export const CommunityTrust: React.FC = () => {;
@@ -181,10 +207,13 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </div>
 =======
@@ -295,6 +324,7 @@ export const CommunityTrust:React.FC = () => {;
       </div>
     </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           </div>;
@@ -355,3 +385,12 @@ export const CommunityTrust:React.FC = () => {;
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+
+  )
+},
+};
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

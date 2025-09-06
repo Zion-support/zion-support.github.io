@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState, useEffect, useCallback } from 'react';
@@ -7,13 +8,17 @@ import { supabase  } from '@/integrations/supabase/client';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
-=======
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel
 import { Button } from "@/components/ui/button",
@@ -22,10 +27,13 @@ import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "sonner";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface WhitepaperSection {
@@ -46,9 +54,12 @@ value: number
 }
 const WhitepaperGeneratorPage: React.FC = () => {'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useCallback } from 'react'
 import { supabase } from '@/integrations/supabase/client';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
@@ -75,8 +86,11 @@ value: number
   return text.toString () .toLowerCase () .replace (/\s+/g, '-') //Replace spaces with - .replace (/[^\w-]+/g, '') //Remove all non-word chars .replace (/--+/g, '-') //Replace multiple - with single - .replace (/^-+/, '') //Trim - from start of text .replace (/-+$/,  ''), //Trim - from end of text 
 };
 const WhitepaperGeneratorPage: React.FC = () => {';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [tokenName, setTokenName] = useState ('My Awesome Token');'
 const [tokenSupply, setTokenSupply] = useState<string> ('1000000000');'
 const [useCases, setUseCases] = useState ('To facilitate transactions and reward users in our innovative freelance AI marketplace. It will be used for payments, staking for dispute resolution, and accessing premium features.');'
@@ -91,19 +105,24 @@ const [distributionData, setDistributionData] = useState<DistributionItem[]> ([ 
 {'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
   id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20' 
 }
 {'
   id: crypto.randomUUID (),  name: 'Ecosystem Development Fund', percentage: '35' 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 {'
   id: crypto.randomUUID (),  name: 'Ecosystem Development Fund', percentage: '35'
@@ -802,7 +821,6 @@ if (
     setShareableLink(null)
     setCurrentSharedWhitepaperId(null)
     setCurrentSharedWhitepaperIsPublic(null)
-<<<<<<< HEAD
     try {
       const whitepaperPayload = {
         tokenName
@@ -1316,6 +1334,7 @@ import { Input } from '@/components/ui/input';
       setIsSubmittingToCounsel(false)
     }
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
       setIsSubmittingToCounsel(false)
@@ -1324,6 +1343,8 @@ import { Input } from '@/components/ui/input';
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
@@ -1332,8 +1353,11 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "sonner",
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
@@ -1686,6 +1710,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setCurrentSharedWhitepaperIsPublic(null),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     try {
 =======
@@ -1695,6 +1720,8 @@ const WhitepaperGeneratorPage: React.FC = () => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const whitepaperPayload = {
@@ -1704,12 +1731,15 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         distributionChartData,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         distributionBreakdown,
       }
       const { data: response, error: funcError } =
@@ -1890,11 +1920,14 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         distributionBreakdown},
       const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {
         body: whitepaperPayload}),
@@ -2133,6 +2166,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -2150,6 +2184,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 <<<<<<< HEAD
+=======
+  return (
+    <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
+      {/* Left Column: Inputs and Editors */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto'>
         <div className='flex justify-between items-center mb-6'>
           <h1 className='text-xl font-bold text-center flex-grow'>
@@ -2355,10 +2394,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <form onSubmit={e => e.preventDefault()} className='space-y-6'>
           {/* ... (Input fields remain the same) ... */}
           <div>
@@ -2461,11 +2496,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Button>              </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto">
         <div className="flex justify-between items-center mb-6">
             <h1 className="text-xl font-bold text-center flex-grow">Whitepaper Configuration</h1>
@@ -2482,11 +2520,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
           {/* ... (Input fields remain the same) ... */}
@@ -2518,6 +2559,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
@@ -2542,6 +2584,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            ))}
+            <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
+            <div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <label
                 htmlFor='distributionBreakdownDetails'
                 className='block text-sm font-medium'
@@ -2556,22 +2603,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                 rows={2}
               />            </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           </div>
           <div>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <label htmlFor="distributionBreakdownDetails" className="block text-sm font-medium">Additional Distribution Details (Text):</label>
               <textarea id="distributionBreakdownDetails" value={distributionBreakdown} onChange={(e) => setDistributionBreakdown(e.target.value)} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={2}/>
             </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label
               htmlFor='governanceLogic'
               className='block text-sm font-medium'
@@ -2587,6 +2635,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               rows={3}
             />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           </div>
           </div>
 >>>>>>>           <div>
@@ -2594,17 +2643,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label htmlFor="governanceLogic" className="block text-sm font-medium">Governance Logic:</label>
             <textarea id="governanceLogic" value={governanceLogic} onChange={(e) => setGovernanceLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
           <div>
             <label htmlFor="legalDisclaimers" className="block text-sm font-medium">Legal Disclaimers:</label>
             <textarea id="legalDisclaimers" value={legalDisclaimers} onChange={(e) => setLegalDisclaimers(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2626,10 +2672,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             type='button'
             onClick={handleGenerateWhitepaper}
             disabled={
@@ -2654,6 +2703,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </p>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>>           {shareableLink && !isSharing && currentSharedWhitepaperId && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -2661,6 +2711,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>             <div className="mt-4 p-3 border rounded-md bg-green-50">
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             type="button"
             onClick={handleGenerateWhitepaper}
             disabled={isLoading || isDownloading || isSharing || isSubmittingToCounsel}
@@ -2674,15 +2726,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           {error && !isLoading && !isDownloading && !isSharing && !isSubmittingToCounsel &&
             <p className="text-center text-sm text-red-600 p-2 bg-red-50 rounded-md">{error}</p>
           }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {shareableLink && !isSharing && currentSharedWhitepaperId && (
             <div className="mt-4 p-3 border rounded-md bg-green-50">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="flex justify-between items-center">
                 <label className="block text-sm font-medium text-green-700">Shareable Link:</label>
                 <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2692,6 +2743,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   onClick={handleTogglePublicStatus}
                   variant='outline'
                   size='sm' // smaller button
@@ -2731,6 +2784,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     ? 'Public'
                     : 'Private (Only admins can view)'}
                 </p>
+<<<<<<< HEAD
 >>>>>>>               )}
             </div>
           )}
@@ -2775,6 +2829,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                 </p>
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onClick={handleTogglePublicStatus}
                     variant="outline"
                     size="sm" // smaller button
@@ -2910,14 +2966,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-xs mt-1 text-gray-600">;
                     Currently: {currentSharedWhitepaperIsPublic ? "Public" : "Private (Only admins can view)"}
                 </p>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2932,26 +2984,27 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {isSharing && (
             <p className='text-center text-sm text-blue-600'>
               Generating shareable link...
             </p>
           )}
-<<<<<<< HEAD
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
-=======
-=======
            {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               type='button'
               onClick={handleSubmitToCounsel}
               disabled={
@@ -2970,21 +3023,27 @@ ursor/fix-website-loading-errors-and-merge-6662
             </p>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
            {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
 
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 type="button"
                 onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
@@ -3000,6 +3059,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         </form>
         {/* Section Editors */}
         {sections.length > 0 && (
@@ -3009,49 +3069,58 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </form>
         {/* Section Editors */}
         {sections.length > 0 && (
-<<<<<<< HEAD
           <div className='mt-8 pt-6 border-t'>
             <h2 className='text-xl font-bold mb-4 text-center'>
               Edit Generated Sections
             </h2>
             {sections.map(section => (
-=======
           <div className="mt-8 pt-6 border-t">
             <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>
             {sections.map((section) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <WhitepaperSectionEditor
                 key={section.id}
                 title={section.title}
                 content={section.content}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onContentChange={newContent =>
                   handleSectionContentChange(section.id, newContent)
                 }              />
-=======
                 onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
               />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         )}
         {rawDraft && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         )}
@@ -3120,6 +3189,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='mt-6 p-3 border rounded-md'>
             <Button
               onClick={() => setShowRawDraft(!showRawDraft)}
@@ -3134,7 +3205,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               </pre>
             )}
           </div>
-=======
             <div className="mt-6 p-3 border rounded-md">
             <Button onClick={() => setShowRawDraft(!showRawDraft)} variant="outline" size="sm" className="w-full">
                 {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text
@@ -3145,15 +3215,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </pre>;
             )}
             </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
-<<<<<<< HEAD
       <div
         id='preview-panel-content'
         ref={previewPanelRef}
@@ -3169,15 +3233,18 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 export default WhitepaperGeneratorPage
-<<<<<<< HEAD
 '"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 '";
 ;
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
@@ -3185,6 +3252,8 @@ export default WhitepaperGeneratorPage
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <WhitepaperPreviewPanel
@@ -3204,6 +3273,7 @@ export default WhitepaperGeneratorPage
 export default WhitepaperGeneratorPage;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -3217,3 +3287,5 @@ export default WhitepaperGeneratorPage;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

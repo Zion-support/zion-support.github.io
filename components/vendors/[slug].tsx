@@ -35,22 +35,14 @@ export default function VendorProfilePage(): any ({ vendor }: Props) {;
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
-=======
 type Props = { vendor: Vendor | null };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function VendorProfilePage({ vendor }: Props) {;
-=======
 type Props = { vendor: Vendor | null };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function VendorProfilePage({ vendor }: Props) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   if (!vendor) return <div className='text-gray-500'>Vendor not found.</div>;  if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
@@ -290,10 +282,8 @@ function submit_lead() {
 =======
   }
   return (
-<<<<<<< HEAD
     <div className='space-y-8'>
       <div className='flex items-center gap-4'>
-<<<<<<< HEAD
         {vendor.logoUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -536,16 +526,12 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
                   <div className="font-medium">{sp.title}</div>
                   <div className="text-sm text-gray-500">{sp.description}</div>
                 </div>
-=======
 
-<<<<<<< HEAD
     }
   }
 
   return (
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       </div>
 
@@ -558,16 +544,12 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
 
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             ))}
           </div>
         </div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -588,8 +570,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div>
         <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
         <form onSubmit={submitLead} className='space-y-3'>
@@ -611,25 +594,17 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   const slug = String(ctx.params?.slug |'');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
-<<<<<<< HEAD
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
-=======
 export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
   const slug = String(ctx.params?.slug || '');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };            {loading ? 'Submitting...' : 'Send'}
           </button>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -641,6 +616,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
   const slug = String(ctx && ctx.params?.slug || '');
@@ -656,12 +632,14 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const slug = String(ctx.params?.slug |'');
-=======
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
   const slug = String(ctx.params?.slug || '');
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const { getVendorBySlug } = await import('../../utils/vendor-store');
@@ -837,11 +815,14 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   );
 }
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
 }
 
+<<<<<<< HEAD
   const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } };
 };
@@ -855,15 +836,16 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } };
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 };
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

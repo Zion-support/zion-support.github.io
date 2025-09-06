@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -19,6 +20,10 @@ import { useRouter } from 'next/router',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+import React from 'react';
+import { useRouter  } from 'next/router';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard'; import React from 'react'
@@ -32,11 +37,8 @@ import { TalentProfile } from "@/types/talent"
 import { RatingStars } from '@/components/RatingStars'
 import { useAuth } from '@/context/auth/AuthProvider'
 import { useCart } from '@/context/CartContext'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',
 import { useRouter } from 'next/router',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Badge } from "@/components/ui/badge",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from "@/components/ui/button",
@@ -45,36 +47,46 @@ import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { FavoriteButton } from "@/components/FavoriteButton",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { TalentProfile } from "@/types/talent";
 import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
+<<<<<<< HEAD
 <<<<<<< HEAD
 xport interface TalentCardProps {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { TalentProfile } from "@/types/talent",
 import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface TalentCardProps {
 >>>>>>> 
   talent: TalentProfile
   onViewProfile: (id: string,) => void
   onRequestHire: (talent: TalentProfile,) => void
   isAuthenticated: boolean
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -84,6 +96,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { useRouter } from 'next/router',;
 import { Badge } from "@/components/ui/badge",;
@@ -101,11 +115,14 @@ export interface TalentCardProps {;
   onRequestHire: (talent: TalentProfile) => void,;
   isAuthenticated: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 onst TalentCardComponent = ({
   talent
@@ -121,6 +138,7 @@ onst TalentCardComponent = ({
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -174,6 +192,9 @@ const TalentCardComponent = ({;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   const handleRequestHire = (e: React.MouseEvent) => {;
     e.preventDefault(),;
@@ -181,23 +202,18 @@ const TalentCardComponent = ({;
     if (onRequestHire) {;
       onRequestHire(talent);
     }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault()
     e.stopPropagation()
     if (onRequestHire) {
       onRequestHire(talent)
     }
-<<<<<<< HEAD
   }
-=======
   },
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) |[]
   return (
@@ -205,19 +221,24 @@ const TalentCardComponent = ({;
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       onClick = {handleViewProfile,}
       tabIndex = {0,}
-=======
       onClick={handleViewProfile}
       tabIndex={0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
 =======
       onClick = {handleViewProfile,}
@@ -237,6 +258,7 @@ const TalentCardComponent = ({;
                 <img
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   className="w-full h-full object-cover"
 =======
@@ -245,22 +267,19 @@ const TalentCardComponent = ({;
 >>>>>>>                   className="w-full h-full object-cover"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   src = {talent.profile_picture_url,}
                   alt = {talent.full_name,}
-=======
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="w-full h-full object-cover"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   loading="lazy"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -294,10 +313,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>;
 
 =======
-                  {talent.full_name?.charAt(0) |"T"}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  {talent.full_name?.charAt(0) |"T"}
                   {talent.full_name?.charAt(0) || "T"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </div>
               )}
             </div>
@@ -315,6 +334,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FavoriteButton itemId={talent.id} className="-mt-1" />
             </div>
             <p className="text-white font-medium">{talent.professional_title}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -396,12 +416,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               )}
 =======
 =======
-            
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -416,10 +433,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <span>{talent.availability_type}</span>
                 </div>
               )}
-<<<<<<< HEAD
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>>               )}
@@ -432,14 +449,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Skills */}
 <<<<<<< HEAD
         {skills && skills.length > 0 && (;
@@ -502,18 +516,12 @@ ursor/fix-website-loading-errors-and-merge-6662
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
               {skills.map((skill, index,) => (
                 <span
                   key = {index,}
-<<<<<<< HEAD
-=======
-=======
               {skills.map((skill, index) => (
                 <span 
                   key={index}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
                   {skill}
@@ -523,7 +531,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
                   +{(talent.skills?.length |0) - 5} more
                 </span>
-=======
               {skills.map((skill, index) => (
                 <span 
                   key={index}
@@ -536,7 +543,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
                   +{(talent.skills?.length || 0) - 5} more
                 </span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               )}
             </div>
           </div>
@@ -553,14 +559,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="text-zion-slate-light">Rate not specified</div>
             )}
           </div>
-<<<<<<< HEAD
-=======
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="flex items-center gap-2">
             {isAuthenticated && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -569,17 +568,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                 variant="secondary"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-                onClick = {handleRequestHire,}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                onClick = {handleRequestHire,}
                 onClick={handleRequestHire}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
 =======
                 onClick = {handleRequestHire,}
@@ -598,6 +602,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               variant="ghost"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 e.stopPropagation(),
 
@@ -610,18 +615,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 handleViewProfile()
 >>>>>>>               }}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onClick={(e,) => {
-<<<<<<< HEAD
                 e.stopPropagation()
-=======
               onClick={(e) => {
-=======
-=======
               onClick={(e) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 e.stopPropagation(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 handleViewProfile()
               }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -636,7 +636,10 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export const TalentCard = React.memo(TalentCardComponent)
 TalentCard.displayName = 'TalentCard'
@@ -645,6 +648,7 @@ TalentCard.displayName = 'TalentCard'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 ;
@@ -652,20 +656,23 @@ export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
-=======
 },
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
-<<<<<<< HEAD
 ;
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="mt-5 flex items-center justify-between">;
           <div>;
             {talent.hourly_rate ? (;
@@ -709,6 +716,7 @@ export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -728,3 +736,5 @@ TalentCard.displayName = 'TalentCard',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

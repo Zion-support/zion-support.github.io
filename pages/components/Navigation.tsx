@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -9,15 +10,17 @@ import {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-=======
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -46,6 +49,11 @@ import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+  ArrowRight,
+  Award,
+  BarChart3,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Shield,
   Code,
   Zap,
@@ -57,6 +65,7 @@ import {
   Calendar,
   ShoppingCart,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -66,6 +75,11 @@ import {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   BookOpen,
   Brain,
   Building,
@@ -100,6 +114,7 @@ import {
   Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,12 +176,16 @@ import {;
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Truck,
   Users,
   X,
   Zap,;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -176,15 +195,20 @@ import {;
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Truck,
   Users,
   X,
   Zap
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Clock,
   DollarSign,
   Cpu,
@@ -223,6 +247,7 @@ import {;
   Clock as Time,
   DollarSign as Money;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
@@ -245,19 +270,24 @@ import {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-} from 'lucide-react';
->>>>>>> origin/automation-improvements-final
-
 =======
-<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+} from 'lucide-react';
+origin/automation-improvements-final
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight
   Award
   BarChart3
@@ -301,6 +331,7 @@ import {
   Zap
 } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -319,6 +350,9 @@ import {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const navigationItems = [
   {
     title: "Services"
@@ -787,6 +821,7 @@ const navigationItems = [;
   },;
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 const quickLinks = [;
   { title: "Pricing", href: "/pricing", icon: DollarSign },;
   { title: "Contact", href: "/contact", icon: Phone },;
@@ -798,8 +833,9 @@ const quickLinks = [;
 export default function Navigation() {;
 =======
 <<<<<<< HEAD
-export default function Navigation() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function Navigation() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -826,16 +862,20 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 export default function Navigation() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-<<<<<<< HEAD
-=======
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}

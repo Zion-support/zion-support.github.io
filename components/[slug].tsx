@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -36,12 +37,16 @@ import React, { useMemo } from 'react';
 =======
 =======
 <<<<<<< HEAD
-import React, { useMemo } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useMemo } from 'react',
 import React, { useMemo } from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
@@ -70,6 +75,7 @@ import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -84,6 +90,12 @@ export default function DynamicServicePage() {;
   const { slug } = router.query as { slug?: string };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default function DynamicServicePage() {
+export default function DynamicServicePage() {;
+  const router = useRouter();
+  const { slug } = router.query as { slug?: string };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const router = useRouter();
@@ -261,6 +273,7 @@ export default function DynamicServicePage() {;
 <<<<<<< HEAD
     return undefined;  }, [slug]);    return undefined
   }, [slug]);
+<<<<<<< HEAD
 
 =======
 
@@ -290,8 +303,9 @@ export default function DynamicServicePage() {;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!service) {
     return (
       <UltraAdvancedFuturisticBackground>
@@ -748,18 +762,10 @@ function normalizeSlug(): any (value: string): string {;
 =======
 =======
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 // Static export support: generate root-level pages for service slugs;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Static export support: generate root-level pages for service slugs
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices.concat(
@@ -1107,19 +1113,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return null
   } catch {
     return null
-<<<<<<< HEAD
   }
 }
-=======
   };
 }
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const getStaticPaths: GetStaticPaths = async () => {
-=======
 export const getStaticPaths: GetStaticPaths = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const services = collectAllServices();
   const candidateSlugs = new Set<string>()
   // Gather existing root-level page slugs to avoid conflicts
@@ -1139,19 +1139,13 @@ export const getStaticPaths: GetStaticPaths = async () => {;
         }
     }
   } catch {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)
   );
   return {
-<<<<<<< HEAD
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } }))
-=======
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
     fallback: true,
   };
@@ -1165,7 +1159,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 
   return {
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     fallback: true
   }
 }
@@ -1181,21 +1174,19 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
-<<<<<<< HEAD
   return { props: {} }
 }
 
-=======
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   return { props: {} };
 };
-=======
 
 };
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

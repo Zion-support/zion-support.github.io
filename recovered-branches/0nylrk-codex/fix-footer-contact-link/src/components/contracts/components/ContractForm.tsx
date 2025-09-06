@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ContractForm.tsx
@@ -15,6 +16,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -32,6 +36,7 @@ import {PaymentTermsFields} from "./PaymentTermsFields";
 import {AdditionalClausesFields} from "./AdditionalClausesFields";
 import {DeploymentOptions} from "@/types/smart-contracts";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -40,6 +45,8 @@ import {DeploymentOptions} from "@/types/smart-contracts";
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -56,6 +63,7 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields",
 import { PaymentTermsFields } from "./PaymentTermsFields",
 import { AdditionalClausesFields } from "./AdditionalClausesFields",
 import { DeploymentOptions } from "@/types/smart-contracts",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -106,11 +114,12 @@ const formSchema = z && z.object({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required"),
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
   startDate: z.date({
-<<<<<<< HEAD
     required_error: "Start date is required"})
   endDate: z.date().optional()
   paymentTerms: z.enum(["hourly", "fixed", "milestone"]);
@@ -124,8 +133,11 @@ interface ContractFormProps {
   onFormValuesChange?: (values: ContractFormValues) => void
   onContractGenerated: (contractContent: string) => void
   deployOptions?: DeploymentOptions;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     required_error: "Start date is required"}),
   endDate: z.date().optional(),
   paymentTerms: z.enum(["hourly", "fixed", "milestone"]),
@@ -177,6 +189,7 @@ interface ContractFormProps {
   onContractGenerated: (contractContent: string) => void,
   deployOptions?: DeploymentOptions,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
@@ -188,12 +201,11 @@ interface ContractFormProps {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function ContractForm({;
   talent;
   clientName;
@@ -201,8 +213,6 @@ export function ContractForm({;
   onFormValuesChange;
   onContractGenerated;
   deployOptions;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ContractForm({
   talent,
   clientName,
@@ -210,10 +220,8 @@ export function ContractForm({
   onFormValuesChange,
   onContractGenerated,
   deployOptions,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onDeployOptionsChange
 }: ContractFormProps) {
-<<<<<<< HEAD
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
@@ -226,8 +234,11 @@ export function ContractForm({
       paymentTerms: talent.hourly_rate ? "hourly" : "fixed"
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : ""
       additionalClauses: ["nda", "ip"]}});
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isGenerating, setIsGenerating] = useState(false),
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
   const { toast } = useToast(),
@@ -243,12 +254,15 @@ export function ContractForm({
       additionalClauses: ["nda", "ip"]}}),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
@@ -266,7 +280,6 @@ export function ContractForm({
         const typedKey = key as keyof ContractFormValues,
         form.setValue(typedKey, initialValues[typedKey])
       })
-<<<<<<< HEAD
     }
   }, [initialValues, form]);
   // Track form values for template saving
@@ -278,8 +291,11 @@ export function ContractForm({
       return () => subscription.unsubscribe()
     }
   }, [form, onFormValuesChange]);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -367,6 +383,7 @@ export function ContractForm({;
     }
   }, [form, onFormValuesChange]),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   
 
@@ -380,6 +397,9 @@ export function ContractForm({;
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
     // If payment terms isn't already set to milestone, update it
@@ -389,6 +409,7 @@ export function ContractForm({;
     toast({
       title: "Milestones Generated"
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -401,12 +422,16 @@ export function ContractForm({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true)
     try {
@@ -415,6 +440,7 @@ export function ContractForm({;
         talent
         clientName
         generatedMilestones
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -430,11 +456,11 @@ export function ContractForm({;
       console.error("Error generating contract:", error);
 =======
 <<<<<<< HEAD
-      );
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      );
       ),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       onContractGenerated(contract)
     } catch (error) {
       console.error("Error generating contract:", error),
@@ -451,7 +477,6 @@ export function ContractForm({;
 =======
     } finally {
       setIsGenerating(false)
-<<<<<<< HEAD
     }
   }
 
@@ -460,7 +485,6 @@ export function ContractForm({;
       <DialogHeader>
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>
         <DialogDescription>
-=======
   }, [form, onFormValuesChange]),;
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {;
     setGeneratedMilestones(milestones),;
@@ -499,11 +523,14 @@ export function ContractForm({;
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
@@ -512,6 +539,7 @@ export function ContractForm({;
           <ProjectDetailsFields
             form={form}
           />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -897,48 +925,55 @@ export function ContractForm({;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <PaymentTermsFields
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
-=======
           
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />;
           <AdditionalClausesFields;
             form={form}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           />
           <AdditionalClausesFields
             form={form}
           />
           <Button
             type="submit"
-=======
-<<<<<<< HEAD
-=======
           />;
           <AdditionalClausesFields;
             form={form}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
           <AdditionalClausesFields 
             form={form}
           />
           <Button 
             type="submit" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -977,6 +1012,8 @@ export function ContractForm({;
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}
           >
@@ -993,6 +1030,7 @@ export function ContractForm({;
         </form>
       </Form>
       <DialogFooter className="gap-2 flex-wrap mt-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1056,6 +1094,8 @@ export function ContractForm({;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button
           variant="outline"
           onClick={() => form.reset()}
@@ -1067,7 +1107,6 @@ export function ContractForm({;
     </>
   )
 }
-=======
         <Button 
           variant="outline" 
           onClick={() => form.reset()}
@@ -1141,5 +1180,8 @@ talent.full name
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

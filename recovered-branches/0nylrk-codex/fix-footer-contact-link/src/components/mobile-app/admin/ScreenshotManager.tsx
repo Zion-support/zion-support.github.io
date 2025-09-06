@@ -14,24 +14,23 @@ import { toast } from './sonner';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
 =======
 
-<<<<<<< HEAD
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Upload, Trash2, Plus } from "lucide-react",
-<<<<<<< HEAD
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
-=======
-<<<<<<< HEAD
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Upload, Trash2, Plus} from "lucide-react";
 import {AppPlatform} from "./MetadataManager";
 import {toast} from "sonner";
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ScreenshotManagerProps {
   platform: AppPlatform
 }
@@ -47,15 +46,16 @@ type Screenshot = {
   id: string
   url: string
   file: File
-<<<<<<< HEAD
 }
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
-=======
 };
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -64,23 +64,26 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.target.files))
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/'));
-=======
-=======
   };
-=======
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Upload, Trash2, Plus } from "lucide-react",
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AppPlatform } from "./MetadataManager",
 import { toast } from "sonner",
 interface ScreenshotManagerProps {
@@ -110,6 +113,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
@@ -136,11 +140,14 @@ type Screenshot = {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -148,16 +155,21 @@ type Screenshot = {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files")
       return
     }
     // Limit the number of screenshots
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const maxScreenshots = platform === "ios" ? 10 : 8;
     const availableSlots = maxScreenshots - screenshots.length;
     if (availableSlots <= 0) {
@@ -200,14 +212,10 @@ type Screenshot = {
       addScreenshots(Array.from(e.dataTransfer.files))
     }
   }
-=======
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
     
     if (availableSlots <= 0) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
       return
     }
@@ -258,9 +266,12 @@ type Screenshot = {
       addScreenshots(Array.from(e.dataTransfer.files))
     }
   };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return
   },;
@@ -318,6 +329,7 @@ type Screenshot = {
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -338,6 +350,9 @@ type Screenshot = {
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -538,14 +553,15 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
 =======
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
-<<<<<<< HEAD
             isDragging
               ? "border-zion-cyan bg-zion-cyan/10"
-=======
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
@@ -908,25 +924,19 @@ return filtered;
               </button>
             </div>
           ))}
-<<<<<<< HEAD
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         </div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

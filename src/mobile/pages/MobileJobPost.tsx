@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   
 import React, { useState } from "react"
 import {MobileHeader} from "@/mobile/components/common/MobileHeader"
@@ -16,6 +13,7 @@ import {Card, CardContent} from "@/components/ui/card"
 type JobPostStep = "details" | "requirements" | "budget" | "preview"
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
@@ -47,9 +45,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import React, { useState } from "react",
 import { MobileHeader } from "@/mobile/components/common/MobileHeader",
 import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",
@@ -69,7 +67,6 @@ import { Badge } from "@/components/ui/badge",
 import { Card, CardContent } from "@/components/ui/card",
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import React, { useState } from "react"
 import {MobileHeader} from "@/mobile/components/common/MobileHeader"
@@ -84,17 +81,18 @@ import {Badge} from "@/components/ui/badge"
 import {Card, CardContent} from "@/components/ui/card"
 type JobPostStep = "details" | "requirements" | "budget" | "preview"
 export function MobileJobPost() {
-<<<<<<< HEAD
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details")
-=======
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const goToNextStep = () => {
 >>>>>>>     if (currentStep === "details") {
       setCurrentStep("requirements")
@@ -191,16 +189,9 @@ if ( {) {
 =======
 =======
     }
-<<<<<<< HEAD
   }
-=======
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details")
@@ -210,7 +201,10 @@ if ( {) {
       setCurrentStep("budget")
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const renderStepContent = () => {
     switch (currentStep) {
@@ -226,10 +220,13 @@ if ( {) {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const renderStepContent = () => {
@@ -246,11 +243,6 @@ if ( {) {
     }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="min-h-screen flex flex-col">
@@ -258,6 +250,7 @@ if ( {) {
         title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
         showBack
       />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -281,6 +274,9 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <main className="flex-1 py-4 pb-24 px-4">
 >>>>>>>         <div className="mb-6 flex justify-between">
           <div className="flex space-x-1">
@@ -289,6 +285,7 @@ if ( {) {
             <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>
             <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -301,10 +298,14 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button variant="outline" className="flex gap-1">
             <Zap className="h-4 w-4" /> AI Assist
           </Button>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>>           <Button variant="outline" className="flex gap-1">
@@ -315,6 +316,8 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {renderStepContent()}
         <div className="flex gap-2 mt-6">
           {currentStep !== "details" && (
@@ -322,6 +325,7 @@ if ( {) {
               variant="outline"
               className="flex-1 gap-1"
               onClick = {goToPrevStep,}
+<<<<<<< HEAD
 <<<<<<< HEAD
         
 >>>>>>>         {renderStepContent()}
@@ -342,8 +346,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {renderStepContent()}
         
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -353,6 +358,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               variant="outline" 
               className="flex-1 gap-1" 
               onClick={goToPrevStep}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -367,10 +373,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <ChevronLeft className="h-4 w-4" /> Back
             </Button>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -417,11 +426,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-          <Button
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          <Button
           
           <Button 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             className="flex-1 gap-1"
             onClick={goToNextStep}
           >
@@ -431,6 +440,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
         </div>
       </main>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -447,6 +457,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <BottomNavigation />
 >>>>>>>     </div>
   )
@@ -455,6 +468,7 @@ function DetailsStep() {
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Details</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -479,11 +493,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
         <Label htmlFor="title">Job Title</Label>
         <Input id="title" placeholder="e.g. Senior React Developer" />
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -503,11 +521,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
         <Label htmlFor="company">Company Name</Label>
         <Input id="company" placeholder="Your company name" />
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -527,6 +549,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
 >>>>>>>         <Label htmlFor="location">Location</Label>
         <Select defaultValue="remote">
@@ -542,6 +567,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <div className="space-y-2">
@@ -556,6 +582,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
 >>>>>>>         <Label htmlFor="jobType">Job Type</Label>
         <Select>
@@ -572,12 +601,22 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+      <div className="space-y-2">
+        <Label htmlFor="description">Job Description</Label>
+        <Textarea
+          id="description"
+          placeholder="Describe the job role and responsibilities"
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
         <Label htmlFor="description">Job Description</Label>
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
+<<<<<<< HEAD
 
 =======
 =======
@@ -604,6 +643,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           rows = {5,}
         />
       </div>
@@ -611,7 +652,10 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
     "React", "TypeScript", "Node.js"
@@ -631,19 +675,25 @@ function RequirementsStep() {
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <div className="space-y-2">
         <Label htmlFor="description">Job Description</Label>
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { MobileHeader } from "@/mobile/components/common/MobileHeader",;
 import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",;
@@ -796,15 +846,19 @@ function DetailsStep() {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
     "React", "TypeScript", "Node.js"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -817,6 +871,8 @@ function RequirementsStep() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ])
   const [newSkill, setNewSkill] = useState("")
   const addSkill = () => {
@@ -832,11 +888,14 @@ function RequirementsStep() {
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ]),
   const [newSkill, setNewSkill] = useState(""),
   
@@ -865,11 +924,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
 >>>>>>>         <Label htmlFor="experience">Experience Level</Label>
         <Select>
@@ -886,6 +948,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <div className="space-y-2">
@@ -900,6 +963,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
 >>>>>>>         <Label htmlFor="education">Education</Label>
         <Select>
@@ -918,18 +984,22 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <div className="space-y-2">
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
         <Label>Required Skills</Label>
         <div className="flex flex-wrap gap-2 mb-3">
           {skills.map((skill,) => (
             <Badge
               key = {skill,}
+<<<<<<< HEAD
 <<<<<<< HEAD
       
 >>>>>>>       <div className="space-y-2">
@@ -961,39 +1031,38 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="space-y-2">
         <Label>Required Skills</Label>
         <div className="flex flex-wrap gap-2 mb-3">
           {skills.map((skill) => (
             <Badge 
               key={skill} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
               {skill}
-<<<<<<< HEAD
               <button
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 onClick = {(,) => removeSkill(skill),}
               >
                 ×
               </button>
             </Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </div>
         <div className="flex gap-2">
           <Input
             value = {newSkill,}
             onChange = {(e,) => setNewSkill(e.target.value),}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1004,6 +1073,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              <button 
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
@@ -1086,6 +1159,7 @@ function RequirementsStep() {;
             </Badge>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           ))}
 =======
@@ -1095,6 +1169,8 @@ function RequirementsStep() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>
@@ -1104,6 +1180,7 @@ function RequirementsStep() {;
             onChange={(e) => setNewSkill(e.target.value)}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             placeholder="Add a skill"
 =======
@@ -1111,6 +1188,8 @@ function RequirementsStep() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             placeholder="Add a skill"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             onKeyDown={(e) => e.key === 'Enter' && addSkill()}
@@ -1120,10 +1199,13 @@ function RequirementsStep() {;
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
         <Label htmlFor="requirements">Specific Requirements</Label>
         <Textarea
@@ -1143,6 +1225,7 @@ function RequirementsStep() {;
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       
 >>>>>>>       <div className="space-y-2">
@@ -1166,8 +1249,9 @@ function RequirementsStep() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="space-y-2">
         <Label htmlFor="requirements">Specific Requirements</Label>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1179,6 +1263,7 @@ function RequirementsStep() {;
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1187,11 +1272,15 @@ function RequirementsStep() {;
       
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
         <Label htmlFor="responsibilities">Key Responsibilities</Label>
         <Textarea 
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1200,22 +1289,28 @@ function RequirementsStep() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           rows = {4,}
         />
       </div>
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           rows={4}
         />;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1239,10 +1334,15 @@ unction BudgetStep() {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function BudgetStep() {
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Budget & Timeline</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1263,6 +1363,9 @@ function BudgetStep() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
 >>>>>>>         <Label htmlFor="paymentType">Payment Type</Label>
         <Select>
@@ -1276,6 +1379,7 @@ function BudgetStep() {
           </SelectContent>
         </Select>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1292,6 +1396,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
 >>>>>>>         <Label>Salary Range</Label>
         <div className="flex gap-4 items-center">
@@ -1312,6 +1419,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <div className="space-y-2">
@@ -1334,11 +1442,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
         <Label htmlFor="deadline">Application Deadline</Label>
         <Input type="date" id="deadline" />
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1358,11 +1470,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
         <Label htmlFor="startDate">Expected Start Date</Label>
         <Input type="date" id="startDate" />
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1382,6 +1498,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
 >>>>>>>         <Label htmlFor="duration">Project Duration</Label>
         <Select>
@@ -1400,12 +1519,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <div className="space-y-2">
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
         <Label htmlFor="additionalInfo">Additional Budget Information</Label>
         <Textarea
@@ -1418,6 +1540,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 >>>>>>>       <div className="space-y-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1425,8 +1548,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="space-y-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Label htmlFor="additionalInfo">Additional Budget Information</Label>
@@ -1435,28 +1559,35 @@ ursor/fix-website-loading-errors-and-merge-6662
           placeholder="Any additional information about budget or payment" 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           rows = {3,}
         />
       </div>
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           rows={3}
         />;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1484,11 +1615,16 @@ unction PreviewStep() {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function PreviewStep() {
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium mb-2">Job Preview</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1508,11 +1644,15 @@ function PreviewStep() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Card>
         <CardContent className="p-4">
           <h3 className="font-bold text-lg">Senior React Developer</h3>
           <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1532,11 +1672,15 @@ function PreviewStep() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="flex gap-2 my-3">
 >>>>>>>             <Badge variant="outline">React</Badge>
             <Badge variant="outline">TypeScript</Badge>
             <Badge variant="outline">Node.js</Badge>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1565,11 +1709,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="space-y-1 text-sm mt-4">
             <p className="font-medium">Salary Range:</p>
             <p>$80,000 - $120,000 USD / year</p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1589,11 +1737,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Experience Level:</p>
             <p>Senior</p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1613,11 +1765,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Application Deadline:</p>
             <p>December 15, 2023</p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1637,6 +1793,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="mt-4 pt-3 border-t border-border">
 >>>>>>>             <h4 className="font-medium mb-2">Description</h4>
             <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>
@@ -1644,6 +1803,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       <Button variant="outline" className="w-full">Edit Job Post</Button>
@@ -1656,19 +1816,21 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </Card>
-<<<<<<< HEAD
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
   )
-=======
-<<<<<<< HEAD
       </Card>;
       <Button variant="outline" className="w-full">Edit Job Post</Button>;
     </div>;
   );
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };"
 min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"className=" flex gap-1"> <Zap className=" h-4 w-4"/> AI Assist </Button> </div> {
   renderStepContent () "
@@ -1711,6 +1873,7 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
 }<Card> <CardContent className=" p-4"> <h3 className=" font-bold text-lg">Senior React Developer</h3> <p className=" text-muted-foreground">TechCorp Inc. • Remote • Full-time</p> <div className=" flex gap-2 my-3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space-y-1 text-sm mt-3"> <p className=" font-medium">Experience Level:</p> <p>Senior</p> </div> </div> <div className=" mt-4 pt-3 border-t border-border"> <h4 className=" font-medium mb-2">Description</h4> <p className=" text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w-full" >Edit Job Post</Button> </div> '"}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       
@@ -1732,8 +1895,9 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </Card>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
@@ -1741,8 +1905,11 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

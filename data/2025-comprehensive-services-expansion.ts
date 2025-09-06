@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -19,6 +20,8 @@ export interface ComprehensiveService {
   launch_date: string;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveService {;
   id: string;
@@ -67,6 +70,7 @@ export interface ComprehensiveService {;
 
 ;
 const contact = {
+<<<<<<< HEAD
 =======
 
 
@@ -82,19 +86,25 @@ const contact = {
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -104,6 +114,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -167,6 +179,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     description:
       'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'
     features: [
+<<<<<<< HEAD
 =======
 
 
@@ -1389,6 +1402,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4.8,
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Automated security vulnerability detection'
       'Code quality scoring and metrics'
       'Best practice recommendations'
@@ -1413,7 +1428,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     realService: true
     technology: ['AI/ML, Static Analysis, Security Scanning']
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack']
-=======
       'Automated security vulnerability detection',
       'Code quality scoring and metrics',
       'Best practice recommendations',
@@ -1438,7 +1452,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     realService: true,
     technology: ['AI/ML, Static Analysis, Security Scanning'],
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     useCases: [
       'Code quality improvement, Security compliance, Team productivity'
     ]
@@ -1948,7 +1961,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.8,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     reviews: 178
-<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -2680,9 +2692,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 =======
 =======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveService {;
   id: string,;
@@ -3377,12 +3386,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     customers: 234,;
     rating: 4.8;
     reviews: 178;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,11 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -29,15 +30,17 @@ import { BLOG_POSTS } from '@/data/blog-posts'
 import { Search } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { fetchWithRetry  } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { fetchWithRetry  } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-=======
 import { fetchWithRetry } from '@/utils/fetchWithRetry'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 import { useState, useEffect } from "react"
@@ -73,9 +76,12 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const query = useDebounce(searchQuery, 300)
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -113,12 +119,14 @@ const CATEGORIES = [
 const CATEGORIES = [
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Categories for filtering
 
 const CATEGORIES = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   'All Categories'
   'Trends'
   'Marketing'
@@ -137,6 +145,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const query = useDebounce(searchQuery, 300)
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
@@ -199,6 +208,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "All Categories",
   "Trends",
   "Marketing",
@@ -221,15 +232,9 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const [isLoading, setIsLoading] = useState(false),
   const router = useRouter(),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
     return () => {
-<<<<<<< HEAD
       setSearchQuery('')
       setSelectedCategory('All Categories')
       setPosts([...initialPosts])
@@ -248,7 +253,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         const data: BlogPost[] = await fetchWithRetry(
           `/api/blog?query=${encodeURIComponent(query)}`
         )
-=======
       setSearchQuery(""),
       setSelectedCategory("All Categories"),
       setPosts([...initialPosts])
@@ -269,34 +273,30 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         const data: BlogPost[] = await fetchWithRetry(
           `/api/blog?query=${encodeURIComponent(query)}`
         ),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         setPosts(data)
       } catch (err) {
         logErrorToProduction('Failed to fetch blog posts', { data: err })
       } finally {
         setIsLoading(false)
       }
-<<<<<<< HEAD
     }
     fetchPosts()
   }, [query])
-<<<<<<< HEAD
-=======
     },
 
     fetchPosts()
   }, [query]),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -304,15 +304,19 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       selectedCategory === 'All Categories' |
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-      selectedCategory === 'All Categories' |
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      selectedCategory === 'All Categories' |
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory = null;
       selectedCategory === 'All Categories' ||
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       post.category === selectedCategory
     return matchesCategory
   })
@@ -320,6 +324,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const featuredPosts = posts.filter(post => post.isFeatured)
   logInfo('BlogPage filteredPosts:', { data: filteredPosts })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -327,6 +332,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
 
     fetchPosts()
@@ -336,8 +343,11 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       selectedCategory === "All Categories" || post.category === selectedCategory,
 
     return matchesCategory
@@ -357,11 +367,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
@@ -378,20 +383,26 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
             <GradientHeading>AI & Tech Insights</GradientHeading>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
               Expert perspectives on artificial intelligence, tech innovation
               and digital transformation
             </p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 &&
             (() => {
@@ -454,6 +465,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                           Read Article
                         </Link>
                       </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -878,12 +890,12 @@ if (return null) {
                       </Button>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (() => {
@@ -930,11 +942,6 @@ if (return null) {
                       <p className="text-sm text-zion-slate-light">
                         {featuredPost.publishedDate} • {featuredPost.readTime}
                       </p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   </div>
                   <Button 
@@ -946,7 +953,6 @@ if (return null) {
                     </Link>
                   </Button>
                 </div>
-<<<<<<< HEAD
               )
             })()}
           {/* Filters and Search */}
@@ -1021,7 +1027,6 @@ if (return null) {
                       className='text-white'
                     >                      {category}
                     </SelectItem>
-=======
               </div>
             </div>
             )
@@ -1203,11 +1208,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                     <SelectItem key={category} value={category} className="text-white">
                       {category}
                     </SelectItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </SelectContent>
               </Select>
@@ -1220,25 +1220,21 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
           </div>
           {/* Blog Posts Grid */}
           {!isLoading && filteredPosts.length > 0 ? (
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {filteredPosts.map(post => (                <Card
                   key = {post.id,}
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (
                 <Card
                   key={post.id}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   asChild
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Link href={`/blog/${post.slug}`} className='block group'>
                     <div className='aspect-[16/9] relative overflow-hidden'>
                       <img
@@ -1249,10 +1245,13 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                           const target = e.currentTarget as HTMLImageElement
                           target.src = '/images/blog-placeholder.svg' }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                       />
                       <span className="text-sm text-white">{post.author.name}</span>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Link href={`/blog/${post.slug}`} className="block group">
                   <div className="aspect-[16/9] relative overflow-hidden">
                     <img
@@ -1290,15 +1289,9 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                           const target = e.currentTarget as HTMLImageElement,
                           target.src = "/images/blog-placeholder.svg"
                         }}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       />
                       <span className="text-sm text-white">{post.author.name}</span>
                     </div>
-<<<<<<< HEAD
                     <CardContent className='p-6'>
                       <div className='flex items-center justify-between mb-3'>
                         <span className='text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full'>
@@ -1451,6 +1444,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                   </Link>
                 </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               ))}
             </div>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1460,6 +1454,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>           ) : null}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </CardContent>
                   <CardFooter className="p-6 pt-0">
                     <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>
@@ -1519,11 +1515,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </CardFooter>;
                   </Link>;
                 </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           ) : null}
@@ -1536,9 +1527,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 variant='outline'
                 onClick={() => {
                   setSearchQuery('')
@@ -1653,7 +1647,10 @@ export default function Blog() {
       category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/600/400"
       featured: true}, { id: 2}, {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: 2
       title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot
@@ -1663,9 +1660,12 @@ export default function Blog() {
       category: &quot,Quantum Computing&quot
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: 2,
       title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
@@ -1674,8 +1674,11 @@ export default function Blog() {
       readTime: &quot,12 min read&quot,;
       category: &quot,Quantum Computing&quot;
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot],
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       image: &quot,/api/placeholder/600/400&quot,"
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","
       author: "Prof. Michael Rodriguez", date: "2025-01-12","
@@ -2761,6 +2764,7 @@ key = "{post.id}
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 variant="outline"
 =======
@@ -2770,9 +2774,9 @@ key = "{post.id}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+;
                 variant="outline"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onClick={() => {
@@ -2802,6 +2806,7 @@ key = "{post.id}
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -2814,3 +2819,5 @@ key = "{post.id}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

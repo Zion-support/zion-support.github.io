@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { useForm, type ControllerRenderProps } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -74,12 +77,14 @@ export function TemplateSaveForm({
       setSaving(false)
     }
   }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from "react",
 import { useForm, type ControllerRenderProps } from "react-hook-form",
@@ -344,11 +349,6 @@ export function TemplateSaveForm({;
     }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Form {...form}>
@@ -357,16 +357,20 @@ export function TemplateSaveForm({;
           control={form.control}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name='title'
           render={({
             field
           }: {
             field: ControllerRenderProps<FormValues, 'title'>
           }) => (            <FormItem>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               <FormLabel>Template Name</FormLabel>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -376,14 +380,11 @@ export function TemplateSaveForm({;
                 <Input {...field} placeholder='Enter template name' />
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder="Enter template name" />
@@ -393,10 +394,13 @@ export function TemplateSaveForm({;
             </FormItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         />
         <FormField
@@ -464,6 +468,7 @@ export function TemplateSaveForm({;
         />
         <div className='flex gap-2 justify-end'>
           <Button type='button' variant='outline' onClick={onCancel}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             Cancel
 ursor/fix-website-loading-errors-and-merge-6662
@@ -544,6 +549,8 @@ export function TemplateSaveForm({;
   ;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (;
@@ -612,6 +619,7 @@ export function TemplateSaveForm({;
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -678,6 +686,8 @@ try {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             Cancel
           </Button>
           <Button type="submit" disabled={saving}>
@@ -690,9 +700,12 @@ try {
             ) : (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               `${editTemplate ? 'Update' : 'Save'} Template`
             )}
           </Button>
@@ -710,11 +723,15 @@ try {
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   editTemplate ? "Update" : "Save"
 }Template`)
 }</Button> </div> </form> </Form>)
 }"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               `${editTemplate ? "Update" : "Save"} Template`
@@ -739,12 +756,12 @@ try {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               `${editTemplate ? "Update" : "Save"} Template`
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
@@ -823,8 +840,11 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

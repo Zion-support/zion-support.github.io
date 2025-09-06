@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const cuttingEdgeMicroSaasServices2025 = [
   {
     id: 'customer-success-ai-pro'
@@ -426,6 +430,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Financial Data Providers'
     ]
     compliance: [
+<<<<<<< HEAD
 =======
 
 
@@ -1255,6 +1260,8 @@ export const cuttingEdgeMicroSaasServices2025 = [
     ]
     compliance: [
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Basel III'
       'Solvency II'
       'Dodd-Frank'
@@ -1262,7 +1269,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk Management Standards'
     ]
   }
-=======
       'Basel III',
       'Solvency II',
       'Dodd-Frank',
@@ -1270,19 +1276,20 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk Management Standards',
     ],
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
-<<<<<<< HEAD
   }
 ];
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
     id: 'customer-success-ai-pro',;
@@ -1489,6 +1496,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
@@ -1511,3 +1519,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

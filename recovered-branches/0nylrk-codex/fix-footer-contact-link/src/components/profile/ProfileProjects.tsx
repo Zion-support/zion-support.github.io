@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { ProfileProject } from "@/types/profile",
@@ -26,6 +27,20 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { FileText } from "lucide-react";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {Card, CardContent} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {ProfileProject} from "@/types/profile";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {FileText} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { ProfileProject } from "@/types/profile",
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { FileText } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { FileText } from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProfileProjectsProps {
   projects: ProfileProject[];
 }
@@ -198,6 +213,7 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
 <<<<<<< HEAD
             <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -218,13 +234,26 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+              <p className="text-zion-slate text-sm mb-3 line-clamp-2">
+                {project.description}
+              </p>
+              <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
+              {project.tags && project.tags.length > 0 && (
+                <div className="flex flex-wrap gap-1 mb-2">
+                  {project.tags.map((tag, i) => (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Badge
                       key={i}
                       variant="outline"
                       className="text-xs border-zion-slate-dark text-zion-slate-light"
                     >
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { ProfileProject } from "@/types/profile",;
@@ -262,6 +291,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                 <div className="flex flex-wrap gap-1 mb-2">;
                   {project.tags.map((tag, i) => (;
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -286,13 +316,19 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {tag}
                     </Badge>
                   ))}
                 </div>
               )}
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="text-xs text-zion-slate-light mt-2">
                 {project.date}
               </div>
@@ -301,6 +337,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -390,3 +427,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

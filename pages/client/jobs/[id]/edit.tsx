@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import useSWR from 'swr';
@@ -189,11 +190,15 @@ import {use_router} from 'next / router';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { useRouter  } from 'next/router';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useRouter  } from 'next/router';
 import {useRouter} from 'next/router';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import useSWR from 'swr';
 import {useEffect, useState} from 'react';
 <<<<<<< HEAD
@@ -206,28 +211,20 @@ function EditJobPage() {
   const router = use_router ();
 =======
 const fetcher = (url: string) => fetch(url).then(r => r.json());
-<<<<<<< HEAD
 export default function EditJobPage() {
-=======
 export default function EditJobPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 export default function EditJobPage(req, res) {
   try {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const { id } = router.query;
   const { data } = useSWR (id ? `/api / jobs/${id}` : null, fetcher);
   const job = data?.job;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
   const [title, set_title] = useState ('');
@@ -246,12 +243,12 @@ if ( {) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
-<<<<<<< HEAD
   useEffect(() => {
     if (job) {
       setTitle(job.title |'');
@@ -317,13 +314,9 @@ if (return <div > Loading…</div>) {
     router.push('/client/dashboard');  }
   if (!job) return <div>Loading…</div>;
 
-=======
-<<<<<<< HEAD
-=======
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   useEffect(() => {;
     if (job) {;
       setTitle(job.title || '');
@@ -347,11 +340,6 @@ if (return <div > Loading…</div>) {
   }
 }
   if (!job) return <div>Loading…</div>,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="max-w-2xl mx-auto space-y-4">
       <h1 className="text-2xl font-semibold">Edit Job</h1>
@@ -371,14 +359,9 @@ if (return <div > Loading…</div>) {
         <button className="px-4 py-2 rounded bg-black text-white" onClick={save}>Save</button>
       </div>
     </div>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -386,9 +369,12 @@ if (return <div > Loading…</div>) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

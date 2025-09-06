@@ -1,27 +1,48 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/UsageStats.tsx
 
 <<<<<<< HEAD
 =======
 
+=======
+
+import React from "react",
+import { Slider } from "@/components/ui/slider",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
 CardTitle,;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -43,12 +64,15 @@ Card
   CardTitle,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ========
@@ -100,6 +124,12 @@ export function UsageStats() {;
 =======
 title: "Limits updated"
       description: "The new usage limits have been saved successfully."
+=======
+      title: "Limits updated"
+      description: "The new usage limits have been saved successfully."
+      title: "Limits updated",
+      description: "The new usage limits have been saved successfully.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     });
   }
 
@@ -157,6 +187,7 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -167,6 +198,9 @@ export function UsageStats() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -217,8 +251,12 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -263,8 +301,12 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -311,6 +353,7 @@ export function UsageStats() {
           </CardFooter>
         </Card>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -323,6 +366,9 @@ export function UsageStats() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -344,6 +390,7 @@ export function UsageStats() {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -352,6 +399,10 @@ export function UsageStats() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 import React from "react",;
 import { Slider } from "@/components/ui/slider",;
@@ -861,6 +912,7 @@ function UsageStats() {
         <Button>Contact Us</Button>;
       </div>;
     </div>;
+<<<<<<< HEAD
   ),;}
  import {
   Card;
@@ -874,3 +926,8 @@ CardHeader;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/UsageStats.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

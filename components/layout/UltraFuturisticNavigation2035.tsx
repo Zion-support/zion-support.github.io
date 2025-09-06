@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -188,14 +189,12 @@ import {
   User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, ;
 =======
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import {
   Menu,
   ChevronDown,
@@ -255,7 +254,6 @@ import {
   Building,;
   MessageCircle,;
 } from 'lucide-react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import {
@@ -320,11 +318,8 @@ import {
 ;
 interface NavigationItem {
   name: string;
-<<<<<<< HEAD
   href: string;  icon?: React.ReactNode;import {
-=======
   href: string;  icon?: React.ReactNode;import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles,
@@ -367,6 +362,7 @@ interface NavigationItem {;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -504,18 +500,14 @@ icon: <Phone className='w - 5 h - 5' />,    description: 'Talk to our team',
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   featured?: boolean
 }
-=======
   featured?: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   featured?: boolean;  featured?: boolean
 }
-=======
   featured?: boolean;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -531,7 +523,6 @@ const navigationItems: NavigationItem[] = [
     children: [
       { name: 'Standard Pricing', href: '/pricing', description: 'Our plans' }
       {
-<<<<<<< HEAD
         name: 'Market Pricing'
         href: '/market-pricing'
         description: 'Compare market averages'
@@ -1928,7 +1919,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   }
   const closeDropdowns = () => {
     setActiveDropdown(null);  }
-=======
         name: 'Market Pricing',
         href: '/market-pricing',
         description: 'Compare market averages',
@@ -1995,9 +1985,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     badge: 'Enterprise',
     featured: true,
     children: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       {
         name: 'Zero Trust Security',
         href: '/zero-trust-security-platform',
@@ -2124,14 +2111,14 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     ],
   },
 ];
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   };
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const closeMobileMenu = () => {
     setIsOpen(false);
     closeDropdowns();    }
@@ -2971,6 +2958,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                 </div>              </div>
             </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2991,13 +2979,17 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-            {/* Desktop Navigation */}  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            {/* Desktop Navigation */}  }
             {/* Desktop Navigation */}  };
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled
@@ -3161,7 +3153,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
               </div>
             </Link>
             {/* Desktop Navigation */}
-<<<<<<< HEAD
             <div className='hidden lg:flex items-center gap-8'>
               {navigationItems.map(item => (
                 <div key={item.name} className='relative group'>
@@ -4018,7 +4009,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
-=======
 
                   >
                     {item.icon}
@@ -4027,11 +4017,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
                   </button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -4078,14 +4063,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                               </a>
 =======
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         onMouseLeave={closeDropdowns}
                       >
                         <div className='p-6'>
@@ -4111,7 +4089,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                                 }`}
                                 onClick={closeDropdowns}
-<<<<<<< HEAD
                               >                        onMouseLeave={closeDropdowns}
                       >
                         <div className="p-6">
@@ -4126,14 +4103,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                           </div>
                           <div className="space-y-2">
                             {item.children?.map((child) => (
-=======
                               >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               <Link
                                 key={child.name}
                                 href={child.href}
@@ -4145,7 +4116,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 }`}
                                 onClick={closeDropdowns}
                               >
-<<<<<<< HEAD
                                 {child.featured && (
                                   <Star className='w-4 h-4 text-cyan-400' />
                                 )}
@@ -4160,16 +4130,18 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 </div>
                                 <ArrowRight className='w-4 h-4 opacity-50' />                              </Link>                                <ArrowRight className="w-4 h-4 opacity-50" />
                               </Link>
-=======
 
                               </Link>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             ))}
                           </div>
                         </div>
@@ -4179,6 +4151,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             {/* Right Side Actions */}
@@ -4228,31 +4201,21 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             {/* Right Side Actions */}
             <div className='hidden lg:flex items-center gap-4'>
               {/* Quick Actions */}
               <div className='flex items-center gap-2'>
-<<<<<<< HEAD
                 {quickActions.map(action => (                  <Link            <div className="hidden lg:flex items-center gap-4">
               {/* Quick Actions */}
               <div className="flex items-center gap-2">
                 {quickActions.map((action) => (
-=======
                 {quickActions.map(action => (                  <Link
 
                   <Link
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     key={action.name}
                     href={action.href}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
@@ -4266,14 +4229,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   </Link>
                 ))}
               </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Contact Info */}
               <div className='flex items-center gap-4 text-sm text-gray-400'>
                 <a
@@ -4298,14 +4254,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   <span className="hidden xl:inline">{contactInfo.email}</span>
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -4322,14 +4271,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Mobile Menu */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <AnimatePresence>
@@ -4466,6 +4408,7 @@ className="flex items-center justify-between w-full p-3 text-left text-gray-300 
                               'bg-gray-500/20 text-gray-400'
                             }`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -4482,6 +4425,10 @@ className="flex items-center justify-between w-full p-3 text-left text-gray-300 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+                              {item.badge}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             </span>
                           )}
                         </div>
@@ -4493,6 +4440,7 @@ className="flex items-center justify-between w-full p-3 text-left text-gray-300 
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -4523,12 +4471,9 @@ className="flex items-center justify-between w-full p-3 text-left text-gray-300 
 
 =======
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                       {/* Mobile Dropdown */}
                       <AnimatePresence>
                         {activeDropdown === item.name && (
@@ -4599,6 +4544,7 @@ className="ml-6 mt-2 space-y-2"
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                                 )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -4616,12 +4562,9 @@ className="ml-6 mt-2 space-y-2"
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                               </Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -4631,6 +4574,7 @@ className="ml-6 mt-2 space-y-2"
                       </AnimatePresence>;
                     </div>;
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -4667,8 +4611,9 @@ className="ml-6 mt-2 space-y-2"
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {/* Mobile Quick Actions */}
                   <div className='pt-4 border-t border-gray-800/50'>
                     <div className='space-y-3'>
@@ -4676,14 +4621,7 @@ className="ml-6 mt-2 space-y-2"
                     <div className="space-y-3">
                       {quickActions.map((action) => (
                         <Link
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           key={action.name}
                           href={action.href}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -4704,6 +4642,7 @@ className="ml-6 mt-2 space-y-2"
 =======
                     </div>
                   </div>
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -4728,6 +4667,9 @@ className="ml-6 mt-2 space-y-2"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {/* Mobile Contact Info */}
                   <div className='pt-4 border-t border-gray-800/50'>;
                     <div className='space-y-3 text-sm text-gray-400'>;
@@ -4900,9 +4842,8 @@ export default UltraFuturisticNavigation2035;  );
                         className='flex items-center gap-3 p-3 rounded-lg hover:text-cyan-400 hover:bg-gray-800/50 transition-all duration-200'
                       >
                         <Phone className='w-4 h-4' />
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -4910,6 +4851,8 @@ export default UltraFuturisticNavigation2035;  );
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <span>{contactInfo.mobile}</span>
                       </a>
                       <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200">
@@ -5183,7 +5126,6 @@ export default UltraFuturisticNavigation2035;
   action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white': 'text-gray-300 hover:text-white hover:bg-gray-800/50'
 }`
 }onClick= {
-<<<<<<< HEAD
   closeMobileMenu
 }>) )
 }</div> </div> </div> </div> </div> </div> </div> </motion.div>)
@@ -5206,24 +5148,21 @@ export default UltraFuturisticNavigation2035;
 ;
 =======
 
-=======
   closeMobileMenu 
 }>) ) 
 }</div> </div> </div> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </div> </nav>) 
 };
-<<<<<<< HEAD
 export default UltraFuturisticNavigation2035;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 export default UltraFuturisticNavigation2035;  )
 };
 
 export default UltraFuturisticNavigation2035;
-=======
 export default UltraFuturisticNavigation2035;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -3,12 +3,13 @@
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TalentRateRecommenderProps {
   skills: string[]
   yearsExperience: number
@@ -19,6 +20,7 @@ import { Button } from "@/components/ui/button"
 import {logErrorToProduction} from '@/utils/productionLogger'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -28,6 +30,8 @@ import {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   getTalentRateSuggestion
   PricingSuggestion
@@ -36,6 +40,7 @@ import {
 } from "@/services/pricingSuggestionService"
 import { PricingSuggestionBox } from "./PricingSuggestionBox"
 import { useAuth } from "@/hooks/useAuth"
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -46,13 +51,11 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   getTalentRateSuggestion,
@@ -62,6 +65,7 @@ import {
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -79,27 +83,31 @@ import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Sparkles } from 'lucide-react'
+interface TalentRateRecommenderProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   skills: string[]
   yearsExperience: number
   location?: string
   onSuggestionApplied: (value: number,) => void
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (skills.length === 0 |yearsExperience <= 0) {
       return
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number,) => void,
   rateType: "hourly" | "fixed"
-<<<<<<< HEAD
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   rateType: "hourly" | "fixed"
-<<<<<<< HEAD
 }
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
 
@@ -112,14 +120,15 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)
   const { user } = useAuth()
   const generateSuggestion = async () => {
-<<<<<<< HEAD
     if (skills.length === 0 |yearsExperience <= 0) {
       return
-=======
     if (skills.length === 0 || yearsExperience <= 0) {
       return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     setIsLoading(true)
     try {
@@ -142,12 +151,15 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
       onSuggestionApplied(suggestedRate)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -213,11 +225,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Track this suggestion application
 >>>>>>>       if (user && user.id) {
         trackPricingSuggestion({
@@ -335,16 +350,9 @@ if ( {) {
 =======
       }
     }
-<<<<<<< HEAD
   }
-=======
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-4">
@@ -355,15 +363,20 @@ if ( {) {
             variant="outline"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             onClick = {generateSuggestion,}
             disabled = {skills.length === 0 |yearsExperience <= 0,}
-=======
             onClick={generateSuggestion}
             disabled={skills.length === 0 || yearsExperience <= 0}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="w-full"
 =======
             onClick = {generateSuggestion,}
@@ -394,7 +407,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
           <PricingSuggestionBox
-<<<<<<< HEAD
             suggestion = {suggestion,}
             isLoading = {isLoading,}
             onApplySuggestion = {handleApplySuggestion,}
@@ -416,7 +428,10 @@ return (<div className="space-y-4" > <div> {"
   handleApplySuggestion
 }rateType= {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   rateType
 }/>)
 }</div> </div>)
@@ -425,6 +440,7 @@ return (<div className="space-y-4" > <div> {"
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -435,14 +451,14 @@ return (<div className="space-y-4" > <div> {"
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   rateType 
 }/>) 
 }</div> </div>) ;
 };
 '"};
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -454,6 +470,7 @@ return (<div className="space-y-4" > <div> {"
     </div>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -469,3 +486,5 @@ return (<div className="space-y-4" > <div> {"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

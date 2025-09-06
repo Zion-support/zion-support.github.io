@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -21,4 +22,13 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:src.disabled/components/developers/WebhooksManager.jsx
+' \' \' \' \' \' \' \' \' \''\';\'";\";
+" " " " " " " " " """;"";";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+' \' \' \' \' \' \' \' \' \''\';\'";\";
+" " " " " " " " " """;"";";"""
+:temp_exclude/src.disabled/components/developers/WebhooksManager.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ' ' ' ' ' ' ' ' ' ' "export": function WebhooksManager() { const { webhooks,loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,clearTestResult } = useWebhooks() const [showCreateDialog,setShowCreateDialog] = useState(false) const [showDeleteConfirm,setShowDeleteConfirm] = useState(null) const [showTestDialog,setShowTestDialog] = useState(null) const [showTestResult,setShowTestResult] = useState(false)';";";""

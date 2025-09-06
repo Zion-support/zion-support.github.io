@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -12,9 +13,13 @@
 =======
 <<<<<<< HEAD:src.disabled/components/ChatAssistantTrigger.jsx
 <<<<<<< HEAD
+=======
+:src.disabled/components/ChatAssistantTrigger.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 :src.disabled/components/ChatAssistantTrigger.js.jsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
+<<<<<<< HEAD
 
 
 =======
@@ -33,4 +38,10 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+:src.disabled/components/ChatAssistantTrigger.js.jsx
+" " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
+:temp_exclude/src.disabled/components/ChatAssistantTrigger.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}

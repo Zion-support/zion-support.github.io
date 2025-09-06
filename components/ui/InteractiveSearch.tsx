@@ -24,10 +24,19 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function InteractiveSearch({
 
+=======
+
+export default function InteractiveSearch({
+  placeholder = 'Search talent, skills, or jobs...'
+}: {
+  placeholder = 'Search talent, skills, or jobs...',
+}: {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   placeholder?: string;
 }) {
   const [value, setValue] = useState('');
@@ -109,6 +118,7 @@ export default function InteractiveSearch({ placeholder = 'Search talent, skills
       )}
     </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   );
 }}
@@ -125,6 +135,8 @@ export default function InteractiveSearch({ placeholder = 'Search talent, skills
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -220,11 +232,9 @@ function InteractiveSearch() {
         </button>;
       </div>;
     </form>;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -276,10 +286,15 @@ function InteractiveSearch() {
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }}
 
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

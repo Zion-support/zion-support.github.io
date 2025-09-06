@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -46,31 +47,24 @@ import { NextPage } from 'next';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextPage } from 'next';
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 import { NextPage } from 'next';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
 
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
+origin/main
+origin/automation-improvements-final
 
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
@@ -867,32 +861,15 @@ const ProductsIndex: NextPage = () => {
                          product.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
+origin/main
+origin/automation-improvements-final
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -1081,39 +1058,26 @@ const ProductsIndex: NextPage = () => {
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
-=======
 
 export default ProductsIndex;
   )
 };
 
 export default Index;
-=======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const Index: NextPage = () => {
   return (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
-<<<<<<< HEAD
         <meta name='description' content='Index page' />
       </Head>
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
 
 export default ProductsIndex;
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1123,6 +1087,7 @@ import Head from 'next/head';
       </main>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 },
 
@@ -1130,37 +1095,29 @@ export default Index
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ),
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
   );
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
 };
 
 export default Index;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 }
 export default ProductsIndex;
->>>>>>> origin/main
+origin/main
   )
-<<<<<<< HEAD
 }
 export default Index;
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 },
 export default Index,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

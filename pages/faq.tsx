@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import Head from 'next/head';
@@ -540,28 +541,18 @@ function FAQ() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from "next/head";
 import Link from "next/link";
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/automation-improvements-final
+origin/automation-improvements-final
 
-=======
-<<<<<<< HEAD
 import Head from "next/head";
 import Link from "next/link";
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/main
 export default function FAQ() {
   const contact = {
     phone: "+1 302 464 0950"
@@ -621,18 +612,15 @@ export default function FAQ() {
         "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
     }
   ];
-=======
 import Head from 'next/head'
 import Link from 'next/link'
 export default function FAQ() {
   const contact = {
-<<<<<<< HEAD
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
     site: "https://ziontechgroup.com",;
   };
-=======
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -642,7 +630,6 @@ export default function FAQ() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const faqs = [
     {
       question: "What services does Zion Tech Group offer ? ",
@@ -689,7 +676,6 @@ export default function FAQ() {
   }
 }
   ]
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -713,7 +699,6 @@ export default function FAQ() {
               Get Answers to Common Questions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Find answers to the most common questions about our services
               pricing, implementation, and support. Can&apos;t find what
               you&apos;re looking for? Contact us directly.
@@ -721,25 +706,17 @@ export default function FAQ() {
           </div>
         </section>
         {/* FAQ Section */}
-=======
               Find answers to the most common questions about our services, pricing,
               implementation, and support. Can't find what you're looking for? Contact us directly.
             </p>
           </div>
         </section>
-<<<<<<< HEAD
         {/* FAQ Section */}
-=======
         {/* FAQ Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
@@ -756,19 +733,12 @@ export default function FAQ() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Contact CTA */}
-=======
         {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -803,12 +773,15 @@ export default function FAQ() {
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -829,6 +802,7 @@ export default function FAQPage() {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -882,15 +856,22 @@ export default function FAQPage() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
-=======
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

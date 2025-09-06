@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -37,18 +38,25 @@ import {
 import {
 =======
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu
   X
   ChevronDown
@@ -161,6 +169,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 =======
 import {
 =======
@@ -169,6 +178,8 @@ import {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu,
   X,
   ChevronDown,
@@ -261,6 +272,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -268,6 +280,8 @@ import {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -943,6 +957,7 @@ const mainNavigation = [;
       }
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     ];
@@ -958,6 +973,8 @@ const mainNavigation = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         name: 'Synthetic Biology Automation Platform'
         href: '/synthetic-biology-automation-platform'
         description: 'Automate biology research'
@@ -970,7 +987,6 @@ const mainNavigation = [;
       { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
     ]
   }
-=======
         name: 'Synthetic Biology Automation Platform',
         href: '/synthetic-biology-automation-platform',
         description: 'Automate biology research',
@@ -983,19 +999,16 @@ const mainNavigation = [;
       { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
     ]
   }
-<<<<<<< HEAD
 
 ];
-=======
-<<<<<<< HEAD
-=======
 
 ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -1016,6 +1029,7 @@ const companyLinks = [
   { name: 'Support', href: '/support' }
   { name: 'Status', href: '/status' },];  { name: 'Status', href: '/status' }
 ];
+<<<<<<< HEAD
 
 =======
 =======
@@ -1127,12 +1141,16 @@ const companyLinks = [;
 export default function UltraFuturisticNavigation2032() {;
 =======
 <<<<<<< HEAD
-export default function UltraFuturisticNavigation2032() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function UltraFuturisticNavigation2032() {
 
 export default function UltraFuturisticNavigation2032() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -1408,10 +1426,13 @@ function UltraFuturisticNavigation2032() {
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {mainNavigation.map(item => (            {/* Logo */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1506,10 +1527,7 @@ className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex
                   <span>{item.name}</span>
                 </Link>
               ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Services Dropdown */}
               <div className='relative group'>
                 <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>
@@ -1590,11 +1608,14 @@ className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex
                           <div className="space-y-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {mainNavigation.map(item => (
 
               </div>
@@ -1602,6 +1623,7 @@ className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex
 
             {/* Desktop Navigation */}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1614,10 +1636,13 @@ className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             {category.services.map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1647,6 +1672,8 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                                   <div className="text-cyan-400 font-semibold text-sm">{service.price}</div>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                 className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'
                               >
                                 <div className='flex items-center justify-between'>
@@ -1662,15 +1689,9 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                                   </div>                                </div>                                  <div className="text-cyan-400 font-semibold text-sm">{service.price}</div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                                 </div>
-=======
 
                                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               </Link>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             ))}
@@ -1686,6 +1707,7 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1693,6 +1715,8 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
@@ -1701,7 +1725,6 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Link href="/contact">
                 <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
-=======
 
 <<<<<<< HEAD
 
@@ -1712,6 +1735,7 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
               <Link href='/contact'>
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1724,10 +1748,13 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Get Started
                 </button>
               </Link>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1933,12 +1960,9 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -1956,6 +1980,7 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
           </div>
         </div>
       </nav>
+<<<<<<< HEAD
 <<<<<<< HEAD
 {/* Mobile Menu Button */}
             <button;
@@ -2106,12 +2131,9 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -2121,14 +2143,7 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className='fixed inset-0 z-50 lg:hidden'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-xl'
@@ -2205,7 +2220,6 @@ className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transit
                     >
                       <item.icon className="w-5 h-5" />
                       <span>{item.name}</span>
-<<<<<<< HEAD
                     </Link>
                   ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2259,7 +2273,6 @@ className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transit
                   <div className="space-y-2">
 =======
                   <div className='space-y-2'>
-=======
 
                     </Link>
                   ))}
@@ -2268,11 +2281,14 @@ className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transit
                   <div className='space-y-2'>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <button
                       onClick={() => setActiveCategory(activeCategory === 0 ? null : 0)}
                       className="w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
@@ -2375,14 +2391,7 @@ className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transit
 className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1"
 =======
                   </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Company Links */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -2417,6 +2426,7 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -2428,6 +2438,9 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {/* Contact Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -2436,6 +2449,7 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                     <div className='space-y-2 text-sm text-gray-400'>
                       <div className='flex items-center space-x-2'>
                         <Phone className='w-4 h-4 text-cyan-400' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2453,6 +2467,9 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <span>{contactInfo.mobile}</span>
                       </div>
                       <div className='flex items-center space-x-2'>
@@ -2560,6 +2577,7 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
 <<<<<<< HEAD
 {/* Spacer for fixed navigation */}
       <div className="h-20" />
@@ -2755,6 +2773,8 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
@@ -2762,17 +2782,14 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
     </>
   );
 }
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2780,3 +2797,5 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

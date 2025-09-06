@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,15 @@ const React,{ createContext,useContext,useState } from "react"; const Whitelabel
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+:src.disabled/context/WhitelabelContext.jsx
+import React,{ createContext,useContext,useState } from \'react\'; const WhitelabelContext = createContext(); \"export\": function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState(\'#06b6d4\') const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; \"return\": ( <WhitelabelContext.Provider value={value}> {children} </WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error(\'useWhitelabel must be used within a WhitelabelProvider\')}\'; \"return\": \'context\'}
+const React,{ createContext,useContext,useState } from "react"; const WhitelabelContext = createContext(); export: function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState("#06b6d4") const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; return: ( <WhitelabelContext.Provider value={value}> {children} </WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error("useWhitelabel must be used within a WhitelabelProvider")}"; return: "context"}"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React,{ createContext,useContext,useState } from \'react\'; const WhitelabelContext = createContext(); \"export\": function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState(\'#06b6d4\') const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; \"return\": ( <WhitelabelContext.Provider value={value}> {children} </WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error(\'useWhitelabel must be used within a WhitelabelProvider\')}\'; \"return\": \'context\'}
+const React,{ createContext,useContext,useState } from "react"; const WhitelabelContext = createContext(); export: function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState("#06b6d4") const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; return: ( <WhitelabelContext.Provider value={value}> {children} </WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error("useWhitelabel must be used within a WhitelabelProvider")}"; return: "context"}"""
+:temp_exclude/src.disabled/context/WhitelabelContext.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React,{ createContext,useContext,useState } from 'react'; const WhitelabelContext = createContext(); "export": function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState('#06b6d4') const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; "return": ( <WhitelabelContext.Provider value={value}> {children} </WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error('useWhitelabel must be used within a WhitelabelProvider')}'; "return": 'context'}
 =======
 =======

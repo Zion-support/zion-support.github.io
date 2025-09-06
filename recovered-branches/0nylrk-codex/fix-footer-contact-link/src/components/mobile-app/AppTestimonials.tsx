@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppTestimonials.tsx
@@ -19,18 +20,22 @@ import {Card, CardContent, CardFooter} from "@/components/ui/card";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Star } from "lucide-react",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -45,6 +50,8 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const testimonials = [
   {
     name: "Alex Johnson"
@@ -52,6 +59,7 @@ const testimonials = [
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!"
     rating: 5
     avatar: "/placeholder.svg"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -75,6 +83,8 @@ const testimonials = [;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   {
     name: "Sarah Williams"
@@ -88,8 +98,11 @@ const testimonials = [;
     rating: 5
     avatar: "/placeholder.svg"
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   {
     name: "Sarah Williams",
@@ -99,12 +112,15 @@ const testimonials = [;
     avatar: "/placeholder.svg"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     name: "Michael Chen"
     role: "Full Stack Developer"
@@ -114,6 +130,7 @@ const testimonials = [;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -124,12 +141,16 @@ const testimonials = [;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-];
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+];
 ],
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -173,6 +194,7 @@ export const AppTestimonials: React.FC = () => {
               </CardFooter>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -187,17 +209,15 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppTestimonials.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   )
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -471,8 +491,10 @@ export const AppTestimonials: React.FC = () => {
         </div>;
       </div>;
     </section>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,12 +1,15 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { formatDistanceToNow } from "date-fns"
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -19,17 +22,21 @@ interface ReplyCardProps {
   onMarkAnswer?: () => void
   canMarkAnswer?: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -42,6 +49,8 @@ export const ReplyCard = ({
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
 interface ReplyCardProps {
@@ -63,6 +72,7 @@ export const ReplyCard = ({
       "transition-shadow"
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   className?: string
 }
 
@@ -77,35 +87,27 @@ export const ReplyCard = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ForumReply } from "@/types/community",
 import { cn } from "@/lib/utils",
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
   canMarkAnswer?: boolean,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   className?: string
 }
 
 export const ReplyCard = ({ 
-<<<<<<< HEAD
   reply,
   onMarkAnswer, 
   canMarkAnswer = false,
-=======
-<<<<<<< HEAD
   reply
   onMarkAnswer, 
   canMarkAnswer = false
-=======
   reply,
   onMarkAnswer, 
   canMarkAnswer = false,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   className
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }: ReplyCardProps) => {
@@ -113,6 +115,7 @@ export const ReplyCard = ({
 
   return (
     <Card className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -125,18 +128,14 @@ export const ReplyCard = ({
 >>>>>>>       className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "transition-shadow",
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
       "transition-shadow"
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20"
-=======
       "transition-shadow",
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       className
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     )}>
@@ -152,6 +151,7 @@ export const ReplyCard = ({
             </span>
             {reply.authorRole && (
               <Badge variant="outline" className="ml-2 text-xs">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -172,6 +172,8 @@ export const ReplyCard = ({
           <div className="text-xs text-muted-foreground">;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { formatDistanceToNow } from "date-fns",;
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -212,11 +214,6 @@ export const ReplyCard = ({;
             </span>;
             {reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {reply.authorRole}
               </Badge>
             )}
@@ -238,6 +235,7 @@ export const ReplyCard = ({;
       </CardContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <CardFooter className="flex justify-between">
@@ -247,12 +245,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         <div className="flex items-center gap-2">
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -273,10 +268,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardFooter>
     </Card>
   )
@@ -287,10 +285,9 @@ export default ReplyCard
 
 =======
 
-=======
       </CardFooter>;
-=======
       </CardFooter>
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </Card>;
@@ -305,12 +302,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+    </Card>;
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default ReplyCard;
 export default ReplyCard;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default ReplyCard;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

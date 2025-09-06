@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteFormSection.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
@@ -9,6 +10,8 @@ import { Input } from "./ui/input",
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteFormSection.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Button} from "./ui/button";
 import {Input} from "./ui/input";
 import {GradientHeading} from "./GradientHeading";
@@ -20,6 +23,7 @@ export function QuoteFormSection() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteFormSection.tsx
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
@@ -30,10 +34,13 @@ export function QuoteFormSection() {;
 =======
 const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 export function QuoteFormSection() {
@@ -48,6 +55,22 @@ export function QuoteFormSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
 
+=======
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
+export function QuoteFormSection() {
+  const [isSubmitted, setIsSubmitted] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    setTimeout(() => {
+      (setIsSubmitting(false), setIsSubmitted(true));
+    }, 1000);
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -57,6 +80,7 @@ export function QuoteFormSection() {
       setIsSubmitted(true)
     }, 1000)
   },
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -71,6 +95,8 @@ e.preventDefault();
     }, 1000);
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -366,6 +392,7 @@ export function QuoteFormSection() {;
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -373,6 +400,12 @@ export function QuoteFormSection() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                      <label
+                        htmlFor={`interest-${index}`}
+                        className="ml-2 text-sm text-zion-slate-light"
+                      >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -490,6 +523,7 @@ export function QuoteFormSection() {;
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteFormSection.tsx
 <<<<<<< HEAD
                       />
@@ -790,6 +824,10 @@ return (<section className="py-20 bg-zion-blue" > <div className="container mx-a
                       >
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 
+=======
+                      />
+                      <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         {item}
                       </label>
                     </div>

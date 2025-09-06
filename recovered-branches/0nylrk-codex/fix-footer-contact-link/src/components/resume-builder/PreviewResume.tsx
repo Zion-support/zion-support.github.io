@@ -2,8 +2,11 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/PreviewResume.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Resume } from "@/types/resume";
 import {
   PreviewHeader
@@ -13,11 +16,17 @@ import {
   SkillsSection
   CertificationsSection
 } from "./preview";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {Resume} from '@/types/resume';
+import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 interface PreviewResumeProps {
   resume: Resume;
   onBack: () => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -32,6 +41,9 @@ import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationS
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Resume } from '@/types/resume',;
 import {;
   PreviewHeader,;
@@ -44,6 +56,7 @@ import {;
 interface PreviewResumeProps {;
   resume: Resume;
   onBack: () => void;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -76,6 +89,10 @@ interface PreviewResumeProps {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
     <div className="space-y-6">
@@ -93,6 +110,7 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
         <CertificationsSection certifications={resume.certifications} />
       </div>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -209,3 +227,11 @@ export function PreviewResume({ resume, onBack } PreviewResumeProps) {;
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

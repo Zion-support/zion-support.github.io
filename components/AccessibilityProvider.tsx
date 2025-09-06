@@ -18,10 +18,7 @@ interface AccessibilityContextType {
 interface AccessibilityContextType {;
 =======
 import React, { createContext, useContext, useState, ReactNode } from "react";
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface AccessibilityContextType {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -43,15 +40,22 @@ interface AccessibilityContextType {
 const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
 >(undefined);
+<<<<<<< HEAD
 
 =======
+=======
+export const useAccessibility = () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 export const useAccessibility = () => {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error(
@@ -64,6 +68,7 @@ interface AccessibilityProviderProps {
   children: React.ReactNode;
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -114,14 +119,18 @@ interface AccessibilityProviderProps {
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   children
 }) => {
-=======
   children,
 }) => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -154,6 +163,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
       </div>;
     </AccessibilityContext && AccessibilityContext.Provider>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -235,3 +245,10 @@ export default AccessibilityProvider;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+export default AccessibilityProvider;
+};
+
+export default AccessibilityProvider;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

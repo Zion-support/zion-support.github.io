@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/BenefitsSection.tsx
 
 =======
@@ -25,6 +26,8 @@ const benefits = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
@@ -38,17 +41,20 @@ const benefits = [
     title: "Global Availability"
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
     icon: <Globe className="w-8 h-8" />}
-=======
 import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
 import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -60,6 +66,8 @@ import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const benefits = [
   {
     title: "AI-Powered Matchmaking",
@@ -71,6 +79,7 @@ const benefits = [
     icon: <Globe className="w-8 h-8" />},
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -79,6 +88,8 @@ const benefits = [
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     title: "24/7 Support"
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey."
@@ -105,6 +116,7 @@ export function BenefitsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
             <FeatureCard
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -145,6 +157,8 @@ export function BenefitsSection() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               key={index}
               title={benefit.title}
               description={benefit.description}
@@ -156,13 +170,14 @@ export function BenefitsSection() {;
       </div>
     </section>
   )
-<<<<<<< HEAD
 }
-=======
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
@@ -346,11 +361,10 @@ icon: <Clock className="w-8 h-8" />
           {benefits.map((benefit, index) => (;
             <FeatureCard;
 }
+;
+;
 <<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

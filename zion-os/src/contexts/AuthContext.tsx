@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,6 +17,8 @@ interface User {
   onboarding_completed: boolean;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
@@ -155,6 +158,7 @@ if ( {) {
 <<<<<<< HEAD
 
   }
+<<<<<<< HEAD
 =======
 =======
 
@@ -163,6 +167,8 @@ if ( {) {
   }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;
@@ -395,6 +401,5 @@ export function useAuth() {;
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return context;
 }

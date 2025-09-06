@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -10,13 +11,17 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 =======
 <<<<<<< HEAD
-import React, { useEffect, useMemo, useRef, useState } from 'react';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 useEffect ( () => {
   if (!isOpen && messages.length === 0) {
   //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { X } from 'lucide-react';
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -352,6 +357,7 @@ setMessages((prev) => [...prev, assistantMessage]);
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         method: 'POST',
@@ -364,17 +370,23 @@ setMessages((prev) => [...prev, assistantMessage]);
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           sessionId: sessionIdRef.current
           eventType
           payload
         })
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           sessionId: sessionIdRef.current,
           eventType,
           payload,
         }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -384,24 +396,21 @@ setMessages((prev) => [...prev, assistantMessage]);
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       });    } catch {}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
-=======
       });    } catch {}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch {}
   }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
@@ -413,6 +422,7 @@ setMessages((prev) => [...prev, assistantMessage]);
           tag: 'escalate'
         })
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -429,25 +439,22 @@ setMessages((prev) => [...prev, assistantMessage]);
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })})
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })})
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      setShowEscalation(true)
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      setShowEscalation(true)
       setShowEscalation(true);    } catch {}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch {}
   }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -588,6 +595,8 @@ setMessages((prev) => [...prev, assistantMessage]);
 =======
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
@@ -680,14 +689,14 @@ setMessages((prev) => [...prev, assistantMessage]);
       setIsLoading(false);    }
   }
   return (
-<<<<<<< HEAD
     <div className='fixed bottom-4 right-4 z-50'>      }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
           const next = n + 1;
@@ -709,6 +718,7 @@ setMessages((prev) => [...prev, assistantMessage]);
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <div className='fixed bottom-4 right-4 z-50'>      }
@@ -806,16 +816,15 @@ return (
         <button
 =======
 =======
+=======
+    }
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className='fixed bottom-4 right-4 z-50'>
 
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='fixed bottom-4 right-4 z-50'>
       {!isOpen && (
@@ -864,6 +873,7 @@ return (
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
 <<<<<<< HEAD
+<<<<<<< HEAD
                   }>;
                   {m && m.content}
                 </div>;
@@ -881,6 +891,9 @@ return (
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   }
                 >
                   {m.content}
@@ -920,6 +933,7 @@ return (
                     onClick={() => onSend(q)}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     {q}
                   </button>
@@ -943,6 +957,8 @@ return (
             <div className="px-3 pb-2">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="flex flex-wrap gap-2 mb-2">
@@ -974,16 +990,10 @@ className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gra
                   </button>;
 =======
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-=======
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
 
                   >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {q}
                   </button>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -992,6 +1002,7 @@ className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gra
               </div>;
             </div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1019,8 +1030,9 @@ className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gra
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
@@ -1039,6 +1051,7 @@ className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gra
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1092,6 +1105,8 @@ className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gra
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (
               <div className="flex gap-2">
                 <input
@@ -1101,13 +1116,13 @@ className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gra
                     if (e.key === 'Enter' && !e.shiftKey) {
                       e.preventDefault();
 
-<<<<<<< HEAD
                       onSend()
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     }
                   }}
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   }}
                   placeholder=&quot;Ask a question…&quot;
@@ -1124,6 +1139,10 @@ className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gra
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 />
                 <button
                   onClick={() => onSend()}
@@ -1203,6 +1222,7 @@ className="rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-
   );
 }
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1597,18 +1617,18 @@ if ( {) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

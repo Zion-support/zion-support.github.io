@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -30,6 +30,8 @@ import {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
   Search
@@ -1943,15 +1945,23 @@ if ( {) {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          {/* Category Filters */}
+          <div className='mt-6'>
+            <div className='flex flex-wrap gap-3'>
+              {categories.map(category => (                <button
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Category Filters */}
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <button
       {/* Main Content */}
@@ -2043,6 +2053,11 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+                <button
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -2088,15 +2103,16 @@ if ( {) {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Results Summary */}
         <div className="mb-8">
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
@@ -2245,7 +2261,6 @@ if ( {) {
                 </div>
               ) : (
                 <div className='space-y-6'>
-<<<<<<< HEAD
                   {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           {filteredServices.map((service) => (
@@ -2256,13 +2271,17 @@ if ( {) {
                 <div className="space-y-6">
                   {filteredServices.map((service) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <ServiceList key={service.id} service={service} />
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />
 
                     <ServiceList key={service.id} service={service} />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2270,6 +2289,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   ))}
                 </div>;
               )}
@@ -2318,14 +2339,7 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
@@ -2509,7 +2523,6 @@ if ( {) {
                 Call Now
               </a>
             </div>
-<<<<<<< HEAD
           </div>
           <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
             Get Started Today
@@ -2522,8 +2535,8 @@ if ( {) {
     </div>
   );
 }
-=======
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2531,3 +2544,5 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

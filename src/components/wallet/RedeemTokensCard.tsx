@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React, { useState } from "react",
@@ -16,27 +17,35 @@ import { useWallet } from '@/hooks/useWallet'
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React, { useState } from 'react'
+import { useWallet } from '@/hooks/useWallet'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
-<<<<<<< HEAD
 import {
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Card,
   CardContent,
@@ -47,6 +56,7 @@ import {
 import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   Dialog,
 =======
@@ -54,12 +64,15 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Dialog,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -72,6 +85,9 @@ type RewardOption = {
   DialogTrigger} from "@/components/ui/dialog",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  DialogTrigger} from "@/components/ui/dialog",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   Card
   CardContent
@@ -87,14 +103,15 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
   DialogTitle
   DialogTrigger
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogTrigger,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/dialog'
 type RewardOption = {
-<<<<<<< HEAD
   id: string
 title: string;
 description: string;
@@ -102,7 +119,10 @@ cost: number;'
 type: 'credit' | 'feature' | 'course'
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week'
@@ -136,6 +156,7 @@ export function RedeemTokensCard() {
     setOpen(false)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id: string,
   title: string,
@@ -153,10 +174,11 @@ onst REWARD_OPTIONS: RewardOption[] = [
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogTrigger} from "@/components/ui/dialog",
 
 type RewardOption = {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,
   title: string,
   description: string,
@@ -164,10 +186,6 @@ type RewardOption = {
   type: 'credit' | 'feature' | 'course'
 },
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const REWARD_OPTIONS: RewardOption[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   {
@@ -191,12 +209,15 @@ const REWARD_OPTIONS: RewardOption[] = [
     cost: 100,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     type: 'credit',
   },
 ]
@@ -208,6 +229,7 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     type: 'credit'
@@ -231,6 +253,8 @@ export function RedeemTokensCard() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     type: 'credit'
   }
 ],
@@ -245,12 +269,7 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`),
     setOpen(false)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card>
@@ -271,19 +290,25 @@ export function RedeemTokensCard() {
               <DialogDescription>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 Exchange your tokens for these rewards. You currently have{' '}
                 {wallet?.balance |0} ZION$.
               </DialogDescription>
             </DialogHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='space-y-4 py-4'>
               {REWARD_OPTIONS.map(option => (
                 <div
@@ -311,6 +336,7 @@ export function RedeemTokensCard() {
                       Redeem <ArrowRight className='ml-1 h-3 w-3' />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
@@ -326,6 +352,11 @@ export function RedeemTokensCard() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
+              </DialogDescription>
+            </DialogHeader>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="space-y-4 py-4">
               {REWARD_OPTIONS.map((option) => (
                 <div key={option.id} className="flex justify-between items-center border-b pb-4">
@@ -344,6 +375,7 @@ export function RedeemTokensCard() {
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -351,6 +383,8 @@ export function RedeemTokensCard() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Button>
 =======
 >>>>>>>                     </Button>
@@ -375,6 +409,7 @@ export function RedeemTokensCard() {
     </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   );
@@ -382,17 +417,19 @@ export function RedeemTokensCard() {
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -515,6 +552,7 @@ export function RedeemTokensCard() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -529,3 +567,5 @@ export function RedeemTokensCard() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

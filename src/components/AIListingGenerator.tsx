@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import { useToast } from '@/hooks/use-toast'
 import { Button } from '@/components/ui/button'
@@ -73,8 +76,6 @@ export function AIListingGenerator({
         break
     }
   }
-<<<<<<< HEAD
-=======
   const handleGenerate = async () => {
     if (!title || !category) {
       toast({
@@ -115,9 +116,12 @@ export function AIListingGenerator({
             ? error.message
             : 'Failed to generate content. Please try again.',
         variant: 'destructive',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -196,6 +200,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
@@ -216,6 +221,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       toast({
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const handleGenerate = async () => {
+    if (!title |!category) {
+      toast({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: 'Missing required fields'
         description: 'Please provide at least a title and category.'
         variant: 'destructive'
@@ -251,6 +261,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             : 'Failed to generate content. Please try again.'
         variant: 'destructive'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       })
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>     } finally {
@@ -259,6 +270,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
         variant: "destructive"
@@ -323,16 +336,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       })
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
   }
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
@@ -342,12 +349,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: 'The generated content has been applied to your listing.'
       })
     }
-<<<<<<< HEAD
-=======
   }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleApply = () => {
@@ -361,6 +369,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
     <div className="space-y-6">
@@ -371,10 +380,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>   return (
 
@@ -387,6 +400,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -398,6 +413,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
           </CardTitle>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           <p className='text-sm text-zion-slate-light'>
@@ -405,14 +421,18 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             SEO-friendly content for your listing
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <p className='text-sm text-zion-slate-light'>
             Provide basic information and let AI generate optimized
             SEO-friendly content for your listing
-=======
           <p className="text-sm text-zion-slate-light">
             Provide basic information and let AI generate optimized, SEO-friendly content for your listing
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </p>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -421,6 +441,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             <Input
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           </div>
           <div className="space-y-2">
@@ -440,6 +461,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               id='title'
               value={title}
               onChange={e => handleInputChange(e, 'title')}
@@ -447,12 +470,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               className='bg-zion-blue border border-zion-blue-light text-white'
               disabled={isLoading}            />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           </div>
           <div className="space-y-2">
             <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>
             <Input
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               id="title"
               value={title}
               onChange={(e) => handleInputChange(e, 'title')}
@@ -460,17 +486,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               className="bg-zion-blue border border-zion-blue-light text-white"
               disabled={isLoading}
             />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className="space-y-2">
             <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>
             <Input
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               id='category'
               value={category}
               onChange={e => handleInputChange(e, 'category')}
@@ -478,12 +502,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               className='bg-zion-blue border border-zion-blue-light text-white'
               disabled={isLoading}            />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           </div>
           <div className="space-y-2">
             <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
             <Textarea
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               id="category"
               value={category}
               onChange={(e) => handleInputChange(e, 'category')}
@@ -491,17 +518,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               className="bg-zion-blue border border-zion-blue-light text-white"
               disabled={isLoading}
             />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className="space-y-2">
             <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
             <Textarea
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               id='keyFeatures'
               value={keyFeatures}
               onChange={e => handleInputChange(e, 'keyFeatures')}
@@ -509,12 +534,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               className='bg-zion-blue border border-zion-blue-light text-white min-h-20'
               disabled={isLoading}            />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           </div>
           <div className="space-y-2">
             <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
             <Input
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               id="keyFeatures"
               value={keyFeatures}
               onChange={(e) => handleInputChange(e, 'keyFeatures')}
@@ -522,17 +550,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
               disabled={isLoading}
             />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className="space-y-2">
             <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
             <Input
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               id='targetAudience'
               value={targetAudience}
               onChange={e => handleInputChange(e, 'targetAudience')}
@@ -545,6 +571,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
             className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'          >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             {isLoading ? (
           </div>
@@ -581,6 +608,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               id="targetAudience"
               value={targetAudience}
               onChange={(e) => handleInputChange(e, 'targetAudience')}
@@ -824,11 +853,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {isLoading ? (
               <>Generating Optimized Content...</>
             ) : (
@@ -857,7 +881,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
           <CardHeader>
             <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />
           </CardHeader>
-<<<<<<< HEAD
           <CardContent className='space-y-4'>
             <Skeleton className='h-32 w-full bg-zion-blue-light/20' />
             <div className='flex flex-wrap gap-2'>
@@ -875,12 +898,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
       )}
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CardContent className="space-y-4">
             <Skeleton className="h-32 w-full bg-zion-blue-light/20" />
             <div className="flex flex-wrap gap-2">
@@ -898,6 +923,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
         </Card>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       )}
 
@@ -911,9 +937,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {generatedContent && !isLoading && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -927,8 +954,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div>
               <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
                 Tags
@@ -938,7 +968,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
                 ))}
               </div>
             </div>
-=======
             
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
@@ -950,15 +979,19 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             </div>
             
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
               <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -978,6 +1011,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div>
               <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
                 Key Selling Points
@@ -992,6 +1027,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button
               onClick={handleApply}
               className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'            >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               Apply to My Listing
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1056,6 +1092,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
@@ -1077,6 +1115,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -1088,6 +1127,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Apply to My Listing
               <ArrowRight className="ml-2 h-4 w-4" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1095,6 +1136,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardFooter>
         </Card>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1106,21 +1148,28 @@ break;'
   target: {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    </div>
+  )
+  target: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   value: string
 }, field: string) => {
   switch (field) {
   case 'title': setTitle (e.target.value)
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 reak;'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   value: string ;
 }, field: string) => {;
   switch (field) {;
   case 'title': setTitle (e.target.value);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 break;'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 case 'category': setCategory (e.target.value)
@@ -1193,6 +1242,7 @@ toast ({
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </div>;
   );
@@ -1220,3 +1270,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+}
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

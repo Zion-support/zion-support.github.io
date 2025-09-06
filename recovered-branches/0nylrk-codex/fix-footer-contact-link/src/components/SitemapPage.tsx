@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ========
@@ -24,23 +25,35 @@ export const SitemapPage: React.FC = () => {
 ========
 export const SitemapPage: React.FC = () => {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
+=======
+import React from "react";
+import { completeSitemap, dynamicPaths } from "@/config/sitemap";
+import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
+import { SEO } from "./SEO";
+import { AppLayout } from "@/layout/AppLayout";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import {completeSitemap, dynamicPaths} from '@/config/sitemap';
 import {Link} from 'react-router-dom';
 import {ChevronRight} from 'lucide-react';
 import {SEO} from './SEO';
 import {AppLayout} from '@/layout/AppLayout';
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import { Link } from 'react-router-dom',
 import { ChevronRight } from 'lucide-react',
 import { SEO } from './SEO',
 import { AppLayout } from '@/layout/AppLayout',
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -587,6 +600,8 @@ import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 import { AppLayout } from "@/layout/AppLayout";
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const SitemapPage: React.FC = () => {
   return (
     <AppLayout>
@@ -751,11 +766,16 @@ route.requiredRoles?.includes("employer") |
                   </div>
                 </li>
               ))}
+<<<<<<< HEAD
 </ul>
+=======
+            </ul>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       </div>
     </AppLayout>
+<<<<<<< HEAD
 
   );
 }
@@ -764,3 +784,15 @@ route.requiredRoles?.includes("employer") |
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+
+            </ul>;
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>;
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

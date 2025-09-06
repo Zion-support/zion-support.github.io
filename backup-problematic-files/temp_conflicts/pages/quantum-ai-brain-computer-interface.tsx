@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -42,13 +43,14 @@ import {
 
 =======
 <<<<<<< HEAD:pages-disabled/quantum-energy.tsx
-
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
+:pages-disabled/quantum-energy.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
+:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
 import React from "react";
 import Head from "next/head";
 import {
-<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -56,8 +58,11 @@ import {
   ArrowRight
   Brain
   Star
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Phone,
   Mail,
   MapPin,
@@ -66,11 +71,14 @@ import {
   Brain,
   Star,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
@@ -89,12 +97,13 @@ export default function QuantumAIBCIPage() {;
 =======
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
-<<<<<<< HEAD
     s.link.endsWith("/quantum-ai-brain-computer-interface")
-=======
     s.link.endsWith("/quantum-ai-brain-computer-interface"),;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
   if (!service) return null;
 
@@ -285,8 +294,12 @@ if (return null) {
                     <span>{feat}</span>
                   </li>
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </ul>;
             </div>;
             <div className="bg - black / 30 rounded - 2xl border border - purple - 500 / 30 p - 6 h - fit">;
@@ -347,7 +360,6 @@ if (return null) {
 =======
     </UltraAdvancedFuturisticBackground>;
   ),;
-=======
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">
@@ -398,16 +410,15 @@ if (return null) {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD:pages-disabled/quantum-energy.tsx
+:pages-disabled/quantum-energy.tsx
+main:pages-disabled/quantum-energy.tsx
+:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
+}
+main:pages-disabled/quantum-energy.tsx
+}
 <<<<<<< HEAD
-=======
-=======
->>>>>>> main:pages-disabled/quantum-energy.tsx
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-=======
->>>>>>> main:pages-disabled/quantum-energy.tsx
-}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

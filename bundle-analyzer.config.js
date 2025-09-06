@@ -11,18 +11,20 @@ module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config.plugi
 
 =======
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-<<<<<<< HEAD
 module.exports = {"webpack": (config { isServer }) = > {if ( {; config.plugins.push() {; {; config.plugins.push(}; new BundleAnalyzerPlugin({"analyzerMode": 'static'; openAnalyzer: false
     reportFilename: 'bundle-analysis.htm,l'}); )}; return config}}
-=======
 module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config.plugins.push() {; {; config.plugins.push(}; new BundleAnalyzerPlugin({; "analyzerMode": 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )}; return config}};
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) => {if ( {;
       config.plugins.push() {;
      {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -67,6 +69,8 @@ module && module.exports = {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       config.plugins.push(}
         new BundleAnalyzerPlugin({"analyzerMode": 'static';
           openAnalyzer: false
@@ -74,16 +78,12 @@ module && module.exports = {
       )}
     return config}
 }
-=======
       config.plugins.push(};
         new BundleAnalyzerPlugin({;
           "analyzerMode": 'static';
-<<<<<<< HEAD
-=======
           openAnalyzer: false;
           reportFilename: 'bundle-analysis.htm,l'});
           "analyzerMode": 'static',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           openAnalyzer: false,
           reportFilename: 'bundle-analysis.html'
         })
@@ -92,8 +92,6 @@ module && module.exports = {
     return config;
   }
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /* eslint-env node */
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {
@@ -103,7 +101,6 @@ module.exports = {
         new BundleAnalyzerPlugin({
           analyzerMode: 'static'
           openAnalyzer: false
-=======
       config.plugins.push(};
         new BundleAnalyzerPlugin({;
           "analyzerMode": 'static';
@@ -111,7 +108,6 @@ module.exports = {
           reportFilename: 'bundle-analysis.htm,l'});
           "analyzerMode": 'static',
           openAnalyzer: false,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           reportFilename: 'bundle-analysis.html'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         })
@@ -119,6 +115,7 @@ module.exports = {
     }
     return config;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -145,26 +142,19 @@ module.exports = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
-<<<<<<< HEAD
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
-=======
-<<<<<<< HEAD
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
-=======
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 }
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -211,14 +201,15 @@ if ( {) {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
-};
-<<<<<<< HEAD
 =======
+origin/main
+origin/automation-improvements-final
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+};
 
 }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {,;
@@ -235,8 +226,11 @@ module.exports = {,;
     return config}
 },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

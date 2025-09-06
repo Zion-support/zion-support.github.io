@@ -168,6 +168,7 @@ const contact = {
 export const new2025Services: EnhancedRealMicroSaasService[] = [;
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: 'llm - safety - observability - suite',
     name: 'LLM Safety & Observability Suite',
     tagline: 'Detect jailbreaks, PII leaks and drift with real - time dashboards',
@@ -224,6 +225,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [;
       'Prompt / output policy engine_jailbreak and injection detectionPII redaction and audit trail_hallucination and grounding score_dashboards and CI quality gates';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 'llm-safety-observability-suite'
     name: 'LLM Safety & Observability Suite'
     tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards'
@@ -3475,7 +3478,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [;
     customers: 10
     rating: 4.6
 reviews: 6
-=======
     id: 'llm-safety-observability-suite',
     name: 'LLM Safety & Observability Suite',
     tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards',
@@ -3506,7 +3508,6 @@ reviews: 6
     marketSize: '$3.5B+ AI safety & governance',
     growthRate: '200% annual growth',
     variant: 'holographic-matrix',
-<<<<<<< HEAD
     contactInfo: contact,    features: [
       'Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates';
     ];
@@ -3530,9 +3531,7 @@ reviews: 6
     growthRate: '200% annual growth';
     variant: 'holographic-matrix';
     contactInfo: contact;
-=======
     contactInfo: contact,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     realImplementation: true,
     implementationDetails: 'Inline middleware, policy DSL, exporters and dashboards.',
     launchDate: '2025-03-10',
@@ -4201,22 +4200,19 @@ reviews: 6
     launchDate: '2025-03-07',
     customers: 10,
     rating: 4.6,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 reviews: 6,
   },;
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     reviews: 6
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -62,6 +62,7 @@ import {
 import { Input } from "@/components/ui/input";
 
 import { UseFormReturn } from "react-hook-form";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
@@ -276,6 +277,26 @@ import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
 
+=======
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {UseFormReturn} from "react-hook-form";
+import {FormValues} from "./useHireRequestForm";
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { UseFormReturn } from "react-hook-form",
+import { FormValues } from "./useHireRequestForm",
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { UseFormReturn } from "react-hook-form",;
+import { FormValues } from "./useHireRequestForm";
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
   return (
@@ -317,6 +338,7 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
         )}
       />
     </>
+<<<<<<< HEAD
 
   );
 }
@@ -324,3 +346,10 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

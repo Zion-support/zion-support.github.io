@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -38,6 +39,8 @@ import {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/referrals/RewardsCard.tsx
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Card
   CardContent
@@ -46,10 +49,24 @@ import {
   CardTitle
 } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
+<<<<<<< HEAD
 
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from "lucide-react";
 
+=======
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReferralReward} from "@/types/referrals";
+import {formatDate} from "@/utils/referralUtils";
+import {BadgeDollarSign, Badge} from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralReward } from "@/types/referrals",
+import { formatDate } from "@/utils/referralUtils",
+import { BadgeDollarSign, Badge } from "lucide-react",
+
+import { formatDate } from "@/utils/referralUtils";
+import { BadgeDollarSign, Badge } from "lucide-react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean
@@ -173,6 +190,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? "border-b pb-3" : ""
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -212,6 +230,9 @@ export function RewardsCard({ rewards, isLoading } RewardsCardProps) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 }`}
+=======
+              }`}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <div>
                 <div className="flex items-center gap-2">
@@ -240,7 +261,18 @@ export function RewardsCard({ rewards, isLoading } RewardsCardProps) {;
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
+=======
+  )
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { ReferralReward } from "@/types/referrals",;
+import { formatDate } from "@/utils/referralUtils",;
+import { BadgeDollarSign, Badge } from "lucide-react",;
+interface RewardsCardProps {;
+  rewards: ReferralReward[];
+  isLoading: boolean;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
@@ -494,6 +526,7 @@ if ( {) {
       </CardContent>;
     </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/referrals/RewardsCard.tsx
 
 ========
@@ -557,3 +590,9 @@ isLoading: boolean
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

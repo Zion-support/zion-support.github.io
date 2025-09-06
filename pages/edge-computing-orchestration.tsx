@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -85,12 +86,10 @@ import EnhancedFooter from '../components/EnhancedFooter';
   ];
 =======
 <<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Cpu, Network, Zap, Shield, Database, Globe;
@@ -98,11 +97,7 @@ import { Cpu, Network, Zap, Shield, Database, Globe;
  } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-=======
-<<<<<<< HEAD
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -112,15 +107,19 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function EdgeComputingPage() {
 
   const features = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -142,6 +141,8 @@ export default function EdgeComputingPage() {
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: Cpu
       title: 'Edge Orchestration'
       description:
@@ -267,8 +268,11 @@ export default function EdgeComputingPage() {
       ]
       popular: false
     },  ];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: Cpu,
       title: "Edge Orchestration",
       description: "Intelligent distribution and management of computing workloads across edge nodes for optimal window.window.window.performance.",
@@ -333,7 +337,6 @@ export default function EdgeComputingPage() {;
     },
     {
       icon: Globe,
-<<<<<<< HEAD
       title: 'Global Distribution',
       description:
         'Worldwide edge network deployment with intelligent traffic routing and load balancing.',
@@ -343,9 +346,12 @@ export default function EdgeComputingPage() {;
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "Global Distribution",
       description: "Worldwide edge network deployment with intelligent traffic routing and load balancing.",
       color: "from-yellow-500 to-orange-500"
@@ -355,7 +361,6 @@ export default function EdgeComputingPage() {;
   }
 }
   ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const benefits = [
     "Reduce latency by 80-90% with edge processing",
     "Cut bandwidth costs by 60% through local data processing",
@@ -636,19 +641,25 @@ export default function EdgeComputingPage() {;
   }
 }
   ],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
         <title>Edge Computing Orchestration - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta
           name='description'
           content='Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing with our advanced edge computing platform.'
@@ -678,9 +689,12 @@ export default function EdgeComputingPage() {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center'
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta name="description" content="Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing with our advanced edge computing platform." />
         <meta name="keywords" content="edge computing, IoT management, edge orchestration, real-time processing, distributed computing, Zion Tech Group" />
         <meta property="og:title" content="Edge Computing Orchestration - Zion Tech Group" />
@@ -983,6 +997,7 @@ export default function EdgeComputingPage(req, res) {
 }
             className="text-center"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -994,6 +1009,8 @@ export default function EdgeComputingPage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
@@ -1054,6 +1071,7 @@ export default function EdgeComputingPage(req, res) {
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1112,6 +1130,8 @@ Everything you need to deploy, manage, and optimize edge computing infrastructur
             {features.map((feature, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Features */}
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -2343,7 +2363,6 @@ function EdgeComputingPage() {
                       <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
                       <span className='text-slate-700'>{feature}</span>                    </li>
                   ))}
-=======
       {/* Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2785,12 +2804,15 @@ function EdgeComputingPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </ul>
                 <a
 
@@ -2818,7 +2840,6 @@ function EdgeComputingPage() {
                 </Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </motion.div>
-<<<<<<< HEAD
             ))}
 <<<<<<< HEAD
           </div>;
@@ -2869,7 +2890,6 @@ function EdgeComputingPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2902,12 +2922,15 @@ function EdgeComputingPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -3042,14 +3065,9 @@ function EdgeComputingPage() {
 =======
       <EnhancedFooter />
     </>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -3057,9 +3075,12 @@ function EdgeComputingPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

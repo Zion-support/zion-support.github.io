@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -8,14 +9,17 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
- return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+ return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
-=======
  return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 import Head from 'next/head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Star} from 'lucide-react';
@@ -26,6 +30,7 @@ export default function QuantumAICognitivePage() {;
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive'));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -33,6 +38,8 @@ export default function QuantumAICognitivePage() {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) )
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
@@ -49,6 +56,7 @@ export default function QuantumAICognitivePage() {
     return null
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -63,6 +71,9 @@ export default function QuantumAICognitivePage() {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const contactInfo = service.contactInfo;
 
   return (
@@ -251,18 +262,15 @@ if ( {) {
 =======
 =======
   );
-<<<<<<< HEAD
 }
-=======
 }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

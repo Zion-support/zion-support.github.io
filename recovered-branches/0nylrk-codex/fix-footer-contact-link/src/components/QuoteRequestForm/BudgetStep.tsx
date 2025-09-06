@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/BudgetStep.tsx
 
 <<<<<<< HEAD
@@ -14,24 +15,25 @@ import { QuoteFormData } from "@/types/quotes",
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { QuoteFormData } from "@/types/quotes",
-<<<<<<< HEAD
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
-=======
 import { Label } from "@/components/ui/label",
 import { Slider } from "@/components/ui/slider",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface BudgetStepProps {
 
   formData: QuoteFormData
@@ -43,6 +45,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
   const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
     if (type === "range" && !formData.budget.maxAmount) {
       updateFormData({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -93,17 +96,16 @@ import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         budget: {;
           ...formData.budget;
           type,
           maxAmount: formData.budget.amount + 5000
-=======
         budget: {
-<<<<<<< HEAD
           ...formData.budget;
           type
           maxAmount: formData.budget.amount + 5000
-=======
           ...formData.budget,
           type,
           maxAmount: formData.budget.amount + 5000
@@ -157,11 +159,6 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
           ...formData.budget,;
           type,;
           maxAmount: formData.budget.amount + 5000;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       })
     } else {
@@ -172,16 +169,16 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
         }
       })
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  },
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  },
   };
-=======
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -195,12 +192,16 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: 'USD'
       maximumFractionDigits: 0
     }).format(value)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -213,12 +214,16 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <div>
@@ -237,6 +242,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               <p className="text-sm text-zion-slate-light">I have a set amount</p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -247,11 +253,15 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-            <div
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <div
             <div 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "hourly"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -263,6 +273,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               <p className="text-sm text-zion-slate-light">Pay per hour of work</p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -273,11 +284,15 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-            <div
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <div
             <div 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "range"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -289,6 +304,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               <p className="text-sm text-zion-slate-light">I have a min and max</p>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -309,6 +325,9 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {formData.budget.type === "fixed" && (
             <div className="mt-6">
               <Label className="text-zion-slate-light mb-4 block">
@@ -612,7 +631,6 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
                   defaultValue={[formData.budget.amount]}
                   max={50000}
                   step={500}
-<<<<<<< HEAD
                   onValueChange={(value) => {
                     const newAmount = value[0];
                     const maxAmount = formData.budget.maxAmount |50000;
@@ -622,7 +640,6 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
                         amount: newAmount
 
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount
-=======
                   onValueChange={(value) => {;
                     const newAmount = value[0],;
                     const maxAmount = formData.budget.maxAmount || 50000,;
@@ -631,11 +648,6 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
                         ...formData.budget;
                         amount: newAmount;
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       }
                     })
                   }}
@@ -650,21 +662,28 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
               <div>
                 <Label className="text-zion-slate-light mb-4 block">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Maximum Budget: {formatCurrency(formData.budget.maxAmount |0)}
                 </Label>
                 <Slider
                   defaultValue={[formData.budget.maxAmount |formData.budget.amount + 5000]}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Maximum Budget: {formatCurrency(formData.budget.maxAmount || 0)}
                 </Label>;
                 <Slider;
                   defaultValue={[formData.budget.maxAmount || formData.budget.amount + 5000]}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -986,6 +1005,8 @@ type
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   min={formData.budget.amount}
                   max={100000}
                   step={500}

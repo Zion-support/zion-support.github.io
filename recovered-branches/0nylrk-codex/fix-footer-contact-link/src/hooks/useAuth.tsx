@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
@@ -35,6 +36,8 @@ export interface UserDetails {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {AuthContext} from "@/context/auth/AuthContext";
@@ -55,11 +58,8 @@ export interface UserDetails {;
   bio?: string;
   createdAt?: string;
   updatedAt?: string
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
 import { AuthContext } from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
 // Define types for our context
@@ -80,7 +80,6 @@ export interface UserDetails {
   updatedAt?: string
 }
 export interface AuthContextType {
-=======
 import { AuthContext } from "@/context/auth/AuthContext",
 import type { UserDetails as AuthUserDetails } from "@/types/auth",
 // Define types for our context
@@ -120,10 +119,13 @@ export interface UserDetails {;
   createdAt?: string,;
   updatedAt?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 export interface AuthContextType {;
@@ -146,6 +148,7 @@ export interface AuthContextType {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -153,6 +156,8 @@ export interface AuthContextType {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   user: UserDetails | null
   isAuthenticated: boolean
@@ -175,6 +180,7 @@ export interface AuthContextType {;
 // Create a provider component
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -185,20 +191,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AuthProvider({ children }: { children: ReactNode }) {;
   const [user, setUser] = useState<UserDetails | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-=======
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<UserDetails | null>(null),
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);
-=======
   const [isLoading, setIsLoading] = useState(true),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Mock auth functions for now - these would connect to Supabase in a real implementation
 
   const signIn = async (email: string, password: string) => {
@@ -265,7 +272,6 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 =======
     // // // console.log("Sign in attempted with:", email),
     // Mock successful sign-in
-<<<<<<< HEAD
     setUser({
       id: "mock-user-id"
       email
@@ -275,8 +281,11 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       profileComplete: true
       role: "enterprise_admin"
       permissions: ["billing_access", "admin_access", "team_management"];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setUser({ 
       id: "mock-user-id", 
       email, 
@@ -286,6 +295,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       profileComplete: true,
       role: "enterprise_admin",
       permissions: ["billing_access", "admin_access", "team_management"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       companyId: "company-123"
@@ -316,25 +326,21 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
     console.log("Sign up attempted with:", email, userData);
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       companyId: "company-123"
     }),
     return { error: null }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const signOut = async () => {
     // This would be replaced with actual Supabase auth
     // // // console.log("Sign out attempted"),
     setUser(null)
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
     // // // console.log("Sign up attempted with:", email, userData),
@@ -380,22 +386,16 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 =======
     }),
     return { error: null }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const resetPassword = async (email: string) => {
     // Mock implementation
     // // // console.log("Password reset requested for:", email),
     return { error: null }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
     // // // console.log("Profile update requested with:", data),
@@ -404,6 +404,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       setUser({ ...user, ...data })
     }
     return { error: null }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -418,11 +419,11 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const loginWithGoogle = async () => {
     console.log("Google login requested");
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const loginWithGoogle = async () => {
     // // // console.log("Google login requested"),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -434,6 +435,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Google User"
       profileComplete: true
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -448,11 +450,11 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const loginWithFacebook = async () => {
     console.log("Facebook login requested");
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const loginWithFacebook = async () => {
     // // // console.log("Facebook login requested"),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -464,6 +466,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Facebook User"
       profileComplete: true
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -478,11 +481,11 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const loginWithTwitter = async () => {
     console.log("Twitter login requested");
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const loginWithTwitter = async () => {
     // // // console.log("Twitter login requested"),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -494,6 +497,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Twitter User"
       profileComplete: true
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -521,23 +525,30 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const loginWithWeb3 = async () => {
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       console.warn("No wallet detected");
       return
     }
@@ -586,7 +597,6 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   }
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
-<<<<<<< HEAD
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
@@ -596,7 +606,6 @@ export function useAuth(): AuthContextType {
   }
   return context
 }
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Custom hook to use the auth context
@@ -605,6 +614,7 @@ export function useAuth(): AuthContextType {;
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -612,6 +622,8 @@ export function useAuth(): AuthContextType {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       console.warn("No wallet detected"),
       return
 ;
@@ -1446,13 +1458,12 @@ export function useAuth(): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   return context;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

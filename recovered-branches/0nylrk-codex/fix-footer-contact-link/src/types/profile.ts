@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -31,6 +32,8 @@ export interface ProfileExperience {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface ProfileSkill {
 
   name: string
@@ -38,13 +41,9 @@ export interface ProfileSkill {
   level: number, // 1-5
   endorsements?: number
 }
-<<<<<<< HEAD
 export interface ProfileProject {
-=======
-<<<<<<< HEAD
 
 export interface ProfileProject {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   description: string;
@@ -55,13 +54,14 @@ export interface ProfileProject {;
 
   date: string
 }
-<<<<<<< HEAD
 export interface ProfileExperience {
-=======
 
 export interface ProfileExperience {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   role: string;
   company: string;
@@ -99,12 +99,9 @@ export interface ProfileData {
 
   current?: boolean
 }
-<<<<<<< HEAD
 export interface Availability {
-=======
 
 export interface Availability {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   status: 'available' | 'limited' | 'unavailable';
   nextAvailable?: string;
 
@@ -112,12 +109,9 @@ export interface Availability {;
 
   availableHours?: { day: string, hours: string }[]
 }
-<<<<<<< HEAD
 export interface ProfileData {
-=======
 
 export interface ProfileData {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   title: string;
@@ -153,16 +147,17 @@ export interface ProfileData {;
 
   contactEmail?: string
 }
-=======
-<<<<<<< HEAD
 export interface ProfileSkill {;
   name: string,;
   level: number, // 1-5;
   endorsements?: number;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export interface ProfileProject {;
   id: string,;
@@ -212,6 +207,7 @@ export interface ProfileData {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -224,3 +220,5 @@ export interface ProfileData {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -12,10 +12,13 @@ import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { useReviews } from "@/hooks/useReviews",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {Star} from "lucide-react";
 import {ReviewStats} from "@/components/reviews/ReviewStats";
@@ -23,6 +26,7 @@ import {ReviewsList} from "@/components/reviews/ReviewsList";
 import {useReviews} from "@/hooks/useReviews";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+<<<<<<< HEAD
 interface ProfileRatingsProps {;
   userId: string,;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
@@ -104,6 +108,13 @@ if ( {) {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+import { useState, useEffect } from "react",
+import { Star } from "lucide-react",
+import { ReviewStats } from "@/components/reviews/ReviewStats",
+import { ReviewsList } from "@/components/reviews/ReviewsList",
+import { useReviews } from "@/hooks/useReviews",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 interface ProfileRatingsProps {
@@ -144,15 +155,27 @@ userId
     fetchUserReviews(userId);
   }, [userId]);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProfileRatingsProps {
   userId: string,
   averageRating?: number,
   ratingCount?: number
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+}
+
+export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<
     Record<number, number>
@@ -178,8 +201,11 @@ interface ProfileRatingsProps {
       setRatingDistribution(distribution);
     }
   }, [reviews]);
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { Star } from "lucide-react",;
 import { ReviewStats } from "@/components/reviews/ReviewStats",;
@@ -208,10 +234,13 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       setRatingDistribution(distribution);
     }
   }, [reviews]),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -225,6 +254,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
 =======
   
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -234,6 +264,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
         <div className="md:w-1/3">;
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
@@ -411,6 +443,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 } Pr
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -552,3 +585,9 @@ reviews.forEach ( (review) => {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+}
+;
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

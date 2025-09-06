@@ -14,8 +14,6 @@ import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/webhook-manager/index.ts
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
@@ -25,6 +23,7 @@ interface CreateWebhookRequest {
   url: string;
   eventTypes: string[]
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/webhook-manager/index.ts
 =======
 
@@ -32,14 +31,15 @@ interface CreateWebhookRequest {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-=======
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -48,11 +48,14 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CreateWebhookRequest {
   name: string,
   url: string,
   eventTypes: string[],
   secret?: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -63,6 +66,8 @@ interface CreateWebhookRequest {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 interface CreateWebhookRequest {;
@@ -71,6 +76,7 @@ interface CreateWebhookRequest {;
   eventTypes: string[],;
   secret?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -80,12 +86,15 @@ interface CreateWebhookRequest {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 interface WebhookTestRequest {;
   webhookId: string,;
   eventType: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -116,6 +125,8 @@ const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/webhook-manager/index.ts
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   secret?: string
 }
@@ -126,17 +137,16 @@ interface WebhookTestRequest {
   eventType: string
 }
 // Create a Supabase client
-<<<<<<< HEAD
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const supabase = createClient(supabaseUrl, supabaseKey);
-=======
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -241,13 +251,14 @@ if ( {) {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req.method === 'OPTIONS') {
     return new Response('ok', {
       headers: {
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, GET, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-<<<<<<< HEAD
   }
   try {
     // Extract auth token from request
@@ -282,8 +293,11 @@ serve(async (req) => {
       } else if (path === 'delete') {
         const { webhookId } = await req.json();
         return await deleteWebhook(user.id, webhookId)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
@@ -333,6 +347,7 @@ serve(async (req) => {;
         const { webhookId } = await req.json(),;
         return await deleteWebhook(user.id, webhookId);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -343,12 +358,15 @@ serve(async (req) => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     } else if (req.method === 'GET') {
       if (path === 'webhooks') {
         return await getUserWebhooks(user.id)
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -364,6 +382,9 @@ serve(async (req) => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400
       headers: { 'Content-Type': 'application/json' }})
@@ -728,6 +749,7 @@ async function deleteWebhook(userId: string, webhookId: string) {
         status: 500
         headers: { 'Content-Type': 'application/json' }})
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -736,6 +758,8 @@ async function deleteWebhook(userId: string, webhookId: string) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     return new Response(JSON.stringify({ error: 'Invalid action' }), {;
       status: 400,;
@@ -848,6 +872,7 @@ async function deleteWebhook(userId: string, webhookId: string) {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -862,12 +887,15 @@ async function deleteWebhook(userId: string, webhookId: string) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     if (!data |data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
         status: 404
         headers: { 'Content-Type': 'application/json' }})
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -949,8 +977,9 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully'
       id: webhookId
@@ -1476,15 +1505,17 @@ function createTestPayload() {
 
         data: {
           message: 'This is a test webhook event'
-<<<<<<< HEAD
         }
       }
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     return new Response(JSON.stringify({;
       message: 'Webhook deleted successfully',;
@@ -2136,14 +2167,13 @@ case 'milestone approved':
         timestamp;
         data: {;
           message: 'This is a test webhook event';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
   }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

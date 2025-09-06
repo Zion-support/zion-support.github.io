@@ -5,8 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { Resume  } from '@/types/resume';
 import { useFetchResume  } from './useFetchResume';
@@ -17,8 +15,11 @@ import { useSkills  } from './useSkills';
 import { useCertifications  } from './useCertifications';
 import { useResumeList  } from './useResumeList';
 export function useResume() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {Resume} from '@/types/resume';
 import {useFetchResume} from './useFetchResume';
@@ -30,12 +31,15 @@ import {useCertifications} from './useCertifications';
 import {useResumeList} from './useResumeList';
 export function useResume() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [resume, setResume] = useState<Resume | null>(null);
 
   const fetchResumeOperations = useFetchResume();
@@ -381,12 +385,14 @@ export * from './useSkills';
 export * from './useCertifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
@@ -470,6 +476,7 @@ export * from './useCertifications',;
 export * from './useResumeList';
 export * from './useResumeUtils';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -489,3 +496,5 @@ export * from './useResumeUtils';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

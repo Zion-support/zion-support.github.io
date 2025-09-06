@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState } from 'react';
@@ -8,20 +9,23 @@ import { useRouter  } from 'next/router';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 import { useRouter  } from 'next/router';
-=======
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -31,7 +35,6 @@ import { RatingStars } from '@/components/RatingStars'
 <<<<<<< HEAD
 
 import { RatingStars } from '@/components/RatingStars'
-=======
 import React, { useState } from 'react'
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
 import { useRouter } from 'next/router'
@@ -40,15 +43,17 @@ import { Button } from '@/components/ui/button'
 import { ProductListing } from '@/types/listings'
 import { DollarSign } from 'lucide-react';
 import { RatingStars } from '@/components/RatingStars';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image'; // Import next/image
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -91,11 +96,14 @@ const ProductListingCardComponent = ({
   )
   const [imageError, setImageError] = useState(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
@@ -103,8 +111,11 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -122,20 +133,26 @@ interface ProductListingCardProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid',
@@ -148,14 +165,10 @@ const ProductListingCardComponent = ({
   ),
   const [imageError, setImageError] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const stockStatus =
     listing.stock === undefined
       ? 'In stock'
       : listing.stock <= 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   detailBasePath = '/marketplace/listing',
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid'
@@ -170,12 +183,16 @@ const ProductListingCardComponent = ({
     listing.stock === undefined
       ? 'In stock'
       : listing.stock <= 0
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ? 'Out of stock'
         : listing.stock <= 5
           ? 'Low stock'
           : 'In stock'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -189,17 +206,23 @@ onst ProductListingCardComponent = ({
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ? 'Out of stock'
       : listing.stock <= 5
       ? 'Low stock'
       : 'In stock',
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const stockVariant =
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -207,12 +230,17 @@ onst ProductListingCardComponent = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const stockVariant = null;
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ? 'destructive'
         : listing.stock <= 5
           ? 'warning'
@@ -346,6 +374,7 @@ if ( {) {
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -353,6 +382,8 @@ if ( {) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid',
@@ -378,8 +409,11 @@ if ( {) {
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ? 'destructive'
       : listing.stock <= 5
       ? 'warning'
@@ -651,6 +685,7 @@ const ProductListingCardComponent = ({;
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         onClick={handleViewListing} // Keep existing onClick for navigation
         role="button"
@@ -695,24 +730,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         onClick={handleViewListing} // Keep existing onClick for navigation
         role="button"
         tabIndex={-1} // Remove from tab order as parent is focusable
-<<<<<<< HEAD
         onKeyDown={e => {
-<<<<<<< HEAD
           if (e.key === 'Enter' |e.key === ' ') {
             e.preventDefault()
             handleViewListing()
-=======
-=======
         onKeyDown={(e) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }  return ()
     <div
       data-testid= "equipment-link";'`
@@ -807,6 +837,7 @@ if ( {) {
             style={{ objectFit: 'cover' }}
             onError = {handleImageError,}
 <<<<<<< HEAD
+<<<<<<< HEAD
         onKeyDown={(e) => {
 
           if (e.key === 'Enter' || e.key === ' ') {
@@ -816,13 +847,18 @@ if ( {) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault(),
             handleViewListing()
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         }}
       >;
@@ -835,6 +871,7 @@ if ( {) {
             onError={handleImageError}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             priority={false} // Assuming these are not LCP images
 =======
@@ -845,6 +882,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             priority={false} // Assuming these are not LCP images
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
@@ -856,6 +895,7 @@ if ( {) {
           )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               {stockStatus}
             </Badge>
@@ -863,31 +903,34 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {stockStatus && (
             <Badge
               variant={stockVariant as any}
               className='absolute top-2 left-2'            >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               {stockStatus}
             </Badge>
           )}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {stockStatus && (;
             <Badge;
               variant={stockVariant as any}
               className="absolute top-2 left-2"
             >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {stockStatus}
             </Badge>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <FavoriteButton itemId={listing.id} />
         </div>
       </div>
@@ -902,6 +945,7 @@ if ( {) {
               variant='outline'
               className='bg-background text-foreground/80 border-primary/10'
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               {listing.category}
 ursor/fix-website-loading-errors-and-merge-6662
@@ -931,6 +975,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>             </Badge>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
            <FavoriteButton itemId={listing.id} />;
         </div>;
       </div>;
@@ -940,11 +986,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           {/* Category & Rating */}
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {listing.category}
             </Badge>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -953,6 +994,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 {listing.uspHeadline}
               </p>
@@ -961,32 +1003,35 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           {/* Title & Description */}
           <div onClick={handleViewListing} className='block'>
             {listing.uspHeadline && (
               <p className='text-primary font-semibold text-sm mb-1'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 {listing.uspHeadline}
               </p>
             )}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>;
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {listing.uspHeadline}
               </p>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <h3 className='font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]'>
               {listing.title}
             </h3>
@@ -1001,6 +1046,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'                >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   {tag}
                 </span>
@@ -1093,6 +1139,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
@@ -1108,6 +1156,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1127,31 +1176,34 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {tag}
                 </span>
               ))}
             </div>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
         {/* Footer with price and button */}
         <div className='flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20'>
           <div className='text-sm font-medium'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>             {listing.price !== null ? (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>;
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {listing.price !== null ? (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="flex items-center text-primary">
@@ -1161,10 +1213,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             ) : (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <span className='text-foreground/80'>{getPrice()}</span>
             )}
           </div>
@@ -1177,12 +1232,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 addToCart() }}
               disabled = {loading,}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>             >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             >
 >>>>>>>               {loading ? (
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <span className="text-foreground/80">
                 {getPrice()}
               </span>;
@@ -1198,11 +1256,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 addToCart()
               }}
               disabled={loading}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               {loading ? (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1219,10 +1272,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button
               size='sm'
               variant='default'
@@ -1237,6 +1293,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   })
                 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 router.push('/checkout')
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1245,6 +1302,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               disabled = {loading,}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             <Button
               size="sm"
@@ -1256,11 +1315,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 router.push('/checkout')
               }}
               disabled={loading}
@@ -1268,6 +1322,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             >
               Buy Now
             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1278,6 +1333,8 @@ ProductListingCard.displayName = 'ProductListingCard'
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {onRequestQuote && (
               <Button
                 size='sm'
@@ -1376,15 +1433,11 @@ export default ProductListingCard
 export default ProductListingCard
 export default ProductListingCard
 '"`
-<<<<<<< HEAD
 export const ProductListingCard = React.memo(ProductListingCardComponent)
 ProductListingCard.displayName = 'ProductListingCard'
 
-=======
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {onRequestQuote && (
@@ -1491,8 +1544,11 @@ ProductListingCard.displayName = 'ProductListingCard';
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

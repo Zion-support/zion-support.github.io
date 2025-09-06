@@ -15,16 +15,17 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
   const [disputeId, setDisputeId] = useState<string | null>(null),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
@@ -32,14 +33,16 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
   const [disputeId, setDisputeId] = useState<string | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   const [isLoading, setIsLoading] = useState(true);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const [isLoading, setIsLoading] = useState(true);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  const [isLoading, setIsLoading] = useState(true);
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
@@ -47,10 +50,12 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
   const [disputeId, setDisputeId] = useState<string | null>(null),
   const [isLoading, setIsLoading] = useState(true),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
 
     const checkDispute = async () => {
@@ -69,14 +74,16 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
         return
       }
       try {
-<<<<<<< HEAD
         setIsLoading(true);
         let query = supabase
           .from("disputes")
           .select("id, status")
           .eq("project_id", projectId);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         setIsLoading(true),
         
         let query = supabase
@@ -84,6 +91,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
           .select("id, status")
           .eq("project_id", projectId),
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -109,23 +117,28 @@ query = query && query.order("status", { ascending: true });
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
           query = query.eq("milestone_id", milestoneId)
         }
         // Order by status priority: open, under_review, resolved, closed
-<<<<<<< HEAD
         query = query.order("status", { ascending: true });
         const { data, error } = await query;
         if (error) throw error;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         query = query.order("status", { ascending: true }),
         
         const { data, error } = await query,
         
         if (error) throw error,
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -214,6 +227,8 @@ if ( {) {
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         if (data && data.length > 0) {
           // Get the first dispute (highest priority based on status)
           setIsUnderDispute(true),
@@ -233,6 +248,7 @@ if ( {) {
       } finally {
         setIsLoading(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -242,6 +258,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
     checkDispute()
@@ -250,14 +268,15 @@ if ( {) {
     isUnderDispute
     disputeStatus
     disputeId;
-<<<<<<< HEAD
     isLoading
 
-=======
     isLoading 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
@@ -325,6 +344,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     disputeStatus;
     disputeId;
     isLoading;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -436,6 +456,8 @@ if (error) throw error;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

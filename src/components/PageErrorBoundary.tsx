@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/PageErrorBoundary.tsx
 
 =======
@@ -9,15 +10,19 @@ import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
-=======
 import React from 'react'
 import Link from 'next/link'
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
 
 import { logErrorToProduction } from '@/utils/productionLogger'
@@ -34,24 +39,33 @@ function PageErrorFallback({
 }: PageErrorFallbackProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const isAuthConfigError =
     error?.message?.includes('Auth0') |
     error?.message?.includes('AUTH0') |
     error?.message?.includes('authentication') |
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const isAuthConfigError = null;
     error?.message?.includes('Auth0') ||
     error?.message?.includes('AUTH0') ||
     error?.message?.includes('authentication') ||
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     error?.message?.includes('environment')
   const handleRefresh = () => {
     if (resetErrorBoundary) {
@@ -60,6 +74,7 @@ function PageErrorFallback({
       window.location.reload()
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -71,6 +86,8 @@ import Link from 'next/link';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PageErrorBoundary.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Link from 'next/link';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -336,11 +353,6 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
@@ -382,11 +394,14 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
               </summary>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             >
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>
                 {error.message}
               </pre>
@@ -404,12 +419,15 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
               href='/'
               className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>             >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <Home className="w-4 h-4 mr-2" />
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
                 {error.message}
               </pre>;
@@ -429,11 +447,6 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
             <Link 
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Home className="w-4 h-4 mr-2" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -479,12 +492,15 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   const FallbackComponent =
     fallback |
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PageErrorBoundaryProps {
   children: React.ReactNode
   pageName?: string
@@ -510,18 +526,20 @@ export default function PageErrorBoundary({
       }
     )
   }
-<<<<<<< HEAD
   const FallbackComponent =
     fallback |
-=======
   const FallbackComponent = null;
     fallback ||
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
     ))
       onReset={() => {        // Reset any application state if needed
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -602,12 +620,11 @@ export default function PageErrorBoundary({
             <button ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PageErrorBoundary.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         logInfo(`Resetting error boundary for ${pageName |'page'}`)
 
-=======
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -953,34 +970,27 @@ const handleRefresh = () => {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PageErrorBoundary.tsx
 =======
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }}
     >
       {children}
-<<<<<<< HEAD
     </ErrorBoundary>
   )
-<<<<<<< HEAD
 }
 }
 }
-=======
 } ;
 } ;
 };
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     </ErrorBoundary>;
   );
 } ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,16 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useState, useEffect  } from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-import { useState, useEffect  } from 'react';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useState, useEffect  } from 'react';
 import { useState, useEffect } from 'react'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Search } from 'lucide-react'
 
 import { Input } from '@/components/ui/input'
@@ -28,11 +33,14 @@ import { CountryServiceCard } from '@/components/services/CountryServiceCard'
 import { CountryPricing } from '@/data/onsiteServicePricing'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CountryTabsProps {
   popularCountries: string[]
   filteredCountries: CountryPricing[]
@@ -40,9 +48,12 @@ interface CountryTabsProps {
   onQuote?: (country: CountryPricing) => void
   searchQuery: string
   setSearchQuery: (query: string) => void
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input',;
@@ -88,9 +99,7 @@ interface CountryTabsProps {;
   searchQuery: string,;
   setSearchQuery: (query: string) => void;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
 interface CountryTabsProps {
   popularCountries: string[];
   filteredCountries: CountryPricing[];
@@ -100,7 +109,10 @@ interface CountryTabsProps {
   setSearchQuery: (query: string) => void
 export function CountryTabs({
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   popularCountries
   filteredCountries
@@ -109,16 +121,20 @@ export function CountryTabs({
   searchQuery
   setSearchQuery
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function CountryTabs({
   popularCountries,
   filteredCountries,
   handleCountrySelect,
   onQuote,
   searchQuery,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   setSearchQuery}: CountryTabsProps) {
@@ -134,8 +150,9 @@ export function CountryTabs({
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   setSearchQuery,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1)
   const countriesPerPage = 50
@@ -143,15 +160,16 @@ export function CountryTabs({
     setCurrentPage(1)
   }, [searchQuery])
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
-<<<<<<< HEAD
-=======
   popularCountries,
   filteredCountries,
   handleCountrySelect,
   onQuote,
   searchQuery,
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage,
     currentPage * countriesPerPage
@@ -167,8 +185,6 @@ export function CountryTabs({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   )
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -178,19 +194,11 @@ export function CountryTabs({
   }, [searchQuery]),
 
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage
     currentPage * countriesPerPage
-<<<<<<< HEAD
   )
-=======
   ),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Tabs defaultValue="featured" className="w-full">
@@ -205,6 +213,7 @@ export function CountryTabs({
           All Countries
         </TabsTrigger>
       </TabsList>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -227,10 +236,16 @@ export function CountryTabs({
           <h2 className='text-2xl font-bold text-white text-center'>
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      <TabsContent value='featured' className='mt-0'>
+        <div className='mb-6'>
+          <h2 className='text-2xl font-bold text-white text-center'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -245,6 +260,8 @@ export function CountryTabs({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             Featured Service Locations
           </h2>
           <p className="text-zion-slate-light text-center mt-2">
@@ -254,11 +271,14 @@ export function CountryTabs({
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           ))}
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
@@ -317,10 +337,13 @@ export function CountryTabs({
               isPopular = {popularCountries.includes(country.country),}
             />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
@@ -360,11 +383,6 @@ export function CountryTabs({
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
             />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>
@@ -376,14 +394,17 @@ export function CountryTabs({
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onClick={e => {
                       e.preventDefault()
                       setCurrentPage(Math.max(1, currentPage - 1))
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -416,6 +437,11 @@ export function CountryTabs({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                    onClick={(e) => {;
+                      e.preventDefault(),;
+                      setCurrentPage(Math.max(1, currentPage - 1));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     }}
                   />;
                 </PaginationItem>;
@@ -425,17 +451,12 @@ export function CountryTabs({
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                         onClick={e => {
                           e.preventDefault()
                           setCurrentPage(page) }}
                       />
                     </PaginationItem>
                   )
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         onClick={(e) => {;
                           e.preventDefault();
                           setCurrentPage(page);
@@ -443,48 +464,34 @@ export function CountryTabs({
                       />;
                     </PaginationItem>;
                   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
                 <PaginationItem>;
                   <PaginationNext;
                     href={`?page=${currentPage + 1}`}
-<<<<<<< HEAD
                     onClick={(e) => {;
                       e.preventDefault();
                       setCurrentPage(Math.min(totalPages, currentPage + 1));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     }}
-=======
-<<<<<<< HEAD
                     onClick={e => {
                       e.preventDefault()
                       setCurrentPage(Math.min(totalPages, currentPage + 1)) }}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   />
                 </PaginationItem>
               </PaginationContent>
             </Pagination>
           </div>
         )}
-<<<<<<< HEAD
       </TabsContent>
     </Tabs>
   )
-<<<<<<< HEAD
   )
 }
   )
 }
-=======
-=======
   );
 };
   );
 };
-=======
                     onClick={(e) => {;
                       e.preventDefault();
                       setCurrentPage(Math.min(totalPages, currentPage + 1));
@@ -496,7 +503,6 @@ export function CountryTabs({
             </Pagination>;
           </div>;
         )}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </TabsContent>;
     </Tabs>;
   );
@@ -711,8 +717,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

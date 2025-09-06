@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ========
@@ -244,6 +245,8 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format } from "date-fns";
 import { Edit, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -255,6 +258,7 @@ education
   onEdit
   onDelete
 }: EducationItemProps) {
+<<<<<<< HEAD
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
 
   education,
@@ -262,6 +266,22 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
   onDelete,
 }: EducationItemProps) {
 
+=======
+
+import {format} from 'date-fns';
+import {Edit, Trash2} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent} from '@/components/ui/card';
+import {Education} from '@/types/resume';
+import {EducationItemProps} from './types';
+import { format } from 'date-fns',
+import { Edit, Trash2 } from 'lucide-react',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent } from '@/components/ui/card',
+import { Education } from '@/types/resume',
+import { EducationItemProps } from './types',
+export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-muted/40">
       <CardContent className="pt-6">
@@ -317,6 +337,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
         )}
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
   );
 }
@@ -324,3 +345,10 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

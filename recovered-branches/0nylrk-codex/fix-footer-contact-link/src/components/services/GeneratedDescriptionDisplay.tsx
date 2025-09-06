@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -30,6 +31,9 @@ import { Check, Pencil } from "lucide-react",
 =======
 import React, { useState } from "react";
 
+=======
+import React, { useState } from "react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import {
@@ -39,16 +43,34 @@ import {
   CardTitle
   CardFooter
 } from "@/components/ui/card";
+<<<<<<< HEAD
 
 import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from "lucide-react";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
+import {Textarea} from "@/components/ui/textarea";
+import {Check, Pencil} from "lucide-react";
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
+import { Textarea } from "@/components/ui/textarea",
+import { Check, Pencil } from "lucide-react",
+
+import { Textarea } from "@/components/ui/textarea";
+import { Check, Pencil } from "lucide-react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -60,6 +82,19 @@ export function GeneratedDescriptionDisplay({
   const [editedDescription, setEditedDescription] = useState(description);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export function GeneratedDescriptionDisplay({
+  description
+  onSave
+
+export function GeneratedDescriptionDisplay({ 
+  description, 
+  onSave 
+}: GeneratedDescriptionDisplayProps) {;
+  const { toast } = useToast();
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedDescription, setEditedDescription] = useState(description);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }: GeneratedDescriptionDisplayProps) {
   const { toast } = useToast(),
   const [isEditing, setIsEditing] = useState(false),
@@ -72,6 +107,7 @@ export function GeneratedDescriptionDisplay({
 <<<<<<< HEAD
       title: "Description Saved"
       description: "Your edited description has been saved."
+<<<<<<< HEAD
 =======
 
 ========
@@ -114,6 +150,12 @@ title: "Description Saved"
 });
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    });
+  }
+    })
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -141,10 +183,13 @@ title: "Description Saved"
                 <Pencil className="h-4 w-4 mr-1" />
                 Edit
               </>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -244,6 +289,7 @@ export function GeneratedDescriptionDisplay({ ;
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
               </>;
+<<<<<<< HEAD
 
 
 
@@ -417,6 +463,8 @@ toast ({
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </Button>
         </CardTitle>

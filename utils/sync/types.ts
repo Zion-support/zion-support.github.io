@@ -1,18 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-export type SyncScope = "full" | "dao" | "marketplace";
-<<<<<<< HEAD
-export interface Peer {id: string;
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export type SyncScope = "full" | "dao" | "marketplace";
+export interface Peer {id: string;
 export type SyncScope = "full" | "dao" | "marketplace",;
 export interface Peer {;
   id: string,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   baseUrl: string, // e.g., https: //zion-latam.example.org;
   scope?: SyncScope;
   paused?: boolean;
@@ -24,7 +27,12 @@ export interface InstanceConfig {instanceId: string;
   peers: Peer[];
   secretConfigured: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+}
+export type SyncScope = "full" | "dao" | "marketplace";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface Peer {;
   id: string;
   baseUrl: string, // e.g., https: //zion-latam.example.org;
@@ -47,6 +55,7 @@ export interface InstanceConfig {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
 ;
@@ -106,16 +115,23 @@ export interface InstanceConfig {;
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
   | "talent_mobility";
   | "dao_endorsement";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   | "leaderboard_entry";
 export interface BaseEventPayload {id: string;
 }
@@ -128,13 +144,9 @@ export interface ProposalPayload extends BaseEventPayload {proposalId: string;
   votes: ProposalVoteEntry[];
 }
 export interface TokenTransferPayload extends BaseEventPayload {txId: string;
-=======
   | "leaderboard_entry",;
 export interface BaseEventPayload {;
   id: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
 ;
 export interface ProposalVoteEntry {;
@@ -173,9 +185,12 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
   resolutionId: string,;
   decision: "endorse" | "reject",;
   timestamp: number;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -205,6 +220,7 @@ export interface ProposalPayload extends BaseEventPayload {;
 export interface TokenTransferPayload extends BaseEventPayload {;
   txId: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   | "leaderboard_entry",;
@@ -216,11 +232,14 @@ export interface BaseEventPayload {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   token: string;
   amount: number;
   fromSubnet: string;
   toSubnet: string;
   timestamp: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -239,9 +258,10 @@ export interface TalentMobilityPayload extends BaseEventPayload {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export interface TalentMobilityPayload extends BaseEventPayload {personId: string;
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -250,13 +270,17 @@ export interface TalentMobilityPayload extends BaseEventPayload {personId: strin
 ;
 export interface TalentMobilityPayload extends BaseEventPayload {;
   personId: string;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -268,6 +292,8 @@ export interface BaseEventPayload {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export interface DaoEndorsementPayload extends BaseEventPayload {fromDAO: string;
   toDAO: string;
@@ -281,8 +307,11 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: st
   rank?: number;
   period?: string, // e.g., 2025-Q3;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -308,6 +337,7 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -316,10 +346,13 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
   subjectId: string, // userId or teamId;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -331,12 +364,12 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   score: number,;
   category: string, // e.g., grants, contributions;
   rank?: number,;
   period?: string, // e.g., 2025-Q3;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   score: number;
   category: string, // e.g., grants, contributions;
   rank?: number,;
@@ -347,6 +380,7 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 ;
@@ -365,11 +399,16 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
   | TalentMobilityPayload;
   | DaoEndorsementPayload;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -385,16 +424,14 @@ export interface SyncEvent {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   | LeaderboardEntryPayload;
 export interface SyncEvent {eventId: string;
   type: SyncEventType;
   payload: SyncEventPayload;
-=======
   | LeaderboardEntryPayload,;
 export interface SyncEvent {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   eventId: string,;
   type: SyncEventType,;
   payload: SyncEventPayload,;
@@ -402,17 +439,19 @@ export interface SyncEvent {;
   version: number,;
   timestamp: number,;
   merkleRoot?: string, // required for proposal events;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   eventId: string;
   type: SyncEventType,;
   payload: SyncEventPayload,;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   originInstanceId: string;
   version: number;
   timestamp: number;
   merkleRoot?: string, // required for proposal events;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -436,6 +475,8 @@ export interface MultiverseState {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export interface MultiverseState {config: InstanceConfig;
   lastSyncedAt: number;
@@ -444,15 +485,10 @@ export interface MultiverseState {config: InstanceConfig;
   proposalMerkleById: Record<string string>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   events: SyncEvent[];
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 <<<<<<< HEAD
 =======
@@ -473,17 +509,17 @@ export interface MultiverseState {;
 ;
 export interface MultiverseState {;
   config: InstanceConfig,;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   lastSyncedAt: number,;
   seenEventIds: Record<string true>,;
   latestVersionByEntityId: Record<string number>,;
   proposalMerkleById: Record<string string>;
   events: SyncEvent[];
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   lastSyncedAt: number;
   seenEventIds: Record<string, true>,;
   latestVersionByEntityId: Record<string, number>,;
@@ -493,6 +529,7 @@ export interface MultiverseState {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -509,3 +546,6 @@ export interface MultiverseState {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

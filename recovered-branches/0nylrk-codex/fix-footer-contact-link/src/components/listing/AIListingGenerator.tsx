@@ -37,9 +37,12 @@ import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -49,25 +52,24 @@ import {AIListingForm} from "./AIListingForm";
 import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
 import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Sparkles } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 import { AIListingForm } from "./AIListingForm",
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
 interface GeneratedContent {
-=======
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -76,9 +78,7 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
-<<<<<<< HEAD
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   description: string
   tags: string[]
@@ -123,8 +123,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       });
       if (error) {
         throw new Error(error.message)
-=======
-<<<<<<< HEAD
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 interface GeneratedContent {
@@ -135,8 +133,6 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -251,6 +247,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       if (error) {;
         throw new Error(error.message);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const handle_generate = async ({
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/listing/AIListingGenerator.tsx
@@ -292,10 +289,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       if (data.error) {
         throw new Error(data.error)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -311,6 +311,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setGeneratedContent(data.generated);
       toast({
         title: "Content Generated"
@@ -340,13 +343,18 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       })
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="space-y-6">
@@ -361,6 +369,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           </p>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -427,18 +436,14 @@ if ( {) {
       setGeneratedContent(data && data.generated);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <AIListingForm
             onSubmit={handleGenerate}
             isLoading={isLoading}
-=======
           <AIListingForm 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       setGeneratedContent(data.generated),;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -867,11 +872,6 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initialValues={initialValues}
           />
         </CardContent>
@@ -880,14 +880,15 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
-<<<<<<< HEAD
     </div>
   )
 }
-=======
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

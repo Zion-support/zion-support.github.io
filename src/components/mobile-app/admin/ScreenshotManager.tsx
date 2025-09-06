@@ -1,24 +1,27 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Upload, Trash2, Plus } from 'lucide-react'
-<<<<<<< HEAD
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
-=======
-<<<<<<< HEAD
 import React, { useState, useRef } from "react"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Upload, Trash2, Plus } from 'lucide-react'import { AppPlatform } from "./MetadataManager"
 import { toast } from "sonner"
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ScreenshotManagerProps {
   platform: AppPlatform
 }
@@ -44,6 +47,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     const availableSlots = maxScreenshots - screenshots.length;
 };    // Limit the number of screenshots
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { AppPlatform } from "./MetadataManager";
@@ -51,6 +55,8 @@ import { toast } from "sonner";
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const maxScreenshots = platform === "ios" ? 10 : 8
     const availableSlots = maxScreenshots - screenshots.length
     if (availableSlots <= 0) {
@@ -94,17 +100,23 @@ import { toast } from "sonner";
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Upload, Trash2, Plus } from 'lucide-react'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AppPlatform } from "./MetadataManager",
 import { toast } from "sonner",
 interface ScreenshotManagerProps {
@@ -146,6 +158,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     // Limit the number of screenshots
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     const maxScreenshots = platform === "ios" ? 10 : 8,
 =======
@@ -155,6 +168,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const maxScreenshots = platform === "ios" ? 10 : 8,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const availableSlots = maxScreenshots - screenshots.length,
@@ -163,12 +178,15 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return;
     }
     
@@ -217,11 +235,14 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (e.dataTransfer.files) {
       addScreenshots(Array.from(e.dataTransfer.files))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return
   },;
   const addScreenshots = (files: File[]) => {;
@@ -277,6 +298,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.dataTransfer.files));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }
   },
@@ -290,6 +312,11 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+  },
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 =======
 >>>>>>>     }
@@ -304,6 +331,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       <CardContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         >
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
@@ -313,6 +341,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging
@@ -322,6 +352,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           onDragOver = {handleDragOver,}
           onDragLeave = {handleDragLeave,}
           onDrop = {handleDrop,}
+<<<<<<< HEAD
 <<<<<<< HEAD
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
@@ -335,45 +366,43 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           <input
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div 
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
               : "border-zion-purple/30"
           }`}
-<<<<<<< HEAD
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
           onDragOver = {handleDragOver,}
           onDragLeave = {handleDragLeave,}
           onDrop = {handleDrop,}
-=======
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
           <input
-<<<<<<< HEAD
             ref = {fileInputRef,}
             type="file"
             multiple
             accept="image/*"
             onChange = {handleFileSelect,}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="hidden"
           />
           <Button
             variant="outline"
             onClick = {(,) => fileInputRef.current?.click(),}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -381,11 +410,14 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ref={fileInputRef}
             type="file"
             multiple
             accept="image/*"
             onChange={handleFileSelect}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -394,10 +426,13 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="hidden"
           />
           <Button 
             variant="outline" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -412,22 +447,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-            onClick={() => fileInputRef.current?.click()}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            onClick={() => fileInputRef.current?.click()}
             onClick = {(,) => fileInputRef.current?.click(),}
-=======
             onClick={() => fileInputRef.current?.click()}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="mt-2"
 >>>>>>>           >
             <Plus className="mr-2 h-4 w-4" />
             Select Files
           </Button>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -448,22 +485,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="text-xs text-gray-300 mb-4">
           {platform === "ios"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="text-xs text-gray-300 mb-4">
           {platform === "ios" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
           }
         </div>
-<<<<<<< HEAD
         <div className="grid grid-cols-2 gap-3">
           {screenshots.map((screenshot,) => (
             <div key={screenshot.id} className="relative group">
@@ -504,14 +537,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               <img
                 src = {screenshot.url,}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <div className="grid grid-cols-2 gap-3">
           {screenshots.map((screenshot) => (
             <div key={screenshot.id} className="relative group">
               <img
                 src={screenshot.url}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -523,11 +560,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 alt="App screenshot"
 >>>>>>>                 className="w-full h-auto rounded border border-zion-purple/20"
                 loading="lazy"
               />
               <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -537,14 +577,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onClick = {(,) => removeScreenshot(screenshot.id),}
-=======
                 onClick={() => removeScreenshot(screenshot.id)}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 aria-label="Remove screenshot"
@@ -553,6 +589,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </button>
             </div>
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -564,23 +601,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 }
 
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </CardContent>;
     </Card>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -598,3 +634,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

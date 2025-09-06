@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +8,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import Link from 'next/link'
 import {
@@ -19,7 +23,10 @@ import {
 } from 'lucide-react'
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ApiDocsHub() {
   const sections = [
     {
@@ -59,6 +66,7 @@ export function ApiDocsHub() {
     }
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -67,10 +75,14 @@ export function ApiDocsHub() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import Link from "next/link",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react'
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -82,6 +94,8 @@ xport function ApiDocsHub() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ApiDocsHub() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const sections = [
@@ -115,25 +129,27 @@ export function ApiDocsHub() {
       icon: AlertCircle,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       path: "/developers/docs/errors",
       color: "from-red-500 to-rose-500"}],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
       path: '/developers/docs/errors',
       color: 'from-red-500 to-rose-500',
     },
   ]
-=======
       path: "/developers/docs/errors",
       color: "from-red-500 to-rose-500"}],
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 =======
       path: "/developers/docs/errors",
@@ -153,11 +169,14 @@ export function ApiDocsHub() {
         </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               </div>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid gap-6 md:grid-cols-2'>
           {sections.map(section => (
             <Link
@@ -169,10 +188,13 @@ export function ApiDocsHub() {
               >
                 <section.icon className='h-6 w-6 text-white' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <div className="grid gap-6 md:grid-cols-2">
           {sections.map((section) => (
@@ -183,11 +205,6 @@ export function ApiDocsHub() {
             >
               <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>
                 <section.icon className="h-6 w-6 text-white" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <h2 className="text-xl font-semibold text-white mb-2">{section.title}</h2>
@@ -201,10 +218,13 @@ export function ApiDocsHub() {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800'>
           <h2 className='text-xl font-semibold text-white mb-4'>
             Ready to get started?
@@ -212,6 +232,7 @@ export function ApiDocsHub() {
           <p className='text-zinc-400 mb-6'>
             To use the Zion AI Marketplace API, you'll need an API key. Visit
             your developer portal to create one.
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>           </p>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -222,16 +243,13 @@ export function ApiDocsHub() {
             className='inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors'
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
           <p className="text-zinc-400 mb-6">
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </p>
           <Link
             href="/developers/portal"
@@ -245,13 +263,17 @@ export function ApiDocsHub() {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </ApiDocsLayout>;
   );
 export default ApiDocsHub;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default ApiDocsHub
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -320,16 +342,13 @@ export function ApiDocsHub() {;
         </div>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </ApiDocsLayout>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ApiDocsHub
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react';
@@ -413,6 +432,7 @@ export function ApiDocsHub() {;
 export default ApiDocsHub;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -428,3 +448,5 @@ export default ApiDocsHub;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

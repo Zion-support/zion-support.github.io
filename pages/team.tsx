@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -21,6 +22,9 @@ class ErrorBoundary extends React.Component {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -36,6 +40,7 @@ import { motion  } from './framer-motion';
 import {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 } from "lucide-react";
 import Layout from "../components/Layout";
@@ -49,6 +54,20 @@ import {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Linkedin
+  Twitter
+  Github
+  Award
+  Users
+  Globe
+  Code
+  Shield
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Phone,
   Mail,
@@ -61,10 +80,20 @@ import {
   Globe,
   Code,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  Shield,;
+} from "lucide-react";
+import Layout from "../components/Layout";
+const teamMembers = [
+  {
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
@@ -75,6 +104,7 @@ import {
     linkedin: "https://linkedin.com/in/klebersantos",
     twitter: "https://twitter.com/klebersantos",
     github: "https://github.com/klebersantos",
+<<<<<<< HEAD
 
 =======
 
@@ -83,6 +113,10 @@ import {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    expertise: ["Strategic Leadership", "AI/ML", "Cloud Architecture", "Business Development"]
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 1
     name: "Kleber Santos"
     position: "CEO & Founder"
@@ -92,7 +126,10 @@ import {
     linkedin: "https://linkedin.com/in/klebersantos"
     twitter: "https://twitter.com/klebersantos"
     github: "https://github.com/klebersantos"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     expertise: [
       "Strategic Leadership"
       "AI/ML"
@@ -100,6 +137,7 @@ import {
       "Business Development"
     ]
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -285,6 +323,9 @@ expertise: ["Strategic Leadership", "AI/ML", "Cloud Architecture", "Business Dev
     ]
   }
 
+=======
+origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: 2
     name: "Sarah Johnson"
@@ -339,7 +380,11 @@ expertise: ["Strategic Leadership", "AI/ML", "Cloud Architecture", "Business Dev
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
   }
   {
+<<<<<<< HEAD
 id: 6,
+=======
+    id: 6,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: "Lisa Wang",
     position: "Head of Product Development",
     department: "Product",
@@ -348,10 +393,15 @@ id: 6,
     linkedin: "https://linkedin.com/in/lisawang",
     twitter: "https://twitter.com/lisawang",
     github: "https://github.com/lisawang",
+<<<<<<< HEAD
 expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
 
   },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
@@ -380,6 +430,7 @@ expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   }
@@ -387,6 +438,11 @@ expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
 =======
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  }
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 6
     name: "Lisa Wang"
     position: "Head of Product Development"
@@ -397,12 +453,15 @@ expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
     twitter: "https://twitter.com/lisawang"
     github: "https://github.com/lisawang"
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
     expertise: 'AI & Machine Learning',
@@ -429,12 +488,18 @@ expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
     expertise: 'Project Management',
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
 
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 
 ;
@@ -604,11 +669,16 @@ const teamMembers = [;
 <<<<<<< HEAD
 export default function TeamPage() {
   return (
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -894,9 +964,29 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
     </Layout>;
 
+=======
+    </Layout>
+    <>
+      <SEO
+        title='Our Team | Zion Tech Group'
+        description='Meet the leadership team at Zion Tech Group.'
+        canonical='/team'
+      />
+      <div className='container mx-auto px-4 py-16'>
+        <h1 className='text-4xl font-bold mb-4'>Our Team</h1>
+        <p className='text-gray-300 mb-8'>
+          Profiles coming soon. For inquiries, contact us.
+        </p>
+      </div>
+    </>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+    </Layout>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
 import Head from "next/head";
@@ -953,6 +1043,7 @@ export default /**
  */
 function TeamPage() {
   return (
+<<<<<<< HEAD
 <Layout;
       title="Our Team - Zion Tech Group";
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results.";
@@ -1214,19 +1305,47 @@ function TeamPage() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <>
       <SEO
         title='Our Team | Zion Tech Group'
         description='Meet the leadership team at Zion Tech Group.'
         canonical='/team'
       />
+<<<<<<< HEAD
       <div className='container mx-auto px-4 py-16'>
         <h1 className='text-4xl font-bold mb-4'>Our Team</h1>
         <p className='text-gray-300 mb-8'>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-4">Our Team</h1>
+        <p className="text-gray-300 mb-8">
           Profiles coming soon. For inquiries, contact us.
         </p>
       </div>
     </>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+    </>;
+  );
+  return (
+    <>
+      <SEO
+        title="Our Team | Zion Tech Group"
+        description="Meet the leadership team at Zion Tech Group."
+        canonical="/team"
+      />
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-4">Our Team</h1>
+        <p className="text-gray-300 mb-8">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          Profiles coming soon. For inquiries, contact us.
+        </p>
+      </div>
+    </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/automation-improvements-final
@@ -1462,6 +1581,16 @@ export default function TeamPage() {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+import SEO from '../components/SEO';
+export default function TeamPage() {	return (
+import React from 'react',
+import SEO from '../components/SEO',
+export default function TeamPage() {
+	return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
@@ -1470,6 +1599,7 @@ export default function TeamPage() {
 			</div>
 		</>
 	)
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -1573,3 +1703,8 @@ function TeamPage() {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-lint-push-and-merge-to-main-ae4e
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

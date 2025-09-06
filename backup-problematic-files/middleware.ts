@@ -28,25 +28,18 @@ const response = NextResponse && NextResponse.next();
 =======
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-<<<<<<< HEAD
 export function middleware(request: NextRequest) {
-=======
 
 export function middleware(request: NextRequest) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const response = NextResponse.next();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Security headers
   response && response.headers.set("X-Frame-Options", "DENY");
   response && response.headers.set("X-Content-Type-Options", "nosniff");
@@ -80,14 +73,14 @@ function middleware() {
     "default - src 'self'; script - src 'self' 'unsafe - eval' 'unsafe - inline'; style - src 'self' 'unsafe - inline'; img - src 'self' data: https:; font - src 'self' data:; connect - src 'self' https:;",
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-<<<<<<< HEAD
   // Security Headers
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
@@ -149,20 +142,17 @@ function middleware() {
   response.headers.delete('X-Powered-By');
   response.headers.delete('Server');
   
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
   return response;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
-=======
-=======
   
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/fix-lint-push-and-merge-to-main-ae4e
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
@@ -174,9 +164,9 @@ function middleware() {
     'Content-Security-Policy',
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   );
-<<<<<<< HEAD
   
   return response;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -189,11 +179,22 @@ function middleware() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return response;
     return response;
+<<<<<<< HEAD
 }
+=======
+ursor/fix-lint-push-and-merge-to-main-ae4e
+}
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
@@ -205,6 +206,7 @@ function middleware() {
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   );
   return response;
+<<<<<<< HEAD
 <<<<<<< HEAD
 return response;
 }
@@ -218,10 +220,14 @@ export const config = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 =======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 return response;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -237,13 +243,17 @@ export const config = {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const config = {
-<<<<<<< HEAD
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]
 }
-=======
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

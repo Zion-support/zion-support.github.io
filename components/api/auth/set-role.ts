@@ -3,6 +3,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
 =======
 
 
@@ -33,6 +34,10 @@ function handler() {
       const expires = new Date(Date && Date.now() + days * 864e5).toUTCString();
       cookies && cookies.push(
         `${k}=${encodeURIComponent(v)}; Path=/; SameSite=Lax; Expires=${expires}`,
+=======
+  const { role = "guest", talent } = req.query as {
+  const { role = "guest", talent } = req.query as {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     role?: string;
     talent?: string;
   }
@@ -89,8 +94,8 @@ function handler() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
 
@@ -176,3 +181,5 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

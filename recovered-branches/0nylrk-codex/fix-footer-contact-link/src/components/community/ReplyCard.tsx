@@ -16,9 +16,12 @@ import { Badge } from "@/components/ui/badge",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {formatDistanceToNow} from "date-fns";
 import {ThumbsUp, ThumbsDown, CheckCircle} from "@/components/icons";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
@@ -27,6 +30,7 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ForumReply} from "@/types/community";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ReplyCardProps {;
   reply: ForumReply,;
@@ -47,13 +51,14 @@ interface ReplyCardProps {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
 interface ReplyCardProps {
@@ -69,14 +74,16 @@ export const ReplyCard = ({
   reply;
   onMarkAnswer
   canMarkAnswer = false;
-=======
 import { ForumReply } from "@/types/community",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
@@ -84,6 +91,7 @@ interface ReplyCardProps {
   className?: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   onMarkAnswer, 
@@ -100,21 +108,25 @@ export const ReplyCard = ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const ReplyCard = ({ ;
   reply;
-=======
 export const ReplyCard = ({ 
   reply,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onMarkAnswer, 
   canMarkAnswer = false,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
     <Card className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -133,13 +145,17 @@ export const ReplyCard = ({ ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "transition-shadow";
       reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20"
-=======
       "transition-shadow",
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -155,11 +171,14 @@ export const ReplyCard = ({ ;
             {reply.authorRole && (
               <Badge variant="outline" className="ml-2 text-xs">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { formatDistanceToNow } from "date-fns",;
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -242,11 +261,6 @@ export const ReplyCard = ({;
             </span>;
             {reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {reply.authorRole}
               </Badge>
             )}
@@ -284,6 +298,7 @@ export const ReplyCard = ({;
           </Button>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default ReplyCard;
 
@@ -319,18 +334,24 @@ export default ReplyCard;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardFooter>
     </Card>
   )
 }
 export default ReplyCard;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardFooter>;
     </Card>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
 
@@ -551,3 +572,6 @@ export default ReplyCard;
 export default ReplyCard;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default ReplyCard;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

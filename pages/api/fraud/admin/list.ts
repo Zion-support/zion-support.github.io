@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 function ensureAdmin(req: NextApiRequest): boolean {
@@ -31,22 +32,23 @@ const token = req.headers['x-admin-token'];
   return token === process.env.ADMIN_TOKEN;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 import { getFraudStore } from '../../../../utils/fraud/store';
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getFraudStore } from '../../../../utils/fraud/store',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token']
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
   return token === process.env.ADMIN_TOKEN
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -65,6 +67,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     status: status as any
     label: label as any})
   res.status(200).json({ items })
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -129,8 +132,9 @@ if ( {) {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -146,10 +150,6 @@ function ensureAdmin(req: NextApiRequest): boolean {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   } catch (error) {
     console.error("Error:", error);
@@ -214,6 +214,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -223,9 +224,9 @@ export default async function handler(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 
   const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,
   const store = getFraudStore(),
@@ -236,9 +237,11 @@ export default async function handler(req, res) {
     label: label as any}),
   res.status(200).json({ items });
 };
-=======
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

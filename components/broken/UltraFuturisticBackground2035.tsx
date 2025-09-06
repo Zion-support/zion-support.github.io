@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 if (ctx) {
@@ -31,17 +30,12 @@ import React, { useEffect, useRef } from 'react';
 
 canvas.width = window.innerWidth * (window.devicePixelRatio |1);
 canvas.height = window.innerHeight * (window.devicePixelRatio |1);
-=======
 canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
 canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 if (ctx) {
 export default function UltraFuturisticBackground2035({
-<<<<<<< HEAD
   children
-=======
   children,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1398,6 +1392,7 @@ if ( {) {
             className='h-full w-full'
             style={{
               backgroundImage: `
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1419,10 +1414,10 @@ if ( {) {
               backgroundSize: '50px 50px',
 =======
 <<<<<<< HEAD
-              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px)
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px)
               linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
             `
               backgroundSize: '50px 50px'
@@ -1454,11 +1449,14 @@ if ( {) {
 <<<<<<< HEAD
           }} />
         </div>
+<<<<<<< HEAD
 
 =======
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Canvas for animated particles */}
         <canvas
           ref={canvasRef}
@@ -1481,7 +1479,6 @@ if ( {) {
           className="absolute inset-0 w-full h-full"
           style={{ filter: 'blur(0.5px)' }}
         />
-=======
 
         {/* Canvas for animated particles */}
         <canvas
@@ -1493,6 +1490,7 @@ if ( {) {
 
         />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1506,6 +1504,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Floating neon orbs */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />;
@@ -1544,6 +1544,7 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           animate={{
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1570,13 +1571,17 @@ if ( {) {
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             scale: [1, 1.2, 1]
             opacity: [0.2, 0.4, 0.2]
-=======
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             rotate: [0, 180, 360],          }}
           transition={{
             duration: 6,
@@ -1612,7 +1617,6 @@ if ( {) {
 =======
             rotate: [360, 180, 0],          }}
           transition={{
-<<<<<<< HEAD
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',          }}
@@ -1631,6 +1635,7 @@ if ( {) {
             rotate: [360, 180, 0]
           }}
           transition={{
+<<<<<<< HEAD
 
             duration: 8
             repeat: Infinity
@@ -1695,13 +1700,12 @@ if ( {) {
         {/* Quantum energy waves */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 8
             repeat: Infinity
-=======
             duration: 8,
             repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
         />
@@ -1726,6 +1730,7 @@ if ( {) {
               y: [-100, 100, -100];
               opacity: [0, 0.3, 0]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -1746,15 +1751,20 @@ if ( {) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           }}
         />
 
         {/* Quantum energy waves */}
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }}
             transition={{
               duration: 4
@@ -1804,10 +1814,13 @@ if ( {) {
               y: [100, -100, 100];
               opacity: [0, 0.3, 0]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 8,
             repeat: Infinity,
 
@@ -1817,9 +1830,12 @@ if ( {) {
         {/* Quantum energy waves */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }}
             transition={{
               duration: 6
@@ -1829,6 +1845,7 @@ if ( {) {
             }}
           />
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1856,6 +1873,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
       {/* Render children */}
       {children}
@@ -1866,8 +1885,8 @@ if ( {) {
     </>
   )
 }
-=======
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1875,3 +1894,5 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

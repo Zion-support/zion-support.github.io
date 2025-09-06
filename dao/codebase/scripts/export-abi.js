@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }else {
   console && console.warn ('Missing artifact for', name) 
@@ -21,6 +22,11 @@
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ 
+}else {
+  console.warn ('Missing artifact for', name) 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -119,11 +125,12 @@ function main() {
 }main ();main (),
 =======
 
-<<<<<<< HEAD
 }main ();main()
 
-=======
 }main ();main(),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

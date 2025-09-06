@@ -5,9 +5,6 @@
 
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -20,9 +17,12 @@ import {MatchResult} from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {;
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -31,9 +31,12 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { AIMatchmaker } from "@/components/AIMatchmaker",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/hooks/use-toast";
 import { MatchResult } from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {
@@ -46,13 +49,11 @@ export default function AIMatcherPage() {
     const category = match.item.category.toLowerCase()
     if (category.includes("talent") |category === "engineering" |
         category === "data science" |category === "development") {
-=======
 import { toast } from "@/hooks/use-toast",
 import { MatchResult } from "@/lib/ai-matchmaking",
 export default function AIMatcherPage() {
   const navigate = useNavigate(),
   const [selectedCategory, setSelectedCategory] = useState<string>("all"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleMatchSelect = (match: MatchResult) => {
@@ -63,6 +64,7 @@ export default function AIMatcherPage() {
     if (category.includes("talent") || category === "engineering" || 
         category === "data science" || category === "development") {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -71,6 +73,8 @@ export default function AIMatcherPage() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       itemType = "talent"
     } else if (category.includes("equipment") |category === "hardware") {
       itemType = "equipment"
@@ -86,6 +90,7 @@ export default function AIMatcherPage() {
       }
     })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -97,13 +102,17 @@ export default function AIMatcherPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Header />
@@ -133,11 +142,14 @@ export default function AIMatcherPage() {
               </Select>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <AIMatchmaker
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
@@ -149,15 +161,16 @@ export default function AIMatcherPage() {
     </>
   )
 }
-=======
             
             <AIMatchmaker 
-=======
             <AIMatchmaker 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -416,10 +429,6 @@ if (|| category === "hardware") {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
             <AIMatchmaker;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -463,13 +472,11 @@ min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div
     </>;
   );
 }
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

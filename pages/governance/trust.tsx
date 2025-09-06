@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,19 +10,24 @@
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import Link from 'next/link';
-=======
 import Head from 'next/head',
 import Link from 'next/link',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function GovernanceTrustPage() {
   return (
     <>
       <Head>
         <title>Zion Governance & Trust</title>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,8 +37,9 @@ export default function GovernanceTrustPage() {
 <meta name="description" content="Governance, legal registry options, and public trust commitments for the Zion Protocol." />
 =======
 <<<<<<< HEAD
-        <meta name;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        <meta name;
         <meta name="description" content="Governance, legal registry options, and public trust commitments for the Zion Protocol." />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -82,6 +89,7 @@ export default function GovernanceTrustPage() {
               desc: 'Business league for industry coordination and standards, disclosure-focused.'
             }, {
               title: 'DAO-native Wrapper',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -345,15 +353,13 @@ import Link from 'next / link';
 ;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               desc: 'LLC/wrapper (e.g., Otoco) for on-chain governance with minimized off-chain overhead.'
             }].map((opt) => (
               <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
                 <div className="font-medium">{opt.title}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             ))  } catch (error) {
     console.error("Error:", error);
@@ -362,32 +368,22 @@ import Link from 'next / link';
 }
           </div>
         </section>
-<<<<<<< HEAD
         <section className='space-y-4'>
           <h2 className='text-2xl font-semibold'>Governance</h2>
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='font-medium mb-1'>Core Stewards</div>
               <div className='text-sm text-gray-600 dark:text-gray-400'>
-<<<<<<< HEAD
                 Appointed via DAO ratification, accountable to publish roadmaps
-=======
                 Appointed via DAO ratification, accountable to publish roadmaps,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 risk registers, and post-mortems.
               </div>
-=======
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Governance</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Core Stewards</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Appointed via DAO ratification, accountable to publish roadmaps, risk registers, and post-mortems.</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Delegated Voting</div>
@@ -403,7 +399,6 @@ import Link from 'next / link';
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         <section className='space-y-2'>
           <h2 className='text-2xl font-semibold'>Operator Prompt</h2>
           <p className='text-sm text-gray-600 dark:text-gray-400'>
@@ -418,7 +413,6 @@ import Link from 'next / link';
       </div>
     </>
   );
-=======
         <section className="space-y-2">
           <h2 className="text-2xl font-semibold">Operator Prompt</h2>
           <p className="text-sm text-gray-600 dark:text-gray-400">Write a legal-neutral foundation charter for a decentralized AI protocol committed to sovereignty, open knowledge, and trust. Include DAO integration and multiverse grant rights.</p>
@@ -513,6 +507,7 @@ export default function GovernanceTrustPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -525,3 +520,5 @@ export default function GovernanceTrustPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

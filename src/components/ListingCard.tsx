@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ListingCard.tsx
 
 =======
@@ -8,11 +9,15 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import Image from 'next/image';interface ListingCardProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -29,6 +34,8 @@ import Image from 'next/image';interface ListingCardProps {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id?: string
   title: string
   description: string
@@ -38,6 +45,7 @@ import Image from 'next/image';interface ListingCardProps {
   author?: { name: string, id?: string, avatarUrl?: string, email?: string }
   className?: string
   profileType?: 'service' | 'talent'
+<<<<<<< HEAD
 <<<<<<< HEAD
   id?: string,
 ========
@@ -53,13 +61,14 @@ interface ListingCardProps {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
 import Image from "next/image",
 interface ListingCardProps {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   id?: string,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   title: string,
@@ -71,10 +80,13 @@ interface ListingCardProps {
   className?: string,
   profileType?: 'service' | 'talent'
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ListingCard.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 interface ListingCardProps {
   id?: string
@@ -100,15 +112,21 @@ export function ListingCard({
   // Generate a profile ID based on the listing data
   // In a real app, this would be a proper ID from the database
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const profileId =
     id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')
       >
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
@@ -124,13 +142,15 @@ interface ListingCardProps {
   author?: { name: string, id?: string, avatarUrl?: string, email?: string },
   className?: string,
   profileType?: 'service' | 'talent'
-=======
   const profileId = null;
     id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')
       >
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
@@ -271,6 +291,7 @@ export function ListingCard({;
     >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       {images && images.length > 0 && images[0] && (
 =======
@@ -281,12 +302,15 @@ export function ListingCard({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {images && images.length > 0 && images[0] && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
             alt={title}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -299,17 +323,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
 >>>>>>>       )}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='object-cover transition-transform duration-300 group-hover:scale-105'
             loading='lazy'          />
-=======
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -320,6 +340,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Badge>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ListingCard.tsx
 <<<<<<< HEAD
 
@@ -327,6 +348,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>
           {title}
         </h3>
@@ -346,6 +369,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
               >                {tag}              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>           <div className="flex flex-wrap gap-2 mb-4">
 ursor/fix-website-loading-errors-and-merge-6662
@@ -418,42 +442,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
         
         {tags && tags.length > 0 && (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
-<<<<<<< HEAD
               </Badge>
-=======
               </Badge>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
-=======
         
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -462,6 +468,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -479,6 +486,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <span className='text-sm text-zion-slate-light'>{author.name}</span>          </div>        {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -494,11 +503,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };"}) })"
 }
-<<<<<<< HEAD
 ;"}) })"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
@@ -737,8 +742,11 @@ profileType = 'service' ;
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

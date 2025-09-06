@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HowItWorksSection.tsx
 
 import { GradientHeading } from "./GradientHeading",
@@ -38,6 +39,8 @@ const steps = [
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HowItWorksSection.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {GradientHeading} from "./GradientHeading";
 import {Check, Handshake, Search, Send} from "lucide-react";
@@ -46,25 +49,21 @@ const steps = [
     title: "Post"
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
     icon: Send}
-=======
 import {GradientHeading} from "./GradientHeading";
 import {Check, Handshake, Search, Send} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from "lucide-react",
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const steps = [
   {
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.",
     icon: Send},
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     title: "Match"
     description: "Our AI automatically matches your needs with the perfect providers or opportunities."
@@ -131,9 +130,12 @@ export function HowItWorksSection() {
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",;
 import { Check, Handshake, Search, Send } from "lucide-react",;
 const steps = [;
@@ -217,6 +219,7 @@ export function HowItWorksSection() {;
                 className={`flex flex-col md:flex-row items-center ${;
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -227,6 +230,8 @@ export function HowItWorksSection() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -331,6 +336,7 @@ export function HowItWorksSection() {;
       </div>
     </section>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -453,9 +459,13 @@ icon: Handshake
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HowItWorksSection.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 };
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

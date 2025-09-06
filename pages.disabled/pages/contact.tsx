@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const \"Contact\": NextPage = () => {
 =======
 
@@ -128,6 +132,7 @@ import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const "Contact": NextPage = () => {
 
 =======
@@ -141,6 +146,11 @@ const "Contact": NextPage = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+const "Contact": NextPage = () => {
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -412,9 +422,13 @@ const "Contact": NextPage = () => {;
               Get answers to common questions about our services and process
             </p>
           </div>
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
@@ -422,9 +436,14 @@ const "Contact": NextPage = () => {;
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -434,17 +453,26 @@ const "Contact": NextPage = () => {;
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -454,17 +482,26 @@ const "Contact": NextPage = () => {;
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -474,17 +511,26 @@ const "Contact": NextPage = () => {;
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -589,7 +635,16 @@ const "Contact": NextPage = () => {;
                   Multiple ways to reach us for your convenience
                 </p>
               </motion.div>
+<<<<<<< HEAD
 
+=======
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {contactInfo.map((info, index) => (
                   <motion.div
 =======
@@ -663,7 +718,16 @@ const "Contact": NextPage = () => {;
                   Fill out the form below and we\'ll get back to you within 24 hours
                 </p>
               </motion.div>
+<<<<<<< HEAD
 
+=======
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <motion.form
 =======
 
@@ -721,11 +785,20 @@ const "Contact": NextPage = () => {;
                        />
                     </div>
                   </div>
+<<<<<<< HEAD
 
 =======
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
@@ -772,15 +845,24 @@ const "Contact": NextPage = () => {;
                        />
                     </div>
                   </div>
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className=\"mb-6\">
                     <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       Service Interest
                     </label>
 =======
@@ -817,15 +899,24 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
                     </select>
                   </div>
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className=\"mb-6\">
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       Message *
                     </label>
 =======
@@ -867,6 +958,7 @@ const "Contact": NextPage = () => {;
                     Send Message
                   </motion.button>
                 </motion.form>
+<<<<<<< HEAD
 
 =======
 
@@ -894,6 +986,14 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -913,14 +1013,19 @@ const "Contact": NextPage = () => {;
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -932,6 +1037,10 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -989,11 +1098,20 @@ const "Contact": NextPage = () => {;
                         />
                       </div>
                     </div>
+<<<<<<< HEAD
 
 =======
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
@@ -1103,11 +1221,20 @@ const "Contact": NextPage = () => {;
                     We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
                   </p>
                 </div>
+<<<<<<< HEAD
 
 =======
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -1124,7 +1251,11 @@ const "Contact": NextPage = () => {;
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </section>
 =======
 
@@ -1196,6 +1327,7 @@ const "Contact": NextPage = () => {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ContactPage
 
 =======
@@ -1209,6 +1341,11 @@ export default ContactPage
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default ContactPage
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </section>
       </div>
@@ -1220,6 +1357,7 @@ export default ContactPage;
     </>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1230,3 +1368,11 @@ export default ContactPage;
 =======
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

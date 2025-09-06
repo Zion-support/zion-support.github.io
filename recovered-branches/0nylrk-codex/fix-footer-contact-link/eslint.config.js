@@ -1,22 +1,29 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/eslint.config.js
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import js from "@eslint/js",
 import globals from "globals",
 import reactHooks from "eslint-plugin-react-hooks",
 import reactRefresh from "eslint-plugin-react-refresh",
 import tseslint from "typescript-eslint",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -29,6 +36,8 @@ import tseslint from "typescript-eslint",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default tseslint.config(
   { ignores: ["dist"] }
   {
@@ -77,18 +86,16 @@ export default tseslint && tseslint.config(
         "warn"
         { allowConstantExport: true }]
       "@typescript-eslint/no-unused-vars": "off"}}
-<<<<<<< HEAD
 )
 
-=======
 ),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import js from "@eslint/js",;
 import globals from "globals",;
 import reactHooks from "eslint-plugin-react-hooks",;
@@ -112,6 +119,7 @@ export default tseslint.config(;
         { allowConstantExport: true }];
       "@typescript-eslint/no-unused-vars": "off"}}
 );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -187,3 +195,5 @@ export default tseslint.config(;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -16,6 +17,10 @@ export interface RealMicroSaasService {;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface RealMicroSaasService {
+export interface RealMicroSaasService {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -1411,6 +1416,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   // AI-Powered Business Solutions
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1987,6 +1993,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 'ai-legal-document-generator',
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
@@ -3316,8 +3324,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6,
     reviews: 6,
   },];
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'ai-legal-document-generator'
@@ -4802,6 +4813,7 @@ reviews: 14
 
 export const serviceCategories = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -4811,6 +4823,8 @@ reviews: 14
 export const serviceCategories = [
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   'Legal Technology'
   'Customer Service & Support'
   'Digital Marketing & SEO'
@@ -4837,11 +4851,14 @@ export const serviceCategories = [
   'Education Technology'
   'Enterprise IT'
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   'Legal Technology',
   'Customer Service & Support',
   'Digital Marketing & SEO',
@@ -4867,8 +4884,8 @@ export const serviceCategories = [
   'Financial Technology',
   'Education Technology',
   'Enterprise IT',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+<<<<<<< HEAD
   return realMicroSaasServices.filter(service => service.category === category)
 };
 export const getServicesByPriceRange = (min: number, max: number) => {
@@ -4925,6 +4942,14 @@ export const service_categories = [;
   'Enterprise IT'
 ];
 
+=======
+  'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
+  'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
+  'Enterprise IT'
+];
+
+export interface RealMicroSaasService {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string,;
   name: string,;
   tagline: string,;
@@ -5773,6 +5798,7 @@ export const serviceCategories = [;
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology',;
   'Enterprise IT';
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -6656,3 +6682,5 @@ export const serviceCategories = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

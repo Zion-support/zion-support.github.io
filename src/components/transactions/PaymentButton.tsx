@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 import { useState } from "react",
@@ -37,12 +40,9 @@ interface PaymentButtonProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-=======
         description: "Please sign in to make a purchase."}),
 import { useRouter } from 'next/router'
 import {logErrorToProduction} from '@/utils/productionLogger'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
@@ -52,39 +52,24 @@ import { supabase } from "@/integrations/supabase/client",
 import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/router',
 import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
   providerId: string,
-<<<<<<< HEAD
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   buttonText?: string
   className?: string
   onPaymentInitiated?: () => void
-=======
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   redirectUrl?: string
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 export function PaymentButton({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   amount
   serviceId
   providerId
@@ -95,6 +80,7 @@ export function PaymentButton({
   const [isProcessing, setIsProcessing] = useState(false)
   const { isAuthenticated, user } = useAuth()
   const router = useRouter()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -112,6 +98,8 @@ if ( {) {
       return;
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
       toast({
@@ -140,12 +128,15 @@ if ( {) {
         throw error
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   amount,
   serviceId,
   providerId,
@@ -302,10 +293,6 @@ if (?.url) {) {
       logErrorToProduction('Payment error:', { data: error })
 =======
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -313,6 +300,7 @@ if (?.url) {) {
         title: "Authentication required",
         description: "Please sign in to make a purchase."}),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -334,6 +322,8 @@ import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`)
       router.push(`/auth/login?returnTo=${returnTo}`)
       return;
@@ -343,8 +333,6 @@ import {logErrorToProduction} from '@/utils/productionLogger';
       setIsProcessing(true)
       if (onPaymentInitiated) {
         onPaymentInitiated()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`),
       router.push(`/auth/login?returnTo=${returnTo}`),
       return
@@ -393,27 +381,17 @@ export function PaymentButton({;
       setIsProcessing(true),;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
-<<<<<<< HEAD
           amount,
           serviceId,
-=======
-<<<<<<< HEAD
           amount
           serviceId
-=======
           amount,
           serviceId,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           providerId,
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
@@ -423,7 +401,6 @@ export function PaymentButton({;
         throw error
       }
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Type assertion needed for mock Supabase client compatibility
       if ((data as any)?.url) {
         // Open Stripe checkout in a new tab
@@ -431,10 +408,7 @@ export function PaymentButton({;
       } else {
         throw new Error("No checkout URL returned")
       }
-<<<<<<< HEAD
-=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } catch (error) {
       logErrorToProduction('Payment error:', { data: error })
       toast({
@@ -446,7 +420,6 @@ export function PaymentButton({;
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
-<<<<<<< HEAD
     }
   }
   return (
@@ -456,8 +429,8 @@ export function PaymentButton({;
       className={cn(;
         "relative min-w-[120px]";        className
       ),}
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Reset button state after a short delay
       setTimeout(() => {
@@ -470,6 +443,8 @@ export function PaymentButton({;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // Call the create-checkout edge function;
@@ -523,6 +498,7 @@ export function PaymentButton({;
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>     >
@@ -534,6 +510,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
 >>>>>>>       {isProcessing ? (
         <>
@@ -543,6 +521,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       ) : (
         buttonText
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -584,6 +563,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Button>
   )
 }catch (error) {'
@@ -601,18 +582,17 @@ toast ({
 }</Button>)
 }'"  )
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     </Button>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

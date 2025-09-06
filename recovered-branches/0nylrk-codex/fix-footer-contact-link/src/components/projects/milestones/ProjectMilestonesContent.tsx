@@ -13,7 +13,6 @@ export function ProjectMilestonesContent() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 import {useParams} from 'react-router-dom';
@@ -24,15 +23,16 @@ import {useAuth} from '@/hooks/useAuth';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {useDisputeCheck} from '@/hooks/useDisputeCheck';
 import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
-<<<<<<< HEAD
 export function ProjectMilestonesContent() {
   const { projectId } = useParams() as { projectId?: string }
-=======
 
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -99,8 +99,11 @@ export function ProjectMilestonesContent() {;
         const projectData = await getProjectById(projectId);
         if (projectData) {
           setProject(projectData)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { useProjects } from '@/hooks/useProjects',;
@@ -180,11 +183,6 @@ export function ProjectMilestonesContent() {;
         const projectData = await getProjectById(projectId),;
         if (projectData) {;
           setProject(projectData);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       } catch (error) {
         console.error("Error loading project:", error)
@@ -192,7 +190,6 @@ export function ProjectMilestonesContent() {;
         setIsLoading(false)
       }
     }
-<<<<<<< HEAD
     loadProject();
     refetch()
   }, [projectId, getProjectById, refetch]);
@@ -205,7 +202,6 @@ export function ProjectMilestonesContent() {;
   // Determine project type based on job category or default to "Other"
   const projectType = job?.category |"Other";
   if (isLoading |!project) {
-=======
     
     loadProject(),
     refetch()
@@ -223,8 +219,11 @@ export function ProjectMilestonesContent() {;
   const projectType = job?.category || "Other",
 
   if (isLoading || !project) {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return (
       <div className="container mx-auto py-8 px-4">
         <div className="flex justify-center items-center h-64">
@@ -244,6 +243,7 @@ export function ProjectMilestonesContent() {;
       status: "pending" as const
       due_date: data.due_date ? data.due_date.toISOString() : undefined
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
     <div className="container mx-auto py-8 px-4">
@@ -253,40 +253,38 @@ export function ProjectMilestonesContent() {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     await createMilestone(milestoneData);
     setActiveTab('milestones');
     await handleMilestoneCreated()
   }
-=======
     },
     
     await createMilestone(milestoneData),
     setActiveTab('milestones'),
     await handleMilestoneCreated()
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="container mx-auto py-8 px-4">
-<<<<<<< HEAD
       <ProjectHeader title={project.job?.title |"Untitled Project"} />
-=======
       <ProjectHeader title={project.job?.title || "Untitled Project"} />
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="flex justify-between items-center my-6">
         <h2 className="text-2xl font-bold">Payment Milestones</h2>
-<<<<<<< HEAD
         <ProjectActions
           projectId={projectId |''}
-=======
         <ProjectActions 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       } catch (error) {;
         console.error("Error loading project:", error);
       } finally {;
@@ -559,13 +557,12 @@ export function ProjectMilestonesContent() {;
       <div className="flex justify-between items-center my-6">;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
         <ProjectActions;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           projectId={projectId || ''}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}
@@ -628,13 +625,10 @@ export function ProjectMilestonesContent() {;
           )}
         </TabsList>
         <TabsContent value="milestones">
-<<<<<<< HEAD
           <MilestoneManager
             projectId={projectId |''}
-=======
           <MilestoneManager 
             projectId={projectId || ''}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             milestones={milestones}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             activities={activities}
@@ -804,6 +798,7 @@ if (return, ) {
           <MilestoneActivities projectId={projectId |''} />
         </TabsContent>
         <TabsContent value="create">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -980,12 +975,12 @@ await handleMilestoneCreated ()
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/ProjectMilestonesContent.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {(isClient |isTalent) && (
             <MilestoneCreator
-=======
           {(isClient || isTalent) && (
             <MilestoneCreator 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               onSubmit={handleMilestoneSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
@@ -995,18 +990,19 @@ await handleMilestoneCreated ()
               projectType={projectType}
             />
           )}
-<<<<<<< HEAD
         </TabsContent>
       </Tabs>
     </div>
   )
 }
-=======
         </TabsContent>;
       </Tabs>;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
@@ -15,12 +16,16 @@ export interface PartnerProfile {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export interface PartnerProfile {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface PartnerProfile {
 
 export interface PartnerProfile {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   user_id: string;
   name: string;
@@ -87,12 +92,9 @@ export interface PartnerReferralLink {;
 
   commission_rate?: number
 }
-<<<<<<< HEAD
 export interface PartnerSettings {
-=======
 
 export interface PartnerSettings {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   commission_rate: number;
 
@@ -100,13 +102,14 @@ export interface PartnerSettings {;
 
   is_payouts_enabled: boolean
 }
-<<<<<<< HEAD
 export interface PartnerReferralLink {
-=======
 
 export interface PartnerReferralLink {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   url: string;
@@ -136,13 +139,14 @@ export interface PartnerPayout {;
 
   created_at: string
 }
-<<<<<<< HEAD
 export interface PartnerPayout {
-=======
 
 export interface PartnerPayout {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   partner_id: string;
   amount: number;
@@ -158,10 +162,13 @@ export interface PartnerPayout {;
   completed_at?: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export interface PartnerProfile {;
   id: string,;
@@ -214,6 +221,7 @@ export interface PartnerPayout {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   created_at: string,
@@ -228,3 +236,5 @@ export interface PartnerPayout {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

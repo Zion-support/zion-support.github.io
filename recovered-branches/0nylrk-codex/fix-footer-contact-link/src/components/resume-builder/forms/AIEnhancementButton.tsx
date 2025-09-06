@@ -7,18 +7,20 @@
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2  } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -26,6 +28,8 @@ import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -61,17 +65,19 @@ export function AIEnhancementButton(): any ({;
   buttonText?: string;
   className?: string
 }
-<<<<<<< HEAD
 export function AIEnhancementButton({
-=======
 
 export function AIEnhancementButton({;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   currentContent;
   enhancementType;
   context;
   onEnhanced;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/AIEnhancementButton.tsx
 
@@ -125,6 +131,8 @@ export function AIEnhancementButton({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   buttonText = "Enhance with AI";
   className
@@ -147,11 +155,13 @@ export function AIEnhancementButton({;
     }
   }
 
-=======
   buttonText = "Enhance with AI";
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react',;
@@ -172,10 +182,13 @@ export function AIEnhancementButton({
   onEnhanced,
   buttonText = "Enhance with AI",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   className
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),
@@ -187,12 +200,15 @@ export function AIEnhancementButton({
       return
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     setError(null);
     const enhancedContent = await enhanceContent(
@@ -205,9 +221,12 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent)
     }
   };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
@@ -219,6 +238,7 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent);
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -237,6 +257,9 @@ export function AIEnhancementButton({
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Button
       type="button"
@@ -406,10 +429,11 @@ context);
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

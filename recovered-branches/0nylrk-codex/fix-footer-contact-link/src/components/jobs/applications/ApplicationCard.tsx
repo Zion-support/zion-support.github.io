@@ -18,9 +18,12 @@ import { StatusBadge } from "./StatusBadge",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {formatDistanceToNow} from "date-fns";
 import {JobApplication} from "@/types/jobs";
@@ -31,6 +34,7 @@ import {Link} from "react-router-dom";
 import {StatusBadge} from "./StatusBadge";
 import {ApplicationProgress} from "./ApplicationProgress";
 import {toast} from "sonner";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ApplicationCardProps {;
   application: JobApplication;
@@ -52,6 +56,8 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { JobApplication } from "@/types/jobs",
@@ -60,24 +66,24 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from "lucide-react",
 import { Link } from "react-router-dom",
 import { StatusBadge } from "./StatusBadge",
-<<<<<<< HEAD
 import { ApplicationProgress } from "./ApplicationProgress";
 import { toast } from "sonner";
-=======
 import { ApplicationProgress } from "./ApplicationProgress",
 import { toast } from "sonner",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ApplicationCardProps {
   application: JobApplication
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ApplicationCardProps {
   application: JobApplication
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface ApplicationCardProps {
@@ -90,18 +96,22 @@ interface ApplicationCardProps {
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ApplicationCard({ application }: ApplicationCardProps) {;
   const [expanded, setExpanded] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -299,11 +309,11 @@ function ApplicationCard() {
             {application.cover_letter && (
 <<<<<<< HEAD
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const renderActionButtons = () => {
     switch (application.status) {
       case "shortlisted": return (
@@ -332,11 +342,8 @@ function ApplicationCard() {
       default:
         return null
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="overflow-hidden">
@@ -386,6 +393,7 @@ function ApplicationCard() {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -397,6 +405,10 @@ function ApplicationCard() {
           </div>
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            )}
+          </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
@@ -561,6 +573,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             )}
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -592,6 +605,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       </CardContent>
       <CardFooter className="flex flex-col gap-3 pt-0">
@@ -614,6 +629,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -624,13 +640,17 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button
           variant="secondary"
-=======
         <Button 
           variant="secondary" 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           size="sm"
           className="w-full"
           asChild
@@ -642,6 +662,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
       </CardFooter>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -796,9 +817,13 @@ case "interview" : default: return (<Card className="overflow-hidden" > <CardHea
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ApplicationCard.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

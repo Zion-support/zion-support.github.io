@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -18,9 +15,12 @@ import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
 import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
 import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
 import {SEO} from "@/components/SEO";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -30,6 +30,7 @@ import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures",
 import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",
 import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -38,17 +39,21 @@ import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBa
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
 import { SEO } from "@/components/SEO";
-=======
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
 import { SEO } from "@/components/SEO",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function EnterprisePlans() {
   return (
     <>
@@ -68,6 +73,7 @@ export default function EnterprisePlans() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -116,6 +122,9 @@ import {SEO} from "@/components/SEO";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -232,11 +241,13 @@ export default function EnterprisePlans() {;
 =======
     </>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useHireRequest.ts
 
 =======
@@ -16,6 +17,8 @@ import { TalentProfile } from '@/types / talent';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useHireRequest.ts
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
@@ -66,8 +69,11 @@ export interface HireRequestData {
 
     budgetMin: number
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -77,6 +83,7 @@ export interface HireRequestData {
     id: string;
     full_name: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -84,6 +91,8 @@ export interface HireRequestData {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -93,10 +102,13 @@ export interface HireRequestData {
     id: string,
     full_name: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     professional_title: string,
     email?: string
   },
@@ -109,6 +121,7 @@ export interface HireRequestData {
     overview: string,
     timeline: string,
     budgetMin: number,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -128,12 +141,19 @@ export function useHireRequest() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-export function useHireRequest() {
 =======
+    budgetMax: number
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export function useHireRequest() {
 
 export function useHireRequest() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -165,16 +185,12 @@ export function useHireRequest() {;
 =======
       const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
         body: requestData
-<<<<<<< HEAD
       });
-=======
       }),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (error) throw error;
       // Show success message
       toast({
-<<<<<<< HEAD
         title: "Request Submitted"
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
       return { success: true, requestId: response?.request_id }
@@ -183,7 +199,6 @@ export function useHireRequest() {;
       const errorMessage = error instanceof Error
         ? error.message
         : "There was a problem submitting your request. Please try again.";
-=======
         title: "Request Submitted",
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),
       
@@ -195,22 +210,21 @@ export function useHireRequest() {;
         ? error.message 
         : "There was a problem submitting your request. Please try again.",
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       setError(errorMessage);
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
         title: "Error";
         description: errorMessage
         variant: "destructive"});
-=======
         title: "Error",
         description: errorMessage,
         variant: "destructive"}),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return { success: false, error: errorMessage }
     } finally {
       setIsSubmitting(false)
@@ -222,20 +236,25 @@ export function useHireRequest() {;
 
     error
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
-=======
         title: "Error",
         description: errorMessage,
         variant: "destructive"}),
       
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -296,6 +315,7 @@ export function useHireRequest() {;
     submitHireRequest;
     isSubmitting;
     error;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -596,3 +616,8 @@ error
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

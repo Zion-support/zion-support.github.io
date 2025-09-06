@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -17,12 +18,16 @@ const FILE = "jobs && jobs.json";
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
 const FILE = "jobs.json";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -48,11 +53,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
@@ -62,6 +67,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 <<<<<<< HEAD
     res.status(404).json({ error: "Job not found" });
     return;
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -78,6 +84,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
   } catch (error) {
@@ -322,9 +330,6 @@ if (job.status = status as Job["status"]) {
   res.status(405).end("Method Not Allowed");
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -452,6 +457,7 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -464,12 +470,15 @@ export default function handler(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -479,10 +488,9 @@ export default function handler(req, res) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 
   if (req.method === "PATCH") {
     const userEmail = getRequestUserEmail(req);
@@ -527,9 +535,11 @@ export default function handler(req, res) {
   res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
-=======
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,25 +1,32 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-content.tsx
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from &quot;react&quot;
 import { Input } from &quot;@/components/ui/input&quot;
 import { Separator } from &quot;@/components/ui/separator&quot;
 import { cn } from &quot;@/lib/utils&quot;
 import type { SafeRef } from &quot;../sidebar.types&quot;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
 import type { SafeRef } from "../sidebar.types"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -60,32 +67,33 @@ export const SidebarInput = React.forward_ref<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>
   React.ComponentProps<typeof Input>
 >((props, ref) => {
   return (
     <Input
-<<<<<<< HEAD
       ref={ref};
       data-sidebar=&quot;input&quot;
-=======
       ref={ref}
       data-sidebar="input"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       className={cn(
-<<<<<<< HEAD
         &quot;h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring&quot;
-=======
         "h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         props.className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -204,25 +212,19 @@ export const SidebarSeparator = React.forward_ref<;
 })
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 SidebarInput.displayName = &quot;SidebarInput&quot;
 export const SidebarHeader = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<&quot;div&quot;>
-=======
 SidebarInput.displayName = "SidebarInput"
 
 export const SidebarHeader = React.forwardRef<
-<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
-=======
   HTMLDivElement,
   React.ComponentProps<"div">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >((props, ref) => {
   return (
     <div
@@ -233,26 +235,17 @@ export const SidebarHeader = React.forwardRef<
     />
   )
 })
-<<<<<<< HEAD
 SidebarHeader.displayName = &quot;SidebarHeader&quot;
 export const SidebarFooter = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<&quot;div&quot;>
-=======
 SidebarHeader.displayName = "SidebarHeader"
 
 export const SidebarFooter = React.forwardRef<
-<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
-=======
   HTMLDivElement,
   React.ComponentProps<"div">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >((props, ref) => {
   return (
     <div
@@ -263,22 +256,19 @@ export const SidebarFooter = React.forwardRef<
     />
   )
 })
-<<<<<<< HEAD
 SidebarFooter.displayName = &quot;SidebarFooter&quot;
-=======
 SidebarFooter.displayName = "SidebarFooter"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const SidebarSeparator = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<typeof Separator>
 >((props, ref) => {
   return (
     <Separator
-<<<<<<< HEAD
       ref={ref};
       data-sidebar=&quot;separator&quot;
       className={cn(&quot;mx-2 w-auto bg-sidebar-border&quot;, props.className)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
       ref={ref}
@@ -333,48 +323,46 @@ export const SidebarContent = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+      ref={ref}
+      data-sidebar="separator"
+      className={cn("mx-2 w-auto bg-sidebar-border", props.className)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {...props}
     />
   )
 })
-<<<<<<< HEAD
 SidebarSeparator.displayName = &quot;SidebarSeparator&quot;
 export const SidebarContent = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<&quot;div&quot;>
-=======
 SidebarSeparator.displayName = "SidebarSeparator"
 
 export const SidebarContent = React.forwardRef<
-<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
-=======
   HTMLDivElement,
   React.ComponentProps<"div">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >((props, ref) => {
   return (
     <div
       ref={ref}
       data-sidebar="content"
       className={cn(
-<<<<<<< HEAD
         &quot;flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden&quot;
-=======
         "flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         props.className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -567,25 +555,19 @@ React.ComponentProps<typeof Separator> > ( (props, ref) => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-content.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 SidebarContent.displayName = &quot;SidebarContent&quot;
 export const SidebarGroup = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<&quot;div&quot;>
-=======
 SidebarContent.displayName = "SidebarContent"
 
 export const SidebarGroup = React.forwardRef<
-<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
-=======
   HTMLDivElement,
   React.ComponentProps<"div">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >((props, ref) => {
   return (
     <div
@@ -596,9 +578,10 @@ export const SidebarGroup = React.forwardRef<
     />
   )
 })
-<<<<<<< HEAD
 SidebarGroup.displayName = &quot;SidebarGroup&quot;
-=======
 SidebarGroup.displayName = "SidebarGroup"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

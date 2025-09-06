@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/gamification/badgeConfig.ts
@@ -18,13 +19,16 @@ import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Sta
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { LucideIcon } from "lucide-react",
 import {
   BadgeCheck, // publishing a listing
@@ -34,6 +38,7 @@ import {
   BadgePlus,  // first action
   BadgeDollarSign // monetization
 } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -52,11 +57,15 @@ import {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type BadgeKey =
   | "first_listing"
   | "top_contributor"
   | "profile_complete"
   | "featured_creator"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -68,6 +77,8 @@ export const badgeList: BadgeMeta[] = [
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   | "first_action";
   | "monetized";
 
@@ -76,9 +87,7 @@ export interface BadgeMeta {;
   name: string;
   description: string;
   icon: LucideIcon;
-=======
   | "first_action"
-<<<<<<< HEAD
   | "monetized";
 export interface BadgeMeta {
   key: BadgeKey;
@@ -86,7 +95,6 @@ export interface BadgeMeta {
   description: string;
   icon: LucideIcon;
   color: string
-=======
   | "monetized",
 
 export interface BadgeMeta {
@@ -94,18 +102,13 @@ export interface BadgeMeta {
   name: string,
   description: string,
   icon: LucideIcon,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   color: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   bg: string
 }
 export const badgeList: BadgeMeta[] = [
-<<<<<<< HEAD
   {;
     key: "first_listing";
-=======
   {
-<<<<<<< HEAD
     key: "first_listing";
     name: "First Listing"
     description: "Published your first product, service, or listing.";
@@ -156,10 +159,12 @@ export const badgeList: BadgeMeta[] = [
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key);
 
-=======
     key: "first_listing",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: "First Listing",
     description: "Published your first product, service, or listing.",
     icon: BadgeCheck,
@@ -210,6 +215,7 @@ export const getBadgeMeta = (key: BadgeKey) =>
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { LucideIcon } from "lucide-react",;
 import {;
@@ -243,10 +249,10 @@ import {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-;
-;
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+;
+;
 
 import { LucideIcon } from "lucide-react",;
 import {;
@@ -541,8 +547,11 @@ export const badgeList: BadgeMeta[] = [;
 export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/FraudDetection.tsx
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -14,9 +17,12 @@ import {Button} from "@/components/ui/button";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {FraudFlag, FraudStats} from "@/types/fraud";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -24,6 +30,7 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from "@/components/ui/button",
 import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -33,20 +40,24 @@ import { toast } from "@/hooks/use-toast",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { supabase } from "@/integrations/supabase/client";
 import { FraudFlag, FraudStats } from "@/types/fraud";
 // Import refactored components
 
 import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";
-=======
 import { supabase } from "@/integrations/supabase/client",
 import { FraudFlag, FraudStats } from "@/types/fraud",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Import refactored components
 import {
   FraudStatsCards,
@@ -54,6 +65,7 @@ import {
   FraudFlagsTable,
   FraudTabContent
 } from "@/components/admin/fraud-detection",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -72,8 +84,9 @@ export default function FraudDetection() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 export default function FraudDetection() {;
   const [flags, setFlags] = useState<FraudFlag[]>([]);
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]);
@@ -82,22 +95,21 @@ export default function FraudDetection() {;
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [severityFilter, setSeverityFilter] = useState<string | null>(null);
   const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null);
-=======
 export default function FraudDetection() {
   const [flags, setFlags] = useState<FraudFlag[]>([]),
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
-=======
   const [isLoading, setIsLoading] = useState(true),
   const [searchQuery, setSearchQuery] = useState(""),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [statusFilter, setStatusFilter] = useState<string | null>(null),
   const [severityFilter, setSeverityFilter] = useState<string | null>(null),
   const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [stats, setStats] = useState<FraudStats>({
 
     total_flags: 0
@@ -119,17 +131,23 @@ export default function FraudDetection() {
         .select("*")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .order("timestamp", { ascending: false })
       if (error) throw error;
       setFlags(data |[]);
       setFilteredFlags(data |[]);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .order("timestamp", { ascending: false }),
 
       if (error) throw error,
@@ -138,12 +156,15 @@ export default function FraudDetection() {
       setFilteredFlags(data || []),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Calculate stats
       const newStats: FraudStats = {
         total_flags: data?.length |0
@@ -166,12 +187,15 @@ export default function FraudDetection() {
     } finally {
       setIsLoading(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   useEffect(() => {
@@ -189,8 +213,11 @@ export default function FraudDetection() {
           flag.content_excerpt.toLowerCase().includes(query) |
           flag.reason.toLowerCase().includes(query)
       )
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -268,6 +295,7 @@ export default function FraudDetection() {;
           flag.reason.toLowerCase().includes(query);
       );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -279,6 +307,8 @@ export default function FraudDetection() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     // Apply status filter
     if (statusFilter) {
@@ -292,6 +322,7 @@ export default function FraudDetection() {;
     if (contentTypeFilter) {
       result = result.filter((flag) => flag.content_type === contentTypeFilter)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -354,6 +385,8 @@ export default function FraudDetection() {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setFilteredFlags(result)
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
   const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {
@@ -371,7 +404,6 @@ export default function FraudDetection() {;
         })
         .eq("id", flagId);
       if (error) throw error;
-=======
 
     setFilteredFlags(result)
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),
@@ -394,8 +426,11 @@ export default function FraudDetection() {;
 
       if (error) throw error,
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Flag updated"
         description: `Action '${action}' was applied successfully.`})
@@ -412,6 +447,7 @@ export default function FraudDetection() {;
         description: "Failed to update flag"
         variant: "destructive"})
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -439,25 +475,26 @@ export default function FraudDetection() {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const resetFilters = () => {
     setSearchQuery(""),
     setStatusFilter(null),
     setSeverityFilter(null),
     setContentTypeFilter(null)
-<<<<<<< HEAD
   }
   const hasFilters = !!(searchQuery |statusFilter |severityFilter |contentTypeFilter);
-=======
   },
 
   const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <AppLayout>
@@ -477,23 +514,28 @@ export default function FraudDetection() {;
           </div>
           <div className="mt-4 md:mt-0">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button
               onClick={fetchFraudFlags}
               className="bg-zion-purple hover:bg-zion-purple-light"
-=======
             <Button 
               onClick={fetchFraudFlags} 
               className="bg-zion-purple hover:bg-zion-purple-light"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     setFilteredFlags(result);
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),;
@@ -673,6 +715,7 @@ export default function FraudDetection() {;
               onClick={fetchFraudFlags} ;
               className="bg-zion-purple hover:bg-zion-purple-light";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
             <Button 
@@ -688,6 +731,8 @@ export default function FraudDetection() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               disabled={isLoading}
             >
               Refresh Data
@@ -703,6 +748,7 @@ export default function FraudDetection() {;
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1130,12 +1176,9 @@ if (throw error) {
 =======
 <<<<<<< HEAD
 =======
-          
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          
           <TabsContent value="all" className="mt-6">
             {/* Search and Filters */}
             <FraudFilters
@@ -1181,6 +1224,7 @@ if (throw error) {
       </div>
     </AppLayout>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1350,9 +1394,13 @@ Fraud Detection | Admin Dashboard"description=" Monitor and manage fraud detecti
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/FraudDetection.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

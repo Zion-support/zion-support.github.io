@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -9,14 +12,14 @@ import { Sparkles } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client",
 import { AIListingForm } from "./AIListingForm",
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
-<<<<<<< HEAD
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
 import {logErrorToProduction} from '@/utils/productionLogger';
-=======
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface GeneratedContent {
 
   description: string
@@ -67,6 +70,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         throw new Error((data as any).error)
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       setGeneratedContent((data as any)?.generated || null)
 
@@ -78,16 +82,18 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      setGeneratedContent((data as any)?.generated |null)
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      setGeneratedContent((data as any)?.generated |null)
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 import {logErrorToProduction} from '@/utils/productionLogger',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
       setGeneratedContent((data as any)?.generated || null)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -99,6 +105,7 @@ import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 import {logErrorToProduction} from '@/utils/productionLogger',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> >>>>>>>       toast({
@@ -108,6 +115,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
 >>>>>>>         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -124,15 +133,19 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       toast({
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>       toast({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -183,17 +196,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
@@ -269,12 +287,10 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 
@@ -291,6 +307,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -304,24 +322,15 @@ if ( {) {
           </p>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <AIListingForm
-=======
           <AIListingForm 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onSubmit = {handleGenerate,}
             isLoading = {isLoading,}
             initialValues = {initialValues,}
           />
         </CardContent>
       </Card>
-=======
-<<<<<<< HEAD
           <AIListingForm 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 ;
@@ -373,6 +382,7 @@ if ( {) {
       </Card>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -380,10 +390,13 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {isLoading && <LoadingContentSkeleton />}
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -393,6 +406,8 @@ if ( {) {
       )}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
 }: AIListingGeneratorProps) {
@@ -452,12 +467,16 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   generatedContent
 }onApply= {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   handleApply
 }/>)
 }</div>)
 }'"
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     </div>;
@@ -473,6 +492,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   handleApply 
 }/>) 
 }</div>) 
@@ -483,15 +504,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

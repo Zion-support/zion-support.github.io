@@ -30,24 +30,30 @@ import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   project: PortfolioProject
   onEdit: (project: PortfolioProject) => void
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   project: PortfolioProject
   onEdit: (project: PortfolioProject) => void
-=======
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onDelete: (projectId: string) => void; import Image from 'next/image'
 interface ProjectCardProps {
   project: PortfolioProject
   onEdit: (project: PortfolioProject,) => void
   onDelete: (projectId: string,) => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -70,17 +76,14 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 }
-<<<<<<< HEAD
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-<<<<<<< HEAD
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const handleDelete = null;
-=======
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
   const handleDelete = () => {
     if (project.id) {
@@ -88,8 +91,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     }
     setDeleteDialogOpen(false)
   }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
@@ -101,11 +102,14 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 =======
   
@@ -119,10 +123,13 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
             alt={project.title}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='object-cover'
             loading='lazy'    <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -133,6 +140,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
             className='object-cover'
             loading='lazy'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         ) : (
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -140,14 +148,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>           <div className="w-full h-full flex items-center justify-center bg-muted">
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="object-cover"
             loading="lazy"
           />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -155,6 +160,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         )}
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -171,30 +177,28 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <CardContent className='flex-grow pt-6'>
         <div className='space-y-2'>
           <h3 className='font-semibold text-lg'>{project.title}</h3>
-=======
       
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {project.description && (
             <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
           )}
-<<<<<<< HEAD
           {project.technologies && project.technologies.length > 0 && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='flex flex-wrap gap-1 mt-2'>
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">
@@ -238,6 +242,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               href = {project.github_url,}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           
@@ -277,10 +282,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           {project.technologies && project.technologies.length > 0 && (
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
@@ -311,6 +316,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           {project.github_url && (
             <a
               href={project.github_url}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -346,12 +352,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
               title="GitHub"
             >
-<<<<<<< HEAD
               <Button variant='ghost' size='icon' aria-label='GitHub link'>
                 <Github className='h-4 w-4' />
               </Button>
@@ -371,6 +378,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
         </div>              <Button variant="ghost" size="icon" aria-label="Live demo link">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 <Link className="h-4 w-4" />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               </Button>
@@ -382,6 +390,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Button variant="ghost" size="icon" aria-label="GitHub link">
                 <Github className="h-4 w-4" />
               </Button>
@@ -397,18 +407,16 @@ ursor/fix-website-loading-errors-and-merge-6662
               title="Live demo"
             >
               <Button variant="ghost" size="icon" aria-label="Live demo link">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Link className="h-4 w-4" />
               </Button>
             </Link>
           )}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='flex gap-2'>
           <Button
             variant='ghost'
@@ -428,11 +436,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </CardFooter>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <div className="flex gap-2">
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)} aria-label="Edit project">
@@ -444,6 +455,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </CardFooter>
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -457,11 +469,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
 >>>>>>>         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </AlertDialogDescription>
@@ -475,6 +490,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         </AlertDialogContent>
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Are you sure you want to delete this project? This action cannot
               be undone.            </AlertDialogDescription>
           </AlertDialogHeader>
@@ -528,18 +545,21 @@ ursor/fix-website-loading-errors-and-merge-6662
               onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'
             >              Delete              Are you sure you want to delete this project? This action cannot be undone.
-=======
               Are you sure you want to delete this project? This action cannot be undone.
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -549,22 +569,27 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <AlertDialogAction
               onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'
             >            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
-=======
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -605,24 +630,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </AlertDialog>;
     </Card>;
   );
 };
 }
 }
-=======
       </AlertDialog>
     </Card>
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

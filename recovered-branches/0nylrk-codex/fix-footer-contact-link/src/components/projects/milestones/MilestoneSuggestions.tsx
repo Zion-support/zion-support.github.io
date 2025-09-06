@@ -8,7 +8,6 @@
 
 =======
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
@@ -18,8 +17,11 @@ import { Badge  } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -35,6 +37,7 @@ export function MilestoneSuggestions({;
   endDate;
   projectType;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -42,6 +45,8 @@ export function MilestoneSuggestions({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -59,6 +64,7 @@ interface MilestoneSuggestionsProps {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -66,6 +72,8 @@ interface MilestoneSuggestionsProps {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   projectName: string
   scopeSummary: string
@@ -86,10 +94,13 @@ export function MilestoneSuggestions({
   endDate,
   projectType,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
@@ -97,6 +108,7 @@ export function MilestoneSuggestions({
 
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -136,14 +148,19 @@ export function MilestoneSuggestions(): any ({;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       scope: `${projectName}: ${scopeSummary}`
       startDate: startDate.toISOString()
       endDate: endDate ? endDate.toISOString() : null
       projectType: projectType |"Other"
     }
     const milestones = await generateMilestones(input);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
@@ -153,15 +170,19 @@ export function MilestoneSuggestions(): any ({;
     const milestones = await generateMilestones(input),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -172,6 +193,8 @@ export function MilestoneSuggestions(): any ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
   }
@@ -181,13 +204,14 @@ export function MilestoneSuggestions(): any ({;
     } catch (error) {
       return dateString
     }
-<<<<<<< HEAD
   }
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export function MilestoneSuggestions({;
   projectName,;
@@ -328,11 +352,6 @@ if ( {) {
 =======
     }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <div className="space-y-4">
@@ -357,6 +376,7 @@ if ( {) {
           )}
         </Button>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -459,6 +479,9 @@ export function MilestoneSuggestions({;
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -496,6 +519,7 @@ export function MilestoneSuggestions({;
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -647,10 +671,16 @@ export function MilestoneSuggestions({;
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    </div>
+  )
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -688,3 +718,5 @@ endDate: endDate ? endDate.toISOString () : null;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

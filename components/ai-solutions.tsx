@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -19,11 +20,15 @@ id: 'machine-learning',
     }
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AISolutionsPage() {
@@ -35,6 +40,7 @@ export default function AISolutionsPage() {
       description:
         'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.'
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -52,6 +58,8 @@ export default function AISolutionsPage() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Predictive Analytics'
         'Pattern Recognition'
         'Anomaly Detection'
@@ -60,8 +68,11 @@ export default function AISolutionsPage() {
       category: 'Core AI'
       complexity: 'Advanced'
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Predictive Analytics',
         'Pattern Recognition',
         'Anomaly Detection',
@@ -71,6 +82,7 @@ export default function AISolutionsPage() {
       complexity: 'Advanced';
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -78,6 +90,8 @@ export default function AISolutionsPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -654,10 +668,7 @@ export default function AISolutionsPage() {;
       icon: '🛍️'
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const technologies = [
     'TensorFlow'
     'PyTorch'
@@ -751,6 +762,7 @@ export default function AISolutionsPage() {;
                       ))}
                     </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                           {feature}
                         </li>
@@ -760,6 +772,8 @@ export default function AISolutionsPage() {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Link      </Head>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1382,15 +1396,17 @@ export default function AISolutionsPage() {;
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">
                           <span className="text-cyan-400 mr-2">•</span>
-=======
                     <Link
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           {feature}
                         </li>
                       ))}
@@ -1412,19 +1428,21 @@ export default function AISolutionsPage() {;
                     >
                       Learn More <span className="ml-1">→</span>
                     </Link>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </div>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             {/* Industry Use Cases */}
@@ -1441,26 +1459,16 @@ export default function AISolutionsPage() {;
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             {/* Industry Use Cases */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Industry Applications
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {useCases.map((useCase, index) => (
                   <div
                     key={index}
@@ -1492,6 +1500,7 @@ export default function AISolutionsPage() {;
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {/* Technologies */}
             <div className=&quot;mb-16&quot;>
@@ -1507,12 +1516,9 @@ export default function AISolutionsPage() {;
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -1520,7 +1526,6 @@ export default function AISolutionsPage() {;
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='flex flex-wrap justify-center gap-4'>
-<<<<<<< HEAD
                   {technologies.map((tech, index) => (
                     <span
                       key={index}
@@ -1529,7 +1534,6 @@ export default function AISolutionsPage() {;
                       key={index}
                       className="px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20"
                     >
-=======
 
                   {technologies.map((tech, index) => (
                     <span
@@ -1538,11 +1542,6 @@ export default function AISolutionsPage() {;
 
                     >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {tech}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </span>
@@ -1550,6 +1549,7 @@ export default function AISolutionsPage() {;
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             {/* Success Stories */}
@@ -1595,12 +1595,9 @@ export default function AISolutionsPage() {;
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             {/* Success Stories */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -1706,6 +1703,7 @@ export default function AISolutionsPage() {;
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -1776,12 +1774,10 @@ className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-w
     </>);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1789,10 +1785,13 @@ className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-w
 =======
 
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -28,30 +29,32 @@ export default function Reports() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { useEffect, useState  } from 'react';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useEffect, useState  } from 'react';
 import { useEffect, useState } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]),
   const [seo, setSeo] = useState<any>({}),
   const [links, setLinks] = useState<any>({}),
   const [deps, setDeps] = useState<any>({}),
   const [changelog, setChangelog] = useState<any>({}),
-=======
 import {useEffect, useState} from 'react';
 export default function Reports() {;
-=======
 import { useEffect, useState } from 'react';
 export default function Reports() {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [uptime, setUptime] = useState<any[]>([]);
   const [seo, setSeo] = useState<any>({});
   const [links, setLinks] = useState<any>({});
   const [deps, setDeps] = useState<any>({});
   const [changelog, setChangelog] = useState<any>({});
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -125,15 +128,18 @@ export default function Reports() {
     ]).catch(() => {})
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [pagespeed, setPagespeed] = useState<any>({});
   useEffect(() => {
     Promise.all([
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       fetch('/api/reports/uptime')
         .then(r => r.json())
         .then(setUptime)
@@ -214,6 +220,7 @@ export default function Reports() {
     </div>
 );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime),
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo),
@@ -239,10 +246,10 @@ export default function Reports() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime),
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo),
       fetch('/api/reports/links').then((r) => r.json()).then(setLinks),
@@ -498,9 +505,12 @@ function Reports() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

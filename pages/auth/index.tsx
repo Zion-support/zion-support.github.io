@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -29,6 +30,9 @@ const Onboarding: NextPage = () => {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
@@ -96,29 +100,24 @@ const Onboarding: NextPage = () => {
 
 =======
 const steps = ["Account", "Profile", "Preferences", "Preview"];
-<<<<<<< HEAD
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0);
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1));
   const prev = () => setStep((s) => Math.max(s - 1, 0));
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 const steps = ['AccountProfilePreferencesPreview'],
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0),
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
   const prev = () => setStep((s) => Math.max(s - 1, 0)),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <Head>
@@ -127,6 +126,7 @@ const Onboarding: NextPage = () => {
       <h1 className="text-2xl font-semibold">Get Started</h1>
       <div className="flex items-center gap-2 text-sm flex-wrap">
         {steps.map((label, i) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div key={label} className={`px-3 py-1 rounded-full border ${i === step ? 'bg-blue-600 text-white border-blue-600' : 'opacity-80'}`}>
             {i + 1}. {label}
@@ -145,6 +145,8 @@ const Onboarding: NextPage = () => {
           <div key={label} className={`px-3 py-1 rounded-full border ${i === step ? 'bg-blue-600 text-white border-blue-600' : 'opacity-80'}`}>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div
             key={label}
             className={`px-3 py-1 rounded-full border ${i === step ? "bg-blue-600 text-white border-blue-600" : "opacity-80"}`}
@@ -173,7 +175,6 @@ const Onboarding: NextPage = () => {
         {step === 3 && (
           <div>Preview your profile/listing before going live.</div>
         )}
-=======
           <div key={label} className={`px-3 py-1 rounded-full border ${i === step ? 'bg-blue-600 text-white border-blue-600' : 'opacity-80'}`}>
             {i + 1}. {label  } catch (error) {
     console.error("Error:", error);
@@ -209,11 +210,14 @@ const Onboarding: NextPage = () => {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
       <div className="flex gap-2">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -221,6 +225,7 @@ const Onboarding: NextPage = () => {
         <EnhancedButton onClick={next} disabled={step === steps.length - 1}>{step === steps.length - 1 ? 'Done' : 'Next'}</EnhancedButton>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -297,17 +302,16 @@ export default Onboarding,
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
 export default Onboarding;
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 },
 export default Onboarding,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -315,3 +319,5 @@ export default Onboarding,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

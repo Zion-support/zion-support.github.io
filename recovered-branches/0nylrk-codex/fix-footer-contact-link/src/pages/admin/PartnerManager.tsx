@@ -40,9 +40,12 @@ import React from 'react';
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
@@ -57,6 +60,7 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {toast} from "@/hooks/use-toast";
 import {Check, Flag, Search, Settings, X} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface PartnerProfile {;
   id: string,;
@@ -85,6 +89,8 @@ import { supabase } from '@/integrations / supabase / client';
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
@@ -97,7 +103,6 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
 import { Check, Flag, Search, Settings, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 interface PartnerProfile {
@@ -115,14 +120,16 @@ interface PartnerProfile {
   bio?: string;
   payout_method?: string;
   fraud_flags?: number;
-=======
 import { Check, Flag, Search, Settings, X } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -141,6 +148,7 @@ interface PartnerProfile {
   payout_method?: string,
   fraud_flags?: number,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   commission_rate?: number
 }
@@ -155,21 +163,23 @@ interface PartnerProfile {
 }
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   commission_rate?: number
 }
-<<<<<<< HEAD
 export default function PartnerManager() {
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTab, setActiveTab] = useState("pending");
   const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-=======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function PartnerManager() {;
   const [partners, setPartners] = useState<PartnerProfile[]>([]);
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
@@ -181,12 +191,16 @@ export default function PartnerManager() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
 =======
   const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
 
@@ -194,6 +208,8 @@ export default function PartnerManager() {;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isLoading, setIsLoading] = useState(true),
   const [searchQuery, setSearchQuery] = useState(""),
   const [activeTab, setActiveTab] = useState("pending"),
@@ -203,15 +219,17 @@ export default function PartnerManager() {;
   const [commissionRate, setCommissionRate] = useState(25),
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   const navigate = useNavigate();
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ========
@@ -227,6 +245,8 @@ export default function PartnerManager() {;
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       navigate("/login");
       return
     }
@@ -327,11 +347,14 @@ export default function PartnerManager() {;
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function PartnerManager() {
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
@@ -347,8 +370,11 @@ export default function PartnerManager() {
 
   useEffect(() => {
     if (!isAuthenticated) {
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       navigate("/login"),
       return
 import { useState, useEffect } from "react",;
@@ -849,11 +875,6 @@ if ( {) {
       } else {;
         setPartners(data as PartnerProfile[]),;
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (error) {
       console.error("Error fetching partners:", error),
@@ -867,6 +888,7 @@ if ( {) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -876,17 +898,22 @@ if ( {) {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -902,6 +929,8 @@ if ( {) {
       console && console.error("Error fetching partners:", error);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     // Filter by search query
     if (query) {
@@ -913,12 +942,8 @@ if ( {) {
         p.website?.toLowerCase().includes(lowerQuery)
       )
     }
-<<<<<<< HEAD
     setFilteredPartners(filtered)
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     } catch (error) {;
       console.error("Error fetching partners:", error),;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -977,14 +1002,11 @@ if ( {) {
         p.website?.toLowerCase().includes(lowerQuery);
       );
     }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     
     setFilteredPartners(filtered)
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -1018,32 +1040,34 @@ if ( {) {
     setIsDetailsOpen(true)
 
 =======
-  }
 =======
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value)
+    filterPartners(partners, activeTab, e.target.value)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleTabChange = (value: string) => {
     setActiveTab(value)
     filterPartners(partners, value, searchQuery)
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleViewDetails = (partner: PartnerProfile) => {
     setSelectedPartner(partner)
     setIsDetailsOpen(true)
-<<<<<<< HEAD
   }
   const handleOpenSettings = (partner: PartnerProfile) => {
     setSelectedPartner(partner);
     setCommissionRate(partner.commission_rate |25)
     setIsSettingsOpen(true)
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleOpenSettings = (partner: PartnerProfile) => {
@@ -1053,17 +1077,21 @@ if ( {) {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
     try {
       // In a real app, this would update the database
       setPartners(partners.map(p =>
         p.id === partnerId ? { ...p, status } : p
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1073,16 +1101,21 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      ));
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      ));
       )),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p),
         activeTab,
         searchQuery
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1094,12 +1127,16 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      );
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      );
       ),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected"
         description: `The partner has been ${status}.`
@@ -1121,6 +1158,7 @@ if ( {) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1131,11 +1169,17 @@ if ( {) {
     if (!selectedPartner) return;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+  const handleSaveSettings = async () => {
+    if (!selectedPartner) return;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleSaveSettings = async () => {
     if (!selectedPartner) return,
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1143,10 +1187,13 @@ if ( {) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       // Update commission rate
       setPartners(partners.map(p =>
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1218,14 +1265,19 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ));
       filterPartners(
         partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p)
         activeTab;
         searchQuery
       );
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )),
       
       filterPartners(
@@ -1235,12 +1287,15 @@ if ( {) {
       ),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Settings Updated"
         description: "Partner settings have been updated successfully."
@@ -1257,6 +1312,7 @@ if ( {) {
         description: "Failed to update partner settings"
         variant: "destructive"})
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1269,6 +1325,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   const getAudienceSizeLabel = (size: string) => {
@@ -1280,13 +1338,14 @@ if ( {) {
       case 'over100k': return 'Over 100,000';
       default: return size
     }
-<<<<<<< HEAD
   }
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     setFilteredPartners(filtered);
   },;
@@ -1399,13 +1458,12 @@ if ( {) {
       default: return size;
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
@@ -1417,6 +1475,7 @@ if ( {) {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1753,17 +1812,16 @@ export default function PartnerManager() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null
     return (
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
-<<<<<<< HEAD
         {flags}
       </Badge>
     )
@@ -1788,7 +1846,6 @@ export default function PartnerManager() {;
                   Pending Applications
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
-=======
   },;
   const getStatusBadge = (status: string) => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1837,6 +1894,7 @@ export default function PartnerManager() {;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1848,6 +1906,8 @@ export default function PartnerManager() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
@@ -1865,12 +1925,15 @@ export default function PartnerManager() {;
                 <div className="text-2xl font-bold text-white">
                   {partners.filter(p => p.status === 'approved').length}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -1886,8 +1949,11 @@ export default function PartnerManager() {;
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
                   {partners.reduce((total, p) => total + (p.fraud_flags |0), 0)}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>;
               </CardHeader>;
               <CardContent className="pt-0">;
@@ -1904,12 +1970,15 @@ export default function PartnerManager() {;
                 <div className="text-2xl font-bold text-white">;
                   {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -1952,6 +2021,7 @@ export default function PartnerManager() {;
               <TabsTrigger value="all">All</TabsTrigger>
             </TabsList>
             <TabsContent value="pending" className="space-y-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2355,12 +2425,12 @@ if (return null, ) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <PartnerTable
                 partners={filteredPartners}
-=======
               <PartnerTable 
                 partners={filteredPartners} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 isLoading={isLoading}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onViewDetails={handleViewDetails}
@@ -2413,13 +2483,10 @@ if (return null, ) {
               />
             </TabsContent>
             <TabsContent value="approved" className="space-y-4">
-<<<<<<< HEAD
               <PartnerTable
                 partners={filteredPartners}
-=======
               <PartnerTable 
                 partners={filteredPartners} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 isLoading={isLoading}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onViewDetails={handleViewDetails}
@@ -2465,10 +2532,8 @@ if (return null, ) {
               />
             </TabsContent>
             <TabsContent value="rejected" className="space-y-4">
-<<<<<<< HEAD
               <PartnerTable
                 partners={filteredPartners}
-=======
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
@@ -2483,6 +2548,7 @@ if (return null, ) {
             <TabsContent value="all" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -2509,6 +2575,8 @@ if (return null, ) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 isLoading={isLoading}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onViewDetails={handleViewDetails}
@@ -2616,6 +2684,7 @@ if (return null, ) {
                 </div>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -2668,6 +2737,9 @@ if (return null, ) {
               
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Payout Method</p>
@@ -2692,6 +2764,7 @@ if (return null, ) {
               {selectedPartner.status === 'pending' && (
                 <div className="flex justify-end gap-2 mt-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2704,6 +2777,11 @@ if (return null, ) {
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  <Button
+                    variant="destructive"
+                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   >
                     <X className="h-4 w-4 mr-1" />
                     Reject
@@ -2718,6 +2796,7 @@ if (return null, ) {
                 </div>
               )}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2902,6 +2981,11 @@ if (return null, ) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  <Button 
+                    variant="destructive" 
+                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   >;
                     <X className="h-4 w-4 mr-1" />;
                     Reject;
@@ -3042,11 +3126,6 @@ if (return null, ) {
                 </div>;
               )}
             </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </DialogContent>
       </Dialog>
@@ -3107,6 +3186,7 @@ interface PartnerTableProps {
   getFraudFlagBadge: (flags?: number) => JSX.Element | null
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -3115,11 +3195,12 @@ interface PartnerTableProps {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function PartnerTable({
   partners
   isLoading
   onViewDetails
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function PartnerTable({ 
@@ -3127,12 +3208,15 @@ function PartnerTable({
   isLoading, 
   onViewDetails, 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
@@ -3150,10 +3234,13 @@ function PartnerTable({
       </div>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 function PartnerTable({;
   partners,;
@@ -3197,6 +3284,7 @@ function PartnerTable(): any ({ ;
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
 
@@ -3494,6 +3582,8 @@ function PartnerTable({ ;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   if (partners.length === 0) {
     return (
@@ -3566,6 +3656,7 @@ function PartnerTable({ ;
                   <span className="sr-only">Settings</span>
                 </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   className="text-zion-slate-light hover:text-white";
                 >;
@@ -3589,16 +3680,18 @@ function PartnerTable({ ;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Button
                   variant="outline"
-=======
                 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button 
                   variant="outline" 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   size="sm"
                   onClick={() => onViewDetails(partner)}
                 >
@@ -3608,6 +3701,7 @@ function PartnerTable({ ;
             </TableCell>
           </TableRow>
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -3667,12 +3761,17 @@ function PartnerTable({ ;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </TableBody>
     </Table>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </TableBody>;
     </Table>;
   );
@@ -3954,5 +4053,8 @@ return (<div className="container max-w-7xl py-10"> <div className="flex flex-co
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

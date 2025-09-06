@@ -8,14 +8,11 @@ return twMerge(clsx(inputs));
 =======
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-<<<<<<< HEAD
 export function cn(...inputs: ClassValue[]) {
-<<<<<<< HEAD
-=======
 
 export function cn(...inputs: ClassValue[]) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return twMerge(clsx(inputs));}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -64,9 +61,17 @@ export function formatDate(date: Date | string | number): string {
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======
+=======
+  return twMerge(clsx(inputs));}
+  return twMerge(clsx(inputs));
 }
->>>>>>> origin/automation-improvements-final
+}
+ursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
+origin/automation-improvements-final
 
+<<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -96,30 +101,34 @@ export function formatDate(date: Date | string | number): string {
     year: "numeric"
 }
 <<<<<<< HEAD
+=======
+export function formatDate(date: Date | string | number): string {
+  return new Intl.DateTimeFormat("en-US", {
+
+},
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+    month: "long", day: "numeric"
+    year: "numeric"
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
 import { type ClassValue, clsx } from 'clsx';,
 import { twMerge } from 'tailwind-merge';,
 export function cn(...inputs: ClassValue[]) {}
   return twMerge(clsx(inputs));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
 export function formatCurrency(amount: number, currency = "USD"): string {
   return new Intl && Intl.NumberFormat("en-US", {
     style: "currency", currency,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }).format(amount);
->>>>>>> origin/main
+origin/main
 }
 }
-<<<<<<< HEAD
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-<<<<<<< HEAD
-=======
-=======
+ursor/add-new-services-and-deploy-updates-0462
 }
 import { type ClassValue, clsx  } from './clsx';
 import { tw_merge  } from './tailwind - merge';
@@ -163,20 +172,15 @@ export function formatCurrency(amount: number, currency = "USD"): string {
     style: "currency", currency,;
   }).format(amount);
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
 };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/main
 =======
@@ -187,10 +191,14 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 =======
+=======
+origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 };
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
@@ -199,3 +207,5 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

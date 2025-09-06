@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/fraud-detection/FraudFilters.tsx
 
 
@@ -15,14 +16,17 @@ import { Input } from "@/components/ui/input",
 =======
 =======
 <<<<<<< HEAD
-}
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 
 import React from "react",
 import { Input } from "@/components/ui/input",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, Filter } from 'lucide-react'
@@ -39,18 +43,17 @@ interface FraudFiltersProps {
   setContentTypeFilter: (value: string | null,) => void
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> interface FraudFiltersProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Search, Filter } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface FraudFiltersProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   searchQuery: string,
@@ -63,6 +66,7 @@ interface FraudFiltersProps {
   setContentTypeFilter: (value: string | null) => void,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   resetFilters: () => void
 =======
@@ -73,15 +77,18 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   resetFilters: () => void
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   searchQuery
   setSearchQuery
   statusFilter
@@ -126,8 +133,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 =======
   resetFilters}) => {  return (
     <div className="flex flex-col md: flex-row gap-4 mb-6">
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   searchQuery,
   setSearchQuery,
   statusFilter,
@@ -139,6 +149,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   resetFilters}) => {
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -156,6 +167,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
@@ -166,6 +179,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           className="pl-10"
         />
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -182,14 +196,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 >>>>>>>           <SelectValue placeholder="Status" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -202,6 +213,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="actioned">Actioned</SelectItem>
         </SelectContent>
       </Select>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -218,14 +230,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 >>>>>>>           <SelectValue placeholder="Severity" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Select value={severityFilter |""} onValueChange={value => setSeverityFilter(value |null)}>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -237,6 +246,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>
         </SelectContent>
       </Select>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -253,14 +263,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 >>>>>>>           <SelectValue placeholder="Content Type" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Select value={contentTypeFilter |""} onValueChange={value => setContentTypeFilter(value |null)}>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -276,6 +283,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       </Select>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
@@ -285,18 +293,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         <Filter className="h-4 w-4 mr-2" /> Reset Filters
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </Button>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -307,14 +313,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 '"}
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 import React from "react",;
 import { Input } from "@/components/ui/input",;
@@ -331,6 +342,7 @@ interface FraudFiltersProps {;
   contentTypeFilter: string | null,;
   setContentTypeFilter: (value: string | null) => void,;
   resetFilters: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -375,12 +387,12 @@ interface FraudFiltersProps {;
 export const FraudFilters:React.FC<FraudFiltersProps> = ({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 '"},
 ;
-<<<<<<< HEAD
 };
-=======
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   searchQuery,;
@@ -602,8 +614,11 @@ resetFilters ;
 =======
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -5,7 +5,6 @@
 =======
 =======
 
-<<<<<<< HEAD
 import React from 'react'
 import {
   Card
@@ -20,7 +19,10 @@ import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight
   Users
   Zap
@@ -36,8 +38,11 @@ import { useTranslation } from 'react-i18next'
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Users,
   Zap,
@@ -50,7 +55,10 @@ import { cn } from '@/lib/utils'
   Code,
   Building,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Clock,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -59,6 +67,7 @@ interface FeatureCTAsProps {
   style?: React.CSSProperties;
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
   const { t } = useTranslation();  const features = [    {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -75,10 +84,11 @@ import { cn } from "@/lib/utils";
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Clock,;
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface FeatureCTAsProps {
@@ -255,12 +265,15 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
           <h2 className='text-3xl font-bold tracking-tight mb-3'>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -481,13 +494,13 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
 =======
   const features = [
     {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       key: 'ai_talent_matching',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       descriptionKey: 'ai_talent_matching_desc',
       detailsKey: 'ai_talent_matching_details',
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: '/match',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -958,10 +971,10 @@ function FeatureCTAs() {
       icon: (
         <Zap className='h - 10 w - 10 p - 2 rounded - md bg - cyan - 100 text - cyan - 700' />),
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       badge: 'popular'
     },
-=======
-<<<<<<< HEAD
       badge: 'popular',
     },    {
       key: 'talent_directory',
@@ -970,21 +983,15 @@ function FeatureCTAs() {
       link: '/match',
       badge: 'popular'
     }
-=======
       badge: 'popular'
     },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'talent_directory',
       descriptionKey: 'talent_directory_desc',
       detailsKey: 'talent_directory_details',
-<<<<<<< HEAD
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
       link: '/talent'
     },
-=======
-<<<<<<< HEAD
       icon: (
         <Users className='h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700' />
       ),
@@ -995,19 +1002,13 @@ function FeatureCTAs() {
       detailsKey: 'services_marketplace_details',      icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
       link: '/talent'
     }
-=======
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
       link: '/talent'
     },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'services_marketplace',
       descriptionKey: 'services_marketplace_desc',
       detailsKey: 'services_marketplace_details',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       icon: (
         <Zap className='h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700' />
       ),
@@ -1029,13 +1030,17 @@ function FeatureCTAs() {
       link: '/services',
       badge: 'new'
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
       link: '/services',
       badge: 'new'
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1107,16 +1112,15 @@ function FeatureCTAs() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       key: 'equipment_catalog',
       descriptionKey: 'equipment_catalog_desc',
       detailsKey: 'equipment_catalog_details',
-<<<<<<< HEAD
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />,
       link: '/equipment'
     },
-=======
-<<<<<<< HEAD
       icon: (
         <Settings className='h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700' />
       ),
@@ -1127,22 +1131,16 @@ function FeatureCTAs() {
       detailsKey: 'community_hub_details',      icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />,
       link: '/equipment'
     }
-=======
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />,
       link: '/equipment'
     },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'community_hub',
       descriptionKey: 'community_hub_desc',
       detailsKey: 'community_hub_details',
-<<<<<<< HEAD
       icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />,
       link: '/community'
     },
-=======
-<<<<<<< HEAD
       icon: (
         <MessageSquare className='h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700' />
       ),
@@ -1153,19 +1151,13 @@ function FeatureCTAs() {
       detailsKey: 'mobile_app_details',      icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />,
       link: '/community'
     }
-=======
       icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />,
       link: '/community'
     },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'mobile_app',
       descriptionKey: 'mobile_app_desc',
       detailsKey: 'mobile_app_details',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       icon: (
         <Smartphone className='h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700' />
       ),
@@ -1178,13 +1170,17 @@ function FeatureCTAs() {
       link: '/mobile-launch',
       badge: 'featured'
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
       link: '/mobile-launch',
       badge: 'featured'
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1290,16 +1286,15 @@ function FeatureCTAs() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       key: 'enterprise_solutions',
       descriptionKey: 'enterprise_solutions_desc',
       detailsKey: 'enterprise_solutions_details',
-<<<<<<< HEAD
       icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
       link: '/enterprise'
     },
-=======
-<<<<<<< HEAD
       icon: (
         <Building className='h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700' />
       ),
@@ -1310,22 +1305,16 @@ function FeatureCTAs() {
       detailsKey: 'developer_tools_details',      icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
       link: '/enterprise'
     }
-=======
       icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
       link: '/enterprise'
     },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'developer_tools',
       descriptionKey: 'developer_tools_desc',
       detailsKey: 'developer_tools_details',
-<<<<<<< HEAD
       icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700" />,
       link: '/developers'
     },
-=======
-<<<<<<< HEAD
       icon: (
         <Code className='h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700' />
       ),
@@ -1336,22 +1325,16 @@ function FeatureCTAs() {
       detailsKey: 'learning_resources_details',      icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700" />,
       link: '/developers'
     }
-=======
       icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700" />,
       link: '/developers'
     },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'learning_resources',
       descriptionKey: 'learning_resources_desc',
       detailsKey: 'learning_resources_details',
-<<<<<<< HEAD
       icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700" />,
       link: '/blog'
     },
-=======
-<<<<<<< HEAD
       icon: (
         <BookOpen className='h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700' />
       ),
@@ -1362,22 +1345,16 @@ function FeatureCTAs() {
       detailsKey: 'project_management_details',      icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700" />,
       link: '/blog'
     }
-=======
       icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700" />,
       link: '/blog'
     },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'project_management',
       descriptionKey: 'project_management_desc',
       detailsKey: 'project_management_details',
-<<<<<<< HEAD
       icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
       link: '/project-milestones'
     },
-=======
-<<<<<<< HEAD
       icon: (
         <Calendar className='h-10 w-10 p-2 rounded-md bg-red-100 text-red-700' />
       ),
@@ -1391,19 +1368,13 @@ function FeatureCTAs() {
       ),      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
       link: '/project-milestones'
     }
-=======
       icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
       link: '/project-milestones'
     },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'zion_hire_ai',
       descriptionKey: 'zion_hire_ai_desc',
       detailsKey: 'zion_hire_ai_details',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       icon: (
         <Clock className='h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700' />
       ),
@@ -1416,11 +1387,14 @@ function FeatureCTAs() {
         <div className='mb-12 text-center'>
           <h2 className='text-3xl font-bold tracking-tight mb-3'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
       link: '/zion-hire-ai',
       badge: 'premium'
@@ -1440,6 +1414,7 @@ function FeatureCTAs() {
           <h2 className="text-3xl font-bold tracking-tight mb-3">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>>             {t('home.features_heading')}
 =======
@@ -1447,6 +1422,8 @@ function FeatureCTAs() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {t('home.features_heading')}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </h2>
@@ -1455,9 +1432,12 @@ function FeatureCTAs() {
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {features.map((feature, index) => (
             <Card
@@ -1527,12 +1507,15 @@ function FeatureCTAs() {
                   {feature.badge && (
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                       {t(`badges.${feature.badge}`)}
                     </Badge>
                   )}
                 </div>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
@@ -1665,17 +1648,15 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
                   {feature.icon}
                   {feature.badge && (;
                     <Badge variant="secondary" className="bg-primary/20 text-primary">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {t(`badges.${feature.badge}`)}
                     </Badge>
                   )}
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <CardTitle className='mt-4'>
                   {t(`features.${feature.key}`)}
                 </CardTitle>
@@ -1686,28 +1667,29 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
                     {t(`features.${feature.descriptionKey}`)}
                   </CardDescription>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 )}
               </CardHeader>
               <CardContent>
                 {feature.detailsKey && (
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <CardTitle className="mt-4">{t(`features.${feature.key}`)}</CardTitle>
                 {feature.descriptionKey && (
                   <CardDescription className="line-clamp-2">
                     {t(`features.${feature.descriptionKey}`)}
                   </CardDescription>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </CardHeader>
               <CardContent>
                 {feature.detailsKey && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className='text-sm text-muted-foreground'>                    {t(`features.${feature.detailsKey}`)}                  <p className="text-sm text-muted-foreground">
                     {t(`features.${feature.detailsKey}`)}
                   </p>
@@ -1716,12 +1698,15 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
               <CardFooter>
                 <Button asChild className='w-full gap-1'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                   <Link
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className="text-sm text-muted-foreground">
                     {t(`features.${feature.detailsKey}`)}
                   </p>;
@@ -1729,25 +1714,22 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
               </CardContent>
               <CardFooter>
                 <Button asChild className="w-full gap-1">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Link
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
-<<<<<<< HEAD
                     className='cursor-pointer'
                     {...(feature.key === 'ai_talent_matching' && {
                       'data-testid': 'explore-ai-talent-matching-cta'
                     })}
                   >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <span>
                       {t('general.explore')} {t(`features.${feature.key}`)}
                     </span>
@@ -1757,6 +1739,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
                     className="cursor-pointer"
                     {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
                   >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1770,13 +1753,11 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className="cursor-pointer"
                     {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
                   >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <ArrowRight className="h-4 w-4" />
@@ -1785,6 +1766,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
               </CardFooter>
             </Card>
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1922,18 +1904,16 @@ className ;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
       </div>
     </section>
   );  )
 }
-<<<<<<< HEAD
-=======
 ;
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         </div>;
       </div>;
     </section>;
@@ -1941,8 +1921,11 @@ className ;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

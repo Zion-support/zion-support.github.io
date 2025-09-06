@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -22,6 +23,8 @@ import path from 'node: path';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'node: path';
@@ -34,13 +37,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
-<<<<<<< HEAD
     }
   }
 })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node: path';
@@ -51,6 +50,7 @@ export default defineConfig({;
   resolve: {;
     alias: {;
       '@': path.resolve(__dirname, './src');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -83,3 +83,8 @@ export default define_config ({
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+  }
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

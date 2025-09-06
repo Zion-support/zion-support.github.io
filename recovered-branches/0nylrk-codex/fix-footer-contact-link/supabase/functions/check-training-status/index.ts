@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/check-training-status/index.ts
@@ -37,22 +38,16 @@ const corsHeaders = {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const corsHeaders = {
@@ -102,7 +97,6 @@ serve(async (req) => {;
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
-<<<<<<< HEAD
     const { modelId, jobId } = await req.json();
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
@@ -199,15 +193,11 @@ if ( {) {
 =======
       finetuneJobId = `ft-job-${modelId}-${Date.now()}`
     }
-=======
 
     const { modelId, jobId } = await req.json(),
     
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
     
     // If we have a specific job ID, check that job
@@ -225,8 +215,6 @@ if ( {) {
       // Mock response for demonstration (in real code, fetch from DB)
       finetuneJobId = `ft-job-${modelId}-${Date.now()}`
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -273,17 +261,17 @@ serve(async (req) => {;
 =======
       finetuneJobId = `ft-job-${modelId}-${Date.now()}`;
     }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Check the status from OpenAI API
     const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
       method: "GET"
       headers: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -295,14 +283,18 @@ serve(async (req) => {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "Authorization": `Bearer ${openAIApiKey}`;
         "Content-Type": "application/json"}});
-=======
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"}}),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!response.ok) {
       // If 404, the job doesn't exist or is deleted
       if (response.status === 404) {
@@ -310,6 +302,7 @@ serve(async (req) => {;
           JSON.stringify({ status: "unknown", error: "Fine-tuning job not found" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
         )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -382,18 +375,16 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-<<<<<<< HEAD
     }
     const data = await response.json();
     // Map OpenAI status to our internal status names
     let status;
     let error = null;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
     // Check the status from OpenAI API;
     const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {;
@@ -413,10 +404,13 @@ if ( {) {
       const errorData = await response.json(),;
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 
     const data = await response.json(),
@@ -428,12 +422,16 @@ if ( {) {
 
 =======
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     switch(data.status) {
       case "succeeded": status = "succeeded",
         break,
       case "failed":
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -453,6 +451,14 @@ if ( {) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        status = "failed";
+        error = data.error?.message |"Unknown error occurred during training";
+        break;
+        status = "failed",
+        error = data.error?.message || "Unknown error occurred during training",
+        break,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case "cancelled":
         status = "failed",
         error = "Training job was cancelled",
@@ -484,15 +490,12 @@ if ( {) {
 =======
     }
     return new Response(
-<<<<<<< HEAD
       JSON.stringify({
         status
         error;
-=======
       JSON.stringify({ 
         status, 
         error,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         progress: data.trained_tokens ? {
           trainedTokens: data.trained_tokens
           trainingFiles: data.training_file} : null
@@ -501,6 +504,7 @@ if ( {) {
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -543,11 +547,11 @@ if ( {) {
       JSON && JSON.stringify({ error: error && error.message });
 =======
 <<<<<<< HEAD
-    console.error("Error in check-training-status function:", error);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    console.error("Error in check-training-status function:", error);
     console.error("Error in check-training-status function:", error),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return new Response(
       JSON.stringify({ error: error.message }),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -555,6 +559,7 @@ if ( {) {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/check-training-status/index.ts
 
@@ -679,6 +684,11 @@ serve(async (req) => {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+  }
+});
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     const data = await response.json(),;
     // Map OpenAI status to our internal status names;
@@ -772,11 +782,10 @@ default: status = "queued"
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

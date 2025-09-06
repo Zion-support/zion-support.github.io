@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -24,6 +25,8 @@ class ErrorBoundary extends React.Component {
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import SEO from '../components / SEO';
 import { motion } from 'framer-motion';
@@ -57,7 +60,6 @@ import {;
 =======
 =======
 import {
-<<<<<<< HEAD
   Brain
   Atom
   Shield
@@ -77,9 +79,12 @@ import {
   Phone
   Mail
   MapPin;} from 'lucide-react';
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Brain,
   Atom,
   Shield,
@@ -110,14 +115,18 @@ import {
 =======
   Mail,;
   MapPin,;} from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Brain, Atom, Shield, Target, Rocket;
   ArrowRight, Check, Star, TrendingUp, Users;
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 // Import our new 2025 V2 innovative services;
@@ -127,6 +136,8 @@ import {
 // Import our new 2025 V2 innovative services;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Import our new 2025 V2 innovative services
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -444,10 +455,13 @@ function ComprehensiveServicesShowcase2025V2() {
         <div className='max-w-7xl mx-auto text-center'>
           <motion.h1
             className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'            initial={{ opacity: 0, y: 30 }}      <section className="relative py-20 px-4 overflow-hidden">
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import SEO from '../components/SEO'
 import { motion } from 'framer-motion'
@@ -456,7 +470,6 @@ import {
   ArrowRight, Check, Star, TrendingUp, Users,
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
 } from 'lucide-react',
-<<<<<<< HEAD
 
 
 
@@ -472,12 +485,9 @@ const _staggerContainer = {_animate: {
 // Import our new 2025 V2 innovative services
 
 const _staggerContainer = {_animate: {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 // Import our new 2025 V2 innovative services
 
-<<<<<<< HEAD
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -489,11 +499,13 @@ const fadeInUp = {
 
 const staggerContainer = {
   animate: {
-=======
 const _staggerContainer = {_animate: {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     transition: {
       staggerChildren: 0.1}
   }
@@ -512,12 +524,15 @@ export default function ComprehensiveServicesShowcase2025V2() {
       description: 'Cutting-edge micro SAAS solutions for modern businesses'
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },};
 
 export default function ComprehensiveServicesShowcase2025V2() {
@@ -549,10 +564,13 @@ export default function ComprehensiveServicesShowcase2025V2() {
       services: innovativeMicroSaas2025ExpansionV2,
       description: 'Cutting-edge micro SAAS solutions for modern businesses'
     };
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: 'it-infrastructure',
       name: 'IT Infrastructure Services',
@@ -561,19 +579,22 @@ export default function ComprehensiveServicesShowcase2025V2() {
       services: innovativeITServices2025ExpansionV2,
       description: 'Advanced IT infrastructure and security solutions'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
-=======
-<<<<<<< HEAD
     };
-=======
     },
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: 'ai-services',
       name: 'AI & Machine Learning',
@@ -582,19 +603,22 @@ export default function ComprehensiveServicesShowcase2025V2() {
       services: innovativeAIServices2025ExpansionV2,
       description: 'Intelligent AI solutions for business transformation'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
-=======
-<<<<<<< HEAD
     };
-=======
     },
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: 'industry-solutions',
       name: 'Industry Solutions',
@@ -603,19 +627,22 @@ export default function ComprehensiveServicesShowcase2025V2() {
       services: industrySpecificSolutions2025V2,
       description: 'Specialized solutions for specific industries'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
-=======
-<<<<<<< HEAD
     };
-=======
     },
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: 'emerging-tech',
       name: 'Emerging Technology',
@@ -623,15 +650,16 @@ export default function ComprehensiveServicesShowcase2025V2() {
       color: 'from-indigo-500 to-purple-500',
       services: emergingTechBreakthroughs2025V2,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       description: 'Breakthrough technologies of the future'
     }
   ],
-=======
-<<<<<<< HEAD
       description: 'Breakthrough technologies of the future',
     },
     {
@@ -668,19 +696,22 @@ export default function ComprehensiveServicesShowcase2025V2() {
     },  ];      description: 'Breakthrough technologies of the future'
     }
   ];
-=======
       description: 'Breakthrough technologies of the future'
     }
   ],
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -689,6 +720,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
       <SEO
@@ -722,8 +755,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
 =======
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   };
 
   return (_<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -735,31 +766,22 @@ export default function ComprehensiveServicesShowcase2025V2() {
       
       {_/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-<<<<<<< HEAD
-<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
             initial={_{ opacity: 0, _y: 30}}
             animate={_{ opacity: 1, _y: 0}}
             transition={_{ duration: 0.8}}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
             initial={_{ opacity: 0, _y: 30}}
             animate={_{ opacity: 1, _y: 0}}
             transition={_{ duration: 0.8}}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             2025 V2 Comprehensive
             <br />
             Services Showcase
           </motion.h1>
-<<<<<<< HEAD
           <motion.p
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'            initial={{ opacity: 0, y: 20 }}
@@ -830,8 +852,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <motion.p 
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
             initial={_{ opacity: 0, _y: 20}}
@@ -846,6 +871,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             animate={_{ opacity: 1, _y: 0}}
             transition={_{ duration: 0.8, _delay: 0.4}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
@@ -856,6 +882,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -931,27 +959,17 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Contact Information */}
       <section id='contact' className='py-16 px-4 bg-black/20'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.h2
             className='text-3xl md:text-4xl font-bold text-white mb-8'            initial={{ opacity: 0, y: 20 }}      <section id="contact" className="py-16 px-4 bg-black/20">
-<<<<<<< HEAD
-=======
 
       {_/* Contact Information */}
       <section id="contact" className="py-16 px-4 bg-black/20">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-white mb-8"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -976,16 +994,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
                 Email Us
               </h3>
               <p className='text-cyan-400 text-lg'>{contactInfo.email}</p>
-=======
-<<<<<<< HEAD
-=======
 
       {_/* Contact Information */}
       <section id="contact" className="py-16 px-4 bg-black/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold text-white mb-8"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -1010,11 +1024,14 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
               <p className="text-cyan-400 text-lg">{_contactInfo.email}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
             <div className='text-center'>
               <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
@@ -1024,7 +1041,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <p className='text-cyan-400 text-lg'>{contactInfo.address}</p>            </div>            <div className="text-center">
               <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-<<<<<<< HEAD
               <p className="text-cyan-400 text-lg">{contactInfo.address}</p>
           </motion.div>
         </div>
@@ -1034,8 +1050,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className='max-w-7xl mx-auto'>
           <motion.h2
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section id="services" className="py-20 px-4">
-<<<<<<< HEAD
-=======
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
@@ -1407,6 +1421,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             initial='initial'
             whileInView='animate'
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 =======
               <p className="text-cyan-400 text-lg">{_contactInfo.address}</p>
@@ -1645,6 +1660,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
             viewport={{ once: true }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <p className="text-cyan-400 text-lg">{_contactInfo.address}</p>
             </div>
 
@@ -1654,12 +1671,9 @@ export default function ComprehensiveServicesShowcase2025V2() {
 
       {_/* Services by Category */}
       <section id="services" className="py-20 px-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="max-w-7xl mx-auto">
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
-<<<<<<< HEAD
-<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -1672,9 +1686,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             initial='initial'
             whileInView='animate'
             viewport={{ once: true }}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -1689,11 +1700,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             initial="initial"
             whileInView="animate"
             viewport={_{ once: true}}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             {_serviceCategories.map((category) => (_<motion.div key={category.id} variants={_fadeInUp}>
                 <div className="text-center mb-12">
@@ -1707,18 +1713,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
                     {_category.description}
                   </p>
                 </div>
-<<<<<<< HEAD
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                   {category.services.map(service => (
-=======
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {_category.services.map((service) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1789,47 +1788,30 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       <p className="text-gray-300 mb-4">
                         {_service.description}
                       </p>
-<<<<<<< HEAD
                       <div className='space-y-3 mb-6'>
                         <div className='flex items-center text-sm text-cyan-400'>
                           <TrendingUp className='w-4 h-4 mr-2' />
                           {service.marketSize}
-=======
                       
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
                           {_service.marketSize}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                         <div className="flex items-center text-sm text-green-400">
                           <Star className="w-4 h-4 mr-2" />
                           {_service.growthRate}
                         </div>
                       </div>
-<<<<<<< HEAD
                       <div className='mb-6'>
                         <div className='text-2xl font-bold text-white mb-2'>
                           Starting at{' '}
-<<<<<<< HEAD
                           {(service as any).pricing?.starter |service.price}
-=======
                           {(service as any).pricing?.starter || service.price}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                       
                       <div className="mb-6">
                         <div className="text-2xl font-bold text-white mb-2">
                           Starting at {_(service as any).pricing?.starter || service.price}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                         <div className="text-sm text-gray-400">
                           {_(service as any).pricing?.professional ? 
@@ -1981,27 +1963,17 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Market Statistics */}
       <section className='py-20 px-4 bg-black/20'>
         <div className='max-w-7xl mx-auto'>
           <motion.h2
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4 bg-black/20">
-<<<<<<< HEAD
-=======
 
       {_/* Market Statistics */}
       <section className="py-20 px-4 bg-black/20">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="max-w-7xl mx-auto">
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -2016,16 +1988,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-=======
-<<<<<<< HEAD
-=======
 
       {_/* Market Statistics */}
       <section className="py-20 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -2041,11 +2009,14 @@ export default function ComprehensiveServicesShowcase2025V2() {
             viewport={_{ once: true}}
             transition={_{ duration: 0.6, _delay: 0.2}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <div className='text-center'>
               <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2'>
@@ -2085,23 +2056,18 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Call to Action */}
       <section className='py-20 px-4'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.h2
             className='text-4xl md:text-5xl font-bold text-white mb-6'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4">
-<<<<<<< HEAD
-=======
 
       {_/* Call to Action */}
       <section className="py-20 px-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-white mb-6"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2246,6 +2212,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -2538,16 +2506,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
     </div>);
 =======
             transition={{ duration: 0.6, delay: 0.2 }}
-=======
-<<<<<<< HEAD
-=======
 
       {_/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white mb-6"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -2561,16 +2525,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
             transition={_{ duration: 0.6, _delay: 0.2}}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             Join thousands of businesses already transforming their operations
             with our cutting-edge solutions.
           </motion.p>
-<<<<<<< HEAD
           <motion.div
             className='flex flex-col sm:flex-row gap-4 justify-center'            initial={{ opacity: 0, y: 20 }}            Join thousands of businesses already transforming their operations with our cutting-edge solutions.
           </motion.p>
@@ -2579,18 +2537,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-=======
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
             transition={_{ duration: 0.6, _delay: 0.4}}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <a
               href={`mailto:${contactInfo.email}`}

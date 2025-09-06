@@ -15,21 +15,21 @@ import { TalentProfile } from "@/types/talent",
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ProfileData } from "@/types/profile";
 import { TalentProfile } from "@/types/talent";
-=======
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {ProfileData} from "@/types/profile";
 import {TalentProfile} from "@/types/talent";
-=======
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -93,12 +93,13 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
   // If this is already a TalentProfile, just return it
   if (profile.professional_title !== undefined) {
     return profile
-<<<<<<< HEAD
   }
   // Convert ProfileData to TalentProfile
   return {;
@@ -121,8 +122,11 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
 
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ProfileData } from "@/types/profile",;
 import { TalentProfile } from "@/types/talent",;
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {;
@@ -217,8 +221,11 @@ average rating: profile.rating || 0
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,15 @@ class: EnhancedErrorBoundary extends Component { constructor(props) { super(prop
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+:src.disabled/components/unused/EnhancedErrorBoundary.jsx
+"class\": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e,\"error\": \'nul\',l,\"errorInfo\": \'nul\',l,\"errorId\": \'nul\',l,\"showStackTrace\": \'false\'}} \"static\": getDerivedStateFromError(error) { return { hasError: tru,e,error,\"errorId\": this.generateErrorId()}} componentDidCatch(error,errorInfo) { this.setState({ \"errorInfo\": \''})
+class: EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e,error: "nul",l,errorInfo: "nul",l,errorId: "nul",l,showStackTrace: "false"}} static: getDerivedStateFromError(error) { return { hasError: tru,e,error,errorId: this.generateErrorId()}} componentDidCatch(error,errorInfo) { this.setState({ errorInfo: ""})'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+"class\": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e,\"error\": \'nul\',l,\"errorInfo\": \'nul\',l,\"errorId\": \'nul\',l,\"showStackTrace\": \'false\'}} \"static\": getDerivedStateFromError(error) { return { hasError: tru,e,error,\"errorId\": this.generateErrorId()}} componentDidCatch(error,errorInfo) { this.setState({ \"errorInfo\": \''})
+class: EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e,error: "nul",l,errorInfo: "nul",l,errorId: "nul",l,showStackTrace: "false"}} static: getDerivedStateFromError(error) { return { hasError: tru,e,error,errorId: this.generateErrorId()}} componentDidCatch(error,errorInfo) { this.setState({ errorInfo: ""})'"'"
+:temp_exclude/src.disabled/components/unused/EnhancedErrorBoundary.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React,{ Component } from';react' import { motion } from';';framer-motion' import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from';';@heroicons/react/24/outline' "class": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e,"error": 'nul',l,"errorInfo": 'nul',l,"errorId": 'nul',l,"showStackTrace": 'false'}} "static": getDerivedStateFromError(error) { return { hasError: tru,e,error,"errorId": this.generateErrorId()}} componentDidCatch(error,errorInfo) { this.setState({ "errorInfo": ''})'';''
 =======
 =======

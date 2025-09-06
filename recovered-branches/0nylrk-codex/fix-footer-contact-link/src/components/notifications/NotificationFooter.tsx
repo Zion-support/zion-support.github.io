@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/notifications/NotificationFooter.tsx
 
 =======
@@ -47,11 +48,16 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
   const navigate = useNavigate(),
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 interface NotificationFooterProps {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onClose: () => void;
 }
 
@@ -63,12 +69,30 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
     onClose();
     navigate("/notifications");
   }
+<<<<<<< HEAD
+=======
+  onClose: () => void
+}
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
+  const navigate = useNavigate();
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import { useNavigate } from 'react-router-dom',;
+interface NotificationFooterProps {;
+  onClose: () => void;
+}
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
+  const navigate = useNavigate(),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleViewAll = () => {
     onClose(),
     navigate('/notifications')
   },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -106,6 +130,9 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
     navigate("/notifications");
   };
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -117,6 +144,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/notifications/NotificationFooter.tsx
 <<<<<<< HEAD
         onClick={handleViewAll}
+<<<<<<< HEAD
 
 =======
 
@@ -130,12 +158,23 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      >
+        View all notifications
+      </Button>
+    </div>
+  );
+}
+
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       >;
 
         View all notifications;
       </Button>;
     </div>;
   );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 };
@@ -222,3 +261,6 @@ export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

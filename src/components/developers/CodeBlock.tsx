@@ -1,16 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/CodeBlock.tsx
 
 =======
-
-<<<<<<< HEAD
-import { useState  } from 'react';
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
+import { useState  } from 'react';
 import { useState } from 'react'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Check, Copy } from 'lucide-react'
 import { cn } from "@/lib/utils";
 interface CodeBlockProps {
@@ -31,26 +34,35 @@ const handleCopyClick = async () => {
 setCopied (true)
 setTimeout ( () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useState  } from 'react';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   setCopied (false)
 }, 2000)
 }
 }> <pre className= {"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   setCopied (false) ;
 }, 2000) ;
 };
 }> <pre className= {";
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   cn ("p-4 overflow-auto";"
 showLineNumbers && "pl-12 relative")
 }> {"
@@ -62,20 +74,26 @@ showLineNumbers && "pl-12 relative")
 export function CodeBlock({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   code
   language = 'bash'
   showLineNumbers = false
   className
 }: CodeBlockProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react'
@@ -88,8 +106,11 @@ interface CodeBlockProps {
 }
 
 export function CodeBlock({ 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   code,
   language = 'bash',
   showLineNumbers = false,
@@ -97,11 +118,14 @@ export function CodeBlock({
 }: CodeBlockProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [copied, setCopied] = useState(false)
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code)
@@ -120,10 +144,13 @@ export function CodeBlock({
               <div key={i} className='h-6 leading-6'>                {i + 1}
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -141,11 +168,14 @@ export function CodeBlock({
   className
 }: CodeBlockProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [copied, setCopied] = useState(false),
 
   const handleCopyClick = async () => {
@@ -375,15 +405,9 @@ export function CodeBlock({ ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/CodeBlock.tsx
 =======
               </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         )}
-<<<<<<< HEAD
         <code className='language-javascript'>{code}</code>
       </pre>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -476,7 +500,6 @@ xport default CodeBlock;
       </button>
       {language && (
         <div className='absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400'>
-=======
         <code className="language-javascript">{code}</code>
       </pre>
       <button
@@ -488,35 +511,26 @@ xport default CodeBlock;
       </button>
       {language && (
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {language}
         </div>
       )}
-<<<<<<< HEAD
     </div>
   )
-<<<<<<< HEAD
 export default CodeBlock
 
-=======
 export default CodeBlock;
 ;
 }
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
 ;
 export default CodeBlock;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -583,3 +597,5 @@ showLineNumbers && "pl-12 relative") ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

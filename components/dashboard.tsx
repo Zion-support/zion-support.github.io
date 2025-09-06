@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -70,11 +71,11 @@ export default function Dashboard() {;
 
 =======
 <<<<<<< HEAD
-import { useEffect, useMemo, useState } from 'react';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useEffect, useMemo, useState } from 'react';
 import {useEffect, useMemo, useState} from 'react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Dashboard() {
 
   const params =
@@ -476,6 +477,7 @@ function fetch_branding() {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }fetchBranding () 
 }, [tenantId]);
@@ -530,20 +532,21 @@ function fetch_branding() {
 =======
 =======
 <<<<<<< HEAD
+=======
+);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }fetchBranding ()
 }, [tenantId]);
 </header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>) }
-=======
   );
-=======
-=======
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 }fetchBranding () 
 }, [tenantId]);
 </header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>) }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

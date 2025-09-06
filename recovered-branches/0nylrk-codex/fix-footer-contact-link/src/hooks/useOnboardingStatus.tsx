@@ -12,27 +12,23 @@ import { useState, useEffect } from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {useAuth} from "./useAuth";
 import {supabase} from "@/integrations/supabase/client";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
-<<<<<<< HEAD
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
-=======
 import { useAuth } from "./useAuth",
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface OnboardingStatus {
 
   profileCompleted: boolean
@@ -45,6 +41,7 @@ interface OnboardingStatus {
   responseReceived: boolean
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export function useOnboardingStatus() {
@@ -58,16 +55,18 @@ export function useOnboardingStatus() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 export function useOnboardingStatus() {;
   const { user } = useAuth();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function useOnboardingStatus() {
   const { user } = useAuth(),
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [status, setStatus] = useState<OnboardingStatus>({
 
     profileCompleted: false
@@ -79,6 +78,7 @@ export function useOnboardingStatus() {
 
     responseReceived: false
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -100,27 +100,29 @@ export function useOnboardingStatus() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
-=======
   }),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
 
     const fetchOnboardingStatus = async () => {
-<<<<<<< HEAD
       if (!user) return;
-=======
       if (!user) return,
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
           .from('user_onboarding')
           .select('*')
           .eq('user_id', user.id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -140,17 +142,20 @@ export function useOnboardingStatus() {
 
 =======
 <<<<<<< HEAD
-          .single();
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          .single();
           .single(),
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         if (error) {
           console.error("Error fetching onboarding status:", error),
           return
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { useAuth } from "./useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -189,6 +194,7 @@ export function useOnboardingStatus() {;
           console.error("Error fetching onboarding status:", error),;
           return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -200,6 +206,8 @@ export function useOnboardingStatus() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
         if (data) {
           setStatus({
@@ -298,7 +306,6 @@ export function useOnboardingStatus() {;
         }
       } catch (err) {
         console.error("Error in onboarding status hook:", err)
-<<<<<<< HEAD
       }
     }
     fetchOnboardingStatus()
@@ -306,8 +313,11 @@ export function useOnboardingStatus() {;
 
   return status
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       } catch (err) {;
         console.error("Error in onboarding status hook:", err);
       }
@@ -518,8 +528,11 @@ return status;
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

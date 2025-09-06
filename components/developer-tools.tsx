@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -42,17 +43,22 @@ import Button from '../components / ui / Button';
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
-=======
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -62,6 +68,8 @@ import {
   Code;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Code
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   GitBranch
@@ -118,9 +126,12 @@ import {
   TrendingUp
   Cpu
   Globe;} from 'lucide-react';import {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Code,
   GitBranch,
   Database,
@@ -132,6 +143,7 @@ import {
   CheckCircle,
   TrendingUp,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
@@ -142,15 +154,18 @@ import {
 Globe,} from 'lucide-react';import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Cpu,
   Globe,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   Cpu,;
   Globe,;} from 'lucide-react';import { ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Code;
   GitBranch,
   Database,
@@ -291,6 +306,7 @@ export default function DeveloperToolsPage() {_const _developerTools = [
       description:
         'Complete API development platform for building, testing, and documenting APIs with team collaboration.'
       features: [
+<<<<<<< HEAD
 
 =======
 =======
@@ -489,6 +505,8 @@ function DeveloperToolsPage() {
         'Complete API development platform for building, testing, and documenting APIs with team collaboration.'
       features: [
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'API design & testing'
         'Team collaboration'
         'API documentation'
@@ -526,7 +544,6 @@ function DeveloperToolsPage() {
       category: 'API Development',
     },  ];      category: 'API Development';
     }
-=======
         'API design & testing',
         'Team collaboration',
         'API documentation',
@@ -545,7 +562,6 @@ function DeveloperToolsPage() {
       category: 'API Development',
     },  ];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
 ;
   const devMarketStats = [;
@@ -1102,6 +1118,7 @@ export default function DeveloperToolsPage() {;
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1113,11 +1130,15 @@ export default function DeveloperToolsPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1145,6 +1166,9 @@ export default function DeveloperToolsPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Curated Developer Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1722,28 +1746,22 @@ export default function DeveloperToolsPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Developer Workflow */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Complete Developer Workflow
 <<<<<<< HEAD
 
@@ -1793,6 +1811,7 @@ export default function DeveloperToolsPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>
@@ -1940,26 +1959,16 @@ export default function DeveloperToolsPage() {;
       </section>
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
               Developer Tool Categories
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of developer tools helps you
@@ -2206,27 +2215,13 @@ href="/contact"
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
           <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
             Ready to Level Up Your Development?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
             Start with one tool or build a complete development stack. Each tool
@@ -2253,6 +2248,7 @@ href="/contact"
               Explore AI Tools
             </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2263,6 +2259,8 @@ href="/contact"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button
               href='/contact'
               variant='outline'
@@ -2279,8 +2277,8 @@ href="/contact"
     </>
 );
 }
-=======
             <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2288,3 +2286,5 @@ href="/contact"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

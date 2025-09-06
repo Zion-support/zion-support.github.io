@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
@@ -34,6 +35,8 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock database utility
 import fs from 'fs';
 import path from 'path';
@@ -135,6 +138,7 @@ export class DatabaseManager {
   return defaultValue;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Default database configuration
 const defaultConfig: DatabaseConfig = {
   host: process.env.DB_HOST || 'localhost',
@@ -170,29 +174,32 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
 =======
 =======
 <<<<<<< HEAD
-export function writeJsonFile<T>(fileName: string, data: T): void {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export function writeJsonFile<T>(fileName: string, data: T): void {
 
 export function writeJsonFile<T>(fileName: string, data: T): void {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
   fs.renameSync(tmpPath, filePath);
 }
-<<<<<<< HEAD
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -212,10 +219,17 @@ import path from 'path';
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
 =======
+import fs from 'fs';
+import path from 'path';
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

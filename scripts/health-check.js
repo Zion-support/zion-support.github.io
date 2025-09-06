@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const express = // // require("child_process");
 const app = express()
 app.get("/health", (req, res) => {
@@ -10,11 +15,18 @@ app.get("/ready", (req, res) => {
   // Add readiness checks here
   res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})
 module.exports = app
+<<<<<<< HEAD
 
 =======
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -119,6 +131,7 @@ if (require.main === module) {
 <<<<<<< HEAD
 module.exports = HealthChecker;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 if (require && require.main === module) {
     const checker = new HealthChecker(),
@@ -143,3 +156,6 @@ const express = const app = express() app && app.get("/health",(req,res) => { re
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

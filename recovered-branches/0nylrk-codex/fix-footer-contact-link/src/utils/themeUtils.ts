@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/themeUtils.ts
@@ -11,15 +12,19 @@ export interface ThemeColors {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 export interface ThemeColors {
-=======
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 
 export interface ThemeColors {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -79,6 +84,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 ========
@@ -108,11 +114,15 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 
 =======
 <<<<<<< HEAD
-  const root = document.documentElement
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  const root = document.documentElement
   const root = document.documentElement,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);
@@ -123,6 +133,7 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   document.body.style.backgroundColor = colors.backgroundColor;
 
   document.body.style.color = colors.textColor
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -154,6 +165,9 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -271,6 +285,7 @@ export function applyThemeColors(colors: ThemeColors) {;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -377,3 +392,7 @@ export function applyThemeColors(colors:ThemeColors) {;
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

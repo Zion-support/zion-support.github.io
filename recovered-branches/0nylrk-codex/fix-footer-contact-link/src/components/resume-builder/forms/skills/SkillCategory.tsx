@@ -6,6 +6,7 @@ export const SkillCategory = ({
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillCategory.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillCategory.tsx
@@ -21,17 +22,24 @@ if (return null) {
 
 =======
 
+=======
+  if (!skills |skills.length === 0) return null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {SkillCategoryProps} from './types';
 import {SkillItem} from './SkillItem';
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;
   if (!skills || skills.length === 0) return null;
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SkillCategoryProps } from './types',
 import { SkillItem } from './SkillItem',
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {
   if (!skills || skills.length === 0) return null,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -157,6 +165,9 @@ category
 }: SkillCategoryProps) => {
   if (!skills || skills.length === 0) return null;
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-2">
       <h4 className="text-sm font-medium text-muted-foreground">{category}</h4>
@@ -169,6 +180,7 @@ category
             onDelete={onDelete}
           />
         ))}
+<<<<<<< HEAD
 </div>
     </div>
 
@@ -180,3 +192,15 @@ category
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      </div>
+    </div>
+  );
+}
+
+  )
+      </div>;
+    </div>;
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

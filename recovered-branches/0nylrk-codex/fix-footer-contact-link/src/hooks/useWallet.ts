@@ -1,19 +1,24 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
-=======
 import {useEffect, useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 export function useWallet() {;
   const { user } = useAuth();
@@ -259,6 +264,7 @@ if (return) {
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
 <<<<<<< HEAD
     fetchWallet;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -266,6 +272,8 @@ if (return) {
     fetchWallet;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -362,6 +370,7 @@ export function useWallet() {;
     error,;
     fetchWallet,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -375,6 +384,8 @@ export function useWallet() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     fetchTransactions;
     earnTokens;
 

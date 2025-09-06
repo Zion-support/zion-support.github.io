@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
@@ -866,16 +864,15 @@ export default AIConsciousnessEvolutionPlatform
 <<<<<<< HEAD
 
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
-=======
  const AIConsciousnessEvolutionPlatform: React.FC = () => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
-=======
  const AIConsciousnessEvolutionPlatform: React.FC = () => {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
@@ -910,6 +907,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -936,11 +934,11 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 }</div> </motion && motion.div> </div> </section> <motion&& motion.div initial= {
 
 =======
-  opacity: 1, y: 0
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  opacity: 1, y: 0
   opacity: 1, y: 0 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.6, delay: index * 0.1
@@ -961,6 +959,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -978,11 +977,11 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 }> <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-300 mb-8" > Join the forefront of AI development and help shape the future of artificial intelligence. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Start Your Journey </a> <a href="/innovation-lab" className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300" > Learn More </a> </div> </motion && motion.div> </div> </div> </section> <motion&& motion.div initial= {
 
 =======
-  opacity: 1, y: 0
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  opacity: 1, y: 0
   opacity: 1, y: 0 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.8
@@ -1051,13 +1050,11 @@ const containerVariants = {
 }
 visible: {
   opacity: 1, transition: {
-<<<<<<< HEAD
   staggerChildren: 0.1
 }
 }
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 
-=======
   staggerChildren: 0.1 
 
 };
@@ -1066,10 +1063,13 @@ visible: {
 
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
 }
@@ -1097,8 +1097,11 @@ visible: {
 =======
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

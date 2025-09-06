@@ -59,11 +59,7 @@ async function ask() {
 
   document.getElementById('output').textContent = res.answer
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -79,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('view-notifications')?.addEventListener('click', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
   })
-<<<<<<< HEAD
 
 =======
 
@@ -123,9 +118,9 @@ document.addEventListener ('DOMContentLoaded', () => {
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
 }),
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -147,6 +142,8 @@ async function ask() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Attach handlers once the DOM is fully loaded to avoid null element errors;
 document.addEventListener('DOMContentLoaded', () => {;
@@ -165,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {;
     chrome.runtime.sendMessage({ type: 'view-notifications' });
   });
 }),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -194,3 +192,5 @@ document.addEventListener('DOMContentLoaded', () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

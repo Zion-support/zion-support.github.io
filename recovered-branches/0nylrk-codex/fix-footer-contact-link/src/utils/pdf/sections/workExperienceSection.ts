@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
 
   doc: jsPDF;
@@ -22,18 +23,24 @@ export function addWorkExperienceSection (
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { jsPDF  } from 'jspdf';
 import { WorkExperience  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
 export function addWorkExperienceSection(
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -89,6 +96,8 @@ export function addWorkExperienceSection(;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   doc: jsPDF;
   workExperience: WorkExperience[];
   colors: PdfThemeColors;
@@ -186,8 +195,11 @@ export function addWorkExperienceSection(;
       yPos += (descriptionLines.length * 5) + 20
     } else {
       yPos += 20
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -250,6 +262,7 @@ export function addWorkExperienceSection(;
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -451,6 +464,8 @@ doc.text (dateText, 20, yPos + 10);
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   return yPos + 5

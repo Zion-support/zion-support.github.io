@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ChevronDown, ChevronUp } from 'lucide-react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -52,7 +55,6 @@ export function ExperienceFilter({
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0] |0, values[1] |15])
   }
-=======
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Slider } from "@/components/ui/slider",
@@ -62,16 +64,12 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
     setExperienceRange([values[0] || 0, values[1] || 15])
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -81,15 +79,11 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 >>>>>>>         <span>Years of Experience</span>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-        className='flex w-full items-center justify-between text-white font-medium'      >
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
       >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <span>Years of Experience</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {expanded ? (
@@ -100,10 +94,13 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
       </button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {expanded && (
         <div className='mt-6'>
           <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>{experienceRange[0]} years</span>
@@ -177,23 +174,15 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
         )}
       </button>
       {expanded && (
-=======
       
       {expanded && (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>{experienceRange[0]} years</span>
             <span>{experienceRange[1]} years</span>
           </div>
           <Slider
-<<<<<<< HEAD
             aria-label='Experience range'            aria-label="Experience range"
-=======
             aria-label="Experience range"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -234,16 +223,20 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <Slider;
             aria-label="Experience range";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             value={[experienceRange[0], experienceRange[1]]}
 >>>>>>>             min={0}
             max={15}
             step={1}
             onValueChange={handleChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -287,41 +280,32 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='mt-6'          />            className="mt-6"
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
             className="mt-6"
           />
         </div>
       )};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className="mt-6"
           />
         </div>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>
   )
 }
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>;
   );
 };
 }
-<<<<<<< HEAD
 }
-=======
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

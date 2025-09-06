@@ -7,8 +7,6 @@
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -26,8 +24,11 @@ import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -41,12 +42,15 @@ import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 import {useAuth} from '@/hooks/useAuth';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Define schema for form validation
 
 const projectSchema = z.object({
@@ -71,6 +75,7 @@ interface ProjectFormProps {
   onSuccess: () => void
   onCancel: () => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -114,12 +119,16 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 =======
 <<<<<<< HEAD
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -164,10 +173,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         onSuccess();
         form.reset()
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -299,6 +311,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         onSuccess();
         form.reset();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -328,23 +341,25 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     } catch (error) {
       console.error('Error saving project:', error)
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  },
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  },
   };
-=======
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -676,8 +691,9 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -775,11 +791,12 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
           )}
         />
         {/* Future file upload field would go here */}
-<<<<<<< HEAD
-=======
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
@@ -792,6 +809,7 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
       </form>
     </Form>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1041,9 +1059,13 @@ try {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

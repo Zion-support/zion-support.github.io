@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -44,27 +45,29 @@ function handler() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import JSZip from "jszip";
 import {
-<<<<<<< HEAD
   getZionDesignMap
   buildTokenSet
   buildUIKit
   UIKitKind
-=======
   getZionDesignMap,
   buildTokenSet,
   buildUIKit,
   UIKitKind,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "../../../utils/design-map";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   try {
     const kit = (req && req.query.kit as string) || "tailwind";
     const kind = (
@@ -74,7 +77,6 @@ export default async function handler(
 =======
       ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
     ) as UIKitKind;
-=======
   try {;
     const kit = (req.query.kit as string) || "tailwind";
     const kind = (
@@ -170,8 +172,6 @@ export default async function handler(req, res) {
     res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -192,7 +192,6 @@ export default async function handler(req, res) {
   try {
     const kit = (req.query.kit as string) || 'tailwind';
     const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const zip = new JSZip();
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
@@ -289,10 +288,8 @@ import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../..
     res.status (500).json ({ error: e?.message || "Export failed" });
 =======
     res.status(200).send(buffer);
-<<<<<<< HEAD
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Export failed" });
-=======
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Export failed' });
     } catch (error) {
@@ -337,6 +334,7 @@ import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../..
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -349,11 +347,15 @@ import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../..
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  }
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
+  }
+}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

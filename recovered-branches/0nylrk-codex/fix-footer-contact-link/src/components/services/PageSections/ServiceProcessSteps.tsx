@@ -30,6 +30,7 @@ export function ServiceProcessSteps() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 
 =======
 =======
@@ -112,6 +113,9 @@ export function ServiceProcessSteps() {
 
 }
 
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ServiceProcessSteps() {;
   return (;
     <div className="my-20">;
@@ -162,6 +166,7 @@ export function ServiceProcessSteps() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/ServiceProcessSteps.tsx
@@ -224,3 +229,7 @@ function ServiceProcessSteps() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/ServiceProcessSteps.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

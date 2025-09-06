@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react',;
 =======
@@ -13,6 +11,7 @@ import React, { useEffect, useState } from 'react',;
       return
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
         description: 'Your browser does not support app installation.'}),
       return;
@@ -21,11 +20,11 @@ import React, { useEffect, useState } from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
         description: 'Your browser does not support app installation.'}),
       return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useEffect, useState } from 'react',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from '@/components/ui/button',;
@@ -95,6 +94,7 @@ export const PwaInstallButton: React.FC = () => {;
 export default PwaInstallButton,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -107,3 +107,5 @@ export default PwaInstallButton,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

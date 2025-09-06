@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -336,10 +337,10 @@ const TopicPage: NextPage<Props> = (_{_topic, _posts}) => {_return (
         <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
 =======
 <<<<<<< HEAD
-import type { GetServerSideProps, NextPage } from 'next',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import type { GetServerSideProps, NextPage } from 'next',
 import type { GetServerSideProps, NextPage } from 'next';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost  } from '@/utils/types/blog';
@@ -404,16 +405,13 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const topic = String(ctx.params?.topic |'');
-=======
 };
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx.params?.topic || '');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
   return { props: { topic, posts } }
 }
@@ -454,30 +452,23 @@ export default TopicPage
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-<<<<<<< HEAD
   const topic = String(ctx.params?.topic |'');
-=======
-=======
 };
 
-<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-=======
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const topic = String(ctx.params?.topic || '');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
 }
 export default TopicPage;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

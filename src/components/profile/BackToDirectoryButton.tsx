@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ArrowLeft } from 'lucide-react'
@@ -26,33 +25,20 @@ xport function BackToDirectoryButton() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 import React from 'react',
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-=======
-<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ArrowLeft } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-=======
-<<<<<<< HEAD
-=======
 
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
 import { ArrowLeft } from 'lucide-react'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function BackToDirectoryButton() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
@@ -62,15 +48,16 @@ export function BackToDirectoryButton() {
           <ArrowLeft className="mr-2 h-4 w-4" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
 =======
-          Back to Talent Directory
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          Back to Talent Directory
         </Link>
       </Button>
     </div>
@@ -78,10 +65,12 @@ export function BackToDirectoryButton() {
 };
   );
 };
-=======
           Back to Talent Directory
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Link>
       </Button>
     </div>
@@ -99,11 +88,10 @@ export function BackToDirectoryButton() {
       </Button>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
   )
 }
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </Link>
@@ -122,6 +110,8 @@ import React from 'react',;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from "@/components/ui/button",;
@@ -146,6 +136,7 @@ export function BackToDirectoryButton() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -161,3 +152,5 @@ export function BackToDirectoryButton() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

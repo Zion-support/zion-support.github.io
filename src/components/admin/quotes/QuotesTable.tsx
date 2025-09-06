@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/quotes/QuotesTable.tsx
 
 <<<<<<< HEAD
@@ -6,17 +7,19 @@
 =======
 =======
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   quotes
   isArchived = false
 import React from "react"
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {
   Table
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   TableBody
   TableCell
   TableHead
@@ -29,9 +32,12 @@ import {
   DropdownMenuItem
   DropdownMenuTrigger
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   TableBody, 
   TableCell, 
   TableHead, 
@@ -43,18 +49,24 @@ import {
   DropdownMenuContent, 
   DropdownMenuItem, ;
   DropdownMenuTrigger ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge"
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes"
 import {formatDate} from "@/utils/dateUtils"
 interface QuotesTableProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   quotes: QuoteRequest[]
   isArchived?: boolean
   isLoading: boolean
@@ -63,19 +75,24 @@ interface QuotesTableProps {
   deleteQuote: (id: string,) => void
   onViewDetails: (quote: QuoteRequest,) => void
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   quotes: QuoteRequest[],
   isArchived?: boolean
-=======
 quotes;
   isArchived = false;
 import React from "react";
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
 import { 
@@ -101,6 +118,7 @@ interface QuotesTableProps {
   isArchived?: boolean,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   isLoading: boolean,
 =======
@@ -110,6 +128,8 @@ interface QuotesTableProps {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isLoading: boolean,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   updateStatus: (id: string, status: QuoteStatus) => void,
@@ -117,6 +137,7 @@ interface QuotesTableProps {
   deleteQuote: (id: string) => void,
   onViewDetails: (quote: QuoteRequest) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -140,20 +161,19 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   quotes
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   isArchived = false
   isLoading
   updateStatus
   toggleArchive
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -166,11 +186,15 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  deleteQuote
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   quotes,
   isArchived = false,
   isLoading,
   updateStatus,
   toggleArchive,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -190,8 +214,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   deleteQuote,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onViewDetails
 }) => {
   return (
@@ -228,19 +253,24 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
             quotes.map(quote => (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <TableRow
                 key = {quote.id,}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <TableRow
                 key = {quote.id,}
-=======
               <TableRow 
                 key={quote.id}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
                 <TableCell className="text-white">
@@ -357,28 +387,38 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                   <div className="flex items-center gap-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Button
                       variant="ghost"
                       size="icon"
                       onClick = {() => onViewDetails(quote),}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Button 
                       variant="ghost" 
                       size="icon" 
                       onClick={() => onViewDetails(quote)}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     >
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -394,12 +434,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                           onClick = {(,) => toggleArchive(quote.id, false),}
 =======
 =======
-                    
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    
                     {isArchived ? (
                       <>
                         <Button
@@ -481,16 +518,20 @@ import {formatDate} from "@/utils/dateUtils";
                           </DropdownMenuItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                             className="text-red-500"
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           <DropdownMenuItem
                             onClick = {() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
                               } }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                               }
                             }}
@@ -499,22 +540,17 @@ import {formatDate} from "@/utils/dateUtils";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           <DropdownMenuItem 
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
-<<<<<<< HEAD
                               }
                             }}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
                               } }}
-=======
                               }
                             }}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             className="text-red-500"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           >
@@ -523,6 +559,7 @@ import {formatDate} from "@/utils/dateUtils";
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -648,6 +685,8 @@ import { ;
   DropdownMenuTrigger ;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {;
@@ -1184,40 +1223,33 @@ onViewDetails ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/quotes/QuotesTable.tsx
 =======
                       </DropdownMenu>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                   </div>
                 </TableCell>
               </TableRow>
             ))
           )}
-<<<<<<< HEAD
         </TableBody>
       </Table>
     </div>
-<<<<<<< HEAD
   )
 }
 '"
 
-=======
   );
 };
 '";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         </TableBody>;
       </Table>;
     </div>;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

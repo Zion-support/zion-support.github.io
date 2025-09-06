@@ -1,19 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type InnovativeMicroSaas = {
       'Multi-speaker diarization',
   launch_date?: string;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 <<<<<<< HEAD
 =======
 export type InnovativeMicroSaas = {
-=======
 export type InnovativeMicroSaas = {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   description: string;
@@ -205,9 +210,21 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
     id: 'candidate-screening-copilot'
     name: 'Candidate Screening Copilot'
     description:
+<<<<<<< HEAD
 
 =======
 
+=======
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
+    category: 'Human Resources'
+    pricing: { starter: '$69/mo' }
+    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync']
+    integrations: ['Greenhouse', 'Lever']
+    useCases: ['Faster hiring', 'Bias reduction']
+    link: 'https://ziontechgroup.com/services/candidate-screening-copilot'
+    realService: true
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
 <<<<<<< HEAD
 =======
@@ -243,8 +260,11 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
     link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
     realService: true,
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];	id: string;
 	id: string, name: string,
 	description: string, tagline?: string,
@@ -425,7 +445,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 =======
 		link: 'https://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
 		realService: true
-<<<<<<< HEAD
 	}
 ];
 <<<<<<< HEAD
@@ -522,11 +541,7 @@ export type InnovativeMicroSaas = {;
 =======
 =======
 
-=======
 export type InnovativeMicroSaas = {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	id: string,;
 	name: string,;
 	description: string,;
@@ -601,12 +616,11 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		useCases: ['Faster hiringBias reduction'],;
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',;
 		realService: true;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

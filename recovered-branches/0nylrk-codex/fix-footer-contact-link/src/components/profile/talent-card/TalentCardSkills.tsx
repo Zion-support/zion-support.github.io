@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Badge} from "@/components/ui/badge";
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -13,10 +14,16 @@ import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
 =======
 =======
-import {Badge} from "@/components/ui/badge";
 =======
+import React from "react";
+import { Badge } from "@/components/ui/badge";
 import React from "react",
 import { Badge } from "@/components/ui/badge",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {Badge} from "@/components/ui/badge";
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -30,11 +37,14 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -49,6 +59,13 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
 // Get top skills (limit to 4);
   const topSkills = skills.slice(0, 4) || [];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  // Get top skills (limit to 4);
+  const topSkills = skills.slice(0, 4) || [];
+  // Get top skills (limit to 4)
+  const topSkills = skills.slice(0, 4) |[];
+  const topSkills = skills.slice(0, 4) || [],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">
@@ -66,10 +83,13 @@ import {Badge} from "@/components/ui/badge";
           key={skill}
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 
@@ -156,6 +176,7 @@ export function TalentCardSkills({ skills = [] } TalentCardSkillsProps) {;
       {topSkills.map(skill => (;
         <Badge ;
           key={skill}
+<<<<<<< HEAD
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0";
         >;
           {skill}
@@ -187,6 +208,10 @@ flex flex-wrap gap-1 mb-5"> {
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
+=======
+          className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
+        >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {skill}
         </Badge>
       ))}

@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card } from "@/components/ui/card",
 
 =======
@@ -20,6 +21,16 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {Card} from "@/components/ui/card";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Button} from "@/components/ui/button";
+import { Card } from "@/components/ui/card",
+import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton",
+import { Button } from "@/components/ui/button",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TalentPlaceholder() {
   return (
     <div className="p-8 text-center">
@@ -34,9 +45,16 @@ export function TalentPlaceholder() {
         Join as Talent
       </Button>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card } from "@/components/ui/card",;
 import { Skeleton } from "@/components/ui/skeleton",;
 import { Button } from "@/components/ui/button";
@@ -73,6 +91,7 @@ export function TalentPlaceholder() {;
       </Button>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/TalentPlaceholder.tsx
 =======
@@ -133,3 +152,7 @@ function TalentPlaceholder() {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

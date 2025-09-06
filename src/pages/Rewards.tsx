@@ -1,6 +1,6 @@
 import { Gift } from 'lucide-react'
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const REWARDS = [
@@ -13,8 +13,9 @@ const REWARDS = [
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const REWARDS = [
-<<<<<<< HEAD
   { id: 'coupon5', title: '$5 Coupon', cost: 500 }
   { id: 'premium-week', title: 'Premium Week', cost: 1000 }
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
@@ -42,18 +43,17 @@ const REWARDS = [
         ))}
       </ul>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-=======
   );
 };
-=======
 
 const REWARDS = [
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],
@@ -85,6 +85,7 @@ export default function RewardsPage() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -97,3 +98,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

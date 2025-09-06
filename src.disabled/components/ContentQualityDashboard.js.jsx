@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,15 @@ const React from";react" const ContentQualityDashboard = ({ className = " }) => 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+:src.disabled/components/ContentQualityDashboard.js.jsx
+import React from\';react\' const ContentQualityDashboard = ({ className = \' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(\') const [filterStatus,setFilterStatus] = useState(\'all\') const contentAnalyzer = ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {\''\';
+const React from";react" const ContentQualityDashboard = ({ className = " }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(") const [filterStatus,setFilterStatus] = useState("all") const contentAnalyzer = ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {""";""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from\';react\' const ContentQualityDashboard = ({ className = \' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(\') const [filterStatus,setFilterStatus] = useState(\'all\') const contentAnalyzer = ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {\''\';
+const React from";react" const ContentQualityDashboard = ({ className = " }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(") const [filterStatus,setFilterStatus] = useState("all") const contentAnalyzer = ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {""";""
+:temp_exclude/src.disabled/components/ContentQualityDashboard.js.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React from';react' const ContentQualityDashboard = ({ className = ' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(') const [filterStatus,setFilterStatus] = useState('all') const contentAnalyzer = ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {''';
 =======
 =======

@@ -1,30 +1,33 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
-=======
-<<<<<<< HEAD
 import React from 'react'
-=======
 import React from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import Image from "next/image",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface Benefit {
   title: string;
   description: string;
   icon?: React.ReactNode
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -33,6 +36,8 @@ export interface Benefit {
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export interface Testimonial {
   name: string;
@@ -41,6 +46,7 @@ export interface Testimonial {
   avatar?: string
 }
 interface ServiceLandingTemplateProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -54,6 +60,8 @@ xport interface Benefit {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: string;
   subtitle: string;
   heroImage?: string;
@@ -75,16 +83,18 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
   ctaLink
 }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import Image from "next/image",
 export interface Benefit {
   title: string,
   description: string,
   icon?: React.ReactNode
-=======
   title: string
   subtitle: string;
   description: string;
@@ -93,9 +103,12 @@ export interface Benefit {
   stats?: Array<{ label: string; value: string }>
   ctaText: string
   ctaLink: string
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -125,6 +138,7 @@ interface ServiceLandingTemplateProps {;
   ctaLink: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
@@ -137,6 +151,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
@@ -177,17 +193,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 =======
   testimonials,
   ctaText,
-<<<<<<< HEAD
   ctaLink}) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   ctaLink,
 }) => {
-=======
   ctaLink}) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="bg-background text-white">
@@ -237,9 +246,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
           </p>
-<<<<<<< HEAD
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-=======
           {heroImage && (
             <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
               <Image
@@ -256,17 +263,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       <section className="py-12 px-4">
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {description}
           </p>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {benefits.length > 0 && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -446,15 +451,16 @@ ursor/fix-website-loading-errors-and-merge-6662
       </section>
     </div>
   )
-<<<<<<< HEAD
 }
 
-=======
 };
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>>       <section className="py-16 bg-zion-blue-light">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -535,6 +541,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -550,3 +557,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

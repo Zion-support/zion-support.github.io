@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
 
 =======
@@ -15,6 +16,8 @@ import {SEO} from '@/components/SEO';
 import {useWhitelabel} from '@/context/WhitelabelContext';
 export default function JobDetails() {;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
 import { Header  } from '@/components/Header';
@@ -27,7 +30,6 @@ import { formatDistanceToNow  } from 'date-fns';
 import { toast  } from 'sonner';
 import { useAuth  } from '@/hooks/useAuth';
 import useJobDetails from '@/hooks/useJobDetails';
-<<<<<<< HEAD
 import { ApplyToJobModal  } from '@/components/messaging/job-application';
 import { SEO  } from '@/components/SEO';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
@@ -40,7 +42,6 @@ export default function JobDetails() {
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
-=======
 import {ApplyToJobModal} from '@/components/messaging/job-application';
 import {SEO} from '@/components/SEO';
 import {useWhitelabel} from '@/context/WhitelabelContext';
@@ -53,6 +54,7 @@ export default function JobDetails() {
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
 
 
@@ -62,6 +64,8 @@ export default function JobDetails() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
@@ -85,6 +89,7 @@ export default function JobDetails() {
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
@@ -96,6 +101,11 @@ export default function JobDetails() {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -127,6 +137,7 @@ export default function JobDetails() {
       return
     }
     setIsApplyModalOpen(true)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const handleApplySuccess = async (appliedJobId: string) => {
@@ -248,32 +259,32 @@ export default function JobDetails() {;
 
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleApplySuccess = async (appliedJobId: string) => {
     toast.success("Application submitted successfully!")
     setIsApplyModalOpen(false)
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified"
     return `$${budget.min} - $${budget.max}`
-<<<<<<< HEAD
   }
   const isOwnJob = user?.id === job.client_id;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const isOwnJob = user?.id === job.client_id,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -281,6 +292,8 @@ export default function JobDetails() {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <SEO
@@ -326,6 +339,7 @@ export default function JobDetails() {;
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -336,6 +350,8 @@ export default function JobDetails() {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -587,11 +603,6 @@ export default function JobDetails() {;
                   <div className="flex flex-wrap gap-2">;
                     {job.skills?.map((skill: string, i: number) => (;
                       <Badge key={i} variant="secondary">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {skill}
                       </Badge>
                     ))}
@@ -628,6 +639,7 @@ export default function JobDetails() {;
                   </div>
                 </div>
                 {!isOwnJob && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -724,23 +736,24 @@ export default function JobDetails() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Button
                     className="w-full mt-4"
-=======
                   <Button 
                     className="w-full mt-4" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     onClick={handleApply}
                     disabled={isOwnJob}
                   >
                     Apply Now
                   </Button>
                 )}
-<<<<<<< HEAD
-=======
                 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>

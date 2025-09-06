@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/notifications/types.ts
 
 <<<<<<< HEAD
@@ -14,6 +15,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
@@ -36,13 +40,14 @@ export interface Notification extends BaseNotification {;
 =======
   | 'onboarding';
   | 'system';
-<<<<<<< HEAD
 export interface Notification extends BaseNotification {
-=======
 
 export interface Notification extends BaseNotification {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   type: NotificationType;
   action_url?: string
   action_text?: string
@@ -67,13 +72,14 @@ export interface NotificationContextType {;
 =======
   | 'onboarding';
   | 'system';
-<<<<<<< HEAD
 export interface NotificationContextType {
-=======
 
 export interface NotificationContextType {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   notifications: Notification[];
   filteredNotifications: Notification[];
   unreadCount: number;
@@ -86,6 +92,7 @@ export interface NotificationContextType {;
 
   fetchNotifications: () => Promise<void>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Notification as BaseNotification } from '@/types/notifications',;
 
@@ -93,6 +100,8 @@ import { Notification as BaseNotification } from '@/types/notifications',;
 <<<<<<< HEAD
 import {Notification, as, BaseNotification} from '@/types / notifications';
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Notification as BaseNotification } from '@/types/notifications',;
 ;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -178,6 +187,7 @@ export interface NotificationContextType {;
   setFilter: (filter: FilterType) => void;
   fetchNotifications: () => Promise<void>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -214,3 +224,6 @@ export type FilterType = | 'all' | 'unread' | 'messages' | 'onboarding' | 'syste
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

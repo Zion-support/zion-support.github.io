@@ -13,20 +13,21 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1"
-=======
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -36,12 +37,15 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -74,23 +78,27 @@ const corsHeaders = {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
-<<<<<<< HEAD
     "authorization, x-client-info, apikey, content-type"}
 interface ReminderPayload {
   user_id: string;
   missing_milestone: string
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     "authorization, x-client-info, apikey, content-type"},
 
 interface ReminderPayload {
   user_id: string,
   missing_milestone: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -98,6 +106,8 @@ interface ReminderPayload {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   role: string
 }
 serve(async (req: Request) => {
@@ -134,19 +144,22 @@ serve(async (req: Request) => {
 =======
       supabaseUrl,
       supabaseServiceKey
-<<<<<<< HEAD
     );
     const payload = await req.json() as ReminderPayload;
     const { user_id, missing_milestone, role } = payload;
     if (!user_id |!missing_milestone |!role) {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ),
     
     const payload = await req.json() as ReminderPayload,
     const { user_id, missing_milestone, role } = payload,
     
     if (!user_id || !missing_milestone || !role) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -155,6 +168,8 @@ serve(async (req: Request) => {
         JSON && JSON.stringify({ error: "Missing required fields" });
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -168,6 +183,7 @@ serve(async (req: Request) => {
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -183,13 +199,13 @@ serve(async (req: Request) => {
         JSON && JSON.stringify({ error: "User not found", details: userError });
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .single();
     if (userError |!userData) {
-=======
       .single(),
     
     if (userError || !userData) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return new Response(
         JSON.stringify({ error: "User not found", details: userError }),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -202,6 +218,7 @@ serve(async (req: Request) => {
     const milestoneMessages = {
       talent: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-onboarding-reminder/index.ts
 
 <<<<<<< HEAD
@@ -210,6 +227,8 @@ serve(async (req: Request) => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         profile_completed: "complete your profile to get discovered by clients";
         skills_added: "add your skills to get better job matches"
         availability_set: "set your availability to help clients know when you can work"}
@@ -251,8 +270,11 @@ serve(async (req: Request) => {
       from: "Zion AI Marketplace <notifications@zion.ai>";
       to: userData.email;
       subject: "Complete your next step on Zion AI Marketplace"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         profile_completed: "complete your profile to get discovered by clients",
         skills_added: "add your skills to get better job matches",
         availability_set: "set your availability to help clients know when you can work"},
@@ -272,6 +294,7 @@ serve(async (req: Request) => {
       to: userData.email,
       subject: "Complete your next step on Zion AI Marketplace",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -280,6 +303,8 @@ serve(async (req: Request) => {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
@@ -313,12 +338,9 @@ serve(async (req: Request) => {
           </div>
           <p>The Zion AI Marketplace Team</p>
         </div>
-<<<<<<< HEAD
       `});
-=======
       `}),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (emailError) {
       return new Response(
         JSON.stringify({ error: "Failed to send email", details: emailError }),
@@ -458,14 +480,16 @@ if ( {) {
     const { data: notification, error: notificationError } = await supabase.rpc(
       "create_notification",
       {
-<<<<<<< HEAD
         _user_id: user_id;
         _title: "Complete your next step"
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`;
         _type: "onboarding"}
     );
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         _user_id: user_id,
         _title: "Complete your next step",
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
@@ -487,20 +511,20 @@ if ( {) {
 =======
     ),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (notificationError) {
       console.error("Failed to create notification:", notificationError)
     }
     return new Response(
       JSON.stringify({
-<<<<<<< HEAD
         message: "Reminder sent successfully"
         notification_id: notification});
-=======
         message: "Reminder sent successfully",
         notification_id: notification}),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -513,6 +537,7 @@ if ( {) {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -566,6 +591,11 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+});
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 import { Resend } from "npm: resend@1.0.0",;
@@ -907,11 +937,10 @@ if (notificationError) {
         status: 500,;
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

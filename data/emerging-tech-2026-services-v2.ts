@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@ export interface EmergingTech2026ServiceV2 {
   launch_date: string;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026ServiceV2 {;
   id: string;
@@ -1249,22 +1252,23 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.'
     launchDate: '2026-06-15'
     customers: 65
     rating: 4.9
     reviews: 45
   }
-=======
       'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.',
     launchDate: '2026-06-15',
     customers: 65,
     rating: 4.9,
     reviews: 45,
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1277,6 +1281,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9
 
     reviews: 45
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants',;
@@ -1445,6 +1450,10 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV2 {;
   id: string,;
@@ -1843,12 +1852,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     customers: 65,;
     rating: 4.9;
     reviews: 45;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

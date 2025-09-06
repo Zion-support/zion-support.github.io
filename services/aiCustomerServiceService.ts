@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:services/aiCustomerServiceService.ts
 
 ========
@@ -7,12 +8,16 @@ export interface CustomerTicket {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiCustomerServiceService.ts
 =======
 <<<<<<< HEAD
-export interface CustomerTicket {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface CustomerTicket {
 export interface CustomerTicket {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   customerId: string;
   subject: string;
@@ -54,12 +59,9 @@ export interface CustomerMessage {
 
   conversationHistory: CustomerMessage[]
 }
-<<<<<<< HEAD
 export interface CustomerMessage {
-=======
 
 export interface CustomerMessage {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   ticketId: string;
   senderId: string;
@@ -91,13 +93,14 @@ export interface CustomerProfile {
 
   confidence: number
 }
-<<<<<<< HEAD
 export interface CustomerProfile {
-=======
 
 export interface CustomerProfile {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   email: string;
   name: string;
@@ -205,12 +208,9 @@ export interface CustomerServiceRequest {
   }
   tags: string[]
 }
-<<<<<<< HEAD
 export interface AIResponse {
-=======
 
 export interface AIResponse {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   ticketId: string;
   response: string;
@@ -222,12 +222,9 @@ export interface AIResponse {;
 
   generatedAt: Date
 }
-<<<<<<< HEAD
 export interface CustomerServiceMetrics {
-=======
 
 export interface CustomerServiceMetrics {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   totalTickets: number;
   openTickets: number;
   resolvedTickets: number;
@@ -243,12 +240,9 @@ export interface CustomerServiceMetrics {;
     customerSatisfaction: number
   }>
 }
-<<<<<<< HEAD
 export interface CustomerServiceRequest {
-=======
 
 export interface CustomerServiceRequest {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   customerId: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   subject: string;
@@ -292,12 +286,9 @@ export interface CustomerServiceResponse {
 
   preferredChannel?: 'email' | 'chat' | 'phone'
 }
-<<<<<<< HEAD
 export interface CustomerServiceResponse {
-=======
 
 export interface CustomerServiceResponse {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ticketId: string;
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   aiResponse?: AIResponse;
@@ -307,13 +298,14 @@ export interface CustomerServiceResponse {;
 
   assignedAgent?: string
 }
-<<<<<<< HEAD
 export class AICustomerServiceService {
-=======
 
 export class AICustomerServiceService {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   private apiKey: string;
 
   private baseUrl: string
@@ -770,14 +762,14 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
 export interface CustomerTicket {;
-=======
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string,;
   customerId: string,;
   subject: string,;
@@ -1667,8 +1659,11 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
 ;
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

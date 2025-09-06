@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import DatePicker from 'react-datepicker';
@@ -48,16 +49,15 @@ const KitPage = () => {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useCallback, useMemo, useState  } from 'react';
 import Head from 'next/head',
-=======
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next/head';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import DatePicker from 'react-datepicker';
 
 import type {
-<<<<<<< HEAD
   MediaBundle
   MediaAsset
   PressReleaseType;
@@ -66,7 +66,6 @@ import {
   getDefaultAssets
   buildPressRelease
   buildTimeline;
-=======
   MediaBundle,
   MediaAsset,;
   PressReleaseType,;
@@ -75,14 +74,18 @@ import {
   getDefaultAssets,
   buildPressRelease,;
   buildTimeline,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '../../utils/mediaKit';
 const KitPage = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 const KitPage = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -94,6 +97,8 @@ const KitPage = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
@@ -101,16 +106,20 @@ import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/medi
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 const KitPage = () => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,6 +132,8 @@ const KitPage = () => {;
   const assets: MediaAsset[] = useMemo(() => getDefaultAssets(bundle), [bundle]);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(
     []
   );
@@ -166,7 +177,6 @@ const res = await fetch(asset.path);
     saveAs(blob, `zion-media-kit-${bundle}.zip`)
   }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
   const onGeneratePdf = useCallback(async () => {
-=======
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>([]),;
   const assets: MediaAsset[] = useMemo(() => getDefaultAssets(bundle), [bundle]),;
   const onGenerateTimeline = useCallback(() => {;
@@ -218,22 +228,28 @@ const res = await fetch(asset.path);
   }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]),;
   const onGeneratePdf = useCallback(async () => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const drawText = (text: string, x: number, y: number, size = 12) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const assets: MediaAsset[] = useMemo(;
@@ -291,10 +307,13 @@ const res = await fetch(asset.path);
 =======
     let y = 760;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     drawText('Zion Media Kit', 50, y, 18);
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next / head';
@@ -761,14 +780,10 @@ if ( {) {
 
 =======
     const onCopy = () => navigator.clipboard.writeText(text);
-=======
-<<<<<<< HEAD
     const drawText = (text: string, x: number, y: number, size = 12) => {;
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
     },;
     let y = 760;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     drawText('Zion Media Kit', 50, y, 18), y -= 24,;
     drawText(`Bundle: ${bundle}`, 50, y), y -= 16,;
     drawText('Assets:', 50, y), y -= 16,;
@@ -797,11 +812,6 @@ if ( {) {
     const nowStr = new Date().toISOString().substring(0, 10),
     const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName }),
     const onCopy = () => navigator.clipboard.writeText(text),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return (
       <div className="p-4 border rounded-lg space-y-2">
         <div className="flex items-center justify-between">
@@ -810,13 +820,14 @@ if ( {) {
         </div>
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
-<<<<<<< HEAD
     );  }
-=======
     )
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div>
       <Head>
@@ -837,7 +848,6 @@ if ( {) {
 =======
         <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
       </Head>
-<<<<<<< HEAD
       <div className='space-y-8'>
         <header className='flex items-center justify-between'>
           <h1 className='text-2xl font-bold'>Media Kit</h1>
@@ -871,7 +881,6 @@ if ( {) {
                   </button>
                 )
               )}
-=======
       <div className="space-y-8">
         <header className="flex items-center justify-between">
           <h1 className="text-2xl font-bold">Media Kit</h1>
@@ -898,12 +907,15 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
             <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
           </div>
@@ -1100,19 +1112,12 @@ if ( {) {
 }
           </div>
         </section>
-<<<<<<< HEAD
         <section className='p-4 border rounded-lg'>
           <h3 className='font-semibold mb-3'>Assets Included</h3>
           <ul className='grid md:grid-cols-2 gap-3'>
-=======
         <section className="p-4 border rounded-lg">
           <h3 className="font-semibold mb-3">Assets Included</h3>
           <ul className="grid md:grid-cols-2 gap-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
@@ -1129,7 +1134,6 @@ if ( {) {
 }
           </ul>
         </section>
-<<<<<<< HEAD
         <section className='p-4 border rounded-lg space-y-4'>
           <h3 className='font-semibold'>Prewritten Press Releases</h3>
           <div className='grid md:grid-cols-3 gap-4'>
@@ -1143,6 +1147,7 @@ if ( {) {
     </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 },;
@@ -1223,10 +1228,12 @@ export default KitPage;
 =======
 =======
 =======
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
 =======
+}
+export default KitPage;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+};
+
         <section className="p-4 border rounded-lg space-y-4">
           <h3 className="font-semibold">Prewritten Press Releases</h3>
           <div className="grid md:grid-cols-3 gap-4">
@@ -1358,11 +1365,10 @@ export default KitPage,
     </div>;
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default KitPage;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

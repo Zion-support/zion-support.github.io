@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -9,6 +9,8 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link'
 import {
   DropdownMenu
@@ -18,9 +20,12 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link",
 import { 
   DropdownMenu,
@@ -31,13 +36,17 @@ import {
 import { Button } from "@/components/ui/button",
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 interface ApplicationActionsProps {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import Link from "next/link",
@@ -66,6 +75,8 @@ interface ApplicationActionsProps {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   application: JobApplication
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
@@ -167,6 +178,7 @@ export function ApplicationActions({
             className="text-red-600"
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
@@ -176,6 +188,8 @@ export function ApplicationActions({
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import Link from "next/link",
 import { 
@@ -195,21 +209,22 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-<<<<<<< HEAD
       <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Button
         variant="default"
         size="sm"
         asChild
       >
+<<<<<<< HEAD
 >>>>>>>       <Button 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
             Reject
@@ -232,11 +247,16 @@ interface ApplicationActionsProps {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Button 
 >>>>>>>         variant="default" 
         size="sm"
         asChild
       >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -248,6 +268,9 @@ interface ApplicationActionsProps {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        <Link href={`/messages?talentId=${application.talent_id}`}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Contact
         </Link>
       </Button>
@@ -256,17 +279,22 @@ interface ApplicationActionsProps {
 };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
         <Link href={`/messages?talentId=${application.talent_id}`}>
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        <Link href={`/messages?talentId=${application.talent_id}`}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Contact
         </Link>
       </Button>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -280,6 +308,9 @@ interface ApplicationActionsProps {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link",;
 import {;
   DropdownMenu,;
@@ -404,8 +435,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

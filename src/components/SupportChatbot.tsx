@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/SupportChatbot.tsx
 
 
@@ -7,15 +8,20 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useRef, useEffect  } from 'react';
 import { MessageSquare, X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { ChatMessage, ChatInput  } from '@/components/ChatAssistant';
 import {logErrorToProduction} from '@/utils/productionLogger';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useRef, useEffect } from 'react'
 import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -25,14 +31,18 @@ interface Msg {
   id: string
   role: 'user' | 'assistant'
   message: string
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -50,36 +60,42 @@ const FALLBACK_RESPONSES = [
 const FALLBACK_RESPONSES = [
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Fallback responses when API is unavailable
 
 const FALLBACK_RESPONSES = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way."
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly."
   'I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.'
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support."
   'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.'
 <<<<<<< HEAD
+<<<<<<< HEAD
   'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
-<<<<<<< HEAD
   'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ]
 export function SupportChatbot() {
   const [open, setOpen] = useState(false)
@@ -164,6 +180,7 @@ function SupportChatbot() {
       )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 // Fallback responses when API is unavailable
@@ -178,13 +195,18 @@ const FALLBACK_RESPONSES = [
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance."
 ],
 
@@ -219,6 +241,7 @@ export function SupportChatbot() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>>       // If Supabase function fails, try local API fallback
 ursor/fix-website-loading-errors-and-merge-6662
@@ -230,6 +253,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -239,9 +264,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           body: JSON.stringify({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             messages: [
               ...messages.map(m => ({ role: m.role, content: m.message }))
               { role: 'user', content: text }
@@ -251,7 +279,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         if (!res.ok) throw new Error(`API error: ${res.status}`)
         const data = await res.json().catch(() => ({}))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         const message =
           data.message |
           data.choices?.[0]?.message?.content |
@@ -261,9 +292,12 @@ ursor/fix-website-loading-errors-and-merge-6662
         const finalMsg =
           message.trim() |
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         const message = null;
           data.message ||
           data.choices?.[0]?.message?.content ||
@@ -272,8 +306,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           ''
         const finalMsg = null;
           message.trim() ||
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           FALLBACK_RESPONSES[
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
@@ -299,24 +336,33 @@ ursor/fix-website-loading-errors-and-merge-6662
         while (!done) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           const result = await reader.read()
           done = result.done
           buffer += decoder.decode(result.value |new Uint8Array())
           const lines = buffer.split('\n')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           const result = await reader.read();
           done = result.done;
           buffer += decoder.decode(result.value || new Uint8Array());
           const lines = buffer.split('\n');
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           for (let i = 0; i < lines.length - 1; i++) {
             let line = lines[i]?.trim()
             if (!line) continue
@@ -330,6 +376,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 const json = JSON.parse(line)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 const token =
@@ -337,15 +384,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                   json.choices?.[0]?.text |
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 const token =
                   json.choices?.[0]?.delta?.content |
                   json.choices?.[0]?.text |
-=======
                 const token = null;
                   json.choices?.[0]?.delta?.content ||
                   json.choices?.[0]?.text ||
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   ''
                 if (token) {
                   accumulated += token
@@ -356,12 +407,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
           })
         }),
@@ -801,11 +855,6 @@ export function SupportChatbot() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
                   setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m));
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }
               } catch (_) {
                 // ignore parse errors
@@ -814,15 +863,15 @@ export function SupportChatbot() {;
           }
           buffer = lines[lines.length - 1] |''
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
         const final =
           accumulated.trim() |
-=======
         const final = null;
           accumulated.trim() ||
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           FALLBACK_RESPONSES[
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
@@ -872,6 +921,7 @@ export function SupportChatbot() {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -912,6 +962,8 @@ export function SupportChatbot() {;
         );
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   if (!open) {
     
@@ -921,8 +973,6 @@ export function SupportChatbot() {;
         className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
         aria-label='Open help chat'      >
         <MessageSquare className='h-5 w-5' />
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         const final = accumulated.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
@@ -957,6 +1007,7 @@ export function SupportChatbot() {;
         <MessageSquare className="h-5 w-5" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       </Button>
 =======
@@ -967,6 +1018,10 @@ export function SupportChatbot() {;
     )
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      </Button>
+    )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
   if (!open) {
@@ -977,12 +1032,15 @@ export function SupportChatbot() {;
         aria-label='Open help chat'      >
         <MessageSquare className='h-5 w-5' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       </Button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </Button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     )
@@ -994,10 +1052,13 @@ export function SupportChatbot() {;
         <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant='ghost'
           size='icon'
           className='text-white'
@@ -1005,12 +1066,15 @@ export function SupportChatbot() {;
           aria-label='Close help bot'        >
           <X className='h-5 w-5' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         </Button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </Button>
 >>>>>>>       </div>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant="ghost"
           size="icon"
           className="text-white"
@@ -1018,11 +1082,6 @@ export function SupportChatbot() {;
           aria-label="Close help bot"
         >
           <X className="h-5 w-5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </Button>
       </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1032,6 +1091,7 @@ export function SupportChatbot() {;
             role="assistant" 
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" 
           />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1059,6 +1119,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       };
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         const final = accumulated.trim() ||;
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),;
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m));
@@ -1476,26 +1538,14 @@ return (<Button onClick={;
             role="assistant";
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?";
           />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
         {messages.map(m => (
           <ChatMessage key={m.id} role={m.role} message={m.message} />
         ))}
-<<<<<<< HEAD
         {typing && <ChatMessage role='assistant' message='...' />}
-=======
         {typing && (
           <ChatMessage role="assistant" message="..." />
         )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div ref={endRef} />
       </div>
       <div className="p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30">
@@ -1503,7 +1553,6 @@ return (<Button onClick={;
       </div>
     </div>
   )
-<<<<<<< HEAD
 }catch () {
   //ignore parse errors
 }'
@@ -1540,16 +1589,14 @@ setTyping (false)
 }'"
 }
 }
+}
+;
+;
+}
+;
 <<<<<<< HEAD
-=======
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-;
-=======
-}
-;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

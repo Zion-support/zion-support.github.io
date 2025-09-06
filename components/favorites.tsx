@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -51,12 +52,12 @@ function useFavorites() {;
 function useFavorites() {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head',
-=======
 import {useEffect, useMemo, useState} from 'react';
 import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
 function useFavorites() {
@@ -67,6 +68,7 @@ function useFavorites() {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(storageKey);
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (raw) setFavorites(JSON.parse(raw))
     } catch {}
@@ -88,12 +90,15 @@ function use_favorites() {
 }    } catch {}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (raw) setFavorites(JSON.parse(raw));    } catch {}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }, []);
   const remove = (slug: string) =>: any set_favorites ((prev) => prev.filter ((s) => s !== slug)),
   return { favorites, remove }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -291,16 +296,17 @@ function FavoritesPage() {
                   <Link href={`/talent/${t.slug}?hire=1`}><a className="px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600">Request to Hire</a></Link>
 =======
 <<<<<<< HEAD
-export default function FavoritesPage() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function FavoritesPage() {
 
 export default function FavoritesPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
     [favorites]
   );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -308,6 +314,8 @@ export default function FavoritesPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div>
@@ -383,7 +391,6 @@ export default function FavoritesPage() {;
             <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
             <li aria-hidden="true">/</li>
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
-<<<<<<< HEAD
         </nav>
       </div>
       <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>
@@ -505,11 +512,11 @@ export default function FavoritesPage() {;
 =======
 );
 }
-=======
 
           </ol>
         </nav>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -517,3 +524,5 @@ export default function FavoritesPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

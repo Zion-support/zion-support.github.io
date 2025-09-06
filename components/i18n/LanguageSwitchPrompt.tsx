@@ -1,5 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useEffect, useState } from 'react';
+import { useTranslation  } from 'react-i18next';
+import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const localeLabelKey: Record<string, string> = {
 
@@ -17,6 +26,7 @@ const localeLabelKey: Record<string, string> = {
   ar: "lang.arabic",
 };
 export default function LanguageSwitchPrompt() {;
+<<<<<<< HEAD
 
 =======
 
@@ -340,6 +350,8 @@ const localeLabelKey: Record<string, string> = {
 };
 export default function LanguageSwitchPrompt() {;
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
@@ -395,6 +407,7 @@ export default function LanguageSwitchPrompt() {;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
 
 }
@@ -402,3 +415,10 @@ export default function LanguageSwitchPrompt() {;
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+);
+  );
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from 'react'
 import {ElementRef, ComponentPropsWithoutRef} from 'react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
@@ -12,11 +15,14 @@ import {ChevronDown} from 'lucide-react'
 import {cn} from '@/lib/utils'
 const Accordion = AccordionPrimitive.Root
 <<<<<<< HEAD
+<<<<<<< HEAD
 onst AccordionItem = React.forwardRef<
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react"
 import { ElementRef, ComponentPropsWithoutRef } from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
@@ -27,11 +33,14 @@ import { cn } from "@/lib/utils"
 const Accordion = AccordionPrimitive.Root
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const AccordionItem = React.forwardRef<
 >>>>>>>   ElementRef<typeof AccordionPrimitive.Item>
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
@@ -57,6 +66,7 @@ const AccordionItem = React.forward_ref<;
     {...props}
   />
 ))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -140,30 +150,30 @@ AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 AccordionItem.displayName = 'AccordionItem'
-<<<<<<< HEAD
 const AccordionTrigger = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Trigger>
   ComponentPropsWithoutRef<typeof AccordionPrimitive.T</typeof>rigger>
-=======
 AccordionItem.displayName = "AccordionItem"
 
-=======
-=======
 AccordionItem.displayName = "AccordionItem"
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const AccordionTrigger = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Trigger>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from 'react';
@@ -201,25 +211,19 @@ const AccordionTrigger = React && React.forwardRef<;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180'
         className
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </AccordionPrimitive>  {...props}
     >
       {children}
       <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />
-=======
-<<<<<<< HEAD
         "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
         className
       )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {...props}
     >;
       {children}
@@ -231,15 +235,19 @@ const AccordionTrigger = React && React.forwardRef<;
 =======
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -280,20 +288,16 @@ const AccordionContent = React.forward_ref<;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const AccordionContent = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>
   ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>
-=======
 
-=======
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const AccordionContent = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -347,23 +351,21 @@ ursor/fix-website-loading-errors-and-merge-6662
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
   </AccordionPrimitive.Content>
 ))
-<<<<<<< HEAD
-<<<<<<< HEAD
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-=======
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

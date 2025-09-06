@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type EnterpriseITSolution = {
     starter: string; // e.g. "$2, 999 / mo";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,10 +16,12 @@ export type EnterpriseITSolution = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 export type EnterpriseITSolution = {
-=======
 export type EnterpriseITSolution = {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline?: string;
@@ -47,12 +52,13 @@ export type EnterpriseITSolution = {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     professional?: string;
     enterprise?: string;
-<<<<<<< HEAD
   }
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   features: string[];
   integrations?: string[];
   use_cases?: string[];
@@ -73,7 +79,10 @@ export type EnterpriseITSolution = {;
 =======
   launchDate?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 export const enterpriseITSolutions: EnterpriseITSolution[] = [;
@@ -483,7 +492,6 @@ rating: 4.8
 }
 link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub';
 realService: true
-=======
 };
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
@@ -671,23 +679,25 @@ rating: 4.8
 };
 link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub';
 realService: true 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }];	id: string;
 	name: string;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 	tagline?: string;
 	description: string;
-<<<<<<< HEAD
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type EnterpriseITSolution = {
 	id: string,
 	name: string,
 	tagline?: string,
 	description: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
@@ -702,6 +712,9 @@ export type EnterpriseITSolution = {
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 	pricing: {
 <<<<<<< HEAD
 		starter: string, // e && e.g. "$2,999/mo"
@@ -712,22 +725,29 @@ export type EnterpriseITSolution = {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 		enterprise?: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 	}
 	features: string[];
 	integrations?: string[];
 	useCases?: string[]
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 	},
 	features: string[],
 	integrations?: string[],
 	useCases?: string[],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -735,10 +755,13 @@ export type EnterpriseITSolution = {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 	link: string, // canonical internal link under /services/*
 	realService?: boolean,
 	rating?: number,
 	launchDate?: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -962,6 +985,8 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		realService: true,
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
 	{
@@ -1107,6 +1132,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 	}
 ];
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -1270,18 +1296,17 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
-<<<<<<< HEAD
 	{;
 		id: 'zero-trust-network-architecture';
 		name: 'Zero Trust Network Architecture';
-=======
 	{
 		id: 'zero-trust-network-architecture',
 		name: 'Zero Trust Network Architecture',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 		tagline: 'Identity-first perimeterless security for modern enterprises',
 		description: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',
 		category: 'Enterprise Security',
@@ -1377,11 +1402,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		useCases: ['Audit readinessInsider risk reduction'],
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realService: true
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export type EnterpriseITSolution = {;
 	id: string,;
 	name: string,;
@@ -1500,12 +1520,11 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		useCases: ['Audit readinessInsider risk reduction'],;
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',;
 		realService: true;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

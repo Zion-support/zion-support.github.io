@@ -1,14 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-export interface Notification {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface Notification {
 export interface Notification {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   user_id: string;
   title: string;
@@ -21,6 +26,7 @@ export interface Notification {;
 
   updated_at: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -29,6 +35,9 @@ export interface Notification {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface Notification {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string,;
   user_id: string,;
   title: string,;
@@ -38,6 +47,7 @@ export interface Notification {;
   read: boolean,;
   created_at: string;
   updated_at: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -62,3 +72,6 @@ export interface Notification {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

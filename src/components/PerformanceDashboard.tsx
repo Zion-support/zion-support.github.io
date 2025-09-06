@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
 
 ========
@@ -11,6 +12,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import {
   Card
@@ -200,12 +204,15 @@ const PerformanceDashboard: React.FC = () => {
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -463,6 +470,7 @@ const PerformanceDashboard: React.FC = () => {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 >>>>>>>   return (
@@ -472,6 +480,8 @@ const PerformanceDashboard: React.FC = () => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6 p-6">
@@ -539,14 +549,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-xs text-gray-500">Total build output</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>
@@ -556,14 +559,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-xs text-gray-500">Generated pages</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <CardHeader className="pb-2">
@@ -576,6 +572,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <Card>
 =======
@@ -583,12 +580,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        
         <Card>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <CardHeader className="pb-2">
@@ -716,11 +710,14 @@ const PerformanceDashboard: React.FC = () => {;
         <CardContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 </div>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='space-y-4'>
             {completedImprovements.map(improvement => (
               <div
@@ -729,20 +726,18 @@ const PerformanceDashboard: React.FC = () => {;
               >
                 <div className='flex-shrink-0 mt-1'>                  {getCategoryIcon(improvement.category)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="space-y-4">
             {completedImprovements.map((improvement) => (
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className="flex-1 min-w-0">
@@ -757,6 +752,7 @@ const PerformanceDashboard: React.FC = () => {;
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -899,6 +895,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               </span>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className="text-sm text-gray-600 mt-1">
   },;
   const getCategoryIcon = (category: string) => {;
@@ -1016,6 +1014,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1043,6 +1042,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className='text-sm text-gray-600 mt-1'>
                     {improvement.description}
                   </p>
@@ -1054,13 +1055,17 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Card>
       {/* Action Buttons */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='flex space-x-4'>
         <Button
           onClick={() => window.open('/api/health/environment', '_blank')}
           variant='outline'
         >
           <Shield className='h-4 w-4 mr-2' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>           Check Health Status
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1070,14 +1075,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="flex space-x-4">
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
@@ -1090,6 +1092,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default PerformanceDashboard
 export default PerformanceDashboard
@@ -1097,20 +1100,23 @@ export default PerformanceDashboard
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-<<<<<<< HEAD
 export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
 
-=======
 export default PerformanceDashboard;
 export default PerformanceDashboard, ;
 export default PerformanceDashboard;
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 
 export default PerformanceDashboard, 
@@ -1474,8 +1480,11 @@ export default PerformanceDashboard;
 },;
 export default PerformanceDashboard;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

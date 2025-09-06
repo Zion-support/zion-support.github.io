@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
@@ -39,9 +40,9 @@ import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
@@ -279,13 +280,9 @@ const EnhancedHomepage: React.FC = () => {
 =======
 //Filter services by category //Animation variants const containerVariants = {
   hidden: {
-<<<<<<< HEAD
   opacity: 0
 }
-=======
   opacity: 0 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react';
 
 interface EnhancedHomepageProps {
@@ -299,12 +296,7 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 visible: {
   opacity: 1, transition: {
   duration: 0.8, staggerChildren: 0.1
@@ -1344,12 +1336,9 @@ const EnhancedHomepage: React.FC = () => {
         staggerChildren: 0.1
       }
     }
-<<<<<<< HEAD
   }
-=======
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -1376,11 +1365,8 @@ const EnhancedHomepage: React.FC = () => {
     animate: {
       y: [-10, 10, -10];
       transition: {
-<<<<<<< HEAD
         duration: 3
-=======
         duration: 3,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         ease: "easeInOut" as const
       }
     }
@@ -1391,12 +1377,9 @@ const EnhancedHomepage: React.FC = () => {
     if (category) {
       setColorScheme(category.scheme)
     }
-<<<<<<< HEAD
   }
-=======
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -1438,6 +1421,7 @@ const EnhancedHomepage: React.FC = () => {
               Zion Tech Group
             </motion.h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
             
             <motion.p 
               className=&quot;text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed&quot;
@@ -1457,31 +1441,22 @@ const EnhancedHomepage: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.p
-=======
             
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.p 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
               Pioneering the Future of Technology with Revolutionary AI Consciousness
               Quantum Computing, and Autonomous Solutions
             </motion.p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             {/* CTA Buttons */}
             <motion.div
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* CTA Buttons */}
             <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
               variants={itemVariants}
             >
@@ -1645,6 +1620,7 @@ const EnhancedHomepage: React.FC = () => {
               Explore Our Revolutionary Services
             </motion.h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1671,11 +1647,11 @@ const EnhancedHomepage: React.FC = () => {
             <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-            
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <motion.div
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            
             <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="flex flex-wrap justify-center gap-4 mb-12"
               variants={itemVariants}
             >
@@ -1700,6 +1676,7 @@ const EnhancedHomepage: React.FC = () => {
           </div>
         </motion.section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {_/* Services Grid */}
         <motion.section 
@@ -1717,27 +1694,21 @@ const EnhancedHomepage: React.FC = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Services Grid */}
         <motion.section
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Services Grid */}
         <motion.section 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
             <motion.div
-=======
             <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
             >
@@ -1868,6 +1839,7 @@ key={service && service.id}
           </div>
         </motion.section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {_/* Featured Service Showcase */}
         <motion.section 
@@ -1882,16 +1854,13 @@ key={service && service.id}
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Featured Service Showcase */}
         <motion.section
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Featured Service Showcase */}
         <motion.section 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
@@ -1906,6 +1875,7 @@ key={service && service.id}
               Featured Revolutionary Services
             </motion.h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
             
             <motion.div 
               className=&quot;bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8&quot;
@@ -1914,10 +1884,10 @@ key={service && service.id}
               <AnimatePresence mode=&quot;wait&quot;>
 =======
 <<<<<<< HEAD
-            <motion.div
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <motion.div
             <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}
             >
@@ -1955,6 +1925,7 @@ key={service && service.id}
                         </span>
                       ))}
                     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1962,6 +1933,10 @@ key={service && service.id}
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug |featuredServices[currentServiceIndex]?.id}`}>
+                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -2001,6 +1976,7 @@ key={service && service.id}
             >
               Ready to Transform Your Business?
             </motion.h2>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2146,23 +2122,24 @@ transition={{ duration: 0 && 0.5 }}
               Ready to Transform Your Business?
             </motion.h2>
 <<<<<<< HEAD
-            <motion.p
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <motion.p
             <motion.p 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
             >
               Join the future of technology with Zion Tech Group's revolutionary solutions.
               Get started today and experience the power of AI consciousness and quantum computing.
             </motion.p>
-<<<<<<< HEAD
             <motion.div
-=======
             <motion.div 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}>;
               <Link href="/quote">;
@@ -2433,14 +2410,7 @@ export default EnhancedHomepage;
           </div>
         </motion.section>
       </UltraFuturisticBackground>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Performance Monitor */}
       <AnimatePresence>
         {showPerformanceMonitor && (
@@ -2451,9 +2421,11 @@ export default EnhancedHomepage;
   )
 }
 export default EnhancedHomepage;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

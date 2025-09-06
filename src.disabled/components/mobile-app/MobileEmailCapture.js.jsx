@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,15 @@ const React,{ useState } from "react""";" import { Button } from "@/components/u
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+:src.disabled/components/mobile-app/MobileEmailCapture.js.jsx
+import React,{ useState } from \'react\''\';\' import { Button } from \'@/components/ui/button\''\';\' import { Input } from \'@/components/ui/input\'' import { useEnqueueSnackbar } from\';\';@/context\''; \"export\": const MobileEmailCapture = () => {\'';\' const [email,setEmail] = useState(\') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {\'';\';
+const React,{ useState } from "react""";" import { Button } from "@/components/ui/button""";" import { Input } from "@/components/ui/input"" import { useEnqueueSnackbar } from";";@/context""; export: const MobileEmailCapture = () => {"";" const [email,setEmail] = useState(") const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email | isSubmitting) return setIsSubmitting(true) try {"";";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React,{ useState } from \'react\''\';\' import { Button } from \'@/components/ui/button\''\';\' import { Input } from \'@/components/ui/input\'' import { useEnqueueSnackbar } from\';\';@/context\''; \"export\": const MobileEmailCapture = () => {\'';\' const [email,setEmail] = useState(\') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {\'';\';
+const React,{ useState } from "react""";" import { Button } from "@/components/ui/button""";" import { Input } from "@/components/ui/input"" import { useEnqueueSnackbar } from";";@/context""; export: const MobileEmailCapture = () => {"";" const [email,setEmail] = useState(") const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email | isSubmitting) return setIsSubmitting(true) try {"";";'"'"
+:temp_exclude/src.disabled/components/mobile-app/MobileEmailCapture.js.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
 =======
 =======

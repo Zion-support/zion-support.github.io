@@ -1,12 +1,15 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -14,17 +17,21 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./MetadataManager"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea";
 import { Plus, Trash2 } from 'lucide-react'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -39,14 +46,10 @@ interface ChangelogManagerProps {
   platform: AppPlatform;
 >>>>>>> }
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AppPlatform } from "./MetadataManager";
-=======
 import { AppPlatform } from "./MetadataManager",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
@@ -54,8 +57,11 @@ interface ChangelogManagerProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 type ChangelogEntry = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string
   version: string
   date: string
@@ -64,9 +70,12 @@ type ChangelogEntry = {
     })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string,
   version: string,
   date: string,
@@ -106,12 +115,16 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id))
   }
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -121,10 +134,13 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
   };
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -135,6 +151,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };  const handleRemoveEntry = (id: string,) => {
 >>>>>>>     setEntries(entries.filter(entry => entry.id !== id))
   }
@@ -161,23 +179,29 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./Metada
                 name="version"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 value = {newEntry.version,}
                 onChange = {handleInputChange,}
-=======
                 value={newEntry.version}
                 onChange={handleInputChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               />
               <Input
                 type="date"
                 name="date"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -191,19 +215,22 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./Metada
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 value = {newEntry.date,}
                 onChange = {handleInputChange,}
               />
             </div>
             <Button
               onClick = {handleAddEntry,}
-<<<<<<< HEAD
               disabled = {!newEntry.version |!newEntry.changes,}
-=======
               disabled = {!newEntry.version || !newEntry.changes,}
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -290,6 +317,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               disabled={!newEntry.version || !newEntry.changes}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>             >
@@ -301,6 +329,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
 >>>>>>>               <Plus className="mr-2 h-4 w-4" />
               Add
@@ -325,10 +355,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             name="changes"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             value = {newEntry.changes,}
             onChange = {handleInputChange,}
             rows = {3,}
@@ -338,11 +371,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div
                 key = {entry.id,}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             value={newEntry.changes}
             onChange={handleInputChange}
             rows={3}
@@ -353,11 +389,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div 
                 key={entry.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
 >>>>>>>               >
                 <div className="flex justify-between mb-2">
@@ -386,15 +425,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                     size="sm"
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-                    onClick = {(,) => handleRemoveEntry(entry.id),}
-=======
-                    onClick={() => handleRemoveEntry(entry.id)}
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    onClick = {(,) => handleRemoveEntry(entry.id),}
+                    onClick={() => handleRemoveEntry(entry.id)}
                     className="text-gray-400 hover:text-red-400 p-1 h-auto"
                   >
                     <Trash2 className="h-4 w-4" />
@@ -406,13 +442,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             {entries.length === 0 && (
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
             )}
-<<<<<<< HEAD
           </div>
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -440,17 +474,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -468,3 +505,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

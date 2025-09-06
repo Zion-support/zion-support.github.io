@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -43,17 +44,22 @@ import Button from '../components / ui / Button';
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
-=======
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -62,6 +68,8 @@ import {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Brain
   MessageSquare
   Image
@@ -77,8 +85,11 @@ import {
   TrendingUp
   Shield
   Globe;} from 'lucide-react';import {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Brain,
   MessageSquare,
   Image,
@@ -92,7 +103,6 @@ import {
   Check,
   ExternalLink,
   TrendingUp,
-<<<<<<< HEAD
   Shield,
 Globe,} from 'lucide-react';import {
   Brain;
@@ -106,12 +116,13 @@ Globe,} from 'lucide-react';import {
 <<<<<<< HEAD
   Shield,
   Globe,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   Shield,;
   Globe,;} from 'lucide-react';import { ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Brain;
   MessageSquare
   Image
@@ -1435,7 +1446,6 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
       useCase:
         'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.'
       pros: [
-<<<<<<< HEAD
         'Data-driven insights'
         'Content optimization'
         'Competitor analysis'
@@ -1444,7 +1454,6 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
       cons: ['Expensive', 'Complex interface', 'Steep learning curve']
       bestFor: 'SEO specialists, content marketers, businesses'
     }
-=======
         'Data-driven insights',
         'Content optimization',
         'Competitor analysis',
@@ -1453,7 +1462,6 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
       cons: ['Expensive', 'Complex interface', 'Steep learning curve'],
       bestFor: 'SEO specialists, content marketers, businesses',
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const categories = [
     'All'
@@ -1611,6 +1619,7 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1630,6 +1639,9 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {aiTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>AI Tools</div>
@@ -1930,11 +1942,10 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-<<<<<<< HEAD
-=======
 
               <button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1942,6 +1953,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -2279,14 +2292,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Tools Grid */}
       <section id='tools' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -2295,15 +2301,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               {selectedCategory === 'All'
                 ? 'All AI Tools'
                 : `${selectedCategory} Tools`}
-<<<<<<< HEAD
-=======
 
             </h2>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.'
@@ -2347,14 +2346,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {tool.description}
                     </p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -2413,6 +2405,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -2433,11 +2426,15 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* AI Benefits Section */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2461,6 +2458,9 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Why Choose AI Tools?
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -2578,6 +2578,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
         </div>
       </section>
     </>
+<<<<<<< HEAD
 
 }
 =======
@@ -2931,12 +2932,10 @@ className='border-white text-white hover:bg-white hover:text-green-600 shadow-2x
     </>);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -2944,10 +2943,13 @@ className='border-white text-white hover:bg-white hover:text-green-600 shadow-2x
 =======
 
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

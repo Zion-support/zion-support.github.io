@@ -14,19 +14,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -48,6 +48,8 @@ function ReferralGuide() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ReferralGuide() {
 
   const steps = [
@@ -56,6 +58,7 @@ export function ReferralGuide() {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/referrals/ReferralGuide.tsx
 
@@ -88,23 +91,20 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "They sign up"
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
       title: "They complete onboarding"
       description: "Once they complete their profile setup, your referral is confirmed"}
-=======
       title: "They sign up",;
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"},
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
       title: "They complete onboarding",
       description: "Once they complete their profile setup, your referral is confirmed"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       title: "You earn rewards"
       description: "Rewards are issued based on the type of user who completes onboarding"}]
@@ -129,6 +129,7 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -142,16 +143,14 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/referrals/ReferralGuide.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function ReferralGuide() {;
@@ -301,11 +300,10 @@ export function ReferralGuide() {;
           {steps.map((step, index) => (;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

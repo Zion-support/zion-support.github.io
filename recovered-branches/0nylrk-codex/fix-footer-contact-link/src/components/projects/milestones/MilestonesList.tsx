@@ -8,9 +8,7 @@
 
 =======
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { useAuth  } from '@/hooks/useAuth';
 import { MilestoneCard  } from './MilestoneCard';
@@ -21,8 +19,11 @@ import { Card, CardContent  } from '@/components/ui/card';
 import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
 import {MilestoneCard} from './MilestoneCard';
@@ -57,6 +58,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   onUploadDeliverable;
   isSubmitting;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -64,6 +66,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -89,6 +93,7 @@ interface MilestonesListProps {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -96,6 +101,8 @@ interface MilestonesListProps {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
@@ -111,6 +118,7 @@ interface MilestonesListProps {;
   onReject?: (id: string) => Promise<void>
 }
 export const MilestonesList: React.FC<MilestonesListProps> = ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -176,6 +184,8 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   is_loading;
   is_client;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   milestones;
   activities;
   isLoading;
@@ -196,8 +206,11 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   onReject
 }) => {
   const [showAddForm, setShowAddForm] = useState(false);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   milestones,
   activities,
   isLoading,
@@ -208,11 +221,14 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   onUploadDeliverable,
   isSubmitting,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onApprove,
   onReject
 }) => {
@@ -225,6 +241,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 
 =======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleSubmit = async (data: any) => {
@@ -234,12 +251,19 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 <<<<<<< HEAD
 
 =======
-  }
 =======
+  const handleSubmit = async (data: any) => {
+    await onCreateMilestone(data)
+    setShowAddForm(false)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -255,6 +279,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -354,6 +379,9 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
@@ -401,6 +429,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -447,8 +476,9 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       {isClient && !showAddForm && (
@@ -464,6 +494,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -536,10 +567,10 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
             projectId={milestone.projectid}
 =======
 <<<<<<< HEAD
-            <AddMilestoneForm
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <AddMilestoneForm
             <AddMilestoneForm 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
@@ -547,10 +578,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
           </CardContent>
         </Card>
       )}
-<<<<<<< HEAD
-=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="space-y-4">
         {milestones.map((milestone) => (
           <MilestoneCard
@@ -731,23 +759,17 @@ if ( {) {
             onReject={onReject}
           />
         ))}
-<<<<<<< HEAD
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,6 +9,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
  const observer = new IntersectionObserver ( ([entry]) => {
 =======
 
@@ -32,28 +36,36 @@
   useEffect(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     if (!lazy |priority |isInView) return
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-    if (!lazy |priority |isInView) return
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    if (!lazy |priority |isInView) return
     if (!lazy || priority || isInView) return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const observer = new IntersectionObserver(
       ([entry],) => {
         if (entry && entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { cn } from '@/lib/utils',;
@@ -121,21 +133,11 @@ if (||) {
         if (entry && entry.isIntersecting) {;
           setIsInView(true),;
           observer.disconnect();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
-<<<<<<< HEAD
       {
         rootMargin: '50px', // Start loading 50px before the image enters viewport
       }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     )
     if (imgRef.current) {
       observer.observe(imgRef.current)
@@ -208,6 +210,7 @@ if (||) {
   // Generate blur placeholder
   const generateBlurDataURL = () => {
     if (blurDataURL) return blurDataURL
+<<<<<<< HEAD
 
 =======
 >>>>>>>         }
@@ -228,6 +231,11 @@ if (||) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    // Generate a simple gray blur placeholder
+    return `data:image/svg+xml;base64,${Buffer.from(
+      `<svg width="${width |400}" height="${height |300}" xmlns="http://www.w3.org/2000/svg">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ),;
     if (imgRef.current) {;
       observer.observe(imgRef.current);
@@ -284,14 +292,9 @@ if (||) {
             <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:1" />
 =======
     
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />
@@ -349,12 +352,10 @@ if (||) {
     // For internal images, Next && Next.js will handle optimization;
 =======
     ).toString('base64')}`
-<<<<<<< HEAD
   }
     >
       {isInView && !hasError && (
         <Image
-=======
   },
 
   return (
@@ -430,11 +431,6 @@ if (return blurDataURL) {
 >>>>>>>           alt={alt}
 =======
         <Image;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           src={getOptimizedSrc(src)}
           alt={alt}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -446,6 +442,7 @@ if (return blurDataURL) {
           }
           onLoad={handleLoad}
           onError={handleError}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -479,18 +476,22 @@ if (return blurDataURL) {
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
-          className={cn(            'transition-opacity duration-300'
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          className={cn(            'transition-opacity duration-300'
           className={cn(            'transition-opacity duration-300',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             isLoading ? 'opacity-0' : 'opacity-100'
           ),}
-=======
           className={cn(;
             'transition-opacity duration-300',;
             isLoading ? 'opacity-0' : 'opacity-100';
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -504,10 +505,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {...props}
         />
       )}
       {/* Loading placeholder */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -524,16 +528,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           {fallbackSrc ? (;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {isLoading && isInView && (
         <div className='absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse' />
-=======
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
       {/* Error fallback */}
       {hasError && (
@@ -545,10 +545,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               alt={alt}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className='max-w-full max-h-full object-contain'
               onLoad={handleLoad}            />
           ) : (
@@ -565,6 +568,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 />
               </svg>
               <span className='text-xs'>Image not available</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -677,6 +681,8 @@ function OptimizedComponent() {
     return <OptimizedImage src={src} alt={alt} {...(other_props as any)} />;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="max-w-full max-h-full object-contain"
               onLoad={handleLoad}
             />
@@ -694,18 +700,12 @@ function OptimizedComponent() {
                 />
               </svg>
               <span className="text-xs">Image not available</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           )}
         </div>
       )}
       {/* Lazy loading placeholder */}
       {!isInView && lazy && !priority && (
-<<<<<<< HEAD
         <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800' />
       )}
     </div>
@@ -743,11 +743,7 @@ export function getImageDimensions(;
     img.src = src
   })
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
       )}
     </div>;
@@ -802,8 +798,11 @@ export function getImageDimensions(src: string): Promise<{ width: number, height
   });
 } ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

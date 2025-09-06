@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function FAQ({ items }: Props) {
@@ -75,25 +74,21 @@ type Props = { items: QA[] };
 import React from "react";
 type QA = { q: string; a: string }
 type Props = { items: QA[] }
-=======
 import React from "react";
 type QA = { q: string; a: string };
 type Props = { items: QA[] };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function FAQ({ items }: Props) {
   if (!items |items.length === 0) return null;
 
-=======
-<<<<<<< HEAD
 export default function FAQ({ items }: Props) {;
-=======
 export default function FAQ({ items }: Props) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!items || items.length === 0) return null;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
@@ -172,10 +167,11 @@ if (return null) {
 =======
 =======
   );
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

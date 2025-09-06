@@ -1,15 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:services/aiMarketResearchService.ts
 
 =======
 <<<<<<< HEAD
-export interface MarketTrend {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface MarketTrend {
 export interface MarketTrend {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   keyword: string;
   searchVolume: number;
@@ -51,12 +56,9 @@ export interface CompetitorAnalysis {
 
   timestamp: Date
 }
-<<<<<<< HEAD
 export interface CompetitorAnalysis {
-=======
 
 export interface CompetitorAnalysis {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   competitorName: string;
   website: string;
@@ -116,12 +118,9 @@ export interface MarketReport {
 
   lastUpdated: Date
 }
-<<<<<<< HEAD
 export interface MarketSegment {
-=======
 
 export interface MarketSegment {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   size: number;
@@ -134,13 +133,14 @@ export interface MarketSegment {;
 
   solutions: string[]
 }
-<<<<<<< HEAD
 export interface MarketReport {
-=======
 
 export interface MarketReport {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   industry: string;
@@ -197,12 +197,9 @@ export interface MarketResearchResponse {
 
   expiresAt: Date
 }
-<<<<<<< HEAD
 export interface MarketResearchRequest {
-=======
 
 export interface MarketResearchRequest {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   industry: string;
   targetMarket: string;
   researchType: 'trends' | 'competitors' | 'segments' | 'comprehensive';
@@ -212,13 +209,14 @@ export interface MarketResearchRequest {;
 
   customMetrics?: string[]
 }
-<<<<<<< HEAD
 export interface MarketResearchResponse {
-=======
 
 export interface MarketResearchResponse {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   success: boolean;
   data: {
     trends?: MarketTrend[];
@@ -245,13 +243,14 @@ export interface MarketResearchResponse {;
 
   estimatedROI: number
 }
-<<<<<<< HEAD
 export class AIMarketResearchService {
-=======
 
 export class AIMarketResearchService {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   private apiKey: string;
 
   private baseUrl: string
@@ -565,12 +564,13 @@ export const aiMarketResearchService = new AIMarketResearchService(process.env.M
 <<<<<<< HEAD
 =======
 
-=======
-<<<<<<< HEAD
 export interface MarketTrend {;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string,;
   keyword: string,;
   searchVolume: number,;
@@ -1214,6 +1214,7 @@ export class AIMarketResearchService {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key'),; async analyzeMarketTrends (request: MarketResearchRequest) : Promise<MarketTrend[]> {
   try {
   const response = await fetch (`$ {
@@ -1300,3 +1301,6 @@ body: JSON.stringify (request)
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

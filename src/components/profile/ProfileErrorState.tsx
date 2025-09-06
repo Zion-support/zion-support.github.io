@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from 'react',
@@ -19,28 +20,23 @@ xport function ProfileErrorState({ error }: ProfileErrorStateProps) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 interface ProfileErrorStateProps {
   error: string | null
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from 'react',
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft } from 'lucide-react'
 interface ProfileErrorStateProps {
   error: string | null
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
@@ -51,6 +47,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
       <Button asChild>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -59,6 +56,8 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Link
           href='/talents'
           className='bg-zion-purple hover:bg-zion-purple-dark'
@@ -78,10 +77,13 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
       <Button asChild>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
 import { ArrowLeft } from 'lucide-react'
@@ -96,6 +98,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
       <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>
       <Button asChild>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -105,6 +108,8 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">
 =======
 >>>>>>>         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">
@@ -113,6 +118,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
           Back to Talent Directory
         </Link>
       </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -147,20 +153,16 @@ export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
 import React from 'react';
 import { Button } from "@/components/ui/button";
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 };
 }
 }
-=======
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -186,6 +188,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -198,3 +201,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,6 +10,8 @@ import { ServiceVariant } from '../types / service - variants';
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -64,6 +67,7 @@ import { ServiceVariant } from '../types/service-variants';
 
 ;
 const contact = {
+<<<<<<< HEAD
 =======
 
 
@@ -79,19 +83,25 @@ const contact = {
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -101,6 +111,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -185,11 +197,14 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'An advanced AI system that autonomously analyzes, optimizes, and executes business processes across all departments. Continuously learns and improves without human oversight.'
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Autonomous process discovery and mapping'
       'Real-time optimization algorithms'
       'Cross-departmental coordination'
@@ -208,8 +223,11 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     link: 'https://ziontechgroup.com/ai-autonomous-business-processor'
     marketPosition:
       'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.'
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Autonomous process discovery and mapping',
       'Real-time optimization algorithms',
       'Cross-departmental coordination',
@@ -246,8 +264,11 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     link: 'https://ziontechgroup.com/ai-autonomous-business-processor',
     marketPosition:;
       'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     targetAudience: [
       'Enterprise companies'
       'manufacturing'
@@ -962,7 +983,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     rating: 4 && 4.9,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     reviews: 267
-<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1239,9 +1259,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 =======
 =======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;
@@ -1480,12 +1497,11 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     customers: 198,;
     rating: 4.9;
     reviews: 267;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

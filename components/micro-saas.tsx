@@ -5475,10 +5475,7 @@ export default function MicroSaasPage() {;
       impact: 'High'
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const categories = [...new Set(microSaasServices.map(service => service.category))];
   const competitiveAdvantages = [
     {
@@ -5856,14 +5853,7 @@ export default function MicroSaasPage() {;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
@@ -5923,15 +5913,16 @@ export default function MicroSaasPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Competitive Advantages */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -5979,6 +5970,7 @@ export default function MicroSaasPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
 =======
 
@@ -5988,6 +5980,9 @@ export default function MicroSaasPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Detailed Services */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -6199,14 +6194,7 @@ export default function MicroSaasPage() {;
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Pricing */}
                   <div>
                     <h4 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -6317,14 +6305,7 @@ export default function MicroSaasPage() {;
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Market Data */}
                 <div className="mt-8 bg-blue-900/20 border border-blue-500/20 rounded-lg p-6">
                   <h4 className="text-xl font-bold text-blue-400 mb-4 flex items-center">
@@ -6439,14 +6420,7 @@ export default function MicroSaasPage() {;
 =======
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* CTA */}
                 <div className="mt-8 text-center">
                   <Button
@@ -6463,14 +6437,7 @@ export default function MicroSaasPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
@@ -6682,18 +6649,14 @@ export default function MicroSaasPage() {;
         </div>
       </section>
     </>
-<<<<<<< HEAD
 );
+  );
+}
 <<<<<<< HEAD
-=======
-=======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-=======
-  );
-}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

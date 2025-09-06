@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 const [isSubmitting, setIsSubmitting] = useState (false);
@@ -270,15 +268,9 @@ setSubmitSuccess (true);
 <<<<<<< HEAD
 
 const [isSubmitting, setIsSubmitting] = useState (false);
-=======
  const [isSubmitting, setIsSubmitting] = useState (false);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 const [isSubmitting, setIsSubmitting] = useState (false);
-=======
  const [isSubmitting, setIsSubmitting] = useState (false);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029.filter (s => s.popular);
 ...quantumSpaceInnovations2029.filter (s => s.popular);
@@ -299,16 +291,9 @@ setSubmitSuccess (true);
 }</div> </div> </div> </motion.div>) )
 }</motion.div> </div> </section> <motion.div initial= {
   {
-<<<<<<< HEAD
   opacity: 0, x: -30
-=======
   opacity: 0, x: -30 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }whileInView= {
   {
   opacity: 1, x: 0
@@ -1499,23 +1484,17 @@ export default function ContactPage() {
   service.id
 }initial= {
   {
-<<<<<<< HEAD
   opacity: 0, y: 20
-=======
   opacity: 0, y: 20 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }whileInView= {
   {
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
   duration: 0.6, delay: index * 0.1
-=======
   duration: 0.6, delay: index * 0.1 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }viewport= {
   {
   once: true
@@ -1562,12 +1541,9 @@ export default function ContactPage() {
   /* Why Choose Us Section */
 }<section className="py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-4xl mx-auto text-center"> <motion.div initial= {
   {
-<<<<<<< HEAD
   opacity: 0, y: 30
-=======
   opacity: 0, y: 30 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -1880,6 +1856,7 @@ export default function ContactPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {_/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -1892,12 +1869,9 @@ export default function ContactPage() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -1916,6 +1890,7 @@ export default function ContactPage() {
                 Explore some of our most sought-after 2029 technology solutions
               </p>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1939,12 +1914,9 @@ export default function ContactPage() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
@@ -1960,14 +1932,7 @@ export default function ContactPage() {
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <span className="text-2xl">{service.icon}</span>
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Popular Badge */}
                     {service.popular && (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1976,6 +1941,7 @@ export default function ContactPage() {
                         <span className="text-sm text-yellow-400 font-medium">Popular</span>
                       </div>
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     {_/* Service Title and Tagline */}
@@ -2001,34 +1967,21 @@ export default function ContactPage() {
                       <span className="text-sm text-gray-400">Trial: {_service.trialDays} days</span>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {/* Service Title and Tagline */}
                     <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                     <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>
-=======
 
                     {/* Service Title and Tagline */}
                     <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                     <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>
-<<<<<<< HEAD
-=======
                     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Description */}
                     <p className="text-gray-300 leading-relaxed mb-4 line-clamp-3">
                       {service.description}
                     </p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Price */}
                     <div className="mb-4">
                       <span className={`${service.textColor} font-semibold text-lg`}>
@@ -2036,14 +1989,7 @@ export default function ContactPage() {
                       </span>
                       <span className="text-gray-400 text-sm">{service.period}</span>
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* CTA */}
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-400">Setup: {service.setupTime}</span>
@@ -2057,6 +2003,7 @@ export default function ContactPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {_/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -2069,12 +2016,9 @@ export default function ContactPage() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -2137,19 +2081,17 @@ export default function ContactPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-<<<<<<< HEAD
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ),
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 ;
 }
 }
@@ -2164,8 +2106,11 @@ export default function ContactPage() {
 }
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

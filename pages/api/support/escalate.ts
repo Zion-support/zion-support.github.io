@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -38,9 +39,9 @@ function handler() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
 import { tagOperatorSession } from "../../../utils/operator";
@@ -80,6 +81,7 @@ export default async function handler(
   await tagOperatorSession(sessionId, tag ?? "escalate");
   return res.status(200).json({ ok: true, id });
 }
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
@@ -156,15 +158,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Session escalated' });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 import { tagOperatorSession } from '../../../utils/operator';
@@ -180,15 +180,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession(sessionId, tag ?? 'escalate');
   return res.status(200).json({ ok: true, id })
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

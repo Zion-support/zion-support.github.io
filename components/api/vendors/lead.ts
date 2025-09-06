@@ -6,16 +6,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 import { addPipelineItem, getVendorById } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 
   if (req.method !== 'POST')
-=======
   if (req.method !== 'POST');
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return res.status(405).json({ error: 'Method not allowed' });
   const { vendorId, title } = req.body |{}
   if (!vendorId |!title)

@@ -1,22 +1,28 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SEO } from '@/components/SEO'
 import { GradientHeading } from '@/components/GradientHeading'
 import { Button } from '@/components/ui/button'
 import { Leaf, Server, Cloud } from 'lucide-react'
 import Link from 'next/link'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -24,21 +30,27 @@ import { Button } from "@/components/ui/button";
 import { Leaf, Server, Cloud } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-import Link from "next/link";
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import Link from "next/link";
 import Link from "next/link",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function GreenIT() {
 
   const greenITSolutions = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -50,6 +62,8 @@ xport default function GreenIT() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: 'Energy-Efficient Hardware'
       description:
         'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.'
@@ -68,6 +82,7 @@ xport default function GreenIT() {
       icon: Leaf
     }
   ]
+<<<<<<< HEAD
       title: 'Renewable Energy Integration',
       description:
         'Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.',
@@ -87,6 +102,8 @@ xport default function GreenIT() {
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
       icon: Server},
@@ -95,27 +112,17 @@ xport default function GreenIT() {
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
       icon: Cloud},
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       title: 'Renewable Energy Integration',
       description:
         'Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.',
       icon: Leaf,
     },
   ]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       title: "Renewable Energy Integration",
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
   ],
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
@@ -133,6 +140,7 @@ xport default function GreenIT() {
               Sustainable technology solutions that reduce environmental impact without compromising performance
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -163,10 +171,16 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <div className='mb-16'>
+            <div className='bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -201,6 +215,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
                   <p className="text-zion-slate-light text-lg mb-6">
@@ -213,7 +229,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                     for reducing your carbon footprint.
                   </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='mt-8'>
                     <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>                      Explore Green IT Solutions
                     </Button>
@@ -413,6 +432,7 @@ export default function GreenIT() {;
                     for reducing your carbon footprint.
                   </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                   <div className="mt-8">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -422,6 +442,8 @@ export default function GreenIT() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className="mt-8">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
@@ -429,6 +451,7 @@ export default function GreenIT() {;
                     </Button>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -441,6 +464,8 @@ export default function GreenIT() {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='rounded-lg overflow-hidden relative w-full h-full'>
                   <img
                     src='https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80'
@@ -449,6 +474,7 @@ export default function GreenIT() {;
                 </div>
               </div>
             </div>                <div className="rounded-lg overflow-hidden relative w-full h-full">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   <img
                     src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
@@ -471,10 +497,14 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                <div className="rounded-lg overflow-hidden relative w-full h-full">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <img
                     src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
                     alt="Green IT sustainability"
                     className="object-cover"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -943,6 +973,8 @@ export default function GreenIT (...args: unknown[]): unknown {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </div>
             </div>
@@ -1418,7 +1450,6 @@ export default function GreenIT(...args: unknown[]): unknown {
         'Meet compliance requirements'
         'Enhance stakeholder communication'
         'Track progress toward goals'
-<<<<<<< HEAD
       ]
       savings: 'Time and resource savings'
       implementation: '6 - 8 weeks'
@@ -1426,8 +1457,11 @@ export default function GreenIT(...args: unknown[]): unknown {
 }
   ]
 export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ],
       savings: 'Time and resource savings',
       implementation: '6 - 8 weeks',
@@ -1442,7 +1476,6 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [selectedCategory, setSelectedCategory] = useState('all')}
@@ -2076,11 +2109,14 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                     <p className="text-zion-slate-light text-center">{solution.description}</p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   />
                 </div>
               </div>
@@ -2090,6 +2126,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2103,6 +2140,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {greenITSolutions.map((solution, index) => (
 >>>>>>>                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
                     <div className="flex justify-center mb-4">
@@ -2115,8 +2154,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='mb-16'>
               <h2 className='text-2xl font-bold text-white mb-6'>
                 Why Choose Green IT?
@@ -2151,6 +2193,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       • Compliance with emerging environmental regulations
                     </li>                    <li>• Improved operational efficiency and performance</li>                    <li>• Lower energy consumption and resource utilization</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     <li>• Decreased electronic waste through better lifecycle management</li>
                     <li>• Support for renewable energy initiatives</li>
                   </ul>
@@ -2160,6 +2203,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>
@@ -2171,15 +2216,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <li>• Reduced carbon footprint and greenhouse gas emissions</li>
                     <li>• Lower energy consumption and resource utilization</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <li>• Decreased electronic waste through better lifecycle management</li>
                     <li>• Support for renewable energy initiatives</li>
                   </ul>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2200,6 +2249,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
 >>>>>>>                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
                   <ul className="text-zion-slate-light space-y-2">
@@ -2213,9 +2265,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
               Ready to implement Green IT solutions?
@@ -2237,6 +2292,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>
               <Link href="/contact">Contact Our Team</Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </div>
@@ -2252,6 +2308,8 @@ export { GreenIT, GreenIT }
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>
@@ -2262,11 +2320,14 @@ export { GreenIT, GreenIT }
               <Link href="/contact">Contact Our Team</Link>
             </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       </main>
@@ -2367,7 +2428,6 @@ export { GreenIT, GreenIT }
 
 =======
   )
-<<<<<<< HEAD
 "                    {expandedSection === solution.id && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}'
@@ -2586,14 +2646,10 @@ export { GreenIT }
 export { GreenIT }
 export { GreenIT }
 export { GreenIT }
-<<<<<<< HEAD
 export { GreenIT, GreenIT }
 }
-=======
 export { GreenIT, GreenIT };
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { SEO } from "@/components/SEO",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -2794,8 +2850,11 @@ export { GreenIT, GreenIT }
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

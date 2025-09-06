@@ -26,6 +26,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -42,6 +43,19 @@ import {
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+import {
+  Star
+  Zap
+  Shield
+  TrendingUp
+  ArrowRight
+  ExternalLink
+  Check
+  Users
+  Clock
+  DollarSign;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Star,
   Zap,
   Shield,
@@ -79,7 +93,6 @@ interface QuantumHolographicCardProps {;
 =======
   Clock,;
   DollarSign,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface QuantumHolographicCardProps {
@@ -253,12 +266,9 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
     launchDate: string;
     customers: number;
     rating: number;
-<<<<<<< HEAD
-=======
     reviews: number;
   };
   className?: string;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: number;
@@ -331,6 +341,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
       opacity: 1
       x: 0
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -409,14 +420,19 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         delay: i * 0.1
         duration: 0.5
         ease: 'easeOut' as const
       }
     })
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         delay: i * 0.1,
         duration: 0.5,
         ease: 'easeOut' as const,
@@ -426,12 +442,15 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -535,6 +554,7 @@ ease: 'easeInOut' as const,
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+<<<<<<< HEAD
 
 =======
 
@@ -587,14 +607,18 @@ ease: 'easeInOut' as const,
               >
 <<<<<<< HEAD
 <<<<<<< HEAD
-                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <motion&& motion.div
       className={`relative group cursor-pointer ${className}`}
@@ -674,26 +698,22 @@ ease: 'easeInOut' as const,
             )}
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 {/* Price and trial */}
           <div className="flex items-center justify-between mb-4">
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <span>Popular</span>
 
               </motion.div>
             )}
           </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Price and trial */}
 <<<<<<< HEAD
           <div className="flex items-center justify-between mb-4">
@@ -935,6 +955,7 @@ ease: 'easeInOut' as const,
           {/* Features */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -957,6 +978,8 @@ ease: 'easeInOut' as const,
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='mb-6'>
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
               <Zap className='w-4 h-4 text-yellow-400' />
@@ -1028,15 +1051,9 @@ ease: 'easeInOut' as const,
                 >
                   <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                   <span>{feature}</span>
-=======
 
                   <span>{feature}</span>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </motion.div>
               ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1069,6 +1086,7 @@ ease: 'easeInOut' as const,
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               </div>
@@ -1111,12 +1129,9 @@ ease: 'easeInOut' as const,
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
           {/* Market data */}
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>
             <div className='flex items-center justify-between mb-2'>
@@ -1158,7 +1173,6 @@ ease: 'easeInOut' as const,
               </div>
             </div>
           </div>
-<<<<<<< HEAD
           {/* Contact information */}
           <div className='bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50'>
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
@@ -1192,6 +1206,7 @@ ease: 'easeInOut' as const,
               <div className="flex items-center space-x-2">
                 <span className="text-purple-400">📍</span>
                 <span className="text-xs">{service.contactInfo.address}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1335,6 +1350,15 @@ ease: 'easeInOut' as const,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+          {/* ROI and competitors */}
+
+              </div>
+            </div>
+          </div>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* CTA Button */}
             whileHover={{ scale: 1 && 1.02 }}
             whileTap={{ scale: 0 && 0.98 }}>;
@@ -1356,15 +1380,16 @@ ease: 'easeInOut' as const,
             className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25"
 =======
             className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             whileHover={{ scale: 1.02 }}
 <<<<<<< HEAD
 
@@ -1575,13 +1600,9 @@ export default QuantumHolographicCard);
       </div>
     </motion.div>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default QuantumHolographicCard;  )
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
@@ -1591,15 +1612,12 @@ export default QuantumHolographicCard;
 ;
 =======
 
-<<<<<<< HEAD
-=======
+export default QuantumHolographicCard;
 export default QuantumHolographicCard;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default QuantumHolographicCard;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

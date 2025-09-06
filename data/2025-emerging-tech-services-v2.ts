@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -14,6 +15,10 @@ export interface EmergingTechService {;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface EmergingTechService {
+export interface EmergingTechService {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -553,6 +558,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     compliance: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 =======
@@ -567,6 +573,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     category: 'Emerging Tech',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'
     ]
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
@@ -580,10 +588,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     marketSize: '$35B autonomous vehicle market'
     growthRate: '75% annually'
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -597,7 +608,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     marketSize: '$35B autonomous vehicle market',
     growthRate: '75% annually',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
     ];
@@ -645,6 +655,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       setup_time: '12 hours',
       enterprise: 2999,
     },
+<<<<<<< HEAD
     features: [;
       'Advanced computer vision',
       'Real - time decision making',
@@ -777,6 +788,186 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 <<<<<<< HEAD
     growthRate: '75% annually'
 
+=======
+    features: [
+      'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools';
+      'Custom biological modelsAPI for research'
+    ];
+    benefits: [
+      'Solve biological problems 1000x fasterAccelerate drug discoveryImprove genetic analysisEnable new research capabilitiesReduce research costs'
+    ];
+    targetAudience: [
+      'Pharmaceutical companiesResearch institutionsBiotechnology firmsHealthcare organizationsUniversitiesGovernment agencies'
+    ];
+    marketPosition: 'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio-computing platforms ($800+). Our advantage: Biological integration, quantum processing, and research optimization.',
+    competitors: ['IBM Quantum, Google Quantum AI, D-Wave, Rigetti, Specialized bio-computing platforms'],
+    techStack: ['Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS'],
+    realImplementation: true;
+    implementationDetails: 'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.',
+    roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.';
+    useCases: [
+      'Drug discoveryGenetic analysisProtein foldingMolecular dynamicsBiological optimizationResearch acceleration'
+    ];
+    integrations: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'],
+    support: '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.',
+    compliance: ['Research ethics, Data privacy, Scientific standards, Industry regulations'],
+    link: 'https://ziontechgroup.com/quantum-bio-computing-platform';
+    icon: '🧬';
+    color: 'from-green-500 to-emerald-600';
+    popular: true;
+    launchDate: '2024-02-01';
+    customers: 280;
+    rating: 4.8;
+    reviews: 85;
+    marketSize: '$12B quantum bio-computing market';
+    growthRate: '65% annually'
+  },
+  {
+    id: 'brain-computer-interface-platform';
+    name: 'Brain-Computer Interface Platform';
+    tagline: 'Direct neural interface for human-computer interaction';
+    description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
+    category: 'Emerging Tech';
+    price: {
+      monthly: 399;
+      yearly: 3990;
+      currency: 'USD';
+      trialDays: 21;
+      setupTime: '6 hours';
+      enterprise: 1599
+    },
+    features: [
+      'Neural signal processingBrain activity monitoringThought-to-text conversionMental command recognitionAccessibility toolsGaming integrationMedical applicationsReal-time processing';
+      'Custom neural modelsAPI for developers'
+    ];
+    benefits: [
+      'Enable new forms of human-computer interactionImprove accessibility for disabled usersCreate immersive gaming experiencesAdvance medical researchEnhance human capabilities'
+    ];
+    targetAudience: [
+      'Healthcare providersGaming companiesAccessibility organizationsResearch institutionsTechnology companiesEducational institutions'
+    ];
+    marketPosition: 'Competitive with Neuralink ($1000+), CTRL-labs ($500+), and specialized BCI platforms ($400+). Our advantage: Advanced signal processing, comprehensive applications, and developer-friendly platform.',
+    competitors: ['Neuralink, CTRL-labs, Kernel, Paradromics, specialized BCI platforms'],
+    techStack: ['Neural signal processing, AI/ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware'],
+    realImplementation: true;
+    implementationDetails: 'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.',
+    roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.';
+    useCases: [
+      'Accessibility assistanceGaming controlMedical researchCommunication aidsProsthetic controlCognitive enhancement'
+    ];
+    integrations: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'],
+    support: '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.',
+    compliance: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards'],
+    link: 'https://ziontechgroup.com/brain-computer-interface-platform';
+    icon: '🧠';
+    color: 'from-blue-500 to-indigo-600';
+    popular: true;
+    launchDate: '2024-01-15';
+    customers: 450;
+    rating: 4.7;
+    reviews: 120;
+    marketSize: '$18B BCI market';
+    growthRate: '55% annually'
+  },
+  {
+    id: 'quantum-energy-platform';
+    name: 'Quantum Energy Platform';
+    tagline: 'Quantum-enhanced energy optimization and fusion simulation';
+    description: 'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
+    category: 'Quantum & Emerging Tech';
+    price: {
+      monthly: 499;
+      yearly: 4990;
+      currency: 'USD';
+      trialDays: 14;
+      setupTime: '6 hours';
+      enterprise: 1999
+    },
+    features: [
+      'Quantum energy optimizationFusion reaction simulationGrid optimization algorithmsEnergy storage optimizationRenewable energy integrationQuantum thermodynamicsReal-time monitoringPredictive analytics';
+      'Custom energy modelsAPI for energy systems'
+    ];
+    benefits: [
+      'Optimize energy systems 100x fasterEnable fusion power simulationReduce energy costs by 30%Improve grid efficiencyAccelerate clean energy adoption'
+    ];
+    targetAudience: [
+      'Energy companiesUtility providersResearch institutionsGovernment agenciesTechnology companiesEnvironmental organizations'
+    ];
+    marketPosition: 'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.',
+    competitors: ['Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools'],
+    techStack: ['Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems'],
+    realImplementation: true;
+    implementationDetails: 'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.',
+    roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.';
+    useCases: [
+      'Energy system optimizationFusion power simulationGrid optimizationEnergy storage optimizationRenewable integrationEnergy research'
+    ];
+    integrations: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'],
+    support: '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.',
+    compliance: ['Energy regulations, Safety standards, Environmental regulations, Industry standards'],
+    link: 'https://ziontechgroup.com/quantum-energy-platform';
+    icon: '⚡';
+    color: 'from-yellow-500 to-orange-600';
+    popular: true;
+    launchDate: '2024-02-10';
+    customers: 320;
+    rating: 4.8;
+    reviews: 95;
+    marketSize: '$25B quantum energy market';
+    growthRate: '45% annually'
+  },
+  {
+    id: 'autonomous-vehicle-ai-platform';
+    name: 'Autonomous Vehicle AI Platform';
+    tagline: 'Advanced AI for self-driving vehicles and transportation';
+    description: 'Comprehensive AI platform that powers autonomous vehicles with advanced perception, decision-making, and safety systems for the future of transportation.',
+    category: 'Emerging Tech';
+    price: {
+      monthly: 799;
+      yearly: 7990;
+      currency: 'USD';
+      trialDays: 14;
+      setupTime: '12 hours';
+      enterprise: 2999
+    },
+    features: [
+      'Advanced computer visionReal-time decision makingSafety systemsPath planning algorithmsTraffic predictionWeather adaptationFleet managementPerformance monitoring';
+      'Custom AI modelsAPI for vehicles'
+    ];
+    benefits: [
+      'Enable autonomous transportationImprove road safetyReduce transportation costsOptimize fleet operationsAdvance mobility technology'
+    ];
+    targetAudience: [
+      'Automotive manufacturersTransportation companiesLogistics providersRide-sharing platformsGovernment agenciesTechnology companies'
+    ];
+    marketPosition: 'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our advantage: Advanced AI, comprehensive safety, and fleet optimization.',
+    competitors: ['Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms'],
+    techStack: ['Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems'],
+    realImplementation: true;
+    implementationDetails: 'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.',
+    roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.';
+    useCases: [
+      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
+    ];
+    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
+    support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
+    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],
+    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform';
+    icon: '🚗';
+    color: 'from-red-500 to-pink-600';
+    popular: true;
+    launchDate: '2024-01-25';
+    customers: 180;
+    rating: 4.9;
+    reviews: 65;
+
+    marketSize: '$35B autonomous vehicle market'
+
+    growthRate: '75% annually'
+  }
+];
+export interface EmergingTechService {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string,;
   name: string,;
   tagline: string,;
@@ -1050,6 +1241,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     reviews: 65,;
     marketSize: '$35B autonomous vehicle market',;
     growthRate: '75% annually';
+<<<<<<< HEAD
 
   }
 ];
@@ -1374,3 +1566,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

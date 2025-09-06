@@ -5,18 +5,20 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { PortfolioProject  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addPortfolioSection(
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -24,6 +26,8 @@ export function addPortfolioSection(;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   doc: jsPDF;
   projects: PortfolioProject[];
   colors: PdfThemeColors;
@@ -173,8 +177,11 @@ if (projects && projects.length === 0) return startY;
       if (project.demo_url) {
         doc.text(`Demo: ${project.demo_url}`, 20, yPos);
         yPos += 4
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { jsPDF } from 'jspdf',;
 import { PortfolioProject } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -241,6 +248,7 @@ export function addPortfolioSection(;
         doc.text(`Demo: ${project.demo_url}`, 20, yPos),;
         yPos += 4;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -253,10 +261,13 @@ export function addPortfolioSection(;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
     yPos += 10, // Add space between projects
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
 
@@ -318,8 +329,9 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // If there are more projects than we're displaying
   if (projects.length > maxProjects) {
     doc.setFontSize(10);
@@ -327,14 +339,16 @@ if ( {) {
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
 
     yPos += 6
-<<<<<<< HEAD
   }
   return yPos + 5
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
@@ -342,6 +356,7 @@ if ( {) {
     doc.setTextColor(colors.text);
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -559,10 +574,15 @@ yPos += 4
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 ;
   return yPos + 5;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

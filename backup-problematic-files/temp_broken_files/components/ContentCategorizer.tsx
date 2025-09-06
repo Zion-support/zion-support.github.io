@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD:components/ContentCategorizer.tsx
@@ -8,15 +9,24 @@ import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:components/ContentCategorizer.tsx
+import React, { useState, useEffect, useMemo } from 'react';
+import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useMemo } from 'react',;
 import {;
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
 } from 'lucide-react';
 interface ContentItem {id: string;
@@ -30,7 +40,6 @@ interface ContentItem {id: string;
   tags: string[];
   source: string;
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
-=======
 import React, { useState, useEffect, useMemo } from 'react',
 import { 
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
@@ -51,6 +60,7 @@ interface ContentItem {
   source: string,
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -70,6 +80,10 @@ interface ContentCategory {id: string;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 interface ContentCategory {id: string;
   name: string;
@@ -79,8 +93,7 @@ interface ContentCategory {id: string;
   count: number;
   subcategories?: string[];
 }
-<<<<<<< HEAD:components/ContentCategorizer.tsx
-<<<<<<< HEAD
+:components/ContentCategorizer.tsx
 const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
@@ -89,8 +102,11 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
   const [selectedRelevance, setSelectedRelevance] = useState('all');
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 const ContentCategorizer: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState(''),;
@@ -102,10 +118,13 @@ const ContentCategorizer: React.FC = () => {;
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),;
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
@@ -121,11 +140,14 @@ const ContentCategorizer: React.FC = () => {;
       source: 'autonomous-auditor';
       type: 'report';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },;
     {;
       id: '2',;
@@ -192,11 +214,14 @@ const ContentCategorizer: React.FC = () => {;
       source: 'behavior-analyzer',;
       type: 'insight';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const ContentCategorizer: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -287,6 +312,7 @@ const contentItems: ContentItem[] = [
       source: 'behavior-analyzer',
       type: 'insight'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -296,6 +322,10 @@ const contentItems: ContentItem[] = [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     {id: '2';
       title: 'Security Vulnerability Scan Results';
@@ -437,10 +467,14 @@ const contentItems: ContentItem[] = [
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD:components/ContentCategorizer.tsx
 <<<<<<< HEAD
+=======
+:components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {;
       const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
@@ -450,8 +484,11 @@ const contentItems: ContentItem[] = [
       const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory;
       const matchesType = selectedType === 'all' |item.type === selectedType;
       const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ],;
   const filteredItems = useMemo(() => {;
     const filtered = contentItems.filter(item => {;
@@ -463,10 +500,13 @@ const contentItems: ContentItem[] = [
       const matchesType = selectedType === 'all' || item.type === selectedType,;
       const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -476,10 +516,13 @@ const contentItems: ContentItem[] = [
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         case 'relevance':;
           const relevanceOrder = { high: 3, medium: 2, low: 1 }
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
@@ -487,10 +530,13 @@ const contentItems: ContentItem[] = [
         case 'title':;
           comparison = a.title.localeCompare(b.title);
           break;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ],
 
   const filteredItems = useMemo(() => {
@@ -519,6 +565,7 @@ filtered.sort((a, b) => {
           comparison = a.title.localeCompare(b.title),
           break
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -528,6 +575,10 @@ filtered.sort((a, b) => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       return sortOrder === 'asc' ? comparison : -comparison;
     });
@@ -575,9 +626,13 @@ type=&quot;text&quot;
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD:components/ContentCategorizer.tsx
+=======
+:components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <select
               value={selectedCategory}
               onChange={(e) => {setSelectedCategory(e.target.value);
@@ -585,8 +640,11 @@ type=&quot;text&quot;
               }}
 className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
             >
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <select,
 value={selectedCategory}
               onChange={(e) => {
@@ -595,6 +653,7 @@ value={selectedCategory}
               }}
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -603,26 +662,38 @@ value={selectedCategory}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
                 </option>
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD:components/ContentCategorizer.tsx
+=======
+:components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </select>;
           </div>;
           {/* Subcategory Filter */}
 <div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </select>
           </div>
 
           {_/* Subcategory Filter */}
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -632,6 +703,10 @@ value={selectedCategory}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
@@ -642,9 +717,13 @@ value={selectedSubcategory}
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD:components/ContentCategorizer.tsx
+=======
+:components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
                 </option>;
               ))}
@@ -652,8 +731,11 @@ value={selectedSubcategory}
           </div>;
           {/* Content Type Filter */}
 <div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}                </option>
               ))}
             </select>
@@ -661,6 +743,7 @@ value={selectedSubcategory}
 
           {_/* Content Type Filter */}
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -670,6 +753,10 @@ value={selectedSubcategory}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
 value={selectedType}
@@ -681,20 +768,28 @@ value={selectedType}
                 </option>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD:components/ContentCategorizer.tsx
+=======
+:components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </select>;
           </div>;
           {/* Relevance Filter */}
 <div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </select>
           </div>
 
           {_/* Relevance Filter */}
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -704,6 +799,10 @@ value={selectedType}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select,
 value={selectedRelevance}
@@ -718,6 +817,7 @@ value={selectedRelevance}
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 
@@ -731,6 +831,12 @@ value={selectedRelevance}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:components/ContentCategorizer.tsx
+;
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Sort Controls and Clear Filters */}
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
           <div className=&quot;flex items-center gap-4&quot;>
@@ -749,9 +855,13 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
                 {sortOrder === 'asc' ? '↑' : '↓'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD:components/ContentCategorizer.tsx
+=======
+:components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </button>;
             </div>;
           </div>;
@@ -759,8 +869,11 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
             onClick={clearAllFilters}
 className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
           >
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </button>
             </div>
           </div>
@@ -768,6 +881,7 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
           <button,
 onClick={clearAllFilters}
             className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;          >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -777,11 +891,15 @@ onClick={clearAllFilters}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             Clear All Filters
           </button>
         </div>
       </div>
-<<<<<<< HEAD:components/ContentCategorizer.tsx
+:components/ContentCategorizer.tsx
       {/* Category Pills */}
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
@@ -803,7 +921,6 @@ onClick={clearAllFilters}
           ))}
         </div>;
       </div>;
-=======
 
 
       {_/* Category Pills */}
@@ -827,6 +944,7 @@ key={category.id}
       </div>;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -835,6 +953,10 @@ key={category.id}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
         Showing {filteredItems.length} of {contentItems.length} items
@@ -843,6 +965,7 @@ key={category.id}
         {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
       </div>;
       {/* Content Grid */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -854,10 +977,13 @@ key={category.id}
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:components/ContentCategorizer.tsx
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {item.type}
                 </div>;
               </div>;
-=======
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map((item) => {
           const CategoryIcon = getCategoryIcon(item.category),
           const TypeIcon = getTypeIcon(item.type),
@@ -898,6 +1024,7 @@ key={category.id}
               </div>;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -907,6 +1034,10 @@ key={category.id}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                 {item.title}
@@ -915,6 +1046,7 @@ key={category.id}
                 {item.desc}
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 
@@ -928,6 +1060,12 @@ key={category.id}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:components/ContentCategorizer.tsx
+;
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                 {item.tags.slice(0, 3).map((tag, index) => (
@@ -936,23 +1074,31 @@ key={category.id}
                   </span>;
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD:components/ContentCategorizer.tsx
+=======
+:components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 {item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
                     +{item.tags.length - 3}
                   </span>;
                 )}
               </div>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>                    +{item.tags.length - 3}
                   </span>
                 )}
               </div>;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -962,6 +1108,10 @@ key={category.id}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>
@@ -979,6 +1129,7 @@ key={category.id}
                   Source: {item.source}
                 </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <a 
                   href={item.href} 
@@ -987,17 +1138,21 @@ key={category.id}
 =======
 <<<<<<< HEAD:components/ContentCategorizer.tsx
 <<<<<<< HEAD
+=======
+:components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <a
                   href={item.href}
-=======
                 <a 
                   href={item.href} 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         })}
       </div>;
-=======
                 <a,
 href={item.href} 
                   target="blank" 
@@ -1017,6 +1172,7 @@ href={item.href}
       </div>;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -1026,6 +1182,10 @@ href={item.href}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* No Results */}
 {filteredItems.length === 0 && (
         <div className=&quot;text-center py-12&quot;>

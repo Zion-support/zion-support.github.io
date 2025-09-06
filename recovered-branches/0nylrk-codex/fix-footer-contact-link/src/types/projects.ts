@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 export type ProjectStatus = 
@@ -11,10 +9,12 @@ export type ProjectStatus =
 <<<<<<< HEAD
 
 export type ProjectStatus =
-=======
 export type ProjectStatus = 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   | 'offer_sent'
   | 'offer_accepted'
   | 'changes_requested'
@@ -43,13 +43,14 @@ export interface Project {;
 =======
   | 'completed';
   | 'canceled';
-<<<<<<< HEAD
 export interface Project {
-=======
 
 export interface Project {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   client_id: string;
   talent_id: string;
@@ -102,13 +103,14 @@ export interface ProjectNote {;
     avatar_url?: string
   }
 }
-<<<<<<< HEAD
 export interface ProjectNote {
-=======
 
 export interface ProjectNote {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   project_id: string;
   user_id: string;
@@ -124,8 +126,11 @@ export interface ProjectNote {;
     display_name: string
 
     avatar_url?: string
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type ProjectStatus =;
   | 'offer_sent';
   | 'offer_accepted';
@@ -170,6 +175,7 @@ export interface ProjectNote {;
     display_name: string;
     avatar_url?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     display_name: string,
@@ -184,5 +190,7 @@ export interface ProjectNote {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }

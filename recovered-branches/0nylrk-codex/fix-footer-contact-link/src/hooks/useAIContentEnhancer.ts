@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAIContentEnhancer.ts
@@ -15,6 +16,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
@@ -24,6 +28,7 @@ type EnhancementType =
   | 'job-post'
   | 'proposal'
   | 'general';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -71,23 +76,24 @@ export function useAIContentEnhancer() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export interface AIEnhancementOptions {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface AIEnhancementOptions {
 
 export interface AIEnhancementOptions {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   enhancementType: EnhancementType;
   content?: string;
   context?: string
   instructions?: string
 }
-<<<<<<< HEAD
 export function useAIContentEnhancer() {
-=======
 
 export function useAIContentEnhancer() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async ({
@@ -140,7 +146,6 @@ export function useAIContentEnhancer() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAIContentEnhancer.ts
 =======
         throw new Error(error.message)
-<<<<<<< HEAD
       }
       return data.enhancedContent
     } catch (err: any) {
@@ -150,6 +155,7 @@ export function useAIContentEnhancer() {;
       toast({
         title: "AI Enhancement Failed";
         description: errorMessage
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         throw new Error(error.message)
@@ -161,6 +167,8 @@ export function useAIContentEnhancer() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
@@ -200,6 +208,7 @@ export function useAIContentEnhancer() {;
       if (error) {;
         throw new Error(error.message);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -212,6 +221,8 @@ export function useAIContentEnhancer() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       
       return data.enhancedContent
@@ -221,6 +232,7 @@ export function useAIContentEnhancer() {;
       toast({
         title: "AI Enhancement Failed",
         description: errorMessage,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -241,6 +253,8 @@ export function useAIContentEnhancer() {;
 ========
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         variant: "destructive"
       }),
       console.error('Enhancement error:', err),
@@ -248,7 +262,10 @@ export function useAIContentEnhancer() {;
     } finally {
       setIsEnhancing(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   return {
@@ -421,12 +438,8 @@ error
 =======
 
     error
-<<<<<<< HEAD
   }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
       return data.enhancedContent;
     } catch (err: any) {;
@@ -447,12 +460,11 @@ error
     enhanceContent;
     isEnhancing;
     error;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

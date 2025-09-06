@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -8,12 +8,17 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
 import { cn } from '@/lib/utils'
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProfileBadgeProps {
   type: BadgeType
   className?: string;  type: BadgeType
@@ -45,6 +50,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     >
       <Icon className='w-3 h-3' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -54,6 +60,11 @@ interface ProfileBadgeProps {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+interface ProfileBadgeProps {;
+  type: BadgeType;
+  className?: string;  type: BadgeType,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       <span>{text}</span>
     </div>
@@ -71,12 +82,15 @@ interface ProfileBadgeProps {;
 }'"  )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -101,10 +115,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 interface ProfileBadgeProps {
   type: BadgeType,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   className?: string
 }
 
@@ -113,6 +123,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {
       icon: BadgeCheck,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -127,20 +138,17 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
 >>>>>>>       icon: Star,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       text: "Verified",
       colors: "bg-blue-500/20 text-blue-400"},
     featured: {
-=======
-<<<<<<< HEAD
       text: 'Verified',
       colors: 'bg-blue-500/20 text-blue-400',
     },
-=======
       text: "Verified",
       colors: "bg-blue-500/20 text-blue-400"},
     featured: {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       icon: Star,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       text: "Featured",
@@ -151,6 +159,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       colors: "bg-green-500/20 text-green-400"},
     "top-rated": {
       icon: Award,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -242,6 +251,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       text: 'Top Rated',
       colors: 'bg-purple-500/20 text-purple-400',
     },
@@ -264,8 +275,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 }</span>
 }'"  );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
 
@@ -322,8 +331,11 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

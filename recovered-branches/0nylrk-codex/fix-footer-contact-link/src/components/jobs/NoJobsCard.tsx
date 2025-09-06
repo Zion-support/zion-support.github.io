@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/NoJobsCard.tsx
 
 <<<<<<< HEAD
@@ -39,15 +40,16 @@ import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 =======
 <<<<<<< HEAD
-
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface NoJobsCardProps {
   onUpdateProfile?: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -83,9 +85,9 @@ function NoJobsCard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
   return (
     <Card className="bg-muted/30 border border-dashed">
@@ -100,23 +102,24 @@ export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
           </Button>
         )}
       </CardContent>
-<<<<<<< HEAD
     </Card>
   );
 }
-=======
 
-=======
     </Card>;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 interface NoJobsCardProps {
   onUpdateProfile?: () => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -164,11 +167,15 @@ export function NoJobsCard({ onUpdateProfile } NoJobsCardProps) {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/NoJobsCard.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,12 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 
 
+=======
+import {
+  LightBulbIcon
+  CpuChipIcon
+  GlobeAltIcon
+  ShieldCheckIcon
+  ChartBarIcon
+  UserGroupIcon
+} from '@heroicons/react/24/outline';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
-=======
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -15,14 +25,17 @@ import {
   ChartBarIcon,
   UserGroupIcon;
 } from '@heroicons/react/24/outline';
-=======
 import React from 'react';
+<<<<<<< HEAD
 
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const features = [
   {
     name: 'AI-Powered Research'
@@ -98,6 +111,7 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -467,10 +481,10 @@ function HomePage() {
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
 <<<<<<< HEAD
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
               Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               Join the revolution that's reshaping industries worldwide.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -479,21 +493,14 @@ function HomePage() {
                 className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Get Started
-<<<<<<< HEAD
               </a>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 Learn More <span aria-hidden="true">→</span>
               </a>
-=======
               </Link>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 Learn More <span aria-hidden="true">→</span>
               </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           </div>
         </div>
@@ -506,11 +513,8 @@ function HomePage() {
             Everything you need to accelerate innovation
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-<<<<<<< HEAD
             Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results
-=======
             Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             and maintain competitive advantage in the digital age.
           </p>
         </div>
@@ -527,32 +531,18 @@ function HomePage() {
                   <p className="mt-6">
                     <a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
                       Learn more <span aria-hidden="true">→</span>
-<<<<<<< HEAD
                     </a>
-=======
                     </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </p>
                 </dd>
               </div>
             ))}
-<<<<<<< HEAD
           </dl>
         </div>
       </div>
-=======
           </dl>;
         </div>;
       </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -571,14 +561,13 @@ function HomePage() {
                 <dd className="order-first text-3xl font-bold tracking-tight text-white">{stat.value}</dd>
               </div>
             ))}
-<<<<<<< HEAD
           </dl>
         </div>
       </div>
-=======
           </dl>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -586,6 +575,8 @@ function HomePage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Solutions showcase */}
       <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8">;
         <div className="mx - auto max - w-2xl lg:text - center">;
@@ -738,19 +729,12 @@ function HomePage() {
                 </div>
               </article>
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </div>
-=======
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -766,36 +750,30 @@ function HomePage() {
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
             >
               Get Started
-<<<<<<< HEAD
             </a>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </a>
-=======
             </Link>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </div>
       </div>
     </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
-=======
   )
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

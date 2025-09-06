@@ -53,33 +53,20 @@ const features = [;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/EnterpriseFeatures.tsx
 =======
 
-<<<<<<< HEAD
 import React from "react";
-<<<<<<< HEAD
-=======
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const features = [
   {
-<<<<<<< HEAD
     title: "Private Hiring Portal"
     description: "Create a secure, private hiring portal accessible only to your team members.";
     icon: Shield}
-=======
     title: "Private Hiring Portal",
     description: "Create a secure, private hiring portal accessible only to your team members.",
     icon: Shield},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
     title: "Dedicated Talent Pool"
     description: "Access to a curated pool of pre-vetted talent matched to your industry and needs."
@@ -133,6 +120,7 @@ export function EnterpriseFeatures() {
               <p className="text-muted-foreground">{feature.description}</p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -151,17 +139,15 @@ const features = [;
     description: "Create a secure, private hiring portal accessible only to your team members.";
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </div>
       </div>
     </section>
   )
-<<<<<<< HEAD
 }
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 const features = [;
@@ -362,11 +348,10 @@ icon: Settings
           {features.map((feature) => (;
             <div;
 }
+;
+;
 <<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -6,15 +7,18 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
 export type ProjectParticipantRole = 'client' | 'talent';
-<<<<<<< HEAD
 export type ProjectParticipants = {
-=======
 
 export type ProjectParticipants = {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   clientUserId: string;
   talentUserId: string;
 }
@@ -48,7 +52,6 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 }
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
   return (
-<<<<<<< HEAD
     value === 'Pending' |
     value === 'In Progress' |
     value === 'Submitted' |
@@ -56,12 +59,15 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
     value === 'Paid'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );export interface MilestoneAttachment {
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     value === 'Pending' ||
     value === 'In Progress' ||
     value === 'Submitted' ||
@@ -69,12 +75,15 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
     value === 'Paid';
   );export interface MilestoneAttachment {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   url: string;
@@ -88,8 +97,8 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
   uploadedAt: string
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
-<<<<<<< HEAD
 export interface CreateMilestoneRequest {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   uploadedAt: string
@@ -130,22 +139,24 @@ export interface UpdateMilestoneRequest {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export interface CreateMilestoneRequest {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   title: string;
   description?: string;
   dueDate: string;
   amountUsd: number;
   attachments?: MilestoneAttachment[]
 }
-<<<<<<< HEAD
 export interface UpdateMilestoneRequest {
-=======
 
 export interface UpdateMilestoneRequest {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title?: string;
   description?: string;
   dueDate?: string;
@@ -295,15 +306,13 @@ export function createMilestoneFile(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
-=======
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState } from 'react';
@@ -9,10 +10,10 @@ import { Gift, RefreshCw } from 'lucide-react'
 
 =======
 <<<<<<< HEAD
-import React, { useState } from 'react';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState } from 'react';
 import React, { useState } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Gift, RefreshCw } from 'lucide-react'
 
 import { usePoints } from '@/hooks/usePoints'
@@ -62,12 +63,15 @@ export function PointsBadge() {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints',;
@@ -115,8 +119,8 @@ export function PointsBadge() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <TooltipProvider>;
@@ -133,13 +137,14 @@ export function PointsBadge() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <TooltipProvider>
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-<<<<<<< HEAD
               href={isAuthenticated ? '/points' : '#'}
               onClick={handleClick}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -187,18 +192,12 @@ export function PointsBadge() {;
 =======
               className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
               <Gift className='h-4 w-4' aria-hidden='true' />
-=======
               href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}
               title={isAuthenticated ? "View points" : "Earn points by participating"}
               className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
             >
               <Gift className="h-4 w-4" aria-hidden="true" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <span>{`${points} pts`}</span>
             </Link>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -241,6 +240,7 @@ export function PointsBadge() {;
             )}
           </TooltipContent>
         </Tooltip>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -302,30 +302,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-<<<<<<< HEAD
                 variant='ghost'
                 size='sm'
                 onClick={handleRefresh}
                 disabled={isRefreshing |loading}
                 className='p-1 h-6 w-6 text-muted-foreground hover:text-foreground'
                 aria-label='Refresh points'              >
-<<<<<<< HEAD
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
                   aria-hidden='true'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 variant="ghost"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 size="sm"
@@ -334,6 +326,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -352,10 +345,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </Button>
@@ -367,6 +361,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       </div>;
 =======
@@ -375,6 +370,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
       {!isAuthenticated && (
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
@@ -383,11 +380,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {!isAuthenticated && (;
@@ -397,6 +390,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -414,3 +408,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

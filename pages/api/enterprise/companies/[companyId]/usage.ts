@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const { companyId } = req.query;
 =======
@@ -26,6 +27,14 @@ const { companyId } = req && req.query;
   }
   if (req && req.method === "PATCH") {
     const { monthlyJobPosts, budgetCapUsd } = req && req.body || {};
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { store } from "../../../../../utils/data/enterpriseStore";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { companyId } = req.query;
 
   if (!companyId |typeof companyId !== "string") {
@@ -51,6 +60,7 @@ const { companyId } = req && req.query;
     return res
       .status(ok ? 200 : 404)
       .json(ok ? { success: true } : { error: "company_not_found" });
+<<<<<<< HEAD
 import { store } from '../../../../../utils/data/enterpriseStore';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { companyId } = req.query;
@@ -129,6 +139,14 @@ if ( {) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+  }
+  return res.status(405).json({ error: "method_not_allowed" });
+return res.status(405).json({ error: "method_not_allowed" });
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ usage: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -213,6 +231,7 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -223,3 +242,7 @@ export default function handler(req, res) {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

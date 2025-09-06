@@ -1,14 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from &quot;react&quot;
 import useEmblaCarousel from &quot;embla-carousel-react&quot;
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 ;
 import { cn } from &quot;@/lib/utils&quot;
 import { Button } from &quot;@/components/ui/button&quot;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { cn } from &quot;@/lib/utils&quot;
 import { Button } from &quot;@/components/ui/button&quot;
@@ -17,19 +21,17 @@ import { Button } from &quot;@/components/ui/button&quot;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from 'lucide-react'
-<<<<<<< HEAD
 import { cn } from &quot;@/lib/utils&quot;
 import { Button } from &quot;@/components/ui/button&quot;
-=======
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 type CarouselOptions = {
@@ -52,18 +54,23 @@ type CarouselContextProps = {
   canScrollNext: boolean
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
 
@@ -108,13 +115,8 @@ function useCarousel(): CarouselContextProps {;
   const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {;
     throw new Error("useCarousel must be used within a <Carousel />");
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return context as CarouselContextProps;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
@@ -161,6 +163,7 @@ const Carousel = React.forwardRef<
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       orientation = "horizontal",
 
@@ -170,11 +173,15 @@ const Carousel = React.forwardRef<
       orientation = &quot;horizontal&quot;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      orientation = &quot;horizontal&quot;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       opts
       setApi
       plugins
       className
       children
+<<<<<<< HEAD
 <<<<<<< HEAD
       orientation = "horizontal",
 >>>>>>>       opts,
@@ -183,14 +190,16 @@ const Carousel = React.forwardRef<
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       orientation = "horizontal",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       opts,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setApi,
       plugins,
       className,
       children,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -201,6 +210,8 @@ const Carousel = React.forwardRef<
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ...props
 >>>>>>>     }
     ref
@@ -209,19 +220,24 @@ const Carousel = React.forwardRef<
       {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         ...(opts |{})
         axis: orientation === &quot;horizontal&quot; ? &quot;x&quot; : &quot;y&quot;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ...(opts |{})
         axis: orientation === &quot;horizontal&quot; ? &quot;x&quot; : &quot;y&quot;}
-=======
         ...(opts || {}),
         axis: orientation === "horizontal" ? "x" : "y"},
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
@@ -250,6 +266,7 @@ const Carousel = React.forwardRef<
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       },;
 
@@ -258,6 +275,8 @@ const Carousel = React.forwardRef<
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       [scrollPrev, scrollNext];
     );
@@ -273,16 +292,16 @@ onSelect(api)
       api.on(&quot;reInit&quot;, onSelect)
       api.on(&quot;select&quot;, onSelect)
 <<<<<<< HEAD
+<<<<<<< HEAD
       },;
 >>>>>>>       [scrollPrev, scrollNext];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-      };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      };
       },;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       [scrollPrev, scrollNext];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     );
@@ -352,17 +371,21 @@ if ( {) {
         return;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 onSelect(api)
       api.on(&quot;reInit&quot; onSelect)
       api.on(&quot;select&quot; onSelect)
 
       return () => {
         api?.off(&quot;select&quot; onSelect)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -404,15 +427,15 @@ on_select (api);
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       onSelect(api)
       api.on("reInit", onSelect)
       api.on("select", onSelect)
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return () => {
         api?.off("select", onSelect)
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     }, [api, onSelect])
     return (
@@ -425,32 +448,38 @@ on_select (api);
           orientation:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           canScrollNext}}
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             orientation |(opts && opts.axis === &quot;y&quot; ? &quot;vertical&quot; : &quot;horizontal&quot;)
           scrollPrev
           scrollNext
           canScrollPrev
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>           canScrollNext}}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             orientation || (opts && opts.axis === "y" ? "vertical" : "horizontal"),
           scrollPrev,
           scrollNext,
           canScrollPrev,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           canScrollNext}}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       >;
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -473,22 +502,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-className={cn(&quot;relative&quot;, className)}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+className={cn(&quot;relative&quot;, className)}
 className={cn(&quot;relative&quot; className)}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
-=======
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {...props}
 >>>>>>>         >;
           {children}
@@ -498,6 +529,7 @@ className={cn(&quot;relative&quot; className)}
   }
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -506,12 +538,16 @@ Carousel.displayName = &quot;Carousel&quot;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-Carousel.displayName = &quot;Carousel&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+Carousel.displayName = &quot;Carousel&quot;
 Carousel.displayName = "Carousel"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const CarouselContent = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
@@ -524,30 +560,39 @@ const CarouselContent = React.forwardRef<
         className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           &quot;flex&quot;
           orientation === &quot;horizontal&quot;
             ? &quot;-ml-4 snap-x snap-mandatory&quot;
             : &quot;-mt-4 flex-col snap-y snap-mandatory&quot;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>           className
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "flex",
           orientation === "horizontal"
             ? "-ml-4 snap-x snap-mandatory"
             : "-mt-4 flex-col snap-y snap-mandatory",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className
 >>>>>>>         )}
         {...props}
@@ -557,17 +602,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 CarouselContent.displayName = &quot;CarouselContent&quot;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-CarouselContent.displayName = &quot;CarouselContent&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+CarouselContent.displayName = &quot;CarouselContent&quot;
 CarouselContent.displayName = "CarouselContent"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const CarouselItem = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
@@ -606,6 +656,7 @@ const CarouselItem = React.forward_ref<;
       className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         &quot;min-w-0 shrink-0 grow-0 basis-full snap-start&quot;
@@ -614,17 +665,21 @@ const CarouselItem = React.forward_ref<;
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         &quot;min-w-0 shrink-0 grow-0 basis-full snap-start&quot;
         orientation === &quot;horizontal&quot; ? &quot;pl-4&quot; : &quot;pt-4&quot;
-=======
         "min-w-0 shrink-0 grow-0 basis-full snap-start",
         orientation === "horizontal" ? "pl-4" : "pt-4",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className
 >>>>>>>       )}
       {...props}
@@ -633,6 +688,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement
@@ -641,16 +697,16 @@ const CarouselPrevious = React.forwardRef<
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-CarouselItem.displayName = &quot;CarouselItem&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+CarouselItem.displayName = &quot;CarouselItem&quot;
 CarouselItem.displayName = "CarouselItem"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement
   React.ComponentProps<typeof Button>
-<<<<<<< HEAD
 >(({ className, variant = &quot;outline&quot; size = &quot;icon&quot; ...props }, ref) => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
       role=&quot;group & quot;
@@ -674,8 +730,9 @@ const CarouselPrevious = React.forward_ref<;
 <<<<<<< HEAD
 >(({ className, variant = &quot;outline&quot; size = &quot;icon&quot; ...props }, ref) => {
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
@@ -687,6 +744,7 @@ const CarouselPrevious = React.forward_ref<;
 
       className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         className
 =======
@@ -694,10 +752,13 @@ const CarouselPrevious = React.forward_ref<;
       className={cn(
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         &quot;absolute h-8 w-8 rounded-full&quot;
         orientation === &quot;horizontal&quot;
           ? &quot;left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2&quot;
           : &quot;top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90&quot;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>         className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -731,21 +792,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2"
           : "top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         className
       )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -764,6 +823,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       <span className=&quot;sr-only&quot;>Previous slide</span>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>
+      <ArrowLeft className=&quot;h-4 w-4&quot; />
+      <span className=&quot;sr-only&quot;>Previous slide</span>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Button>
 >>>>>>>   )
 })
@@ -799,30 +863,19 @@ const CarouselNext = React.forward_ref<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     >
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </Button>
   )
 })
 CarouselPrevious.displayName = "CarouselPrevious"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const CarouselNext = React.forwardRef<
   HTMLButtonElement
   React.ComponentProps<typeof Button>
-<<<<<<< HEAD
 >(({ className, variant = &quot;outline&quot; size = &quot;icon&quot; ...props }, ref) => {
-=======
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { orientation, scrollNext, canScrollNext } = useCarousel()
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
@@ -834,6 +887,7 @@ const CarouselNext = React.forwardRef<
 
       className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         className
 =======
@@ -841,30 +895,31 @@ const CarouselNext = React.forwardRef<
       className={cn(
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         &quot;absolute h-8 w-8 rounded-full&quot;
         orientation === &quot;horizontal&quot;
           ? &quot;right-1 sm:right-2 md:-right-12 top-1/2 -translate-y-1/2&quot;
           : &quot;bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90&quot;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "right-1 sm:right-2 md:-right-12 top-1/2 -translate-y-1/2"
           : "bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         className
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -878,6 +933,11 @@ const CarouselNext = React.forwardRef<
       <span className=&quot;sr-only&quot;>Next slide</span>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>
+      <ArrowRight className=&quot;h-4 w-4&quot; />
+      <span className=&quot;sr-only&quot;>Next slide</span>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Button>
   )
 })
@@ -889,6 +949,7 @@ export {
   CarouselItem
   CarouselPrevious
   CarouselNext}
+<<<<<<< HEAD
 <<<<<<< HEAD
     >
       <ArrowRight className="h-4 w-4" />
@@ -933,13 +994,11 @@ CarouselNext.displayName = "CarouselNext"
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </Button>
   )
 })
@@ -953,6 +1012,7 @@ export {
   CarouselItem,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   CarouselPrevious,;
@@ -962,15 +1022,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   CarouselPrevious,;
   CarouselNext};
-=======
   CarouselPrevious,
   CarouselNext}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

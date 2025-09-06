@@ -23,6 +23,7 @@ export default function Custom500() {
               Server Error
             </h2>
             <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
+<<<<<<< HEAD
 
               Something went wrong on our end. We&apos,re working to fix it. 
 
@@ -242,81 +243,53 @@ export default function Custom500() {
             <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Something went wrong on our end. We&apos,re working to fix it.
-=======
               Something went wrong on our end. We're working to fix it.
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
               Something went wrong on our end. We&apos,re working to fix it. 
-=======
               Something went wrong on our end. We're working to fix it.
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Please try again in a few moments.
             </p>
           </div>
           <div className="space-y-4">
-<<<<<<< HEAD
             <Link
               href="/"
-=======
-<<<<<<< HEAD
             <Link 
               href="/" 
-=======
             <Link
               href="/"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
             >
               Go Home
             </Link>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
               <Link
                 href="/about"
-=======
-<<<<<<< HEAD
               <Link 
                 href="/about" 
-=======
               <Link
                 href="/about"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 About Us
               </Link>
-<<<<<<< HEAD
               <Link
                 href="/services"
-=======
-<<<<<<< HEAD
               <Link 
                 href="/services" 
-=======
               <Link
                 href="/services"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Services
               </Link>
-<<<<<<< HEAD
               <Link
                 href="/contact"
-=======
-<<<<<<< HEAD
               <Link 
                 href="/contact" 
-=======
               <Link
                 href="/contact"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
@@ -329,12 +302,14 @@ export default function Custom500() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
 <<<<<<< HEAD
-};
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+};
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -399,6 +374,9 @@ export default function Custom500(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -45,17 +46,22 @@ import Button from '../components / ui / Button';
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
-=======
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -65,6 +71,8 @@ import {
   Zap;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Zap
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Shield
@@ -126,9 +134,12 @@ import {
   Star
   Check
   ExternalLink;} from 'lucide-react';import {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Zap,
   Shield,
   BarChart3,
@@ -141,6 +152,7 @@ import {
   Cloud,
   ArrowRight,
   Star,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -165,13 +177,12 @@ ExternalLink,} from 'lucide-react';import {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Check,
   ExternalLink,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   Check,;
   ExternalLink,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Zap;
   Shield
   BarChart3
@@ -425,11 +436,21 @@ export default function SaaSMarketplacePage() {
       useCase:
         'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
       pros: [
+<<<<<<< HEAD
 =======
 
 
 
 
+=======
+        'Lightning fast'
+        'Beautiful design'
+        'Great keyboard shortcuts'
+        'Git integration'
+      ]
+      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Lightning fast',
         'Beautiful design',
         'Great keyboard shortcuts',
@@ -437,9 +458,12 @@ export default function SaaSMarketplacePage() {
       ],
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
     },;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   const categories = [
     'All'
@@ -1317,6 +1341,7 @@ export default function SaaSMarketplacePage() {
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1336,6 +1361,9 @@ export default function SaaSMarketplacePage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -1881,11 +1909,10 @@ function SaaSMarketplacePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-<<<<<<< HEAD
-=======
 
               <button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1893,6 +1920,8 @@ function SaaSMarketplacePage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -2216,14 +2245,7 @@ function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Services Grid */}
       <section id='services' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -2232,15 +2254,8 @@ function SaaSMarketplacePage() {
               {selectedCategory === 'All'
                 ? 'All Services'
                 : `${selectedCategory} Services`}
-<<<<<<< HEAD
-=======
 
             </h2>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
@@ -2284,14 +2299,7 @@ function SaaSMarketplacePage() {
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {service.description}
                     </p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -2342,6 +2350,7 @@ function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2488,11 +2497,15 @@ className='group-hover:border-blue-500 group-hover:text-blue-400'>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2513,6 +2526,10 @@ className='group-hover:border-blue-500 group-hover:text-blue-400'>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+            Need Help Choosing?
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -2562,6 +2579,7 @@ className='group-hover:border-blue-500 group-hover:text-blue-400'>;
         </div>
       </section>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -2621,12 +2639,10 @@ className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl
     </>);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -2634,10 +2650,13 @@ className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl
 =======
 
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

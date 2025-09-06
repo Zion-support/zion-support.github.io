@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 id: uuidv4(),
@@ -15,17 +16,14 @@ id: uuidv4(),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
-=======
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 <<<<<<< HEAD
 
@@ -118,15 +116,12 @@ export const email = {
 // CRM actions
 export const crm = {
   async syncContact(
-<<<<<<< HEAD
     connection: ProviderConnection
     contact: Record<string, any>
   ) {
-=======
     connection: ProviderConnection,
     contact: Record<string, any>,
   ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return mockProviderCall(connection, "sync_contact", { contact });
   }
   async addEmailTouchpoint(
@@ -145,15 +140,12 @@ export const crm = {
 // ATS actions
 export const ats = {
   async updateStatus(
-<<<<<<< HEAD
     connection: ProviderConnection
     status: Record<string, any>
   ) {
-=======
     connection: ProviderConnection,
     status: Record<string, any>,
   ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return mockProviderCall(connection, "update_status", { status });
   }
 }
@@ -237,8 +229,11 @@ export const ats = {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   async createCandidate(
     connection: ProviderConnection,
     candidate: Record<string, any>
@@ -246,6 +241,7 @@ export const ats = {
     return executeProviderAction(connection, 'createCandidate', { candidate });
   },
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -256,6 +252,8 @@ export const ats = {
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 // Email actions
 export const email = {
@@ -267,9 +265,12 @@ export const email = {
   },
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

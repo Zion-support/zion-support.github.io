@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function GrantsAdminPage() {
@@ -21,26 +22,24 @@ import type { GrantApplication, Milestone } from '../../types/grants';
 export default function GrantsAdminPage() {;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
-=======
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 export default function GrantsAdminPage() {;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function GrantsAdminPage() {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [token, setToken] = useState('');
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
@@ -265,7 +264,6 @@ if (return) {
               placeholder='Admin Token';
 =======
     <EnhancedLayout>
-<<<<<<< HEAD
       <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
       <div className='grid md:grid-cols-3 gap-6'>
         <div className='md:col-span-2'>
@@ -615,6 +613,7 @@ if (return) {
             ) : (
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
             )}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     <EnhancedLayout>
@@ -636,10 +635,16 @@ if (return) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+            )}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -752,18 +757,18 @@ onClick={saveMilestones}>;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

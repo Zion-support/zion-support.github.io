@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -37,6 +38,8 @@ export interface GptClassification {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(
   text: string
@@ -94,22 +97,29 @@ export async function classifyWithGPT(
   } catch {
     return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
     }
   }export interface GptResult {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
   }export interface GptResult {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -133,6 +143,8 @@ export async function classifyWithGPT(
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   label: string;
   confidence: number;
   reasoning: string
@@ -147,9 +159,8 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -180,3 +191,8 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

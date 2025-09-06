@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }</div> </div>) import fs from 'fs';
@@ -45,25 +46,21 @@ export async function getServerSideProps() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 </div> </div>) )
-=======
  </div> </div>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
 export async function getServerSideProps() {
-=======
 </div> </div>) ) 
-=======
  </div> </div>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async function getServerSideProps() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const file = path.join(process.cwd(), 'datanews-digest.json');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   let items: NewsItem[] = [];  let generatedAt = '';
@@ -88,7 +85,6 @@ function getServerSideProps() {
 =======
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
-<<<<<<< HEAD
     items = json.items |[];
     generatedAt = json.generatedAt |''
 
@@ -97,16 +93,22 @@ function getServerSideProps() {
   return { props: { items, generated_at } }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     items = json.items || [];
     generatedAt = json.generatedAt || ''
   } catch {}
   return { props: { items, generatedAt } }
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
   return (
     <div className="space-y-6">
@@ -126,6 +128,7 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
           </div>
         ))}
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 );
@@ -218,13 +221,17 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 =======
 <<<<<<< HEAD
 =======
+=======
+    </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
 }
-=======
   );
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

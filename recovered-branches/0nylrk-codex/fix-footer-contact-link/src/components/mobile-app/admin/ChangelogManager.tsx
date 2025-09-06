@@ -1,15 +1,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+import React, { useState } from "react";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Plus, Trash2 } from "lucide-react";
+import { AppPlatform } from "./MetadataManager";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -29,12 +40,22 @@ type ChangelogEntry = {
 import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
 
+=======
+import { Plus, Trash2 } from "lucide-react";
+import { AppPlatform } from "./MetadataManager";
+import { Plus, Trash2 } from "lucide-react",
+import { AppPlatform } from "./MetadataManager",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
 
 type ChangelogEntry = {
+<<<<<<< HEAD
 id: string;
+=======
+  id: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   version: string;
   date: string;
   changes: string;
@@ -77,7 +98,32 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
     const { name, value } = e.target;
     setNewEntry((prev) => ({ ...prev, [name]: value }));
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  id: string,
+  version: string,
+  date: string,
+  changes: string
+},
+
+export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {
+  const [entries, setEntries] = useState<ChangelogEntry[]>([
+    {
+      id: "1",
+      version: "1.0.0",
+      date: "2025-05-15",
+      changes: "Initial release of the Zion AI Marketplace app.",
+    },;
+  ]);
+
+  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">>({
+      changes: "Initial release of the Zion AI Marketplace app."
+    }
+  ]),
+  
+  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry "id">>({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     version: "",
     date: new Date().toISOString().split('T')[0],
     changes: ""
@@ -107,6 +153,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
     const { name, value } = e.target,
     setNewEntry(prev => ({ ...prev, [name]: value }))
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 type ChangelogEntry = {;
@@ -169,6 +216,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -188,12 +238,22 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 type="date"
                 name="date"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                value={newEntry.date}
+                onChange={handleInputChange}
+              />
+            </div>
+            <Button
+              onClick={handleAddEntry}
+              disabled={!newEntry.version |!newEntry.changes}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -338,6 +398,7 @@ export const ChangelogManager:React.FC<ChangelogManagerProps> = ({ platform }) =
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
 
             <Button;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -352,11 +413,16 @@ onClick={handleAddEntry}
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
 
+=======
+              onClick={handleAddEntry}
+              disabled={!newEntry.version || !newEntry.changes}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <Plus className="mr-2 h-4 w-4" />
               Add
             </Button>
           </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -486,6 +552,9 @@ onClick={handleAddEntry}
 
               <p className="text-center text-gray-400 py-4">
 =======
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
@@ -493,7 +562,11 @@ onClick={handleAddEntry}
             onChange={handleInputChange}
             rows={3}
           />
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
               <div 
@@ -517,9 +590,14 @@ onClick={handleAddEntry}
                 <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>
               </div>
             ))}
+<<<<<<< HEAD
 {entries.length === 0 && (
 <p className="text-center text-gray-400 py-4">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            {entries.length === 0 && (
+              <p className="text-center text-gray-400 py-4">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 No changelog entries yet
               </p>
             )}
@@ -527,6 +605,7 @@ onClick={handleAddEntry}
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
@@ -555,6 +634,14 @@ onClick={handleAddEntry}
 =======
   );
 }
+=======
+  );
+}
+
+            
+            {entries.length === 0 && (
+);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
@@ -565,6 +652,7 @@ onClick={handleAddEntry}
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -734,3 +822,6 @@ date: new Date () .toISOString () .split ('T') [0];
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

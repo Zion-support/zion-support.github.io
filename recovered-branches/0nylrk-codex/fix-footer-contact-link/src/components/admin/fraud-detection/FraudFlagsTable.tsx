@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
@@ -15,14 +12,18 @@ import {FraudFlag} from "@/types/fraud";
 import {SeverityDisplay} from "./SeverityDisplay";
 import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { FraudFlag } from "@/types/fraud",
 import { SeverityDisplay } from "./SeverityDisplay",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -32,17 +33,21 @@ import { SeverityDisplay } from "./SeverityDisplay",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ActionButtons } from "./ActionButtons";
 import { EmptyFraudState } from "./EmptyFraudState";
-=======
 import { ActionButtons } from "./ActionButtons",
 import { EmptyFraudState } from "./EmptyFraudState",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface FraudFlagsTableProps {
 
   flags: FraudFlag[]
@@ -53,6 +58,7 @@ interface FraudFlagsTableProps {
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
@@ -67,30 +73,29 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   flags;
   isLoading;
   hasFilters;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
-<<<<<<< HEAD
   flags;
   isLoading;
   hasFilters;
 
   resetFilters
 
-=======
   flags,
   isLoading,
   hasFilters,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   resetFilters,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onAction
 }) => {
   if (isLoading) {
@@ -100,6 +105,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -120,6 +126,8 @@ import {EmptyFraudState} from "./EmptyFraudState";
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
@@ -189,6 +197,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
       </div>;
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -200,10 +209,13 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/FraudFlagsTable.tsx
 
@@ -214,6 +226,9 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Table>
       <TableHeader>
@@ -246,6 +261,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
             </TableCell>
             <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>
             <TableCell className="max-w-xs truncate">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -551,10 +567,10 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/FraudFlagsTable.tsx
 =======
 <<<<<<< HEAD
-              {flag.gpt_explanation |(
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              {flag.gpt_explanation |(
               {flag.gpt_explanation || (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
               )}
             </TableCell>
@@ -583,23 +599,17 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
             </TableCell>
           </TableRow>
         ))}
-<<<<<<< HEAD
       </TableBody>
     </Table>
   )
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </TableBody>;
     </Table>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

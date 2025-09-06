@@ -78,7 +78,6 @@ export function useMessageChannelHandler({
 
   onError
 }: MessageChannelHandlerProps = {}) {
-<<<<<<< HEAD
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/hooks/useMessageChannelHandler.ts
@@ -98,6 +97,7 @@ if ( {) {
           on_error (error as Error);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -113,6 +113,8 @@ if ( {) {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
       if (onMessage) {;
@@ -124,6 +126,7 @@ if ( {) {
       if (onError) {
         onError(error as Error);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -133,6 +136,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/hooks/useMessageChannelHandler.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
     [onMessage, onError]
@@ -149,6 +154,7 @@ if ( {) {
 <<<<<<< HEAD
 
   }, [handleMessage]);
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -195,32 +201,25 @@ import { useEffect,useCallback } from 'react'; interface MessageEvent { data: un
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-}
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
 import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
-=======
 import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> 7a79ab46aa7794ec396c2388b3c38de69cb877ae
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 }
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/hooks/useMessageChannelHandler.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/main
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

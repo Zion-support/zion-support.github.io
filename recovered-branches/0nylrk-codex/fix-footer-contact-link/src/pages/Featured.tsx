@@ -13,29 +13,25 @@ import { Footer } from "@/components/Footer",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
 import {GradientHeading} from "@/components/GradientHeading";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-<<<<<<< HEAD
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { GradientHeading } from "@/components/GradientHeading";
-=======
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
 import { GradientHeading } from "@/components/GradientHeading",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Featured() {
   return (
     <>
@@ -51,6 +47,7 @@ export default function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -68,6 +65,8 @@ import {GradientHeading} from "@/components/GradientHeading";
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -143,6 +142,7 @@ function Featured() {
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -154,6 +154,8 @@ function Featured() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />
         </div>
@@ -161,6 +163,7 @@ function Featured() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -185,9 +188,13 @@ function Featured() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Featured.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

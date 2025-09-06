@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/components/ProjectHeader.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ProjectHeader as OriginalProjectHeader } from '../ProjectHeader',;
 
@@ -51,3 +52,12 @@ import { ProjectHeader as OriginalProjectHeader } from '../ProjectHeader',;
 export { OriginalProjectHeader as ProjectHeader };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { ProjectHeader as OriginalProjectHeader  } from '../ProjectHeader';
+// Re-export the existing ProjectHeader component
+export { OriginalProjectHeader as ProjectHeader }
+import {ProjectHeader, as, OriginalProjectHeader} from '../ProjectHeader';
+import { ProjectHeader as OriginalProjectHeader } from '../ProjectHeader',;
+// Re-export the existing ProjectHeader component;
+export { OriginalProjectHeader as ProjectHeader };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

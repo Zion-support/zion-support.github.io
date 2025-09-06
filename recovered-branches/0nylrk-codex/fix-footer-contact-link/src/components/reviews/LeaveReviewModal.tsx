@@ -5,19 +5,20 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {ReviewForm} from "./ReviewForm";
 import {useReviews} from "@/hooks/useReviews";
-=======
 import { useState, useEffect } from "react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -25,6 +26,8 @@ import { useState, useEffect } from "react",
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Dialog;
   DialogContent;
@@ -35,10 +38,13 @@ import {
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ReviewForm } from "./ReviewForm";
 import { useReviews } from "@/hooks/useReviews";
 interface LeaveReviewModalProps {
@@ -51,11 +57,13 @@ interface LeaveReviewModalProps {
   onClose: () => void
 }
 export function LeaveReviewModal({
-=======
 import { ReviewForm } from "./ReviewForm",
 import { useReviews } from "@/hooks/useReviews",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface LeaveReviewModalProps {
   projectId: string,
   revieweeId: string,
@@ -63,13 +71,15 @@ interface LeaveReviewModalProps {
   isOpen: boolean,
   onClose: () => void
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export function LeaveReviewModal({;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   projectId;
   revieweeId;
   revieweeName;
@@ -101,8 +111,6 @@ export function LeaveReviewModal({;
       const success = await submitReview(formValues);
       if (success) {
         handleOpenChange(false)
-=======
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import {
   Dialog,
@@ -121,9 +129,12 @@ interface LeaveReviewModalProps {
   revieweeName: string,
   isOpen: boolean,
   onClose: () => void
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import {;
   Dialog,;
@@ -264,6 +275,7 @@ export function LeaveReviewModal({;
         handleOpenChange(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -299,20 +311,22 @@ interface LeaveReviewModalProps {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       return success
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  },
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  },
   };
-=======
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -542,8 +556,9 @@ return (</DialogTitle> <DialogDescription> Your feedback helps build a trustwort
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="max-w-md">
@@ -562,18 +577,19 @@ return (</DialogTitle> <DialogDescription> Your feedback helps build a trustwort
           onSubmit={handleSubmit}
           defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
-<<<<<<< HEAD
         />
       </DialogContent>
     </Dialog>
   )
 }
-=======
         />;
       </DialogContent>;
     </Dialog>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

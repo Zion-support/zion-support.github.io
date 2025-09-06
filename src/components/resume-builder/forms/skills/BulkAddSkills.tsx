@@ -1,16 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Loader2, Sparkles } from 'lucide-react'
@@ -59,6 +64,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
         } catch (err) {
           setError('Failed to parse categorized skills. Please try again.')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -67,6 +73,9 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2, Sparkles } from 'lucide-react';
@@ -116,6 +125,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           setError('Failed to parse categorized skills. Please try again.');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -123,6 +133,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
 =======
 >>>>>>>         }
@@ -133,6 +145,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
@@ -140,21 +153,18 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
       <div className="space-y-4">
         <div className="space-y-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -197,33 +207,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <label className="text-sm font-medium" htmlFor="input-Enter multiple skills (comma separated)">Enter multiple skills (comma separated)</label>
           <Textarea
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             value = {bulkSkills,}
             onChange = {(e,) => setBulkSkills(e.target.value),}
           />
         </div>
-<<<<<<< HEAD
         <Button
           onClick = {handleCategorizeSkills,}
           disabled = {isEnhancing |!bulkSkills.trim(),}
-=======
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
           <Textarea 
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
-=======
         <Button 
           onClick = {handleCategorizeSkills,}
           disabled = {isEnhancing || !bulkSkills.trim(),}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             value={bulkSkills}
             onChange={(e) => setBulkSkills(e.target.value)}
           />;
@@ -232,11 +235,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           onClick={handleCategorizeSkills}
           disabled={isEnhancing || !bulkSkills.trim()}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className="gap-2"
 >>>>>>>         >
           {isEnhancing ? (
@@ -246,6 +252,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
           Categorize with AI
         </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -261,25 +268,29 @@ ursor/fix-website-loading-errors-and-merge-6662
 },
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
         </p>
-<<<<<<< HEAD
-=======
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
   );
 };
 '";
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
         </p>
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
@@ -294,20 +305,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 '"
 
-=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 },
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

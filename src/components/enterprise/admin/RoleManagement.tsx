@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/RoleManagement.tsx
 
 <<<<<<< HEAD
@@ -24,15 +25,12 @@ import {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react";
 import {
-=======
-=======
 import React from 'react'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
   Table,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -40,6 +38,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/RoleManagement.tsx
 <<<<<<< HEAD
@@ -55,6 +54,8 @@ import { toast } from '@/hooks / use - toast'; import { InfoIcon } from 'lucide-
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   TableRow,
 } from '@/components/ui/table'
 import { Badge } from '@/components/ui/badge';
@@ -71,9 +72,12 @@ import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-reac
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 } from '@/components/ui/tooltip'
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import {
@@ -92,6 +96,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -115,6 +120,9 @@ export function RoleManagement() {
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Table
   TableBody
   TableCell
@@ -130,6 +138,7 @@ import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-reac
   TooltipProvider
   TooltipTrigger
 } from '@/components/ui/tooltip'
+<<<<<<< HEAD
 <<<<<<< HEAD
 xport function RoleManagement() {
   // Mock team members data
@@ -148,12 +157,17 @@ function RoleManagement() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: 1
       name: 'Alex Johnson'
       email: 'alex@example.com'
@@ -453,8 +467,11 @@ export function RoleManagement() {;
     Manager: 'Can view candidates and create jobs'
     Viewer: 'Read-only access to candidates'
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: 1,
       name: "Alex Johnson",
       email: "alex@example.com",
@@ -502,12 +519,15 @@ export function RoleManagement() {;
         manageTeam: false,
         viewBilling: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         manageBilling: false,
       },
     },
@@ -528,8 +548,6 @@ export function RoleManagement() {;
     Manager: 'Can view candidates and create jobs',
     Viewer: 'Read-only access to candidates',
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         manageBilling: false}}],
 
   const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {
@@ -545,6 +563,7 @@ export function RoleManagement() {;
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -564,16 +583,17 @@ export function RoleManagement() {;
       <div>
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   return (
     <div className="space-y-6">
       <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
           {Object.entries(roleDescriptions).map(([role, description]) => (
@@ -586,6 +606,7 @@ export function RoleManagement() {;
                   {role}
                 </Badge>              </div>
               <p className='text-sm text-muted-foreground'>{description}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             </div>
           ))}
@@ -613,6 +634,8 @@ export function RoleManagement() {;
                 <div className='flex items-center justify-center gap-1'>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => (
@@ -621,25 +644,13 @@ export function RoleManagement() {;
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           ))}
         </div>
       </div>
-<<<<<<< HEAD
       <div className='rounded-md border'>
-=======
 
       <div className="rounded-md border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Table>
           <TableHeader>
             <TableRow>
@@ -766,6 +777,7 @@ export function RoleManagement() {;
           <TableBody>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <TableCell>
 =======
@@ -780,15 +792,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className='text-sm text-muted-foreground'>
 >>>>>>>                     {member.email}
 =======
-            {teamMembers.map(member => (              <TableRow key={member.id}>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TableCell>
                   <div className="font-medium">{member.name}</div>
                   <div className="text-sm text-muted-foreground">
@@ -797,6 +805,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -808,6 +817,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <select
                     className='w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
                     defaultValue={member.role}                  >
@@ -815,6 +826,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <option value='Recruiter'>Recruiter</option>
                     <option value='Manager'>Manager</option>
                     <option value='Viewer'>Viewer</option>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   </select>
                 </TableCell>
@@ -892,6 +904,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <select 
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member.role}
@@ -900,18 +914,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <option value="Recruiter">Recruiter</option>
                     <option value="Manager">Manager</option>
                     <option value="Viewer">Viewer</option>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
-<<<<<<< HEAD
                     aria-label='View candidates'
-=======
                     aria-label="View candidates"
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>
@@ -1401,11 +1408,6 @@ export function RoleManagement() {;
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View candidates";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1497,7 +1499,6 @@ export function RoleManagement() {;
                   <Switch
                     aria-label='View billing'
                     checked={member.permissions.viewBilling}
-<<<<<<< HEAD
                     onCheckedChange={checked =>
                       handlePermissionChange(member.id, 'viewBilling', checked)
                     }                  />
@@ -1507,11 +1508,15 @@ export function RoleManagement() {;
           </TableBody>
         </Table>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
@@ -1573,13 +1578,18 @@ export function RoleManagement() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/admin/RoleManagement.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
@@ -1708,8 +1718,11 @@ TooltipProvider;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

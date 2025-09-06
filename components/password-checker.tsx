@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Button from '../components/ui/Button';
@@ -49,18 +50,17 @@ import Button from '../components / ui / Button';
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
   Lock
   Shield
   Eye
@@ -75,8 +75,11 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 export default function PasswordCheckerPage() {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Lock,
   Shield,
   Eye,
@@ -147,8 +150,11 @@ export default function PasswordCheckerPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 export default function PasswordCheckerPage() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
@@ -965,15 +971,16 @@ setSuggestions([]);
           content='Advanced password strength analyzer with security recommendations.'
         />
       </Head>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -1480,9 +1487,8 @@ if (return 'bg - orange - 400') {
                     </button>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1490,6 +1496,8 @@ if (return 'bg - orange - 400') {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {/* Generate Password */}
                 <div>;
                   <Button
@@ -1512,6 +1520,7 @@ if (return 'bg - orange - 400') {
                     Generate Strong Password
                   </Button>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1546,6 +1555,9 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {/* Generated Password Display */}
                 {generatedPassword && (
                   <div className="p-4 bg-gray-700 rounded-lg border border-gray-600">
@@ -1565,7 +1577,6 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                         Copy
                       </Button>
                     </div>
-<<<<<<< HEAD
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}                      <Button
                         onClick={() => copyToClipboard(generatedPassword)}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1623,16 +1634,10 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                 <div className="text-sm text-gray-400">
 =======
                       {generatedPassword}
-=======
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}
 
                       {generatedPassword}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   </div>
                 )}
@@ -1739,6 +1744,7 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                         {strengthText} ({strength}/100)
                       </span>
                     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                       <div 
@@ -1758,6 +1764,8 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
 className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className='w-full bg-gray-700 rounded-full h-3'>
                       <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">
                   {/* Strength Score */}
@@ -1769,24 +1777,23 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
                     </div>
                     <div className='w-full bg-gray-700 rounded-full h-3'>
                       <div                    <div className="w-full bg-gray-700 rounded-full h-3">
-<<<<<<< HEAD
                       <div
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                       <div 
-=======
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         style={{ width: `${strength}%` }}
                       />
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1853,6 +1860,9 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {/* Security Checks */}
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3">Security Criteria</h4>
@@ -1987,14 +1997,13 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
                           {getCheckIcon(passed)}
                           <span
                             className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
-<<<<<<< HEAD
                           >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries(checks).map(([key, passed]) => (
                         <div key={key} className="flex items-center space-x-3">
                           {getCheckIcon(passed)}
                           <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
-=======
                           >                            {key === 'length' && 'At least 8 characters'}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2002,6 +2011,8 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
@@ -2039,14 +2050,7 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
                       ))}
                     </div>
                   </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Suggestions */}
                   {suggestions.length > 0 && (
                     <div>
@@ -2074,7 +2078,6 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
                             <AlertTriangle className='w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0' />
                             <span className='text-sm text-yellow-300'>
                               {suggestion}
-<<<<<<< HEAD
                             </span>                          </div>                      <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <div className="space-y-2">
@@ -2083,13 +2086,17 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
                             <span className="text-sm text-yellow-300">{suggestion}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                           </div>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             </span>                          </div>
 
                           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2097,6 +2104,8 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         ))}
                       </div>
                     </div>
@@ -2241,14 +2250,7 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -2885,6 +2887,7 @@ href="/pricing"
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2903,6 +2906,10 @@ href="/pricing"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+            Ready to Secure Your Passwords?
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to
@@ -2950,6 +2957,7 @@ href="/pricing"
         </div>
       </section>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -3020,18 +3028,18 @@ className='border-white text-white hover:bg-white hover:text-indigo-600'>       
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

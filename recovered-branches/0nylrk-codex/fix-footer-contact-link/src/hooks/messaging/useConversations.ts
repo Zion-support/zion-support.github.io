@@ -5,18 +5,20 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Conversation, ConversationContextData  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Conversation, ConversationContextData} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -24,6 +26,8 @@ import {toast} from '@/hooks/use-toast';
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -364,12 +368,14 @@ export function useConversations(;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
         conversationId = newConversation.id
-<<<<<<< HEAD
       }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Conversation, ConversationContextData } from '@/types/messaging',;
@@ -504,6 +510,7 @@ export function useConversations(;
         if (createError) throw createError,;
         conversationId = newConversation.id;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       }
@@ -524,17 +531,24 @@ export function useConversations(;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      }
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Send the initial message
       await supabase
         .from('messages')
         .insert({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           conversation_id: conversationId;
           sender_id: user.id;
           recipient_id: recipientId;
@@ -544,8 +558,11 @@ export function useConversations(;
         });
       // Update conversations list
       await fetchConversations();
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           conversation_id: conversationId,
           sender_id: user.id,
           recipient_id: recipientId,
@@ -557,6 +574,7 @@ export function useConversations(;
       // Update conversations list
       await fetchConversations(),
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -570,12 +588,13 @@ export function useConversations(;
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Return the conversation ID
       return conversationId
     } catch (error) {
       console.error('Error creating conversation:', error),
       toast({
-<<<<<<< HEAD
         title: "Failed to create conversation";
         description: "Please try again later"
         variant: "destructive"
@@ -583,21 +602,20 @@ export function useConversations(;
     }
   }
   return {
-=======
         title: "Failed to create conversation",
         description: "Please try again later",
         variant: "destructive"
       })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
   };
 
   return {
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Send the initial message;
       await supabase;
@@ -624,6 +642,7 @@ export function useConversations(;
     }
   };
   return {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1003,6 +1022,8 @@ conversationId = newConversation.id
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     fetchConversations;
 
     createConversation}

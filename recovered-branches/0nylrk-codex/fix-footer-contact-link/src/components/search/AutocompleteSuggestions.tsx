@@ -12,12 +12,10 @@ import {SearchSuggestion, SearchHighlight} from "@/types/search";
 
 =======
 
-<<<<<<< HEAD
 import React from "react";
-<<<<<<< HEAD
 import { SearchSuggestion, SearchHighlight } from "@/types/search";
-=======
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -37,6 +35,11 @@ import { SearchSuggestion, SearchHighlight } from "@/types/search",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from "react",
+import { SearchSuggestion, SearchHighlight } from "@/types/search",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface AutocompleteSuggestionsProps {
 
   suggestions: SearchSuggestion[]
@@ -44,6 +47,7 @@ interface AutocompleteSuggestionsProps {
   onSelectSuggestion: (suggestion: string) => void
 
   visible: boolean
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -53,6 +57,8 @@ interface AutocompleteSuggestionsProps {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { SearchSuggestion, SearchHighlight } from "@/types/search",;
 interface AutocompleteSuggestionsProps {;
@@ -60,6 +66,7 @@ interface AutocompleteSuggestionsProps {;
   searchTerm: string,;
   onSelectSuggestion: (suggestion: string) => void,;
   visible: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -72,6 +79,8 @@ interface AutocompleteSuggestionsProps {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 // Helper function to highlight matching text
 
@@ -79,6 +88,7 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   if (!searchTerm |searchTerm.length === 0) {
     return { before: '', match: text, after: '' }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -95,6 +105,9 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
@@ -149,7 +162,6 @@ if ( {) {
     match: text.substring(index, index + searchTerm.length);
     after: text.substring(index + searchTerm.length)
   }
-<<<<<<< HEAD
 }
 export function AutocompleteSuggestions({
   suggestions
@@ -158,14 +170,18 @@ export function AutocompleteSuggestions({
   visible
 }: AutocompleteSuggestionsProps) {
   if (!visible |suggestions.length === 0) return null;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 
 export function AutocompleteSuggestions({ 
   suggestions, 
   searchTerm, ;
   onSelectSuggestion;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -174,6 +190,8 @@ export function AutocompleteSuggestions({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   const lowerText = text.toLowerCase(),;
   const lowerSearchTerm = searchTerm.toLowerCase(),;
@@ -194,6 +212,7 @@ export function AutocompleteSuggestions({
   searchTerm, 
   onSelectSuggestion,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   visible 
 }: AutocompleteSuggestionsProps) {
@@ -207,28 +226,38 @@ export function AutocompleteSuggestions({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   visible 
 }: AutocompleteSuggestionsProps) {
   if (!visible || suggestions.length === 0) return null,
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">
       <ul className="py-2 max-h-60 overflow-y-auto">
         {suggestions.map((suggestion, index) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           const highlight = highlightMatch(suggestion.text, searchTerm);
 
-=======
           const highlight = highlightMatch(suggestion.text, searchTerm),
           
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           return (
             <li key={`${suggestion.type}-${index}`}
                 className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"
@@ -246,6 +275,7 @@ export function AutocompleteSuggestions({
             </li>
           )
         })}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -318,12 +348,17 @@ export function AutocompleteSuggestions(): any ({ ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/AutocompleteSuggestions.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </ul>
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </ul>;
     </div>;
   );
@@ -561,5 +596,8 @@ return (<li key= {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/AutocompleteSuggestions.tsx
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -103,22 +103,15 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
 =======
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export type PaginationProps = {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export type PaginationProps = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   page: number;
   pageSize: number;
   total: number;
   onChange: (nextPage: number) => void;
 }
 export default function Pagination({
-<<<<<<< HEAD
   page
   pageSize
   total
@@ -130,7 +123,6 @@ export default function Pagination({
   onChange: (nextPage: number) => void
 }
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-=======
   page,
   pageSize,
   total,
@@ -143,7 +135,6 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const canPrev = page > 1;
@@ -208,12 +199,15 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
       </EnhancedButton>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -515,8 +509,8 @@ if ( {) {
 }
 export default Pagination;
 }
-=======
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -557,3 +551,5 @@ export default Pagination;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,9 +11,10 @@ trial_days: number;
     setup_time: string;
 =======
 =======
+=======
+export interface EmergingTechService {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface EmergingTechService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -872,6 +874,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     support:
       '24/7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.'
     compliance: [
+<<<<<<< HEAD
 
   return emergingTechServices2025.filter(service => service.popular);
 }
@@ -1903,6 +1906,8 @@ export const getEmergingTechServicesByCategory = (category: string) => {
       '24/7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.'
     compliance: [
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols'
     ]
     link: 'https://ziontechgroup.com/quantum-communications'
@@ -1916,7 +1921,6 @@ export const getEmergingTechServicesByCategory = (category: string) => {
   }
 ];
 export const getPopularEmergingTechServices = () => {
-=======
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
     ],
     link: 'https://ziontechgroup.com/quantum-communications',
@@ -1931,7 +1935,6 @@ export const getPopularEmergingTechServices = () => {
 ];
 
 export const getPopularEmergingTechServices = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return emergingTechServices2025.filter(service => service.popular);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1945,6 +1948,7 @@ export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1985,12 +1989,12 @@ const contact = {mobile: "+1 302 464 0950"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.monthly.toString()) |0;
-=======
   return emergingTechServices2025.filter(service => {;
     const price = parseInt(service.price.monthly.toString()) || 0;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return price >= minPrice && price <= maxPrice;
   });
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
@@ -3549,16 +3553,11 @@ export interface EmergingTechService {;
 =======
 =======
     return price >= minPrice && price <= maxPrice
-<<<<<<< HEAD
   })
 }
 
-=======
 export interface EmergingTechService {;
-=======
   });
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -4047,11 +4046,10 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service.price.monthly.toString()) || 0,;
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

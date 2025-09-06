@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,12 +31,13 @@ function QuantumNeuralNetworkPlatformPage() {
       <div className="max - w-7xl mx - auto">;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link";
 export const metadata = {title: "Quantum Neural Network Platform - Zion Tech Group";
   description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.";
   keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group"}
 export default function QuantumNeuralNetworkPlatformPage() {return (;
-=======
 import Link from "next/link",;
 export const metadata = {;
   title: "Quantum Neural Network Platform - Zion Tech Group",;
@@ -43,7 +45,6 @@ export const metadata = {;
   keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group"};
 export default function QuantumNeuralNetworkPlatformPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

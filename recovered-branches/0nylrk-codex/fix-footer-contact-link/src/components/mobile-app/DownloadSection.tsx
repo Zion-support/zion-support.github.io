@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/DownloadSection.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 
@@ -12,15 +13,25 @@ import React from "react",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+import React from "react";
+import {QrCodeIcon} from "lucide-react";
+import {AppStoreButtons} from "./AppStoreButtons";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { QrCodeIcon } from "lucide-react";
 import { AppStoreButtons } from "./AppStoreButtons";
 
+<<<<<<< HEAD
 import React from "react";
 import { QrCodeIcon } from "lucide-react";
 import { AppStoreButtons } from "./AppStoreButtons";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { QrCodeIcon } from "lucide-react",
+import { AppStoreButtons } from "./AppStoreButtons",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
@@ -42,10 +53,13 @@ export const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring
                 needs to the next level. Available on iOS and Android.
               </p>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <AppStoreButtons
                 className="mb-8"
                 appStoreUrl={appStoreUrl}
@@ -54,7 +68,19 @@ export const DownloadSection: React.FC = () => {
                 onGooglePlayClick={() =>
                   console.log("Google Play button clicked")
                 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              
+              <AppStoreButtons 
+                className="mb-8" 
+              <AppStoreButtons 
+                className="mb-8" 
+                appStoreUrl={appStoreUrl}
+                googlePlayUrl={googlePlayUrl}
+                onAppStoreClick={() => console.log("App Store button clicked")}
+                onGooglePlayClick={() => console.log("Google Play button clicked")}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { QrCodeIcon } from "lucide-react",;
 import { AppStoreButtons } from "./AppStoreButtons",;
@@ -78,6 +104,7 @@ export const DownloadSection: React.FC = () => {;
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => // // // console.log("App Store button clicked")}
                 onGooglePlayClick={() => // // // console.log("Google Play button clicked")}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ========
@@ -129,6 +156,8 @@ export const DownloadSection: React.FC = () => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               />
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
@@ -152,6 +181,7 @@ export const DownloadSection: React.FC = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -187,6 +217,12 @@ export const DownloadSection: React.FC = () => {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  );
+}
+
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 },
 
@@ -269,6 +305,7 @@ export const DownloadSection:React.FC = () => {;
 =======
 
 export default DownloadSection;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -297,3 +334,5 @@ export default DownloadSection;
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -311,19 +310,11 @@ export default function CurationPage(_{_updatedAt, _items}: Props) {_return (
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
-=======
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Experiment = {
   title: string;
 hypothesis?: string;
@@ -335,13 +326,9 @@ type Props = {
   updatedAt: string | null;
 items: Experiment[] }
 export default function CurationPage({ updatedAt, items }: Props) {
-<<<<<<< HEAD
   return (type Experiment = {
-<<<<<<< HEAD
   title: string
-=======
   title: string,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   hypothesis?: string;
   metric?: string;
   effort?: number;
@@ -364,11 +351,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
           next run.
         </p>
       )}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className='mt-6 space-y-4'>
         {items.map((exp, idx) => (
           <div
@@ -399,8 +382,6 @@ export default function CurationPage({ updatedAt, items }: Props) {
                 {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
-<<<<<<< HEAD
-=======
   return (
 
 };
@@ -408,8 +389,11 @@ export default function CurationPage({ updatedAt, items }: Props) {
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
             )}
           </div>
@@ -458,54 +442,46 @@ export async function getStaticProps() {
         )}
       </div>
     </main>;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </div>
             )}
           </div>
         ))}
         {!items.length && (
-<<<<<<< HEAD
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
             Nothing to show yet.
-=======
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
 
             Nothing to show yet.
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         )}
       </div>
     </main>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export async function getStaticProps() {
   try {
     const filePath = path.join(
-<<<<<<< HEAD
       process.cwd()
       'data'
       'ai-curation'
       'growth-experiments.json'
-=======
       process.cwd(),
       'data',
       'ai-curation',
       'growth-experiments.json';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     );
     const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
     return {
       props: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     };  } catch {
@@ -528,16 +504,16 @@ export async function getStaticProps() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         updatedAt: parsed.updatedAt |null
         items: parsed.items |[]
       }
       revalidate: 300
-=======
         updatedAt: parsed.updatedAt || null,
         items: parsed.items || [],
       },
       revalidate: 300,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     };  } catch {
     return {
       props: {
@@ -642,6 +618,7 @@ function getStaticProps() {
   } catch {
     return {
       props: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -748,6 +725,8 @@ export async function getStaticProps() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         updatedAt: null
         items: []
       }
@@ -755,25 +734,21 @@ export async function getStaticProps() {;
     }
   }        items: []}
 
-=======
         updatedAt: null,
         items: [],
       },
       revalidate: 300,
     };
   }        items: []},
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       revalidate: 300}
 }
-<<<<<<< HEAD
 }
-=======
         updatedAt: null,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
         updatedAt: null,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

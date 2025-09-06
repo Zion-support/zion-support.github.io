@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ChatAssistant/ChatInput.tsx
 
 =======
@@ -16,12 +17,25 @@ import React, {;
 
 =======
 
+=======
+
+import React, {
+  useState
+  useRef
+  useEffect
+  FormEvent
+  KeyboardEvent
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, {
   useState,
   useRef,
   useEffect,
   FormEvent,
   KeyboardEvent,;
+<<<<<<< HEAD
+=======
+} from "react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -61,6 +75,7 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
         (onSend(message), setMessage(""));
       }
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -69,6 +84,10 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  }
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from "lucide-react",
@@ -106,6 +125,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
       }
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -159,6 +179,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
       }
     }
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
@@ -292,6 +314,7 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
         <Send className="h-5 w-5" />
       </Button>
     </form>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -370,3 +393,11 @@ const inputRef = useRef<HTMLTextAreaElement> (null);
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+);
+  )
+}
+  )
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

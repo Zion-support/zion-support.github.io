@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -21,4 +22,13 @@ const React from";react" export: default function ExpensiveComponent() { const [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:src.disabled/components/ExpensiveComponent.jsx
+import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
+const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
+const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
+:temp_exclude/src.disabled/components/ExpensiveComponent.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React from';react' "export": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {''';

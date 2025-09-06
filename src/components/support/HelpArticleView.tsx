@@ -1,28 +1,35 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ThumbsUp, ThumbsDown } from 'lucide-react'import { toast } from "@/components/ui/use-toast"
 import { HELP_CATEGORIES } from "./help-content"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { ThumbsUp, ThumbsDown } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -41,25 +48,21 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { HELP_CATEGORIES } from "./help-content";
-=======
 import { HELP_CATEGORIES } from "./help-content",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface HelpArticleViewProps {
   articleId: string
 }
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-=======
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
@@ -78,9 +81,12 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   return new Date(date).toLocaleDateString("en-US", {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     year: "numeric"
     month: "long"
     day: "numeric", })
@@ -130,13 +136,17 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
   return new Date(date).toLocaleDateString("en-US", {;
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     year: "numeric",;
     month: "long",;
     day: "numeric", });
 };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -158,6 +168,8 @@ function HelpArticleView() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
   
   // Find the article in all categories
@@ -353,8 +365,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

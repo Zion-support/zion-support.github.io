@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,12 +8,16 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
+
   
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useAuth } from "@/context/auth/AuthProvider"
@@ -40,10 +45,13 @@ export function SignUpForm() {
   const { signUp, login, loginWithGoogle } = useAuth()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [formData, setFormData] = useState({
     email: ""
     password: ""
@@ -77,9 +85,6 @@ export function SignUpForm() {
     const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/
     if (signupMode && !formData.name.trim()) {
       errors.name = 'Full name is required'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
@@ -97,17 +102,10 @@ export function SignUpForm() {
   const router = useRouter(),
   const { signUp, login, loginWithGoogle } = useAuth(),
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     name: ""}),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false)
   const [signupMode, setSignupMode] = useState(true)
   const [error, setError] = useState("")
@@ -129,6 +127,7 @@ export function SignUpForm() {
     const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/
     if (signupMode && !formData.name.trim()) {
       errors.name = 'Full name is required'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from "react",
@@ -181,6 +180,8 @@ export function SignUpForm() {
     if (signupMode && !formData.name.trim()) {
       errors.name = 'Full name is required'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isLoading, setIsLoading] = useState(false),
   const [signupMode, setSignupMode] = useState(true),
   const [error, setError] = useState(""),
@@ -247,6 +248,7 @@ export function SignUpForm() {;
     const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,;
     if (signupMode && !formData.name.trim()) {;
       errors.name = 'Full name is required';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     }
@@ -501,6 +503,8 @@ export function SignUpForm() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     if (!formData.email.trim()) {
       errors.email = 'Email is required'
@@ -512,11 +516,7 @@ export function SignUpForm() {;
     } else if (!strongPasswordRegex.test(formData.password)) {
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)
@@ -529,11 +529,7 @@ export function SignUpForm() {;
           name: formData.name})
         if (result?.error) {
           throw new Error(result.error as any), // Cast to any if type is AuthError
-<<<<<<< HEAD
         }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
     if (Object.keys(errors).length > 0) {;
       setFieldErrors(errors),;
@@ -548,19 +544,13 @@ export function SignUpForm() {;
           name: formData.name}),;
         if (result?.error) {;
           throw new Error(result.error as any), // Cast to any if type is AuthError;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         if (result?.emailVerificationRequired) {
           setShowVerificationMessage(true)
         } else {
           // Only navigate if email verification is not required
           router.push("/mobile")
-<<<<<<< HEAD
         }
       } else {
         const { error } = await login(formData.email, formData.password)
@@ -568,7 +558,6 @@ export function SignUpForm() {;
           throw new Error(error)
         }
         router.push("/mobile")
-=======
 ;
         if (result?.emailVerificationRequired) {;
           setShowVerificationMessage(true);
@@ -585,11 +574,6 @@ export function SignUpForm() {;
         router.push("/mobile")
 ;
         router.push("/mobile");
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (err: any) {
       logErrorToProduction('Signup/Login error:', { data: err })
@@ -598,10 +582,13 @@ export function SignUpForm() {;
       setIsLoading(false)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   };
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleGoogleLogin = async () => {
     try {
@@ -611,11 +598,11 @@ export function SignUpForm() {;
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   };
   const handleGoogleLogin = async () => {;
     try {;
@@ -636,17 +623,13 @@ export function SignUpForm() {;
 =======
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -670,6 +653,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="space-y-2">
 >>>>>>>         <Button
           variant="outline"
@@ -686,19 +672,24 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         <Button
           variant="outline"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button
           variant="outline"
-=======
         <Button 
           variant="outline" 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -712,6 +703,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -741,12 +733,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -754,11 +743,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Verification Message */}
       {showVerificationMessage && (
         <Alert className="mb-4 border-blue-500 bg-blue-50">
@@ -767,9 +752,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             Please check your email and click the verification link before signing in.
           </AlertDescription>
         </Alert>
-<<<<<<< HEAD
-=======
-=======
 ;
       {/* Verification Message */}
       {showVerificationMessage && (;
@@ -779,14 +761,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             Please check your email and click the verification link before signing in.;
           </AlertDescription>;
         </Alert>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
-<<<<<<< HEAD
-=======
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <form onSubmit={handleSubmit} className="space-y-4">
 =======
 >>>>>>>       )}
@@ -809,15 +790,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               name="name"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               placeholder="Enter your full name"
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               value = {formData.name,}
               onChange = {handleInputChange,}
               required
               aria-invalid = {!!fieldErrors.name,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               placeholder="Enter your full name"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -834,16 +819,21 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               value={formData.name}
               onChange={handleInputChange}
               required;
               aria-invalid={!!fieldErrors.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
@@ -851,6 +841,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -866,8 +857,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -877,15 +869,19 @@ ursor/fix-website-loading-errors-and-merge-6662
             type="email"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             placeholder="Enter your email"
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             value = {formData.email,}
             onChange = {handleInputChange,}
             required
             aria-invalid = {!!fieldErrors.email,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             placeholder="Enter your email"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -906,15 +902,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             value={formData.email}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.email}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             placeholder="Enter your email"
           />
           {fieldErrors.email && (
@@ -930,29 +923,30 @@ ursor/fix-website-loading-errors-and-merge-6662
             type="password"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             placeholder="Create a password"
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             value = {formData.password,}
             onChange = {handleInputChange,}
             required
             aria-invalid = {!!fieldErrors.password,}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>             placeholder="Create a password"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             value={formData.password}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.password}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             placeholder="Create a password"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           />
@@ -961,6 +955,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-red-500 text-sm">{fieldErrors.password}</p>
           )}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -990,6 +985,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button
 >>>>>>>           type="submit"
           className="w-full py-6"
@@ -1018,6 +1016,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </form>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <p className="text-center text-sm">
@@ -1032,6 +1031,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <p className="text-center text-sm">
 >>>>>>>         {signupMode
           ? "Already have an account? "
@@ -1132,12 +1134,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           : "Don't have an account? ";
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
         }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Link
           href="/login"
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer"
@@ -1179,6 +1184,7 @@ if (error) {
 }</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>)
 }"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 }
 ;
@@ -1188,6 +1194,8 @@ if (error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Link;
           href="/login";
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer";
@@ -1200,8 +1208,11 @@ if (error) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

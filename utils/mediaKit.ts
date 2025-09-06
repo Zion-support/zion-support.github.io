@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
@@ -21,6 +22,8 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type MediaBundle = 'general' | 'web3' | 'institutional';
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
 export interface MediaGenerationResponse {;
@@ -31,16 +34,15 @@ export interface MediaGenerationResponse {;
 export async function generateMediaContent(request: MediaGenerationRequest): Promise<MediaGenerationResponse> {
   // Mock implementation - in production, this would call OpenAI or other AI service
   return {
-<<<<<<< HEAD
     ok: true
     text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
   }
-=======
     ok: true,
     text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -51,6 +53,8 @@ export async function generateMediaContent(request: MediaGenerationRequest): Pro
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
@@ -69,16 +73,18 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
     }
     {
-<<<<<<< HEAD
       path: ''
       filename: 'legal/jurisdictional-disclosures.md'
       type: 'text'
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       path: '',
 <<<<<<< HEAD
 
@@ -130,7 +136,6 @@ export function buildPressRelease(
       type: 'text',
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const web3Extras: MediaAsset[] = [
     {
@@ -150,6 +155,7 @@ export function buildPressRelease(
   return base;
 export function buildPressRelease(
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   type: PressReleaseType
   params: {
@@ -166,9 +172,12 @@ export function buildPressRelease(
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+  type: PressReleaseType
+  params: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   type: PressReleaseType,
   params: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     companyName: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     date: string;
@@ -252,10 +261,13 @@ function titleCase(s: string) {
 =======
   );}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
 }
@@ -294,7 +306,10 @@ function title_case() {
 =======
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

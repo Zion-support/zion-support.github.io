@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -32,6 +33,9 @@ import { motion } from 'framer-motion';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -86,6 +90,7 @@ interface NavigationItem {;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -100,18 +105,22 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
-=======
 
 };
 
 export default InteractiveNavigation;};
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -125,6 +134,7 @@ const InteractiveNavigation: React.FC: = () => {";
 
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -226,10 +236,14 @@ export default Component}
 
 =======
 <<<<<<< HEAD
-export default Component}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default Component}
 export default Component}
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

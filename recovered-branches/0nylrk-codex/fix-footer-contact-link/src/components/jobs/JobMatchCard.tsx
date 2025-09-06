@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchCard.tsx
@@ -6,6 +7,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -14,9 +17,12 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Building, MapPin, Clock, DollarSign, Star} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {JobMatch} from "@/types/jobs";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -24,9 +30,12 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { formatDistanceToNow } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 interface JobMatchProps {
@@ -80,14 +89,16 @@ export function JobMatchCard({
   // Generate a formatted date for display
   const postedDate = new Date();
 
-=======
 import { formatDistanceToNow } from "date-fns",
 import { JobMatch } from "@/types/jobs",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface JobMatchProps {
   matchId: string,
   talentId: string,
@@ -103,11 +114,14 @@ interface JobMatchProps {
   onViewDetails?: (matchId: string) => void,
   onInvite?: (matchId: string) => void
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export function JobMatchCard({ ;
@@ -142,9 +156,12 @@ export function JobMatchCard({ ;
       onInvite(matchId)
     }
   };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -199,6 +216,7 @@ export function JobMatchCard({;
       onInvite(matchId);
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   // Generate a formatted date for display
@@ -303,10 +321,11 @@ import React from 'react';
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   // Generate a formatted date for display
   const postedDate = new Date(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
   return (
     <Card className="overflow-hidden">
@@ -374,23 +393,25 @@ import React from 'react';
                 Apply Now
               </Button>
             )}
-<<<<<<< HEAD
           </div>
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -745,3 +766,7 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

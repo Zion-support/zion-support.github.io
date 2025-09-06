@@ -34,25 +34,19 @@ const corsHeaders = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -98,16 +92,11 @@ interface GeneratedBlogContent {
 <<<<<<< HEAD
 =======
 interface ContentGenerationRequest {
-<<<<<<< HEAD
   contentType: 'blog' | 'newsletter';
   prompt?: string;
   topic?: string;
   autoPublish?: boolean
   includeImage?: boolean
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 interface GeneratedBlogContent {
   title: string;
@@ -125,20 +114,25 @@ interface GeneratedNewsletterContent {
   cta: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   contentType: 'blog' | 'newsletter',
   prompt?: string,
   topic?: string,
   autoPublish?: boolean,
   includeImage?: boolean
-=======
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -169,6 +163,7 @@ interface GeneratedNewsletterContent {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -188,6 +183,8 @@ serve(async (req) => {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -201,6 +198,7 @@ serve(async (req) => {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -212,6 +210,8 @@ serve(async (req) => {
     const { contentType, prompt, topic, autoPublish, includeImage } = await req && req.json() as ContentGenerationRequest;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-content/index.ts
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Default topic if none provided
@@ -219,7 +219,6 @@ serve(async (req) => {
     // Build the prompt based on content type
     let systemPrompt: string;
     let userPrompt: string
-=======
 
 <<<<<<< HEAD
 
@@ -235,16 +234,20 @@ serve(async (req) => {
     let userPrompt: string,
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (contentType === 'blog') {
       systemPrompt = `You are an expert content creator for Zion, an AI freelancing marketplace.
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
       Format your response as a JSON object with the following fields:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -258,20 +261,25 @@ serve(async (req) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title, metaDescription, body (in markdown), tags (array of 3 keywords), and tweetSummary.`;
       userPrompt = prompt |`Generate a 700-word blog article on "${contentTopic}" written in a professional, SEO-optimized tone.
-=======
       title, metaDescription, body (in markdown), tags (array of 3 keywords), and tweetSummary.`,
       
       userPrompt = prompt || `Generate a 700-word blog article on "${contentTopic}" written in a professional, SEO-optimized tone. 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       Include subheadings, summary intro, and conclusion. Focus on actionable advice and industry insights.`
     } else {
       systemPrompt = `You are an expert email newsletter writer for Zion, an AI freelancing marketplace.
       You create concise, engaging newsletter content that summarizes platform updates, highlights talent, and drives user engagement.
       Format your response as a JSON object with the following fields:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -284,14 +292,18 @@ serve(async (req) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       subject, previewText, body (in HTML), and cta.`;
       userPrompt = prompt |`Create a weekly newsletter for Zion marketplace users featuring: - Platform updates summary
-=======
       subject, previewText, body (in HTML), and cta.`,
       
       userPrompt = prompt || `Create a weekly newsletter for Zion marketplace users featuring: - Platform updates summary
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       - Featured AI talent spotlight
       - Top blog post summary
       - Industry news roundup
@@ -411,28 +423,28 @@ if ( {) {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
-<<<<<<< HEAD
         "Authorization": `Bearer ${openAIApiKey}`;
         "Content-Type": "application/json"}
-=======
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       body: JSON.stringify({
         model: "gpt-4o"
         messages: [
-<<<<<<< HEAD
           { role: "system", content: systemPrompt }
           { role: "user", content: userPrompt }
         ];
         temperature: 0.7})});
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
         ],
         temperature: 0.7})}),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -455,25 +467,29 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!response.ok) {
       const errorData = await response.json(),
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
-<<<<<<< HEAD
     const data = await response.json();
     const generatedContent = JSON.parse(data.choices[0].message.content);
-=======
 
     const data = await response.json(),
     const generatedContent = JSON.parse(data.choices[0].message.content),
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // If image is requested for blog post, generate an image prompt
     if (contentType === 'blog' && includeImage) {
       const imagePromptResponse = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -511,16 +527,15 @@ if ( {) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "Authorization": `Bearer ${openAIApiKey}`;
           "Content-Type": "application/json"}
-=======
           "Authorization": `Bearer ${openAIApiKey}`,
           "Content-Type": "application/json"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         body: JSON.stringify({
           model: "gpt-4o-mini"
           messages: [
-<<<<<<< HEAD
             {
               role: "system"
               content: "You are an expert at creating DALL-E image prompts. Generate a short, descriptive prompt for a blog post thumbnail."
@@ -543,7 +558,6 @@ if ( {) {
         throw new Error("Supabase credentials are not set in environment variables")
       }
       const supabase = createClient(supabaseUrl, supabaseKey);
-=======
             { 
               role: "system", 
               content: "You are an expert at creating DALL-E image prompts. Generate a short, descriptive prompt for a blog post thumbnail." 
@@ -551,9 +565,6 @@ if ( {) {
             { 
               role: "user", 
               content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"` 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             }
           ];
           temperature: 0.7,
@@ -562,9 +573,12 @@ if ( {) {
       const imagePromptData = await imagePromptResponse.json();
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 serve(async (req) => {;
   // Handle CORS preflight requests;
@@ -647,6 +661,7 @@ serve(async (req) => {;
       const imagePromptData = await imagePromptResponse.json(),;
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -747,6 +762,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     // If autoPublish is true, save the content to the database
     if (autoPublish && contentType === 'blog') {
@@ -759,12 +776,10 @@ if ( {) {
       
       const supabase = createClient(supabaseUrl, supabaseKey),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Create slug from title
       const slug = generatedContent.title
         .toLowerCase()
         .replace(/[^\w\s]/g, '')
-<<<<<<< HEAD
         .replace(/\s+/g, '-');
       // Get current date formatted
       const publishedDate = new Date().toLocaleDateString('en-US', {
@@ -775,8 +790,11 @@ if ( {) {
       // Auto-calculate read time (rough estimate: 200 words per minute)
       const wordCount = generatedContent.body.split(/\s+/).length
       const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .replace(/\s+/g, '-'),
       
       // Get current date formatted
@@ -790,6 +808,7 @@ if ( {) {
       const wordCount = generatedContent.body.split(/\s+/).length,
       const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read",
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -809,6 +828,8 @@ if ( {) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Insert into blog_posts table
       const { data: blogPost, error } = await supabase
         .from('blog_posts')
@@ -843,7 +864,6 @@ if ( {) {
           excerpt: generatedContent.metaDescription,
           content: generatedContent.body,
           author: {
-<<<<<<< HEAD
             name: "Zion AI Team";
             title: "Content Team"
             avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -876,8 +896,11 @@ if ( {) {
         console.error("Error saving blog post:", error)
       } else {
         console.log("Blog post saved successfully:", blogPost);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             name: "Zion AI Team",
             title: "Content Team",
             avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -901,6 +924,7 @@ if ( {) {
         // // // console.log("Blog post saved successfully:", blogPost),
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -910,11 +934,14 @@ if ( {) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // Create notification about new blog post
         await supabase
           .from('notifications')
           .insert({
             user_id: null, // System notification visible to admins
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-content/index.ts
 
@@ -1050,14 +1077,19 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             title: "New Blog Post Generated"
             message: `AI-generated blog post "${generatedContent.title}" has been published.`;
             type: "system";
             read: false;
             related_id: blogPost.id
             action_url: `/blog/${slug}`;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent.title}" has been published.`,
             type: "system",
@@ -1065,21 +1097,27 @@ if ( {) {
             related_id: blogPost.id,
             action_url: `/blog/${slug}`,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             action_text: "View Post"
           })
       }
     }
     return new Response(JSON.stringify(generatedContent), {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 200})
   } catch (error) {
@@ -1090,7 +1128,6 @@ if ( {) {
   }
 });
 
-=======
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
   } catch (error) {
@@ -1100,11 +1137,14 @@ if ( {) {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     // If autoPublish is true, save the content to the database;
     if (autoPublish && contentType === 'blog') {;
@@ -1182,6 +1222,7 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -1488,3 +1529,7 @@ action text: "View Post"
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

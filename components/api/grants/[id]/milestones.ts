@@ -20,13 +20,10 @@ return path.join(GRANTS_DIR, `${id}.json`);
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 =======
 import type {
-<<<<<<< HEAD
   GrantApplication
   MilestonesUpdatePayload;
-=======
   GrantApplication,;
   MilestonesUpdatePayload,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -223,6 +220,7 @@ function write_grant() {
     return res.status(200).json({ record: existing });
   }
   res.setHeader('Allow', 'GET, POST');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -315,6 +313,8 @@ if ( {) {
 =======
   res.setHeader('Allow', 'GET, POST');
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   res.status(405).end('Method Not Allowed');    return res.status(200).json({ record: existing })
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
@@ -331,16 +331,14 @@ if ( {) {
 =======
   res.status(405).end('Method Not Allowed')
 }
-<<<<<<< HEAD
-=======
   res.status(405).end('Method Not Allowed');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
-=======
   res.status(405).end('Method Not Allowed');
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

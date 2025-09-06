@@ -5,9 +5,6 @@
 
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useParams, Link} from "react-router-dom";
 import {Header} from "@/components/header/Header";
 import {Footer} from "@/components/Footer";
@@ -24,9 +21,12 @@ export default function CategoryDetail() {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useParams, Link } from "react-router-dom",
 import { Header } from "@/components/header/Header",
 import { Footer } from "@/components/Footer",
@@ -37,6 +37,7 @@ import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide
 import { MARKETPLACE_LISTINGS } from "@/data/listingData",
 import { useNavigate } from "react-router-dom",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -46,6 +47,8 @@ import { useNavigate } from "react-router-dom",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/hooks/use-toast";
 export default function CategoryDetail() {
   // Cast to specify the expected route param type since useParams may be untyped
@@ -54,7 +57,6 @@ export default function CategoryDetail() {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-=======
 import { toast } from "@/hooks/use-toast",
 export default function CategoryDetail() {
   // Cast to specify the expected route param type since useParams may be untyped
@@ -63,22 +65,28 @@ export default function CategoryDetail() {
   const [isLoading, setIsLoading] = useState(true),
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
     icon: <Bot className="w-6 h-6" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
   // Map of category slugs to their display data
   const categoryData = {
@@ -97,8 +105,11 @@ export default function CategoryDetail() {
       description: "Rent or buy specialized hardware, servers, and devices";
       icon: <Code className="w-6 h-6" />
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }),
 
   // Map of category slugs to their display data
@@ -119,17 +130,21 @@ export default function CategoryDetail() {
       icon: <Code className="w-6 h-6" />
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -140,16 +155,21 @@ export default function CategoryDetail() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -160,16 +180,21 @@ export default function CategoryDetail() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
       icon: <PenLine className="w-6 h-6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -180,16 +205,21 @@ export default function CategoryDetail() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -200,16 +230,21 @@ export default function CategoryDetail() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
       icon: <Eye className="w-6 h-6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -220,16 +255,21 @@ export default function CategoryDetail() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
       icon: <Bot className="w-6 h-6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -240,16 +280,21 @@ export default function CategoryDetail() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -260,9 +305,17 @@ export default function CategoryDetail() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+    }
     },
+    'developer-tools': {
+      title: "Developer Tools"
+      description: "AI-powered coding assistance and automation"
+      icon: <Code className="w-6 h-6" />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
+    },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     'developer-tools': {
@@ -285,11 +338,14 @@ export default function CategoryDetail() {
     },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'business-solutions': {
       title: "Business Solutions"
       description: "Enterprise AI integrations and services"
       icon: <Briefcase className="w-6 h-6" />
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -302,11 +358,17 @@ export default function CategoryDetail() {
     setIsLoading(true);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+  useEffect(() => {
+    setIsLoading(true);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   useEffect(() => {
     setIsLoading(true),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -314,6 +376,8 @@ export default function CategoryDetail() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Find the category data based on slug
     const currentCategory = categoryData[slug as keyof typeof categoryData] |{
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') |"Category"
@@ -321,11 +385,14 @@ export default function CategoryDetail() {
       icon: <Bot className="w-6 h-6" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     setCategory(currentCategory);
     // Filter listings by category
@@ -333,8 +400,11 @@ export default function CategoryDetail() {
     const filteredListings = MARKETPLACE_LISTINGS.filter(listing =>
       listing.category.toLowerCase() === categoryTitle.toLowerCase()
     );
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     setCategory(currentCategory),
@@ -346,6 +416,7 @@ export default function CategoryDetail() {
     ),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     // If we don't have real listings for this category, generate placeholder listings
@@ -355,10 +426,11 @@ export default function CategoryDetail() {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // If we don't have real listings for this category, generate placeholder listings
     const listingsToShow = filteredListings.length > 0 ? filteredListings :
       Array(4).fill(null).map((_, index) => ({
-<<<<<<< HEAD
         id: `${slug}-${index}`
         title: `${currentCategory.title} Product ${index + 1}`
         description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`
@@ -366,8 +438,11 @@ export default function CategoryDetail() {
         price: Math.floor(Math.random() * 500) + 50
         currency: "$"
         tags: [`${slug}`, "ai", "tool"];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         id: `${slug}-${index}`,
         title: `${currentCategory.title} Product ${index + 1}`,
         description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`,
@@ -376,16 +451,20 @@ export default function CategoryDetail() {
         currency: "$",
         tags: [`${slug}`, "ai", "tool"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         author: {
           name: `Provider ${index + 1}`
           id: `author-${index + 1}`
           avatarUrl: undefined
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -523,6 +602,8 @@ export default function CategoryDetail() {;
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
         images: [`/placeholder.svg`]
         createdAt: new Date().toISOString()
@@ -532,8 +613,11 @@ export default function CategoryDetail() {;
     setListings(listingsToShow);
     setIsLoading(false)
   }, [slug]);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         },
         images: [`/placeholder.svg`],
         createdAt: new Date().toISOString(),
@@ -546,12 +630,15 @@ export default function CategoryDetail() {;
   }, [slug]),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId)
@@ -560,6 +647,7 @@ export default function CategoryDetail() {;
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -571,12 +659,16 @@ export default function CategoryDetail() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      });
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      });
       }),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -587,6 +679,7 @@ export default function CategoryDetail() {;
             category: listing.category
             image: listing.images?.[0]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -597,6 +690,8 @@ export default function CategoryDetail() {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useParams, Link } from "react-router-dom",;
 import { Header } from "@/components/header/Header",;
 import { Footer } from "@/components/Footer",;
@@ -918,6 +1013,7 @@ if ( {) {
             category: listing.category;
             image: listing.images?.[0];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -986,22 +1082,16 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         }
       })
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   };
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <>
@@ -1034,6 +1124,7 @@ if ( {) {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {listings.map((listing) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1290,27 +1381,29 @@ export default function CategoryDetail() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <ProductListingCard
                   key={listing.id}
-=======
                 <ProductListingCard 
                   key={listing.id} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
                 />
               ))}
             </div>
           )}
-<<<<<<< HEAD
         </div>
       </div>
       <Footer />
     </>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>;
       </div>;
       <Footer />;
@@ -1476,5 +1569,8 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div classNam
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

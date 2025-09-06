@@ -172,22 +172,18 @@ const Jobs: NextPage = () => {
       value: 160000
       unitText: 'YEAR'}
     hiringOrganization: {
-<<<<<<< HEAD
       name: 'Zion Tech Solutions'
       sameAs: 'https://ziontechgroup.netlify.app'
       logo: 'https://ziontechgroup.netlify.app/logo.png'}
     jobLocationType: 'TELECOMMUTE'} as const
-=======
       name: 'Zion Tech Solutions',
       sameAs: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app/logo.png'},
     jobLocationType: 'TELECOMMUTE'} as const,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div>
       <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />
       <JobPostingJsonLd
-<<<<<<< HEAD
         datePosted={job.datePosted}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         description={job.description}
@@ -216,11 +212,7 @@ const Jobs: NextPage = () => {
 }
 export default Jobs;
 
-<<<<<<< HEAD
-=======
 export default Jobs,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         datePosted={job.datePosted  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -277,6 +269,7 @@ export default Jobs,;
 },;
 export default Jobs;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -292,3 +285,5 @@ export default Jobs;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

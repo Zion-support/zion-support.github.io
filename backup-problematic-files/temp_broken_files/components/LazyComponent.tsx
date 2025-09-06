@@ -3,16 +3,13 @@ interface LazyComponentProps {component: () => Promise<{ default: React.Componen
   fallback?: React.ReactNode;
   [key: string]: any;
 }
-<<<<<<< HEAD:components/LazyComponent.tsx
-<<<<<<< HEAD
+:components/LazyComponent.tsx
 const LazyComponent: React.FC<LazyComponentProps> = ({component;
   fallback = <div>Loading...</div>;
-=======
 ;
 const LazyComponent: React.FC<LazyComponentProps> = ({;
   component,;
   fallback = <div>Loading...</div>,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ...props;
 }) => {const LazyLoadedComponent = lazy(component);
   return (;
@@ -22,7 +19,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({;
   );
 }
 export default LazyComponent;
-=======
 
 ;
 const LazyComponent: React.FC<LazyComponentProps> = ({;
@@ -55,6 +51,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 
 export default LazyComponent,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -64,3 +61,7 @@ export default LazyComponent,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
+:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

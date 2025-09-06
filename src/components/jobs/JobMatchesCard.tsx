@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
 
 
@@ -8,6 +9,8 @@ import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import {
   Card
@@ -20,14 +23,10 @@ import {
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
-<<<<<<< HEAD
 import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
-=======
 import { format } from 'date-fns'
 import { JobMatch } from '@/types/jobs'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from "react",
@@ -37,6 +36,7 @@ import { Button } from "@/components/ui/button",
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
 import { format } from "date-fns",
 import { JobMatch } from "@/types/jobs",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -78,16 +78,14 @@ interface JobMatchCardProps {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface JobMatchCardProps {
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 export function JobMatchesCard({
   match
   onApply
@@ -96,14 +94,13 @@ export function JobMatchesCard({
 }: JobMatchCardProps) {
   const job = match.job
   if (!job) return null
+}
+
 <<<<<<< HEAD
 =======
-=======
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
@@ -132,11 +129,6 @@ export function JobMatchesCard(): any ({;
 >>>>>>>     <Card className="overflow-hidden border-l-4 border-l-blue-500">
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -164,9 +156,12 @@ export function JobMatchesCard(): any ({;
         </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {match.matched_skills?.length > 0 && (
           <div className='mb-3'>
             <p className='text-xs text-muted-foreground mb-1'>
@@ -179,6 +174,7 @@ export function JobMatchesCard(): any ({;
               ))}
               {match.matched_skills.length > 5 && (
                 <Badge variant='secondary' className='text-xs'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   +{match.matched_skills.length - 5}
 ursor/fix-website-loading-errors-and-merge-6662
@@ -193,6 +189,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
@@ -322,31 +320,29 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               ))}
               {match.matched_skills.length > 5 && (
                 <Badge variant="secondary" className="text-xs">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   +{match.matched_skills.length - 5}
                 </Badge>
               )}
             </div>
           </div>
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
           <div className='flex items-center text-sm'>
             <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$
             {job.budget.min} - ${job.budget.max}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -359,6 +355,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             ${job.budget.min} - ${job.budget.max}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           </div>
 =======
@@ -369,6 +366,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="flex items-center text-sm">
@@ -379,15 +378,19 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
       </CardContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             Applied
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <CardFooter className='p-4 pt-0'>
         {match.status === 'applied' |showApplied ? (
           <div className='w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md'>
             <CheckCircle className='h-4 w-4 mr-2' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
           </div>
@@ -402,10 +405,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <CardFooter className="p-4 pt-0">
         {match.status === 'applied' || showApplied ? (
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
             <CheckCircle className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -417,6 +423,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <XCircle className='h-4 w-4 mr-2' />
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             Applied
           </div>
         ) : match.status === 'declined' ? (
@@ -428,25 +436,31 @@ ursor/fix-website-loading-errors-and-merge-6662
         ) : (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='flex gap-2 w-full'>
             <Button
               className='flex-1'
-=======
           <div className="flex gap-2 w-full">
             <Button 
               className="flex-1" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -459,6 +473,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Button>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button
               variant='outline'
               className='flex-1'
@@ -467,12 +483,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Button>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       </CardFooter>
     </Card>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -480,6 +500,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button 
               variant="outline" 
               className="flex-1"
@@ -490,14 +512,18 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       </CardFooter>;
     </Card>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -762,14 +788,18 @@ return (<Card className="overflow-hidden border-l-4 border-l-blue-500" > <CardHe
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobMatchesCard.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 }
-=======
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

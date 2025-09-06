@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     (acc: any, part: string) => {
@@ -305,23 +306,21 @@ export default function ContentReviewPage() {
   const query = useMemo(() => {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import useSWR from 'swr',
 import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
-<<<<<<< HEAD
 
 const fetcher = (url: string) => fetch(url).then(r => r.json())
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie |'').split(';').reduce(
-=======
-<<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   const cookies = (req.headers.cookie || '').split(';').reduce(
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     (acc: any, part: string) => {
       const [k, v] = part.trim().split('=');
       if (k) acc[k] = decodeURIComponent(v |'');
@@ -344,15 +343,11 @@ export default function ContentReviewPage() {
     userEmail?: string;
     contentType?: string;
   }>({ status: 'pending' });  const query = useMemo(() => {
-=======
-<<<<<<< HEAD
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
@@ -378,11 +373,14 @@ export default function ContentReviewPage(req, res) {
   const [filters, setFilters] = useState<{ status?: string, reason?: string, userEmail?: string, contentType?: string }>({ status: 'pending' }),;
   const query = useMemo(() => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const p = new URLSearchParams();
     if (filters.status) p.set('status', filters.status);
     if (filters.reason) p.set('reason', filters.reason);
@@ -404,7 +402,6 @@ export default function ContentReviewPage(req, res) {
   }
 =======
     return p.toString();
-<<<<<<< HEAD
   }, [filters]);
   const { data, mutate } = useSWR(
     `/api/admin/moderation/flags${query ? `?${query}` : ''}`
@@ -427,7 +424,6 @@ export default function ContentReviewPage(req, res) {
     setSelected(null);
     mutate();  }
 
-=======
   }, [filters]),;
   const { data, mutate } = useSWR(`/api/admin/moderation/flags${query ? `?${query}` : ''}`, fetcher);
   const flags = data?.flags || [];
@@ -445,11 +441,14 @@ export default function ContentReviewPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <EnhancedLayout>
@@ -458,6 +457,7 @@ export default function ContentReviewPage(req, res) {
           <h1 className="text-2xl font-semibold">Admin Content Review</h1>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -467,6 +467,8 @@ export default function ContentReviewPage(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm'>
           <select
             value={filters.status |''}
@@ -523,9 +525,12 @@ export default function ContentReviewPage(req, res) {
           >
             Reset
           </button>
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm">
           <select value={filters.status || ''} onChange={e => setFilters(f => ({ ...f, status: e.target.value || undefined }))} className="border rounded px-2 py-1">
             <option value="">All Statuses</option>
@@ -546,6 +551,7 @@ export default function ContentReviewPage(req, res) {
           <input placeholder="User email" value={filters.userEmail || ''} onChange={e => setFilters(f => ({ ...f, userEmail: e.target.value || undefined }))} className="border rounded px-2 py-1" />
           <button onClick={() => setFilters({ status: 'pending' })} className="border rounded px-2 py-1">Reset</button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -556,6 +562,8 @@ export default function ContentReviewPage(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -674,7 +682,6 @@ export default function ContentReviewPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
               {flags.length === 0 && (
-<<<<<<< HEAD
                 <tr>
                   <td
                     colSpan={8}
@@ -767,12 +774,8 @@ export default function ContentReviewPage(req, res) {
                 </tr>              )}
 =======
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )  } catch (error) {
     console.error("Error:", error);
@@ -831,6 +834,7 @@ export default function ContentReviewPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -846,3 +850,5 @@ export default function ContentReviewPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

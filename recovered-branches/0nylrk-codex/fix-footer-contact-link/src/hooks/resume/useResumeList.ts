@@ -5,20 +5,22 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 export function useResumeList() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -26,6 +28,8 @@ export function useResumeList() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -227,8 +231,11 @@ if ( {) {
     resumes;
 
     fetchResumes
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume } from '@/types/resume',;
@@ -297,6 +304,7 @@ export function useResumeList() {;
     error;
     resumes;
     fetchResumes;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -411,6 +419,8 @@ is active: resume.is active
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

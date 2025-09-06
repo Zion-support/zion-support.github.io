@@ -56,6 +56,7 @@ function writeEpisodes(episodes: any[]) {
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -81,9 +82,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 =======
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { persona, invitee, topic, operatorPrompt } = req.body |{}
   const id = uuidv4();
@@ -258,6 +261,7 @@ Return a strict JSON object with keys: title, questions (array), time_markers { 
     }
     const episodes = readEpisodes();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -289,6 +293,26 @@ Return a strict JSON object with keys: title, questions (array), time_markers { 
         best_quote:;
           'Talent networks become protocols when incentives, reputation, and opportunity align.',
       });
+=======
+    const episode = {
+      id
+      createdAt: new Date().toISOString()
+      persona
+      invitee
+      topic
+      title: generated.title
+      questions: generated.questions |[]
+      timeMarkers: generated.timeMarkers |{
+        intro: '00:00'
+        segments: []
+        closing: '14:30'
+      }
+      transcript: generated.transcript
+      youtubeDescription: generated.youtubeDescription |''
+      spotifyDescription: generated.spotifyDescription |''
+      bestQuote: generated.bestQuote |''
+      audio: {}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     try {
       generated = JSON.parse (content);
@@ -452,22 +476,24 @@ time_markers: generated.time_markers || {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
     const episode = {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
 }
-=======
     const episode = {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

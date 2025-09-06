@@ -153,14 +153,8 @@ export default function MilestoneCard(): any ({;
 =======
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Props = {
   milestone: Milestone;
   projectId: string;
@@ -178,19 +172,16 @@ const statusSteps = [
   'Paid'
 ] as const;
 export default function MilestoneCard({
-<<<<<<< HEAD
   milestone
   projectId
   role
   onAction
 }: Props) {
-=======
   milestone,
   projectId,
   role,
   onAction,
 }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex(s => s === milestone.status);
   const canClientMarkInProgress =
@@ -318,12 +309,9 @@ export default function MilestoneCard(): any ({ milestone, projectId, role, onAc
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
 }
 const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
-<<<<<<< HEAD
 export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
-=======
 
 export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
   const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
@@ -498,7 +486,6 @@ function MilestoneCard() {
 =======
         </button>
       </div>
-<<<<<<< HEAD
       <div className='mt-3'>
         <div className='flex items-center gap-2'>
           {statusSteps.map((step, idx) => (
@@ -514,18 +501,11 @@ function MilestoneCard() {
               <div
                 className={
                   'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }
                 title={step}
               />
               {idx < statusSteps.length - 1 && (
-<<<<<<< HEAD
                 <div
                   className={
                     'h-0.5 w-8 ' +
@@ -535,8 +515,8 @@ function MilestoneCard() {
             </div>
           ))}
         </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -544,6 +524,8 @@ function MilestoneCard() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
             </div>
           ))}
@@ -639,7 +621,6 @@ function MilestoneCard() {
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
           {milestone.attachments && milestone.attachments.length > 0 && (
             <div>
-<<<<<<< HEAD
               <div className='font-medium'>Attachments</div>
               <ul className='list-disc ml-5'>
                 {milestone.attachments.map(a => (
@@ -656,6 +637,7 @@ function MilestoneCard() {
                 {milestone.attachments.map((a) => (
                   <li key={a.id}>
                     <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       {a.label || a.url}
@@ -683,6 +665,11 @@ function MilestoneCard() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+                      {a.label || a.url}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </a>
                   </li>
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;
@@ -704,6 +691,7 @@ function MilestoneCard() {
           )}
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -741,29 +729,24 @@ function MilestoneCard() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='mt-4 flex flex-wrap gap-2'>
         {canClientMarkInProgress && (
           <button
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
-=======
-<<<<<<< HEAD
 
       <div className='mt-4 flex flex-wrap gap-2'>
         {canClientMarkInProgress && (
           <button
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
 
             onClick={() => onAction('in_progress', milestone.id)}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -771,12 +754,15 @@ function MilestoneCard() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             Mark In Progress
           </button>
         )}
 {canTalentSubmit && (;
           <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -794,26 +780,31 @@ function MilestoneCard() {
             className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'            onClick={() => onAction('submitted', milestone.id)}            className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             onClick={() => onAction('submitted', milestone.id)}
-=======
             className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'            onClick={() => onAction('submitted', milestone.id)}
 
             onClick={() => onAction('submitted', milestone.id)}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             Submit Work
           </button>
         )}
         {canClientApprove && (
           <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -832,26 +823,31 @@ function MilestoneCard() {
 className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'            onClick={() => onAction('approved', milestone.id)}            className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             onClick={() => onAction('approved', milestone.id)}
-=======
             className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'            onClick={() => onAction('approved', milestone.id)}
 
             onClick={() => onAction('approved', milestone.id)}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             Approve
           </button>
         )}
         {canClientMarkPaid && (
           <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -870,20 +866,24 @@ className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
 className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'            onClick={() => onAction('paid', milestone.id)}            className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             onClick={() => onAction('paid', milestone.id)}
-=======
             className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'            onClick={() => onAction('paid', milestone.id)}
 
             onClick={() => onAction('paid', milestone.id)}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             Mark as Paid
           </button>
@@ -891,6 +891,7 @@ className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
         )}
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -976,12 +977,10 @@ className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
     </div>);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -992,10 +991,13 @@ className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
 }
 }
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

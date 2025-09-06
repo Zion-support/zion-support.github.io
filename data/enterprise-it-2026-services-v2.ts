@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -17,16 +18,19 @@ import { ServiceVariant } from '../types / service - variants';
 export interface EnterpriseIt2026ServiceV2 {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
-<<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV2 {
 
-=======
 export interface EnterpriseIt2026ServiceV2 {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -1473,24 +1477,29 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     realImplementation: true
     implementationDetails:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
     launchDate: '2026-05-01'
     customers: 280
     rating: 4.9
     reviews: 180
   }
-=======
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.',
     launchDate: '2026-05-01',
     customers: 280,
     rating: 4.9,
     reviews: 180,
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1504,7 +1513,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
 
     reviews: 180
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
@@ -1943,6 +1957,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     customers: 280,;
     rating: 4.9;
     reviews: 180;
+<<<<<<< HEAD
 
   }
 ];
@@ -2424,3 +2439,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

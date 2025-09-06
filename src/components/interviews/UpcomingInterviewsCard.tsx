@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
 
 
@@ -7,6 +8,8 @@
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -27,6 +30,7 @@ export function UpcomingInterviewsCard() {
       try {
         const interviews = await fetchInterviews()
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         // Filter for confirmed interviews in the future
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         const upcoming = interviews
@@ -40,6 +44,8 @@ export function UpcomingInterviewsCard() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -63,11 +69,6 @@ export function UpcomingInterviewsCard() {
       try {
         const interviews = await fetchInterviews(),
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview => 
@@ -76,21 +77,30 @@ export function UpcomingInterviewsCard() {
           )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .sort(
             (a, b) =>
               parseISO(a.scheduled_date).getTime() -
               parseISO(b.scheduled_date).getTime()          )
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .sort(;
             (a, b) =>;
               parseISO(a.scheduled_date).getTime() -;
               parseISO(b.scheduled_date).getTime()          );
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .slice(0, 3); // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
       } catch (error) {
@@ -105,12 +115,15 @@ export function UpcomingInterviewsCard() {
   }, [])
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .sort((a, b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
@@ -129,6 +142,7 @@ export function UpcomingInterviewsCard() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (isLoading) {
 =======
 >>>>>>>   if (isLoading) {
@@ -138,6 +152,8 @@ export function UpcomingInterviewsCard() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
@@ -158,6 +174,7 @@ export function UpcomingInterviewsCard() {
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -281,17 +298,21 @@ if ( {) {
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         </CardContent>
       </Card>
     )
-<<<<<<< HEAD
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -490,13 +511,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
 =======
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (upcomingInterviews.length === 0) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -531,11 +547,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             const interviewDate = parseISO(interview.scheduled_date)
             const formattedDate = format(interviewDate, 'EEE, MMM d')
             const formattedTime = format(interviewDate, 'h:mm a')
@@ -543,7 +562,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             const isStartingSoon = null;
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime()
-<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             return (
@@ -582,12 +600,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <p className='font-medium line-clamp-1'>
                       {interview.title |'Interview'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -607,10 +628,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
             
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div key={interview.id} className="flex items-center gap-3">
@@ -619,6 +636,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -634,6 +652,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                      loading="lazy"
+                    />
+                  ) : (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       loading='lazy'                    />
                   ) : (
                     <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>
@@ -654,15 +677,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                     />
                   ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       loading="lazy"
                     />
                   ) : (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
@@ -675,6 +699,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {interview.title || "Interview"}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>                     </p>
@@ -685,6 +710,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </p>
                     {isStartingSoon && (
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
@@ -693,6 +720,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </span>
                     )}
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -708,6 +736,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='flex items-center text-sm text-muted-foreground'>
                     <Clock className='h-3 w-3 mr-1' />
                     {formattedDate} at {formattedTime}
@@ -720,6 +750,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className='mt-4 pt-3 border-t border-zion-blue-light/40'>
           <Button asChild size='sm' variant='outline' className='w-full'>
             <Link href='/interviews'>View All Interviews</Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>           </Button>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1011,6 +1042,8 @@ return (Soon </span>) ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/interviews/UpcomingInterviewsCard.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Clock className="h-3 w-3 mr-1" />
                     {formattedDate} at {formattedTime}
@@ -1026,26 +1059,18 @@ return (Soon </span>) ;
             <Link href="/interviews">
               View All Interviews
             </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </Button>
         </div>
       </CardContent>
     </Card>
   )
 }
-<<<<<<< HEAD
 }
-=======
+;
 ;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

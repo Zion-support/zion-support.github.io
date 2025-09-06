@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }; import React, { useState } from 'react'
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones'
 import { useAuth } from '@/hooks/useAuth'
@@ -27,9 +30,7 @@ interface MilestonesListProps {
   onApprove?: (id: string,) => Promise<void>,
   onReject?: (id: string,) => Promise<void>
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { useAuth  } from '@/hooks/useAuth';
@@ -66,7 +67,10 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onUploadDeliverable
   isSubmitting
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onApprove
   onReject
 }) => {
@@ -75,10 +79,13 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     await onCreateMilestone(data);    setShowAddForm(false)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onApprove,
   onReject;
 }) => {;
@@ -86,10 +93,12 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   const handleSubmit = async (data: any) => {;
     await onCreateMilestone(data);    setShowAddForm(false)
   }
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -136,12 +145,15 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -176,6 +188,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -184,11 +197,15 @@ ursor/fix-website-loading-errors-and-merge-6662
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -198,6 +215,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description = {isClient ?
           "Break down the project into manageable milestones to track progress and payments." :
           "No milestones have been created for this project yet.",}
@@ -211,6 +230,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
       />;
     );
       />
@@ -221,6 +241,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
           "No milestones have been created for this project yet."}
@@ -230,21 +252,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             onClick: () => setShowAddForm(true)
           } : undefined
         }
-<<<<<<< HEAD
       />;
     );
-=======
-<<<<<<< HEAD
       />
     )
-=======
       />;
     );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">
@@ -258,6 +273,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -266,21 +282,29 @@ ursor/fix-website-loading-errors-and-merge-6662
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-            <AddMilestoneForm
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <AddMilestoneForm
             <AddMilestoneForm 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onSubmit = {handleSubmit,}
               isSubmitting = {isSubmitting,}
               onCancel = {(,) => setShowAddForm(false),}
@@ -309,6 +333,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 "
+<<<<<<< HEAD
 =======
             <AddMilestoneForm
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -352,12 +377,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 "
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
             <AddMilestoneForm 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
@@ -388,6 +411,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -402,3 +426,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

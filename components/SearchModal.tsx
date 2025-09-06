@@ -157,6 +157,7 @@ const search_data: SearchResult[] = [;
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -297,6 +298,11 @@ const searchData: SearchResult[] = [;
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
+
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);

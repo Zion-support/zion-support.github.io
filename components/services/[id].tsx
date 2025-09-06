@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -34,16 +35,21 @@ import React from 'react';
       <div className="min-h-screen bg-black flex items-center justify-center">
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { getServiceById  } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail',
 import Button from '../../components/ui/Button';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,12 +67,14 @@ import {ArrowLeft, ExternalLink} from 'lucide-react';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { ArrowLeft, ExternalLink } from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {ArrowLeft, ExternalLink} from 'lucide-react';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function ServiceDetailPage() {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!id || typeof id !== 'string') {;
 
@@ -94,12 +102,11 @@ export default function ServiceDetailPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
-export default function ServiceDetailPage() {;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function ServiceDetailPage() {;
 
 export default function ServiceDetailPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { id } = router.query;
   if (!id |typeof id !== 'string') {
@@ -354,6 +361,7 @@ variant="primary"
           </div>
         </nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -442,31 +450,20 @@ variant="primary"
                 href="/services"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Service Detail Content */}
         <ServiceDetail service={service} />
-=======
 
         {/* Service Detail Content */}
         <ServiceDetail service={service} />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Related Services CTA */}
         <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-=======
 
               Looking for Something Else?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
               Explore our complete portfolio of micro SaaS services to find the
@@ -492,7 +489,6 @@ variant="primary"
               >
                 View All Services
               </Button>
-<<<<<<< HEAD
               <Button
 href="/contact"
                 variant="outline"
@@ -703,15 +699,13 @@ if ( {) {
     </>
   );
 }
-<<<<<<< HEAD
-=======
               <Button
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
-=======
               <Button
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

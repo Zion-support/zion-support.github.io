@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -27,7 +28,12 @@ const { useEffect,useRef,useState,useCallback } from";react" export: const useLa
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
+=======
+:src.disabled/hooks/useLazyLoad.js.jsx
 import { useEffect,useRef,useState,useCallback } from\';react\' \"export\": const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin =\';\';50px\',\"preload\": \'= true\',preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,\"rootMargin\": preload: ? `${preloadDistanc,e}px` : \"rootMargin\": \''}) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}\';`
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/hooks/useLazyLoad.js.jsx
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useEffect,useRef,useState,useCallback } from\';react\' \"export\": const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin =\';\';50px\',\"preload\": \'= true\',preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,\"rootMargin\": preload: ? `${preloadDistanc,e}px` : \"rootMargin\": \''}) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}\';`
+:temp_exclude/src.disabled/hooks/useLazyLoad.js.jsx
 const { useEffect,useRef,useState,useCallback } from";react" export: const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin =";";50px",preload: "= true",preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,rootMargin: preload: ? `${preloadDistanc,e}px` : rootMargin: ""}) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}";`'"`'"`
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

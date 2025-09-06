@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/SeverityDisplay.tsx
 
 
@@ -50,10 +51,29 @@ interface SeverityDisplayProps {
 }
 
 <<<<<<< HEAD
+=======
+
+import React from "react";
+import { SeverityIndicator } from "@/components/ui/severity-indicator";
+import React from "react",
+import { SeverityIndicator } from "@/components/ui/severity-indicator",
+
+import React from "react",
+import { SeverityIndicator } from "@/components/ui/severity-indicator",
+interface SeverityDisplayProps {
+  severity: string
+}
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
+  severity
+}) => {
+  return (
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <SeverityIndicator
       severity={severity as "safe" | "suspicious" | "dangerous"}
       showIcon={true}
       showText={true}
+<<<<<<< HEAD
 
 =======
 
@@ -79,6 +99,17 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    />
+  );
+}
+
+
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
+  return (
+    />;
+);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <SeverityIndicator 
       severity={severity as "safe" | "suspicious" | "dangerous"} 
 import React from "react",;
@@ -116,6 +147,7 @@ export const SeverityDisplay:React.FC<SeverityDisplayProps> = ({ severity }) => 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
+<<<<<<< HEAD
 
 };
 
@@ -138,3 +170,6 @@ export const SeverityDisplay:React.FC<SeverityDisplayProps> = ({ severity }) => 
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/SeverityDisplay.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

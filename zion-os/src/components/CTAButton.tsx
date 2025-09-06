@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,6 +17,8 @@ interface CTAButtonProps {
   on_click?: () => void;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -48,6 +51,7 @@ function CTAButton() {
 
     <Link;
       href={href}
+<<<<<<< HEAD
 =======
 =======
 
@@ -57,6 +61,8 @@ function CTAButton() {
       href={href}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -93,11 +99,14 @@ export function CTAButton({;
     <Link;
       href={href} ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className={classes}
       on_click={on_click}
       role="button";

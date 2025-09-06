@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -20,14 +21,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   connectOrbit,
   appendChatMessage,
   recordVote,;
   editConstitution,;
 } from '@/utils/offworld/orbitdb';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {
   connectOrbit
@@ -36,6 +42,7 @@ import {
   editConstitution;
 } from '@/utils/offworld/orbitdb';
 export default async function handler(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -53,9 +60,12 @@ export default async function handler(
   res: NextApiResponse
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+  req: NextApiRequest
+  res: NextApiResponse
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   req: NextApiRequest,
   res: NextApiResponse;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -219,9 +229,11 @@ if ( {) {
 =======
     return res.status(500).json({ error: e.message })
 }
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

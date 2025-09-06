@@ -1,18 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/EnterpriseCTA.tsx
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function EnterpriseCTA() {
   return (
     <section className="py-20 px-4 md: px-6">
@@ -27,6 +33,7 @@ export function EnterpriseCTA() {
                 <p className="text-xl text-muted-foreground mb-8">
                   Schedule a personalized demo with our enterprise team to see
                   how Zion AI can help you build your dream team.
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -222,22 +229,25 @@ function EnterpriseCTA() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from "lucide-react",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="gap-2">
@@ -284,24 +294,25 @@ import { Calendar, ArrowRight } from "lucide-react",
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </section>
-<<<<<<< HEAD
   );
 }
-=======
-=======
-<<<<<<< HEAD
     </section>;
   );
 }
-=======
     </section>
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -369,6 +380,7 @@ export function EnterpriseCTA() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -391,3 +403,5 @@ export function EnterpriseCTA() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

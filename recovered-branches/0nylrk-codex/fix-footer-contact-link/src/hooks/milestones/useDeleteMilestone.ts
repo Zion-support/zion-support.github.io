@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -24,26 +25,27 @@ export const useDeleteMilestone = () => {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {toast} from 'sonner';
-<<<<<<< HEAD
 export const useDeleteMilestone = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const deleteMilestone = async (milestoneId: string) => {
     if (!user) return false;
-=======
 export const useDeleteMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -51,6 +53,7 @@ import { toast } from 'sonner',
 export const useDeleteMilestone = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -61,16 +64,21 @@ export const useDeleteMilestone = () => {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const deleteMilestone = async (milestoneId: string) => {
     if (!user) return false,
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       setIsSubmitting(true)
       const { error } = await supabase
@@ -78,8 +86,11 @@ export const useDeleteMilestone = () => {
         .delete()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq('id', milestoneId);
       if (error) throw error;
       toast.success("Milestone deleted successfully");
@@ -98,7 +109,6 @@ export const useDeleteMilestone = () => {
   }
 }
 
-=======
         .eq('id', milestoneId),
       
       if (error) throw error,
@@ -112,18 +122,18 @@ export const useDeleteMilestone = () => {
       return false
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
   };
   
   return {
     deleteMilestone;
     isSubmitting
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -153,6 +163,7 @@ export const useDeleteMilestone = () => {;
   return {;
     deleteMilestone;
     isSubmitting;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -238,3 +249,7 @@ if (throw error) {
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

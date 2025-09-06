@@ -12,31 +12,28 @@ import React from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Check} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
-<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
-=======
 import { Card, CardContent } from "@/components/ui/card",
 import { Check } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function FeatureHighlights() {
 
   const highlightsData = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -64,16 +61,17 @@ export function FeatureHighlights() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 =======
 <<<<<<< HEAD
-      title: "For Talent Seekers"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      title: "For Talent Seekers"
       title: "For Talent Seekers",
-<<<<<<< HEAD
       features: [;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         "AI-powered talent matching based on your specific project requirements";
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 
@@ -150,8 +148,9 @@ function FeatureHighlights() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       features: [
-<<<<<<< HEAD
         "AI-powered talent matching based on your specific project requirements";
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
@@ -160,21 +159,17 @@ function FeatureHighlights() {
         "Post jobs and receive AI-matched applicants"
       ]
     }
-=======
         "AI-powered talent matching based on your specific project requirements",
         "Verified profiles with skills validation and credential checking",
         "Transparent pricing and no hidden fees",
         "Direct communication with potential candidates",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         "Secure payment protection and dispute resolution",
         "Post jobs and receive AI-matched applicants"
       ]
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       title: "For Talent & Service Providers"
       features: [
-<<<<<<< HEAD
         "Create a professional profile showcasing your skills and experience";
         "Get matched with relevant projects that fit your expertise";
         "Secure payment processing with on-time disbursements";
@@ -183,8 +178,11 @@ function FeatureHighlights() {
         "Professional development resources and community support"
       ]
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "Create a professional profile showcasing your skills and experience",
         "Get matched with relevant projects that fit your expertise",
         "Secure payment processing with on-time disbursements",
@@ -193,6 +191,7 @@ function FeatureHighlights() {
         "Professional development resources and community support"
       ]
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -203,23 +202,26 @@ function FeatureHighlights() {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "For Enterprise Clients"
       features: [
-<<<<<<< HEAD
         "White-labeled talent portal with your company branding";
         "Dedicated account management and priority support";
         "Custom talent pools and preferred provider networks";
         "Advanced analytics and reporting capabilities";
         "API access for seamless integration with your HR systems"
-=======
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
         "Advanced analytics and reporting capabilities",
         "API access for seamless integration with your HR systems",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "Customizable workflow and approval processes"
       ]
     }
@@ -245,6 +247,7 @@ function FeatureHighlights() {
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -294,6 +297,8 @@ import { Check } from "lucide-react",;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from "lucide-react",;
@@ -523,11 +528,6 @@ return (<section className="py-16 bg-zion-blue" > <div className="container mx-a
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
                     </li>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </ul>
               </CardContent>

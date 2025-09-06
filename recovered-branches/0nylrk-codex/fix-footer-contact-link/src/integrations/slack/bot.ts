@@ -50,12 +50,12 @@ interface SlackRespond {
 interface SafeConsole {
   log: (message: string) => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Declare available globals
 declare const globalThis: {
   console?: SafeConsole;
@@ -112,13 +112,14 @@ interface SafeConsole {
 
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
     if (safeConsole && safeConsole.log) {
-<<<<<<< HEAD
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port |3000}!`)
-=======
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Declare available globals;
 declare const globalThis: {;
@@ -195,6 +196,7 @@ class MockApp {;
     if (safeConsole && safeConsole.log) {;
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -208,10 +210,13 @@ class MockApp {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     return Promise.resolve()
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -252,6 +257,9 @@ async function askZionGPT(prompt:string):Promise<string> {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Create a mock app instance
 const app = new MockApp();
 async function askZionGPT(prompt: string): Promise<string> {
@@ -272,8 +280,11 @@ async function askZionGPT(prompt: string): Promise<string> {
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Create a mock app instance;
 const app = new MockApp(),;
@@ -282,6 +293,7 @@ async function askZionGPT(prompt: string): Promise<string> {;
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
   if (safeConsole && safeConsole.log) {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -358,15 +370,17 @@ case 'suggest-talent': {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return `AI response to: ${prompt}`
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
   const [action, ...args] = command.text.split(/\s+/);
@@ -385,10 +399,13 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       await respond(`Tracking project **${project}** - feature coming soon.`);
       break
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {;
   await ack(),;
@@ -407,6 +424,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       const project = args.join(' '),;
       await respond(`Tracking project **${project}** - feature coming soon.`),;
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -540,6 +558,8 @@ export default app;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     case 'help':
     default: await respond(
@@ -550,7 +570,6 @@ export default app;
           '`/zion help` - show this list'
       )
   }
-<<<<<<< HEAD
 });
 // Mock startup with safer environment access
 (async () => {
@@ -562,7 +581,6 @@ export default app;
 })();
 export default app;
 
-=======
 }),;
 // Mock startup with safer environment access;
 (async () => {;
@@ -573,6 +591,7 @@ export default app;
   const port = env.PORT ? Number(env.PORT) : 3000,;
   await app.start(port);
 })(),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -595,3 +614,6 @@ export default app;
 export default app;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default app;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

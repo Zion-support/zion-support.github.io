@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {StepProps} from "./types";
 =======
@@ -14,11 +15,17 @@ import { StepProps } from "./types",
 <<<<<<< HEAD
 =======
 =======
-import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {StepProps} from "./types";
 =======
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { StepProps } from "./types";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { StepProps } from "./types",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {StepProps} from "./types";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { StepProps } from "./types",
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -29,6 +36,8 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { StepProps } from "./types";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ResumeStepsProps {
   steps: StepProps[];
   activeTab: string;
@@ -81,12 +90,22 @@ export const ResumeSteps = ({
       {steps.map((step) => (
         <TabsTrigger key={step.id} value={step.id}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          {step.label}
+        </TabsTrigger>
+      ))}
+    </TabsList>
+  );
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { StepProps } from "./types",;
 
@@ -158,6 +177,7 @@ export const ResumeSteps = ({ steps, activeTab, onChange } ResumeStepsProps) => 
         </TabsTrigger>;
       ))}
     </TabsList>;
+<<<<<<< HEAD
   ),;
 },; interface ResumeStepsProps {
   steps: StepProps[];
@@ -190,3 +210,7 @@ onChange: (value: string) => void
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

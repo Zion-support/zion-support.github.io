@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 const getInitialPosition = () => {
@@ -44,22 +45,18 @@ export const LazySection: React.FC<LazySectionProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
  const getInitialPosition = () => {
   switch (direction) {
   case 'up': 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 const getInitialPosition = () => {
-=======
 const getInitialPosition = () => {
-=======
  const getInitialPosition = () => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   switch (direction) {
   case 'up':
 export const LazySection: React.FC<LazySectionProps> = ({
-<<<<<<< HEAD
   children
   className = ''
   threshold = 0.1
@@ -67,8 +64,11 @@ export const LazySection: React.FC<LazySectionProps> = ({
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   direction = 'up'
 }) => {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   children,
   className = '',
   threshold = 0.1,
@@ -76,12 +76,15 @@ export const LazySection: React.FC<LazySectionProps> = ({
   direction = 'up',
 }) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -353,9 +356,11 @@ export default LazySection
   )
 }
 export default LazySection;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

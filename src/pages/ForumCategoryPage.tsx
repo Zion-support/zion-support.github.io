@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { logInfo } from '@/utils/productionLogger'
@@ -13,6 +14,10 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'luc
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { logInfo } from '@/utils/productionLogger'
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -34,6 +39,7 @@ import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -41,21 +47,26 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'luc
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock category data
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
-<<<<<<< HEAD
 
 =======
 
     id: "getting-hired"
     name: "Getting Hired"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock category data
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
@@ -63,15 +74,19 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     name: "Getting Hired",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description: "Tips, strategies, and questions about getting hired on the platform."
     adminOnly: false
     icon: "Briefcase"
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: "getting-hired",
     name: "Getting Hired",
@@ -84,10 +99,15 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    id: "getting-hired",
+    name: "Getting Hired",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description: "Tips, strategies, and questions about getting hired on the platform.",
     adminOnly: false,
     icon: "Briefcase"
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -97,6 +117,8 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "project-help": {
 =======
 >>>>>>>   "project-help": {
@@ -108,11 +130,14 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     icon: "MessageSquare"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   "feedback": {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   "ai-tools": {
     id: "ai-tools"
@@ -122,10 +147,13 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     icon: "Code"
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   "feedback": {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   "ai-tools": {
     id: "ai-tools",
@@ -134,11 +162,6 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false,
     icon: "Code"
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   "feedback": {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     id: "feedback"
@@ -148,6 +171,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     icon: "FileText"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   }
@@ -155,15 +179,19 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "announcements": {
 >>>>>>>     id: "announcements"
     name: "Announcements"
@@ -173,10 +201,13 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 const iconMap = {
   "Briefcase": Briefcase
@@ -190,11 +221,14 @@ function CategoryContent({
   category
   IconComponent
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   user}: {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 
 const iconMap = {
@@ -210,11 +244,14 @@ function CategoryContent({
   category,
   IconComponent,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   user}: {
 >>>>>>>   categoryId: string
   category: ForumCategoryInfo
@@ -223,21 +260,28 @@ function CategoryContent({
 }) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [searchQuery, setSearchQuery] = useState("")
   const { featuredPosts, recentPosts } = useCommunity()
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self,) =>
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -245,6 +289,8 @@ function CategoryContent({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
 
@@ -253,16 +299,20 @@ function CategoryContent({
     ...featuredPosts.filter(post => post.categoryId === categoryId),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -278,18 +328,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   )
-=======
   ),
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Apply search filter
 >>>>>>>   const filteredPosts = searchQuery
     ? categoryPosts.filter(post =>
@@ -299,22 +350,26 @@ ursor/fix-website-loading-errors-and-merge-6662
       )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     : categoryPosts
   const canCreatePost = user && (!category.adminOnly |user.userType === 'admin' |user.role === 'admin')
   const { isFollowed, follow, unfollow } = useFollowedCategories()
   const { toast } = useToast()
-<<<<<<< HEAD
-=======
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     : categoryPosts,
 
   const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
@@ -322,16 +377,20 @@ ursor/fix-website-loading-errors-and-merge-6662
   const { toast } = useToast(),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
       return
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -343,6 +402,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -447,6 +508,7 @@ function CategoryContent({;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       return;
 
@@ -461,12 +523,16 @@ function CategoryContent({;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      return;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
     } else {
       follow(categoryId)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -476,6 +542,8 @@ function CategoryContent({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   logInfo('CategoryContent - categoryId:', { data: categoryId })
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts })
@@ -483,16 +551,17 @@ function CategoryContent({;
   const category = categoryId ? categoriesInfo[categoryId] : null
   const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null
 }
-<<<<<<< HEAD
 
   )
 }
-=======
   );
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
@@ -695,8 +764,11 @@ export default function ForumCategoryPage() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

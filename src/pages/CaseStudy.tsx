@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { ArrowLeft } from 'lucide-react'
@@ -7,29 +8,31 @@ import { ArrowLeft } from 'lucide-react'
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { CASE_STUDIES  } from '@/data/case-studies';
 import { SEO  } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> import { ArrowLeft } from 'lucide-react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { CASE_STUDIES } from '@/data/case-studies'
 import { SEO } from '@/components/SEO'
 import { Button } from '@/components/ui/button'
-=======
 import Link from 'next/link',
 import { useRouter } from 'next/router',
 import { CASE_STUDIES } from '@/data/case-studies',
 import { SEO } from '@/components/SEO',
 import { Button } from '@/components/ui/button',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ArrowLeft } from 'lucide-react'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -43,11 +46,14 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import { getBreadcrumbsForPath } from '@/utils/routeUtils'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function CaseStudy() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router.query.slug as string
@@ -57,6 +63,7 @@ export default function CaseStudy() {
   BreadcrumbLink
   BreadcrumbSeparator} from '@/components/ui/breadcrumb'
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 import { ArrowLeft } from 'lucide-react'
 
@@ -65,6 +72,8 @@ import { ArrowLeft } from 'lucide-react'
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CaseStudy() {;
   const router = useRouter();
   const slug = router.query.slug as string;
@@ -74,12 +83,15 @@ export default function CaseStudy() {;
   BreadcrumbLink,
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 xport default function CaseStudy() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CaseStudy() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const router = useRouter()
@@ -109,10 +121,13 @@ import { getBreadcrumbsForPath } from '@/utils/routeUtils';
   if (!study) {
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 export default function CaseStudy() {
   const router = useRouter()
@@ -123,12 +138,15 @@ export default function CaseStudy() {
     return (
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link',
 import { useRouter } from 'next/router',
 import { CASE_STUDIES } from '@/data/case-studies',
@@ -168,6 +186,7 @@ export default function CaseStudy() {
     return (
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         Case study not found.
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -178,6 +197,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         Case study not found.
 >>>>>>>       </div>
     )
@@ -205,19 +227,24 @@ export default function CaseStudy() {;
       <SEO title={study.title} description={study.excerpt} />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
         <div className='container mx-auto max-w-3xl'>
-=======
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto max-w-3xl">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
 =======
       <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
@@ -230,15 +257,19 @@ export default function CaseStudy() {;
                 <BreadcrumbLink asChild>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Link href='/'>Home</Link>                </BreadcrumbLink>          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
           <Breadcrumb className="mb-4 text-sm text-muted-foreground">
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   <Link href="/">Home</Link>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -251,6 +282,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Link href="/">Home</Link>
 >>>>>>>                 </BreadcrumbLink>
               </BreadcrumbItem>
@@ -259,15 +292,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <BreadcrumbLink asChild>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Link href='/case-studies'>Case Studies</Link>                </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild aria-current='page'>                  <span>{study.title}</span>                  <Link href="/case-studies">Case Studies</Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 </BreadcrumbLink>
               </BreadcrumbItem>
@@ -286,10 +323,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  <Link href="/case-studies">Case Studies</Link>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -302,15 +343,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                <BreadcrumbLink asChild aria-current='page'>                <BreadcrumbLink asChild aria-current="page">
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <BreadcrumbLink asChild aria-current='page'>                <BreadcrumbLink asChild aria-current="page">
                 <BreadcrumbLink asChild aria-current="page">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <span>{study.title}</span>
 >>>>>>>                 </BreadcrumbLink>
               </BreadcrumbItem>
@@ -323,8 +368,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Link href='/case-studies'>
               <ArrowLeft className='mr-2 h-4 w-4' /> Back to Case Studies            </Link>            variant="outline"
             className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -332,39 +380,47 @@ ursor/fix-website-loading-errors-and-merge-6662
           >
             <Link href="/case-studies">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
-=======
             <Link href="/case-studies">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
             </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </Button>
           <img
             src={study.companyLogo}
             alt={`${study.company} logo`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='h-12 mb-4'
             loading='lazy'
-=======
             className="h-12 mb-4"
             loading="lazy"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
           <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
           {study.pdf && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -388,6 +444,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button variant='secondary' className='mb-6' asChild>
               <a href={study.pdf} target='_blank' rel='noopener noreferrer'>                Download PDF          />
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
@@ -397,6 +455,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <a href={study.pdf} target="_blank" rel="noopener noreferrer">
                 Download PDF
               </a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             </Button>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -420,10 +479,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button variant="secondary" className="mb-6" asChild>
               <a href={study.pdf} target="_blank" rel="noopener noreferrer">
                 Download PDF
               </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -436,12 +498,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </Button>
 >>>>>>>           )}
           <div
             className="prose prose-invert"
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -457,6 +522,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           <p className="mt-8 text-white font-semibold">;
 >>>>>>>           </p>;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <p className='mt-8 text-white font-semibold'>            — {study.author}, {study.role}            className="prose prose-invert"
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
@@ -468,12 +535,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
-<<<<<<< HEAD
-=======
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           <p className="mt-8 text-white font-semibold">
             — {study.author}, {study.role}
           </p>;
@@ -484,6 +547,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -498,3 +562,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

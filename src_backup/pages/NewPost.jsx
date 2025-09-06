@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -10,6 +11,8 @@ import React from 'react';
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function NewPost() {
   return (
     <div>
@@ -17,6 +20,7 @@ export default function NewPost() {
       <p>Component placeholder - needs implementation</p>
     </div>
   )
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -49,6 +53,9 @@ function NewPost() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 export default function NewPost() {;
   return (;
@@ -57,6 +64,7 @@ export default function NewPost() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -77,3 +85,7 @@ export default function NewPost() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

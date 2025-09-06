@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -16,9 +17,9 @@ export const advancedAIServices2025 = [;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 export const advancedAIServices2025 = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
@@ -613,6 +614,7 @@ export const advancedAIServices2025 = [
     targetAudience:
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
     competitiveAdvantage:
+<<<<<<< HEAD
 =======
 
 =======
@@ -1486,13 +1488,17 @@ export const advancedAIServices2025 = [
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
     competitiveAdvantage:
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
-=======
       'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com'
     id: 'ai-powered-business-intelligence-suite', name: 'BusinessIntelligence AI Pro',
@@ -1784,13 +1790,9 @@ export const advancedAIServices2025 = [;
 =======
 =======
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const advancedAIServices2025 = [;
   {;
     id: 'ai-powered-business-intelligence-suite',;
@@ -2021,12 +2023,11 @@ export const advancedAIServices2025 = [;
     marketSize: '$173.5B',;
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

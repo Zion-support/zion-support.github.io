@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
@@ -175,34 +176,28 @@ class AmlManager {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-export type WatchlistMatch = {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export type WatchlistMatch = {
 export type WatchlistMatch = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
   score: number; // 0-1 match confidence
   referenceId?: string;
   detailsUrl?: string;
-<<<<<<< HEAD
 }
 export type AmlCheckResult = {
-=======
 };
 
 export type AmlCheckResult = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checkedAt: string; // ISO
   provider: 'mock' | 'remote';
-<<<<<<< HEAD
 }
 export interface AmlProvider {
-=======
 };
 export interface AmlProvider {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
 }
@@ -303,6 +298,7 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
@@ -319,18 +315,20 @@ export function getAmlProvider (): AmlProvider {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function getAmlProvider(): AmlProvider {
   return new MockAmlProvider();
 }
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

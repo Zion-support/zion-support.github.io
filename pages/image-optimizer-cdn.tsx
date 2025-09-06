@@ -18,6 +18,7 @@ export default function ImageOptimizerCDNPage() {
 			</section>
 		</>
 	)
+<<<<<<< HEAD
 
 =======
 
@@ -88,6 +89,9 @@ export default function ImageOptimizerCDNPage() {
 };
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import SEO from '../components/SEO';
 export default function ImageOptimizerCDNPage(req, res) {
@@ -113,6 +117,7 @@ export default function ImageOptimizerCDNPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -120,3 +125,5 @@ export default function ImageOptimizerCDNPage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

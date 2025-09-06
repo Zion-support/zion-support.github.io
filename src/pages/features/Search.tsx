@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -33,20 +36,26 @@ export default function SearchFeature() {
         keywords='search engine, filtering, tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function SearchFeature() {
@@ -64,6 +73,7 @@ export default function SearchFeature() {
     "description": "Quickly locate products, services and talent using intelligent search filters."
     "url": "https://app.ziontechgroup.com/features/search"
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -117,6 +127,8 @@ export default function SearchFeature() {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function SearchFeature() {
@@ -127,22 +139,24 @@ export default function SearchFeature() {
     "description": "Quickly locate products, services and talent using intelligent search filters.",
     "url": "https://app.ziontechgroup.com/features/search"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <>
       <SEO
-<<<<<<< HEAD
         title='Advanced Search'
         description='Find exactly what you need with fast, filterable search powered by Elasticsearch.'
         keywords='search engine, filtering, tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
         canonical="https://app.ziontechgroup.com/features/search"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -160,6 +174,8 @@ export default function SearchFeature() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -200,8 +216,11 @@ export default function SearchFeature() {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/search'>Try Search</Link>            </Button>      />
@@ -241,6 +260,7 @@ export default function SearchFeature() {
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -248,6 +268,8 @@ export default function SearchFeature() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="text-center">
 =======
           <div className='text-center'>
@@ -301,17 +323,21 @@ export default function SearchFeature() {
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-}
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -396,6 +422,7 @@ export default function SearchFeature() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -408,3 +435,5 @@ export default function SearchFeature() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

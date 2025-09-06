@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseTrustBadges.tsx
 
 <<<<<<< HEAD
@@ -23,17 +24,13 @@ export function EnterpriseTrustBadges() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React from 'react'
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterpriseTrustBadges() {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -65,6 +62,7 @@ export function EnterpriseTrustBadges() {
             <span className='font-medium'>HIPAA Compliant</span>          </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
@@ -79,19 +77,15 @@ export function EnterpriseTrustBadges() {
   return (
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/EnterpriseTrustBadges.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
             <CheckCircle className="h-5 w-5 text-primary" />
             <span className="font-medium">HIPAA Compliant</span>
-=======
 
 import React from "react",
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterpriseTrustBadges() {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -121,6 +115,7 @@ export function EnterpriseTrustBadges() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseTrustBadges.tsx
 <<<<<<< HEAD
 
@@ -128,10 +123,13 @@ export function EnterpriseTrustBadges() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </section>;
   );
 };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -186,14 +184,11 @@ export function EnterpriseTrustBadges() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </section>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
@@ -322,8 +317,11 @@ function EnterpriseTrustBadges() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

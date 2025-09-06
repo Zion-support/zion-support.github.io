@@ -13,8 +13,6 @@
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementButton.tsx
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
@@ -29,13 +27,17 @@ interface AIEnhancementButtonProps {
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementButton.tsx
 
@@ -74,11 +76,14 @@ export function AIEnhancementButton(): any ({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
 import { toast } from '@/hooks/use-toast',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -92,6 +97,8 @@ import { toast } from '@/hooks/use-toast',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -99,6 +106,7 @@ interface AIEnhancementButtonProps {
   className?: string,
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   contentLength?: number
@@ -109,12 +117,11 @@ export function AIEnhancementButton({
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   contentLength?: number
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function AIEnhancementButton({;
   options;
   onEnhanced;
@@ -122,10 +129,7 @@ export function AIEnhancementButton({;
   className;
   variant = "ghost";
   size = "sm";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function AIEnhancementButton({
-<<<<<<< HEAD
   options;
   onEnhanced;
 
@@ -138,15 +142,17 @@ export function AIEnhancementButton({
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const [showActions, setShowActions] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<string | null>(null);
-=======
   options,
   onEnhanced,
   buttonText = "Enhance with AI",
   className,
   variant = "ghost",
   size = "sm",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   contentLength = 10
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
@@ -161,8 +167,11 @@ export function AIEnhancementButton({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -170,6 +179,7 @@ export function AIEnhancementButton({
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -183,6 +193,8 @@ export function AIEnhancementButton({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       });
       return
     }
@@ -191,13 +203,14 @@ export function AIEnhancementButton({
       setGeneratedContent(enhancedContent);
       setShowActions(true)
     }
-<<<<<<< HEAD
   }
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }),
       return
 import { useState } from 'react',;
@@ -284,12 +297,7 @@ export function AIEnhancementButton({;
       setShowActions(true);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent),
@@ -301,24 +309,31 @@ export function AIEnhancementButton({;
         description: "AI-enhanced content has been applied."})
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleRegenerate = async () => {
     await handleEnhance()
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const handleRegenerate = async () => {
     await handleEnhance()
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -340,17 +355,20 @@ export function AIEnhancementButton({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleCancel = () => {
     setShowActions(false),
     setGeneratedContent(null)
-<<<<<<< HEAD
   }
 
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -396,11 +414,14 @@ export function AIEnhancementButton({;
     <Button
       type="button"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   const handleAccept = () => {;
     if (generatedContent) {;
@@ -465,11 +486,14 @@ export function AIEnhancementButton({;
     <Button;
       type="button";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       variant={variant}
       size={size}
       className={`gap-1 ${className}`}
@@ -484,6 +508,7 @@ export function AIEnhancementButton({;
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -868,9 +893,13 @@ return
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementButton.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

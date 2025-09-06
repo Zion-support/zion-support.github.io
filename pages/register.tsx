@@ -10,21 +10,28 @@ import { motion } from "framer-motion";
 import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
 import Layout from "../components/Layout";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 export default function RegisterPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+export default function RegisterPage() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 export default function RegisterPage() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({;

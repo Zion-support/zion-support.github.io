@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -80,6 +81,9 @@ function handler() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const distLines = Array && Array.isArray(distribution)
     ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 const client = process.env.OPENAI_API_KEY
@@ -198,8 +202,15 @@ function fallbackMarkdown(input: any): string {
         .join("\n")
     : "";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  return `# ${input?.tokenName |"Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName |"Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases |""}.\n\n## Rewards System\n${input?.rewardsLogic |""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply |""}.\n\n## Governance Model\n${input?.governance |""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction |"applicable"} regulations.`;
+}
+
+  return `# ${input?.tokenName || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ""}.\n\n## Rewards System\n${input?.rewardsLogic || ""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -326,6 +337,7 @@ function fallbackMarkdown(input: any): string {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -341,3 +353,6 @@ function fallbackMarkdown(input: any): string {;
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

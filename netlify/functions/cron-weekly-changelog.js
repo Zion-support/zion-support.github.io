@@ -114,7 +114,6 @@ if ( {) {
       body: JSON.stringify({ ok: true, commits: commits.length })
     }
   } catch (e) {
-<<<<<<< HEAD
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -223,7 +222,6 @@ exports.handler = async function() {
 =======
 =======
 
-=======
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };
@@ -233,6 +231,9 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -17,16 +18,19 @@ import { ServiceVariant } from '../types / service - variants';
 export interface InnovativeMicroSaasService {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
-<<<<<<< HEAD
 export interface InnovativeMicroSaasService {
 
-=======
 export interface InnovativeMicroSaasService {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -669,6 +673,7 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       }
       realImplementation: true
       implementationDetails:
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1585,20 +1590,20 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       realImplementation: true
       implementationDetails:
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'AI-powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.'
       launchDate: '2024-02-20'
       customers: 42
       rating: 4.7
       reviews: 20
     }
-=======
         'AI-powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.',
       launchDate: '2024-02-20',
       customers: 42,
       rating: 4.7,
       reviews: 20,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'AI-powered contract analysis and reviewLegal risk identification and assessmentDocument comparison and analysisLegal research and case law analysisCompliance checking and monitoringLegal document generationIntegration with legal systemsMobile legal app';
       'Multi-language legal supportPredictive legal analytics'
@@ -1744,6 +1749,7 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4 && 4.7;
     reviews: 20
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',;
@@ -1867,6 +1873,10 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnhancedRealMicroSaasService {;
   id: string,;
@@ -2349,12 +2359,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     customers: 42,;
     rating: 4.7;
     reviews: 20;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

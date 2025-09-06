@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Loader2} from "lucide-react";
 
 import { Loader2 } from "lucide-react",
@@ -11,13 +12,19 @@ import { Loader2 } from "lucide-react",
 import { Loader2 } from "lucide-react",
 
 =======
-import {Loader2} from "lucide-react";
 =======
+import { Loader2 } from "lucide-react";
 import { Loader2 } from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {Loader2} from "lucide-react";
+import { Loader2 } from "lucide-react",
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ResultsHeaderProps {
   isLoading: boolean;
   resultCount: number
@@ -46,6 +53,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         </div>
       ) : (
         <span>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,11 +83,20 @@ export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
   return (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {resultCount === 0
             ? "No talents found. Try adjusting your filters."
             : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
         </span>
+<<<<<<< HEAD
 
+=======
+          {resultCount === 0 ? (
+            "No talents found. Try adjusting your filters."
+          ) : (
+            `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Loader2 } from "lucide-react",;
 interface ResultsHeaderProps {;
   isLoading: boolean;
@@ -105,6 +122,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
             "No talents found. Try adjusting your filters.";
           ) : (;
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -206,3 +224,14 @@ resultCount: number
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          )}
+        </span>;
+      )}
+    </div>
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

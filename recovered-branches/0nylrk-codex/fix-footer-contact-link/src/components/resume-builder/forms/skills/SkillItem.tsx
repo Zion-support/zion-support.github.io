@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillItem.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ========
@@ -27,18 +28,28 @@ export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: an
     <Badge;
       key={skill.id}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillItem.tsx
+=======
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Trash2 } from "lucide-react";
+import { SkillItemProps } from "./types";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
 import {Trash2} from 'lucide-react';
 import {SkillItemProps} from './types';
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Badge } from '@/components/ui/badge',
 import { Button } from '@/components/ui/button',
 import { Trash2 } from 'lucide-react',
 import { SkillItemProps } from './types',
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -62,6 +73,8 @@ import { Button } from "@/components/ui/button";
 import { Trash2 } from "lucide-react";
 import { SkillItemProps } from "./types";
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
   return (
     <Badge
@@ -88,6 +101,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
         <Trash2 className="h-3 w-3" />
       </Button>
     </Badge>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -177,3 +191,13 @@ export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {;
 },
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+
+  )
+},
+};
+  )
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

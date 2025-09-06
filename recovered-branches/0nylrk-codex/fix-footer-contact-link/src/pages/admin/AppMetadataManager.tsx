@@ -36,16 +36,18 @@ class ErrorBoundary extends React.Component {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/AppMetadataManager.tsx
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {MetadataManager} from "@/components/mobile-app/admin/MetadataManager";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/AppMetadataManager.tsx
 
@@ -56,10 +58,13 @@ import {MetadataManager} from "@/components/mobile-app/admin/MetadataManager";
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -84,6 +89,8 @@ const AppMetadataManager: React.FC = () => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const AppMetadataManager: React.FC = () => {
   return (
     <AppLayout>
@@ -105,21 +112,26 @@ const AppMetadataManager: React.FC = () => {
     </AppLayout>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default AppMetadataManager;
 
-=======
 },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default AppMetadataManager,
 import React from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -230,10 +242,9 @@ export default AppMetadataManager;
     </AppLayout>;
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default AppMetadataManager;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

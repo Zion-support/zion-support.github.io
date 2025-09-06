@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -34,15 +35,20 @@ import {
 import {
 =======
 <<<<<<< HEAD
-import React, { useState } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState } from 'react',
 import React, { useState } from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -81,6 +87,8 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu
   X
   Search
@@ -139,9 +147,12 @@ import {
   Award
   Clock
   CheckCircle;} from 'lucide-react';import {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu,
   X,
   Search,
@@ -213,8 +224,11 @@ import {
 =======
   Clock,;
   CheckCircle,;} from 'lucide-react';import { ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu, X, Search, ChevronDown, ChevronRight;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1151,18 +1165,16 @@ const quickLinks = [
   { name: 'Support', href: '/support', icon: MessageCircle },];  { name: 'Support', href: '/support', icon: MessageCircle }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function UltraFuturisticNavigation2029V2() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false)
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function UltraFuturisticNavigation2029V2() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOpen, setIsOpen] = useState(false);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1207,15 +1219,16 @@ className="flex-shrink-0"
           >
 =======
             className='flex-shrink-0'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -1447,6 +1460,7 @@ function UltraFuturisticNavigation2029V2() {
                 animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {/* Search */}
             <div className='relative'>
@@ -1470,6 +1484,8 @@ className="relative group"
                   <item.icon className="w-4 h-4" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 transition={{
                   duration: 0.5
                   delay: mainNavigation.indexOf(item) * 0.1
@@ -1495,7 +1511,6 @@ className="relative group"
             {/* Search */}
 =======
           <div className='hidden lg:flex items-center space-x-4'>
-=======
 
               </motion.div>
 
@@ -1510,11 +1525,14 @@ className="relative group"
           <div className='hidden lg:flex items-center space-x-4'>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -1523,7 +1541,6 @@ className="relative group"
                 placeholder='Search services...'
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
                 className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />            {/* Search */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="relative">
@@ -1556,7 +1573,6 @@ className="relative group"
                 className="pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64"
               />
             </div>
-=======
                 className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1564,6 +1580,7 @@ className="relative group"
 
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1577,6 +1594,8 @@ className="relative group"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Contact Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -1627,6 +1646,7 @@ className="relative group"
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1739,12 +1759,9 @@ className='flex items - center space - x-2 px - 4 py - 2 text - gray - 300 hover
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -1754,14 +1771,7 @@ className='flex items - center space - x-2 px - 4 py - 2 text - gray - 300 hover
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='px-4 py-6 space-y-4'>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1851,7 +1861,18 @@ className='flex items - center space - x-2 px - 4 py - 2 text - gray - 300 hover
                   >
                     <item.icon className="w-5 h-5" />
                     <span>{item.name}</span>
+<<<<<<< HEAD
 
+=======
+                  </Link>
+                ))}
+              </div>
+
+                  </Link>
+                ))}
+              </div>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Quick Links */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -1866,6 +1887,7 @@ className='flex items - center space - x-2 px - 4 py - 2 text - gray - 300 hover
                     >
                       <item.icon className='w-4 h-4' />
                       <span className='text-sm'>{item.name}</span>                    </Link>              <div className="pt-4 border-t border-gray-700">
+<<<<<<< HEAD
 =======
                     className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
 =======
@@ -1882,13 +1904,30 @@ className='flex items - center space - x-2 px - 4 py - 2 text - gray - 300 hover
 <<<<<<< HEAD
               </div>;
 =======
-              </div>
 =======
+                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>
+                <div className="space-y-2">
+                  {quickLinks.map((item) => (
+                      key={item.name}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+                    >
+                      <item.icon className='w-4 h-4' />
+                      <span className='text-sm'>{item.name}</span>                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
+                    >
+                      <item.icon className="w-4 h-4" />
+                      <span className="text-sm">{item.name}</span>
+                  ))}
+                </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              </div>
 
                   </Link>
                 ))}
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1957,6 +1996,8 @@ className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Contact Info */}
 =======
 <<<<<<< HEAD
@@ -1983,6 +2024,7 @@ className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
                     <Phone className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.mobile}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2002,6 +2044,9 @@ className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400">
                     <Mail className="w-4 h-4" />
@@ -2193,14 +2238,7 @@ className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Service Categories Dropdown */}
       <AnimatePresence>
         {activeCategory && (
@@ -2213,6 +2251,7 @@ className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
 <<<<<<< HEAD
             transition={{ duration: 0.3 }}
             className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
+<<<<<<< HEAD
 
 =======
 
@@ -2261,12 +2300,9 @@ className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
             className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
               <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
@@ -2384,6 +2420,7 @@ className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
                         <Link
                           key={service.name}
                           href={service.href}
+<<<<<<< HEAD
 
                         </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -2397,6 +2434,8 @@ className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
                         >
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group'
                         >
                           <div className='flex justify-between items-start'>
@@ -2421,15 +2460,9 @@ className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
                             </div>
                             <span className="text-sm font-semibold text-cyan-400">{service.price}</span>
                           </div>
-=======
 
                           </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </Link>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       ))}
@@ -2534,19 +2567,16 @@ className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
 =======
       </AnimatePresence>
     </nav>
-<<<<<<< HEAD
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -125,38 +126,31 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useEffect, useState } from 'react';
 
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
-=======
 import { useEffect, useState } from 'react',
-=======
 import { useEffect, useState } from 'react',;
 ;
-=======
 import { useEffect, useState } from 'react',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
 export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+ursor/fix-lint-push-and-merge-to-main-ce13
   useEffect__(() => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     fetch('/api/automation/cloud-logs')
       .then((r) => r.json())
       .then((d) => setLogs(d.logs |[]))
       .catch(() => setLogs([]))
-<<<<<<< HEAD
 
   }, [])
 
-=======
   }, []),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">
@@ -169,6 +163,7 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
           <h3 className="font-semibold">Roadmap (Autonomous)</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/ROADMAP.md</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -176,6 +171,8 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
         </Link>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </a>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <a href="/docs/LINK_HEALTH.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900">
@@ -193,7 +190,6 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
         </a>
-=======
         </Link>
         <a href="/docs/LINK_HEALTH.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900">
           <h3 className="font-semibold">Link Health</h3>
@@ -204,16 +200,20 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/INTELLIGENCE_DIGEST.md</p>
         </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
         <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
         <ul className="space-y-2 text-sm">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -237,19 +237,18 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>}
-<<<<<<< HEAD
           {logs.map((log) => (
             <li key={log.id} className="flex items-center justify-between">
               <span>{log.generatedAt |log.file}</span>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -262,6 +261,11 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          {logs.map((log) => (
+            <li key={log.id} className="flex items-center justify-between">
+              <span>{log.generatedAt || log.file}</span>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <span className="text-gray-600">{log.insights?.theme}</span>
 =======
               <span className="text-gray-600">{log.insights?.theme}</span>
@@ -284,6 +288,7 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
         <a href="/api/automation/cloud-logs" className="inline-flex items-center px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700">Refresh Logs</a>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -309,10 +314,10 @@ export default function CloudAutomationHub(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 }
@@ -447,11 +452,12 @@ export default function CloudAutomationHub(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

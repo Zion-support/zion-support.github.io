@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const { companyId } = req.query;
 
@@ -85,18 +86,16 @@ export default function handler(req, res) {
     if (!memberId || !role) return res.status(400).json({ error: 'memberId and role required' });
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { store } from '[^']*';
 import type { EnterpriseRole } from '../../../../../utils/types/enterprise';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../../../utils/data/enterpriseStore";
 import type { EnterpriseRole } from "../../../../../utils/types/enterprise";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { companyId } = req.query;
 
   if (!companyId |typeof companyId !== "string") {
@@ -111,10 +110,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     const { name, email, role } = req.body |{}
     if (!name |!email)
       return res.status(400).json({ error: "name and email required" });
-<<<<<<< HEAD
     const r: EnterpriseRole = role |"viewer";
-=======
-=======
     const r: EnterpriseRole = role || "viewer";
     const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member);
@@ -142,9 +138,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
   return res.status(405).json({ error: "method_not_allowed" });
 }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ members: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -189,6 +183,7 @@ export default function handler(req, res) {
     const { name, email, role } = req.body || {};
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -202,6 +197,8 @@ export default function handler(req, res) {
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member);
     } catch (error) {
@@ -211,7 +208,6 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
   if (req.method === "PATCH") {
     const { memberId, role } = req.body |{}
     if (!memberId |!role)
@@ -227,6 +223,7 @@ export default function handler(req, res) {
     return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'member_not_found' })
   }
   return res.status(405).json({ error: "method_not_allowed" });
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
   return res && res.status(405).json({ error: "method_not_allowed" });
@@ -324,6 +321,8 @@ if ( {) {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
   } catch (error) {
     console.error("Error:", error);
@@ -384,6 +383,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -391,10 +391,14 @@ if ( {) {
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

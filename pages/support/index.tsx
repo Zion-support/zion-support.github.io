@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -29,31 +30,28 @@ function SupportRedirect() { return null }
 
 =======
 <<<<<<< HEAD
-import { GetServerSideProps } from 'next';
-<<<<<<< HEAD
-
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { GetServerSideProps } from 'next';
+
 import { GetServerSideProps } from 'next',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: '/help'
       permanent: false}}
-<<<<<<< HEAD
 }
 export default function SupportRedirect() { return null }
 
-=======
-=======
 },
 ;
 export default function SupportRedirect() { return null };
-=======
 import { GetServerSideProps } from 'next';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const getServerSideProps: GetServerSideProps = async () => {;
   return {;
     redirect: {;
@@ -69,6 +67,7 @@ export default function SupportRedirect() { return null   } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -87,3 +86,5 @@ export default function SupportRedirect() { return null   } catch (error) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

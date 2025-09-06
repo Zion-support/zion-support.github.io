@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useEffect, useState } from 'react';
@@ -18,14 +19,14 @@ interface Instance {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react';
 import { Header  } from '@/components/Header';
 import { NextSeo  } from '@/components/NextSeo';
-=======
 import React, { useEffect, useState } from 'react'
 import { Header } from '@/components/Header'
 import { NextSeo } from '@/components/NextSeo'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Globe, MapPin } from 'lucide-react'
 
 import {
@@ -144,19 +145,24 @@ export default function GlobalMapPage() {
       const id = Date.now()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       const text =
         messages[Math.floor(Math.random() * messages.length)] |
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const text =
         messages[Math.floor(Math.random() * messages.length)] |
-=======
       const text = null;
         messages[Math.floor(Math.random() * messages.length)] ||
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'System update in progress'
       setFeed(f => [{ id, text }, ...f].slice(0, 5))
     }, 5000)
@@ -171,6 +177,7 @@ export default function GlobalMapPage() {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5)
@@ -181,6 +188,9 @@ export default function GlobalMapPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { NextSeo } from '@/components/NextSeo',;
@@ -275,17 +285,11 @@ export default function GlobalMapPage() {;
 
 =======
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="min-h-screen bg-background">
       <NextSeo title="Global Zion Map" description="Overview of Zion deployments" />
       <Header />
-<<<<<<< HEAD
       <main className='py-10 container mx-auto space-y-8'>
         <h1 className='text-3xl font-bold'>Global Instances</h1>
         <div className='flex flex-col lg:flex-row gap-8'>
@@ -299,12 +303,14 @@ export default function GlobalMapPage() {;
                   : i.governance === 'hybrid';
                     ? 'bg-yellow-500';
                     : 'bg-green-500'; return (
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <main className="py-10 container mx-auto space-y-8">
         <h1 className="text-3xl font-bold">Global Instances</h1>
         <div className="flex flex-col lg:flex-row gap-8">
@@ -314,6 +320,7 @@ export default function GlobalMapPage() {;
               const { x, y } = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
               return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -327,6 +334,8 @@ export default function GlobalMapPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <TooltipProvider key={i.id}>
 >>>>>>>                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -397,17 +406,21 @@ export default function GlobalMapPage() {;
             <section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     <span>{r.talent}</span>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <h2 className='text-xl font-semibold mb-2'>
                 Top Regions by Talent
               </h2>
               <ul className='space-y-1'>
                 {topRegions.map(r => (
                   <li key={r.id} className='flex justify-between border-b pb-1'>                    <span>{r.region}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                     <span>{r.talent}</span>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -422,23 +435,19 @@ export default function GlobalMapPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <h2 className="text-xl font-semibold mb-2">Top Regions by Talent</h2>
               <ul className="space-y-1">
                 {topRegions.map((r) => (
                   <li key={r.id} className="flex justify-between border-b pb-1">
                     <span>{r.region}</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <span>{r.talent}</span>
                   </li>
                 ))}
               </ul>
             </section>
             <section>
-<<<<<<< HEAD
               <h2 className='text-xl font-semibold mb-2'>Live Feed</h2>
               <ul className='space-y-1'>
                 {feed.map(f => (
@@ -454,14 +463,15 @@ export default function GlobalMapPage() {;
   )
 }
 }
-<<<<<<< HEAD
-=======
 
 ;
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <h2 className="text-xl font-semibold mb-2">Live Feed</h2>
               <ul className="space-y-1">
                 {feed.map((f) => (
@@ -482,6 +492,7 @@ export default function GlobalMapPage() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -497,3 +508,5 @@ export default function GlobalMapPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

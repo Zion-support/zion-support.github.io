@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -36,18 +37,25 @@ import {
 import {
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Phone
   Mail
   MapPin
@@ -132,6 +140,7 @@ import React from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 =======
 import {
 =======
@@ -140,6 +149,8 @@ import {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Phone,
   Mail,
   MapPin,
@@ -203,6 +214,7 @@ import {
   Phone, Mail, MapPin, Globe, ArrowRight, 
   Brain, Rocket, Target, Shield, Cpu, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -210,6 +222,8 @@ import {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
@@ -946,6 +960,7 @@ const serviceCategories = [
       }
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -996,6 +1011,8 @@ const main_navigation = [;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         name: 'Smart Financial Management'
         href: '/services/smart-financial-management-platform'
       }
@@ -1006,7 +1023,6 @@ const main_navigation = [;
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
-=======
         name: 'Smart Financial Management',
         href: '/services/smart-financial-management-platform',
       },
@@ -1018,6 +1034,7 @@ const main_navigation = [;
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ];
 const mainNavigation = [
@@ -1195,12 +1212,13 @@ const socialLinks = [
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
 
 ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+];
+
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -1407,10 +1425,6 @@ function UltraFuturisticFooter2029V2() {
 =======
 =======
   },];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function UltraFuturisticFooter2029V2() {
   return (
@@ -1418,16 +1432,10 @@ export default function UltraFuturisticFooter2029V2() {
     ]
   };
 ];
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>
-<<<<<<< HEAD
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12'>
@@ -1439,8 +1447,11 @@ export default function UltraFuturisticFooter2029V2() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="lg:col-span-2 xl:col-span-1">
             <motion.div
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 ];
 
@@ -1449,6 +1460,7 @@ export default function UltraFuturisticFooter2029V2() {
 
             <motion.div
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1463,6 +1475,8 @@ export default function UltraFuturisticFooter2029V2() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1509,6 +1523,7 @@ export default function UltraFuturisticFooter2029V2() {
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1616,6 +1631,9 @@ transition={{ duration: 0 && 0.6 }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Service Categories */}
           {footerSections && footerSections.map((section, index) => (;
             <motion&& motion.div
@@ -1659,6 +1677,7 @@ transition={{ duration: 0 && 0.6 }}
             </motion.div>
           ))}
         </div>
+<<<<<<< HEAD
 
 =======
 
@@ -1805,12 +1824,9 @@ transition={{ duration: 0 && 0.6 }}
         </div>
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Service Showcase */}
         <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1833,14 +1849,7 @@ transition={{ duration: 0 && 0.6 }}
         >
 =======
           className='mt-16 pt-12 border-t border-gray-800'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h3 className='text-2xl font-bold text-white text-center mb-8'>
             Featured 2029 Services
@@ -1937,14 +1946,7 @@ transition={{ duration: 0 && 0.6 }}
               >
 =======
                 className='group'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div
                   className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
@@ -2074,15 +2076,16 @@ transition={{ duration: 0 && 0.6 }}
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -2125,6 +2128,7 @@ transition={{ duration: 0 && 0.6 }}
               >
                 Terms of Service
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2132,6 +2136,8 @@ transition={{ duration: 0 && 0.6 }}
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Link>            </motion.div>              className="text-gray-400 text-sm"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2139,6 +2145,7 @@ transition={{ duration: 0 && 0.6 }}
               © 2025 Zion Tech Group. All rights reserved.
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2176,15 +2183,12 @@ transition={{ duration: 0 && 0.6 }}
             <motion&& motion.div
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Link>            </motion.div>
 
             </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Social Links */}
             <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2232,14 +2236,7 @@ transition={{ duration: 0 && 0.6 }}
             >
 =======
               className='flex items-center space-x-4'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               {socialLinks.map(social => (
                 <Link
@@ -2249,7 +2246,6 @@ transition={{ duration: 0 && 0.6 }}
                   rel='noopener noreferrer'
                   className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}
                 >
-<<<<<<< HEAD
                   <social.icon className='w-4 h-4' />                </Link>            >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {socialLinks.map((social) => (
@@ -2271,6 +2267,7 @@ transition={{ duration: 0 && 0.6 }}
                   <social.icon className='w-4 h-4' />                </Link>
 
                 </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2303,28 +2300,18 @@ transition={{ duration: 0 && 0.6 }}
       <motion&& motion.div
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <social.icon className='w-4 h-4' />                </Link>
 
                 </Link>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </motion.div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Newsletter Signup */}
       <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2346,15 +2333,16 @@ transition={{ duration: 0 && 0.6 }}
       >
 =======
         className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='text-center'>
@@ -2424,6 +2412,7 @@ transition={{ duration: 0 && 0.6 }}
           </div>
         </div>
       </motion.div>
+<<<<<<< HEAD
 
 }
 
@@ -2605,21 +2594,22 @@ transition={{ duration: 0 && 0.6 }}
 =======
 =======
 <<<<<<< HEAD
+=======
+    </footer>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-<<<<<<< HEAD
     </footer>;
 );
 }
-=======
     </footer>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

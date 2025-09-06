@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/ApiLogs.tsx
@@ -7,6 +8,8 @@
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {List, RefreshCw} from "lucide-react";
@@ -16,7 +19,6 @@ import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Badge} from "@/components/ui/badge";
-<<<<<<< HEAD
 
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
@@ -34,12 +36,16 @@ export function ApiLogs() {
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -48,6 +54,8 @@ export function ApiLogs() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { List, RefreshCw } from "lucide-react",
@@ -62,6 +70,7 @@ export function ApiLogs() {
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -69,6 +78,8 @@ export function ApiLogs() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Load logs on mount and when pagination changes
@@ -89,6 +100,7 @@ export function ApiLogs() {
 
 =======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -96,6 +108,8 @@ export function ApiLogs() {
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -109,14 +123,16 @@ export function ApiLogs() {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Calculate pagination info
   const totalPages = Math.ceil(totalLogs / pageSize);
   const hasNextPage = currentPage < totalPages - 1;
   const hasPrevPage = currentPage > 0;
-=======
   },
   
   // Calculate pagination info
@@ -124,8 +140,11 @@ export function ApiLogs() {
   const hasNextPage = currentPage < totalPages - 1,
   const hasPrevPage = currentPage > 0,
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -141,6 +160,7 @@ export function ApiLogs() {
           <div className="flex items-center space-x-2">
             <span className="text-sm text-zinc-400">Show</span>
             <Select
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -205,13 +225,18 @@ export function ApiLogs() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/ApiLogs.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               value={pageSize.toString()}
               onValueChange={(value) => {
                 setPageSize(Number(value));
 
                 setCurrentPage(0), // Reset to first page when changing page size
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { List, RefreshCw } from "lucide-react",;
@@ -351,11 +376,14 @@ export function ApiLogs() {;
                 setPageSize(Number(value));
                 setCurrentPage(0), // Reset to first page when changing page size;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -927,16 +955,17 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
             </div>
           </div>
         )}
-<<<<<<< HEAD
       </CardContent>
     </Card>
   )
 }
-=======
       </CardContent>;
     </Card>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

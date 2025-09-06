@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,21 +6,26 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 =======
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { ProfileProject } from "@/types/profile";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ProfileProject } from '@/types/profile'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FileText } from 'lucide-react'
 interface ProfileProjectsProps {
   projects: ProfileProject[]
@@ -40,6 +44,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
         {projects.map((project,) => (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -52,6 +57,11 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ProfileProject } from "@/types/profile",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { FileText } from 'lucide-react'
@@ -69,6 +79,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
         {projects.map((project) => (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -76,6 +87,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
 =======
 >>>>>>>           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
@@ -99,18 +112,11 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-<<<<<<< HEAD
                   className='w-full h-full object-cover'
                   loading='lazy'                />
-=======
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </AspectRatio>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ) : (
@@ -118,6 +124,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -129,6 +136,9 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <CardContent className='p-4'>
               <h4 className='text-white font-medium mb-2'>{project.title}</h4>
               <p className='text-zion-slate text-sm mb-3 line-clamp-2'>
@@ -149,8 +159,11 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <img
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -186,6 +199,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                 <img;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>                   src={project.imageUrl}
@@ -197,6 +211,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   src={project.imageUrl}
                   alt={project.title}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -211,6 +227,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
             )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -220,6 +237,9 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
             
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
@@ -231,6 +251,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                     </Badge>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -238,6 +259,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <CardContent className="p-4">;
@@ -269,6 +292,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {tag}
                     </Badge>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -290,11 +314,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-              <div className='text-xs text-zion-slate-light mt-2'>                {project.date}
 =======
+                  ))}
+                </div>
+              )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <div className='text-xs text-zion-slate-light mt-2'>                {project.date}
 
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}              
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="text-xs text-zion-slate-light mt-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {project.date}
@@ -305,15 +332,17 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
-=======
     </div>;
   );
 };
@@ -321,13 +350,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
               
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="text-xs text-zion-slate-light mt-2">
@@ -343,6 +374,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -355,3 +387,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

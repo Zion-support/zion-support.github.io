@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
@@ -1153,15 +1151,9 @@ if ( {) {
 <<<<<<< HEAD
 
 //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-=======
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-=======
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ...cuttingEdgeITServices;
 ...innovativeMicroSaasV2Services;
 ...enhancedRealMicroSaasServices;
@@ -1331,13 +1323,10 @@ visible: {
 }</span> </div> </div> <div className="flex flex-col sm: flex-row gap-4 justify-center"> <Button href="/contact"variant=" primary"size=" lg"className="text-lg px-8 py-4"> Start Your Transformation <Rocket className="ml-2 w-6 h-6"/> </Button> <Button href="/pricing"variant=" secondary"size=" lg"className="text-lg px-8 py-4"> View Pricing <DollarSign className="ml-2 w-6 h-6" /> </Button> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticMatrixBackground>)
 }//Button component (if not imported)
 }> {
-<<<<<<< HEAD
   children
 }</a>)
-=======
   children 
 }</a>) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 }> {
   children
@@ -1376,24 +1365,15 @@ const Button = ({
       </a>
     )
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <button onClick={onClick} className={classes}>
       {children}
     </button>
   )
-<<<<<<< HEAD
 }
 
-=======
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
 }
@@ -1401,8 +1381,11 @@ const Button = ({
 }
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

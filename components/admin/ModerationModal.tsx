@@ -440,15 +440,9 @@ if (return null) {
 =======
 =======
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export type ModerationModalProps = {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export type ModerationModalProps = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   flag: any | null;
   onClose: () => void;
   onAction: (
@@ -456,17 +450,14 @@ export type ModerationModalProps = {
     adminNotes?: string
   ) => Promise<void>;
 export default function ModerationModal({
-<<<<<<< HEAD
   flag
   onClose
   onAction
 }: ModerationModalProps) {
-=======
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -574,11 +565,10 @@ export default function ModerationModal({
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
       </div>
     </div>
-<<<<<<< HEAD
 );
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -586,3 +576,5 @@ export default function ModerationModal({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

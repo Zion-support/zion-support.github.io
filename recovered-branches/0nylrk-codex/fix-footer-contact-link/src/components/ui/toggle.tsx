@@ -8,16 +8,19 @@ import * as TogglePrimitive from "@radix-ui/react-toggle"
 =======
 import * as React from "react"
 import * as TogglePrimitive from "@radix-ui/react-toggle"
-<<<<<<< HEAD
 import {cva, type, VariantProps} from "class-variance-authority"
 
 import {cn} from "@/lib/utils"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -30,12 +33,15 @@ import { cn } from "@/lib/utils"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const toggleVariants = cva(
   "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover: bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground"
   {
     variants: {
       variant: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         outline:
@@ -49,25 +55,24 @@ const toggleVariants = cva(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-        default: "bg-transparent"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        default: "bg-transparent"
         default: "bg-transparent",
-<<<<<<< HEAD
         outline:;
           "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         outline:
-<<<<<<< HEAD
           "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"}
-=======
           "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"},
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       size: {
         default: "h-10 px-3"
         sm: "h-9 px-2.5"
@@ -80,6 +85,7 @@ const toggleVariants = cva(
 type ToggleRef = React.ElementRef<typeof TogglePrimitive.Root>
 type ToggleProps = React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &
   VariantProps<typeof toggleVariants>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -125,6 +131,8 @@ import {cn} from "@/lib/utils";
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const Toggle = React.forwardRef<ToggleRef, ToggleProps>(
   ({ className, variant, size, ...props }, ref) => (
     <TogglePrimitive.Root
@@ -134,16 +142,15 @@ const Toggle = React.forwardRef<ToggleRef, ToggleProps>(
     />
   )
 )
-<<<<<<< HEAD
 Toggle.displayName = TogglePrimitive.Root.displayName
 export { Toggle, toggleVariants }
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 Toggle.displayName = TogglePrimitive.Root.displayName
 
 export { Toggle, toggleVariants };
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -152,6 +159,8 @@ export { Toggle, toggleVariants };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const Toggle = React.forwardRef<ToggleRef ToggleProps>(
   ({ className, variant, size, ...props }, ref) => (
@@ -310,8 +319,11 @@ Toggle.displayName = TogglePrimitive.Root.displayName;
 export { Toggle, toggleVariants }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

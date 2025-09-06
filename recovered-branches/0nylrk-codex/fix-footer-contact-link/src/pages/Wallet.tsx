@@ -7,29 +7,29 @@
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useWallet  } from '@/hooks/useWallet';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
 import { BadgeDollarSign } from 'lucide-react';
 export default function WalletPage() {
-=======
 import {useWallet} from '@/hooks/useWallet';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {BadgeDollarSign} from 'lucide-react';
 export default function WalletPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { wallet, transactions, loading } = useWallet();
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useWallet } from '@/hooks/useWallet',
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
 import { BadgeDollarSign } from 'lucide-react',
 export default function WalletPage() {
   const { wallet, transactions, loading } = useWallet(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -91,8 +91,9 @@ export default function WalletPage() {;
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="container max-w-4xl py-10">
       <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">
@@ -155,6 +156,7 @@ export default function WalletPage() {;
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -337,9 +339,13 @@ function WalletPage() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Wallet.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

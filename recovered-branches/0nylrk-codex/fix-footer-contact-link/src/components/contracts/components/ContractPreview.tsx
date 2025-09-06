@@ -14,14 +14,18 @@ import { Button } from "@/components/ui/button",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 import {SmartContractInfo} from "@/types/smart-contracts";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ContractPreviewProps {;
   contractContent?: string;
@@ -67,25 +71,29 @@ function ContractPreview() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 import { TalentProfile } from "@/types/talent";
 import { SmartContractInfo } from "@/types/smart-contracts";
-=======
 import { TalentProfile } from "@/types/talent",
 import { SmartContractInfo } from "@/types/smart-contracts",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ContractPreviewProps {
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
   status?: 'draft' | 'ready' | 'pending',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -97,6 +105,8 @@ interface ContractPreviewProps {
   deployStatus,
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   talent?: TalentProfile;
   onDeploy?: () => void;
   onSign?: () => void;
@@ -113,8 +123,11 @@ export function ContractPreview({
   onSign;
   onClose;
   deployStatus;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   talent?: TalentProfile,
   onDeploy?: () => void,
   onSign?: () => void,
@@ -123,6 +136,7 @@ export function ContractPreview({
   deploymentInfo?: SmartContractInfo | null
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -159,29 +173,25 @@ export function ContractPreview(): any ({ ;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ContractPreview({ ;
   contractContent;
-=======
 export function ContractPreview({ 
   contractContent,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   generatedContract, 
   status = 'ready', 
   onDeploy, 
   onSign,
   onClose,
   deployStatus,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   deploymentInfo
 }: ContractPreviewProps) {
   // Use either contractContent or generatedContract, whichever is provided
-<<<<<<< HEAD
   const displayContent = contractContent |generatedContract |"";
 
-=======
   const displayContent = contractContent || generatedContract || "",
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center mb-4">
@@ -204,11 +214,14 @@ export function ContractPreview({
         ) : (
           <Badge variant="outline">Draft</Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -393,11 +406,6 @@ export function ContractPreview({ ;
 =======
         ) : (;
           <Badge variant="outline">Draft</Badge>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       </div>
       {/* Contract content */}
@@ -430,6 +438,7 @@ export function ContractPreview({ ;
           </Button>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -443,6 +452,9 @@ export function ContractPreview({ ;
         
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {status === 'ready' && onDeploy && (
           <Button variant="outline" onClick={onDeploy}>
             Deploy on Blockchain

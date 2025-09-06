@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -15,6 +16,9 @@ apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUB
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
@@ -37,15 +41,12 @@ export default async function handler(
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 });
 export default async function handler(
-<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
   if (req && req.method !== "POST")
@@ -64,6 +65,7 @@ export default async function handler(
     "Token Strategy"
     "Ask & Call to Action"
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -141,17 +143,18 @@ Key Metrics: ${JSON && JSON.stringify(metrics)}
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   try {
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
 Operator Prompt: ${operatorPrompt}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -230,8 +233,8 @@ function extractSection(body: string, title: string): string {
   return "";
 
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -289,6 +292,8 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
@@ -302,6 +307,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -310,6 +316,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -348,6 +356,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -363,3 +372,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

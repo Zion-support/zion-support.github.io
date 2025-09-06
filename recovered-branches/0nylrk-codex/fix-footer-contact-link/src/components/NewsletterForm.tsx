@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/NewsletterForm.tsx
 
 <<<<<<< HEAD
@@ -8,6 +9,8 @@ import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/NewsletterForm.tsx
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {useState} from "react";
@@ -19,6 +22,7 @@ export function NewsletterForm() {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+<<<<<<< HEAD
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
@@ -35,10 +39,18 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import { Input } from "@/components/ui/input",
+import { useState } from "react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function NewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSubmitted, setIsSubmitted] = useState(false),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -48,6 +60,18 @@ export function NewsletterForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
 
+=======
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false);
+      (setIsSubmitted(true), setEmail(""));
+    }, 1000);
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -58,6 +82,7 @@ export function NewsletterForm() {
       setEmail("")
     }, 1000)
   },
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -73,6 +98,8 @@ e.preventDefault();
     }, 1000);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -112,10 +139,13 @@ e.preventDefault();
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { useState } from "react",;
@@ -276,9 +306,12 @@ function NewsletterForm() {
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/NewsletterForm.tsx
 
         </form>;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )}
     </div>
   );

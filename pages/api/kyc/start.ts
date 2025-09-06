@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,16 +20,21 @@ function load(): Record<string, KycProfile> {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -39,9 +45,9 @@ import type { KycProfile, KycRole } from '../../../utils/kyc';
 =======
 <<<<<<< HEAD
 =======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'KYC started' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -51,17 +57,15 @@ import fs from 'fs';
 import path from 'path';
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch {
     return {}
   }
@@ -375,7 +379,6 @@ optional_documents: getOptionalDocuments (role),
 =======
 =======
 
-=======
   } catch {;
     return {  } catch (error) {
     console.error("Error:", error);
@@ -478,12 +481,11 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -42,6 +43,8 @@ const user = parseUserFromRequest(req);
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb',;
@@ -81,11 +84,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(201).json({ flag })
     } catch (e: any) {
       return res.status(400).json({ error: e.message || 'Invalid payload' })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
-<<<<<<< HEAD
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -177,7 +177,6 @@ if ( {) {
 ;
 =======
 
-=======
 import { readAllFlags } from '../../../../../utils/moderationDb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -187,19 +186,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ensureAdmin(user) 
     } catch (e: any) { 
       return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) 
-<<<<<<< HEAD
     }
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
-<<<<<<< HEAD
   res.setHeader('AllowGET,POST'),
   return res.status(405).end('Method Not Allowed');
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (req.method === 'GET') {
       const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
       const flags = await readAllFlags();
@@ -220,9 +213,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

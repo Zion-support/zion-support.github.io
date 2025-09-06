@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -133,24 +134,21 @@ if ( {) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
 import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
-<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const user = parseUserFromRequest(req);
   if (req.method === "GET") {
     const all = await readAllDisputes();
@@ -282,7 +280,6 @@ res.setHeader("Allow", "GET,POST");
     }
     const id = generateCaseId();
     const dispute: DisputeCase = {
-<<<<<<< HEAD
       id
       projectId: String(projectId)
       entityType
@@ -298,7 +295,6 @@ res.setHeader("Allow", "GET,POST");
       attachments: []
       messages: []
     }
-=======
       id,
       projectId: String(projectId),
       entityType,
@@ -322,9 +318,12 @@ res.setHeader("Allow", "GET,POST");
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET', 'POST']);
@@ -413,10 +412,13 @@ export default async function handler(req, res) {
       attachments: [],;
       messages: []},;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     await createDispute(dispute);
     return res.status(201).json({ dispute });
     } catch (error) {
@@ -427,16 +429,22 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
   } catch (error) {
     console.error("Error:", error);
@@ -460,6 +468,7 @@ export default async function handler(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -472,3 +481,5 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

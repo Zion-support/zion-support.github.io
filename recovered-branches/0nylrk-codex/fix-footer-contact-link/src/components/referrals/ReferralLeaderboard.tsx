@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Award} from "lucide-react";
 
@@ -42,6 +43,8 @@ import { Award } from "lucide-react",
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/referrals/ReferralLeaderboard.tsx
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Card
   CardContent
@@ -51,8 +54,17 @@ import {
 } from "@/components/ui/card";
 
 import { Award } from "lucide-react";
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from "lucide-react",
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Award} from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface LeaderboardEntry {
   rank: number;
   name: string;
@@ -147,6 +159,7 @@ export function ReferralLeaderboard() {
                       ? "bg-yellow-200 text-yellow-800"
                       : entry.rank === 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from "lucide-react",;
@@ -163,6 +176,16 @@ import {Award} from "lucide-react";
                           ? "bg-amber-200 text-amber-800"
                           : "bg-muted text-muted-foreground"
 
+=======
+                        ? "bg-slate-200 text-slate-800"
+                        : entry.rank === 3
+                          ? "bg-amber-200 text-amber-800"
+                          : "bg-muted text-muted-foreground"
+                      ? "bg-slate-200 text-slate-800"
+                      : entry.rank === 3
+                      ? "bg-amber-200 text-amber-800"
+                      : "bg-muted text-muted-foreground"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from "lucide-react",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -352,7 +375,10 @@ export function ReferralLeaderboard() {;
                       : entry.rank === 3;
                       ? "bg-amber-200 text-amber-800";
                       : "bg-muted text-muted-foreground";
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   }`}
                 >
                   {entry.rank}
@@ -368,6 +394,7 @@ export function ReferralLeaderboard() {;
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -423,3 +450,10 @@ referrals: number
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

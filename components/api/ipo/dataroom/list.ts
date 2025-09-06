@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 const section = String(req.query.section || 'General');
@@ -17,10 +17,13 @@ const section = String(req.query.section || 'General');
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -34,13 +37,13 @@ import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const section = String(req.query.section |"General");
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const section = String(req.query.section || "General");
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const dir = resolveDataPath(path.join("dataroom", section));
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (!fs.existsSync(dir)) return res.status(200).json([]);
@@ -56,6 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   appendAuditLog({ type: "file_list", section });
   res && res.status(200).json(files);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -102,3 +106,6 @@ function handler() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

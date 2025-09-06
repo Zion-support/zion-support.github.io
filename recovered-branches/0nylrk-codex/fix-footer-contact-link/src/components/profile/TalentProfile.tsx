@@ -41,9 +41,12 @@ interface TalentProfileProps {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {Handshake, MessageSquare, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -58,6 +61,7 @@ import {ProfileRatings} from "./ProfileRatings";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {Availability} from "@/types/profile";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface TalentProfileProps {;
   profile: TalentProfileType,;
@@ -85,6 +89,8 @@ export function TalentProfile(): any ({ ;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -97,17 +103,10 @@ import { ProfileAvailability } from "./ProfileAvailability",
 import { ProfileContact } from "./ProfileContact",
 import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Availability } from "@/types/profile";
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { Availability } from "@/types/profile",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface TalentProfileProps {
 
   profile: TalentProfileType
@@ -115,30 +114,28 @@ interface TalentProfileProps {
 
   onMessageTalent?: () => void
 }
-<<<<<<< HEAD
 export function TalentProfile({
   profile;
   onRequestHire;
   onMessageTalent
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth();
-=======
 
-<<<<<<< HEAD
 export function TalentProfile({ ;
   profile;
   onRequestHire;
-=======
 export function TalentProfile({ 
   profile,
   onRequestHire,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onMessageTalent
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth(),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Create proper availability object from talent profile
 
   const availability: Availability = {
@@ -146,6 +143,7 @@ export function TalentProfile({
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -157,17 +155,22 @@ export function TalentProfile({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill
     level: 3 // Default level since we don't have this data
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -179,12 +182,16 @@ export function TalentProfile({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  })) |[];
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  })) |[];
   })) || [],
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Create proper projects array for ProfileProjects component
   const projectsArray = profile.key_projects?.map((proj, i) => ({
     id: `project-${i}`
@@ -193,23 +200,28 @@ export function TalentProfile({
     date: new Date().toISOString() // Default date since we don't have this data
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   })) |[];
 
   return (
     <div className="container mx-auto px-4 py-8">
-=======
   })) || [],
   
   return (
     <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Handshake, MessageSquare, Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -256,6 +268,7 @@ export function TalentProfile({;
   })) || [];
   return (;
     <div className="container mx-auto px-4 py-8">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -344,6 +357,8 @@ export function TalentProfile({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Profile Header */}
       <ProfileHero
         name={profile.full_name}
@@ -376,6 +391,7 @@ export function TalentProfile({;
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -395,6 +411,9 @@ export function TalentProfile({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}
@@ -403,6 +422,7 @@ export function TalentProfile({;
               <Star className="mr-2 h-5 w-5 text-yellow-400" />
               Reviews & Ratings
             </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -414,11 +434,15 @@ export function TalentProfile({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-            <ProfileRatings
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <ProfileRatings
             <ProfileRatings 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}

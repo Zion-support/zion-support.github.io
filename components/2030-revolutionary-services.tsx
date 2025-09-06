@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -69,11 +70,15 @@ export default function Revolutionary2030ServicesPage() {
   return (
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
@@ -105,7 +110,6 @@ import { innovative2030Services } from '../data/2030-innovative-services';
 
 =======
 import {
-<<<<<<< HEAD
   ArrowRight
   Star
   Zap
@@ -115,9 +119,12 @@ import {
   Phone
   Mail
   MapPin;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Star,
   Zap,
@@ -151,8 +158,11 @@ function Revolutionary2030ServicesPage() {
 =======
   Mail,;
   MapPin,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -165,19 +175,25 @@ export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -397,7 +413,6 @@ export default function Revolutionary2030ServicesPage() {
 =======
   };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <UltraFuturisticBackground2030>
       <Head>
@@ -517,10 +532,8 @@ export default function Revolutionary2030ServicesPage() {
 =======
         />
       </Head>
-<<<<<<< HEAD
       {/* Navigation */}
       <UltraFuturisticNavigation2030 />
-=======
 
 <<<<<<< HEAD
 
@@ -533,12 +546,15 @@ export default function Revolutionary2030ServicesPage() {
       <UltraFuturisticNavigation2030 />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
@@ -807,6 +823,7 @@ transition={{ duration: 0 && 0.8 }}
         <div className="max-w-7xl mx-auto">
           <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -833,6 +850,9 @@ transition={{ duration: 0 && 0.8 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1126,6 +1146,7 @@ transition={{ duration: 0 && 0.8 }}
 
                     )}
                   </div>
+<<<<<<< HEAD
 
                   {/* Description */}
 
@@ -1141,12 +1162,9 @@ transition={{ duration: 0 && 0.8 }}
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                   {/* Description */}
                   <p className='text-gray-300 leading-relaxed mb-6'>
                     {service.description}
@@ -1267,6 +1285,7 @@ transition={{ duration: 0 && 0.8 }}
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1341,6 +1360,9 @@ transition={{ duration: 0 && 0.8 }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Call to Action */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1563,6 +1585,7 @@ className='text-center'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1601,6 +1624,9 @@ className='text-center'>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1843,19 +1869,16 @@ className='text-center'>;
       {/* Footer */}
       <UltraFuturisticFooter2030 />
     </UltraFuturisticBackground2030>
-<<<<<<< HEAD
 );  )
 }
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

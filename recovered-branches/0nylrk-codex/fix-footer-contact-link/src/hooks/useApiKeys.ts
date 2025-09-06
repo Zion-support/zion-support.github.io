@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useApiKeys.ts
@@ -15,11 +16,15 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -46,18 +51,23 @@ export interface ApiKey {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export interface ApiKey {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface ApiKey {
 
 export interface ApiKey {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   key_prefix: string;
   scopes: ApiKeyScope[];
   created_at: string;
   last_used_at: string | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useApiKeys.ts
 <<<<<<< HEAD
@@ -80,23 +90,28 @@ export interface ApiLog {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   expires_at: string | null
   is_active: boolean
 }
 export interface ApiLog {
-=======
   expires_at: string | null,
   is_active: boolean
 }
 
 export interface ApiLog {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   endpoint: string;
   method: string;
   status_code: number;
   created_at: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useApiKeys.ts
 <<<<<<< HEAD
@@ -106,17 +121,23 @@ export interface ApiLog {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ip_address?: string
   response_time_ms?: number
 }
 export function useApiKeys() {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ip_address?: string,
   response_time_ms?: number
 }
 
 export function useApiKeys() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -124,6 +145,8 @@ export function useApiKeys() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
   const [logs, setLogs] = useState<ApiLog[]>([]);
@@ -133,10 +156,13 @@ export function useApiKeys() {;
   const [newApiKey, setNewApiKey] = useState<string | null>(null);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -187,6 +213,7 @@ export function useApiKeys() {
   const [error, setError] = useState<string | null>(null),
   const [newApiKey, setNewApiKey] = useState<string | null>(null),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -208,14 +235,14 @@ export function useApiKeys() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useApiKeys.ts
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Helper to get the base URL for API functions
   const getApiUrl = () => {
     // Using optional chaining ensures this function works both in the browser
     // (where import.meta.env is injected by Vite) and in Node environments
     // such as tests or server side rendering.
-<<<<<<< HEAD
     const env = (import.meta as any)?.env ?? process.env;
     const url = env.VITE_SUPABASE_URL |env.SUPABASE_URL;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -226,11 +253,14 @@ export function useApiKeys() {
     if (!user) return;
     setLoading(true);
     setError(null);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const env = (import.meta as any)?.env ?? process.env,
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,
     return `${url}/functions/v1/api-key-manager`
@@ -243,6 +273,7 @@ export function useApiKeys() {
     setLoading(true),
     setError(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -260,13 +291,18 @@ export function useApiKeys() {
 ========
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
         setError("Authentication required"),
         return
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       const response = await fetch(`${getApiUrl()}/keys`, {
         method: 'GET'
@@ -370,12 +406,8 @@ if ( {) {
       if (!response.ok) {
         throw new Error(result.error |'Failed to fetch API keys')
       }
-<<<<<<< HEAD
       setKeys(result.keys |[])
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 export function useApiKeys() {;
   const { user } = useAuth(),;
@@ -420,6 +452,7 @@ export function useApiKeys() {;
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -435,10 +468,14 @@ export function useApiKeys() {;
       setKeys(result.keys || [])
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      setKeys(result.keys || [])
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } catch (err) {
       console.error('Error fetching API keys:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -460,17 +497,16 @@ export function useApiKeys() {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         variant: "destructive";
         title: "Error fetching API keys"
-=======
         variant: "destructive",
         title: "Error fetching API keys",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
-<<<<<<< HEAD
   }
   // Create new API key
   const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
@@ -478,8 +514,11 @@ export function useApiKeys() {;
     setLoading(true);
     setError(null);
     setNewApiKey(null);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Create new API key
@@ -490,6 +529,7 @@ export function useApiKeys() {;
     setError(null),
     setNewApiKey(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -538,12 +578,13 @@ export function useApiKeys() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useApiKeys.ts
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
         setError("Authentication required"),
         return
-<<<<<<< HEAD
       }
       const response = await fetch(`${getApiUrl()}/create`, {
         method: 'POST'
@@ -561,7 +602,6 @@ export function useApiKeys() {;
       if (!response.ok) {
         throw new Error(result.error |'Failed to create API key')
       }
-<<<<<<< HEAD
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]);
       // Store the actual key value temporarily so it can be displayed once
@@ -570,8 +610,8 @@ export function useApiKeys() {;
       toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -581,6 +621,8 @@ export function useApiKeys() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       setKeys(result.keys || []);
     } catch (err) {;
@@ -625,6 +667,7 @@ export function useApiKeys() {;
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -635,6 +678,8 @@ export function useApiKeys() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),
       
@@ -742,24 +787,25 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return result
     } catch (err) {
       console.error('Error creating API key:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
-<<<<<<< HEAD
         variant: "destructive";
         title: "Error creating API key"
-=======
         variant: "destructive",
         title: "Error creating API key",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -772,6 +818,8 @@ if ( {) {
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Regenerate API key
   const regenerateApiKey = async (keyId: string) => {
@@ -779,8 +827,11 @@ if ( {) {
     setLoading(true);
     setError(null);
     setNewApiKey(null)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Regenerate API key
@@ -791,6 +842,7 @@ if ( {) {
     setError(null),
     setNewApiKey(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -819,12 +871,13 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
         setError("Authentication required"),
         return
-<<<<<<< HEAD
       }
       const response = await fetch(`${getApiUrl()}/regenerate`, {
         method: 'POST'
@@ -838,12 +891,13 @@ if ( {) {
       if (!response.ok) {
         throw new Error(result.error |'Failed to regenerate API key')
       }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Add the new key to the list;
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),;
@@ -892,6 +946,7 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       // Update the key in the list
       setKeys(prev => prev.map(key =>
         key.id === keyId ? { ...result, key: undefined } : key
@@ -926,10 +981,11 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Update the key in the list
       setKeys(prev => prev.map(key =>
         key.id === keyId ? { ...result, key: undefined } : key
-<<<<<<< HEAD
       ));
       // Store the new key value
       setNewApiKey(result.key);
@@ -937,11 +993,14 @@ if ( {) {
       toast({
         title: "API Key Regenerated"
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )),
       
       // Store the new key value
@@ -951,6 +1010,7 @@ if ( {) {
         title: "API Key Regenerated",
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again."}),
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1041,23 +1101,27 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return result
     } catch (err) {
       console.error('Error regenerating API key:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
-<<<<<<< HEAD
         variant: "destructive";
         title: "Error regenerating API key"
-=======
         variant: "destructive",
         title: "Error regenerating API key",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1070,14 +1134,19 @@ if ( {) {
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Revoke API key
   const revokeApiKey = async (keyId: string) => {
     if (!user) return;
     setLoading(true);
     setError(null)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Revoke API key
@@ -1087,6 +1156,7 @@ if ( {) {
     setLoading(true),
     setError(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1115,12 +1185,13 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
         setError("Authentication required"),
         return
-<<<<<<< HEAD
       }
       const response = await fetch(`${getApiUrl()}/revoke`, {
         method: 'POST'
@@ -1134,12 +1205,13 @@ if ( {) {
       if (!response.ok) {
         throw new Error(result.error |'Failed to revoke API key')
       }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Update the key in the list;
       setKeys(prev => prev.map(key =>;
@@ -1189,6 +1261,7 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       // Update the key's active status in the list
       setKeys(prev => prev.map(key =>
         key.id === keyId ? { ...key, is_active: false } : key
@@ -1219,21 +1292,30 @@ if ( {) {
         key.id === keyId ? { ...key, is_active: false } : key
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      // Update the key's active status in the list
+      setKeys(prev => prev.map(key =>
+        key.id === keyId ? { ...key, is_active: false } : key
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ));
       toast({
         title: "API Key Revoked"
         description: "The API key has been revoked successfully."});
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )),
       
       toast({
         title: "API Key Revoked",
         description: "The API key has been revoked successfully."}),
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1320,37 +1402,46 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return result
     } catch (err) {
       console.error('Error revoking API key:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
-<<<<<<< HEAD
         variant: "destructive";
         title: "Error revoking API key"
-=======
         variant: "destructive",
         title: "Error revoking API key",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Fetch API usage logs
   const fetchApiLogs = async (limit = 50, offset = 0) => {
     if (!user) return;
     setLoading(true);
     setError(null);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Fetch API usage logs
@@ -1360,6 +1451,7 @@ if ( {) {
     setLoading(true),
     setError(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1425,12 +1517,13 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
         setError("Authentication required"),
         return
-<<<<<<< HEAD
       }
       const response = await fetch(
         `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`
@@ -1446,16 +1539,17 @@ if ( {) {
       if (!response.ok) {
         throw new Error(result.error |'Failed to fetch API logs')
       }
-<<<<<<< HEAD
       setLogs(result.logs |[]);
       setTotalLogs(result.count |0);
-=======
 
       setLogs(result.logs || []);
       setTotalLogs(result.count || 0);
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Update the key's active status in the list;
       setKeys(prev => prev.map(key =>;
@@ -1505,6 +1599,7 @@ if ( {) {
 
       setLogs(result.logs || []),
       setTotalLogs(result.count || 0),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1581,23 +1676,19 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return result
     } catch (err) {
       console.error('Error fetching API logs:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
-<<<<<<< HEAD
         variant: "destructive";
         title: "Error fetching API logs"
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   return {
@@ -1622,19 +1713,20 @@ if ( {) {
 =======
 
     clearNewApiKey: () => setNewApiKey(null)
-<<<<<<< HEAD
   }
 }
-=======
         variant: "destructive",
         title: "Error fetching API logs",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       setLogs(result.logs || []),;
       setTotalLogs(result.count || 0),;
@@ -1663,6 +1755,7 @@ if ( {) {
     revokeApiKey;
     fetchApiLogs;
     clearNewApiKey: () => setNewApiKey(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     clearNewApiKey: () => setNewApiKey (null);
@@ -2140,3 +2233,8 @@ clearNewApiKey: () => setNewApiKey (null)
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

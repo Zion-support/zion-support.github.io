@@ -42,7 +42,6 @@ interface AddMilestoneFormProps {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
 =======
 
-<<<<<<< HEAD
 import React from 'react';
 
 import {useForm} from 'react-hook-form';
@@ -94,13 +93,14 @@ export function AddMilestoneForm(): any ({;
 =======
   projectType?: string
 }
-<<<<<<< HEAD
 export function AddMilestoneForm({
-=======
 
 export function AddMilestoneForm({;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onSubmit;
   isSubmitting;
   onCancel;
@@ -143,12 +143,14 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       });
       return
-<<<<<<< HEAD
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -244,14 +246,13 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
       }),;
       return;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // If there are multiple milestones, submit them one by one
     milestones.forEach(milestone => {
       onSubmit({
@@ -261,6 +262,7 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -278,12 +280,16 @@ export function AddMilestoneForm({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
       title: milestone.title
@@ -291,6 +297,7 @@ export function AddMilestoneForm({;
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -439,10 +446,10 @@ export function AddMilestoneForm({;
         <AIMilestoneGenerator;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="space-y-6">
@@ -808,10 +815,7 @@ if ( {) {
 =======
         />
       )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
           <FormField

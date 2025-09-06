@@ -3,7 +3,10 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
@@ -20,6 +23,7 @@ import { FormValues } from "./useHireRequestForm";
 interface BudgetFieldsProps {
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile
+<<<<<<< HEAD
 
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
@@ -33,11 +37,22 @@ import {
 import { Input } from "@/components/ui/input";
 import { TalentProfile } from "@/types/talent";
 import { FormValues } from "./useHireRequestForm";
+=======
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { TalentProfile } from "@/types/talent",
+import { FormValues } from "./useHireRequestForm",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface BudgetFieldsProps {
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
   return (
@@ -91,6 +106,7 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
         )}
       />
     </>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -363,3 +379,10 @@ talent?: TalentProfile
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

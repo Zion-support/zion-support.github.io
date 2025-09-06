@@ -15,14 +15,10 @@ import {OnboardingNotificationParams} from './types';
 export async function createOnboardingNotification({
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { createNotification  } from './createNotification';
 import { OnboardingNotificationParams } from './types';
-=======
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /**
  * Creates an onboarding notification for a user
  */
@@ -197,11 +193,7 @@ import { OnboardingNotificationParams } from './types',;
 
     actionText
   })
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -311,6 +303,7 @@ export async function createOnboardingNotification({;
     actionText;
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -364,3 +357,7 @@ case 'talent invited':
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notifications/createOnboardingNotification.ts
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

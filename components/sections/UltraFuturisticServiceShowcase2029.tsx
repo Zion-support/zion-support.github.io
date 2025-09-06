@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -54,11 +55,15 @@ export default function UltraFuturisticServiceShowcase2029(): any ({;
   title?: string
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
@@ -114,11 +119,13 @@ interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
   title?: string;
   subtitle?: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function UltraFuturisticServiceShowcase2029({
   services
   title = '2029 Cutting-Edge Services'
@@ -132,6 +139,7 @@ export default function UltraFuturisticServiceShowcase2029({
           transition={{ duration: 0.6 }}
           className='text-center mb-16'
 interface UltraFuturisticServiceShowcase2029Props {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -161,8 +169,10 @@ export default function UltraFuturisticServiceShowcase2029(): any ({;
   services: Service[]
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+  services: Service[]
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   services: Service[],;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   title?: string;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   subtitle?: string
@@ -205,10 +215,13 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 className="text-center mb-16"
         >
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='text-center mb-16'
         >
           <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
@@ -385,30 +398,17 @@ function UltraFuturisticServiceShowcase2029() {
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.slice(0, 6).map((service, index) => (
-=======
 
           {services.slice(0, 6).map((service, index) => (
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20'
-<<<<<<< HEAD
-=======
 
             >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className='flex items-center justify-between mb-4'>
                 <div className='flex items-center space-x-2'>
                   <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />
@@ -606,15 +606,16 @@ function UltraFuturisticServiceShowcase2029() {
             </motion.div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -628,14 +629,7 @@ function UltraFuturisticServiceShowcase2029() {
 =======
 =======
           className='text-center mt-12'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <Link
             href='/services'
@@ -663,6 +657,7 @@ function UltraFuturisticServiceShowcase2029() {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
@@ -670,6 +665,8 @@ function UltraFuturisticServiceShowcase2029() {
   );
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </section>;
   );
 }
@@ -677,9 +674,9 @@ function UltraFuturisticServiceShowcase2029() {
 }
 }
 }
-=======
     </section>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -748,3 +745,6 @@ function UltraFuturisticServiceShowcase2029() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

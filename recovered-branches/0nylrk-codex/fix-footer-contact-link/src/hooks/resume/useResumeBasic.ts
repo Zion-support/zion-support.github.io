@@ -5,18 +5,18 @@
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useFetchResume  } from './useFetchResume';
 import { useResumeActions } from './useResumeActions';
 export function useResumeBasic() {
 
-=======
 import {useFetchResume} from './useFetchResume';
 import {useResumeActions} from './useResumeActions';
 export function useResumeBasic() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
   return {
@@ -28,18 +28,23 @@ export function useResumeBasic() {;
     // From useResumeActions
     createResume: resumeActions.createResume;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     updateBasicInfo: resumeActions.updateBasicInfo
 
-=======
     updateBasicInfo: resumeActions.updateBasicInfo,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 export function useResumeBasic() {;
@@ -54,6 +59,7 @@ export function useResumeBasic() {;
     // From useResumeActions;
     createResume: resumeActions.createResume;
     updateBasicInfo: resumeActions.updateBasicInfo;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -127,6 +133,8 @@ export function useResumeBasic() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setActiveResume: resumeActions.setActiveResume}
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

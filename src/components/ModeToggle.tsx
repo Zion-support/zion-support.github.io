@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:src/components/ModeToggle.tsx
 import { Moon, Sun } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -23,6 +24,8 @@ import { useEffect, useState } from "react"
 import { Moon, Sun } from 'lucide-react'
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from '@/components/ui/button'
 import {
   Tooltip
@@ -38,6 +41,7 @@ import { toast } from '@/hooks/use-toast'
 import { useTheme } from '@/components/ThemeProvider'
 import { logIssue } from '@/utils/logIssue'
 import { useEffect, useState } from 'react'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -57,27 +61,20 @@ import { useEffect, useState } from "react"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-=======
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
-=======
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
-<<<<<<< HEAD
 export function ModeToggle() {
 
   const { theme, toggleTheme } = useTheme();
@@ -85,12 +82,16 @@ export function ModeToggle() {
   // Ensure we're on the client side to avoid hydration mismatches
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setIsClient(true)
   }, [])
   // Determine the actual resolved theme for display purposes
 
   const resolvedTheme = (() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 // Use the ThemeProvider hook directly to ensure no conflicts
@@ -102,10 +103,13 @@ import { useEffect, useState } from "react"
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setIsClient(true);
   }, []);
   // Determine the actual resolved theme for display purposes;
   const resolvedTheme = (() => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -113,6 +117,8 @@ import { useEffect, useState } from "react"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!isClient) return 'light'; // Default for SSR
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (theme === 'system') {
@@ -242,14 +248,15 @@ if ( {) {
     // Return a neutral state during SSR to prevent hydration issues
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-    
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function ModeToggle() {
@@ -328,6 +335,7 @@ export function ModeToggle() {
         className="focus-visible:ring-ring relative text-foreground"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       >
@@ -339,6 +347,8 @@ export function ModeToggle() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       >
         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -351,6 +361,7 @@ export function ModeToggle() {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -415,9 +426,10 @@ import { useEffect, useState } from 'react';
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             variant='ghost'
             size='icon'
-=======
             variant="ghost"
             size="icon"
 import { Moon, Sun } from 'lucide-react';
@@ -697,6 +709,7 @@ export function ModeToggle() {;
             variant="ghost";
             size="icon";
 <<<<<<< HEAD
+<<<<<<< HEAD
             onClick={handleToggle}
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme:${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' :'dark'} mode.`}
@@ -762,20 +775,25 @@ export function ModeToggle() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             onClick={handleToggle}
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
-<<<<<<< HEAD
             className='focus-visible:ring-ring relative group text-foreground' // Added text-foreground
             data-testid='theme-toggle'
             data-theme={resolvedTheme}          >
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="focus-visible:ring-ring relative group text-foreground" // Added text-foreground
             data-testid="theme-toggle"
             data-theme={resolvedTheme}
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -789,10 +807,11 @@ export function ModeToggle() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {isDarkMode ? (
               <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
             ) : (
-<<<<<<< HEAD
               <Moon className='h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12' />
             )}
             {/* Enhanced visual indicator */}
@@ -806,8 +825,11 @@ export function ModeToggle() {;
             <span className='sr-only'>
               Toggle theme. Current: {resolvedTheme}. Click to switch to{' '}
               {isDarkMode ? 'light' : 'dark'}.
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />
             )}
 ;
@@ -821,6 +843,7 @@ export function ModeToggle() {;
             <span className="sr-only">
               Toggle theme. Current: {resolvedTheme}. Click to switch to {isDarkMode ? 'light' : 'dark'}.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>>             </span>
 >>>>>>>           </Button>
@@ -831,6 +854,8 @@ export function ModeToggle() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </span>
           </Button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -842,10 +867,13 @@ export function ModeToggle() {;
             {theme === 'system' && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <p className='text-xs opacity-60 mt-1'>
                 Following system preference
               </p>
@@ -871,6 +899,7 @@ if (!isClient) {"
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>)
 }'"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
 ========
@@ -885,6 +914,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <p className="text-xs opacity-60 mt-1">Following system preference</p>
             )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1101,8 +1132,11 @@ if (!isClient) {";
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

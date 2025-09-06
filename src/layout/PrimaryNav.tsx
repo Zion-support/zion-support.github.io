@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Menu, X } from 'lucide-react'
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 import Link from 'next/link';
@@ -24,6 +27,7 @@ import { slugify  } from '@/lib/slugify';
 import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu  } from '@/components/header/MobileMenu';
 import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> import { Menu, X } from 'lucide-react'
@@ -71,6 +75,8 @@ function PrimaryNav() {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
 import Link from 'next/link'
@@ -89,7 +95,6 @@ import { slugify } from '@/lib/slugify'
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation'
 import { MobileMenu } from '@/components/header/MobileMenu'
 import { MobileBottomNav } from '@/components/header/MobileBottomNav'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Menu, X } from 'lucide-react'
 import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
@@ -123,17 +128,18 @@ export function PrimaryNav() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
     // context not available
-<<<<<<< HEAD
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-=======
   };
 ;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -145,6 +151,7 @@ export function PrimaryNav() {
             component: 'PrimaryNav'
           })
         ) }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handle_submit = (e: React.FormEvent) =>: any {
     e.prevent_default ();
@@ -172,6 +179,9 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
 import Link from 'next/link',;
@@ -226,6 +236,7 @@ export function PrimaryNav() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         data-testid='header'>;
@@ -238,6 +249,8 @@ export function PrimaryNav() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <header
@@ -249,7 +262,10 @@ export function PrimaryNav() {;
         <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
           <Logo />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className='hidden lg:block order-1 flex-shrink-0'>
             <ResponsiveNavigation
@@ -293,18 +309,12 @@ export function PrimaryNav() {;
               style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>;
 =======
             />          </div>
-=======
           
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className="hidden lg:block order-1 flex-shrink-0">
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Actions container with responsive layout */}
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
@@ -313,6 +323,7 @@ export function PrimaryNav() {;
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -343,6 +354,8 @@ if ( {) {
                     router.push (`/blog/${sugg.slug}`);
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onSelectSuggestion={sugg => {
                   logDebug('PrimaryNav search suggestion selected:', {
                     suggestion: sugg
@@ -402,6 +415,7 @@ if ( {) {
               <PointsBadge />
               <CartDrawer />
             </div>
+<<<<<<< HEAD
 >>>>>>>             {/* Compact controls group */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
@@ -419,6 +433,8 @@ if ( {) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onSelectSuggestion={(sugg) => {;
                   logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),;
                   // Handle different suggestion types with proper navigation;
@@ -454,11 +470,6 @@ if ( {) {
               <CartDrawer />
             </div>
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
@@ -471,7 +482,10 @@ if ( {) {
                 <>
                   <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     href='/auth/login'
                     className='text-sm hover:text-primary whitespace-nowrap'
                     data-testid='login-link'
@@ -480,10 +494,13 @@ if ( {) {
                       setLoginOpen(true) }}
                   >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     {t('auth.login')}
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     href="/auth/login"
                     className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
@@ -523,6 +540,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     }}
                   >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -542,6 +560,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {t('auth.login')}
                   </Link>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -555,6 +575,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               )}
               {isLoggedIn && <UserMenu />}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <ModeToggle />
             <LanguageSelector />
@@ -566,6 +587,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
             {isLoggedIn && <UserMenu />}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
           </div>
 <<<<<<< HEAD
@@ -575,22 +598,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
           {/* Tablet view (md to lg) - simplified controls */}
           <div className='hidden md:flex lg:hidden items-center gap-2 order-2'>
-=======
             </div>;
           </div>;
           {/* Tablet view (md to lg) - simplified controls */}
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <ModeToggle />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <LanguageSelector />
             {!isLoggedIn && (
               <Link
-<<<<<<< HEAD
                 href='/auth/login'
                 className='text-sm hover:text-primary'
                 data-testid='login-link'
@@ -599,6 +615,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   setLoginOpen(true) }}
 
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 {t('auth.login')}
               </Link>
@@ -618,6 +635,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 href="/auth/login"
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
@@ -638,15 +657,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                 }}
               >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {t('auth.login')}
               </Link>
             )}
             {isLoggedIn && <UserMenu />}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 onClick={e => {;
@@ -711,6 +734,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           {/* Mobile menu button */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
               {isLoggedIn && <UserMenu  />}
             </div>
@@ -734,7 +759,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
             aria-label={t('general.toggle_mobile_menu')}          >
-=======
           </div>;
           {/* Mobile menu button */}
           <button
@@ -743,11 +767,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
@@ -762,11 +781,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   unreadCount
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden='true'          />
@@ -821,12 +843,13 @@ setLoginOpen (true)
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
-<<<<<<< HEAD
   unreadCount
-=======
   unreadCount 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }/>
 }<LoginModal isOpen= {
   loginOpen
@@ -903,6 +926,7 @@ setLoginOpen (true)
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -912,6 +936,9 @@ setLoginOpen (true)
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
@@ -1012,8 +1039,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

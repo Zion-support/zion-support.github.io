@@ -1,15 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/EquipmentErrorBoundary.tsx
 
 =======
-import React from 'react';
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react';
 import React from 'react'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AlertTriangle, RefreshCw } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -148,16 +151,20 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack })
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/EquipmentErrorBoundary.tsx
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   render() {
     if (this.state.hasError) {
       return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
@@ -173,6 +180,8 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -199,15 +208,17 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
 ;
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {;
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
   render() {
     if (this.state.hasError) {
       return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='container py-8'>
           <Card className='border-red-200 bg-red-50'>
             <CardContent className='p-8 text-center'>
@@ -255,10 +266,13 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
                   Try Again
                 </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -290,11 +304,14 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
     if (this.state.hasError) {
       return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="container py-8">
           <Card className="border-red-200 bg-red-50">
             <CardContent className="p-8 text-center">
@@ -313,6 +330,7 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
                 </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <Button onClick={() => window.location.reload()} variant="default">
 =======
@@ -323,6 +341,8 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Button onClick={() => window.location.reload()} variant="default">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   Refresh Page
@@ -344,12 +364,16 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return this.props.children
   }      )
     }
     return this.props.children
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -522,6 +546,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/EquipmentErrorBoundary.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     return this.props.children
   }      )
@@ -530,16 +556,17 @@ ursor/fix-website-loading-errors-and-merge-6662
     return this.props.children;
   };
 } ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
 ;
     return this.props.children;
   }
 } ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

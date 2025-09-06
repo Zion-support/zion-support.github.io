@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { MapPin } from 'lucide-react'
 import { TalentCardSkills } from './TalentCardSkills'
 import React, { useState } from "react"
 import { TalentCardSkills } from "./TalentCardSkills"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface TalentCardContentProps {
@@ -24,28 +20,28 @@ import { TalentCardSkills } from "./TalentCardSkills";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import { MapPin } from 'lucide-react'
-<<<<<<< HEAD
 import { TalentCardSkills } from "./TalentCardSkills";
-=======
 import { TalentCardSkills } from "./TalentCardSkills",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface TalentCardContentProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TalentCardContent({
   summary
   bio
@@ -74,11 +70,14 @@ export function TalentCardContent({
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Short bio or summary - longer on hover for desktop */}
       <div
         className="overflow-hidden transition-all duration-300" 
@@ -97,9 +96,12 @@ export function TalentCardContent({
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { MapPin } from 'lucide-react'
 import { TalentCardSkills } from "./TalentCardSkills",
@@ -108,11 +110,13 @@ interface TalentCardContentProps {
   bio: string,
   timezone: string | undefined,
   skills: string[] | undefined
-=======
       
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { MapPin } from 'lucide-react';
 import { TalentCardSkills } from "./TalentCardSkills",;
@@ -137,16 +141,20 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Short bio or summary - longer on hover for desktop */}
       <div 
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -160,6 +168,8 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         onMouseEnter = {() => setIsHovering(true),}
         onMouseLeave = {() => setIsHovering(false),}
       >
@@ -173,8 +183,6 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
     </div>;
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -208,6 +216,7 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -220,3 +229,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

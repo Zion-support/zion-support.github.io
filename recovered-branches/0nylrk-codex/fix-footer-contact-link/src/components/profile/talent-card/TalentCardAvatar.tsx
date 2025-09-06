@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardAvatar.tsx
 
 import React from "react",
@@ -49,6 +50,14 @@ import React from "react";
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
+=======
+import React from "react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import React from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TalentCardAvatarProps {
   profilePicture?: string,
   fullName: string
@@ -73,7 +82,11 @@ export function TalentCardAvatar({
 
   const getInitials = (name: string) => {
     return name
+<<<<<<< HEAD
 .split(" ")
+=======
+      .split(" ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .map((part) => part[0])
       .join("")
       .toUpperCase();
@@ -86,14 +99,32 @@ export function TalentCardAvatar({
         {getInitials(fullName)}
       </AvatarFallback>
     </Avatar>
+<<<<<<< HEAD
   };
+=======
+      .split(' ')
+      .map(part => part[0])
+      .join('')
+      .toUpperCase();
+  };
+      .toUpperCase()
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
       <AvatarImage src={profilePicture || undefined} alt={fullName} />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
+<<<<<<< HEAD
 
+=======
+        {getInitials(fullName)}
+      </AvatarFallback>
+    </Avatar>
+  )
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 interface TalentCardAvatarProps {;
@@ -167,6 +198,7 @@ export function TalentCardAvatar({ profilePicture, fullName } TalentCardAvatarPr
         {getInitials(fullName)}
       </AvatarFallback>;
     </Avatar>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardAvatar.tsx
@@ -247,3 +279,9 @@ fullName: string
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

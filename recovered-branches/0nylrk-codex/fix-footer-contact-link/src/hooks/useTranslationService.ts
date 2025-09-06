@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTranslationService.ts
@@ -15,6 +16,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
@@ -27,6 +31,7 @@ interface TranslationResponse {
   translations: Record<SupportedLanguage, string>;
   error?: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -53,12 +58,16 @@ export function useTranslationService() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export function useTranslationService() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export function useTranslationService() {
 
 export function useTranslationService() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();
   const translateContent = async (
@@ -95,6 +104,7 @@ export function useTranslationService() {;
           ar: ''
         }
         initialTranslations[sourceLanguage] = content;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -272,6 +282,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
@@ -311,6 +323,7 @@ export function useTranslationService() {;
         },;
         initialTranslations[sourceLanguage] = content,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -328,10 +341,11 @@ export function useTranslationService() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
-<<<<<<< HEAD
     } catch (err) {
       setIsTranslating(false);
       console.error('Translation service error:', err);
@@ -357,8 +371,11 @@ export function useTranslationService() {;
     isTranslating;
 
     getTranslation
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } catch (err) {;
       setIsTranslating(false),;
       console.error('Translation service error:', err),;
@@ -397,6 +414,7 @@ export function useTranslationService() {;
     translateContent;
     isTranslating;
     getTranslation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -446,6 +464,8 @@ setIsTranslating (false);
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -43,8 +43,6 @@ function ReferralsPage() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Referrals.tsx
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useReferrals  } from '@/hooks/useReferrals';
@@ -80,8 +78,11 @@ export default function ReferralsPage() {
 
 =======
     shareOnSocialMedia} = useReferrals();
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {useReferrals} from '@/hooks/useReferrals';
@@ -101,6 +102,7 @@ export default function ReferralsPage() {;
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -108,6 +110,8 @@ export default function ReferralsPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -127,10 +131,13 @@ export default function ReferralsPage() {
   const navigate = useNavigate(),
   const { isAuthenticated } = useAuth(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const {
     isLoading,
     referralCode,
@@ -143,6 +150,7 @@ export default function ReferralsPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -150,6 +158,8 @@ export default function ReferralsPage() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     if (!isAuthenticated) {
       toast({
@@ -162,15 +172,16 @@ export default function ReferralsPage() {
     }
 =======
     }
-<<<<<<< HEAD
   }, [isAuthenticated, navigate]);
   const referralLink = getReferralLink();
-=======
   }, [isAuthenticated, navigate]),
 
   const referralLink = getReferralLink(),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="container max-w-7xl py-10">
@@ -220,6 +231,7 @@ export default function ReferralsPage() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -272,6 +284,9 @@ export default function ReferralsPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -543,11 +558,10 @@ return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex f
 =======
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

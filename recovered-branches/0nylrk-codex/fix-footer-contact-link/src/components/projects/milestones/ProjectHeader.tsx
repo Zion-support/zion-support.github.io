@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/ProjectHeader.tsx
 
 import React from 'react',;
@@ -47,22 +48,33 @@ function ProjectHeader() {
 
   title: string
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 interface ProjectHeaderProps {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: string;
 }
 export function ProjectHeader({ title }: ProjectHeaderProps) {
 
   const navigate = useNavigate();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+  title: string
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -99,6 +111,8 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
           className="mr-2"
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { Button } from '@/components/ui/button',;
@@ -122,6 +136,7 @@ export function ProjectHeader({ title } ProjectHeaderProps) {;
           onClick={() => navigate(-1)}
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/ProjectHeader.tsx
 
+<<<<<<< HEAD
 ========
         >;
           <ArrowLeft className="h-4 w-4 mr-1" />;
@@ -142,6 +157,11 @@ export function ProjectHeader({ title } ProjectHeaderProps) {;
 
 =======
 =======
+=======
+export function ProjectHeader({ title }: ProjectHeaderProps) {
+  const navigate = useNavigate(),
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
       <div className="flex items-center">
@@ -160,6 +180,7 @@ export function ProjectHeader({ title } ProjectHeaderProps) {;
         </h1>
       </div>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -186,3 +207,10 @@ export function ProjectHeader({ title } ProjectHeaderProps) {;
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

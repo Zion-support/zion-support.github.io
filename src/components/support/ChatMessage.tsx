@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useMemo } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { cn } from '@/lib/utils'
@@ -32,11 +35,14 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
     () => ({ __html: formatMessageWithLinks(message) }),    [message]
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useMemo } from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils";
@@ -45,18 +51,20 @@ import { format } from "date-fns";
 // from the ThemeProvider context
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
   message: string;
   isUser: boolean;
   timestamp: Date
 export const ChatMessage: React.FC<ChatMessageProps> = ({
-=======
 import { useTheme } from "@/hooks/useTheme",
 interface ChatMessageProps {
   message: string,
@@ -76,9 +84,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
     () => ({ __html: formatMessageWithLinks(message) }),
     [message]
   ),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
   message
   isUser
   timestamp
@@ -89,6 +95,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
   const sanitizedHtml = useMemo<{ __html: string }>(
     () => ({ __html: formatMessageWithLinks(message) }),    [message]
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -131,6 +138,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
@@ -149,15 +158,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           </>
         )}
       </Avatar>
-<<<<<<< HEAD
       <div
         className={cn(
-<<<<<<< HEAD
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
-=======
           'max-w-[80%] rounded-lg px-4 py-2 text-sm',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           isUser
 =======
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
@@ -173,6 +182,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
       >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -180,6 +190,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       >
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div
           className={cn(
@@ -193,12 +205,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         >
           {format(timestamp, 'h:mm a')}
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className={cn(
@@ -211,6 +226,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       )}>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <div dangerouslySetInnerHTML={sanitizedHtml} />
 =======
@@ -218,6 +234,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div dangerouslySetInnerHTML={sanitizedHtml} />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className={cn(
@@ -231,6 +249,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           {format(timestamp, "h:mm a")}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>         </div>
@@ -242,28 +261,31 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
       </div>
     </div>
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-}
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
-=======
 },
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 
@@ -290,10 +312,13 @@ function escapeHtml(unsafe: string): string {
   return unsafe
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -322,10 +347,13 @@ function formatMessageWithLinks(message: string): string {
 
 =======
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
     .replace(/>/g, ">")
@@ -426,10 +454,13 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 // dependency like DOMPurify for now and instead escape the five critical;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // characters. This ensures any user-supplied string is rendered harmless;
 =======
 >>>>>>> // characters. This ensures any user-supplied string is rendered harmless;
@@ -467,6 +498,7 @@ function formatMessageWithLinks(message: string): string {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -478,9 +510,10 @@ function formatMessageWithLinks(message: string): string {
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-}
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
+}
 function formatMessageWithLinks(message: string): string {;
   // First, escape any HTML so that user input cannot break out of the intended;
   // markup.;
@@ -501,8 +534,11 @@ function formatMessageWithLinks(message: string): string {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

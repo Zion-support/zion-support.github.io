@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -316,6 +317,8 @@ health_monitor.start ().catch (console.error);
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }; if (this.monitorProcesses) {await this.checkProcessHealth()}; if (this.monitorSystem) {await this.checkSystemStatus()}
 } catch (error) {this.log(`Health check error: ${error.message}`)}}; async checkResourceUsage() {try {; // Check memory usage; const totalMem = os.totalmem(); const freeMem = os.freemem(); const usedMem = totalMem - freeMem; const memUsagePercent = (usedMem / totalMem) * 100; this.log(`Memory usage: ${memUsagePercent.toFixed(2)}% (${(usedMem / 1024 / 1024 / 1024).toFixed(2)}GB used / ${(totalMem / 1024 / 1024 / 1024).toFixed(2)}GB total)`); if (memUsagePercent > this.alertThreshold) {this.log(`ALERT: Memory usage ${memUsagePercent.toFixed(2)}% exceeds threshold ${this.alertThreshold}%`)}; // Check CPU usage; const cpus = os.cpus(); this.log(`CPU cores: ${cpus.length}`); // Check disk usage; try {const diskUsage = execSync('df -h /', { encoding: 'utf8' }); this.log(`Disk usage: \n${diskUsage}`)} catch (error) {this.log(`Disk usage check failed: ${error.message}`)}
 } catch (error) {this.log(`Resource monitoring error: ${error.message}`)}}; async checkProcessHealth() {try {; // Check PM2 processes; try {; const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }); const processes = JSON.parse(pm2List); this.log(`PM2 processes: ${processes.length}`); processes.forEach(proc = > {const status = proc.pm2_env?.status; const name = proc.name; const memory = proc.monit?.memory |0; const cpu = proc.monit?.cpu |0; this.log(` ${name}: ${status} (CPU: ${cpu}%, Memory: ${(memory / 1024 / 1024).toFixed(2)}MB)`); if (status ! = = 'online') {this.log(`ALERT: Process ${name} is not online (status: ${status})`)}});
@@ -333,7 +336,6 @@ health_monitor.start ().catch (console.error);
 // Start the service;
 const healthMonitor = new HealthMonitor();
 healthMonitor.start().catch(console.error);
-=======
 };
 ; if (this.monitorProcesses) {; await this.checkProcessHealth()};
 ; if (this.monitorSystem) {; await this.checkSystemStatus()};
@@ -371,12 +373,7 @@ healthMonitor.start().catch(console.error);
 ;
 // Start the service;
 const healthMonitor = new HealthMonitor();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 healthMonitor.start().catch(console.error);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 healthMonitor.start().catch(console.error);
 ;
       if (this.monitorProcesses) {;
@@ -575,9 +572,12 @@ healthMonitor.start().catch(console.error);
 const healthMonitor = new HealthMonitor(),;
 healthMonitor.start().catch(console.error),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

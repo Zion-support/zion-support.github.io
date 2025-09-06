@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/tests/CategoryCard.test.tsx
 
 import {render, screen} from '@testing-library/react',;
@@ -13,6 +14,8 @@ import {CategoryCard} from '@/components/CategoryCard',
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { render, screen  } from '@testing-library/react';
 import { MemoryRouter  } from 'react-router-dom';
 import { CategoryCard } from '@/components/CategoryCard';
@@ -24,10 +27,10 @@ it('renders category card with link to slug', () => {
   );
   expect(screen.getByText('Test Category')).toBeInTheDocument();
 });
-=======
 import {render, screen} from '@testing-library/react',
 import {MemoryRouter} from 'react-router-dom',
 import {CategoryCard} from '@/components/CategoryCard',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -44,6 +47,11 @@ import { CategoryCard } from '@/components/CategoryCard',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { render, screen } from '@testing-library/react',
+import { MemoryRouter } from 'react-router-dom',
+import { CategoryCard } from '@/components/CategoryCard',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
@@ -164,6 +172,7 @@ it('treats underscores as spaces in slug', () => {
 
   const link = screen.getByRole('link', { name: /ai_tools/i }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   expect(link).toHaveAttribute('href/category/ai-tools')
 }),
@@ -229,15 +238,19 @@ it ('treats underscores as spaces in slug', () => {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/tests/CategoryCard.test.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   expect(link).toHaveAttribute('href/category/ai-tools'),
 }),;
 ;
-=======
   expect(link).toHaveAttribute('href/category/ai-tools')
 }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

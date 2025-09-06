@@ -784,7 +784,6 @@ import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-rea
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
-<<<<<<< HEAD
   innovativeRealMicroSaasServices2025
 } from '../data/2025-innovative-real-micro-saas-services';
 import {
@@ -795,7 +794,6 @@ import {
 } from '../data/2025-innovative-it-services-enhanced';
 import {
   emergingTechServicesEnhanced2025
-=======
   innovativeRealMicroSaasServices2025 ;
 } from '../data/2025-innovative-real-micro-saas-services';
 import { 
@@ -806,7 +804,6 @@ import {
 } from '../data/2025-innovative-it-services-enhanced';
 import { 
   emergingTechServicesEnhanced2025 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../data/2025-emerging-tech-services-enhanced';
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
@@ -816,7 +813,6 @@ import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackgrou
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
 import {
-<<<<<<< HEAD
   ArrowRight
   Star
   Brain
@@ -831,7 +827,6 @@ import {
   Lock
   BarChart3
   Cloud;
-=======
   ArrowRight,
   Star,
   Brain,
@@ -846,7 +841,6 @@ import {
   Lock,
   BarChart3,;
   Cloud,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 interface Homepage2025Props {
   showInternalNav?: boolean;
@@ -956,19 +950,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     initial: {}
     animate: {
       transition: {
-<<<<<<< HEAD
         staggerChildren: 0.1
       }
     }
   }
-=======
         staggerChildren: 0.1,
       },
     },
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <UltraFuturisticBackground2026 intensity='medium' theme='quantum'>
       {showInternalNav && (
@@ -989,14 +980,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </motion.div>
                 {/* Desktop Navigation */}
                 <div className='hidden lg:flex space-x-8'>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   {navigationSections.map(section => (                    <button  }
-=======
                   {navigationSections.map(section => (                    <button  };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
       {showInternalNav && (
@@ -1017,18 +1003,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <div className="hidden lg:flex space-x-8">
                   {navigationSections.map((section) => (
                     <button
-=======
-<<<<<<< HEAD
                   {navigationSections.map(section => (                    <button
 
                     <button
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                     <button
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       key={section.id}
                       onClick={() => scrollToSection(section.id)}
                       className={`flex items-center space-x-2 text-sm font-medium transition-all duration-300 ${
@@ -1042,15 +1022,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     </button>
                   ))}
                 </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {/* Contact Info */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -1183,14 +1164,7 @@ href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Mobile Navigation Menu */}
               <AnimatePresence>
                 {isMobileMenuOpen && (
@@ -1201,16 +1175,15 @@ href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                     className='lg:hidden border-t border-white/10'
                   >
                     <div className='py-4 space-y-2'>
-<<<<<<< HEAD
                       {navigationSections.map(section => (                        <button                    className="lg:hidden border-t border-white/10"
                   >
                     <div className="py-4 space-y-2">
                       {navigationSections.map((section) => (
-=======
                       {navigationSections.map(section => (                        <button
 
                         <button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1218,6 +1191,8 @@ href='mailto:kleber@ziontechgroup && ziontechgroup.com'
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
                           className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -1284,6 +1259,7 @@ href="mailto:kleber@ziontechgroup.com"
           </nav>
         </>
       )}
+<<<<<<< HEAD
 
       {/* Hero Section */}
 =======
@@ -1451,6 +1427,9 @@ href="mailto:kleber@ziontechgroup.com"
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Hero Section */}
       <section;
         id='hero';
@@ -1464,6 +1443,7 @@ href="mailto:kleber@ziontechgroup.com"
             <motion.div;
               animate={{ coordinate_y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'            >      <section id="hero" className="relative min - h-screen flex items - center justify - center px - 4 sm:px - 6 lg:px - 8 pt - 16">;
         <div className="text - center z - 10 max - w-6xl mx - auto">;
@@ -1525,11 +1505,13 @@ href="mailto:kleber@ziontechgroup.com"
         <div className="text-center z-10 max-w-6xl mx-auto">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'            >      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
-=======
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'            >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1537,6 +1519,8 @@ href="mailto:kleber@ziontechgroup.com"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -1600,15 +1584,16 @@ className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
                 Pioneering the future of technology with innovative solutions
                 that drive business transformation
               </p>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Enhanced CTA Section */}
               <motion.div
                 variants={itemVariants}
@@ -1672,6 +1657,7 @@ className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
                   </button>
                 </Link>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1757,12 +1743,9 @@ className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -1832,6 +1815,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           <motion.div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1851,6 +1835,9 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1868,15 +1855,16 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           >
 =======
             className='text-center mb-20'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Comprehensive Technology Solutions
@@ -1892,6 +1880,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 key={index}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1899,6 +1888,8 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           >
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}          >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1944,6 +1935,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}
@@ -1965,6 +1957,10 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -2046,35 +2042,43 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
 
             initial={{ opacity: 0, y: 40 }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -2089,6 +2093,8 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className='inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 400 / 30 rounded - full text - cyan - 400 text - lg font - medium backdrop - blur - sm';
@@ -2419,7 +2425,6 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-<<<<<<< HEAD
                 onClick={() => (window.location.href = service.link)}              Our Revolutionary 2026 Services
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </h2>
@@ -2518,6 +2523,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 whileHover={{ y: -10, scale: 1.02 }}
 
@@ -2549,6 +2555,10 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+                onClick={() => (window.location.href = service.link)}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
           </div>;
@@ -2557,6 +2567,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onClick={() => window.location.href = service.link}
               >
@@ -2568,6 +2579,8 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onClick={() => (window.location.href = service.link)}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
@@ -2611,8 +2624,8 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           {/* Call to Action for Services Showcase */}
           <motion.div
             className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2620,6 +2633,8 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
@@ -2688,20 +2703,27 @@ className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 t
           <motion.div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section id="contact" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
 
             initial={{ opacity: 0, y: 40 }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -2718,6 +2740,8 @@ className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 t
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -2797,6 +2821,7 @@ className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 t
             </div>
           </div>
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2919,9 +2944,11 @@ className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 t
             className="text-center"
 =======
 <<<<<<< HEAD
-            className='text-center'            className="text-center"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            className='text-center'            className="text-center"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2929,6 +2956,8 @@ className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 t
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -3349,26 +3378,19 @@ export default Homepage2025;
 =======
 =======
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Homepage2025;  )
 }
 export default Homepage2025;
 
-<<<<<<< HEAD
-=======
+export default Homepage2025;
 export default Homepage2025;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default Homepage2025;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

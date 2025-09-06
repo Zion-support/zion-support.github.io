@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -33,15 +34,20 @@ import { motion } from 'framer-motion';
 import {
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -104,6 +110,8 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Code
   Database
   Shield
@@ -116,9 +124,12 @@ import {
   BarChart3
   Lock
   Brain;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Code,
   Database,
   Shield,
@@ -203,7 +214,6 @@ export default function APIDocumentation() {
 =======
   Lock,;
   Brain,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 export default function APIDocumentation() {
@@ -292,9 +302,9 @@ export default function APIDocumentation() {
 				</ul>
 			</div>
 		</div>
-<<<<<<< HEAD
 	)
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
 			<Head>;
@@ -355,3 +365,7 @@ export default function APIDocumentation() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+	),
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

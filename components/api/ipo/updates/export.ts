@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 const id = String(req.query.id || '');
@@ -13,18 +14,24 @@ const id = String(req.query.id || '');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
 import PDFDocument from "pdfkit";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -47,13 +54,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!requireSuperadminApi(req, res)) return;
 
   const id = String(req.query.id |"");
@@ -81,6 +85,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fillColor("black").fontSize(14).text("Summary");
   doc.fontSize(12).text(u.summary |"");
   doc.moveDown();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -186,19 +191,18 @@ function handler() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   doc.fontSize(14).text("KPIs");
   doc.fontSize(12).text(u.kpis |"");
   doc.end();
   doc.end();
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end();
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -206,3 +210,5 @@ function handler() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

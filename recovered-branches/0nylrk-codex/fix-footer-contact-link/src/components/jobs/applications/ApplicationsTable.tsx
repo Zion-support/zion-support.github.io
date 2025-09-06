@@ -41,9 +41,12 @@ interface ApplicationsTableProps {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {format} from "date-fns";
 import {JobApplication} from "@/types/jobs";
 import {Avatar} from "@/components/ui/avatar";
@@ -56,6 +59,7 @@ import {Briefcase, User} from "lucide-react";
 import {HireConfirmationModal} from "@/components/hiring-tracker/HireConfirmationModal";
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ApplicationsTableProps {;
   applications: JobApplication[],;
@@ -71,16 +75,15 @@ interface ApplicationsTableProps {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar } from "@/components/ui/avatar",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
-=======
 import { Badge } from "@/components/ui/badge",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { 
   Table;
   TableBody;
@@ -93,17 +96,10 @@ import { ApplicationActions } from "./ApplicationActions",
 import { StatusBadge } from "./StatusBadge",
 import { Briefcase, User } from "lucide-react",
 import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
-<<<<<<< HEAD
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
-=======
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplicationsTableProps {
 
   applications: JobApplication[]
@@ -123,25 +119,24 @@ export function ApplicationsTable({
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
   onStatusChange;
   onViewScore
 }: ApplicationsTableProps) {
   const [hireModalOpen, setHireModalOpen] = useState(false);
 
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
-=======
 export function ApplicationsTable({ 
   applications, 
   processingId, 
-<<<<<<< HEAD
   onViewApplication, ;
   onStatusChange;
-=======
   onViewApplication, 
   onStatusChange,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onViewScore
 }: ApplicationsTableProps) {
   const [hireModalOpen, setHireModalOpen] = useState(false),
@@ -185,23 +180,24 @@ export function ApplicationsTable({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application)
     setHireModalOpen(true)
-<<<<<<< HEAD
   }
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleHireConfirmed = () => {
     // This will be called after the hire confirmation is completed
     toast({
       title: "Hiring process initiated"
       description: "Offer has been sent to the talent."
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -284,12 +280,12 @@ function ApplicationsTable() {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <div className="rounded-md border">
@@ -359,11 +355,14 @@ function ApplicationsTable() {
                     </ClickableBadge>
                     <ApplicationActions
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
 import { Avatar } from "@/components/ui/avatar",;
@@ -704,6 +703,7 @@ export function ApplicationsTable({ ;
                     </ClickableBadge>;
                     <ApplicationActions;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       application={application}}: ApplicationsTableProps) {
   const [hireModalOpen, setHireModalOpen] = useState (false);
 const [selectedApplication, setSelectedApplication] = useState<JobApplication | null> (null);
@@ -902,6 +902,8 @@ application={application}
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       application={application}
                       processingId={processingId}
                       onViewApplication={onViewApplication}

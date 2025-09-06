@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -16,6 +17,8 @@ import {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { motion } from 'framer-motion',;
 import { 
@@ -1356,11 +1359,8 @@ export default Innovative2025ServicesShowcase,
   const _filteredServices = allInnovativeServices.filter(service => {_const _matchesCategory = selectedCategory === 'all' || 
 =======
     ...innovativeAIServicesExpansion2025V3
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
 import {
   Brain, Shield, Rocket, Globe, Cpu, Database
@@ -1412,7 +1412,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
     animate: { opacity: 1, y: 0 }
     transition: { duration: 0.6, ease: "easeOut" }
   }
-=======
 import {;
   Brain, Shield, Rocket, Globe, Cpu, Database,;
   TrendingUp, Users, Star, Zap, Lock, Target,;
@@ -1442,10 +1441,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const filteredServices = allInnovativeServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
@@ -1488,9 +1483,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
 }
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -1507,8 +1505,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     transition: { duration: 0.6, ease: "easeOut" }
   },
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
@@ -1518,20 +1514,13 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
   }
 }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const staggerContainer = {
     animate: {
       transition: {
         staggerChildren: 0.1
-<<<<<<< HEAD
       }
     }
   }
-=======
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1543,8 +1532,11 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
   }
 }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
@@ -1582,31 +1574,22 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
         <link rel="canonical" href="https://ziontechgroup.com/innovative-2025-services-showcase" />
       </Head>
       <div className="min-h-screen bg-black text-white overflow-hidden">
-<<<<<<< HEAD
         {/* Animated Background */}
-=======
         {/* Animated Background */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="fixed inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]"></div>
-<<<<<<< HEAD
           {/* Floating Particles */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(20)].map((_, i) => (
               <div
                 key={i}
-=======
           {/* Floating Particles */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1620,11 +1603,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
                 style={{
                   left: `${Math.random() * 100}%`
@@ -1632,7 +1610,10 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                   animationDelay: `${Math.random() * 2}s`
                   animationDuration: `${2 + Math.random() * 3}s`
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 }}
               />
             ))}
@@ -1655,7 +1636,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
   ],;
   const filteredServices = allInnovativeServices.filter(service => {;
     const matchesCategory = selectedCategory === 'all' ||;
@@ -1784,11 +1764,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
 <<<<<<< HEAD
             <span className=&quot;bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
@@ -1810,11 +1785,13 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
           >
 <<<<<<< HEAD
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
@@ -1825,9 +1802,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
             className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;
 =======
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1843,19 +1817,17 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -1893,7 +1865,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
 =======
             <div className="max-w-7xl mx-auto">
               {/* Search Bar */}
-=======
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1916,20 +1887,13 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="mb-8">
                 <div className="relative max-w-2xl mx-auto">
                   <input
                     type="text"
                     placeholder="Search innovative services..."
-<<<<<<< HEAD
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-=======
                     value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1940,29 +1904,17 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 </div>
               </div>
-<<<<<<< HEAD
               {/* Category Filters */}
-=======
               {/* Category Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
                   <button
@@ -1990,7 +1942,10 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                     <span>{category.name}</span>
                     <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {category.count}
                     </span>
                   </button>
@@ -2018,7 +1973,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
           <motion.section
             className="relative z-20 py-16 px-4 sm:px-6 lg:px-8"
             variants={staggerContainer}
-=======
                       {category.count  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2046,11 +2000,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial="initial"
             animate="animate"
           >
@@ -2058,7 +2007,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service) => (
                   <motion.div
-<<<<<<< HEAD
                     key={service.id}
                     className="group relative"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2079,14 +2027,10 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
 =======
                     <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm">
                       {/* Service Icon and Header */}
-<<<<<<< HEAD
                       <div className="p-8">
                         <div className="flex items-center justify-between mb-6">
                           <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${(service as any).color |'from-blue-500 to-purple-500'} flex items-center justify-center text-3xl`}>
                             {(service as any).icon |'🚀'}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                     key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2115,10 +2059,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div className="p-8">
                         <div className="flex items-center justify-between mb-6">
                           <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${(service as any).color || 'from-blue-500 to-purple-500'} flex items-center justify-center text-3xl`}>
@@ -2127,14 +2067,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           </div>
                                                       {(service as any).popular && (
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                               POPULAR
                             </div>
-<<<<<<< HEAD
                           )}
                         </div>
 <<<<<<< HEAD
@@ -2172,15 +2110,11 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                           {(service as any).tagline |service.description?.substring(0, 100) |'Innovative service solution'}
                         </p>
                         {/* Price */}
-<<<<<<< HEAD
                         <div className="flex items-baseline mb-6">
                           <span className="text-3xl font-bold text-white">{(service as any).price |(service as any).pricing?.starter |'Contact Us'}</span>
                           <span className="text-gray-400 ml-2">{(service as any).period |''}</span>
                         </div>
                         {/* Features */}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2211,30 +2145,16 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <div className="flex items-baseline mb-6">
                           <span className="text-3xl font-bold text-white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>
                           <span className="text-gray-400 ml-2">{(service as any).period || ''}</span>
                         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                         {/* Features */}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {/* Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <div className="space-y-3 mb-8">
                           {service.features.slice(0, 5).map((feature, featureIndex) => (
                             <div key={featureIndex} className="flex items-start space-x-3">
@@ -2251,7 +2171,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                               +{service.features.length - 5} more features
                             </div>
-<<<<<<< HEAD
                           )}
                         </div>
 <<<<<<< HEAD
@@ -2286,7 +2205,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                       <div className=&quot;absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot; />
 =======
                         {/* Service Stats */}
-<<<<<<< HEAD
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                           <div>
                             <div className="text-lg font-bold text-white">{(service as any).customers |'1000'}+</div>
@@ -2304,9 +2222,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                         {/* CTA Button */}
                         <Link
                           href={`/services/${service.id}`}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2318,10 +2233,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                           <div>
                             <div className="text-lg font-bold text-white">{(service as any).customers || '1000'}+</div>
@@ -2336,14 +2247,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                             <div className="text-xs text-gray-400">Reviews</div>
                           </div>
                         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                         {/* CTA Button */}
                         <Link
                           href={`/services/${service.id}`}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {/* CTA Button */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2355,30 +2261,18 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>
                           <ArrowRight className="w-5 h-5" />
                         </Link>
                       </div>
-<<<<<<< HEAD
                       {/* Hover Overlay */}
-=======
                       {/* Hover Overlay */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </div>
@@ -2394,9 +2288,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {filteredServices.length === 0 && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 <motion.div 
 <<<<<<< HEAD
                   className=&quot;text-center py-20&quot;
@@ -2410,14 +2301,10 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                   className="text-center py-20"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <motion.div
                   className="text-center py-20"
-<<<<<<< HEAD
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-=======
                   initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2428,11 +2315,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className="text-6xl mb-6">🔍</div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -2450,26 +2332,18 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
 =======
                       setSearchTerm('')
                       setSelectedCategory('all')
-<<<<<<< HEAD
                     }}
-=======
                     }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >
                     Clear Filters
                   </button>
                 </motion.div>
-<<<<<<< HEAD
               )}
             </div>
           </motion.section>
@@ -2486,7 +2360,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-=======
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2516,11 +2389,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
 <<<<<<< HEAD
             <div className=&quot;max-w-4xl mx-auto text-center&quot;>
@@ -2560,14 +2428,8 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-12">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 Get in touch with our team to learn more about our innovative 2025 services 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Get in touch with our team to learn more about our innovative 2025 services
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 and how they can revolutionize your operations.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -2610,12 +2472,15 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
             </div>
           </motion.section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {_/* Footer */}
           <motion.footer 
             className=&quot;relative z-20 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800&quot;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Footer */}
           <motion.footer
             className="relative z-20 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800"
@@ -2623,7 +2488,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
-=======
           {/* Footer */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2646,11 +2510,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
@@ -2748,22 +2607,14 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
               </div>
               <div className="mt-12 pt-8 border-t border-gray-800 text-center">
                 <p className="text-gray-400 text-sm">
-<<<<<<< HEAD
-<<<<<<< HEAD
                   © 2025 Zion Tech Group. All rights reserved.
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link>
-=======
                   © 2025 Zion Tech Group. All rights reserved. |
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                   © 2025 Zion Tech Group. All rights reserved. | 
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> | 
-=======
                   © 2025 Zion Tech Group. All rights reserved. |
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Link href="/terms" className="hover:text-white transition-colors ml-2">Terms of Service</Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </p>
@@ -2775,25 +2626,22 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 
 export default Innovative2025ServicesShowcase
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default Innovative2025ServicesShowcase;
 
-=======
 },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 export default Innovative2025ServicesShowcase,;
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Innovative2025ServicesShowcase,
           <motion.section;
             className="relative z-20 py-20 px-4 sm:px-6 lg:px-8";
@@ -2936,9 +2784,12 @@ export default Innovative2025ServicesShowcase,
 },;
 export default Innovative2025ServicesShowcase;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

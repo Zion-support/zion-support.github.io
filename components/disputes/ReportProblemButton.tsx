@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import Link from "next/link";
@@ -10,13 +11,26 @@ export default function ReportProblemButton({
 
 
 
+=======
+import Link from "next/link";
+
+import Link from "next/link";
+export default function ReportProblemButton({
+  projectId
+  entityType
+  entityId
+}: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projectId,
   entityType,
   entityId,
 }: {;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
@@ -27,6 +41,7 @@ export default function ReportProblemButton({
     ...(entityId ? { entityId } : {})
 <<<<<<< HEAD
   });
+<<<<<<< HEAD
 
 =======
 
@@ -109,6 +124,9 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm">
@@ -116,8 +134,25 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
       </a>
     </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  );
+}
+export default function ReportProblemButton({
+  projectId
+  entityType
+  entityId
+}: {
+);
+}
+export default function ReportProblemButton({
+  projectId,
+  entityType,
+  entityId,
+}: {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
@@ -131,6 +166,7 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
     <Link href={`/disputes/new?${query.toString()}`}>
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>
     </Link>
+<<<<<<< HEAD
 
 =======
 =======
@@ -202,3 +238,8 @@ function ReportProblemButton() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

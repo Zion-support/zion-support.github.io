@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:scripts/pm2/code-quality-monitor.js
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }}; async analyzeFile(filePath) {try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath); const analysis = {; file: filePath, size: stats.size, lines: content.split('\n').length
     issues: []}; // Check for common code quality issues; const lines = content.split('\n'); lines.forEach((line, index) = > {const lineNum = index + 1; // Trailing spaces; if (line.match(/[ \t]+$/)) {; analysis.issues.push({; line: lineNum, type: 'trailing-spaces', message: 'Trailing spaces found'
     severity: 'low'})}; // Long lines (over 120 characters); if (line.length > 120) {analysis.issues.push({; line: lineNum, type: 'long-line', message: `Line is ${line.length} characters long (max: 120)`
@@ -23,7 +26,6 @@
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
 monitor.run().catch(error = > {process.exit(1)});
-=======
 }};
 ; async analyzeFile(filePath) {; try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath);
 ; const analysis = {; file: filePath; size: stats.size; lines: content.split('\n').length; issues: []};
@@ -74,11 +76,14 @@ monitor.run().catch(error = > {process.exit(1)});
 const monitor = new CodeQualityMonitor();
 monitor.run().catch(error = > {; process.exit(1)});
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 };
 ;
@@ -2130,6 +2135,7 @@ monitor.run().catch(error => {,;
   process.exit(1);
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -2152,3 +2158,5 @@ monitor.run().catch(error = > {; process.exit(1)});
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

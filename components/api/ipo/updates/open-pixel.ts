@@ -1,9 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const id = String(req.query.id |"");
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const id = String(req.query.id || "");
@@ -102,6 +110,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const id = String(req.query.id || "");
 
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const id = String(req.query.id || "");
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (id) {
     const updates = readJsonFile("updates.json", [] as any[]);
     const idx = updates.findIndex((x: any) => x.id === id);
@@ -129,6 +141,7 @@ res.status (200).send (pixel);
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -137,3 +150,6 @@ res.status (200).send (pixel);
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

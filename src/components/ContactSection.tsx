@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ContactSection.tsx
 =======
@@ -14,6 +14,8 @@
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ContactSection() {
   const [formData, setFormData] = useState({
     name: ""
@@ -28,14 +30,16 @@ export function ContactSection() {
     email?: string;
     subject?: string;
     message?: string
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }>({})
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -110,13 +114,13 @@ export function ContactSection() {
     const result = schema.safeParse(formData)
     if (!result.success) {
       const fieldErrors: Record<string, string> = {}
-=======
-<<<<<<< HEAD
-=======
   }>({});
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -162,6 +166,7 @@ export function ContactSection() {
     if (!result.success) {
       const fieldErrors: Record<string string> = {},
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -170,21 +175,28 @@ export function ContactSection() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       for (const err of result.error.errors) {
         if (err.path[0]) {
           fieldErrors[err.path[0] as string] = err.message
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-      setErrors(fieldErrors)
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      setErrors(fieldErrors)
       setErrors(fieldErrors),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Form Validation Error"
         description: result.error.errors[0]?.message |"Please check your form and try again"
@@ -192,11 +204,14 @@ export function ContactSection() {
       return
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Form Validation Error",
         description: result.error.errors[0]?.message || "Please check your form and try again",
@@ -205,6 +220,7 @@ export function ContactSection() {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     setErrors({}),
     setIsSubmitting(true),
 
@@ -216,78 +232,91 @@ export function ContactSection() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setErrors({})
     setIsSubmitting(true)
-=======
+
+    setErrors({}),
+    setIsSubmitting(true),
+
+    setErrors({}),
+    setIsSubmitting(true),
+
 <<<<<<< HEAD
-
-    setErrors({}),
-    setIsSubmitting(true),
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-    setErrors({}),
-    setIsSubmitting(true),
-
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
       .then(async (res) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         setIsSubmitting(false)
         if (!res.ok) {
-<<<<<<< HEAD
           const data = await res.json().catch(() => ({}));          throw new Error(data.error |"Failed to send message")
         }
         toast({
           title: "Message Sent"
           description: "We've received your message and will get back to you soon."})
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
         setIsSubmitting(false),
         if (!res.ok) {
           const data = await res.json().catch(() => ({})),
           throw new Error(data.error || "Failed to send message")
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         setSubmitted(true)
         setTimeout(() => setSubmitted(false), 2000)
         setFormData({ name: "", email: "", subject: "", message: "" })
       })
       .catch((err) => {
         setIsSubmitting(false);        toast({
-<<<<<<< HEAD
           title: "Submission Error"
           description: err.message
           variant: "destructive"})
       })
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         setIsSubmitting(false),
         if (!res.ok) {
           const data = await res.json().catch(() => ({})),
@@ -296,6 +325,7 @@ export function ContactSection() {
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -304,6 +334,8 @@ export function ContactSection() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -312,6 +344,7 @@ export function ContactSection() {
         setIsSubmitting(false),
         toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -324,11 +357,14 @@ export function ContactSection() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   },
@@ -344,17 +380,19 @@ export function ContactSection() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-  }
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <section className="py-20 bg-zion-blue" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -443,6 +481,7 @@ export function ContactSection() {
                     id="message"
                     name="message"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -452,6 +491,11 @@ export function ContactSection() {
                     onChange = {handleChange,}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+                    rows = {4,}
+                    value = {formData.message,}
+                    onChange = {handleChange,}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -1006,11 +1050,14 @@ export function ContactSection() {;
                     value={formData.message}
                     onChange={handleChange}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -1022,6 +1069,7 @@ export function ContactSection() {;
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1085,22 +1133,17 @@ export function ContactSection() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ContactSection.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     disabled = {isSubmitting,}
                   >
-=======
                     disabled={isSubmitting}
                   >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
-<<<<<<< HEAD
                 </div>
               </form>
             </div>
@@ -1130,8 +1173,11 @@ description: err.message
 }</Button>)
 }</div> </form> </div> </div> </div> </div> </section>)
 }'"}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>;
               </form>;
             </div>;
@@ -1252,8 +1298,11 @@ description: err.message;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

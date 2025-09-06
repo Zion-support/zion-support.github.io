@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 
@@ -19,6 +18,8 @@
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -87,6 +88,7 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -97,6 +99,8 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -104,11 +108,14 @@ import { GetServerSideProps } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 import DatePicker from 'react-datepicker';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const result = await requireAdminRole(ctx)
   // @ts-ignore
@@ -454,7 +461,6 @@ function Funnel({ data }: { data: Datum[] }) {
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
-=======
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const result = await requireAdminRole(ctx);
   // @ts-ignore;
@@ -486,11 +492,6 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
   const max = Math.max(1, ...data.map((d) => d.value))
@@ -515,13 +516,15 @@ function Funnel({ data }: { data: Datum[] }) {
       {data.map((d, i) => (
         <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {d.label}: {d.value}
         </div>
       ))}
     </div>
   )
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -616,17 +619,10 @@ export default function UsageAnalytics() {
   }, [start, end, userType])
   useEffect(() => { refresh() }, [])
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           {d.label}: {d.value  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
         </div>;
       ))  } catch (error) {
@@ -671,7 +667,6 @@ export default function UsageAnalytics(req, res) {
 }
   }, [start, end, userType]),
   useEffect(() => { refresh() }, []),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <EnhancedLayout>
       <Head>
@@ -712,22 +707,19 @@ export default function UsageAnalytics(req, res) {
                 {pagesMostUsed.slice(0, 6).map((d) => (
                   <li key={d.label} className="flex justify-between gap-4 min-w-[180px]"><span>{d.label}</span><span className="text-gray-500">{d.value}</span></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                ))}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                ))}
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </ul>
             </div>
           </div>
@@ -790,6 +782,7 @@ export default function UsageAnalytics(req, res) {
       </div>
     </EnhancedLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   )
@@ -807,10 +800,10 @@ export default function UsageAnalytics(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 }
@@ -894,11 +887,12 @@ export default function UsageAnalytics(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

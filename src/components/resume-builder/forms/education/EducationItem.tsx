@@ -1,27 +1,27 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { format } from 'date-fns';
 import { Edit, Trash2 } from 'lucide-react'; import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card';
 import { Education } from '@/types/resume';
 import { EducationItemProps } from './types'; import { Edit, Trash2 } from 'lucide-react'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format  } from 'date-fns';
-=======
 import { format } from 'date-fns',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Edit, Trash2 } from 'lucide-react'
 =======
 import { format } from 'date-fns';
@@ -55,6 +55,7 @@ import { EducationItemProps } from './types';
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             </Button>
           </div>
@@ -66,6 +67,8 @@ import { EducationItemProps } from './types';
   return (
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Card className='bg-muted/40'>
       <CardContent className='pt-6'>
         <div className='flex justify-between'>
@@ -121,6 +124,7 @@ import { EducationItemProps } from './types';
   )
 }              <Trash2 className="h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>             </Button>
           </div>
         </div>
@@ -140,6 +144,8 @@ import { EducationItemProps } from './types';
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Card className="bg-muted/40">
       <CardContent className="pt-6">
         <div className="flex justify-between">
@@ -178,30 +184,25 @@ import { EducationItemProps } from './types';
               aria-label="Delete education"
             >
               <Trash2 className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Button>
           </div>
         </div>
         {education.description && (
-<<<<<<< HEAD
           <p className='text-sm mt-3 line-clamp-2'>{education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
       </CardContent>
-<<<<<<< HEAD
     </Card>
   )
 }
-=======
     </Card>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
       </CardContent>;
@@ -296,8 +297,11 @@ function EducationItem() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

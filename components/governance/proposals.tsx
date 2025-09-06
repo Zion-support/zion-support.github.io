@@ -20,11 +20,12 @@ export default function Proposals(): any ({;
 =======
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export async function getStaticProps() {
   try {;
     const p = path.join(process.cwd(), 'data', 'governance', 'proposals.json');
@@ -35,7 +36,16 @@ export async function getStaticProps() {
   }
 export default function Proposals({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  data
+}: {
+  data: { updatedAt: string | null; proposals: any[] }
+  data,
+}: {;
+  data: { updatedAt: string | null; proposals: any[] };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }) {
   return (
     <div className='max-w-3xl mx-auto p-6 space-y-4'>
@@ -106,6 +116,7 @@ export async function getStaticProps(){
     return { props: { data: { updatedAt: null, proposals: [] } } }
   }
 }
+<<<<<<< HEAD
 
 =======
 
@@ -284,8 +295,9 @@ function Proposals() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Proposals({ data }: { data: { updatedAt: string|null, proposals: any[] } }){
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-4">
@@ -301,28 +313,24 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
         ))}
         {(!data.proposals |data.proposals.length===0) && <li className="opacity-70">No open proposals</li>}
       </ul>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
 );
 }
-=======
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
     </div>;
 );
 }
 
 }
 }
-=======
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

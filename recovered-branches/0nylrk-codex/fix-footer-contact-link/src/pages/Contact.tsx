@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Contact.tsx
 
 <<<<<<< HEAD
@@ -46,6 +47,8 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -60,6 +63,7 @@ import z from "zod";
 import {ChatAssistant} from "@/components/ChatAssistant";
 import {Mail, MessageSquare, MapPin, Phone} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function Contact() {;
   const [formData, setFormData] = useState({;
@@ -80,6 +84,8 @@ export default function Contact() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -92,14 +98,10 @@ import { Card } from "@/components/ui/card",
 import { toast } from "@/components/ui/use-toast",
 import z from "zod",
 import { ChatAssistant } from "@/components/ChatAssistant",
-<<<<<<< HEAD
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
 import { AppLayout } from "@/layout/AppLayout";
-=======
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react",
 import { AppLayout } from "@/layout/AppLayout",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Contact() {
   const [formData, setFormData] = useState({
 
@@ -107,15 +109,19 @@ export default function Contact() {
     email: ""
     subject: ""
 
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -123,17 +129,23 @@ export default function Contact() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     message: "";
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isChatOpen, setIsChatOpen] = useState(false),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -142,10 +154,13 @@ export default function Contact() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -157,24 +172,31 @@ export default function Contact() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
       // Basic validation with Zod
       const schema = z.object({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         name: z.string().min(2, "Name must be at least 2 characters");
         email: z.string().email("Invalid email address")
         subject: z.string().min(2, "Subject must be at least 2 characters");
@@ -183,8 +205,11 @@ export default function Contact() {
       schema.parse(formData);
       // Simulate form submission
       setIsSubmitting(true);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         name: z.string().min(2, "Name must be at least 2 characters"),
         email: z.string().email("Invalid email address"),
         subject: z.string().min(2, "Subject must be at least 2 characters"),
@@ -197,6 +222,7 @@ export default function Contact() {
       setIsSubmitting(true),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -204,6 +230,8 @@ export default function Contact() {
         setIsSubmitting(false);
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setTimeout(() => {
         setIsSubmitting(false),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -235,6 +263,7 @@ export default function Contact() {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -245,12 +274,16 @@ export default function Contact() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
@@ -258,23 +291,30 @@ export default function Contact() {
         method: "POST"
         headers: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "Content-Type": "application/json"}
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
         })});
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -282,6 +322,8 @@ export default function Contact() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -524,7 +566,6 @@ if ( {) {
       }),
       return Promise.resolve()
     }
-<<<<<<< HEAD
   }
   const offices = [
     {
@@ -540,8 +581,11 @@ if ( {) {
       email: "commercial@ziontechgroup.com"
     }
   ];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const offices = [
@@ -559,6 +603,7 @@ if ( {) {
     }
   ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -744,6 +789,8 @@ export default function Contact() {;
                       value={formData && formData.name}
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <AppLayout>
       <SEO
@@ -918,13 +965,10 @@ export default function Contact() {;
 =======
                   />
                 </div>
-<<<<<<< HEAD
                 <Button
                   type="submit"
-=======
                 <Button 
                   type="submit" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}
                 >
@@ -1019,8 +1063,11 @@ export default function Contact() {;
         </div>
       </main>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 =======
 
@@ -1630,6 +1677,7 @@ export default function Contact() {;
         </div>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Contact.tsx
 
 
@@ -1750,6 +1798,8 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Chat Assistant Modal */}
       {isChatOpen && (
         <ChatAssistant
@@ -1765,14 +1815,15 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
           onSendMessage={handleSendMessage}
         />
       )}
-<<<<<<< HEAD
     </AppLayout>
   )
 }
-=======
     </AppLayout>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -61,30 +62,28 @@ const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
  const response = await client.chat.completions.create ({
   model: 'gpt-4o-mini';
 messages: [ {
   role: 'system', content: 'You are a helpful assistant.'
 }
-=======
  const response = await client.chat.completions.create ({
   model: 'gpt-4o-mini';
 messages: [ {
   role: 'system', content: 'You are a helpful assistant.' 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 // Create utility
 export const Create = () => {
   // Implementation here
   return null;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 {
   role: 'user', content: prompt
 }];
@@ -108,6 +107,7 @@ const typeMatch = content && content.match (/type\s*:\s* (.+) $/im);
   fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
@@ -122,8 +122,9 @@ async function summarizeWithOpenAI(description: string) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 async function summarizeWithOpenAI(description: string) {
   try {
     if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' };
@@ -133,17 +134,14 @@ async function summarizeWithOpenAI(description: string) {
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
-<<<<<<< HEAD
         { role: 'system', content: 'You are a helpful assistant.' }
         { role: 'user', content: prompt }
       ]
       temperature: 0.3
-=======
         { role: 'system', content: 'You are a helpful assistant.' },
         { role: 'user', content: prompt },
       ],
       temperature: 0.3,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     });
     const content = response.choices[0]?.message?.content |'';
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
@@ -254,6 +252,7 @@ export default async function handler(
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -305,13 +304,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });
@@ -393,6 +390,7 @@ function handler() {
 
   // TODO: Integrate notifications (email/webhook) for admin and talent
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -467,12 +465,16 @@ return res.status (200).json ({ id, status: 'ok' });
 =======
   // TODO: Integrate notifications (email/webhook) for admin and talent
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 return res.status(200).json({ id, status: 'ok' });
 }
-=======
 
   return res.status(200).json({ id, status: 'ok' });
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

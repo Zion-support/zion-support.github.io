@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { Briefcase, Star, User } from 'lucide-react'
@@ -9,23 +10,15 @@ interface UserTypeOption {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
 import { useState } from "react";
-=======
 import { useState } from "react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Briefcase, Star, User } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 interface UserTypeOption {
-<<<<<<< HEAD
   id: "serviceProvider" | "talent" | "client";
   name: string;
   description: string;
@@ -34,14 +27,18 @@ interface UserTypeSelectionProps {
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
   selectedType: string | null
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function UserTypeSelection({
   onSelect
   selectedType
 }: UserTypeSelectionProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const userTypes: UserTypeOption[] = [
@@ -58,9 +55,10 @@ interface UserTypeOption {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const userTypes: UserTypeOption[] = [
     {
-=======
   id: "serviceProvider" | "talent" | "client",
   name: string,
   description: string,
@@ -73,13 +71,9 @@ interface UserTypeSelectionProps {
 }
 
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
-=======
-=======
 }
 
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const userTypes: UserTypeOption[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
@@ -99,26 +93,19 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       icon: Star
     },
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       id: 'client',
       name: 'Client',
       description: 'I want to discover and hire talent or services',
       icon: User,
     },
   ]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       id: "client",
       name: "Client",
       description: "I want to discover and hire talent or services",
       icon: User
     }
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
       id: 'serviceProvider'
       name: 'Service Provider'
       description: 'I want to offer services on the platform'
@@ -141,9 +128,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       icon: User
     }
   ]
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -152,7 +136,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
           This helps us personalize your experience
         </p>
       </div>
-<<<<<<< HEAD
       <div className='grid gap-4 md:grid-cols-3'>
         {userTypes.map(type => {
           const Icon = type.icon
@@ -250,6 +233,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                 isSelected
                   ? 'border-zion-purple bg-zion-purple/10 text-zion-purple'
                   : 'border-zion-blue-light hover:border-zion-cyan/50 text-white'
+<<<<<<< HEAD
 >>>>>>>               }`}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             >
@@ -260,6 +244,8 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
@@ -275,17 +261,11 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                 isSelected 
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" 
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />
               </div>
-<<<<<<< HEAD
               <div className='text-center'>
                 <h4 className='font-medium'>{type.name}</h4>
                 <p className='text-sm text-zion-slate-light mt-1'>
@@ -295,12 +275,16 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
             </Button>
           )
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         })}
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -308,6 +292,8 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
@@ -387,14 +373,18 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
           );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         })}
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -414,15 +404,19 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 }
 }
-=======
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

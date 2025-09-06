@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import "@testing-library/jest-dom";
@@ -8,6 +9,11 @@ import "@testing-library/jest-dom";
 =======
 require("@testing-library/jest-dom");
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+require("@testing-library/jest-dom");
+import "@testing-library/jest-dom";
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
@@ -23,6 +29,7 @@ jest.mock("next/router", () => ({
       prefetch: jest.fn().mockResolvedValue(undefined)
       beforePopState: jest.fn()
       events: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import "@testing-library/jest-dom";
@@ -86,6 +93,9 @@ jest && jest.mock("next/link", () => {
 
 =======
 on: jest.fn()
+=======
+        on: jest.fn()
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         off: jest.fn()
         emit: jest.fn()
       }
@@ -93,11 +103,27 @@ on: jest.fn()
     }
   }
 }));
+<<<<<<< HEAD
+=======
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+      isFallback: false,
+    };
+  },
+}));
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock Next.js Image component
 jest.mock("next/image", () => {
   return function MockImage({ src, alt, ...props }) {
     return <img src={src} alt={alt} {...props} />;
+<<<<<<< HEAD
 }
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 });
 // Mock Next.js Link component
 jest.mock("next/link", () => {
@@ -146,16 +172,20 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     return <img src={src} alt={alt} {...props} />;
 
 
 
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 // Global test setup,
-=======
 }
 // Global test setup
+<<<<<<< HEAD
 
 
 =======
@@ -179,13 +209,27 @@ beforeEach(() => {
 beforeEach(() => {
   jest.clearAllMocks();
 
+=======
+origin/main
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+ursor/integrate-build-improve-and-re-verify-8f7d
+beforeEach(() => {
+  jest.clearAllMocks();
+ursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 });
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
     matches: false,
+<<<<<<< HEAD
 
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     media: query,
     onchange: null,
     addListener: jest.fn(),
@@ -195,8 +239,13 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     "media": query,
     "onchange": null,
     "addListener": jest.fn(), // deprecated
@@ -204,6 +253,7 @@ Object.defineProperty(window, 'matchMedia', {
     "addEventListener": jest.fn(),
     "removeEventListener": jest.fn(),
     "dispatchEvent": jest.fn()}))});
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -213,6 +263,13 @@ Object.defineProperty(window, 'matchMedia', {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 // Global test setup
 beforeEach(() => {
@@ -222,6 +279,7 @@ beforeEach(() => {
 
 
 });
+<<<<<<< HEAD
 
 =======
 
@@ -230,11 +288,31 @@ beforeEach(() => {
 });
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+});
+origin/main
+origin/automation-improvements-final
+});
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 });
 
 
 // Mock Next.js Link component
+<<<<<<< HEAD
 
+=======
+jest.mock("next/link", () => {
+  return function MockedLink({ children, href, ...props }) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 jest.mock('next/link', () => ({
   _esModule: true,
   default: ({ children, href, ...props }) => {
@@ -300,6 +378,7 @@ jest.clearAllMocks()
 beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
+<<<<<<< HEAD
 
 });
 
@@ -307,3 +386,7 @@ beforeEach(() => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-lint-push-and-merge-to-main-ae4e
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

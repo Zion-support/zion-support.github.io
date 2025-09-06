@@ -13,34 +13,29 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 export function ApiReference() {;
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-<<<<<<< HEAD
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
-=======
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Sample endpoint data
 
   const endpoints = [
@@ -51,22 +46,29 @@ export function ApiReference() {
       description: "Retrieve a list of job postings with optional filtering"
       parameters: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" }
         { name: "category", type: "string", description: "Filter by job category" }
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" }
         { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }]
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },
         { name: "category", type: "string", description: "Filter by job category" },
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
         { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -74,6 +76,8 @@ export function ApiReference() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       responses: {
         "200": {
           description: "A list of jobs"
@@ -216,10 +220,13 @@ function ApiReference() {
       "category": "development",
       "budget": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "min": 5000;
         "max": 10000
         "currency": "USD"
@@ -227,8 +234,11 @@ function ApiReference() {
       "status": "open";
       "created_at": "2023-05-10T15:30:00Z"
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "min": 5000,
         "max": 10000,
         "currency": "USD"
@@ -237,11 +247,14 @@ function ApiReference() {
       "created_at": "2023-05-10T15:30:00Z"
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // More jobs...
   ],
   "count": 42,
@@ -249,6 +262,7 @@ function ApiReference() {
   "offset": 0
 }`
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -257,11 +271,15 @@ function ApiReference() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-        }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        }
         },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "401": {
           description: "Unauthorized"
           example: `{
@@ -269,6 +287,7 @@ function ApiReference() {
   "message": "The provided API key is invalid or expired"
 }`
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -282,14 +301,13 @@ function ApiReference() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-        }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        }
         },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         "429": {
           description: "Rate limit exceeded"
           example: `{
-<<<<<<< HEAD
   "error": "rate_limit_exceeded";
   "message": "Rate limit exceeded. Please try again in 60 seconds"
   "retry_after": 60
@@ -300,8 +318,11 @@ function ApiReference() {
   https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "error": "rate_limit_exceeded",
   "message": "Rate limit exceeded. Please try again in 60 seconds",
   "retry_after": 60
@@ -313,18 +334,22 @@ function ApiReference() {
   -H "Authorization: Bearer YOUR_API_KEY"`
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: "post-jobs"
       method: "POST"
       path: "/api/jobs"
       description: "Create a new job posting"
       parameters: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -358,20 +383,26 @@ function ApiReference() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         { name: "title", type: "string", required: true, description: "Job title" }
         { name: "description", type: "string", required: true, description: "Detailed job description" }
         { name: "category", type: "string", required: true, description: "Job category" }
         { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" }
         { name: "skills", type: "array", description: "Array of required skills" }
         { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }]
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         { name: "title", type: "string", required: true, description: "Job title" },
         { name: "description", type: "string", required: true, description: "Detailed job description" },
         { name: "category", type: "string", required: true, description: "Job category" },
         { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" },
         { name: "skills", type: "array", description: "Array of required skills" },
         { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -381,6 +412,8 @@ function ApiReference() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       responses: {
         "201": {
           description: "Job created successfully"
@@ -396,9 +429,12 @@ function ApiReference() {
   "category": "design",
   "budget": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     "min": 3000;
     "max": 5000
     "currency": "USD"
@@ -407,7 +443,6 @@ function ApiReference() {
   "created_at": "2023-05-15T10:12:00Z"
 }`
         }
-=======
     "min": 3000,
     "max": 5000,
     "currency": "USD"
@@ -416,8 +451,11 @@ function ApiReference() {
   "created_at": "2023-05-15T10:12:00Z"
 }`
         },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "400": {
           description: "Bad request"
           example: `{
@@ -425,6 +463,7 @@ function ApiReference() {
   "message": "Invalid input",
   "details": [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -436,23 +475,31 @@ function ApiReference() {
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      "field": "title"
+      "error": "Title is required"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   ]
 }`
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-      }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      }
       "field": "title",
       "error": "Title is required"
-=======
       };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock",;
@@ -696,11 +743,14 @@ export function ApiReference() {;
 =======
       },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -744,10 +794,13 @@ export function ApiReference() {;
     "category": "design",
     "budget": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "min": 3000;
       "max": 5000
       "currency": "USD"
@@ -756,8 +809,11 @@ export function ApiReference() {;
     "deadline": "2023-07-01T00:00:00Z"
   }'`
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "min": 3000,
       "max": 5000,
       "currency": "USD"
@@ -767,18 +823,22 @@ export function ApiReference() {;
   }'`
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: "get-talent"
       method: "GET"
       path: "/api/talent"
       description: "Search for talent profiles with optional filtering"
       parameters: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -818,6 +878,8 @@ export function ApiReference() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiReference.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         { name: "skills", type: "string", description: "Comma-separated list of skills" }
         { name: "category", type: "string", description: "Filter by talent category" }
         { name: "rate_min", type: "integer", description: "Minimum hourly rate" }
@@ -825,7 +887,6 @@ export function ApiReference() {;
         { name: "availability", type: "string", description: "Availability type (full-time, part-time)" }
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" }
         { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }]
-=======
         { name: "skills", type: "string", description: "Comma-separated list of skills" },
         { name: "category", type: "string", description: "Filter by talent category" },
         { name: "rate_min", type: "integer", description: "Minimum hourly rate" },
@@ -833,8 +894,11 @@ export function ApiReference() {;
         { name: "availability", type: "string", description: "Availability type (full-time, part-time)" },
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
         { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       responses: {
         "200": {
           description: "A list of talent profiles"
@@ -904,7 +968,6 @@ export function ApiReference() {;
 =======
   "talent": [
     {
-<<<<<<< HEAD
       "id": "talent-123";
       "full_name": "Jane Smith";
       "professional_title": "Full Stack Developer"
@@ -915,8 +978,11 @@ export function ApiReference() {;
       "location": "Remote, US";
       "bio": "Experienced full stack developer with a focus on React and Node.js..."
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "id": "talent-123",
       "full_name": "Jane Smith",
       "professional_title": "Full Stack Developer",
@@ -927,6 +993,7 @@ export function ApiReference() {;
       "location": "Remote, US",
       "bio": "Experienced full stack developer with a focus on React and Node.js..."
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -955,6 +1022,8 @@ export function ApiReference() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // More talent profiles...
   ],
   "count": 38,
@@ -962,16 +1031,18 @@ export function ApiReference() {;
   "offset": 0
 }`
         }
-<<<<<<< HEAD
       }
-=======
       },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       requestExample: `curl -X GET \\
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1379,16 +1450,16 @@ export function ApiReference() {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   // Find the active endpoint data
   const activeEndpointData = endpoints.find(e => e.id === activeEndpoint);
-=======
   ],
 
   // Find the active endpoint data
   const activeEndpointData = endpoints.find(e => e.id === activeEndpoint),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <ApiDocsLayout>
       <div className="grid md:grid-cols-5 gap-8">
@@ -1468,17 +1539,18 @@ export function ApiReference() {;
                         </div>
                       </>
                     )}
-<<<<<<< HEAD
                     <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>
                     <CodeBlock
                       code={activeEndpointData.requestExample}
-=======
 
                     <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>
                     <CodeBlock 
                       code={activeEndpointData.requestExample} 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       language="bash"
                       showLineNumbers={true}
                     />
@@ -1786,17 +1858,11 @@ requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/talent?skills=Reac
                           </span>
                           <span className="text-white">{response.description}</span>
                         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <CodeBlock
                           code={response.example}
-=======
                         
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <CodeBlock 
                           code={response.example} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           language="json"
                           showLineNumbers={true}
                         />
@@ -1824,18 +1890,14 @@ requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/talent?skills=Reac
     </ApiDocsLayout>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default ApiReference;
-
-=======
 ;
 export default ApiReference;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+;
+export default ApiReference;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -344,6 +344,8 @@ export default function TalentGrid(_{_region, _service}: Props) {_const _items =
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
@@ -369,9 +371,18 @@ export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () =>
       TALENT_PROFILES.filter(
+<<<<<<< HEAD
 (p) => matchesRegion(p, region) && matchesService(p, service)
       )
     [region, service]
+=======
+        (p) => matchesRegion(p, region) && matchesService(p, service)
+      )
+    [region, service]
+        (p) => matchesRegion(p, region) && matchesService(p, service),
+      ),
+    [region, service],;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 
   if (items.length === 0) {
@@ -420,5 +431,9 @@ export default function TalentGrid({ region, service }: Props) {
     </div>
   );
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

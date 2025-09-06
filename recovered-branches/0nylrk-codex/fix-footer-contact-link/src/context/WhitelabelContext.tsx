@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/WhitelabelContext.tsx
@@ -7,6 +8,8 @@
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
 export interface WhitelabelContextType {
@@ -17,18 +20,21 @@ export interface WhitelabelContextType {
   brandName: string
   themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup'
   landingPageCopy: {
-<<<<<<< HEAD
     headline: string
     subtitle: string
 
     cta: string
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     headline: string,
     subtitle: string,
     cta: string;
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -36,6 +42,8 @@ export interface WhitelabelContextType {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   tenant: WhitelabelTenant | null
 }
 
@@ -54,6 +62,7 @@ const defaultContext: WhitelabelContextType = {
 // the generic as `WhitelabelContextType | null` we get proper type checking
 // without falling back to an empty object which triggers TS2740 errors.
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -109,11 +118,11 @@ export const useWhitelabel = (): WhitelabelContextType => {;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/WhitelabelContext.tsx
 <<<<<<< HEAD
 =======
-export const useWhitelabel = (): WhitelabelContextType => {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export const useWhitelabel = (): WhitelabelContextType => {
 
 export const useWhitelabel = (): WhitelabelContextType => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const context = useContext(WhitelabelContext);
   if (!context) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider')
@@ -127,6 +136,7 @@ interface WhitelabelProviderProps {
   children: ReactNode
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -138,12 +148,16 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
 
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
   useEffect(() => {
@@ -172,9 +186,12 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react',;
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant',;
 export interface WhitelabelContextType {;
@@ -464,8 +481,11 @@ useEffect ( () => {
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

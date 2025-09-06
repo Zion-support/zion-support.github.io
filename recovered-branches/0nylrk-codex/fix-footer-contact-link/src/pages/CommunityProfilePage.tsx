@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {useParams, Link} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -22,9 +19,12 @@ import {CommunityUser, ForumPost, Badge, as, BadgeType} from "@/types/community"
 import PostCard from "@/components/community/PostCard";
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -38,6 +38,7 @@ import { formatDistanceToNow } from "date-fns",
 import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community",
 import PostCard from "@/components/community/PostCard",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -46,17 +47,21 @@ import PostCard from "@/components/community/PostCard",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
-=======
 import UserBadges from "@/components/community/UserBadges",
 import ReputationDisplay from "@/components/community/ReputationDisplay",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock user data
 
 const mockUser: CommunityUser = {
@@ -75,6 +80,7 @@ const mockUser: CommunityUser = {
       icon: "Award"
       color: "#10B981"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -85,11 +91,15 @@ const mockUser: CommunityUser = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: "badge2"
       name: "Top Contributor"
@@ -97,6 +107,7 @@ const mockUser: CommunityUser = {
       icon: "Trophy"
       color: "#F59E0B"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -107,11 +118,15 @@ const mockUser: CommunityUser = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: "badge3"
       name: "First Post"
@@ -119,6 +134,7 @@ const mockUser: CommunityUser = {
       icon: "Star"
       color: "#6366F1"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -201,6 +217,8 @@ const user_posts: ForumPost[] = [;
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CommunityProfilePage.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   isVerified: true
   isModerator: false
@@ -270,8 +288,11 @@ export default function CommunityProfilePage() {
   const [user, setUser] = useState<CommunityUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState<ForumPost[]>([]);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ],
   isVerified: true,
   isModerator: false
@@ -332,25 +353,29 @@ const userPosts: ForumPost[] = [
 ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CommunityProfilePage() {;
   const { userId } = useParams();
   const [user, setUser] = useState<CommunityUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState<ForumPost[]>([]);
-=======
 export default function CommunityProfilePage() {
   const { userId } = useParams(),
   const [user, setUser] = useState<CommunityUser | null>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [posts, setPosts] = useState<ForumPost[]>([]),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     // In a real app, we would fetch the user data here
     // For now, we'll just use the mock data
@@ -358,6 +383,7 @@ export default function CommunityProfilePage() {
     setPosts(userPosts),
     setIsLoading(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -367,13 +393,17 @@ export default function CommunityProfilePage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [userId]);
 
-=======
   }, [userId]),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <AppLayout>
@@ -397,6 +427,7 @@ export default function CommunityProfilePage() {
       </AppLayout>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -406,16 +437,19 @@ export default function CommunityProfilePage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return (
     <AppLayout>
-<<<<<<< HEAD
       <SEO
-=======
       <SEO 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -667,6 +701,7 @@ export default function CommunityProfilePage() {;
     <AppLayout>;
       <SEO;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -681,6 +716,8 @@ export default function CommunityProfilePage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
@@ -885,6 +922,7 @@ export default function CommunityProfilePage() {;
     </AppLayout>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -900,10 +938,9 @@ export default function CommunityProfilePage() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 {user.isModerator && (;
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
                 )}
@@ -1628,11 +1665,10 @@ isModerator: false
 =======
     </AppLayout>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

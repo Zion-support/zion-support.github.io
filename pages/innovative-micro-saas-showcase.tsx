@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 
@@ -8,6 +7,8 @@
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -69,6 +70,7 @@ export default function InnovativeMicroSaasShowcase() {
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
 
     return matchesCategory && matchesSearch
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -512,11 +514,12 @@ function InnovativeMicroSaasShowcase() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket
   CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target
@@ -585,7 +588,6 @@ export default function InnovativeMicroSaasShowcase() {
     }
   })
 
-=======
 import {;
   Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket,;
   CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target,;
@@ -665,12 +667,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Layout>
       <Head>
@@ -679,19 +676,12 @@ export default function InnovativeMicroSaasShowcase(req, res) {
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, emerging technology, business solutions, innovation" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-micro-saas-showcase" />
       </Head>
-<<<<<<< HEAD
       {/* Hero Section */}
-=======
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -722,12 +712,16 @@ export default function InnovativeMicroSaasShowcase(req, res) {
               {stats.map((stat, index) => (
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -772,6 +766,8 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                 </motion.div>))}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={stat.label  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -792,11 +788,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
                   <stat.icon className={`w-5 h-5 ${stat.color}`} />
@@ -1143,7 +1134,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
               <Mail className="w-5 h-5 text-white" />
               <span className="text-white font-semibold">{contactInfo.email}</span>
             </div>
-<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
@@ -1157,12 +1147,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
               <Mail className="w-5 h-5 text-white" />
               <span className="text-white font-semibold">{contactInfo.email}</span>
             </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="flex items-center space-x-4">
               <MapPin className="w-5 h-5 text-white" />
               <span className="text-white text-sm">{contactInfo.address}</span>
@@ -1170,13 +1154,11 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Filters and Search */}
       <section className="py-8 bg-black/50 backdrop-blur-sm border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
-=======
       {/* Filters and Search */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1190,24 +1172,17 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search services..."
-<<<<<<< HEAD
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
             {/* Category Filter */}
-=======
                 value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1226,11 +1201,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
@@ -1257,11 +1227,9 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                   <category.icon className="w-4 h-4" />
                   <span className="text-sm font-medium">{category.name}</span>
                 </button>
-<<<<<<< HEAD
               ))}
             </div>
             {/* View Mode and Sort */}
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1273,11 +1241,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="flex items-center space-x-4">
               <div className="flex bg-white/10 rounded-lg p-1">
                 <button
@@ -1310,10 +1273,8 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                 </button>
               </div>
               <select
-<<<<<<< HEAD
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-=======
                 value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1324,11 +1285,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="popularity">Most Popular</option>
@@ -1341,36 +1297,22 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Services Grid */}
-=======
       {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-white mb-2">
-<<<<<<< HEAD
               {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`}
-=======
               {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className="text-gray-400">
               {filteredServices.length} services found
@@ -1381,11 +1323,15 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
               {sortedServices.map((service, index) => (
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="group relative bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 6 hover:bg - white / 10 hover:border - purple - 500 / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - purple - 500 / 20";
                 >;
@@ -1693,6 +1639,8 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1713,11 +1661,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
                 >
                   {/* Popular Badge */  } catch (error) {
@@ -1729,7 +1672,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                     <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                       Popular
                     </div>
-<<<<<<< HEAD
                   )}
                   {/* Service Icon */}
                   <div className="text-4xl mb-4">{service.icon}</div>
@@ -1744,7 +1686,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-purple-400">
                       {service.price}
-=======
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1788,11 +1729,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <span className="text-sm text-gray-400 font-normal">{service.period}</span>
                     </div>
                     <div className="flex items-center space-x-1">
@@ -1801,19 +1737,12 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                       <span className="text-xs text-gray-500">({service.reviews})</span>
                     </div>
                   </div>
-<<<<<<< HEAD
                   {/* Features */}
-=======
                   {/* Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className="mb-4">
                     <div className="text-sm text-gray-400 mb-2">Key Features:</div>
                     <div className="space-y-1">
@@ -1822,12 +1751,10 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                           <CheckCircle className="w-3 h-3 text-green-400" />
                           <span>{feature}</span>
                         </div>
-<<<<<<< HEAD
                       ))}
                     </div>
                   </div>
                   {/* Category and Setup */}
-=======
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1840,21 +1767,14 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                     <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>
                     <span>Setup: {service.setupTime}</span>
                   </div>
-<<<<<<< HEAD
                   {/* Action Buttons */}
                   <div className="flex space-x-2">
                     <Link
                       href={service.link}
-=======
                   {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1867,11 +1787,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                     >
                       Learn More
@@ -1880,36 +1795,22 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                       <Heart className="w-4 h-4" />
                     </button>
                   </div>
-<<<<<<< HEAD
                   {/* Hover Overlay */}
-=======
                   {/* Hover Overlay */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-6">
                     <div className="text-center w-full">
                       <p className="text-white text-sm mb-3 line-clamp-3">{service.description}</p>
                       <Link
-<<<<<<< HEAD
                         href={service.link}
-=======
                         href={service.link  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         className="inline-flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
                       >
                         <span>View Details</span>
@@ -1929,8 +1830,11 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
               {sortedServices.map((service, index) => (
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={service.id}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   animate={{ opacity: 1, coordinate_x: 0 }}
@@ -1972,8 +1876,11 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                     {/* Service Icon */}
                     <div className="text-4xl">{service.icon}</div>
                     {/* Service Details */}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2009,6 +1916,7 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -2024,20 +1932,25 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-3">
                         <div>
                           <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
-<<<<<<< HEAD
                             {service.name}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -2048,11 +1961,14 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           </h3>
                           <p className="text-gray-400 text-sm">{service.tagline}</p>
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-purple-400">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2061,11 +1977,15 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                             {service.price}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+                            {service.price}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             {service.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -2078,6 +1998,8 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             <span className="text-sm text-gray-400 font-normal">{service.period}</span>
                           </div>
                           <div className="flex items-center justify-end space-x-1 mt-1">
@@ -2103,6 +2025,7 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                         <div className="flex space-x-2">
                           <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2112,11 +2035,15 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                             href={service.link}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                            href={service.link}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             href={service.link  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2129,6 +2056,8 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                           >
                             Learn More
@@ -2141,6 +2070,7 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                     </div>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2189,6 +2119,8 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
               </Link>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>
@@ -2326,7 +2258,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
                 className=&quot;bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105&quot;
 =======
       {/* CTA Section */}
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2354,11 +2285,6 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -2413,13 +2339,8 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 
@@ -2455,11 +2376,12 @@ className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm 
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

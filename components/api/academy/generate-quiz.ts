@@ -337,12 +337,8 @@ function handler() {
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);
-<<<<<<< HEAD
-<<<<<<< HEAD
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' }
-=======
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { role: 'user', content: prompt }];
       temperature: 0.2});
     const text = completion.choices?.[0]?.message?.content ?? '';
@@ -363,6 +359,7 @@ function handler() {
   } catch (err) {
     return fallback()
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -394,11 +391,15 @@ function handler() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return res.status(200).json(json);
 
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -415,3 +416,5 @@ function handler() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

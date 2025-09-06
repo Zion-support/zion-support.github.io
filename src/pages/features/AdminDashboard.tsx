@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -33,20 +36,26 @@ export default function AdminDashboard() {
         keywords='admin dashboard, analytics, manage listings'
         canonical='https://app.ziontechgroup.com/features/admin-dashboard'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function AdminDashboard() {
@@ -64,6 +73,7 @@ export default function AdminDashboard() {
     "description": "Monitor marketplace activity, manage listings and view analytics in one place."
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -90,6 +100,8 @@ export default function AdminDashboard() {
 >>>>>>> >>>>>>>       {/* Use a normal script tag so JSON-LD is correctly parsed */}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function AdminDashboard() {
@@ -100,26 +112,18 @@ export default function AdminDashboard() {
     "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <>
       <SEO
-<<<<<<< HEAD
         title='Admin Dashboard'
         description='Gain insight into your marketplace with powerful administration tools.'
         keywords='admin dashboard, analytics, manage listings'
         canonical='https://app.ziontechgroup.com/features/admin-dashboard'
-=======
         title="Admin Dashboard"
         description="Gain insight into your marketplace with powerful administration tools."
         keywords="admin dashboard, analytics, manage listings"
         canonical="https://app.ziontechgroup.com/features/admin-dashboard"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -143,8 +147,11 @@ export default function AdminDashboard() {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
           <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>            <li>Track sales and service metrics in real time.</li>
             <li>Approve or remove listings with a few clicks.</li>
@@ -169,6 +176,7 @@ export default function AdminDashboard() {
               className="object-cover"
             />
           </div>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -176,6 +184,8 @@ export default function AdminDashboard() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
 =======
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
@@ -210,8 +220,11 @@ export default function AdminDashboard() {
             <li>Assign roles and permissions to your team.</li>
           </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <h2 className='text-2xl font-bold mb-4'>
             Frequently Asked Questions
           </h2>
@@ -233,6 +246,7 @@ export default function AdminDashboard() {
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/admin'>View Dashboard</Link>            </Button>            <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               <p className="font-semibold">Who can access the dashboard?</p>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -247,6 +261,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div className="space-y-4 mb-12">
+            <div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <p className="font-semibold">Who can access the dashboard?</p>
 >>>>>>>               <p className="text-zion-slate-light">Only authorized admins and moderators with the proper roles.</p>
             </div>
@@ -265,6 +284,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   );
@@ -272,17 +292,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -443,6 +465,7 @@ export default function AdminDashboard() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -455,3 +478,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

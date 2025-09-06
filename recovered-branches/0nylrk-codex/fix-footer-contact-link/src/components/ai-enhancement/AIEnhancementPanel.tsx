@@ -44,7 +44,6 @@ export function AIEnhancementPanel(): any ({;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
 =======
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
 import { Textarea  } from '@/components/ui/textarea';
@@ -62,13 +61,14 @@ interface AIEnhancementPanelProps {
   showInstructions?: boolean;
   initialContent?: string
 }
-<<<<<<< HEAD
 export function AIEnhancementPanel({
-=======
 
 export function AIEnhancementPanel({;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title;
   defaultOptions;
   onApply;
@@ -108,6 +108,7 @@ export function AIEnhancementPanel({;
       setGeneratedContent(result)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -117,12 +118,16 @@ export function AIEnhancementPanel({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -182,13 +187,12 @@ export function AIEnhancementPanel({;
       setGeneratedContent(result);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
@@ -196,6 +200,7 @@ export function AIEnhancementPanel({;
     setOptions({
       ...options
       [field]: e.target.value})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -411,29 +416,23 @@ export function AIEnhancementPanel({;
 
 
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleApply = () => {
     onApply(generatedContent),
     if (onClose) onClose()
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -475,13 +474,11 @@ export function AIEnhancementPanel({;
             />
           </div>
         )}
-<<<<<<< HEAD
         {/* Generate button */}
         <Button
           onClick={handleGenerate}
           className="w-full"
           disabled={isEnhancing |!options.content && !options.context}
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Generate button */}
@@ -490,12 +487,15 @@ export function AIEnhancementPanel({;
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           {isEnhancing ? (
             <>

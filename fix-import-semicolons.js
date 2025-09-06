@@ -15,6 +15,7 @@ files && files.forEach((file) => {
     let modified = false;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -28,11 +29,11 @@ files && files.forEach((file) => {
 
 
 =======
-    // Fix import statements missing semicolons
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    // Fix import statements missing semicolons
 
     // Fix import statements missing semicolons;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
     const matches = content && content.match(importRegex);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   if (!vendorId) return res.status(400).json({ error: "vendorId required" });
@@ -8,19 +9,17 @@ const vendorId = String(req && req.query.vendorId || "");
   if (!vendorId) return res && res.status(400).json({ error: "vendorId required" });
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listPipelineForVendor } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
   const vendorId = String(req.query.vendorId |"");
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { listPipelineForVendor } from "../../../utils/vendor-store";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const vendorId = String(req.query.vendorId || "");
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!vendorId) return res.status(400).json({ error: "vendorId required" });
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -28,6 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(200).json({ items });
   res.status(200).json({ items });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const vendorId = String(req.query.vendorId || '');
@@ -72,14 +72,15 @@ function handler() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listPipelineForVendor } from '../../../utils/vendor-store';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
   const vendorId = String(req.query.vendorId || '');
   if (!vendorId) return res.status(400).json({ error: 'vendorId required' });
   const items = listPipelineForVendor(vendorId);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -87,3 +88,5 @@ import { listPipelineForVendor } from '../../../utils/vendor-store';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

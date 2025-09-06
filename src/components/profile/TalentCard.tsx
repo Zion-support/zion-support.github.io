@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { Button } from '@/components/ui/button'
@@ -6,6 +7,11 @@ import { Card } from '@/components/ui/card'
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 <<<<<<< HEAD
 import Image from 'next/image'; // Import next/image
@@ -14,17 +20,18 @@ import React, { useState } from 'react'; // Import React and useState
 =======
 import Link from 'next/link'
 import { TalentProfile } from '@/types/talent'
-=======
 import Link from 'next/link';
 import { TalentProfile } from '@/types/talent';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import React and useState
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
@@ -33,13 +40,15 @@ import { TalentProfile } from "@/types/talent",
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -47,8 +56,8 @@ export interface TalentCardProps {
   isSaved: boolean
   onToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
-<<<<<<< HEAD
 export interface TalentCardProps {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 
@@ -57,6 +66,8 @@ export interface TalentCardProps {
 >>>>>>> 
 xport interface TalentCardProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   talent: TalentProfile
   onViewProfile: (id: string) => void
   onRequestHire: (talent: TalentProfile) => void
@@ -67,17 +78,18 @@ xport interface TalentCardProps {
 <<<<<<< HEAD
 =======
   onToggleSave: (id: string, isSaved: boolean,) => void
-=======
   talent: TalentProfile,
   onViewProfile: (id: string,) => void,
   onRequestHire: (talent: TalentProfile,) => void,
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean,) => void,
   isAuthenticated: boolean
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   isAuthenticated: boolean
 }
@@ -139,6 +151,7 @@ export function TalentCard({
                   priority={false}                />
               ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   talent: TalentProfile
@@ -151,13 +164,17 @@ export function TalentCard({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url}
                   alt={talent.full_name |'Talent Avatar'}
-=======
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url} 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
@@ -252,6 +269,7 @@ export function TalentCard({;
                   src={talent.profile_picture_url} ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   alt={talent.full_name || 'Talent Avatar'}
 
@@ -264,8 +282,9 @@ export function TalentCard({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   alt={talent.full_name || 'Talent Avatar'}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   fill={true}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   style={{ objectFit: 'cover' }}
@@ -274,9 +293,12 @@ export function TalentCard({;
                   priority={false}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
@@ -303,6 +325,7 @@ export function TalentCard({;
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick = {handleToggleSave,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               >
 
@@ -335,6 +358,8 @@ xport interface TalentCardProps {
 >>>>>>>                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 />;
               ) : (;
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
@@ -357,11 +382,6 @@ xport interface TalentCardProps {
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -370,10 +390,13 @@ xport interface TalentCardProps {
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className='text-zion-cyan font-medium'>
               {talent.professional_title}
             </p>
@@ -387,18 +410,29 @@ xport interface TalentCardProps {
                 <div className='flex items-center text-zion-slate-light'>
                   <Clock className='h-4 w-4 mr-1' />                  <span>{talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                   <MapPin className="h-4 w-4 mr-1" />
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
+            
+            <div className="mt-2 flex flex-wrap gap-3 text-sm">
+              {talent.location && (
+                <div className="flex items-center text-zion-slate-light">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <MapPin className="h-4 w-4 mr-1" />
 >>>>>>>                   <span>{talent.location}</span>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 size="sm"
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {talent.availability_type && (
                 <div className='flex items-center text-zion-slate-light'>
                   <Clock className='h-4 w-4 mr-1' />                <div className="flex items-center text-zion-slate-light">
@@ -597,6 +631,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
+<<<<<<< HEAD
 >>>>>>>                 size="sm"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 variant="secondary"
@@ -677,6 +712,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             {isAuthenticated && (
               <Button
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {talent.availability_type && (;
                 <div className="flex items-center text-zion-slate-light">;
                   <Clock className="h-4 w-4 mr-1" />;
@@ -721,11 +758,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
@@ -735,7 +767,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Button>
             )}
             <Button
-<<<<<<< HEAD
               size='sm'
               variant='ghost'
               onClick={handleViewProfile}
@@ -754,12 +785,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
-<<<<<<< HEAD
-=======
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               size="sm"
               variant="ghost"
               onClick={handleViewProfile}
@@ -777,6 +804,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -789,3 +817,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -201,28 +202,28 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type KycRole = 'client' | 'talent' | 'enterprise';
 export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
 export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
-<<<<<<< HEAD
 export interface KycDocumentMeta {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export interface KycDocumentMeta {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploadedAt: string;
   status: 'pending' | 'approved' | 'rejected';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
-<<<<<<< HEAD
 export interface KycProfile {
-=======
 
 export interface KycProfile {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
   role: KycRole;
   fullLegalName?: string;
@@ -319,12 +320,9 @@ export function getOptionalDocuments(role: KycRole): string[] {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
   }
 }
-<<<<<<< HEAD
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
-=======
 
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const missing: string[] = [];
   if (!profile.fullLegalName && !profile.businessName) {
     missing.push('name');
@@ -343,6 +341,7 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
     missing
   }
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -351,3 +350,5 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -20,6 +20,7 @@ import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -35,6 +36,9 @@ import Link from 'next/link';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -1055,6 +1059,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
       </div>
     </div>
   );
+<<<<<<< HEAD
 
 =======
 
@@ -1093,6 +1098,9 @@ const testimonials = [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -1121,8 +1129,19 @@ const testimonials = [
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+export default function MobileLaunchPage() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' }
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' }
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }]
+export default function MobileLaunchPage() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
@@ -1134,9 +1153,12 @@ export default function MobileLaunchPage() {;
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
 export default function MobileLaunchPage() {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
   // Auto-rotate testimonial index
@@ -1280,6 +1302,7 @@ export default function MobileLaunchPage() {
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1439,32 +1462,27 @@ export default function MobileLaunchPage() {
 
 =======
 <<<<<<< HEAD
-      setError(err?.message |'Something went wrong.');    }      if (!res.ok) throw new Error(await res.text());
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      setError(err?.message |'Something went wrong.');    }      if (!res.ok) throw new Error(await res.text());
       setError(err?.message || 'Something went wrong.');    }      if (!res.ok) throw new Error(await res.text());
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setStatus('success');
       setEmail('')
     } catch (err: any) {
       setStatus('error');
-<<<<<<< HEAD
       setError(err?.message |'Something went wrong.')
 
-=======
       setError(err?.message || 'Something went wrong.')
-=======
       setError(err?.message || 'Something went wrong.');    }
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <EnhancedLayout>
       <Head>
@@ -1654,6 +1672,7 @@ export default function MobileLaunchPage() {
       </section>;
       {/* Trust & Community */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       {/* Trust & Community */}
@@ -1663,6 +1682,11 @@ export default function MobileLaunchPage() {
       <section className='mt-12'>;
         <div className='flex items-center gap-2'>;
             <StarIcon key={i} />;
+=======
+      <section className='mt-12'>
+        <div className='flex items-center gap-2'>
+            <StarIcon key={i} />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
           <span className='text-sm opacity-80'>4 && 4.9 average rating</span>;
         </div>;
@@ -2042,14 +2066,16 @@ transform: `translateX(-${idx * 100}%)`,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
@@ -2072,6 +2098,7 @@ transform: `translateX(-${idx * 100}%)`,
         </div>
       </section>
     </EnhancedLayout>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2235,6 +2262,8 @@ transform: `translateX(-${idx * 100}%)`,
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }return (<EnhancedLayout> <Head> <title>Zion Mobile App — iOS & Android</title> <meta name="description" content="Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI-match instantly. Track milestones on the go." /> </Head> <SmartBanner iosUrl= {
   IOS APP URL
@@ -2249,8 +2278,8 @@ transform: `translateX(-${idx * 100}%)`,
 }</div> </div> </section> <input type="email" required > {
   status === 'loading' ? 'Submitting…' : 'Notify me'
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2258,3 +2287,5 @@ transform: `translateX(-${idx * 100}%)`,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

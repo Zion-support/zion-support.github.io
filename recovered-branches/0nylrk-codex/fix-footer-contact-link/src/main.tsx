@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/main.tsx
@@ -13,15 +14,19 @@ import App from './App.tsx';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import ReactDOM from 'react-dom/client',
 import App from './App.tsx',
-=======
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import './index.css';
 import { HelmetProvider  } from 'react-helmet-async';
 import { BrowserRouter as Router  } from 'react-router-dom';
@@ -54,6 +59,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
         </Router>
       </WhitelabelProvider>
     </HelmetProvider>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -98,6 +104,10 @@ ReactDOM && ReactDOM.createRoot(document && document.getElementById('root')!).re
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+  </React.StrictMode>);
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import ReactDOM from 'react-dom/client',;
 import App from './App.tsx',;
@@ -160,6 +170,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(;
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/main.tsx
 
@@ -232,3 +243,6 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
   </React.StrictMode>);
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  </React.StrictMode>);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

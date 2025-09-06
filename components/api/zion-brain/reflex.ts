@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   const token = req && req.headers['x-admin-token'] || req && req.query.token;
@@ -25,16 +26,18 @@ function isAuthorized(req: NextApiRequest): boolean {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   appendLog
   evaluateReflexes
   readState
   writeState;
-=======
   appendLog,
   evaluateReflexes,
   readState,;
   writeState,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/utils/zionBrain';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function isAuthorized(req: NextApiRequest): boolean {
@@ -77,13 +80,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(401).json({ error: 'Unauthorized' });
   if (req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
-<<<<<<< HEAD
     return res.status(200).json({ metrics: state.metrics |{} });  }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
     return res.status(200).json({ metrics: state.metrics || {} });  }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
   if (req.method === 'GET') {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -161,11 +161,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
       return res.status(500).json({ error: 'Reflex failure' })
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   append_log,
   evaluate_reflexes,
@@ -269,19 +268,20 @@ return res.status (405).json ({ error: 'Method not allowed' });
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+
+}
+  return res.status(405).json({ error: 'Method not allowed' });
 <<<<<<< HEAD
-  return res.status(405).json({ error: 'Method not allowed' });
-}
-
-}
-=======
-  return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -14,22 +14,21 @@ export function AdminHeader() {;
 =======
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
-<<<<<<< HEAD
 import React from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Download, Settings} from "lucide-react";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
-<<<<<<< HEAD
 
 export function AdminHeader() {
-=======
 export function AdminHeader() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -39,13 +38,15 @@ export function AdminHeader() {
   const { user } = useAuth(),
   const { company } = useCompanyWorkspace(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-4">
@@ -102,6 +103,7 @@ export function AdminHeader() {
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -125,6 +127,9 @@ export function AdminHeader() {;
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
@@ -323,8 +328,11 @@ space-y-4"> <div className=" flex items-center justify-between"> <div> <h1 class
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

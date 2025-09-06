@@ -15,7 +15,6 @@ export default function Page() {;
 =======
 =======
 import Head from 'next/head';
-<<<<<<< HEAD
 export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
@@ -41,7 +40,6 @@ export default function Page() {
         <div
           className='mt-4'
           dangerouslySetInnerHTML={{
-<<<<<<< HEAD
             __html:
 <<<<<<< HEAD
 
@@ -52,9 +50,9 @@ export default function Page() {
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>autonomous systems</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',;
 =======
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>autonomous systems</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>'
-=======
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>autonomous systems</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -152,6 +150,8 @@ function Page() {
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>autonomous systems</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>
@@ -164,12 +164,15 @@ function Page() {
 
 export default function Page() {
   return (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Pattern — Cloud Intelligence</title>
@@ -183,6 +186,7 @@ export default function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>autonomous systems</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -220,22 +224,22 @@ export default function Page() {
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-=======
-<<<<<<< HEAD
     </div>;
   );
 }
 
 }
-=======
     </div>
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 import Head from 'next/head';
 export default function Page(req, res) {
@@ -263,6 +267,7 @@ export default function Page(req, res) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -277,3 +282,5 @@ export default function Page(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

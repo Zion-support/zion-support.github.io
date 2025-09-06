@@ -13,9 +13,6 @@ import { useAuth } from "@/hooks/useAuth",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -26,19 +23,15 @@ export function useDisputes() {;
   const [disputes, setDisputes] = useState<Dispute[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes";
 import { toast } from "sonner";
 export function useDisputes() {
   const { user } = useAuth();
   const [disputes, setDisputes] = useState<Dispute[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-=======
 import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes",
 import { toast } from "sonner",
 export function useDisputes() {
@@ -47,11 +40,14 @@ export function useDisputes() {
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
@@ -117,13 +113,14 @@ if ( {) {
       return
     }
     try {
-<<<<<<< HEAD
       setIsLoading(true);
-=======
       setIsLoading(true),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const { data, error: fetchError } = await supabase
         .from("disputes")
         .select(`
@@ -134,6 +131,7 @@ if ( {) {
             client_id,
             talent_id,
             job:jobs(title)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -149,14 +147,19 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url));
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
         `)
         .order("created_at", { ascending: false });
       if (fetchError) throw fetchError;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ),
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
@@ -165,6 +168,7 @@ if ( {) {
       
       if (fetchError) throw fetchError,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -207,6 +211,8 @@ if (throw fetch_error) {
         }
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Transform data if needed
       const transformedData = data.map((dispute: any) => ({
         ...dispute,
@@ -217,7 +223,10 @@ if (throw fetch_error) {
           title: dispute.project?.job?.title |'Untitled Project'
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }));
       setDisputes(transformedData as Dispute[]);
       setError(null)
@@ -283,8 +292,11 @@ if (throw error) {
 =======
       console.error("Error fetching disputes:", err);
       setError("Failed to fetch disputes: " + err.message)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       })),
       
       setDisputes(transformedData as Dispute[]),
@@ -293,17 +305,21 @@ if (throw error) {
       console.error("Error fetching disputes:", err),
       setError("Failed to fetch disputes: " + err.message),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast.error("Failed to fetch disputes")
     } finally {
       setIsLoading(false)
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -312,12 +328,16 @@ if (throw error) {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getDisputeById = async (disputeId: string): Promise<Dispute | null> => {
     try {
       const { data, error } = await supabase
@@ -331,10 +351,13 @@ if (throw error) {
             talent_id,
             job:jobs(title)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url));
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
@@ -342,8 +365,11 @@ if (throw error) {
         .eq("id", disputeId)
         .single();
       if (error) throw error;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ),
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
@@ -353,6 +379,7 @@ if (throw error) {
       
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -368,6 +395,8 @@ if (throw error) {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return {
         ...data,
         client_profile: data.client_profile?.client_profile,
@@ -383,6 +412,7 @@ if (throw error) {
       toast.error("Failed to fetch dispute details"),
       return null
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -405,19 +435,25 @@ if (throw error) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const createDispute = async (disputeData: {
     project_id: string;
     milestone_id?: string;
     reason_code: string
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const createDispute = async (disputeData: { 
     project_id: string,
     milestone_id?: string,
     reason_code: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -428,6 +464,8 @@ if (throw error) {
       toast && toast.error("You must be logged in to create a dispute");
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description: string
   }): Promise<Dispute | null> => {
     if (!user) {
@@ -458,17 +496,20 @@ if (throw error) {
           raised_by: user.id
         })
         .select()
-<<<<<<< HEAD
         .single();
       if (error) throw error;
       toast.success("Dispute submitted successfully");
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .single(),
 
       if (error) throw error,
       
       toast.success("Dispute submitted successfully"),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -495,6 +536,8 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       fetchDisputes(), // Refresh the list
       return data as Dispute
     } catch (err: any) {
@@ -502,18 +545,20 @@ if (throw error) {
       toast.error("Failed to submit dispute"),
       return null
     }
-<<<<<<< HEAD
   }
-=======
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const updateDisputeStatus = async (disputeId: string, status: DisputeStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("disputes")
         .update({ status })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
 
@@ -526,10 +571,15 @@ if (throw error) {
       if (error) throw error;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        .eq("id", disputeId);
+      if (error) throw error;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq("id", disputeId),
       
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -587,35 +637,34 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Update local state
       setDisputes(prevDisputes =>
         prevDisputes.map(dispute =>
           dispute.id === disputeId ? { ...dispute, status } : dispute
         )
-<<<<<<< HEAD
       );
       toast.success(`Dispute status updated to ${status}`);
-=======
       ),
       
       toast.success(`Dispute status updated to ${status}`),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return true
     } catch (err: any) {
       console.error("Error updating dispute status:", err),
       toast.error("Failed to update dispute status"),
       return false
-<<<<<<< HEAD
     }
   }
   const resolveDispute = async (
-<<<<<<< HEAD
     disputeId: string
-=======
     disputeId: string, 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -860,18 +909,12 @@ if (throw error) {
   },;
   const resolveDispute = async (;
     disputeId: string,;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     resolution: { summary: string, resolution_type: string }
   ): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("disputes")
         .update({
-<<<<<<< HEAD
           status: 'resolved';
           resolved_at: new Date().toISOString();
           resolution_summary: resolution.summary
@@ -899,8 +942,11 @@ if (throw error) {
                 status: 'resolved'
                 resolved_at: new Date().toISOString();
                 resolution_summary: resolution.summary
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           status: 'resolved',
           resolved_at: new Date().toISOString(),
           resolution_summary: resolution.summary,
@@ -920,16 +966,20 @@ if (throw error) {
                 resolved_at: new Date().toISOString(),
                 resolution_summary: resolution.summary,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 resolution_type: resolution.resolution_type as any
               }
             : dispute
         )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -972,26 +1022,27 @@ if (throw error) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       );
       toast.success("Dispute resolved successfully");
-=======
       ),
       
       toast.success("Dispute resolved successfully"),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return true
     } catch (err: any) {
       console.error("Error resolving dispute:", err),
       toast.error("Failed to resolve dispute"),
       return false
     }
-<<<<<<< HEAD
   }
-=======
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {
     try {
       const { data, error } = await supabase
@@ -1001,6 +1052,7 @@ if (throw error) {
           user_profile:profiles!dispute_messages_user_id_fkey(display_name, avatar_url)
         `)
         .eq("dispute_id", disputeId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1057,10 +1109,15 @@ if (throw error) {
       if (error) throw error;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        .order("created_at", { ascending: true });
+      if (error) throw error;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .order("created_at", { ascending: true }),
       
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1086,18 +1143,17 @@ if (throw error) {
       toast && toast.error("You must be logged in to send a message");
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return data as DisputeMessage[]
     } catch (err: any) {
       console.error("Error fetching dispute messages:", err),
       toast.error("Failed to fetch messages"),
       return []
     }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
     if (!user) {
       toast.error("You must be logged in to send a message"),
@@ -1108,6 +1164,7 @@ if (throw error) {
       const { error } = await supabase
         .from("dispute_messages")
         .insert({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1161,6 +1218,8 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           dispute_id: disputeId;
           user_id: user.id;
           message
@@ -1168,8 +1227,11 @@ if ( {) {
         });
       if (error) throw error;
       toast.success("Message sent successfully");
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           dispute_id: disputeId,
           user_id: user.id,
           message,
@@ -1179,6 +1241,7 @@ if ( {) {
       if (error) throw error,
       
       toast.success("Message sent successfully"),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1409,12 +1472,13 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return true
     } catch (err: any) {
       console.error("Error sending message:", err),
       toast.error("Failed to send message"),
       return false
-<<<<<<< HEAD
     }
   }
   // Fetch disputes when component mounts or user changes
@@ -1435,13 +1499,15 @@ if ( {) {
     getDisputeMessages
 
     addDisputeMessage
-<<<<<<< HEAD
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ): Promise<boolean> => {;
     try {;
       const { error } = await supabase;
@@ -1535,6 +1601,7 @@ if ( {) {
     resolveDispute;
     getDisputeMessages;
     addDisputeMessage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1786,3 +1853,8 @@ addDisputeMessage
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

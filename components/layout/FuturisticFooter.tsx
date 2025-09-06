@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -26,9 +27,10 @@ import React from 'react';
 import Link from 'next / link';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Link from 'next/link';
-=======
 import React from 'react';
 import Link from 'next/link';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -148,6 +150,7 @@ import {
   ArrowRight,;
 } from 'lucide-react';
 
+<<<<<<< HEAD
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 
 
@@ -158,20 +161,31 @@ export default function FuturisticFooter() {;
 =======
 =======
 <<<<<<< HEAD
-export default function FuturisticFooter() {;
 =======
+import {
+  Mail
+  Phone
+  MapPin
+  Globe
+  Zap
+  Bot
+  Cloud
+  Shield
+  ArrowRight;
+} from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function FuturisticFooter() {;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function FuturisticFooter() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 export default function FuturisticFooter() {
-=======
 
 export default function FuturisticFooter() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const currentYear = new Date().getFullYear();
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -737,6 +751,7 @@ import Link from 'next/link';
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {_/* Quick Links */}
           <div>
@@ -748,12 +763,9 @@ import Link from 'next/link';
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
           {/* Quick Links */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -789,6 +801,7 @@ import Link from 'next/link';
             </ul>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {_/* Services */}
           <div>
@@ -800,12 +813,9 @@ import Link from 'next/link';
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
           {/* Services */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -840,6 +850,7 @@ import Link from 'next/link';
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           {_/* Contact Info */}
@@ -894,6 +905,9 @@ import Link from 'next/link';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Contact Info */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -1112,9 +1126,9 @@ import Link from 'next/link';
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
-<<<<<<< HEAD
 );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.;
@@ -1273,16 +1287,18 @@ import Link from 'next/link';
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

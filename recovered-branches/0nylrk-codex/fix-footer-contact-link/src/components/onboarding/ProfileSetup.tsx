@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/ProfileSetup.tsx
@@ -15,6 +16,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -25,6 +29,7 @@ import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -34,15 +39,20 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters");
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
 type ProfileFormValues = z.infer<typeof profileSchema>;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -59,6 +69,7 @@ import {
   FormLabel,
   FormMessage} from "@/components/ui/form",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -69,6 +80,8 @@ import {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters"),
@@ -79,6 +92,7 @@ type ProfileFormValues = z.infer<typeof profileSchema>,
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -86,6 +100,8 @@ type ProfileFormValues = z.infer<typeof profileSchema>,
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void
   userType: string
@@ -98,6 +114,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       bio: ""
       headline: ""}})
   const getTypeLabel = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -179,13 +196,17 @@ function ProfileSetup() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     switch (userType) {;
       case "serviceProvider": return "Service Provider";
-=======
     switch (userType) {
       case "serviceProvider": return "Service Provider",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case "talent":
         return "Talent",
       case "client":
@@ -193,6 +214,7 @@ function ProfileSetup() {
       default:
         return "User"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -206,10 +228,10 @@ function ProfileSetup() {
 
 =======
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="space-y-6">
@@ -241,6 +263,7 @@ function ProfileSetup() {
                 <FormMessage className="text-red-400" />
               </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -252,6 +275,8 @@ function ProfileSetup() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -549,11 +574,6 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 <<<<<<< HEAD
 =======
               </FormItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           />
           <FormField
@@ -613,6 +633,7 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -658,6 +679,9 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   />;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
@@ -740,11 +764,10 @@ getTypeLabel ()
 =======
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

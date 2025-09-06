@@ -1,18 +1,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sheet.tsx
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as SheetPrimitive from &quot;@radix-ui/react-dialog&quot;
 import { cva, type VariantProps } from &quot;class-variance-authority&quot;
 import { X } from &quot;lucide-react&quot;
 import * as React from &quot;react&quot;
 import { cn } from &quot;@/lib/utils&quot;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
@@ -21,12 +27,15 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const Sheet = SheetPrimitive.Root
 const SheetTrigger = SheetPrimitive.Trigger
 const SheetClose = SheetPrimitive.Close
@@ -38,6 +47,7 @@ const SheetOverlay = React.forwardRef<
   <SheetPrimitive.Overlay
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -48,11 +58,15 @@ const SheetOverlay = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      &quot;fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      &quot;fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0&quot;
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
@@ -62,12 +76,15 @@ const SheetOverlay = React.forwardRef<
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 const sheetVariants = cva(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   &quot;fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500&quot;
   {
     variants: {
@@ -78,8 +95,11 @@ const sheetVariants = cva(
         left: &quot;inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm&quot;
         right:
           &quot;inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm&quot;}}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
   {
     variants: {
@@ -91,6 +111,7 @@ const sheetVariants = cva(
         right:
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -98,6 +119,8 @@ const sheetVariants = cva(
       side: &quot;right&quot;}}
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     defaultVariants: {
       side: "right"}}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -245,20 +268,21 @@ const SheetContent = React.forwardRef<;
       {...props}
     >;
       {children}
-<<<<<<< HEAD
 <SheetPrimitive.Close className=&quot;absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary&quot;>
         <X className=&quot;h-4 w-4&quot; />
         <span className=&quot;sr-only&quot;>Close</span>
-=======
       <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
@@ -271,6 +295,7 @@ const SheetHeader = ({
   <div
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -281,11 +306,15 @@ const SheetHeader = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      &quot;flex flex-col space-y-2 text-center sm:text-left&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      &quot;flex flex-col space-y-2 text-center sm:text-left&quot;
       "flex flex-col space-y-2 text-center sm:text-left",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
@@ -293,6 +322,7 @@ const SheetHeader = ({
 )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -303,12 +333,16 @@ SheetHeader.displayName = "SheetHeader"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-SheetHeader.displayName = &quot;SheetHeader&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+SheetHeader.displayName = &quot;SheetHeader&quot;
 SheetHeader.displayName = "SheetHeader"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const SheetFooter = ({
   className
   ...props
@@ -316,6 +350,7 @@ const SheetFooter = ({
   <div
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -326,11 +361,15 @@ const SheetFooter = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      &quot;flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      &quot;flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2&quot;
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
@@ -338,6 +377,7 @@ const SheetFooter = ({
 )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -348,12 +388,16 @@ SheetFooter.displayName = "SheetFooter"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-SheetFooter.displayName = &quot;SheetFooter&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+SheetFooter.displayName = &quot;SheetFooter&quot;
 SheetFooter.displayName = "SheetFooter"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
@@ -370,6 +414,7 @@ const SheetTitle = React.forwardRef<
 ));
 SheetTitle.displayName = SheetPrimitive.Title.displayName;
 const SheetDescription = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -507,11 +552,15 @@ const SheetDescription = React.forwardRef<;
   React.ElementRef<typeof SheetPrimitive.Description>,;
 =======
 <<<<<<< HEAD
-  React.ElementRef<typeof SheetPrimitive.Description>;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  React.ElementRef<typeof SheetPrimitive.Description>;
   React.ElementRef<typeof SheetPrimitive.Description>,;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
   <SheetPrimitive.Description;
@@ -521,6 +570,7 @@ const SheetDescription = React.forwardRef<;
   />;
 ));
 SheetDescription.displayName = SheetPrimitive.Description.displayName;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 export {;
@@ -578,14 +628,18 @@ React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description> > ( ({
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sheet.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export {Sheet, SheetClose;
   SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
 }
-=======
 export {;
   Sheet, SheetClose;
   SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

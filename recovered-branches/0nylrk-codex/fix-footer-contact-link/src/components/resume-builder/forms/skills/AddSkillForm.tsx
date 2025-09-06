@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/AddSkillForm.tsx
@@ -7,6 +8,8 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -14,8 +17,11 @@ import { Label  } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Skill  } from '@/types/resume';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
@@ -24,12 +30,15 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/c
 import {Skill} from '@/types/resume';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface AddSkillFormProps {
 
   resumeId: string
@@ -37,6 +46,7 @@ interface AddSkillFormProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -47,12 +57,16 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
 
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
@@ -73,6 +87,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       setProficiency(3)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -83,15 +98,19 @@ import {useState} from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   }
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -172,15 +191,19 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 =======
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -425,6 +448,8 @@ if ( {) {
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/AddSkillForm.tsx
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="flex flex-col gap-4 md:flex-row">
@@ -489,6 +514,7 @@ if ( {) {
     </form>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 
@@ -546,15 +572,16 @@ const newSkill: Skill = {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
-=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 };
-=======
 },
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

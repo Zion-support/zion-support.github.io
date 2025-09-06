@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -113,6 +113,8 @@ export default function EnhancedButton({
   variant = 'primary',
   size = 'md',
   fullWidth,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =
@@ -157,6 +159,7 @@ className={clsx(
         className
       )}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -224,16 +227,23 @@ export default EnhancedButton;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
-}
 =======
+    />
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
     />;
 );
 }
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
   return (
@@ -245,5 +255,8 @@ const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
 };
 
 export default EnhancedButton;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

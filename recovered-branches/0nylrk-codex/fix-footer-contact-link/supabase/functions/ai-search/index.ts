@@ -18,8 +18,6 @@ import {Configuration, OpenAIApi} from "npm: openai@4 ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-search/index.ts
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
@@ -27,6 +25,7 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -54,10 +53,18 @@ import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -88,6 +95,8 @@ serve(async (req) => {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-search/index.ts
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -96,19 +105,11 @@ serve(async (req) => {
     const { query } = await req.json(),
     if (!query) {
       return new Response(
-<<<<<<< HEAD
         JSON.stringify({ error: "Query is required" });
-=======
         JSON.stringify({ error: "Query is required" }),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
-<<<<<<< HEAD
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set");
@@ -157,7 +158,6 @@ serve(async (req) => {
       temperature: 0.1});
     const responseText = completion.choices[0].message.content |"";
     let filters;
-=======
 
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set"),
@@ -174,7 +174,6 @@ serve(async (req) => {
 
     const responseText = completion.choices[0].message.content || "",
     let filters,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       const match = responseText.match(/\{[\s\S]*\}/),
       filters = match ? JSON.parse(match[0]) : JSON.parse(responseText)
@@ -183,6 +182,7 @@ serve(async (req) => {
       filters = { type: null, skills: null, location: null, budget: null, availability: null }
     }
     return new Response(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-search/index.ts
 
@@ -267,6 +267,8 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       JSON.stringify({ filters });
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
@@ -276,6 +278,7 @@ if ( {) {
       JSON.stringify({ error: error.message });
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
   }
@@ -333,6 +336,11 @@ serve(async (req) => {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+  }
+});
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       JSON.stringify({ filters }),
 ;
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
@@ -419,11 +427,10 @@ return new Response (JSON.stringify ({
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7,6 +8,8 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }; import {
   FormField
   FormItem
@@ -19,14 +22,17 @@ import { Input } from "@/components/ui/input"
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender"
 import { Card, CardContent } from "@/components/ui/card"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Control, UseFormSetValue } from "react-hook-form";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -35,6 +41,10 @@ import React, { useState } from "react",
 import { Control, UseFormSetValue } from "react-hook-form",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React, { useState } from "react",
+import { Control, UseFormSetValue } from "react-hook-form",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   FormField,
   FormItem,
@@ -46,11 +56,14 @@ import {
 import { Input } from "@/components/ui/input",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface RateOptimizationSectionProps {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
 import { Card, CardContent } from "@/components/ui/card";
 interface RateOptimizationSectionProps {
@@ -62,17 +75,16 @@ interface RateOptimizationSectionProps {
   location?: string
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> interface RateOptimizationSectionProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface RateOptimizationSectionProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   control: Control<any>,
@@ -81,18 +93,20 @@ interface RateOptimizationSectionProps {
   yearsExperience: number,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-  location?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  location?: string,
   location?: string
-=======
   location?: string,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   rateType: "hourly" | "fixed"
 =======
   location?: string,
@@ -101,15 +115,12 @@ interface RateOptimizationSectionProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   control
   setValue
   skills
   yearsExperience
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -122,10 +133,14 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  location
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   control,
   setValue,
   skills,
   yearsExperience,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -180,12 +195,14 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   location,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
@@ -236,13 +253,11 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 
 ursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-4">
       <FormField
@@ -256,8 +271,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 type="number"
                 min="1"
                 step="0.01"
-<<<<<<< HEAD
-=======
 import React, { useState } from "react",;
 import { Control, UseFormSetValue } from "react-hook-form",;
 import {;
@@ -320,6 +333,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
                 min="1";
                 step="0.01";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
                 {...field}
@@ -343,6 +357,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {...field}
               />
             </FormControl>
@@ -356,7 +372,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       <Card>
         <CardContent className="pt-4">
           <TalentRateRecommender
-<<<<<<< HEAD
             skills = {skills,}
             yearsExperience = {yearsExperience,}
             location = {location,}
@@ -366,18 +381,21 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
   )
 }
 "}
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
 "};
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>             skills={skills}
@@ -385,6 +403,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             skills={skills}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             yearsExperience={yearsExperience}
@@ -403,6 +423,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -416,3 +437,5 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

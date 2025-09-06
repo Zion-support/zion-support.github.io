@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:zion-ai-assistant/src/server/milestoneGenerator.ts
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY |process.env.OPENAI_API_TOKEN;
 async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {if (!OPENAI_API_KEY) return null;
@@ -79,8 +82,11 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
   return milestones;
 }
 export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {const ai = await callOpenAI(input);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js",;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,;
 async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {;
@@ -167,6 +173,7 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
 ;
 export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {;
   const ai = await callOpenAI(input);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -400,6 +407,8 @@ export async function generate_milestones (input: MilestoneSuggestionInput): Pro
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
   return { milestones }
 }

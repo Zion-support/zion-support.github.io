@@ -1,12 +1,15 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react"
 import {Header} from "@/components/Header"
 import {SEO} from "@/components/SEO"
@@ -27,11 +30,14 @@ export default function TenantOnboarding() {
   const [activeTab, setActiveTab] = useState("company")
   const [isSubmitting, setIsSubmitting] = useState(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -47,11 +53,14 @@ import { toast } from "sonner",
 import { supabase } from "@/integrations/supabase/client",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const [formData, setFormData] = useState({
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Switch } from "@/components/ui/switch";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export default function TenantOnboarding() {
@@ -59,21 +68,19 @@ export default function TenantOnboarding() {
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   const [formData, setFormData] = useState({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Switch } from "@/components/ui/switch",
 import { logErrorToProduction } from '@/utils/productionLogger',
 export default function TenantOnboarding() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("company"),
   const [isSubmitting, setIsSubmitting] = useState(false),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [formData, setFormData] = useState({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -89,6 +96,7 @@ export default function TenantOnboarding() {
     is_co_branded: true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   });
@@ -97,19 +105,23 @@ export default function TenantOnboarding() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
   // Check if user has admin role
   const isAdmin = null;
-=======
   })
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
       };
   );
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }),
   
   // Check if user has admin role
@@ -197,6 +209,7 @@ export default function TenantOnboarding() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>>   return (
 ursor/fix-website-loading-errors-and-merge-6662
@@ -204,6 +217,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>>     <>
       <SEO 
@@ -417,14 +432,16 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
 =======
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -779,8 +796,11 @@ function TenantOnboarding() {
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

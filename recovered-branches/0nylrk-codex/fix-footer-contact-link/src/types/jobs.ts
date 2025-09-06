@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 ;
@@ -23,6 +24,8 @@ export interface Job {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 export type JobCategory =
@@ -34,7 +37,6 @@ export type JobCategory =
   | 'business'
   | 'other';
 export interface JobBudget {
-=======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -49,15 +51,19 @@ export type JobCategory =
 
 export interface JobBudget {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   min: number;
   max: number
   currency: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,12 +75,16 @@ export interface Job {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-export interface Job {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface Job {
 
 export interface Job {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   client_id: string;
   title: string;
@@ -109,13 +119,14 @@ export interface JobFormData {;
   created_at: string
   updated_at: string
 }
-<<<<<<< HEAD
 export interface JobFormData {
-=======
 
 export interface JobFormData {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: string;
   description: string;
   category: JobCategory;
@@ -180,13 +191,14 @@ export interface ResumeAttachment {;
     company_name?: string
   }
 }
-<<<<<<< HEAD
 export interface ResumeAttachment {
-=======
 
 export interface ResumeAttachment {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
@@ -216,13 +228,14 @@ export interface JobApplication {;
   skills?: string[]
 }
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
-<<<<<<< HEAD
 export interface JobApplication {
-=======
 
 export interface JobApplication {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   job_id: string;
   talent_id: string;
@@ -288,12 +301,14 @@ export interface JobApplication {;
   scored_at?: string;
 
   notes?: string,  // New field for client notes
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
   | 'development';
@@ -445,11 +460,10 @@ export interface JobApplication {;
   match_suggestion?: string,;
   scored_at?: string;
   notes?: string,  // New field for client notes;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -39,18 +38,10 @@ type Tx = {;
 
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
-=======
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Tx = {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: string;
@@ -197,14 +188,19 @@ function getUserId(): string {
   return generated;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export default function WalletPanel() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+export default function WalletPanel() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 export default function WalletPanel() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -212,6 +208,8 @@ export default function WalletPanel() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -235,14 +233,15 @@ function getUserId(): string {
   window.localStorage.setItem("zion_user_id", generated);
   return generated
 }
-<<<<<<< HEAD
 export default function WalletPanel() {
-=======
 
 export default function WalletPanel() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -1189,7 +1188,6 @@ export default function WalletPanel() {
           <Badges balance={balance} />
         </div>
       </div>
-<<<<<<< HEAD
       <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
         <div className='flex gap-3 mb-4 text-sm'>
           <button
@@ -1275,11 +1273,7 @@ export default function WalletPanel() {
       </div>
     </div>
 );
-<<<<<<< HEAD
-=======
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
           </div>
 
@@ -1287,12 +1281,12 @@ export default function WalletPanel() {
       </div>
     </div>
   );
+}
+}
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

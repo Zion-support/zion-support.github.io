@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 function getRefCode(): string {
 =======
@@ -11,13 +12,11 @@ function getRefCode(): string {
 }, []);
 =======
 <<<<<<< HEAD
-import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useEffect, useMemo, useState } from 'react';
 import { useEffect, useMemo, useState } from 'react',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function getRefCode(): string {
 
   if (typeof window === 'undefined') return ''
@@ -94,6 +93,7 @@ const json = await res.json();
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 function getRefCode(): string {;
   if (typeof window === 'undefined') return '',;
@@ -104,6 +104,8 @@ function getRefCode(): string {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 <<<<<<< HEAD
@@ -114,11 +116,7 @@ function getRefCode(): string {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-=======
-=======
 import { useEffect, useMemo, useState } from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function getRefCode(): string {;
   if (typeof window === 'undefined') return '',;
   return localStorage.getItem('ref_code') || '';
@@ -126,10 +124,13 @@ function getRefCode(): string {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 ;
@@ -182,6 +183,7 @@ export default function AffiliateDashboard(req, res) {
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -191,6 +193,8 @@ export default function AffiliateDashboard(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!code) {
     return (
       <div className="space-y-4">
@@ -203,6 +207,7 @@ export default function AffiliateDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -217,6 +222,9 @@ export default function AffiliateDashboard(req, res) {
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>
@@ -231,6 +239,7 @@ export default function AffiliateDashboard(req, res) {
           <div>
             <div className="text-sm text-gray-600 dark:text-gray-300">Estimated Payout</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -241,15 +250,20 @@ export default function AffiliateDashboard(req, res) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-            <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency |'USD'}</div>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency |'USD'}</div>
             <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           <div className="flex gap-2">
             <input className="border rounded px-3 py-2" placeholder="Amount (optional)" value={amount} onChange={e=>setAmount(e.target.value)} />
             <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={requestPayout}>Request Payout</button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -260,13 +274,18 @@ export default function AffiliateDashboard(req, res) {
         </div>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <a href={exportUrl} className="px-3 py-2 rounded border">Export CSV</a>
           </div>
         </div>
         {msg && <p className="mt-2 text-sm">{msg}</p>}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <a href={exportUrl} className="px-3 py-2 rounded border">Export CSV</Link>
           </div>
         </div>
@@ -276,6 +295,7 @@ export default function AffiliateDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -289,6 +309,8 @@ export default function AffiliateDashboard(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </div>
   )
@@ -303,6 +325,7 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -330,10 +353,10 @@ function Stat({ label, value }: { label: string, value: number | string }) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 }
@@ -524,11 +547,12 @@ function Stat({ label, value }: { label: string, value: number | string }) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

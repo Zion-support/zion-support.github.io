@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useReactId.ts
 
 =======
@@ -11,17 +12,22 @@ import * as React from "react"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-import * as React from &quot;react&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import * as React from &quot;react&quot;
 import * as React from "react"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 /**
  * React 18 introduced `useId` for generating unique IDs. If an older
  * React version is used where `useId` is unavailable, this hook provides
  * a small fallback that mimics the API using `useRef`.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -84,22 +90,24 @@ export function useReactId():string {;
   }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function useReactId(): string {;
   if (typeof (React as any).useId === &quot;function&quot;) {
-=======
 export function useReactId(): string {
   if (typeof (React as any).useId === "function") {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     return (React as any).useId()
   }
-<<<<<<< HEAD
   const idRef = React.useRef<string | null>(null);
   if (idRef.current === null) {idRef.current = Math.random().toString(36).slice(2);
   }
   return idRef.current;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   const idRef = React.useRef<string | null>(null);
   if (idRef.current === null) {;
@@ -117,5 +125,8 @@ import * as React from "react" /** * React 18 introduced `useId` for generating 
   return idRef.current;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

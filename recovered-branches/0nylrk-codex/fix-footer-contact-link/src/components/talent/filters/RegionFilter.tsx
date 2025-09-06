@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/RegionFilter.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ChevronDown, ChevronUp } from "lucide-react",
 
@@ -12,17 +13,28 @@ import { ChevronDown, ChevronUp } from "lucide-react",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Checkbox} from "@/components/ui/checkbox";
+import {RegionFilterProps} from "@/types/filters";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Checkbox } from "@/components/ui/checkbox",
+import { RegionFilterProps } from "@/types/filters",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
   { id: "Asia", label: "Asia" }
   { id: "South America", label: "South America" }
   { id: "Australia", label: "Australia" }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   { id: "Africa", label: "Africa" }
@@ -52,6 +64,8 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   { id: "Africa", label: "Africa" }
 ];
 export function RegionFilter({
@@ -61,6 +75,7 @@ export function RegionFilter({
   toggleSection
   isMobileFilterOpen
 }: RegionFilterProps) {
+<<<<<<< HEAD
 
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -82,6 +97,9 @@ export function RegionFilter({
   isMobileFilterOpen,
 }: RegionFilterProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -114,10 +132,13 @@ export function RegionFilter({
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;
@@ -299,6 +320,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
               />;
               <label;
                 htmlFor={`region-${region.id}`}
+<<<<<<< HEAD
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {region.label}
@@ -323,6 +345,10 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/RegionFilter.tsx
 =======
+=======
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+              >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {region.label}
               </label>
             </div>
@@ -330,6 +356,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
         </div>
       )}
     </div>
+<<<<<<< HEAD
 
   );
 }
@@ -337,3 +364,10 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

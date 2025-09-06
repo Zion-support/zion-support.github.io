@@ -13,6 +13,7 @@ interface User {
   name: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export const useAuth = () => {;
@@ -41,11 +42,11 @@ export const use_auth = () =>: any {
 =======
 =======
 <<<<<<< HEAD
-export const useAuth = () => {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export const useAuth = () => {
 
 export const useAuth = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {

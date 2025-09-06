@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect } from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -41,11 +44,14 @@ export default function AIPoweredContent() {
     markAiExplored()
   }, [markAiExplored])
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -54,11 +60,14 @@ import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useFeatureUsage } from "@/hooks/useFeatureUsage";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function AIPoweredContent() {
@@ -85,6 +94,7 @@ export default function AIPoweredContent() {
   useEffect(() => {
     markAiExplored()
   }, [markAiExplored])
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>   return (
@@ -117,6 +127,8 @@ export default function AIPoweredContent() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useFeatureUsage } from "@/hooks/useFeatureUsage",
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus",
 export default function AIPoweredContent() {
@@ -134,12 +146,7 @@ export default function AIPoweredContent() {
   useEffect(() => {
     markAiExplored()
   }, [markAiExplored]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -163,7 +170,10 @@ export default function AIPoweredContent() {
           <div className="relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden">
             <img
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               src='https://placehold.co/800x400'
               alt='Screenshot of ZionGPT content tool';
               className='object-cover';
@@ -176,9 +186,12 @@ export default function AIPoweredContent() {
               services.
             </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               src="https: //placehold.co/800x400"
               alt="Screenshot of ZionGPT content tool"
               className="object-cover"
@@ -187,8 +200,11 @@ export default function AIPoweredContent() {
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Save time drafting marketing content for your products or services.</li>
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <li>Improve search rankings with keyword optimized text.</li>
             <li>Create multilingual content to reach a global audience.</li>
           </ul>
@@ -205,19 +221,24 @@ export default function AIPoweredContent() {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">
-=======
           <div className="text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button size="lg" className="bg-zion-purple text-white" asChild>
 =======
           <div className='text-center'>
@@ -234,18 +255,22 @@ export default function AIPoweredContent() {
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-}
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 ;
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -416,6 +441,7 @@ function AIPoweredContent() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -428,3 +454,5 @@ function AIPoweredContent() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

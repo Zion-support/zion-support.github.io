@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from "react",
@@ -13,10 +14,10 @@ import Link from "next/link",
 >>>>>>> import { ArrowRight, Smartphone } from 'lucide-react'
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import Link from 'next/link'
-<<<<<<< HEAD
-=======
 import { ArrowRight, Smartphone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { AppStoreButtons } from './AppStoreButtons'
@@ -25,17 +26,17 @@ export const MobileLaunchHero: React.FC = () => {;
   // App store links - these would come from environment variables in production;
   const appStoreUrl = '#'; // Replace with actual App Store URL
   const googlePlayUrl = '#'; // Replace with actual Google Play URL
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 import React from "react",
 import Link from "next/link",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { ArrowRight, Smartphone } from 'lucide-react'
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from '@/components/ui/button'
 import { AppStoreButtons } from './AppStoreButtons'
 import { Card, CardContent } from '@/components/ui/card'
@@ -44,16 +45,20 @@ export const MobileLaunchHero: React.FC = () => {
   const appStoreUrl = '#'; // Replace with actual App Store URL
   const googlePlayUrl = '#'; // Replace with actual Google Play URL
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#", // Replace with actual App Store URL
   const googlePlayUrl = "#", // Replace with actual Google Play URL
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -81,6 +86,9 @@ export const MobileLaunchHero: React.FC = () => {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">
@@ -91,6 +99,7 @@ export const MobileLaunchHero: React.FC = () => {
               In Your Pocket
             </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
               Find top AI talent or global IT jobs on the go. Track projects,
@@ -100,12 +109,11 @@ export const MobileLaunchHero: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-            <p className='text-lg md:text-xl opacity-90 mb-8'>
-<<<<<<< HEAD
-              Find top AI talent or global IT jobs on the go. Track projects
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <p className='text-lg md:text-xl opacity-90 mb-8'>
+              Find top AI talent or global IT jobs on the go. Track projects
               Find top AI talent or global IT jobs on the go. Track projects,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               message candidates, and get AI-powered matches instantly with our
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               mobile app.
@@ -118,16 +126,21 @@ export const MobileLaunchHero: React.FC = () => {
             <div className="mb-8">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <AppStoreButtons
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-              <AppStoreButtons
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <AppStoreButtons
               <AppStoreButtons 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}              />
             </div>
@@ -154,16 +167,21 @@ export const MobileLaunchHero: React.FC = () => {
                   className='text-white hover:bg-white/10'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 >                  See Features
 =======
-                >                  See Features
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                >                  See Features
                 >                  See Features              
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <p className="text-lg md:text-xl opacity-90 mb-8">
@@ -189,6 +207,7 @@ export const MobileLaunchHero: React.FC = () => {
 =======
               
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               <Link href="#features">
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -199,6 +218,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link href="#features">
 >>>>>>>                 <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">
                   See Features
@@ -207,8 +228,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='flex-1 flex justify-center md:justify-end'>
             <div className='relative'>
               {/* Phone mockup with glow effect */}
@@ -217,6 +241,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <CardContent className='p-0'>
                   <div className='w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center'>
                     <Smartphone className='w-40 h-40 text-white opacity-40' />                    {/* In production, replace with actual app screenshot */}              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
@@ -227,6 +252,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative">
@@ -234,15 +261,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
               
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -253,6 +284,8 @@ import React from "react",;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </div>
                 </CardContent>
               </Card>
@@ -276,11 +309,7 @@ import Link from "next/link",;
 }
 "  )
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import Link from "next/link",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -345,6 +374,7 @@ export const MobileLaunchHero: React.FC = () => {;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -358,3 +388,5 @@ export const MobileLaunchHero: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

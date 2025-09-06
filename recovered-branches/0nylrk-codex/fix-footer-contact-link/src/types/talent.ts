@@ -9,14 +9,14 @@ export interface TalentProfile {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/talent.ts
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface TalentProfile {
-=======
 export interface TalentProfile {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   user_id: string;
   full_name: string;
@@ -45,15 +45,20 @@ export interface TalentProfile {;
   }[]
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-export interface TalentProfileFilters {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface TalentProfileFilters {
 
 export interface TalentProfileFilters {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   search?: string;
   skills?: string[],
   availabilities?: string[],
@@ -61,6 +66,7 @@ export interface TalentProfileFilters {;
   priceRange?: [number, number],
   experienceRange?: [number, number]
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ========
@@ -80,12 +86,16 @@ export interface HireRequest {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/talent.ts
 =======
 <<<<<<< HEAD
-export interface HireRequest {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface HireRequest {
 
 export interface HireRequest {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   clientId: string;
   talentId: string;
@@ -112,16 +122,21 @@ export interface HireRequest {;
 
   createdAt: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 export interface TalentProfile {;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string,;
   user_id: string,;
   full_name: string,;
@@ -203,6 +218,7 @@ export interface HireRequest {;
   },;
   status: 'pending' | 'accepted' | 'rejected' | 'completed';
   createdAt: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -297,3 +313,7 @@ export interface HireRequest {;
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

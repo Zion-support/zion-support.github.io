@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { Upload, FileText } from 'lucide-react'
@@ -18,32 +19,25 @@ import { Button } from "@/components/ui/button";
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Button } from '@/components/ui/button'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from "@/components/ui/button";
-=======
 import React from 'react',
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Upload, FileText } from 'lucide-react'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface UploadSectionProps {
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
-<<<<<<< HEAD
 export function UploadSection({
   customFile
   onFileUpload
 }: UploadSectionProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -108,14 +102,11 @@ function UploadSection() {
 >>>>>>>             type="file"
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-3">
       <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">
@@ -136,10 +127,13 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"
@@ -158,6 +152,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
               {Math.round(customFile.size / 1024)} KB
             </span>          </div>      {customFile && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -171,6 +166,10 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+      {customFile && (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
 >>>>>>>           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -182,15 +181,19 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )}
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -198,6 +201,8 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react';
@@ -248,10 +253,13 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )}
 =======
 >>>>>>>       )}
@@ -260,8 +268,8 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
   );
 };
 }
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -280,3 +288,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

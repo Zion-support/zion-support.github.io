@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -11,16 +12,26 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleAnalyzer = (nextConfig = {}) => { return { .nextConfig,webpack: (config,{ dev,isServer }) => { if (process.env.ANALYZE === "true") { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: "false",reportFilename: isServer ? "server-bundle.html" : "client-bundle.html"}) )} if (nextConfig.webpack) { return nextConfig.webpack(config,{ dev,isServer })} return config}} } module.exports = withBundleAnalyzer;'"'"
 import React from 'react';
 interface BundleanalyzerProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Bundleanalyzer({ }: BundleanalyzerProps) {
   return (
     <div>
@@ -28,6 +39,7 @@ export default function Bundleanalyzer({ }: BundleanalyzerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -37,3 +49,11 @@ export default function Bundleanalyzer({ }: BundleanalyzerProps) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

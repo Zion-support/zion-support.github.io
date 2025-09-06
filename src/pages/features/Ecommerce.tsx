@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -33,20 +36,26 @@ export default function Ecommerce() {
         keywords='tech marketplace, buy IT hardware, sell AI solutions'
         canonical='https://app.ziontechgroup.com/features/e-commerce'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Ecommerce() {
@@ -64,6 +73,7 @@ export default function Ecommerce() {
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace."
     "url": "https://app.ziontechgroup.com/features/e-commerce"
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -106,6 +116,8 @@ export default function Ecommerce() {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function Ecommerce() {
@@ -116,22 +128,24 @@ export default function Ecommerce() {
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
     "url": "https://app.ziontechgroup.com/features/e-commerce"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <>
       <SEO
-<<<<<<< HEAD
         title='E-commerce Platform'
         description='Buy and sell hardware, software and services in the Zion marketplace.'
         keywords='tech marketplace, buy IT hardware, sell AI solutions'
         canonical='https://app.ziontechgroup.com/features/e-commerce'
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
         canonical="https://app.ziontechgroup.com/features/e-commerce"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -149,6 +163,8 @@ export default function Ecommerce() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -189,8 +205,11 @@ export default function Ecommerce() {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
@@ -230,6 +249,7 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -237,6 +257,8 @@ export default function Ecommerce() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="text-center">
 =======
           <div className='text-center'>
@@ -290,17 +312,21 @@ export default function Ecommerce() {
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-}
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -385,6 +411,7 @@ export default function Ecommerce() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -397,3 +424,5 @@ export default function Ecommerce() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

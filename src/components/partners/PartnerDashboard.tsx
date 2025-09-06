@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export function PartnerDashboard() {
@@ -39,6 +39,8 @@ xport function PartnerDashboard() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Card
   CardContent
@@ -60,12 +62,8 @@ import { Button } from "@/components/ui/button"
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
-<<<<<<< HEAD
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const stats = {
     totalReferrals: 42
@@ -75,15 +73,10 @@ export function PartnerDashboard() {
     totalRevenue: 850.0
     pendingRevenue: 200.0
 
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -91,19 +84,20 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     totalRevenue: 850.0,
     pendingRevenue: 200.0,
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>   return (
 ursor/fix-website-loading-errors-and-merge-6662
@@ -114,6 +108,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -154,10 +150,13 @@ export function PartnerDashboard() {
           <CardContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='text-2xl font-bold'>{stats.totalReferrals}</div>
             <p className='text-xs text-zion-slate-light'>
               {stats.completedReferrals} completed, {stats.pendingReferrals}{' '}
@@ -179,6 +178,7 @@ export function PartnerDashboard() {
           </CardContent>
         </Card>            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>             <p className="text-xs text-zion-slate-light">
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -191,11 +191,15 @@ export function PartnerDashboard() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="text-xs text-zion-slate-light">
 >>>>>>>               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -212,6 +216,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Card className="bg-zion-blue-dark border-zion-blue-light">
 >>>>>>>           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
@@ -226,10 +233,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Card className='bg-zion-blue-dark border-zion-blue-light'>
           <CardHeader className='flex flex-row items-center justify-between pb-2'>
             <CardTitle className='text-sm font-medium'>
@@ -239,8 +249,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardHeader>
           <CardContent>
             <div className='text-2xl font-bold'>${stats.totalRevenue}</div>
-<<<<<<< HEAD
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout
@@ -253,12 +263,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-            <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
 =======
         
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
+        
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Card className="bg-zion-blue-dark border-zion-blue-light">
 >>>>>>>           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>
@@ -267,6 +282,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardContent>
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -287,10 +303,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              ${stats.pendingRevenue} pending payout
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </p>
           </CardContent>
         </Card>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -309,6 +329,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      {/* Performance Chart */}      {/* Performance Chart */}
+      
+      {/* Performance Chart */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Card className="bg-zion-blue-dark border-zion-blue-light">
 >>>>>>>         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -323,11 +348,14 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         </CardHeader>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
         <CardHeader>
@@ -336,10 +364,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             Track your referral performance over time
           </CardDescription>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         </CardHeader>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -349,11 +380,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
           <Button variant="outline" size="sm">View All</Button>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </CardHeader>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <CardContent>
@@ -369,7 +395,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
         <CardHeader className='flex flex-row items-center justify-between'>          <div>
@@ -401,7 +426,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             </p>
           </div>
         </CardContent>
-<<<<<<< HEAD
       </Card>
 
 =======
@@ -421,16 +445,22 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </Card>;
     </div>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -660,6 +690,7 @@ function PartnerDashboard() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -672,3 +703,5 @@ function PartnerDashboard() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

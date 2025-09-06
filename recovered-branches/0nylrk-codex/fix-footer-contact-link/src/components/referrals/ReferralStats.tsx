@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/referrals/ReferralStats.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 
@@ -11,6 +12,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
+import {Award, Share, Star, TrendingUp} from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralStats as ReferralStatsType } from "@/types/referrals";
+import { Award, Share, Star, TrendingUp } from "lucide-react";
+import { ReferralStats as ReferralStatsType } from "@/types/referrals",
+import { Award, Share, Star, TrendingUp } from "lucide-react",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
@@ -87,6 +99,7 @@ title: "Total Referrals"
                   {card.description}
                 </p>
               </>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -155,6 +168,8 @@ import {Award, Share, Star, TrendingUp} from "lucide-react";
 
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
 import { Award, Share, Star, TrendingUp } from "lucide-react",;
@@ -264,6 +279,7 @@ export function ReferralStats({ stats, isLoading } ReferralStatsProps) {;
               <>;
                 <div className="text-2xl font-bold">{card.value}</div>;
                 <p className="text-xs text-muted-foreground">{card.description}</p>;
+<<<<<<< HEAD
               </>;            )}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </CardContent>;
@@ -321,11 +337,15 @@ description: "Credits earned from referrals"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/referrals/ReferralStats.tsx
 =======
+=======
+              </>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </CardContent>
         </Card>
       ))}
     </div>
+<<<<<<< HEAD
 
   );
 }
@@ -333,3 +353,10 @@ description: "Credits earned from referrals"
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

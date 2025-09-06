@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -19,6 +20,9 @@ id: 'it-asset-discovery-agent', name: 'IT Asset Discovery Agent',
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const real2027Q3Additions = [
   {
     id: 'it-asset-discovery-agent'
@@ -337,9 +341,12 @@ export const real2027Q3Additions = [
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.'
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Discovery via traffic/specs'
       'OWASP API Top 10 checks'
       'PR annotations and CI gating'
@@ -350,7 +357,6 @@ export const real2027Q3Additions = [
     realService: true
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
-=======
       'Discovery via traffic/specs',
       'OWASP API Top 10 checks',
       'PR annotations and CI gating',
@@ -361,14 +367,18 @@ export const real2027Q3Additions = [
     realService: true,
     roi: 'Prevent high-severity API incidents and cut MTTR.',
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
     category: 'Security & Identity';
     link: '/api-security-scanner';
     realService: true
     roi: 'Prevent high-severity API incidents and cut MTTR.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -383,6 +393,8 @@ export const real2027Q3Additions = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 ];
 <<<<<<< HEAD
@@ -749,9 +761,6 @@ export const real2027Q3Additions = [;
 =======
 =======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const real2027Q3Additions = [;
   {;
     id: 'it-asset-discovery-agent',;
@@ -1007,12 +1016,11 @@ export const real2027Q3Additions = [;
     link: '/api-security-scanner',;
     realService: true,;
     roi: 'Prevent high-severity API incidents and cut MTTR.';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

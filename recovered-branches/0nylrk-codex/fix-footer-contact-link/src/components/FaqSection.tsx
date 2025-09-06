@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FaqSection.tsx
 
 =======
@@ -33,6 +34,8 @@ const faqs = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {GradientHeading} from "./GradientHeading";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
@@ -56,13 +59,15 @@ const faqs = [
   {
     question: "Are there any fees for listing my products or services?"
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
-=======
 import {GradientHeading} from "./GradientHeading";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import {FileText} from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
@@ -70,6 +75,7 @@ import {
   AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
 import { FileText } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -83,6 +89,8 @@ import { FileText } from "lucide-react",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const faqs = [
   {
     question: "How do I publish my AI product or service on Zion?",
@@ -102,6 +110,7 @@ const faqs = [
   {
     question: "Are there any fees for listing my products or services?",
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -178,6 +187,8 @@ function FaqSection() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function FaqSection() {
   return (
@@ -201,7 +212,6 @@ export function FaqSection() {
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
-<<<<<<< HEAD
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -211,13 +221,14 @@ export function FaqSection() {
       </div>
     </section>
   )
-<<<<<<< HEAD
 }
-=======
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -407,11 +418,10 @@ answer: "Zion's Green IT initiative focuses on sustainable IT practices througho
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
 }
+;
+;
 <<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

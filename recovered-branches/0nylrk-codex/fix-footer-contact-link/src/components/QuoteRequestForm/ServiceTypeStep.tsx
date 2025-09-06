@@ -1,13 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
 
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {useState} from "react";
+import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
+import {Input} from "@/components/ui/input";
+import {Card} from "@/components/ui/card";
+import {Search} from "lucide-react";
+import {ListingScoreCard} from "@/components/ListingScoreCard";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
 import { Card } from "@/components/ui/card",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -16,6 +26,12 @@ import { Card } from "@/components/ui/card",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import { Search } from "lucide-react";
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { Search } from "lucide-react",
+import { ListingScoreCard } from "@/components/ListingScoreCard",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -44,6 +60,7 @@ const SAMPLE_LISTINGS: ListingItem[] = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
 
@@ -62,6 +79,8 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   const [searchQuery, setSearchQuery] = useState(""),
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "service-1"
     title: "AI Development"
@@ -113,24 +132,35 @@ export function ServiceTypeStep({
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
+  const [searchQuery, setSearchQuery] = useState("");
+export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
+  const [searchQuery, setSearchQuery] = useState(""),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type })
   },
 <<<<<<< HEAD
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({
       specificItem: item
       serviceCategory: item.category
       serviceType: item.category.toLowerCase() as ServiceType
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -213,6 +243,8 @@ function ServiceTypeStep() {
       specific_item: item,
       service_category: item.category,
       service_type: item.category.toLowerCase () as ServiceType,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     });
   }
 ;
@@ -281,6 +313,7 @@ if (return false) {
       item.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
   });
+<<<<<<< HEAD
 
   {
     id: "service-1",
@@ -288,6 +321,9 @@ if (return false) {
     category: "Services",
     image:
       "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format",
+=======
+    })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   {
     id: "service-2",
@@ -351,6 +387,7 @@ export function ServiceTypeStep({
         item.category.toLowerCase() === formData.serviceType.toLowerCase();
       if (!categoryMatch) return false;
     }
+<<<<<<< HEAD
 
     if (searchQuery.trim() === "") return true;
     return (
@@ -358,6 +395,13 @@ export function ServiceTypeStep({
       item.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
   });
+=======
+    
+    if (searchQuery.trim() === "") return true,
+    return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+           item.category.toLowerCase().includes(searchQuery.toLowerCase())
+  }),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="space-y-6">
@@ -381,6 +425,7 @@ export function ServiceTypeStep({
             </p>
           </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -391,6 +436,10 @@ export function ServiceTypeStep({
 =======
 <Card
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <Card
+          <Card 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -404,6 +453,7 @@ export function ServiceTypeStep({
             </p>
           </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -415,6 +465,10 @@ export function ServiceTypeStep({
 =======
 <Card
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <Card
+          <Card 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -432,6 +486,7 @@ export function ServiceTypeStep({
 <<<<<<< HEAD
       {formData.serviceType && (
         <div className="space-y-4">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -462,6 +517,15 @@ import {ListingScoreCard} from "@/components/ListingScoreCard";
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+          <h3 className="text-xl font-semibold text-white">
+            Select a specific {formData.serviceType}
+          </h3>
+          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
+            <Input
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
@@ -782,6 +846,7 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
           <div className="relative">;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
             <Input;
+<<<<<<< HEAD
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -802,6 +867,8 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                   <ListingScoreCard;
                     title={item.title}                    category={item.category}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -816,9 +883,16 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                   key={item.id}
                   onClick={() => handleItemSelect(item)}
                   className={`cursor-pointer transition-all ${
+<<<<<<< HEAD
 formData.specificItem?.id === item.id
                       ? "ring-2 ring-zion-purple rounded-lg"
                       : ""
+=======
+                    formData.specificItem?.id === item.id
+                      ? "ring-2 ring-zion-purple rounded-lg"
+                      : ""
+                    formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   }`}
                 >
                   <ListingScoreCard

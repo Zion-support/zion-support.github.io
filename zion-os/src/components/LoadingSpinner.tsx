@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,8 @@ interface LoadingSpinnerProps {
   class_name?: string;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
   className?: string;
@@ -42,10 +45,13 @@ function LoadingSpinner() {
     large: "w - 12 h - 12";
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div className={`${size_classes[size]} ${class_name}`} role="status" aria - label="Loading">;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 interface LoadingSpinnerProps {;
   size?: "small" | "medium" | "large",;
@@ -58,7 +64,6 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     medium: "w-8 h-8",;
     large: "w-12 h-12";
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

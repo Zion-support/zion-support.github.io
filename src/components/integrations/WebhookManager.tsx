@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react'
 import {
   Card
@@ -27,7 +30,10 @@ import { useWebhooks, WebhookEventType } from '@/hooks/useWebhooks'
 } from '@/components/ui/select'
 import { toast } from 'sonner'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function WebhookManager() {
   const {
     webhooks
@@ -107,10 +113,13 @@ export function WebhookManager() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -122,6 +131,7 @@ import { PlusCircle, Save, Trash } from 'lucide-react'
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -261,6 +271,8 @@ export function WebhookManager() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function WebhookManager() {
   const { 
     webhooks,
@@ -274,19 +286,25 @@ export function WebhookManager() {
     deleteWebhook,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     testWebhook
   } = useWebhooks(),
   
   const [newWebhook, setNewWebhook] = useState({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     testWebhook,
   } = useWebhooks()
   const [newWebhook, setNewWebhook] = useState({
@@ -311,15 +329,21 @@ export function WebhookManager() {
       toast.error('This event is already added')
       return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     testWebhook
   } = useWebhooks(),
   
   const [newWebhook, setNewWebhook] = useState({
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: "",
     url: "",
     selectedEvent: "" as WebhookEventType,
@@ -346,6 +370,7 @@ export function WebhookManager() {
       return
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }
 =======
@@ -353,6 +378,8 @@ export function WebhookManager() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     
@@ -361,12 +388,15 @@ export function WebhookManager() {
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       selectedEvent: '' as WebhookEventType,
     })
   }
@@ -384,11 +414,14 @@ export function WebhookManager() {
       toast.error('Please fill in all required fields')
       return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       selectedEvent: "" as WebhookEventType
     })
   },
@@ -406,6 +439,7 @@ export function WebhookManager() {
       return
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }
 =======
@@ -413,6 +447,8 @@ export function WebhookManager() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     
@@ -421,6 +457,7 @@ export function WebhookManager() {
       newWebhook.url, 
       newWebhook.eventTypes, 
       newWebhook.secret || undefined
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -432,16 +469,13 @@ export function WebhookManager() {
 >>>>>>>     // Reset form
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ),
     
-=======
-<<<<<<< HEAD
     )
-=======
     ),
     
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Reset form
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setNewWebhook({
@@ -451,12 +485,15 @@ export function WebhookManager() {
       eventTypes: [],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       secret: '',
     })
   }
@@ -467,11 +504,14 @@ export function WebhookManager() {
     await testWebhook(webhookId, eventType)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       secret: ""
     })
   },
@@ -489,11 +529,6 @@ export function WebhookManager() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-8">
@@ -506,11 +541,14 @@ export function WebhookManager() {
         </CardHeader>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 value={newWebhook.name}
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <CardContent className='space-y-4'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div className='space-y-2'>
@@ -519,6 +557,7 @@ export function WebhookManager() {
                 id='webhook-name'
                 placeholder='e.g., Job Postings Webhook'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 value={newWebhook.name}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 onChange={e =>
@@ -526,6 +565,8 @@ export function WebhookManager() {
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
@@ -533,11 +574,6 @@ export function WebhookManager() {
               <Input 
                 id="webhook-name" 
                 placeholder="e.g., Job Postings Webhook"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 value={newWebhook.name}
                 onChange={e =>
                   setNewWebhook({ ...newWebhook, name: e.target.value })
@@ -545,6 +581,7 @@ export function WebhookManager() {
                 }
               />
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -555,6 +592,8 @@ export function WebhookManager() {
             </div>;
             <div className='flex space-x-2'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='space-y-2'>
               <Label htmlFor='webhook-url'>URL</Label>
               <Input
@@ -576,7 +615,6 @@ export function WebhookManager() {
                   key = {event,}
                   onRemove = {(,) => handleRemoveEvent(event),}
                 >
-<<<<<<< HEAD
                   {eventOptions.find(e => e.value === event)?.label |event}
                 </ClickableBadge>
               ))}
@@ -594,12 +632,15 @@ export function WebhookManager() {
                 <SelectTrigger className='w-full'>
                   <SelectValue placeholder='Select event' />
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="space-y-2">
@@ -728,6 +769,7 @@ export function WebhookManager() {;
                 >;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>;
@@ -748,6 +790,11 @@ export function WebhookManager() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  {eventOptions.find(e => e.value === event)?.label || event}
+                </ClickableBadge>;
+              ))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
             <div className='flex space-x-2'>
               <Select
@@ -761,11 +808,14 @@ export function WebhookManager() {;
                 <SelectTrigger className='w-full'>
                   <SelectValue placeholder='Select event' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>;
             <div className="flex space-x-2">;
               <Select;
@@ -774,6 +824,7 @@ export function WebhookManager() {;
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select event" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -788,6 +839,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </SelectTrigger>
                 <SelectContent>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -810,9 +863,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='space-y-2'>
             <Label htmlFor='webhook-secret'>Secret (optional)</Label>
             <Input
@@ -860,12 +916,16 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret(optional)</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Input
               id="webhook-secret"
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -876,6 +936,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+          <div className="space-y-2">
+            <Label htmlFor="webhook-secret">Secret (optional)</Label>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Input 
               id="webhook-secret" 
               placeholder="A secret key to verify the webhook source"
@@ -883,11 +948,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <p className="text-xs text-muted-foreground">
               If provided, this secret will be used to sign the webhook payload.</p>
@@ -917,10 +985,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <CardTitle className="text-lg">{webhook.name}</CardTitle>
                       <CardDescription className="truncate max-w-md">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
@@ -930,11 +1001,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />;
             <p className="text-xs text-muted-foreground">;
               If provided, this secret will be used to sign the webhook payload.</p>;
@@ -982,11 +1056,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <div>;
                       <CardTitle className="text-lg">{webhook.name}</CardTitle>;
                       <CardDescription className="truncate max-w-md">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {webhook.url}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       </CardDescription>
@@ -998,10 +1067,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div className='flex-shrink-0'>
                         <Button
                           variant='outline'
@@ -1010,6 +1082,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                             toggleWebhook(webhook.id, !webhook.is_active)
                           }                        >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                           {webhook.is_active ? 'Disable' : 'Enable'}
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1017,17 +1090,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                         </Button>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div className="flex-shrink-0">
                         <Button 
                           variant="outline" 
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           {webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1048,7 +1118,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="flex flex-col space-y-2">
                     <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <Label className='text-sm'>Events</Label>
                       <div className='flex flex-wrap gap-2 mt-1'>
                         {webhook.event_types.map((event: WebhookEventType) => (
@@ -1062,10 +1135,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {webhook.last_triggered_at
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                         : 'Never triggered'}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <Label className="text-sm">Events</Label>
                       <div className="flex flex-wrap gap-2 mt-1">
                         {webhook.event_types.map((event: WebhookEventType) => (
@@ -1078,11 +1154,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <div className="text-xs text-muted-foreground">;
                       {webhook.last_triggered_at;
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         : 'Never triggered'}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </div>
@@ -1092,6 +1163,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                         <SelectItem key={event} value={event}>
@@ -1099,6 +1171,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </SelectItem>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     variant='outline'
                     size='sm'
                     onClick={() => deleteWebhook(webhook.id)}
@@ -1131,14 +1205,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <SelectContent>
                       <SelectItem value="test_event">Test(generic)</SelectItem>
                       {webhook.event_types.map(event => (
-<<<<<<< HEAD
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label |event}
                         </SelectItem>
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     variant="outline"
                     size="sm"
                     onClick={() => deleteWebhook(webhook.id)}
@@ -1154,6 +1230,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <SelectContent>
                       <SelectItem value="test_event">Test (generic)</SelectItem>
                       {webhook.event_types.map((event: WebhookEventType) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1174,10 +1251,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </SelectContent>
@@ -1189,6 +1267,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1198,6 +1277,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {testResult && (
           <Card className='mt-4 border-blue-200'>
             <CardHeader>
@@ -1239,6 +1321,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <pre className='mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto'>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                     {testResult.responseBody |'<empty>'}
@@ -1249,6 +1332,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                    {testResult.responseBody |'<empty>'}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
@@ -1268,6 +1354,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     {testResult.responseBody || '<empty>'}
 
@@ -1282,8 +1369,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {testResult.responseBody || '<empty>'}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </pre>
                 </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1293,8 +1381,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </div>
   )
@@ -1370,17 +1461,19 @@ newWebhook.secret |undefined);"
 }</div> </div>)
 }'"}
 }
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1441,3 +1534,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

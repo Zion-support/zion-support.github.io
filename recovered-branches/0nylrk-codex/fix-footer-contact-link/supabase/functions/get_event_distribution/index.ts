@@ -14,8 +14,6 @@ import {createClient} from "https: //esm ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/get_event_distribution/index.ts
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
@@ -23,20 +21,22 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
-=======
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -45,10 +45,13 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -60,6 +63,8 @@ serve(async (req) => {
   if (req && req.method === "OPTIONS") {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 serve(async (req) => {
   // Handle CORS preflight request
   if (req.method === "OPTIONS") {
@@ -82,15 +87,17 @@ serve(async (req) => {
 =======
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
-<<<<<<< HEAD
     );
     // Parse the request body
     const { days_back = 7 } = await req.json();
     // Calculate the start date
     const startDate = new Date();
     startDate.setDate(startDate.getDate() - days_back);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ),
 
     // Parse the request body
@@ -122,12 +129,16 @@ serve(async (req) => {
     const startDate = new Date(),
     startDate.setDate(startDate.getDate() - days_back),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Query analytics events
     const { data, error } = await supabaseClient
       .from("analytics_events")
       .select("event_type, created_at")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/get_event_distribution/index.ts
 <<<<<<< HEAD
@@ -171,28 +182,28 @@ serve(async (req) => {
 
 =======
 <<<<<<< HEAD
-      .gte("created_at", startDate.toISOString());
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      .gte("created_at", startDate.toISOString());
       .gte("created_at", startDate.toISOString()),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (error) {
       console.error("Error fetching analytics data:", error),
       throw error
     }
     // Group events by date and event type
-<<<<<<< HEAD
     const eventsByDate = {}
-=======
     const eventsByDate = {},
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     data.forEach((event) => {
       const date = new Date(event.created_at).toISOString().split("T")[0],
       if (!eventsByDate[date]) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 const corsHeaders = {;
@@ -230,6 +241,7 @@ serve(async (req) => {;
       const date = new Date(event.created_at).toISOString().split("T")[0],;
       if (!eventsByDate[date]) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -241,11 +253,14 @@ serve(async (req) => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         eventsByDate[date] = { date }
       }
       if (!eventsByDate[date][event.event_type]) {
         eventsByDate[date][event.event_type] = 0
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -279,6 +294,8 @@ serve(async (req) => {;
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/get_event_distribution/index.ts
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       eventsByDate[date][event.event_type]++
     });
     // Convert to array for easier consumption by frontend
@@ -288,11 +305,14 @@ serve(async (req) => {;
       headers: {
         ...corsHeaders
         "Content-Type": "application/json"}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       eventsByDate[date][event.event_type]++
     }),
@@ -304,6 +324,7 @@ serve(async (req) => {;
       headers: {
         ...corsHeaders,
         "Content-Type": "application/json"},
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -317,28 +338,31 @@ serve(async (req) => {;
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       status: 200})
   } catch (error) {
     console.error("Error:", error.message),
     return new Response(JSON.stringify({ error: error.message }), {
       headers: {
-<<<<<<< HEAD
         ...corsHeaders
         "Content-Type": "application/json"}
       status: 500})
   }
 });
 
-=======
         ...corsHeaders,
         "Content-Type": "application/json"},
       status: 500})
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       eventsByDate[date][event.event_type]++;
     }),;
@@ -356,6 +380,7 @@ serve(async (req) => {;
         ...corsHeaders,;
         "Content-Type": "application/json"},;
       status: 500});
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -551,3 +576,7 @@ data.forEach ( (event) => {
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/QuoteDetails.tsx
 =======
 
@@ -9,6 +10,26 @@ import {format} from "date-fns";
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from "react";
+
+import {
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+  DialogDescription
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+
+import { QuoteStatusBadge } from "./QuoteStatusBadge";
+import type { QuoteRequest } from "@/types/quotes";
+import { format } from "date-fns";
+import {format} from "date-fns";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { 
   Dialog,
@@ -24,6 +45,7 @@ import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -51,10 +73,13 @@ import type { QuoteRequest } from "@/types/quotes";
 import { format } from "date-fns";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,6 +94,8 @@ import {format} from "date-fns";
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
@@ -80,9 +107,14 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     } catch (e) {
       return dateString;
     }
+<<<<<<< HEAD
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import {;
   Dialog,;
@@ -410,6 +442,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
       </DialogContent>
     </Dialog>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -608,3 +641,12 @@ return (<Dialog open= {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+
+  )
+},
+};
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

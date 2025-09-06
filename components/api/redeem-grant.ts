@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -344,25 +344,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 import {
-<<<<<<< HEAD
   authenticateRequest
   enforceRateLimit
   recordRequest;
-=======
   authenticateRequest,
   enforceRateLimit,;
   recordRequest,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const REDEMPTIONS_FILE = path.join(
   process.cwd()
   'data'
@@ -390,12 +386,8 @@ export default async function handler(
   if (!studentEmail |!grantCode |!courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'Missing required fields' });
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {
@@ -410,14 +402,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
     return res.status(405).json({ error: "Method Not Allowed" })
   }
-<<<<<<< HEAD
   const { studentEmail, grantCode, courseId } = req.body |{}
   if (!studentEmail |!grantCode |!courseId) {
-=======
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'Missing required fields' });
   await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
@@ -439,21 +427,19 @@ redeemedAt: now
   return res.status(201).json({ id: record.id, redeemedAt: now });  return res.status(201).json({ id: record.id, redeemedAt: now })
 }
 
-<<<<<<< HEAD
-=======
 
   }
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 }
 }
-=======
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

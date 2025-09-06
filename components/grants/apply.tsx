@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -38,32 +39,33 @@ const categories: GrantCategory[] = [;
 export default function ApplyGrantPage() {;
 =======
 <<<<<<< HEAD
-import { useState  } from 'react';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useState  } from 'react';
 import {useState} from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
 
 const categories: GrantCategory[] = [
-<<<<<<< HEAD
   'Ecosystem Tools'
   'Talent Development'
   'Regional Expansion'
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 export default function ApplyGrantPage() {
-=======
   'Ecosystem Tools',
   'Talent Development',
   'Regional Expansion',
   'Research Grants',
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -354,6 +356,7 @@ function ApplyGrantPage() {
       setLoading(false)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
 
   return (
@@ -403,11 +406,11 @@ function ApplyGrantPage() {
 
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
 
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <EnhancedLayout>
@@ -527,6 +530,7 @@ function ApplyGrantPage() {
           />
         </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   }
@@ -552,6 +556,9 @@ function ApplyGrantPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
           <button
@@ -644,6 +651,7 @@ function ApplyGrantPage() {
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -888,10 +896,12 @@ function ApplyGrantPage() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -899,3 +909,5 @@ function ApplyGrantPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

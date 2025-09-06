@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/tenant-detector/index.ts
 
 <<<<<<< HEAD
@@ -21,11 +22,11 @@ import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
-=======
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -156,8 +157,11 @@ serve(async (req) => {
 =======
           if (!subdomainResult.error) {
             tenantInfo = subdomainResult.data as TenantInfo
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts',;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7',;
 interface TenantInfo {;
@@ -332,6 +336,7 @@ serve(async (req) => {;
           if (!subdomainResult.error) {;
             tenantInfo = subdomainResult.data as TenantInfo;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -394,17 +399,15 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         }
       } else if (data) {
         tenantInfo = data as TenantInfo
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return new Response(
       JSON.stringify({
         tenant: tenantInfo
@@ -472,8 +475,11 @@ if ( {) {
           'Content-Type': 'application/json'
           ...corsHeaders}}
     )
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     return new Response(;
       JSON.stringify({;
@@ -496,6 +502,7 @@ if ( {) {
         headers: {;
           'Content-Type': 'application/json',;
           ...corsHeaders}});
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -653,6 +660,8 @@ if (subdomainParam) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 });
 

@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -57,6 +58,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SkeletonProps {
   class_name?: string;
   height?: string;
@@ -233,14 +236,11 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-5/6 mb-2" />
       <Skeleton className="h-4 w-4/6" />
     </div>
-<<<<<<< HEAD
   )
 }
-=======
   );
 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface HeroSkeletonProps {
   className?: string
 }
@@ -258,7 +258,6 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
 <<<<<<< HEAD
 },
@@ -268,10 +267,10 @@ interface StatsSkeletonProps {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
-=======
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const StatsSkeleton: React.FC<StatsSkeletonProps> = (_{_className = ''}) => {_return (
     <div className={`py-20 px-6 ${className}`}>
@@ -294,6 +293,8 @@ duration: 1 && 1.5,
     />;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface StatsSkeletonProps {
   className?: string
 }
@@ -342,6 +343,7 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
 export default Skeleton;  )
 }
 export default Skeleton;
+<<<<<<< HEAD
 =======
 =======
   )
@@ -438,11 +440,15 @@ export default Skeleton;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 interface SkeletonProps {
   className?: string;
   height?: string;
   width?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -459,3 +465,5 @@ interface SkeletonProps {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

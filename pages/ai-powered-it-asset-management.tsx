@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -222,6 +223,8 @@ export default AIPoweredITAssetManagement;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react';
 import Head from 'next/head';
@@ -304,15 +307,12 @@ const AIPoweredITAssetManagement = () => {
     "Cost allocation and tracking"
     "Integration with existing IT tools"
   ]
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
 import { motion } from 'framer-motion',;
 import { 
   Monitor, Brain, Cpu, Zap, Shield, Globe, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react';
 const AIPoweredITAssetManagement = () => {
   const features = [
@@ -322,10 +322,6 @@ import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   Monitor, Brain, Cpu, Zap, Shield, Globe,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Database, Network, Server, Laptop, Smartphone
@@ -367,12 +363,7 @@ const AIPoweredITAssetManagement = () => {
 =======
       description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -386,10 +377,6 @@ const AIPoweredITAssetManagement = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const assetTypes = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -406,13 +393,7 @@ const AIPoweredITAssetManagement = () => {
     "Peripheral devices and accessories",
     "Peripheral devices and accessories"
   ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const benefits = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
@@ -443,12 +424,7 @@ const AIPoweredITAssetManagement = () => {
       title: "Efficiency Boost",
       value: "200%",
       description: "Increased operational efficiency"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -462,10 +438,6 @@ const AIPoweredITAssetManagement = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const capabilities = [
     "Automated asset discovery and inventory",
@@ -476,13 +448,8 @@ const AIPoweredITAssetManagement = () => {
     "Asset lifecycle optimization",
     "Cost allocation and tracking",
     "Integration with existing IT tools"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   ],
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   return (
     <div className="min-h-screen bg-gray-50">
@@ -515,11 +482,6 @@ const AIPoweredITAssetManagement = () => {
 };
 export default AIPoweredITAssetManagement;
   ],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <>
@@ -533,6 +495,7 @@ export default AIPoweredITAssetManagement;
         <meta property="og:url" content="https://ziontechgroup.com/ai-powered-it-asset-management" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1864,8 +1827,9 @@ const _AIPoweredITAssetManagement = () => {_const _features = [
                 <Link href=&quot;/services&quot; className=&quot;inline-flex items-center px-8 py-3 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200&quot;>
 =======
 <<<<<<< HEAD
-        {/* Hero Section */}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        {/* Hero Section */}
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1879,11 +1843,6 @@ const _AIPoweredITAssetManagement = () => {_const _features = [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -1940,18 +1899,10 @@ const _AIPoweredITAssetManagement = () => {_const _features = [
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Transform your IT operations with intelligent asset management that discovers
-=======
                 Transform your IT operations with intelligent asset management that discovers,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                 Transform your IT operations with intelligent asset management that discovers, 
-=======
                 Transform your IT operations with intelligent asset management that discovers,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 monitors, and optimizes every piece of your technology infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1968,12 +1919,15 @@ const _AIPoweredITAssetManagement = () => {_const _features = [
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -1983,6 +1937,7 @@ const _AIPoweredITAssetManagement = () => {_const _features = [
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
             >
@@ -1997,6 +1952,8 @@ const _AIPoweredITAssetManagement = () => {_const _features = [
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2282,11 +2239,6 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -2300,12 +2252,12 @@ const AIPoweredITAssetManagement = () => {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {features.map((feature, index) => (
                 <motion.div
-<<<<<<< HEAD
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300&quot;
                 >
@@ -2316,6 +2268,8 @@ const AIPoweredITAssetManagement = () => {;
                   <p className=&quot;text-gray-400&quot;>{feature.description}</p>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2381,11 +2335,6 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -2395,7 +2344,6 @@ const AIPoweredITAssetManagement = () => {;
                   <p className="text-gray-400">{feature.description}</p>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </motion.div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -2416,6 +2364,7 @@ const AIPoweredITAssetManagement = () => {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
             >
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
@@ -2429,6 +2378,8 @@ const AIPoweredITAssetManagement = () => {;
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2513,11 +2464,6 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -2531,12 +2477,12 @@ const AIPoweredITAssetManagement = () => {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {assetTypes.map((assetType, index) => (
                 <motion.div
-<<<<<<< HEAD
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className=&quot;flex items-center space-x-3&quot;
                 >
@@ -2544,6 +2490,8 @@ const AIPoweredITAssetManagement = () => {;
                   <span className=&quot;text-gray-300&quot;>{assetType}</span>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2609,18 +2557,12 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
                   <span className="text-gray-300">{assetType}</span>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </motion.div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -2641,6 +2583,7 @@ const AIPoweredITAssetManagement = () => {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
             >
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
@@ -2654,6 +2597,8 @@ const AIPoweredITAssetManagement = () => {;
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2738,11 +2683,6 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -2756,12 +2696,12 @@ const AIPoweredITAssetManagement = () => {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {benefits.map((benefit, index) => (
                 <motion.div
-<<<<<<< HEAD
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className=&quot;text-center&quot;
                 >
@@ -2774,6 +2714,8 @@ const AIPoweredITAssetManagement = () => {;
                     <p className=&quot;text-gray-400 text-sm&quot;>{benefit.description}</p>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2839,11 +2781,6 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -2856,7 +2793,6 @@ const AIPoweredITAssetManagement = () => {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </div>
                 </motion.div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -2877,6 +2813,7 @@ const AIPoweredITAssetManagement = () => {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
             >
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
@@ -2890,6 +2827,8 @@ const AIPoweredITAssetManagement = () => {;
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2974,11 +2913,6 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -2992,12 +2926,12 @@ const AIPoweredITAssetManagement = () => {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {capabilities.map((capability, index) => (
                 <motion.div
-<<<<<<< HEAD
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className=&quot;flex items-center space-x-3&quot;
                 >
@@ -3005,6 +2939,8 @@ const AIPoweredITAssetManagement = () => {;
                   <span className=&quot;text-gray-300&quot;>{capability}</span>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3070,18 +3006,12 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
                   <span className="text-gray-300">{capability}</span>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </motion.div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -3112,7 +3042,6 @@ const AIPoweredITAssetManagement = () => {;
                 <Link href=&quot;/services&quot; className=&quot;inline-flex items-center px-8 py-4 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200 text-lg&quot;>
 =======
         {/* CTA Section */}
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3142,11 +3071,6 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -3226,25 +3150,22 @@ const AIPoweredITAssetManagement = () => {;
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 
 export default AIPoweredITAssetManagement
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default AIPoweredITAssetManagement;
 
-=======
 },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 export default AIPoweredITAssetManagement,;
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default AIPoweredITAssetManagement,
             >;
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;
@@ -3271,9 +3192,12 @@ export default AIPoweredITAssetManagement,
 },;
 export default AIPoweredITAssetManagement;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

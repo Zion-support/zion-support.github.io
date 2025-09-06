@@ -11,37 +11,32 @@ import { Search } from "lucide-react",
 
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Search } from "lucide-react",
-<<<<<<< HEAD
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-=======
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface ApiDocsLayoutProps {
@@ -63,23 +58,23 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   const location = useLocation();
   const currentPath = location.pathname;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
-<<<<<<< HEAD
 
   const location = useLocation();
   const currentPath = location.pathname;
-=======
   const location = useLocation(),
   const currentPath = location.pathname,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const navigationItems = [
     { title: "Getting Started", path: "/developers/docs/getting-started" }
     { title: "API Reference", path: "/developers/docs/reference" }
@@ -191,12 +186,15 @@ export function ApiDocsLayout({ children } ApiDocsLayoutProps) {;
                       : "text-zinc-400 hover:text-white hover:bg-zinc-900"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default ApiDocsLayout;
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   )}
                 >
                   {item.title}
@@ -215,8 +213,11 @@ export default ApiDocsLayout;
 }
 export default ApiDocsLayout;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Search } from "lucide-react",;
@@ -460,10 +461,9 @@ const navigationItems = [ return (<div className="flex min-h-screen bg-zinc-950"
   );
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ApiDocsLayout;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

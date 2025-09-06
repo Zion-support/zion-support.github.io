@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -11,9 +12,10 @@ real_implementation: boolean;
   launch_date: string;
 =======
 =======
+=======
+export interface InnovativeITService {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface InnovativeITService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -1499,21 +1501,18 @@ export interface InnovativeITService {;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
     launchDate: '2024-01-20'
     customers: 2500
     rating: 4.7
     reviews: 1250
   }
-=======
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.',
     launchDate: '2024-01-20',
     customers: 2500,
     rating: 4.7,
     reviews: 1250,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1526,14 +1525,9 @@ export interface InnovativeITService {;
     rating: 4.7
 
     reviews: 1250
-<<<<<<< HEAD
   }
 ];
-=======
 export interface InnovativeITService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1789,12 +1783,11 @@ export const innovativeITServices: InnovativeITService[] = [;
     customers: 2500,;
     rating: 4.7,;
     reviews: 1250;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

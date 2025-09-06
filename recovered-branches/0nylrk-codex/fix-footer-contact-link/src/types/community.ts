@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 export type ForumCategory = 
@@ -25,27 +23,27 @@ export type ForumCategory =;
 <<<<<<< HEAD
 
 export type ForumCategory =
-=======
 export type ForumCategory = 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   | 'getting-hired'
   | 'project-help'
   | 'ai-tools'
   | 'feedback';
   | 'announcements';
-<<<<<<< HEAD
 export interface ForumCategoryInfo {
-=======
 
 export interface ForumCategoryInfo {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: ForumCategory;
   name: string;
   description: string;
   adminOnly: boolean
   icon: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -88,11 +86,11 @@ export interface ForumPost {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-export interface ForumPost {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface ForumPost {
 
 export interface ForumPost {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   content: string;
@@ -113,6 +111,7 @@ export interface ForumPost {;
   isLocked?: boolean
   isFeatured?: boolean
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -151,11 +150,11 @@ export interface ForumReply {;
 
 =======
 <<<<<<< HEAD
-export interface ForumReply {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface ForumReply {
 
 export interface ForumReply {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   postId: string;
   parentReplyId?: string;
@@ -170,19 +169,21 @@ export interface ForumReply {;
   downvotes: number
   isAnswer?: boolean
 }
-<<<<<<< HEAD
 export interface Badge {
-=======
 
 export interface Badge {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   description: string;
   icon: string
   color: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -221,16 +222,21 @@ export interface UserBadge {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export interface UserBadge {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface UserBadge {
 
 export interface UserBadge {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   userId: string;
   badgeId: string
   awardedAt: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -242,12 +248,16 @@ export interface CommunityUser {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-export interface CommunityUser {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface CommunityUser {
 
 export interface CommunityUser {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   avatar?: string;
@@ -270,8 +280,11 @@ export interface CommunityUser {;
 
   isModerator: boolean
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type ForumCategory =;
   | 'getting-hired';
   | 'project-help';
@@ -351,6 +364,7 @@ export interface CommunityUser {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -363,3 +377,5 @@ export interface CommunityUser {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import Link from 'next/link';
@@ -43,31 +44,25 @@ import {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter  } from 'next/router';
 import { useEffect, useState, FormEvent  } from 'react';
 import Link from 'next/link',
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
-=======
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
-=======
 import {useRouter} from 'next/router';
 import {useEffect, useState, FormEvent} from 'react';
-=======
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
-<<<<<<< HEAD
 import type {
-<<<<<<< HEAD
   AuthError
   User
   AuthChangeEvent
@@ -77,7 +72,6 @@ import {
   logInfo
   logWarn
   logErrorToProduction;
-=======
   AuthError,
   User,
   AuthChangeEvent,;
@@ -87,9 +81,12 @@ import {
   logInfo,
   logWarn,;
   logErrorToProduction,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
@@ -142,24 +139,24 @@ import { supabase } from '@/utils/supabase/client';
 =======
 =======
 import {
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle;
-=======
   Card,
   CardContent,
   CardDescription,
   CardHeader,;
   CardTitle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/card';
 const LoginPage = () => {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
@@ -184,12 +181,15 @@ const LoginPage = () => {
 =======
 const LoginPage = () => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
@@ -215,6 +215,7 @@ const LoginPage = () => {;
   const [isEmailUnverified, setIsEmailUnverified] = useState(false);
   const [verificationEmailSent, setVerificationEmailSent] = useState(false);
   const [isResendingVerification, setIsResendingVerification] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -321,6 +322,8 @@ const LoginPage = () =>: any {
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // States for the new proactive resend form
   const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
@@ -765,7 +768,6 @@ if (return) {
               'Please verify your email address before logging in. Check your inbox for a verification link.'
           } as AuthError);
           setShowProactiveResendForm(false); // Hide proactive form if reactive one is triggered
-=======
   // States for the new proactive resend form;
   const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
@@ -868,9 +870,6 @@ if (return) {
         if (mounted) {;
           setIsCheckingSession(false);
           setSessionChecked(true);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           logInfo(
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
           );        }
@@ -1448,8 +1447,6 @@ setIsProactivelyResending(true);
       setIsProactivelyResending(false);    }
   };
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
           } catch (error) {
     console.error("Error:", error);
@@ -1660,10 +1657,6 @@ setIsProactivelyResending(true);
   }
 }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault(),
     setIsLoading(true),
@@ -1730,8 +1723,11 @@ setIsProactivelyResending(true);
             message: 'Please verify your email address before logging in. Check your inbox for a verification link.'
           } as AuthError),
           setShowProactiveResendForm(false), // Hide proactive form if reactive one is triggered
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           // Auto-resend verification email
           setTimeout(() => {
             handleResendVerification()
@@ -1740,6 +1736,7 @@ setIsProactivelyResending(true);
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
+<<<<<<< HEAD
 <<<<<<< HEAD
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
@@ -1827,6 +1824,8 @@ logWarn('Supabase sign-in returned no error but no user.');
 };
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             if (
               signInError.message
                 .toLowerCase()
@@ -1902,11 +1901,12 @@ logWarn('Supabase sign-in returned no error but no user.');
     }
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
@@ -2489,11 +2489,14 @@ if ( {) {
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
@@ -2529,17 +2532,18 @@ if ( {) {
 =======
         </div>
       </div>
-<<<<<<< HEAD
     );  }
-=======
     )
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
@@ -2632,7 +2636,6 @@ return (
 =======
         </div>
       </div>
-<<<<<<< HEAD
     );  }
   // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
   // This also covers the case where a user was present but a login attempt failed, clearing the user.
@@ -2653,14 +2656,15 @@ return (
     );
     return null; // Or a minimal loader/empty div  }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 
 =======
 <<<<<<< HEAD
 =======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
     )
     return undefined, // Explicitly return undefined if condition is not met;
   }, [isEmailUnverified, verificationEmailSent, email, router]),;
@@ -2717,6 +2721,7 @@ return (
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2727,6 +2732,8 @@ return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
@@ -2757,13 +2764,12 @@ return (
 =======
         <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
-<<<<<<< HEAD
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
         <Card className='w-full max-w-md'>          <CardHeader>
-=======
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <Card className="w-full max-w-md">
           <CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2771,6 +2777,8 @@ return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
@@ -2825,6 +2833,7 @@ return (
                   <p className="text-sm text-red-600">{error.message}</p>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   id="email"
@@ -2856,6 +2865,8 @@ return (
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
               <div className='space-y-2'>
                 <label htmlFor='email' className='text-sm font-medium'>
@@ -2946,7 +2957,6 @@ return (
                   href='/auth/register'
                   className='text-blue-600 hover:underline'
                 >                  Sign up
-=======
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2957,9 +2967,6 @@ return (
                   Email
                 </label>
                 <Input
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   id='email'
                   type='email'
                   value={email}
@@ -2998,8 +3005,6 @@ return (
                   href='/auth/register'
                   className='text-blue-600 hover:underline'
                 >                  Sign up
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   id="email"
                   type="email"
                   value={email  } catch (error) {
@@ -3064,6 +3069,7 @@ return (
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -3079,6 +3085,8 @@ return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </Link>
               </p>
             </div>
@@ -3086,6 +3094,7 @@ return (
         </Card>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -3246,13 +3255,11 @@ if ( {) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 };export default LoginPage;
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 },
 export default LoginPage,
@@ -3316,9 +3323,12 @@ export default LoginPage;
 },;
 export default LoginPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

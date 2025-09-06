@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -13,9 +14,9 @@ import Link from './next / link';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import React from "react";
 import Link from "next/link";
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -25,6 +26,7 @@ export type EmptyStateProps = {;
   title: string;
   description?: string;
   icon?: React.ReactNode;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +68,8 @@ export default function EmptyState(): any ({;
 }: EmptyStateProps) {;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   primaryAction?: { label: string; href: string }
   secondaryAction?: { label: string; href: string }
 }
@@ -76,13 +80,14 @@ export default function EmptyState({
   primaryAction
   secondaryAction
 }: EmptyStateProps) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   primaryAction?: { label: string; href: string };
   secondaryAction?: { label: string; href: string };
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react';
 
 <<<<<<< HEAD
@@ -111,6 +116,7 @@ interface EmptyStateProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
 
@@ -131,6 +137,10 @@ const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className='w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3'>;
       <div className='text-3xl opacity-70'>{icon ?? '🧭'}</div>;
@@ -197,12 +207,13 @@ function EmptyState() {
             <Link href={primaryAction.href}>
               <a>
                 <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>              </a>export type EmptyStateProps = {
-<<<<<<< HEAD
   title: string
-=======
   title: string,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   description?: string;
   icon?: React.ReactNode;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -290,6 +301,7 @@ export default function EmptyState({ title, description, icon, primaryAction, se
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 };
@@ -351,6 +363,8 @@ function EmptyState() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 }
@@ -358,22 +372,19 @@ function EmptyState() {
 }
 }
 }
-=======
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 };
 
 export default EmptyState;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 };
 
 export default EmptyState;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

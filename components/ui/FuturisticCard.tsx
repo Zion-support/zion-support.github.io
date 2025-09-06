@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -38,6 +39,9 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 type Props = {;
 import React from './react';
@@ -116,6 +120,7 @@ export default function FuturisticCard({ title, description, cta }: Props) {
         {cta && <div className="mt-3">{cta}</div>}
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   );
 
@@ -124,15 +129,16 @@ export default function FuturisticCard({ title, description, cta }: Props) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
-=======
     </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

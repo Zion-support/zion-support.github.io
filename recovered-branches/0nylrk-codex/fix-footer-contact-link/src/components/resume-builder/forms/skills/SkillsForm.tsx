@@ -19,8 +19,6 @@ import {Alert, AlertDescription} from '@/components / ui / alert';
 import {use_resume} from '@/hooks / use_resume';
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { Skill  } from '@/types/resume';
 import { Button  } from '@/components/ui/button';
@@ -31,7 +29,6 @@ import { SkillsList  } from './SkillsList';
 import { AddSkillForm  } from './AddSkillForm';
 import { BulkAddSkills } from './BulkAddSkills';
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
-=======
 import {useState} from 'react';
 import {Skill} from '@/types/resume';
 import {Button} from '@/components/ui/button';
@@ -51,8 +48,11 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 =======
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { addSkill, deleteSkill, fetchResume } = useResume();
 
   const [error, setError] = useState<string | null>(null);
@@ -69,10 +69,13 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
         // Refresh the skills list
         await refreshSkills()
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { Skill } from '@/types/resume',;
 import { Button } from '@/components/ui/button',;
@@ -116,17 +119,21 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
         // Refresh the skills list;
         await refreshSkills();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       return success
     } catch (err: any) {
       setError(err.message |'An error occurred')
       return false
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -145,12 +152,16 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   };
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {
     if (confirm('Are you sure you want to delete this skill?')) {
       const success = await deleteSkill(id)
@@ -189,7 +200,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {
         setLocalSkills(resumeData.skills)
-=======
   },;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {;
@@ -213,6 +223,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsForm.tsx
 
@@ -282,22 +293,16 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     } catch (err: any) {
       setError(err.message |'Failed to refresh skills')
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   };
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <div className="space-y-6">
@@ -328,6 +333,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -542,9 +548,13 @@ return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold 
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsForm.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

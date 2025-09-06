@@ -15,21 +15,21 @@ import { toast } from "sonner",
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-=======
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "sonner";
-=======
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -39,30 +39,31 @@ import { toast } from "sonner",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export async function createJob(jobData: any) {
   try {
     const { data, error } = await supabase
       .from('jobs')
       .insert([jobData])
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .select();
       .single();
-=======
       .select()
-<<<<<<< HEAD
       .single();
     if (error) throw error;
     return data
   } catch (error: any) {
     console.error("Error creating job:", error);
     throw new Error(error.message |"Failed to create job")
-=======
       .single(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (error) throw error,
@@ -70,6 +71,7 @@ export async function createJob(jobData: any) {
   } catch (error: any) {
     console.error("Error creating job:", error),
     throw new Error(error.message || "Failed to create job")
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -90,6 +92,8 @@ console && console.error("Error creating job:", error);
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 export async function updateJob(jobId: string, jobData: any) {
@@ -98,6 +102,7 @@ export async function updateJob(jobId: string, jobData: any) {
       .from('jobs')
       .update(jobData)
       .eq('id', jobId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -129,27 +134,24 @@ import { toast } from "sonner",;
 export async function createJob(jobData:any) {;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .select();
       .single();
-=======
       .select()
-<<<<<<< HEAD
       .single();
     if (error) throw error;
     return data
   } catch (error: any) {
     console.error("Error updating job:", error);
     throw new Error(error.message |"Failed to update job")
-=======
       .single(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
     if (error) throw error,
     return data
   } catch (error: any) {
     console.error("Error updating job:", error),
     throw new Error(error.message || "Failed to update job")
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
 export async function getJobById(jobId: string) {
@@ -157,29 +159,21 @@ export async function getJobById(jobId: string) {
     const { data, error } = await supabase
       .from('jobs')
       .select('*')
-<<<<<<< HEAD
       .eq('id', jobId);
       .single();
-=======
       .eq('id', jobId)
-<<<<<<< HEAD
       .single();
     if (error) throw error;
-=======
       .single(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
     if (error) throw error,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return data
   } catch (error: any) {
     console.error("Error fetching job:", error),
     toast.error("Failed to load job details"),
     return null
-<<<<<<< HEAD
   }
 }
-=======
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "sonner",;
 export async function createJob(jobData: any) {;
@@ -396,8 +390,11 @@ if (throw error) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

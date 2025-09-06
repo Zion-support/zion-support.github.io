@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -27,6 +28,8 @@ export default function MDMPage() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react';
 import Head from 'next/head';
@@ -45,22 +48,15 @@ export default function MDMPage() {
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }]
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
 import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function MDMPage() {
   const features = [
     'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
@@ -74,6 +70,7 @@ export default function MDMPage() {
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -84,6 +81,8 @@ export default function MDMPage() {
 >>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout>
       <Head>
@@ -108,6 +107,7 @@ export default function MDMPage() {
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, compliant device fleets across iOS, Android, macOS, and Windows.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -120,17 +120,21 @@ export default function MDMPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <a href="/contact" className="px-8 py-4">Talk to an Engineer</a>
               <a href="/market-pricing" className="px-8 py-4">Market Pricing</a>
-=======
               <a href="/contact" className="px-8 py-4">Talk to an Engineer</Link>
               <a href="/market-pricing" className="px-8 py-4">Market Pricing</Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
           </header>
           <section>
@@ -180,6 +184,7 @@ export default function MDMPage() {
                   <ExternalLink className="w-4 h-4" />
                   <span>{r.name}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -190,12 +195,17 @@ export default function MDMPage() {
               ))}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                </a>
+              ))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -211,6 +221,8 @@ export default function MDMPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
           </section>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -223,6 +235,7 @@ export default function MDMPage() {
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -241,10 +254,10 @@ export default function MDMPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 }
@@ -344,11 +357,12 @@ function MDMPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

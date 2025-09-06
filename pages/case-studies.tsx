@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -64,12 +65,11 @@ import {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -83,6 +83,26 @@ import { motion } from 'framer-motion';
 <<<<<<< HEAD
 
 
+=======
+origin/automation-improvements-final
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import {
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  TrendingUp
+  CheckCircle
+  Users
+  Building
+  Globe
+  Award
+  Clock
+  BarChart3
+  Cloud
+  Shield
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Phone,
   Mail,
@@ -97,9 +117,12 @@ import { motion } from 'framer-motion';
   BarChart3,
   Cloud,
   Shield;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';
 const caseStudies = [
   {
@@ -259,7 +282,6 @@ const stats = [;
   { number: "99 && 99.9%", label: "Success Rate" },;
   { number: "24/7", label: "Support Available" }
 ];
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -753,6 +775,7 @@ function CaseStudiesPage() {
                 <a
                   href="/services"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -794,10 +817,25 @@ export default function CaseStudiesPage() {;
 =======
 =======
 =======
+=======
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
+                >
+                  Explore Our Services
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+  );
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
 import Head from 'next/head';
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import Head from 'next/head';
+origin/automation-improvements-final
 import Link from 'next/link';
 import Layout from '../components/Layout';
 export default function CaseStudiesPage() {
@@ -859,6 +897,7 @@ export default function CaseStudiesPage() {
       </section>
     </Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -867,9 +906,13 @@ export default function CaseStudiesPage() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
  </Head> </section> </Layout>
-=======
 export default function CaseStudiesPage() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1095,15 +1138,17 @@ export default function CaseStudiesPage() {
   );
 
  </Head> </section> </Layout>
-=======
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 export default function CaseStudiesPage() {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 	return (
 		<Layout>
 			<Head>
@@ -1128,6 +1173,7 @@ export default function CaseStudiesPage() {
 			</section>
 		</Layout>
 	)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1271,12 +1317,10 @@ return (
 
 =======
 <<<<<<< HEAD
-}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+}
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -1301,7 +1345,10 @@ export default function CaseStudiesPage(req, res) {
   }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

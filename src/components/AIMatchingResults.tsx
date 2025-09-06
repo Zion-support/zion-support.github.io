@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/AIMatchingResults.tsx
 
 
@@ -8,6 +9,8 @@ import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { MatchResultItem } from '@/lib/ai-matchmaking'
 import { Card, CardContent } from '@/components/ui/card'
@@ -15,15 +18,16 @@ import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
-<<<<<<< HEAD
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
-=======
 import Skeleton from '@/components/ui/skeleton'
 import { cn } from '@/lib/utils'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -33,6 +37,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -50,6 +55,8 @@ interface AIMatchingResultsProps {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
@@ -67,6 +74,7 @@ interface AIMatchingResultsProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                                   </div>
                                 </div>
@@ -80,6 +88,9 @@ interface AIMatchingResultsProps {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AIMatchingResults({
 
   matches
@@ -640,6 +651,7 @@ if ( {) {
                                       ? '/hour'
                                       : ''}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>>                                   </div>
                                 </div>
@@ -648,17 +660,18 @@ if ( {) {
 =======
 =======
 <<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                                   </div>
                                 </div>
                               )}
                             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             <div className='mt-2 flex flex-wrap gap-1'>
                               <Badge variant='outline'>{match.category}</Badge>
                               {match.skills &&
@@ -680,6 +693,7 @@ if ( {) {
               <div className='text-center py-8 text-zion-slate-light'>
                 No {tab} matches found.
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             )}
           </TabsContent>
@@ -817,6 +831,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                                 <Badge key={i} variant="outline">;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             
                             <div className="mt-2 flex flex-wrap gap-1">
                               <Badge variant="outline">
@@ -870,30 +886,25 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="text-center py-8 text-zion-slate-light">;
                 No {tab} matches found.;
               </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </TabsContent>
         ))}
-<<<<<<< HEAD
       </Tabs>
     </div>
   )
-<<<<<<< HEAD
-=======
 };
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </Tabs>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/AIMatchingResults.tsx
 <<<<<<< HEAD
@@ -968,3 +979,5 @@ if (isLoading) {";
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

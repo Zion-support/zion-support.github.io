@@ -46,9 +46,12 @@ export type FeedbackWidgetProps = {;
 }
 export default function FeedbackWidget({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   responseId
   aiModel
 }: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
@@ -56,7 +59,6 @@ export default function FeedbackWidget({
   aiModel?: string
 }
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
-=======
   responseId,
   aiModel,;
 }: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {;
@@ -65,9 +67,12 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
 };
 
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
   const [comment, setComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -195,7 +200,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setError(e?.message |'Something went wrong');
     } finally {
       setSubmitting(false);    }
-<<<<<<< HEAD
   }
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
@@ -247,9 +251,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
 =======
     }
   }
-=======
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
@@ -594,6 +596,7 @@ if ( {) {
       )}
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 
 }
@@ -603,18 +606,18 @@ if ( {) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

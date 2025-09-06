@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   return (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -38,7 +41,6 @@ export function ProfileContact({
       })
     }, 1000)
   }
-=======
 
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -71,8 +73,8 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         description: `Your message has been sent to ${profileName}.`})
     }, 1000)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -81,6 +83,8 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -90,6 +94,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
       </h3>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       {email && (
 =======
@@ -97,12 +102,9 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       {email && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="mb-4 text-zion-slate-light">
@@ -111,6 +113,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             href={`mailto:${email}`}
 <<<<<<< HEAD
             className="text-zion-cyan hover:underline truncate block"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             {email}
@@ -233,19 +236,18 @@ export function ProfileContact(): any ({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {email}
           </Link>
         </div>
       )}
-<<<<<<< HEAD
-=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
             <Input
-<<<<<<< HEAD
               placeholder='Subject'
               value={subject}
               onChange={e => setSubject(e.target.value)}
@@ -254,12 +256,6 @@ export function ProfileContact(): any ({;
         <div className="space-y-4">
           <div>
             <Input
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               placeholder="Subject"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               value={subject}
@@ -274,11 +270,14 @@ export function ProfileContact(): any ({;
               value={message}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <Send className="mr-2 h-4 w-4" />
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onChange={e => setMessage(e.target.value)}
               className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]'
               required
@@ -350,7 +349,6 @@ export function ProfileContact(): any ({;
             <Send className='mr-2 h-4 w-4' />
             {isSending ? 'Sending...' : 'Send Message'}          </Button>            disabled={isSending}
           >
-=======
               onChange={(e) => setMessage(e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
               required
@@ -361,11 +359,6 @@ export function ProfileContact(): any ({;
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled={isSending}
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Send className="mr-2 h-4 w-4" />
             {isSending ? "Sending..." : "Send Message"}
           </Button>
@@ -373,13 +366,11 @@ export function ProfileContact(): any ({;
       </form>
     </div>
   )
-<<<<<<< HEAD
   `mailto:$ {
   email
 }` "
 }className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
 }'"}
-=======
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -506,8 +497,11 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

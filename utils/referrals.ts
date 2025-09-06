@@ -1,18 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',;
 export async function triggerReferralEvent(event: ReferralEvent, code?: string) {;
   try {;
     const refCode = code || (typeof window !== 'undefined' ? (localStorage.getItem('ref_code') || '') : ''),;
     if (!refCode) return,;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',
@@ -33,6 +35,8 @@ if (return, ) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export async function triggerReferralEvent() {
   try {const refCode = code |(typeof window !== 'undefined' ? (localStorage.getItem('ref_code') |'') : '');
     if (!refCode) return;
@@ -42,25 +46,15 @@ export async function triggerReferralEvent() {
       body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch {}
-=======
 export async function triggerReferralEvent(event: ReferralEvent, code?: string) {;
   try {
     const refCode = code || (typeof window !== 'undefined' ? (localStorage.getItem('ref_code') || '') : '');
     if (!refCode) return;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     await fetch('/api/referrals/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   } catch {}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -89,6 +83,7 @@ export async function triggerReferralEvent(event: ReferralEvent, code?: string) 
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
@@ -104,3 +99,6 @@ export async function triggerReferralEvent(event: ReferralEvent, code?: string) 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

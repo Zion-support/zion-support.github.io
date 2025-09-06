@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useRouter } from 'next/router', // Changed from useParams
@@ -7,12 +8,16 @@ import { useEffect, useState  } from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router', // Changed from useParams
 import { useEffect, useState  } from 'react';
-=======
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Image from 'next/image';
 import { Button  } from '@/components/ui/button';
 import { NEW_PRODUCTS  } from '@/data/newProductsData';
@@ -47,12 +52,15 @@ export default function ProductPage() {;
           setProduct(data)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router', // Changed from useParams;
 import { useEffect, useState } from 'react',;
 import Image from 'next/image',;
@@ -88,6 +96,7 @@ export default function ProductPage() {;
           setProduct(data);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>         }
@@ -99,11 +108,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
 >>>>>>>       } catch (err) {
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err })
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -115,14 +127,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct()
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     },;
@@ -137,15 +150,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },;
     // Only fetch if id is available (from router);
     if (id) {;
       fetchProduct();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, [id]), // id is now from router.query
@@ -155,10 +165,13 @@ ursor/fix-website-loading-errors-and-merge-6662
   if (!product) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return <div className="p-6 text-white">Product not found</div>;
   }
   const inCart = items.some(i => i.id === product.id);
@@ -179,6 +192,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         title = {product.title,}
         description = {product.description,}
         ogImage = {product.images?.[0],}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>       />
 ursor/fix-website-loading-errors-and-merge-6662
@@ -212,6 +226,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return <div className="p-6 text-white">Product not found</div>
   }, [id]), // id is now from router.query;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -254,17 +270,21 @@ ursor/fix-website-loading-errors-and-merge-6662
         description={product.description}
         ogImage={product.images?.[0]}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
 >>>>>>>       <div className="min-h-screen bg-zion-blue p-6 text-white">
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
             <Image
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -277,18 +297,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               fill
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               src = {product.images[0] |'/placeholder.svg',}
               alt = {product.title,}
-=======
               src={product.images[0] || '/placeholder.svg'}
               alt={product.title}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="object-cover rounded-md"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             />
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -300,6 +321,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        <Button onClick={handleAdd} disabled={adding |inCart}>
+          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>
       </div>
     </>
@@ -325,19 +350,24 @@ product.title ;
 }';
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button onClick={handleAdd} disabled={adding || inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
-=======
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>;
       </div>;
     </>;
@@ -361,8 +391,11 @@ product.title ;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

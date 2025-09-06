@@ -25,18 +25,18 @@ function OnboardingPage() {
 
 =======
 import OnboardingWizard from '../components/onboarding/OnboardingWizard';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function OnboardingPage() {return (;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function OnboardingPage(req, res) {
   try {
-=======
 export default function OnboardingPage() {;
-=======
 export default function OnboardingPage(req, res) {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -49,10 +49,14 @@ export default function OnboardingPage(req, res) {
   return (;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  return (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div>;
       <OnboardingWizard />;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -61,10 +65,13 @@ export default function OnboardingPage(req, res) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -80,3 +87,6 @@ export default function OnboardingPage(req, res) {
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,12 +40,13 @@ function AIConsciousnessEvolutionPage() {
       <div className="max - w-7xl mx - auto">;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link";
 export const metadata = {title: "AI Consciousness Evolution - Zion Tech Group";
   description: "Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.";
   keywords: "AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group"}
 export default function AIConsciousnessEvolutionPage() {return (;
-=======
 import Link from "next/link",;
 export const metadata = {;
   title: "AI Consciousness Evolution - Zion Tech Group",;
@@ -52,7 +54,6 @@ export const metadata = {;
   keywords: "AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group"},;
 export default function AIConsciousnessEvolutionPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -75,11 +76,8 @@ export default function AIConsciousnessEvolutionPage() {;
             self - awareness, and cognitive evolution capabilities.;
 =======
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
-<<<<<<< HEAD
             Pushing the boundaries of artificial intelligence by developing systems that exhibit emergent consciousness;
-=======
             Pushing the boundaries of artificial intelligence by developing systems that exhibit emergent consciousness,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             self-awareness, and cognitive evolution capabilities.;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

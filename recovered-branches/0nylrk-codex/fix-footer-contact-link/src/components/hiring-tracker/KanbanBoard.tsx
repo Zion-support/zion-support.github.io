@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -21,9 +18,12 @@ import {useIsMobile} from "@/hooks/use-mobile";
 interface DnDLocation {
   droppableId: string,
   index: number
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -33,15 +33,17 @@ import { Button } from "@/components/ui/button",
 import { Skeleton } from "@/components/ui/skeleton",
 import { toast } from "@/hooks/use-toast",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { KanbanColumn } from "./KanbanColumn";
 import { useIsMobile } from "@/hooks/use-mobile";
 interface DnDLocation {
-=======
 import { KanbanColumn } from "./KanbanColumn",
 import { useIsMobile } from "@/hooks/use-mobile",
 interface DnDLocation {
@@ -61,10 +63,13 @@ interface DnDLocation {;
   droppableId: string,;
   index: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 interface DropResult {;
@@ -74,6 +79,7 @@ interface DropResult {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -81,6 +87,8 @@ interface DropResult {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   droppableId: string
 
@@ -120,6 +128,7 @@ interface KanbanBoardProps {
   jobId?: string
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -130,14 +139,17 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-}
-<<<<<<< HEAD
-export function KanbanBoard({ jobId }: KanbanBoardProps) {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
+export function KanbanBoard({ jobId }: KanbanBoardProps) {
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
@@ -161,6 +173,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
          destination.index === source.index)) {
       return
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -200,6 +213,8 @@ interface DropResult {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Get the application that was dragged
     const application = applications.find(app => app.id === draggableId);
     if (!application) return;
@@ -214,9 +229,6 @@ interface DropResult {;
       ...columns;
       [source.droppableId]: sourceColumn;
       [destination.droppableId]: destColumn});
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Define the kanban board columns based on application statuses;
@@ -360,10 +372,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
          destination.index === source.index)) {;
       return;
     }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Get the application that was dragged
@@ -387,8 +395,11 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
 =======
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Update status in the database
     try {
       await updateApplicationStatus(draggableId, newStatus),
@@ -403,6 +414,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
         variant: "destructive"})
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -412,13 +424,17 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>
@@ -431,6 +447,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
               <Skeleton className="h-[400px] w-full" />
             </CardContent>
           </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -502,6 +519,8 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     // Get the application that was dragged;
     const application = applications.find(app => app.id === draggableId),;
@@ -573,6 +592,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -793,16 +813,15 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ))}
       </div>
     )
   }
-<<<<<<< HEAD
   if (!applications |applications.length === 0) {
-=======
   
   if (!applications || applications.length === 0) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
       <Card className="text-center py-16">
         <CardContent>
@@ -824,6 +843,7 @@ if ( {) {
             id={column.id}
             title={column.title}
             description={column.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 
@@ -963,6 +983,8 @@ if (isLoading) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             applications={columns[column.id] |[]}
             count={columns[column.id]?.length |0}
           />
@@ -971,7 +993,6 @@ if (isLoading) {
     </DragDropContext>
   )
 }
-=======
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
           />
@@ -981,5 +1002,8 @@ if (isLoading) {
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

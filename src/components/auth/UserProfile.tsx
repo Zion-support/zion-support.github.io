@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/UserProfile.tsx
 <<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 'use client'
 import React, { useEffect, useState } from 'react'
 import {supabase} from '@/utils/supabase/client'
@@ -53,7 +56,6 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
   const handleSignIn = () => {
     router.push('/auth/login')
   }
-=======
 'use client';
 import React, { useEffect, useState } from 'react';
 import { supabase } from '@/utils/supabase/client';
@@ -100,11 +102,14 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (loading) {
     return (
       <Card className="w-full max-w-sm">
@@ -440,15 +445,16 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <Button onClick={handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button onClick={handleSignOut} variant='outline' className='w-full'>
           <LogOut className='h-4 w-4 mr-2' />
-<<<<<<< HEAD
-=======
           Sign Out
         </Button>;
       </CardContent>;
@@ -456,6 +462,7 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
   );
 }
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -476,10 +483,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        
+        <Button onClick={handleSignOut} variant="outline" className="w-full">
+          <LogOut className="h-4 w-4 mr-2" />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Sign Out
         </Button>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -670,14 +683,16 @@ import {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-  )
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  )
   )
 } 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   )
 } 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

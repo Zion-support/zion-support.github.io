@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -35,11 +36,14 @@ class ErrorBoundary extends React.Component {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {
@@ -50,11 +54,15 @@ import {
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -255,6 +263,10 @@ import {;
 =======
 =======
 <<<<<<< HEAD
+=======
+origin/automation-improvements-final
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Mail,
   Lock,
   Eye,
@@ -429,11 +441,9 @@ import {;
   TiredFace2,
   SleepyFace2,
   YawningFace2,
-<<<<<<< HEAD
-<<<<<<< HEAD
   DizzyFace2,
-=======
   DizzyFace2,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
@@ -457,6 +467,13 @@ import {;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+} from "lucide-react";
+  DizzyFace2
+} from 'lucide-react';
+origin/automation-improvements-final
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Mail
   Lock
   Eye
@@ -634,6 +651,7 @@ import {;
   DizzyFace2
 } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function LoginPage() {
@@ -659,11 +677,13 @@ export default function LoginPage() {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function LoginPage() {
   const [formData, setFormData] = useState({
-<<<<<<< HEAD
     email: ""
     password: ""
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function LoginPage() {;
   const [formData, setFormData] = useState({;
@@ -695,27 +715,26 @@ function LoginPage() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     email: "",
     password: "",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   const [error, setError] = useState("");
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
-<<<<<<< HEAD
       ...prev
       [name]: value
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ...prev,
       [name]: value,
   const [error, setError] = useState('');
@@ -752,6 +771,7 @@ export default function LoginPage() {
     setFormData(prev => ({
       ...prev,
       [name]: value
+<<<<<<< HEAD
       ...prev
       [name]: value
 <<<<<<< HEAD
@@ -760,6 +780,11 @@ export default function LoginPage() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/automation-improvements-final
+      ...prev
+      [name]: value
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
@@ -793,10 +818,6 @@ export default function LoginPage() {
       // Simulate API call;
 =======
     setIsLoading(true);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     setError("");
     try {
       // Simulate API call
@@ -817,6 +838,7 @@ export default function LoginPage() {
     } catch (err) {;
       setError("Login failed. Please try again.");
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -827,6 +849,8 @@ export default function LoginPage() {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setError('');
     try {
       // Simulate API call
@@ -840,6 +864,7 @@ export default function LoginPage() {
       }
     } catch (err) {
       setError('Login failed. Please try again.');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -855,6 +880,9 @@ export default function LoginPage() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } finally {
     } finally {;
       setIsLoading(false);
@@ -867,6 +895,7 @@ export default function LoginPage() {
       <Head>
         <title>Login - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -874,10 +903,13 @@ export default function LoginPage() {
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta
           name="description"
           content="Sign in to your Zion Tech Group account to access your dashboard and services."
         />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
@@ -896,6 +928,10 @@ export default function LoginPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -912,6 +948,7 @@ export default function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -950,9 +987,12 @@ export default function LoginPage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              Or{" "}
 =======
+              Or{" "}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              Or{" "}
               Or{' '}
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
 =======
@@ -960,6 +1000,9 @@ export default function LoginPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link
                 href="/contact"
 
@@ -999,6 +1042,7 @@ export default function LoginPage() {
 =======
               <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1014,18 +1058,21 @@ export default function LoginPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
-<<<<<<< HEAD
-=======
-=======
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Email address
                 </label>
                 <div className="relative">
@@ -1060,6 +1107,7 @@ export default function LoginPage() {
               </div>
               <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1067,10 +1115,13 @@ export default function LoginPage() {
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1092,6 +1143,10 @@ export default function LoginPage() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Password
                 </label>
                 <div className="relative">
@@ -1155,6 +1210,7 @@ export default function LoginPage() {
 =======
                   />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1162,10 +1218,13 @@ export default function LoginPage() {
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <label
                     htmlFor="remember-me"
                     className="ml-2 block text-sm text-gray-900"
                   >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1187,6 +1246,10 @@ export default function LoginPage() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     Remember me
                   </label>
                 </div>
@@ -1444,17 +1507,18 @@ if ( {) {
                   <div className="w-full border-t border-gray-300" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   <span className="px-2 bg-white text-gray-500">
                     Or continue with
                   </span>
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -1476,6 +1540,7 @@ if ( {) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1524,9 +1589,12 @@ if ( {) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              Don't have an account?{" "}
 =======
+              Don't have an account?{" "}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              Don't have an account?{" "}
               Don't have an account?{' '}
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
 =======
@@ -1538,6 +1606,9 @@ if ( {) {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;

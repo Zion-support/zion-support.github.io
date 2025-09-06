@@ -8,8 +8,8 @@ export default function ManifestoPage(): JSX.Element {
     <>
       <Head>
         <title>Zion Manifesto</title>
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
 
@@ -24,6 +24,8 @@ export default function ManifestoPage(): JSX.Element {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -139,6 +141,7 @@ A public commitment to build an AI-native, trustless, and talent-first marketpla
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -216,11 +219,15 @@ export default function ManifestoPage (): JSX.Element {
 };
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -229,3 +236,5 @@ export default function ManifestoPage (): JSX.Element {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

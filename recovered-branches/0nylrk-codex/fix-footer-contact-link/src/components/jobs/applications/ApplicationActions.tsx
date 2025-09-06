@@ -10,18 +10,20 @@ import { Link } from "react-router-dom",
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Button} from "@/components/ui/button";
 import {Eye, ChevronDown, Loader2} from "lucide-react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -37,6 +39,10 @@ import { useState } from "react",
 import { Link } from "react-router-dom",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { useState } from "react",
+import { Link } from "react-router-dom",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { 
   DropdownMenu;
   DropdownMenuContent;
@@ -46,6 +52,7 @@ import {
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -58,18 +65,22 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Eye, ChevronDown, Loader2 } from "lucide-react";
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
-=======
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ApplicationActionsProps {
 
   application: JobApplication
@@ -79,24 +90,30 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 export function ApplicationActions({;
   application;
   processingId;
   onViewApplication;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ApplicationActions({
   application,
   processingId,
   onViewApplication,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ========
@@ -215,6 +232,8 @@ export function ApplicationActions({;
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onStatusChange
 }: ApplicationActionsProps) {
   return (
@@ -267,6 +286,7 @@ export function ApplicationActions({;
         </DropdownMenuContent>
       </DropdownMenu>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -277,13 +297,17 @@ export function ApplicationActions({;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Button
         variant="default"
-=======
       <Button 
         variant="default" 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         size="sm"
         asChild
       >
@@ -293,6 +317,7 @@ export function ApplicationActions({;
       </Button>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -339,6 +364,9 @@ interface ApplicationActionsProps {
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import {;
@@ -555,8 +583,11 @@ onStatusChange
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

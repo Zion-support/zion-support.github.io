@@ -48,8 +48,11 @@ interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   FormField
   FormItem
@@ -66,6 +69,7 @@ interface CertificationFormFieldsProps {
 export function CertificationFormFields({
   form
 }: CertificationFormFieldsProps) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
@@ -290,6 +294,23 @@ export function CertificationFormFields({
   form,
 }: CertificationFormFieldsProps) {
 
+=======
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
+import {Input} from '@/components/ui/input';
+import {UseFormReturn} from 'react-hook-form';
+import {CertificationFormValues} from './types';
+interface CertificationFormFieldsProps {
+  form: UseFormReturn<CertificationFormValues>
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
+import { Input } from '@/components/ui/input',;
+import { UseFormReturn } from 'react-hook-form',;
+import { CertificationFormValues } from './types';
+interface CertificationFormFieldsProps {;
+  form: UseFormReturn<CertificationFormValues>;
+}
+
+export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -356,14 +377,30 @@ export function CertificationFormFields({
             <FormItem>
               <FormLabel>Issue Date</FormLabel>
               <FormControl>
+<<<<<<< HEAD
 <Input type="date" {...field} value={field.value |""} />
+=======
+                <Input type="date" {...field} value={field.value |""} />
+                <Input 
+                  type="date" 
+                  {...field}
+                  value={field.value || ''}
+                />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
 />
         <FormField
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        />
+        <FormField
+        />;
+        <FormField;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           control={form.control}
           name="expiration_date"
           render={({ field }) => (
@@ -371,9 +408,16 @@ export function CertificationFormFields({
               <FormLabel>Expiration Date (Optional)</FormLabel>
               <FormControl>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+                <Input type="date" {...field} value={field.value |""} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Input 
 
                   type="date" 
@@ -383,6 +427,7 @@ export function CertificationFormFields({
               </FormControl>;
               <FormMessage />;
             </FormItem>;
+<<<<<<< HEAD
 
 
 
@@ -415,6 +460,8 @@ export function CertificationFormFields({
               </FormControl>
               <FormMessage />
             </FormItem>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         />
       </div>
@@ -451,6 +498,7 @@ export function CertificationFormFields({
         />
       </div>
     </>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -627,3 +675,10 @@ export function CertificationFormFields({
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

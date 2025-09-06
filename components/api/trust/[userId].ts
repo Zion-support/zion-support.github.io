@@ -20,14 +20,15 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 
 import { computeTrustScore } from '../../../utils/trust/compute';
 import type {
-<<<<<<< HEAD
   TrustMetricInputs
   TrustScoreBreakdown;
-=======
   TrustMetricInputs,;
   TrustScoreBreakdown,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(
@@ -747,7 +748,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
   res.setHeader('Allow', 'GET, POST');
-<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' });      } catch {}
       return res.status(200).json(breakdown)
     } catch (e: any) {
@@ -758,8 +758,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(405).json({ error: 'Method not allowed' })
 }
-=======
   return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -767,3 +767,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

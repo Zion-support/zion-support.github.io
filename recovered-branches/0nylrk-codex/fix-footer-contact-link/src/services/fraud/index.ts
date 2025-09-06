@@ -21,12 +21,15 @@ export const Index = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // This file re-exports all fraud detection functionality
 // to maintain backward compatibility
 export * from './analyzeContent';
@@ -34,12 +37,14 @@ export * from './analyzeEmail';
 export * from './flagContent';
 export * from './messageCheck';
 export * from './monitorContent';
-<<<<<<< HEAD
 export * from './signupCheck';
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // This file re-exports all fraud detection functionality;
 // to maintain backward compatibility;
 export * from './analyzeContent',;
@@ -47,6 +52,7 @@ export * from './analyzeEmail',;
 export * from './flagContent',;
 export * from './messageCheck',;
 export * from './monitorContent',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -67,3 +73,6 @@ export * from './signupCheck';
 export * from './signupCheck';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export * from './signupCheck';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

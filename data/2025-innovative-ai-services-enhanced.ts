@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ];      mobile: '+1 302 464 0950';
@@ -14,6 +15,8 @@ import { ServiceVariant } from '../types / service - variants';
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -957,21 +960,18 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.'
     launchDate: '2024-03-25'
     customers: 156
     rating: 4.8
     reviews: 89
   }
-=======
       'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.',
     launchDate: '2024-03-25',
     customers: 156,
     rating: 4.8,
     reviews: 89,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -986,12 +986,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     rating: 4.8
 
     reviews: 89
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIService2025 {;
   id: string,;
@@ -1254,12 +1250,11 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     customers: 156,;
     rating: 4.8;
     reviews: 89;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

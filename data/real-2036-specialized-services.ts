@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type Real2036SpecializedService = {
   id: string, name: string,
   tagline: string, description: string,
@@ -6,15 +7,19 @@ export type Real2036SpecializedService = {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 <<<<<<< HEAD
 =======
 export type Real2036SpecializedService = {
-=======
 export type Real2036SpecializedService = {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -945,6 +950,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     ]
     technology: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];    id: 'neuromorphic-computing-platform';
     name: 'Neuromorphic Computing Platform';
@@ -954,14 +960,19 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     price: '$3,999';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Space systems'
       'Safety protocols'
       'Training technology'
       'Customer management'
     ]
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Space systems',
       'Safety protocols',
       'Training technology',
@@ -972,7 +983,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
 ];    id: 'neuromorphic - computing - platform';
 =======
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];    id: 'neuromorphic-computing-platform';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     name: 'Neuromorphic Computing Platform';
@@ -1595,6 +1605,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   id: string,;
   name: string,;
@@ -1878,10 +1889,12 @@ export type Real2036SpecializedService = {;
 =======
 
 =======
+=======
+  }
+];
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type Real2036SpecializedService = {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -2120,12 +2133,11 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'],;
     useCases: ['Space tourismTraining programsSafety managementCustomer experience'],;
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management'];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

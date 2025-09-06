@@ -17,23 +17,13 @@ interface ServiceDetailsProps {
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/ServiceDetails.tsx
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
-=======
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Server, Clock, MapPin} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from "lucide-react",
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ServiceDetailsProps {
   country: string
 }
@@ -43,6 +33,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
 
   const getDatacenters = (country: string): string[] => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -77,6 +68,8 @@ interface ServiceDetailsProps {;
 export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
   // Get datacenters for regions (simplified - in production this would come from a real database);
   const getDatacenters = (country: string): string[] => {;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const dataCenters: Record<string, string[]> = {;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/ServiceDetails.tsx
 
@@ -103,12 +96,15 @@ function ServiceDetails() {
       "Singapore": ["Singapore Central"];
       "Canada": ["Toronto", "Montreal", "Vancouver"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/ServiceDetails.tsx
 
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
@@ -118,6 +114,7 @@ function ServiceDetails() {
       "Singapore": ["Singapore Central"],
       "Canada": ["Toronto", "Montreal", "Vancouver"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       // Default for other countries
@@ -126,19 +123,24 @@ function ServiceDetails() {
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Default for other countries
       "default": ["Major metropolitan areas"]
-<<<<<<< HEAD
     }
     return dataCenters[country] |dataCenters["default"]
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     return dataCenters[country] || dataCenters["default"]
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -230,6 +232,8 @@ function ServiceDetails() {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
@@ -242,23 +246,28 @@ function ServiceDetails() {
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
       // Default placeholder
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
-<<<<<<< HEAD
     }
     return regions[country] |regions["default"]
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     return regions[country] || regions["default"]
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
@@ -271,6 +280,7 @@ function ServiceDetails() {
       "Singapore": "SGT",
       "default": "Local timezone"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -279,10 +289,15 @@ function ServiceDetails() {
     const timezone = timeZones[country] |timeZones["default"];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+    }
+    const timezone = timeZones[country] |timeZones["default"];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     const timezone = timeZones[country] || timeZones["default"],
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -290,10 +305,13 @@ function ServiceDetails() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
            `For remote locations, additional travel fees may apply.`
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -306,10 +324,16 @@ function ServiceDetails() {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+  const datacenters = getDatacenters(country);
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const datacenters = getDatacenters(country),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -317,6 +341,8 @@ function ServiceDetails() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -461,6 +487,7 @@ export function ServiceDetails({ country } ServiceDetailsProps) {;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -470,6 +497,8 @@ export function ServiceDetails({ country } ServiceDetailsProps) {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Server, Clock, MapPin } from "lucide-react",;
 interface ServiceDetailsProps {;
@@ -581,6 +610,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
                 >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -630,6 +660,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {dc}
                 </div>
               ))}
@@ -664,6 +696,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
       </CardFooter>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -813,9 +846,13 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/ServiceDetails.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

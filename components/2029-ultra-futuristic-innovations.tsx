@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -54,11 +55,15 @@ import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
@@ -69,7 +74,6 @@ import { motion } from 'framer-motion';
 
 =======
 import {
-<<<<<<< HEAD
   Rocket
   Brain
   Atom
@@ -81,8 +85,11 @@ import {
   TrendingUp
   Eye
   Timer;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Rocket,
   Brain,
   Atom,
@@ -95,6 +102,7 @@ import {
   Eye,;
   Timer,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -106,6 +114,8 @@ import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Ey
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
@@ -121,6 +131,7 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
 export default function UltraFuturistic2029InnovationsPage() {
 <<<<<<< HEAD
   const contactInfo = {
+<<<<<<< HEAD
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -137,21 +148,25 @@ export default function UltraFuturistic2029InnovationsPage() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
-=======
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',;
   };
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const all2029Services = [
     ...cuttingEdgeInnovations2029
     ...spaceColonization2029Services
@@ -319,19 +334,12 @@ export default function UltraFuturistic2029InnovationsPage() {;
 =======
       {/* Background */}
       <UltraFuturisticBackground2029 />
-<<<<<<< HEAD
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />
-=======
 
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -1509,6 +1517,7 @@ className={`w-20 h-20 bg-gradient-to-br ${stat && stat.color} rounded-3xl flex i
   contactInfo.mobile
 }`
 }className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > Call Now </a> </div> </motion.div> </div> </section> {
+<<<<<<< HEAD
 
   /* Footer */ 
 
@@ -1994,16 +2003,14 @@ className={`w-20 h-20 bg-gradient-to-br ${stat && stat.color} rounded-3xl flex i
 }className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > Call Now </a> </div> </motion.div> </div> </section> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   /* Footer */
 }<UltraFuturisticFooter2029 /> </>)   )
 }
-=======
   /* Footer */ 
 }<UltraFuturisticFooter2029 /> </>)
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   /* Footer */ 
-<<<<<<< HEAD
 }<UltraFuturisticFooter2029 /> </>)   )
 }
 ;
@@ -2031,9 +2038,11 @@ className={`w-20 h-20 bg-gradient-to-br ${stat && stat.color} rounded-3xl flex i
 }
 }
 }
-=======
 }<UltraFuturisticFooter2029 /> </>)
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

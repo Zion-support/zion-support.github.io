@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/FraudStatsCards.tsx
 
 <<<<<<< HEAD
@@ -40,17 +41,36 @@ interface FraudStatsCardsProps {
 
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {
   Card
   CardHeader
   CardTitle
   CardDescription
+<<<<<<< HEAD
+=======
+import React from "react";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "@/components/ui/card";
 
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
 
+<<<<<<< HEAD
+=======
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",
+import { FraudStats } from "@/types/fraud",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface FraudStatsCardsProps {
   stats: FraudStats
 }
@@ -65,7 +85,11 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -75,6 +99,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -138,6 +163,9 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
               {stats.suspicious_count}
             </CardTitle>
 =======
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -148,6 +176,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,6 +194,9 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
               {stats.dangerous_count}
             </CardTitle>
 =======
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -175,6 +207,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -191,6 +224,9 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
             {stats.actioned_count}
           </CardTitle>
 =======
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
@@ -198,6 +234,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,6 +251,9 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
             {stats.false_positives}
           </CardTitle>
 =======
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
@@ -221,11 +261,18 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           <CardDescription>False Positives</CardDescription>
         </CardHeader>
       </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 },
 import React from "react",;
@@ -479,6 +526,7 @@ export default FraudStatsCards;
           <CardDescription>False Positives</CardDescription>;
         </CardHeader>;
       </Card>;
+<<<<<<< HEAD
 
     </div>;
 );
@@ -488,3 +536,10 @@ export default FraudStatsCards;
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    </div>;
+);
+};
+
+export default FraudStatsCards;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

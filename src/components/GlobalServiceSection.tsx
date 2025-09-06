@@ -7,10 +7,13 @@ import { GradientHeading } from './GradientHeading'
 import {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Server
   HardDrive
   Network
@@ -58,26 +61,29 @@ const services = [
   }
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
   Truck,
 } from 'lucide-react'
 import { Button } from './ui/button'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Server,
   HardDrive,
   Network,
   Clock,
   Recycle,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   Truck,
 } from 'lucide-react'
 import { Button } from './ui/button'
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Truck,;
 } from 'lucide-react';
 import { Button } from './ui/button';
@@ -171,10 +177,6 @@ onst services = [
 =======
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
 import { Button } from "./ui/button",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const services = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   {
@@ -200,6 +202,7 @@ const services = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
@@ -215,12 +218,15 @@ export function GlobalServiceSection() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     title: 'Equipment Rentals',
     description:
       'Flexible rental options for temporary projects and scaling requirements',
     icon: <Truck className='h-10 w-10' />,
   },
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
@@ -231,15 +237,12 @@ xport function GlobalServiceSection() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function GlobalServiceSection() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
@@ -255,12 +258,15 @@ export function GlobalServiceSection() {
 
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
         </div>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {services.map((service, index) => (
             <div
@@ -290,14 +296,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
         <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {services.map((service, index) => (
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -306,6 +306,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
               <p className="text-zion-slate-light mb-4">{service.description}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/GlobalServiceSection.tsx
 <<<<<<< HEAD
@@ -325,10 +326,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </div>
         <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>        <div className="flex justify-center mt-12">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
             Get Your Free Commercial Proposal
@@ -336,41 +340,45 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
           ))}
         </div>
 
         <div className="flex justify-center mt-12">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
             Get Your Free Commercial Proposal
           </Button>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
     </section>;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </section>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react';
 import { Button } from "./ui/button",;
@@ -620,6 +628,7 @@ export function GlobalServiceSection() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/GlobalServiceSection.tsx
 
 =======
@@ -673,3 +682,5 @@ icon: <Recycle className="h-10 w-10" /> ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

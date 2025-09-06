@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -27,6 +30,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
 import {Skeleton} from "@/components/ui/skeleton";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface AIMatchingResultsProps {;
   matches: MatchResultItem[],;
@@ -62,6 +66,8 @@ export function AIMatchingResults(): any ({;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -69,7 +75,6 @@ import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
-<<<<<<< HEAD
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
@@ -79,19 +84,22 @@ interface AIMatchingResultsProps {
 
   isLoading?: boolean;
   projectDescription?: string;
-=======
 import { Skeleton } from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
   isLoading?: boolean,
   projectDescription?: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   serviceType?: string
@@ -111,21 +119,17 @@ export function AIMatchingResults({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   serviceType?: string
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function AIMatchingResults({;
   matches;
   onSelectMatch;
   isLoading = false;
   projectDescription = "";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function AIMatchingResults({
-<<<<<<< HEAD
   matches;
   onSelectMatch;
 
@@ -134,18 +138,19 @@ export function AIMatchingResults({
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState("all");
-=======
   matches,
   onSelectMatch,
   isLoading = false,
   projectDescription = "",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState("all"),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Group matches by category
   const categories = {
     all: matches
@@ -153,6 +158,7 @@ export function AIMatchingResults({
     services: matches.filter(match => match.category.toLowerCase().includes("service"))
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -161,6 +167,8 @@ export function AIMatchingResults({
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
@@ -169,8 +177,11 @@ export function AIMatchingResults({
     if (lowerCategory.includes("equipment")) return Monitor
     return BriefcaseIcon
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   // Get the icon for a category
@@ -182,11 +193,14 @@ export function AIMatchingResults({
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -214,11 +228,14 @@ export function AIMatchingResults({
               <p className="text-sm text-white">{projectDescription}</p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { MatchResultItem } from "@/lib/ai-matchmaking",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -375,6 +392,7 @@ export function AIMatchingResults({;
               <p className="text-sm text-white">{projectDescription}</p>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -401,16 +419,19 @@ export function AIMatchingResults({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         </CardContent>
       </Card>
     )
   }
-<<<<<<< HEAD
-=======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">

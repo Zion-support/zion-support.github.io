@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/NavigationButtons.tsx
@@ -17,11 +18,12 @@ export const NavigationButtons = ({;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
-=======
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
@@ -32,6 +34,7 @@ export const NavigationButtons = ({;
   isNextDisabled = false;
   backLabel = "Back";
   nextLabel = "Next";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -56,6 +59,11 @@ import { NavigationButtonsProps } from "./types",
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { NavigationButtonsProps } from "./types",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const NavigationButtons = ({
   onBack,
   onNext,
@@ -63,21 +71,27 @@ export const NavigationButtons = ({
   backLabel = "Back",
   nextLabel = "Next",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isLoading = false}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
       {onBack && (
         <Button variant="outline" onClick={onBack}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
 import { NavigationButtonsProps } from "./types",;
@@ -118,25 +132,22 @@ export const NavigationButtons = ({;
     <div className="flex justify-between">;
       {onBack && (;
         <Button variant="outline" onClick={onBack}>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {backLabel}
         </Button>
       )}
       {onNext && (
-<<<<<<< HEAD
         <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
-=======
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -248,20 +259,19 @@ isLoading = false
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/NavigationButtons.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
-<<<<<<< HEAD
 }
 
-=======
     </div>;
   );
-=======
-=======
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

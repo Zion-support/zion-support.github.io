@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,12 +19,14 @@ market_advantage: 'First platform to combine content creation, optimization, and
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
@@ -41,6 +44,10 @@ tagline: 'Advanced AI - powered medical diagnostics with 99.7% accuracy';
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
@@ -561,6 +568,7 @@ benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalabili
 capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'];
 marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
 }];
+<<<<<<< HEAD
 =======
 
 =======
@@ -895,10 +903,10 @@ market_advantage: 'First platform to provide comprehensive orchestration of mult
 <<<<<<< HEAD
 =======
 =======
-import { ServiceVariant } from '../types/service-variants',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { ServiceVariant } from '../types/service-variants',
+
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -1752,9 +1760,12 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

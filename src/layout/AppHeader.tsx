@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -11,6 +12,9 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const showTagline = router.pathname === '/'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import { useMessaging } from '@/context/MessagingContext',
 import Link from 'next/link',
@@ -33,10 +37,6 @@ export function AppHeader() {
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const [loginOpen, setLoginOpen] = useState(false),
   const isMobile = useIsMobile(),
@@ -45,8 +45,11 @@ export function AppHeader() {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
   const router = useRouter(),
   const showTagline = router.pathname === '/',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 <<<<<<< HEAD
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
@@ -89,6 +92,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     <>
       <header
         style={{ "--nav-height": "64px" } as React.CSSProperties}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         className = {cn(
@@ -139,18 +143,14 @@ import React from 'react';
 =======
         style={{ "--nav-height": "64px" } as React.CSSProperties}
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className = {cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground"
           { "bg-red-500": mobileMenuOpen ,}
-=======
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -184,29 +184,30 @@ import React from 'react';
             <button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             >
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onClick = {() => setMobileMenuOpen(!mobileMenuOpen),}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded = {mobileMenuOpen,}
               aria-label = {t('general.toggle_mobile_menu'),}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>             >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <span className="sr-only">{t('general.open_main_menu')}</span>
@@ -238,6 +239,7 @@ import React from 'react';
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 aria-label={t('auth.login')}
                 data-testid="login-link"
@@ -258,26 +260,23 @@ import React from 'react';
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 aria-label = {t('auth.login'),}
                 data-testid="login-link"
                 onClick={(e,) => {
-<<<<<<< HEAD
                   e.preventDefault()
                   // For the main login link, we might not have a specific returnTo beyond current page
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   // or we could default to dashboard.
 >>>>>>>                   // For consistency with how sub-menus now set it:
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
@@ -303,6 +302,7 @@ import React from 'react';
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 data-testid="signup-nav-link"
 =======
@@ -310,14 +310,10 @@ import React from 'react';
 >>>>>>>                 data-testid="signup-nav-link"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 aria-label = {t('auth.signup'),}
-=======
                 aria-label={t('auth.signup')}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 data-testid="signup-nav-link"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
@@ -349,6 +345,7 @@ import React from 'react';
         <div className="md:hidden fixed inset-0 z-60 pt-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             onClick = {(,) => setMobileMenuOpen(false),}
@@ -360,25 +357,27 @@ import React from 'react';
             onClick = {(,) => setMobileMenuOpen(false),}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-<<<<<<< HEAD
             onClick = {(,) => setMobileMenuOpen(false),}
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu
-=======
-<<<<<<< HEAD
             onClick = {(,) => setMobileMenuOpen(false),}
-=======
             onClick={() => setMobileMenuOpen(false)}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -386,6 +385,8 @@ import React from 'react';
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               unreadCount = {unreadCount,}
               onClose = {() => setMobileMenuOpen(false),}
               openLoginModal = {openLoginModal,}
@@ -393,10 +394,13 @@ import React from 'react';
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div 
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
@@ -405,17 +409,21 @@ import React from 'react';
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
             />;
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -444,6 +452,11 @@ import React from 'react';
 ;
 
 =======
+=======
+      )}
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
       setActiveNav(null)
@@ -1036,8 +1049,11 @@ import React from 'react';
     </header>  )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
@@ -1054,14 +1070,14 @@ import React from 'react';
 =======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
+}
+}
+}
 <<<<<<< HEAD
-}
-}
-}
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

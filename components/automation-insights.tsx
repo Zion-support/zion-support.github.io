@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -282,11 +283,15 @@ href={`/blog/${trend && trend.id}`}
             </div>;
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AutomationInsightsPage() {
@@ -297,22 +302,29 @@ export default function AutomationInsightsPage() {
       title: 'AI Automation Trends 2025'
       description:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends'
       readTime: '8 min read'
       featured: true
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
       featured: true;
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -320,6 +332,8 @@ export default function AutomationInsightsPage() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: 'autonomous-systems'
       title: 'Building Autonomous Systems'
@@ -511,6 +525,7 @@ import React from 'react';
                     <div className="text-lg font-semibold text-white mb-1">{item.label}</div>
                     <div className="text-sm text-white/70">{item.description}</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -555,10 +570,11 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 ))}
               </div>
             </div>
-=======
 
                   </div>
 
@@ -567,17 +583,21 @@ import React from 'react';
             </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Latest Automation Trends
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -591,12 +611,9 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                 {automationTrends.map((trend, index) => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <div
@@ -620,6 +637,7 @@ import React from 'react';
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -630,6 +648,8 @@ import React from 'react';
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends.map((trend, index) => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
@@ -645,15 +665,19 @@ import React from 'react';
                     >
                       Read More <span className="ml-1">→</span>
                     </Link>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       Read More <span className='ml-1'>→</span>                    </Link>
 
                     </Link>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -666,12 +690,17 @@ import React from 'react';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </div>
                 ))}
               </div>
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             {/* Automation Tools & Frameworks */}
             <div className='mb-16'>
@@ -785,14 +814,7 @@ import React from 'react';
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Call to Action */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
@@ -802,6 +824,7 @@ import React from 'react';
               <p className='text-xl text-white/80 mb-6'>
                 Let our experts help you build the automation systems of the
                 future
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -816,12 +839,9 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -867,6 +887,7 @@ import React from 'react';
         </main>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1042,18 +1063,18 @@ className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-w
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

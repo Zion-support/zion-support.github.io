@@ -22,6 +22,7 @@ const MarketSignals: NextPage = () => {
         <p>Runs daily to curate relevant AI/tech market signals and trends and stores them in the repository.</p>
         <div className="space-y-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -56,10 +57,15 @@ const MarketSignals: NextPage = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <Link href="/data/reports/market-signals/latest.json"><a className="text-blue-600 underline">Latest Report (JSON)</a></Link>
+          <Link href="/data/reports/market-signals/latest.json"><a className="text-blue-600 underline">Latest Report (JSON)</Link></Link>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
       </main>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -87,6 +93,8 @@ export default MarketSignals,
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default MarketSignals;
 import type { NextPage } from 'next',
@@ -110,22 +118,24 @@ const MarketSignals: NextPage = () => {
 },
 export default MarketSignals,
 
+<<<<<<< HEAD
 export default MarketSignals
 
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 export default MarketSignals,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 },
-<<<<<<< HEAD
 
 export default MarketSignals,;
-=======
 export default MarketSignals,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

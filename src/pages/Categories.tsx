@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { GradientHeading } from "@/components/GradientHeading";
@@ -7,18 +8,21 @@ import { SkeletonCard  } from '@/components/ui';
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import useSWR from 'swr',
 import { CategoryCard } from "@/components/CategoryCard",
-<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import { SkeletonCard  } from '@/components/ui';
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
-=======
 import { GradientHeading } from "@/components/GradientHeading",
 import { SkeletonCard } from '@/components/ui',
 import ErrorBoundary from "@/components/GlobalErrorBoundary",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Folder } from 'lucide-react'
 import { CATEGORIES  } from '@/data/categories';
 import { NextSeo  } from '@/components/NextSeo';
@@ -30,11 +34,11 @@ interface CategoryType {
   icon: string
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-}
-=======
 <<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -166,6 +170,7 @@ export default Categories""
 export: default Categories
 export default Categories," ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -174,13 +179,12 @@ export default Categories"")))))))))
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default Categories"")))))))))
 }
-=======
-=======
 export default Categories"")))))))));
 };
-=======
 import useSWR from 'swr',
 import { CategoryCard } from "@/components/CategoryCard",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -195,8 +199,11 @@ interface CategoryType {
   name: string,
   slug: string,
   icon: string
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -320,6 +327,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -333,3 +341,5 @@ export default function Categories({ categories: initialCategories = [] }: Categ
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,17 +36,22 @@ import React from 'react';
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Layout from '../components/layout/Layout',
-=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import SEO from '../components/SEO';
 
 import {motion} from 'framer-motion';
 import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe} from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -66,6 +72,9 @@ import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Ey
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const QuantumServicesPage: React.FC = () => {
   const quantumServices = [
     {
@@ -401,6 +410,7 @@ export default function QuantumServices() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -426,6 +436,9 @@ export default function QuantumServices() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Quantum Services */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -470,6 +483,7 @@ export default function QuantumServices() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -487,6 +501,12 @@ export default function QuantumServices() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                    service.popular
+                      ? 'border-blue-500 shadow-lg shadow-blue-500/25'
+                    service.popular 
+                      ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       : 'border-gray-700 hover:border-blue-500'
                   }`}
                 >
@@ -769,14 +789,15 @@ function QuantumServices() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
                   </ul>
-<<<<<<< HEAD
                   <a
                     href="/contact"
-=======
                   <a 
                     href="/contact" 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                   >
                     Get Started
@@ -786,6 +807,7 @@ function QuantumServices() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -821,6 +843,9 @@ function QuantumServices() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -876,6 +901,7 @@ function QuantumServices() {
       </main>
     </Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                   href="/contact" 
@@ -888,6 +914,8 @@ function QuantumServices() {
         </section>;
       </main>;
     </Layout>;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
 
@@ -901,7 +929,6 @@ function QuantumServices() {
 export default QuantumServicesPage;
 
 }
-=======
   )
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
@@ -972,6 +999,7 @@ export default QuantumServicesPage;
   )
 }
 export default QuantumServicesPage;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -979,13 +1007,16 @@ export default QuantumServicesPage;
 =======
 =======
 <<<<<<< HEAD
-
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 export default QuantumServicesPage;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

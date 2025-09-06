@@ -19,23 +19,24 @@ import {NavLink} from "react-router-dom";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
-=======
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
 import {NavLink} from "react-router-dom";
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { cn } from "@/lib/utils",
 import { NavLink } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -45,6 +46,8 @@ import { NavLink } from "react-router-dom",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface MainNavigationProps {
   className?: string
 }
@@ -254,12 +257,13 @@ export function MainNavigation({ className } MainNavigationProps) {;
         to="/"
         className={({ isActive }) =>
           cn(
-<<<<<<< HEAD
             "text-sm font-medium transition-colors hover: text-primary"
-=======
             "text-sm font-medium transition-colors hover:text-primary",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
@@ -286,6 +290,7 @@ export function MainNavigation({ className } MainNavigationProps) {;
         className={({ isActive }) =>
           cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -294,11 +299,15 @@ export function MainNavigation({ className } MainNavigationProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-            "text-sm font-medium transition-colors hover: text-primary"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            "text-sm font-medium transition-colors hover: text-primary"
             "text-sm font-medium transition-colors hover:text-primary",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
@@ -309,22 +318,25 @@ export function MainNavigation({ className } MainNavigationProps) {;
         to="/signup"
         className={({ isActive }) =>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           cn(
-<<<<<<< HEAD
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground"
 
-=======
-<<<<<<< HEAD
           cn(;
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground",
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
           )
         }
@@ -335,6 +347,7 @@ export function MainNavigation({ className } MainNavigationProps) {;
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -343,6 +356,9 @@ export function MainNavigation({ className } MainNavigationProps) {;
           cn(
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          cn(
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             "text-sm font-medium transition-colors hover:text-primary",
             isActive ? "text-zion-cyan" : "text-muted-foreground",
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
@@ -412,6 +428,7 @@ export function MainNavigation({ className }: MainNavigationProps) {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -448,3 +465,5 @@ isActive ? " text-zion-cyan": " text-muted-foreground";
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,6 +10,8 @@ import { ServiceVariant } from '../types / service - variants';
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -1329,6 +1332,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =;
       realImplementation: true
       implementationDetails:
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management',
       launchDate: '2023-10-01',
       color: 'from - gray - 600 to - slate - 700',
@@ -1730,20 +1734,20 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
       'Quantum portfolio optimizationAI-powered market predictionRisk assessment algorithmsReal-time financial analyticsMulti-asset class modelingRegulatory compliance toolsBacktesting and validationCustom financial models';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management'
       launchDate: '2023-10-01'
       customers: 34
       rating: 4.9
       reviews: 28
     }
-=======
         'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management',
       launchDate: '2023-10-01',
       customers: 34,
       rating: 4.9,
       reviews: 28,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2743,13 +2747,9 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     launchDate: '2023-10-01', customers: 34
     rating: 4.9
     reviews: 28
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService {;
   id: string,;
@@ -3500,12 +3500,11 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     customers: 34,;
     rating: 4.9;
     reviews: 28;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

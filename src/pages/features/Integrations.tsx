@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect } from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -28,11 +31,14 @@ export default function IntegrationsFeature() {
     markSlackConnected()
   }, [markSlackConnected])
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -40,11 +46,14 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
@@ -61,6 +70,7 @@ export default function IntegrationsFeature() {
   useEffect(() => {
     markSlackConnected()
   }, [markSlackConnected])
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>   return (
@@ -93,6 +103,8 @@ export default function IntegrationsFeature() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link',
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus",
 export default function IntegrationsFeature() {
@@ -109,12 +121,7 @@ export default function IntegrationsFeature() {
   useEffect(() => {
     markSlackConnected()
   }, [markSlackConnected]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -138,7 +145,10 @@ export default function IntegrationsFeature() {
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               src='https://placehold.co/800x400'
               alt='Screenshot showing integrations';
               className='object-cover';
@@ -147,9 +157,12 @@ export default function IntegrationsFeature() {
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
           <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               src="https://placehold.co/800x400"
               alt="Screenshot showing integrations"
               className="object-cover"
@@ -157,8 +170,11 @@ export default function IntegrationsFeature() {
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <li>Trigger Slack notifications for new orders or messages.</li>
             <li>Embed talent search or job listings directly on your site.</li>
             <li>Build custom analytics by pulling data from our REST endpoints.</li>
@@ -176,19 +192,24 @@ export default function IntegrationsFeature() {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/developers'>Learn More</Link>            </Button>          <div className="text-center">
-=======
           <div className="text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button size="lg" className="bg-zion-purple text-white" asChild>
 =======
           <div className='text-center'>
@@ -205,17 +226,21 @@ export default function IntegrationsFeature() {
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-}
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -380,6 +405,7 @@ function IntegrationsFeature() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -392,3 +418,5 @@ function IntegrationsFeature() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

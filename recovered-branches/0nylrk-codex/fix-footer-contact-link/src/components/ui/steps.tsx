@@ -41,16 +41,10 @@ export function Step(): any ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {cn} from "@/lib/utils";
 import {CheckIcon} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
 interface StepProps {
@@ -59,18 +53,21 @@ interface StepProps {
   label: string
 
   description?: string;
-=======
 import { cn } from "@/lib/utils",
 import { CheckIcon } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   className?: string
@@ -79,23 +76,26 @@ interface StepProps {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   className?: string
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function Step({;
   status;
   label;
   description;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function Step({
   status,
   label,
   description,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -131,6 +131,8 @@ export function Step({
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   className}: StepProps) {
   return (
     <li
@@ -138,11 +140,8 @@ export function Step({
       className={cn(
         "relative flex items-center",
         {
-<<<<<<< HEAD
           "opacity-60": status === "incomplete"}
-=======
           "opacity-60": status === "incomplete"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         className
       )}
     >
@@ -164,11 +163,14 @@ export function Step({
         ) : (
           <span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { CheckIcon } from "lucide-react",;
@@ -214,6 +216,7 @@ export function Step({;
         ) : (;
           <span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -230,6 +233,8 @@ export function Step({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Step number would go here */}
           </span>
         )}
@@ -239,16 +244,21 @@ export function Step({;
         <h3
           className={cn("text-sm font-medium", {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             "text-zion-slate-light": status === "incomplete";
             "text-white": status === "current" |status === "complete"})}
-=======
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           {label}
         </h3>
@@ -260,6 +270,7 @@ export function Step({;
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -268,11 +279,15 @@ export function Step({;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface StepsProps {
   currentStep: number
   className?: string;
   children: React.ReactNode
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const childrenArray = React.Children.toArray(children);
@@ -393,13 +408,12 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export function Steps({ currentStep, className, children }: StepsProps) {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export function Steps({ currentStep, className, children }: StepsProps) {
 
 export function Steps({ currentStep, className, children }: StepsProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const childrenArray = React.Children.toArray(children);
-=======
 ;
 interface StepsProps {;
   currentStep: number,;
@@ -409,28 +423,36 @@ interface StepsProps {;
 
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           if (!React.isValidElement(child)) return null;
           let status: "incomplete" | "current" | "complete" = "incomplete"
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           if (!React.isValidElement(child)) return null,
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
@@ -438,12 +460,15 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index === currentStep) status = "current",
           
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
@@ -453,6 +478,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -471,6 +497,8 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />
         </div>
@@ -478,10 +506,13 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
@@ -555,6 +586,7 @@ export function Steps({ currentStep, className, children } StepsProps) {;
             className="h-full bg-zion-purple transition-all";
             style={{;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
 
 <<<<<<< HEAD
@@ -573,6 +605,8 @@ export function Steps({ currentStep, className, children } StepsProps) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           />;
@@ -710,5 +744,8 @@ if (status = "current") {
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiKeysManager.tsx
 
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
@@ -12,14 +13,13 @@ import { useState } from 'react'
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
 
 =======
-import { useState } from 'react'
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useState } from 'react'
 
 import { useState } from "react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
 
-<<<<<<< HEAD
 import { format } from 'date-fns'
 import { useApiKeys, type ApiKeyScope } from '@/hooks/useApiKeys'
 import { Button } from '@/components/ui/button'
@@ -63,7 +63,10 @@ import { Badge } from '@/components/ui/badge'
 } from '@/components/ui/alert-dialog'
 import CodeBlock from './CodeBlock'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ApiKeysManager() {
   const {
     keys
@@ -83,6 +86,7 @@ export function ApiKeysManager() {
     string | null
   >(null)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // Create key form state
   const [keyName, setKeyName] = useState("");
@@ -90,17 +94,21 @@ export function ApiKeysManager() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   // Create key form state
   const [keyName, setKeyName] = useState("");
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
@@ -113,6 +121,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
 
 import CodeBlock from "./CodeBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -164,6 +173,8 @@ export function ApiKeysManager() { const {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ApiKeysManager() {
   const { 
     keys,
@@ -174,7 +185,10 @@ export function ApiKeysManager() {
     regenerateApiKey, 
     revokeApiKey,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     clearNewApiKey
   } = useApiKeys(),
   
@@ -182,6 +196,7 @@ export function ApiKeysManager() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (keyName.trim() === '' |selectedScopes.length === 0) return
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -194,6 +209,8 @@ export function ApiKeysManager() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     clearNewApiKey,
   } = useApiKeys()
   const [showCreateDialog, setShowCreateDialog] = useState(false)
@@ -203,24 +220,18 @@ export function ApiKeysManager() {
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<
     string | null
   >(null)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Create key form state
   const [keyName, setKeyName] = useState(""),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
 
   // Load keys on mount
   useState(() => {
     fetchApiKeys()
-<<<<<<< HEAD
 
   })
   const handleCreateKey = async () => {
-<<<<<<< HEAD
     if (keyName.trim() === '' |selectedScopes.length === 0) return
-=======
     if (keyName.trim() === '' || selectedScopes.length === 0) return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
     setKeyName('');
@@ -234,16 +245,21 @@ export function ApiKeysManager() {
   const handleCreateKey = async () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     if (keyName.trim() === "" |selectedScopes.length === 0) return
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-    if (keyName.trim() === "" |selectedScopes.length === 0) return
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    if (keyName.trim() === "" |selectedScopes.length === 0) return
     if (keyName.trim() === "" || selectedScopes.length === 0) return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
     setKeyName("")
@@ -371,6 +387,7 @@ function ApiKeysManager() {
 <<<<<<<< HEAD:src/components/developers/ApiKeysManager.tsx
   const handleRegenerateKey = async (keyId: string,) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     await regenerateApiKey(keyId),
     setShowRegenerateConfirm(null)
@@ -387,15 +404,20 @@ function ApiKeysManager() {
   const handleRegenerateKey = async (keyId: string,) => {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     await regenerateApiKey(keyId)
     setShowRegenerateConfirm(null)
   }
   const handleRevokeKey = async (keyId: string,) => {
     await revokeApiKey(keyId)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     clearNewApiKey
   } = useApiKeys(),
   
@@ -422,14 +444,17 @@ function ApiKeysManager() {
   },
 
   const handleRegenerateKey = async (keyId: string) => {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     await regenerateApiKey(keyId),
     setShowRegenerateConfirm(null)
   },
   
-<<<<<<< HEAD
   const handleRevokeKey = async (keyId: string,) => {
+<<<<<<< HEAD
     await revokeApiKey(keyId),
 >>>>>>>     setShowDeleteConfirm(null)
   }
@@ -439,18 +464,21 @@ function ApiKeysManager() {
 <<<<<<< HEAD
   const handleRevokeKey = async (keyId: string,) => {
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleRevokeKey = async (keyId: string) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     await revokeApiKey(keyId),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setShowDeleteConfirm(null)
   }
   // Scope options
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const scopeOptions: {
     value: ApiKeyScope
     label: string
@@ -829,12 +857,15 @@ export function ApiKeysManager() {;
                 <div className='space-y-2'>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }),
   
   const handleCreateKey = async () => {
@@ -871,9 +902,12 @@ export function ApiKeysManager() {;
   },
   
   // Scope options
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
     { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },
     { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },
@@ -950,6 +984,7 @@ export function ApiKeysManager() {;
                 <div className="space-y-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -957,10 +992,13 @@ export function ApiKeysManager() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Label>Scopes</Label>
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1009,17 +1047,21 @@ export function ApiKeysManager() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiKeysManager.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <Checkbox
                           id={scope.value}
-=======
                         <Checkbox 
                           id={scope.value} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
 import { format } from "date-fns",;
@@ -1290,17 +1332,15 @@ export function ApiKeysManager() {;
                         <Checkbox;
                           id={scope.value} ;
                           checked={selectedScopes.includes(scope.value)}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
                         <Label
                           htmlFor={scope.value}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
                         >
                           {scope.label}
@@ -1311,26 +1351,25 @@ export function ApiKeysManager() {;
                           {scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                       </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
                         </Label>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     ))}
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1342,6 +1381,8 @@ export function ApiKeysManager() {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <DialogFooter>
                 <Button variant='outline' onClick={handleDialogClose}>
                   Cancel
@@ -1355,6 +1396,7 @@ export function ApiKeysManager() {;
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" |selectedScopes.length === 0}>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   Create Key
 >>>>>>>                 </Button>
@@ -1403,12 +1445,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
                   Create Key
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiKeysManager.tsx
                 </Button>
@@ -1564,19 +1609,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              
+              <DialogFooter>
+                <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
+                <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
+                  Create Key
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
         </div>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* New API Key Alert */}
         {newApiKey && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1588,10 +1633,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 variant='ghost'
                 size='icon'
                 className='h-6 w-6'                onClick={clearNewApiKey}        {/* New API Key Alert */}
@@ -1602,6 +1650,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated
               </span>
               <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 variant="ghost"
                 size="icon"
@@ -1624,10 +1673,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
                 onClick={clearNewApiKey}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiKeysManager.tsx
 
@@ -1645,23 +1697,31 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                onClick = {clearNewApiKey,}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <X size={14} />
               </Button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <p className="text-sm text-zinc-300 mb-2">
 =======
 <<<<<<< HEAD
-            <p className='text-sm text-zinc-300 mb-2'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <p className='text-sm text-zinc-300 mb-2'>
             <p className="text-sm text-zinc-300 mb-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               This key will only be displayed once. Please save it securely.
             </p>
             <CodeBlock code={newApiKey} className="mb-3" />
@@ -1671,6 +1731,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CodeBlock code={getExampleCode(newApiKey)} language="bash" />
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* New API Key Alert */}
         {newApiKey && (
@@ -1833,19 +1894,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* API Keys List */}
         <div className='space-y-4'>
-=======
 ;
         {/* API Keys List */}
         <div className="space-y-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {loading ? (
             <div className="text-center py-8 text-zinc-500">Loading API keys...</div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1858,6 +1914,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           ) : (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
@@ -1866,6 +1923,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             keys.map(key => (
               <div
                 key={key.id}
@@ -1879,11 +1938,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                           {key.key_prefix}••••••••••••
                         </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             keys.map((key) => (
               <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
@@ -1892,16 +1954,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <h3 className="font-medium">{key.name}</h3>
                       <div className="flex items-center space-x-2 mt-1">
                         <span className="text-sm text-zinc-400 font-mono">{key.key_prefix}••••••••••••</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           <Badge
                             variant='secondary'
                             className='bg-red-900 text-white border-red-800'
@@ -1944,6 +2004,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
@@ -1961,12 +2022,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
                         )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2057,6 +2121,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </Button>;
                     </DropdownMenuTrigger>;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button
@@ -2072,6 +2138,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       align='end'
                       className='bg-zinc-900 border-zinc-800 text-white'
                     >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                       <DropdownMenuItem
                         onClick={() => setShowRegenerateConfirm(key.id)}
@@ -2113,6 +2180,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <DropdownMenuItem
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <DropdownMenu>
@@ -2122,6 +2191,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <DropdownMenuItem
                         onClick={() => setShowRegenerateConfirm(key.id)}
@@ -2181,11 +2251,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <DropdownMenuItem
                         onClick={() => setShowRegenerateConfirm(key.id)}
                         className='cursor-pointer'
                         disabled={!key.is_active}
-<<<<<<< HEAD
                         onClick = {() => setShowRegenerateConfirm(key.id),}
                         className="cursor-pointer"
                         disabled = {!key.is_active,}
@@ -2200,8 +2271,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>                        <X size={14} className="mr-2" /> Revoke
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       >;
                         <RefreshCw size={14} className="mr-2" /> Regenerate;
                       </DropdownMenuItem>;
@@ -2251,16 +2325,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                       >
                         <X size={14} className="mr-2" /> Revoke
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
-<<<<<<< HEAD
                 <div className='mt-3 flex flex-wrap gap-2'>
                   {key.scopes.map(scope => (
                     <Badge
@@ -2274,6 +2342,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       key = {scope,}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
+<<<<<<< HEAD
 <<<<<<< HEAD
                     >
                       {scope}
@@ -2312,6 +2381,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiKeysManager.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope) => (
@@ -2320,11 +2391,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
                     >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {scope}
                     </Badge>
                   ))}
@@ -2376,6 +2442,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}
                     </span>                  )}                    <span>Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}</span>
                   )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2452,6 +2519,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiKeysManager.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </div>
             ))
@@ -2463,12 +2532,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           Keep your API keys secure. They have the same permissions as your
           account.
         </div>
-<<<<<<< HEAD
         <Button variant='outline' size='sm' onClick={fetchApiKeys}>          Refresh
-=======
         <Button variant='outline' size='sm' onClick={fetchApiKeys}>          Refresh      
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
           Keep your API keys secure. They have the same permissions as your account.
@@ -2848,13 +2918,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
   )
 }
-<<<<<<< HEAD
-=======
 ;
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>;
               </div>;
             ));
@@ -3041,6 +3112,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -3212,3 +3284,5 @@ setShowCreateDialog (false) ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

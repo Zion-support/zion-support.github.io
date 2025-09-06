@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -16,6 +17,8 @@ import { define_config } from 'cypress';
 export default define_config ({
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { defineConfig } from 'cypress';
 export default defineConfig({
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -26,6 +29,7 @@ export default defineConfig({
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (browser && browser.family === 'chromium') {
           launchOptions && launchOptions.args.push('--disable-ipv6');
@@ -74,6 +78,8 @@ export default defineConfig({;
     supportFile: 'cypress/support/e2e && e2e.ts';
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -83,21 +89,20 @@ export default defineConfig({;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors;
     setupNodeEvents(on, config) {;
       on('before:browser:launch', (browser = {}, launchOptions) => {;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         if (browser.family === 'chromium') {;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-<<<<<<< HEAD
       });export default defineConfig({
   e2e: {
-<<<<<<< HEAD
     baseUrl: 'http://localhost:3000', // Standard Next.js port
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     supportFile: 'cypress/support/e2e.ts';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     experimentalModifyObstructiveThirdPartyCode: true;
@@ -190,6 +195,7 @@ export default defineConfig({;
     toConsole: true
   }
 });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -286,8 +292,9 @@ export default defineConfig({;
 ;
 =======
 <<<<<<< HEAD
-
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -301,9 +308,6 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       });
     },;
     env: {;
@@ -323,9 +327,12 @@ export default defineConfig({;
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

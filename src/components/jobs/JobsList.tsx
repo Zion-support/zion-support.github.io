@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/JobsList.tsx
 
 =======
@@ -8,6 +9,8 @@
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react"
 import { useAuth } from "@/hooks/useAuth"
 import { supabase } from "@/integrations/supabase/client"
@@ -29,14 +32,18 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   useEffect((,) => {
     const fetchJobs = async () => {
       if (!user) return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format } from "date-fns";
 import Link from "next/link";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useState, useEffect } from "react",
@@ -45,6 +52,8 @@ import { useState, useEffect } from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useAuth } from "@/hooks/useAuth",
@@ -57,10 +66,13 @@ import { Loader2, Edit, X, Eye } from 'lucide-react'
 import { format } from "date-fns",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
@@ -75,6 +87,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     const fetchJobs = async () => {
       if (!user) return
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       try {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -82,6 +95,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         let query = supabase
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface JobsListProps {
@@ -98,17 +113,13 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     const fetchJobs = async () => {
       if (!user) return,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       try {
         let query = supabase
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -269,11 +280,10 @@ export function JobsList({ filter, onSelectJob } JobsListProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-          .order("created_at", { ascending: false })
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          .order("created_at", { ascending: false })
           .order("created_at", { ascending: false }),
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         if (filter) {
           query = query.eq("status", filter)
         }
@@ -288,12 +298,13 @@ export function JobsList({ filter, onSelectJob } JobsListProps) {;
     }
     fetchJobs()
   }, [user, filter])
-=======
-<<<<<<< HEAD
           .order("created_at", { ascending: false }),
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         if (filter) {
           query = query.eq("status", filter)
@@ -392,11 +403,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
     fetchJobs()
   }, [user, filter]),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
@@ -411,6 +417,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
         <p className="text-lg text-muted-foreground">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           {filter
@@ -418,16 +425,20 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
             : "You haven't posted any jobs yet.", }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {filter
             ? `No jobs with status "${filter}" found.`
             : "You haven't posted any jobs yet.", }
-=======
           {filter 
             ? `No jobs with status "${filter}" found.` 
             : "You haven't posted any jobs yet."
           }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </p>
         <Button asChild className="mt-4">
           <Link href="/post-job">Post Your First Job</Link>
@@ -435,6 +446,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -448,11 +460,16 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const getStatusColor = (status: JobStatus,) => {
+    switch (status) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case "new": return "bg-blue-100 text-blue-800"
       case "in_progress":
         return "bg-yellow-100 text-yellow-800"
       case "filled":
         return "bg-green-100 text-green-800"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -469,11 +486,17 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+  const getStatusColor = (status: JobStatus) => {
+    switch (status) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case "new": return "bg-blue-100 text-blue-800",
       case "in_progress":
         return "bg-yellow-100 text-yellow-800",
       case "filled":
         return "bg-green-100 text-green-800",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -483,11 +506,14 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
         return "bg-gray-100 text-gray-800"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -535,6 +561,9 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
   }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -542,24 +571,24 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
         <Card
           key = {job.id,}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
-=======
-=======
   },
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
         <Card 
           key={job.id} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -569,6 +598,8 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             onSelectJob ? "cursor-pointer" : ""
@@ -595,6 +626,7 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
             <div className="flex flex-wrap gap-1 mt-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               {job.skills.slice(0, 3).map((skill, index,) => (
@@ -609,9 +641,10 @@ ursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {;
     return (
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {job.skills.slice(0, 3).map((skill, index,) => (
                 <Badge key={index} variant="outline" className="text-xs">
-=======
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
     },;
@@ -970,11 +1003,6 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
 >>>>>>>             </div>
 =======
                 <Badge key={index} variant="outline" className="text-xs">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {skill}
                 </Badge>
               ))}
@@ -1011,28 +1039,36 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
           </CardFooter>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     </div>
   )
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Card>
       ))}
-<<<<<<< HEAD
     </div>
   )
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Card>;
       ))};
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };"
 return (<div className="grid gap-6 md:grid-cols-2" > {
   jobs.map ( (job) => (<Card key= {
@@ -1056,6 +1092,7 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
 }'"}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1067,10 +1104,15 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
       ))}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        </Card>
+      ))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1150,3 +1192,5 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

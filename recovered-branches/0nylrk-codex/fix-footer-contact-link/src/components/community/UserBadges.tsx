@@ -49,27 +49,15 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
 import {Badge} from "@/types/community";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
-<<<<<<< HEAD
 import { Badge } from "@/types/community";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-=======
 import { Badge } from "@/types/community",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface UserBadgesProps {
   badges: Badge[]
 }
@@ -82,29 +70,32 @@ const iconMap = {
   Star,
   MessageSquare
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null;
-=======
 },
 
-<<<<<<< HEAD
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null;
-=======
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   if (!badges?.length) return null;
@@ -124,12 +115,16 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 
 =======
 <<<<<<< HEAD
-        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy;
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -155,6 +150,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
         )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default UserBadges;
 
@@ -163,14 +159,19 @@ export default UserBadges;
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       })}
     </div>
   )
 }
 export default UserBadges;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",;
 import { Badge } from "@/types/community",;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -293,6 +294,7 @@ export const UserBadges = ({ badges } UserBadgesProps) => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/UserBadges.tsx
 
 
@@ -385,3 +387,6 @@ export default UserBadges;
 export default UserBadges;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default UserBadges;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

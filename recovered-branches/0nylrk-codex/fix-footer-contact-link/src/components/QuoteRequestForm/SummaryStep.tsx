@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
 
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ import { AIMatchingResults } from "@/components/AIMatchingResults",
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -52,15 +55,12 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from "react",
 import { QuoteFormData } from "@/types/quotes",
 import { Card, CardContent } from "@/components/ui/card",
 import { Label } from "@/components/ui/label",
 import { Textarea } from "@/components/ui/textarea",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
-<<<<<<< HEAD
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
 import { toast } from "@/hooks/use-toast";
 interface SummaryStepProps {
@@ -87,7 +87,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `;
-=======
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
 import { toast } from "@/hooks/use-toast",
 interface SummaryStepProps {
@@ -165,13 +164,12 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // Get AI matches
         const results = await findMatches(
           queryString,
@@ -263,13 +261,14 @@ if (return) {
       } finally {
         setIsMatching(false)
       }
-<<<<<<< HEAD
     }
-=======
     },
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -282,6 +281,7 @@ if (return) {
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -293,11 +293,17 @@ if (return) {
   const matchItems = matches.map(match => match.item);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+  // Extract just the items from each MatchResult for the AIMatchingResults component
+  const matchItems = matches.map(match => match.item);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -305,6 +311,8 @@ if (return) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -313,24 +321,31 @@ if (return) {
       handleSelectMatch(matchResult)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -339,6 +354,8 @@ if (return) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
         `,;
         // Get AI matches;
@@ -384,11 +401,14 @@ if (return) {
     <div className="space-y-6">;
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -454,6 +474,7 @@ if (return) {
                 </div>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -468,6 +489,9 @@ if (return) {
               
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -529,6 +553,7 @@ if (return) {
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1111,12 +1136,14 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
 =======
 <<<<<<< HEAD
-}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 };
-=======
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

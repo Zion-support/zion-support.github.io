@@ -64,6 +64,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }];
   res.status(200).json(data)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -106,9 +107,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

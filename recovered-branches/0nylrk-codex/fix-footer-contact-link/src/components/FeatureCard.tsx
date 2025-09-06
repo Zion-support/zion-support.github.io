@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FeatureCard.tsx
 
 <<<<<<< HEAD
@@ -34,8 +35,9 @@ import React from "react",
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import React from "react";
 interface FeatureCardProps {
@@ -52,12 +54,8 @@ export function FeatureCard({
   className
 }: FeatureCardProps) {
   return (
-=======
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import React from "react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     <div
       className={cn(
@@ -67,14 +65,16 @@ import React from "react";
     >
       <div className="mr-4 text-zion-cyan p-2">{icon}</div>
 
-=======
 import { cn } from "@/lib/utils",
 import React from "react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface FeatureCardProps {
   title: string,
   description: string,
@@ -93,6 +93,7 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         {icon}
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -101,25 +102,31 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div>
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
         <p className="text-zion-slate-light">{description}</p>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 import { cn } from "@/lib/utils",;
 import React from "react",;
@@ -158,6 +165,7 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;
         <p className="text-zion-slate-light">{description}</p>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -257,12 +265,16 @@ key?: string | number, //Added key prop
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FeatureCard.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 }
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

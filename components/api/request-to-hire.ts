@@ -249,7 +249,6 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
-<<<<<<< HEAD
     req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST') {
@@ -260,7 +259,6 @@ export default async function handler(
     req.body |{};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
   if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {
 
-=======
     req.body || {};  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
@@ -269,17 +267,10 @@ export default async function handler(
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(400).json({ error: 'Missing required fields' });
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   try {
 
     const timestamp = new Date().toISOString();
@@ -313,21 +304,17 @@ export default async function handler(
     // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
     return res.status(200).json({ ok: true });
   } catch (err) {
-<<<<<<< HEAD
 console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }    return res.status(500).json({ error: 'Internal error' })
   }
 }
 
-<<<<<<< HEAD
-=======
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -335,3 +322,5 @@ console.error('Request-to-hire failed', err);
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

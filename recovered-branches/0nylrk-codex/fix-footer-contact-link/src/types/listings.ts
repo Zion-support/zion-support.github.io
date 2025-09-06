@@ -38,13 +38,8 @@ export interface ProductListing {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/listings.ts
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface ListingCategory {
-=======
 export interface ListingCategory {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
 
@@ -52,12 +47,9 @@ export interface ListingCategory {;
 
   icon: string
 }
-<<<<<<< HEAD
 export interface ProductListing {
-=======
 
 export interface ProductListing {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   description: string;
@@ -129,12 +121,9 @@ export interface ListingItem {
   location?: string, // Adding location property to fix TypeScript errors
   availability?: string, // Adding availability property to fix TypeScript errors
 }
-<<<<<<< HEAD
 export interface ListingItem {
-=======
 
 export interface ListingItem {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   category: string;
@@ -146,6 +135,7 @@ export interface ListingItem {;
 export type ListingView = 'grid' | 'list';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -153,6 +143,9 @@ export interface ListingCategory {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface ListingCategory {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string,;
   name: string,;
   description: string,;
@@ -192,6 +185,7 @@ export interface ListingItem {;
   description?: string;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export type ListingView = 'grid' | 'list';
@@ -267,3 +261,6 @@ export type ListingView = 'grid' | 'list',; export type ListingView = 'grid' | '
 export type ListingView = 'grid' | 'list';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export type ListingView = 'grid' | 'list';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

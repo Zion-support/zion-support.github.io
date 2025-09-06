@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectCard.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ========
@@ -75,6 +76,8 @@ import {PortfolioProject} from '@/types/resume';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -91,7 +94,18 @@ AlertDialog
 } from "@/components/ui/alert-dialog";
 import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
 import { PortfolioProject } from "@/types/resume";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+import {useState} from 'react';
+import {Card, CardContent, CardFooter} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Badge} from '@/components/ui/badge';
+import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
+import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
+import {PortfolioProject} from '@/types/resume';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
@@ -99,20 +113,28 @@ interface ProjectCardProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -121,6 +143,14 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      onDelete(project.id);
+    }
+    setDeleteDialogOpen(false);
+  }
+
+      onDelete(project.id)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -140,6 +170,7 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
     if (project.id) {;
       onDelete(project.id);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     }
@@ -373,6 +404,12 @@ onDelete(project.id);
     setDeleteDialogOpen(false);
   };
 
+=======
+    }
+    setDeleteDialogOpen(false)
+  },
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -402,10 +439,19 @@ onDelete(project.id);
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
+<<<<<<< HEAD
 </Badge>
               ))}
             </div>
 
+=======
+                </Badge>
+              ))}
+            </div>
+                </Badge>;
+              ))}
+            </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         </div>
       </CardContent>
@@ -476,6 +522,7 @@ onDelete(project.id);
         </AlertDialogContent>
       </AlertDialog>
     </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -619,3 +666,10 @@ onDelete(project.id);
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

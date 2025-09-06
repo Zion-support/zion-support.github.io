@@ -12,7 +12,18 @@ export default async function handler(
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  try {
+    const raw = null;
+    res.status(200).json({ items })
+  } catch {
+    res.status(200).json({ items: [] });
+  }
+  try {
+  try {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON.parse(raw);
     res.status(200).json({ items });

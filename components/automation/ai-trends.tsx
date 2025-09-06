@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }</div> </div>) import fs from 'fs';
@@ -94,11 +95,11 @@ export async function getServerSideProps() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 </div> </div>) )
-=======
  </div> </div>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -110,11 +111,8 @@ export type Trend = {
   tags: string[]
 }
 export async function getServerSideProps() {
-=======
 </div> </div>) ) 
-=======
  </div> </div>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -127,7 +125,6 @@ export type Trend = {
 };
 
 export async function getServerSideProps() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const file = path.join(process.cwd(), 'dataai-trends.json');
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
@@ -138,6 +135,7 @@ export async function getServerSideProps() {;
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
   return { props: { items } }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -172,6 +170,9 @@ export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (
     <div className="space-y-6">
@@ -194,6 +195,7 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
           </div>
         ))}
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 );
@@ -290,13 +292,17 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
 =======
 <<<<<<< HEAD
 =======
+=======
+    </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
 }
-=======
   );
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

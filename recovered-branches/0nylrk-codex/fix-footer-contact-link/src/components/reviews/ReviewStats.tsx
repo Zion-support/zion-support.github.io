@@ -7,8 +7,6 @@
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
@@ -17,16 +15,18 @@ interface ReviewStatsProps {
   totalReviews: number
 
   ratingDistribution?: Record<number, number>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
-=======
 import {Star} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
-=======
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -35,10 +35,13 @@ import { Progress } from "@/components/ui/progress",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,
   ratingDistribution?: Record<number number>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -52,26 +55,27 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
-<<<<<<< HEAD
   // Format the average rating to one decimal place;
   const formattedRating = averageRating.toFixed(1);
-=======
   // Format the average rating to one decimal place
-<<<<<<< HEAD
 
   const formattedRating = averageRating.toFixed(1);
-=======
   const formattedRating = averageRating.toFixed(1),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0
     return (count / totalReviews) * 100
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -89,13 +93,17 @@ import {Progress} from "@/components/ui/progress";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="bg-card border rounded-lg p-4">
       <div className="flex items-center justify-between mb-4">
@@ -109,11 +117,14 @@ import {Progress} from "@/components/ui/progress";
                   className={`h-4 w-4 ${
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Star } from "lucide-react",;
 import { Progress } from "@/components/ui/progress",;
 <<<<<<< HEAD
@@ -208,11 +219,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   key={i}
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }`}
                 />
               ))}
@@ -235,6 +241,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 className="h-2"
               />
               <div className="w-8 text-xs text-muted-foreground">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -309,23 +316,25 @@ if (return 0, ) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {ratingDistribution[rating] |0}
               </div>
             </div>
-=======
                 {ratingDistribution[rating] || 0}
               </div>;
             </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           ))}
         </div>
       )}
-<<<<<<< HEAD
     </div>
   )
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 }
@@ -414,5 +423,8 @@ return (<div className="bg-card border rounded-lg p-4" > <div className="flex it
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewStats.tsx
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

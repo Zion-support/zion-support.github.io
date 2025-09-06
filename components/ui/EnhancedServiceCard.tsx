@@ -30,7 +30,6 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Star
   ExternalLink
   ArrowRight
@@ -39,8 +38,11 @@ import {
   Clock
   Shield
   Zap;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Star,
   ExternalLink,
   ArrowRight,
@@ -68,7 +70,6 @@ interface EnhancedServiceCardProps {;
 =======
   Shield,;
   Zap,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface EnhancedServiceCardProps {
@@ -306,6 +307,7 @@ interface EnhancedServiceCardProps {;
     customers: number;
     rating: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -313,6 +315,10 @@ interface EnhancedServiceCardProps {;
   };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    reviews: number;
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     reviews: number;
   }
@@ -326,6 +332,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       y: 0
       scale: 1
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -381,6 +388,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
     }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         duration: 0.6
         ease: 'easeOut' as const
       }
@@ -428,7 +437,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
       }
     }
   }
-=======
         duration: 0.6,
         ease: 'easeOut' as const,
       },
@@ -563,8 +571,11 @@ ease: 'back_out' as const,
 
   };
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
       {/* Background Glow */}
       <div 
@@ -643,6 +654,7 @@ ease: 'back_out' as const,
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 {/* Card Content */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="relative p-6">
@@ -669,21 +681,16 @@ ease: 'back_out' as const,
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Card Content */}
       <div className='relative p-6'>
-=======
 
       {/* Card Content */}
       <div className='relative p-6'>
 
         {/* Header */}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className='flex items-start justify-between mb-4'>
           <motion.div
             className={`text-4xl ${service.textColor}`}
@@ -709,6 +716,7 @@ ease: 'back_out' as const,
         <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service.description}
         </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -718,12 +726,16 @@ ease: 'back_out' as const,
 
 =======
 <<<<<<< HEAD
-        {/* Key Metrics */}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        {/* Key Metrics */}
         {/* Key Metrics */}          
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="text-right">
             <div className="text-2xl font-bold text-white">{service.price}</div>
             <div className="text-sm text-gray-400">{service.period}</div>
@@ -732,6 +744,7 @@ ease: 'back_out' as const,
         {/* Title & Tagline */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -740,6 +753,8 @@ ease: 'back_out' as const,
         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
           {service.name}
         </h3>
@@ -778,8 +793,11 @@ ease: 'back_out' as const,
               {service.customers}+
             </div>
             <div className='text-xs text-gray-400'>Customers</div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           {service.tagline}
         </p>
@@ -792,6 +810,7 @@ ease: 'back_out' as const,
         {/* Key Metrics */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -803,6 +822,8 @@ ease: 'back_out' as const,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
             <div className='text-purple-400 text-lg font-bold'>
@@ -905,6 +926,7 @@ ease: 'back_out' as const,
 <<<<<<< HEAD
                 transition={{ delay: 0.1 * index }}
               >
+<<<<<<< HEAD
 
 =======
 
@@ -929,15 +951,19 @@ ease: 'back_out' as const,
 <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
 =======
 <<<<<<< HEAD
-                <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />                <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />                <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {feature}
               </motion && motion.div>;
             ))}
@@ -960,6 +986,7 @@ ease: 'back_out' as const,
 =======
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -971,6 +998,9 @@ ease: 'back_out' as const,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Market Info */}
         <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
           <div className='flex items-center justify-between mb-2'>
@@ -978,6 +1008,7 @@ ease: 'back_out' as const,
               Market Size
             </span>
             <span className='text-xs text-cyan-400'>{service.marketSize}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1005,6 +1036,9 @@ ease: 'back_out' as const,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           <div className='flex items-center justify-between mb-2'>
             <span className='text-xs font-semibold text-white'>
@@ -1030,6 +1064,7 @@ ease: 'back_out' as const,
         {/* Trial & Setup Info */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1039,6 +1074,8 @@ ease: 'back_out' as const,
         <div className="flex items-center justify-between mb-6 text-sm">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='flex items-center justify-between mb-6 text-sm'>
           <div className='flex items-center gap-2 text-gray-400'>
             <Clock className='w-4 h-4' />
@@ -1054,6 +1091,7 @@ ease: 'back_out' as const,
           </div>
           <div className="flex items-center gap-2 text-gray-400">
             <Shield className="w-4 h-4" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             {service.setupTime}
@@ -1131,10 +1169,16 @@ ease: 'back_out' as const,
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+            {service.setupTime}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
         {/* Action Buttons */}
         <div className='flex gap-3'>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1166,12 +1210,9 @@ ease: 'back_out' as const,
         <div className='flex gap-3'>
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
           <motion.a
             href={service.link}
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
@@ -1227,6 +1268,7 @@ ease: 'back_out' as const,
         </div>
         {/* Contact Info */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             href={service.link}
@@ -1237,13 +1279,14 @@ ease: 'back_out' as const,
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='mt-4 pt-4 border-t border-white/10'>
           <div className='text-xs text-gray-500 text-center'>        <div className="mt-4 pt-4 border-t border-white/10">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="text-xs text-gray-500 text-center">
             Contact: {service.contactInfo.email}
-=======
 
 <<<<<<< HEAD
 
@@ -1257,11 +1300,14 @@ ease: 'back_out' as const,
             Contact: {service.contactInfo.email}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       </div>
@@ -1584,29 +1630,22 @@ export default EnhancedServiceCard
       <div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
     </motion.div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default EnhancedServiceCard;    </motion.div>
   )
 }
 export default EnhancedServiceCard;
 
-=======
 };
 
 export default EnhancedServiceCard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default EnhancedServiceCard;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -35,11 +38,14 @@ import {
 } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
@@ -49,6 +55,7 @@ import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { Project, ProjectStatus } from "@/types/projects",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -62,17 +69,14 @@ ursor/fix-website-loading-errors-and-merge-6662
   AlertDialog,
 >>>>>>>   AlertDialogAction,
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
-=======
 import { Button } from "@/components/ui/button",
 import {logErrorToProduction} from '@/utils/productionLogger',
 import {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   AlertDialog,
   AlertDialogAction,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -84,8 +88,11 @@ import {
   AlertDialogTitle,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   AlertDialogTrigger} from "@/components/ui/alert-dialog",
 import { Avatar } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
@@ -94,7 +101,6 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   Card
   CardContent
@@ -113,11 +119,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
   AlertDialogHeader
   AlertDialogTitle
   AlertDialogTrigger
-=======
-<<<<<<< HEAD
   AlertDialogTrigger,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '@/components/ui/alert-dialog'
 import { Avatar } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
@@ -138,6 +145,7 @@ import { ProjectReviewSection } from '@/components/projects/reviews/ProjectRevie
 } from 'lucide-react'
 function ProjectDetailsContent() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   AlertDialogTrigger} from "@/components/ui/alert-dialog",
@@ -169,6 +177,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const router = useRouter()
   // Get projectId from Next.js router query params
   const { projectId } = router.query as { projectId?: string }
@@ -181,11 +191,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
   const [isSubmittingNote, setIsSubmittingNote] = useState(false)
   const [activeTab, setActiveTab] = useState('details')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   AlertDialogTrigger} from "@/components/ui/alert-dialog",
 import { Avatar } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
@@ -196,8 +209,11 @@ import { ProjectReviewSection } from "@/components/projects/reviews/ProjectRevie
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
 
 function ProjectDetailsContent() {
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const router = useRouter(),
   // Get projectId from Next.js router query params
   const { projectId } = router.query as { projectId?: string },
@@ -219,25 +235,21 @@ function ProjectDetailsContent() {
 
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Load project data
   useEffect(() => {
     async function loadProject() {
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (!projectId) return
-=======
       if (!projectId) return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setIsLoading(true)
       const projectData = await getProjectById(projectId)
       if (projectData) {
         setProject(projectData)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -255,6 +267,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (!projectId) return,
       
       setIsLoading(true),
@@ -268,15 +282,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
         toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           title: "Project not found",
@@ -290,11 +308,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           title: 'Project not found'
           description: 'The requested project could not be found.'
           variant: 'destructive'
         })
         router.push('/dashboard')
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
         // Now fetch notes
@@ -305,6 +326,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           title: 'Project not found',
           description: 'The requested project could not be found.',
           variant: 'destructive',
@@ -319,12 +342,15 @@ ursor/fix-website-loading-errors-and-merge-6662
   }, [projectId])
   const fetchProjectNotes = async (projectId: string) => {    try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>>           title: "Project not found",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           title: "Project not found",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           description: "The requested project could not be found.",
@@ -404,6 +430,7 @@ function ProjectDetailsContent() {;
         router.push("/dashboard");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       }
       setIsLoading(false)
@@ -420,10 +447,11 @@ function ProjectDetailsContent() {;
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       setIsLoading(false)
     }
-<<<<<<< HEAD
     loadProject()
   }, [projectId])
   const fetchProjectNotes = async (projectId: string) => {    try {
@@ -454,20 +482,19 @@ function ProjectDetailsContent() {;
     if (!newNote.trim() |!project |!user) return
     setIsSubmittingNote(true)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       const { data, error } = await supabase
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     loadProject()
   }, [projectId]),
   
   const fetchProjectNotes = async (projectId: string) => {
     try {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const { data, error } = await supabase
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         .from("project_notes")
@@ -476,12 +503,15 @@ function ProjectDetailsContent() {;
           created_by_profile:profiles!user_id(display_name, avatar_url)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         `
         )
         .eq('project_id', projectId)
@@ -502,11 +532,14 @@ function ProjectDetailsContent() {;
     if (!newNote.trim() || !project || !user) return;
     setIsSubmittingNote(true)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         `)
         .eq("project_id", projectId)
         .order("created_at", { ascending: false }),
@@ -549,27 +582,21 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     try {
       const { data, error } = await supabase
         .from("project_notes")
         .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
           project_id: project.id
           user_id: user.id
           content: newNote
-=======
           project_id: project.id,
           user_id: user.id,
-<<<<<<< HEAD
           content: newNote,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         })
         .select()
       if (error) throw error
@@ -668,12 +695,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         ...project
         status: newStatus
       })
-=======
-<<<<<<< HEAD
           project_id: project.id,
           user_id: user.id,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           content: newNote})
         .select(),
       
@@ -707,19 +730,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         ...project,
         status: newStatus}),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
           title: 'Offer Accepted! 🎉'
           description: 'The project is now in progress. Congratulations!'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         })
@@ -731,9 +748,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           title: 'Offer Accepted! 🎉',
           description: 'The project is now in progress. Congratulations!',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         })
       }
     }
@@ -760,12 +778,15 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           title: "Offer Accepted! 🎉",
           description: "The project is now in progress. Congratulations!"})
       }
@@ -795,11 +816,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className="container mx-auto py-8">
@@ -831,11 +855,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   }
-<<<<<<< HEAD
-=======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!project) {
     return (
       <div className="container mx-auto py-8">
@@ -848,6 +873,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             <Button onClick={() => router.push('/dashboard')}>              Return to Dashboard
@@ -855,22 +881,27 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-            <Button onClick={() => router.push('/dashboard')}>              Return to Dashboard
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <Button onClick={() => router.push('/dashboard')}>              Return to Dashboard
             <Button onClick={() => router.push("/dashboard")}>
               Return to Dashboard
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </Button>
 >>>>>>>           </CardContent>
         </Card>
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -881,6 +912,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  // Check if user is either the client or the talent
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const isClient = user?.id === project.client_id
   const isTalent = user?.id === project.talent_id
   if (!isClient && !isTalent) {
@@ -896,7 +930,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   const isActiveProject = ['offer_accepted', 'in_progress'].includes(
     project.status
   )
-<<<<<<< HEAD
 
 =======
 =======
@@ -909,6 +942,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         title={`Project: ${project.job?.title |'Project Details'} | Zion AI Marketplace`}
         description='View and manage your project details and collaboration.'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -918,6 +952,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+  // Check if user is either the client or the talent
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
   
@@ -939,16 +977,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
       <SEO 
         title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
         description="View and manage your project details and collaboration."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -979,11 +1014,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
             <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1001,28 +1039,21 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <h1 className='text-3xl font-bold'>
                 {project.job?.title |'Project'}
               </h1>
               <div className='flex items-center gap-2 mt-1'>
-=======
               <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {getStatusBadge(project.status)}
                 <span className="text-muted-foreground">
                   Started on {format(new Date(project.start_date), "PPP")}
                 </span>
               </div>
             </div>
-<<<<<<< HEAD
-=======
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Action Buttons Based on Role and Status */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="space-x-2">
@@ -1046,24 +1077,30 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <AlertDialogAction
                           onClick={() => handleStatusChange('offer_accepted')}
                         >                          Accept Offer
-=======
                         <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
                           Accept Offer
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
@@ -1125,29 +1162,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                       Completed
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Button
                     variant='outline'
                     onClick={() => handleStatusChange('changes_requested')}
                   >
                     <MessageSquare className='mr-2 h-4 w-4' /> Request Changes
-<<<<<<< HEAD
                   </Button>
                 </>
               )}
               {(isClient |isTalent) && project.status === 'in_progress' && (
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                   
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </Button>
                 </>
               )}
               
               {(isClient || isTalent) && project.status === "in_progress" && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="default">
@@ -1167,6 +1200,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                       <AlertDialogAction
@@ -1176,23 +1210,28 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <AlertDialogAction
                         onClick={() => handleStatusChange('completed')}
                       >                        Mark as Completed
-=======
                       <AlertDialogAction onClick={() => handleStatusChange("completed")}>
                         Mark as Completed
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       </AlertDialogAction>
 >>>>>>>                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1203,6 +1242,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {isActiveProject && (
                 <Button variant="default" asChild>
                   <Link href={`/project/[id]/milestones`}>
@@ -1217,6 +1259,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </Link>
                 </Button>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1279,11 +1322,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 <<<<<<< HEAD
-              {(isClient |isTalent) &&
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              {(isClient |isTalent) &&
 
               {(isClient || isTalent) &&
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(
                   project.status
                 ) && (
@@ -1405,8 +1448,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               <TabsContent value='details'>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1441,6 +1487,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <TabsContent value="details">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>                 <Card>
@@ -1452,6 +1499,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Card>
 >>>>>>>                   <CardHeader>
                     <CardTitle>Project Scope</CardTitle>
@@ -1469,6 +1518,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       <div>
 =======
@@ -1498,12 +1548,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div>
                         <h3 className="font-semibold mb-2">Payment Terms</h3>
                         <Badge variant="outline" className="capitalize">
                           {project.payment_terms} Payment
                         </Badge>
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1521,12 +1575,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 =======
-                      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                      
                       <div>
                         <h3 className="font-semibold mb-2">Job Details</h3>
                         <div className="bg-muted/30 p-4 rounded-md">
@@ -1540,6 +1591,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </TabsContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <TabsContent value='timeline'>
@@ -1547,16 +1599,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-              <TabsContent value='timeline'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <TabsContent value='timeline'>
               
               <TabsContent value="timeline">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Card>
 >>>>>>>                   <CardHeader>
                     <CardTitle>Project Timeline</CardTitle>
@@ -1575,6 +1631,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                         <div>
 =======
@@ -1590,17 +1647,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <div className='mt-1'>
 >>>>>>>                             {getStatusBadge(project.status)}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>
                         <Clock className='h-5 w-5 text-primary mt-0.5' />
-=======
                       
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
                         <Clock className="h-5 w-5 text-primary mt-0.5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <div>
                           <h3 className="font-semibold">Project Status</h3>
                           <div className="mt-1">
@@ -1615,6 +1668,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </TabsContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <TabsContent value='documents'>
@@ -1622,16 +1676,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-              <TabsContent value='documents'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <TabsContent value='documents'>
               
               <TabsContent value="documents">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Card>
 >>>>>>>                   <CardHeader>
                     <CardTitle>Project Documents</CardTitle>
@@ -1671,6 +1729,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </TabsContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <TabsContent value='notes'>
@@ -1678,16 +1737,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-              <TabsContent value='notes'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <TabsContent value='notes'>
               
               <TabsContent value="notes">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Card>
 >>>>>>>                   <CardHeader>
                     <CardTitle>Project Notes</CardTitle>
@@ -1701,8 +1764,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                         {notes.length > 0 ? (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           notes.map(note => (
                             <div
                               key={note.id}
@@ -1710,21 +1776,24 @@ ursor/fix-website-loading-errors-and-merge-6662
                             >
                               <div className='flex items-center gap-2 mb-2'>
                                 <Avatar className='h-6 w-6'>
-=======
                           notes.map((note) => (
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">
                               <div className="flex items-center gap-2 mb-2">
                                 <Avatar className="h-6 w-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                   {note.created_by_profile?.avatar_url ? (
                                     <img
                                       src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                                   ) : (
@@ -1750,21 +1819,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                                     <User className="h-4 w-4" />
 =======
 <<<<<<< HEAD
-                                      loading='lazy'                                    />
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                                      loading='lazy'                                    />
                                       loading="lazy"
                                     />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                   ) : (
                                     <User className="h-4 w-4" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                                   )}
                                 </Avatar>
-<<<<<<< HEAD
                                 <span className='font-medium text-sm'>
                                   {note.created_by_profile?.display_name |
 <<<<<<< HEAD
@@ -1797,10 +1861,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                                     'User'}
-=======
                                 <span className="font-medium text-sm">
                                   {note.created_by_profile?.display_name || "User"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                                 </span>
                                 <span className="text-xs text-muted-foreground">
                                   {format(new Date(note.created_at), "PPp")}
@@ -1860,7 +1922,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
                       </div>
-<<<<<<< HEAD
                       {isOfferAccepted && (
                         <div>
                           <Textarea
@@ -1868,13 +1929,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                             value={newNote}
                             onChange={e => setNewNote(e.target.value)}
                             className='min-h-[100px] mb-2'                          />
-<<<<<<< HEAD
                           <Button
                             onClick = {handleSubmitNote,}
                             disabled = {!newNote.trim() |isSubmittingNote,}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                       
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       {isOfferAccepted && (
@@ -1885,6 +1942,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                             onChange={(e) => setNewNote(e.target.value)}
                             className="min-h-[100px] mb-2"
                           />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1903,10 +1961,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           <Button
                             onClick={handleSubmitNote}
                             disabled={!newNote.trim() || isSubmittingNote}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             {isSubmittingNote ? "Posting..." : "Post Note"}
@@ -1919,27 +1978,24 @@ ursor/fix-website-loading-errors-and-merge-6662
               </TabsContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <TabsContent value='reviews'>
 >>>>>>>                 <ProjectReviewSection project={project} />
 =======
-              <TabsContent value='reviews'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <TabsContent value='reviews'>
               
               <TabsContent value="reviews">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <ProjectReviewSection project={project} />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </TabsContent>
             </Tabs>
           </div>
-<<<<<<< HEAD
           <div className='order-1 lg:order-2 lg:col-span-1'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             <Card>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1983,6 +2039,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+          <div className="order-1 lg:order-2 lg:col-span-1">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Card>
 >>>>>>>               <CardHeader>
                 <CardTitle>Project Participants</CardTitle>
@@ -1995,6 +2055,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2084,21 +2145,26 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {isTalent && (
 ursor/fix-website-loading-errors-and-merge-6662
 =======
-                          loading='lazy'                        />
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                          loading='lazy'                        />
                           loading="lazy"
                         />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       ) : (
                         <User className="h-6 w-6" />
                       )}
                     </Avatar>
                     <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     </div>;
@@ -2150,6 +2216,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <h3 className='font-semibold'>
                         {project.talent_profile?.full_name |'Talent'}
                       </h3>
@@ -2159,10 +2227,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </p>
                       {isClient && (
                         <Button
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           variant='outline'
                           size='sm'
                           className='mt-2'
@@ -2172,8 +2236,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                             )
                           }                        >
                           <MessageSquare className='mr-1 h-3 w-3' /> Message
-=======
-<<<<<<< HEAD
                       <h3 className="font-semibold">
                         {project.talent_profile?.full_name || "Talent"}
                       </h3>
@@ -2182,8 +2244,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </p>
                       {isClient && (
                         <Button
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           variant="outline"
                           size="sm"
                           className="mt-2"
@@ -2191,15 +2251,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         </Button>
                       )}
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
               </CardContent>
@@ -2210,22 +2274,27 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
-=======
                   
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2236,21 +2305,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
-                          loading='lazy'                        />
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                          loading='lazy'                        />
                           loading="lazy"
                         />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       ) : (
                         <User className="h-6 w-6" />
                       )}
                     </Avatar>
                     <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2305,17 +2379,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <h3 className='font-semibold'>
                         {project.talent_profile?.full_name |'Client'}
-=======
                       <h3 className="font-semibold">
                         {project.talent_profile?.full_name || "Client"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (
                         <Button
-<<<<<<< HEAD
                           variant='outline'
                           size='sm'
                           className='mt-2'
@@ -2816,7 +2889,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
             <Card className='mt-6'>
-=======
                           variant="outline"
                           size="sm"
                           className="mt-2"
@@ -3307,11 +3379,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             {/* Project Status Card */}
             <Card className="mt-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <CardHeader>
 >>>>>>>                 <CardTitle>Project Status</CardTitle>
               </CardHeader>
@@ -3323,10 +3398,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='flex justify-between items-center'>
                     <span className='text-sm font-medium'>Creation Date:</span>
                     <span className='text-sm'>
@@ -3338,6 +3416,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <span className='text-sm'>
                       {format(new Date(project.start_date), 'PPP')}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     </span>
                   </div>
                 </div>
@@ -3347,6 +3426,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
@@ -3360,15 +3441,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <span className="text-sm">
                       {format(new Date(project.start_date), "PPP")}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </span>
                   </div>
                 </div>
               </CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -3480,19 +3565,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 =======
-              
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
-<<<<<<< HEAD
                   <Button
                     variant='outline'
                     onClick={() =>
@@ -3501,7 +3582,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                     className='w-full'                  >
                     <MessageSquare className='mr-2 h-4 w-4' /> Discuss Changes
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </Button>
                 </CardFooter>
               )}
@@ -3509,18 +3593,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-muted-foreground'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Button 
                     variant="outline"
                     onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
                     className="w-full"
                   >
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3533,6 +3621,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </Button>
                 </CardFooter>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -3543,18 +3633,24 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className="text-sm text-muted-foreground">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     Waiting for the talent to accept your offer.
                   </p>
                 </CardFooter>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {project.status === 'completed' && (
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-green-600 flex items-center gap-1'>
@@ -3572,10 +3668,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </CardFooter>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </Card>
           </div>
         </div>
@@ -3612,6 +3711,7 @@ case "in progress": return <Badge className="bg-blue-100 text-blue-800">In Progr
 case "completed": return <Badge variant="default">Completed</Badge>;"
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;"
 default: return <Badge variant="outline"> {
+<<<<<<< HEAD
 
 =======
 >>>>>>>                     Waiting for the talent to accept your offer.
@@ -3935,10 +4035,10 @@ case "completed": return <Badge variant="default">Completed</Badge>;"
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;"
 default: return <Badge variant="outline"> {
 <<<<<<< HEAD
-  status
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  status
   status 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</Badge>
 };'"
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={"
@@ -4046,6 +4146,7 @@ const ProjectDetails = () => {
               </Link>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             </div>
@@ -4061,11 +4162,12 @@ const ProjectDetails = () => {
   );
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
     </>
   )
 }
-=======
               
               {project.status === "completed" && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
@@ -4082,13 +4184,10 @@ const ProjectDetails = () => {
                   </p>
                 </CardFooter>
               )}
-=======
             </div>;
     </>;
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Card>;
           </div>;
         </div>;
@@ -4108,6 +4207,7 @@ export default function ProjectDetails() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -4121,3 +4221,5 @@ export default function ProjectDetails() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

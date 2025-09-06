@@ -42,9 +42,12 @@ class ErrorBoundary extends React.Component {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -58,6 +61,7 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function RequestsPanel() {;
   const { user } = useAuth();
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
@@ -105,23 +109,21 @@ function RequestsPanel() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { useTalentQuotes } from "@/hooks/useTalentQuotes",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-=======
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { 
   RequestsHeader;
   QuoteRequestsList 
 } from "@/components/quotes",
-<<<<<<< HEAD
 import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function RequestsPanel() {
@@ -130,19 +132,20 @@ export default function RequestsPanel() {
   const isTalent = user?.userType === 'creator' |user?.userType === 'jobSeeker';
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
-=======
 import type { QuoteRequest } from "@/types/quotes",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 export default function RequestsPanel() {
   const { user } = useAuth(),
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const {
     quotes,
     unreadCount,
@@ -156,16 +159,22 @@ export default function RequestsPanel() {
     toggleArchive
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } = useTalentQuotes();
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote);
     setShowDetails(true)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } = useTalentQuotes(),
 
   const handleViewDetails = (quote: QuoteRequest) => {
@@ -173,18 +182,22 @@ export default function RequestsPanel() {
     setShowDetails(true),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id)
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -192,12 +205,17 @@ export default function RequestsPanel() {
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Filter quotes by archive status
   const activeQuotes = quotes.filter(q => !q.is_archived);
   const archivedQuotes = quotes.filter(q => q.is_archived);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Filter quotes by archive status
@@ -205,11 +223,14 @@ export default function RequestsPanel() {
   const archivedQuotes = quotes.filter(q => q.is_archived),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <ProtectedRoute>
       <div>
@@ -218,11 +239,14 @@ export default function RequestsPanel() {
           <div className="container mx-auto">
             <RequestsHeader
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -393,11 +417,6 @@ export default function RequestsPanel() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
             <RequestsHeader;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
@@ -498,21 +517,22 @@ export default function RequestsPanel() {;
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
-<<<<<<< HEAD
           onClose={() => {
             setShowDetails(false);
 
             setSelectedQuote(null)
-=======
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }}
         />
         <Footer />

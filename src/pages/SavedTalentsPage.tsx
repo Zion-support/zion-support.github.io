@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react'
 import { SEO } from '@/components/SEO'
 import { TalentCard } from '@/components/talent/TalentCard'
@@ -25,11 +28,14 @@ export default function SavedTalentsPage() {
   const [isLoading, setIsLoading] = useState(true)
   const router = useRouter()
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { SEO } from "@/components/SEO",
 import { TalentCard } from "@/components/talent/TalentCard",
@@ -38,11 +44,14 @@ import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // Using router.asPath instead of useLocation
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast";
 import { useRouter  } from 'next/router';
 import { logErrorToProduction  } from '@/utils/productionLogger';
@@ -68,6 +77,7 @@ export default function SavedTalentsPage() {
         if (!user) {
           logWarn('User not authenticated.')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   // Using router.asPath instead of useLocation
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -80,6 +90,8 @@ export default function SavedTalentsPage() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast",
 import { useRouter } from 'next/router',
 import { logErrorToProduction } from '@/utils/productionLogger',
@@ -93,10 +105,6 @@ export default function SavedTalentsPage() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const router = useRouter(),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Using router.asPath instead of useLocation
 
   useEffect(() => {
@@ -104,9 +112,12 @@ export default function SavedTalentsPage() {
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [user, router])
   useEffect((,) => {
     const fetchSavedTalents = async () => {
@@ -116,11 +127,14 @@ export default function SavedTalentsPage() {
           logWarn('User not authenticated.')
           return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [user, router]),
 
   useEffect(() => {
@@ -129,6 +143,7 @@ export default function SavedTalentsPage() {
       try {
         if (!user) {
           logWarn("User not authenticated."),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -143,8 +158,9 @@ export default function SavedTalentsPage() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           return
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         const { data, error } = await supabase
@@ -170,10 +186,13 @@ export default function SavedTalentsPage() {
           )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .eq('user_id', user.id)
         if (error) {
           throw error
@@ -202,7 +221,10 @@ export default function SavedTalentsPage() {
     fetchSavedTalents()
   }, [user])
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleViewProfile = (talentId: string) => {
     router.push(`/talent/${talentId}`)
   }
@@ -237,6 +259,7 @@ export default function SavedTalentsPage() {
           title: 'Talent Removed'
           description: 'Talent removed from saved list.'
         })
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           .eq("user_id", user.id),
 
@@ -359,6 +382,8 @@ export default function SavedTalentsPage() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .eq("user_id", user.id),
 
         if (error) {
@@ -470,7 +495,6 @@ export default function SavedTalentsPage() {;
     },;
     fetchSavedTalents();
   }, [user]),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const handleViewProfile = (talentId: string) => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     router.push(`/talent/${talentId}`);
@@ -493,7 +517,6 @@ export default function SavedTalentsPage() {;
         logWarn('User not authenticated.')
         return;
       }
-<<<<<<< HEAD
 
 <<<<<<< HEAD
       } else {
@@ -529,6 +552,7 @@ export default function SavedTalentsPage() {;
           description: 'Talent removed from saved list.',
         })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       } else {
         // Add to saved talents
         const { error } = await supabase
@@ -543,6 +567,8 @@ export default function SavedTalentsPage() {;
 >>>>>>>         // Fetch the updated talent profile and add it to the list
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       if (isCurrentlySaved) {;
         // Remove from saved talents;
@@ -561,41 +587,37 @@ export default function SavedTalentsPage() {;
         toast({
           title: "Talent Removed",
           description: "Talent removed from saved list."})
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } else {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
-<<<<<<< HEAD
           .insert([{ user_id: user.id, talent_id: talentId }])
-<<<<<<< HEAD
         if (error) {
           throw error
         }
-=======
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
-=======
-=======
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         if (error) {
           throw error
         }
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // Fetch the updated talent profile and add it to the list
 >>>>>>>         const { data: talentData, error: talentError } = await supabase
           .from('talent_profiles')
@@ -603,9 +625,12 @@ export default function SavedTalentsPage() {;
           .eq('id', talentId)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .single()
         if (talentError) {
           logErrorToProduction(
@@ -622,7 +647,10 @@ export default function SavedTalentsPage() {;
             variant: 'destructive'
           })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           return
         }
         if (talentData) {
@@ -650,6 +678,7 @@ export default function SavedTalentsPage() {;
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -657,6 +686,9 @@ export default function SavedTalentsPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          return;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .single(),
   
         if (talentError) {
@@ -666,6 +698,7 @@ export default function SavedTalentsPage() {;
             description: "Failed to update saved talents. Please try again later.",
             variant: "destructive"}),
           return
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -686,6 +719,11 @@ export default function SavedTalentsPage() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        }
+  
+        if (talentData) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           setSavedTalents(prevTalents => [
             ...prevTalents,
             talentData as unknown as TalentProfile,
@@ -798,8 +836,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       })
     }
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
           toast({
             title: "Talent Saved",
@@ -814,12 +850,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         variant: "destructive"})
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -831,37 +862,22 @@ ursor/fix-website-loading-errors-and-merge-6662
         <p className="text-muted-foreground">
           Here are the talents you've saved for future reference.
         </p>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
           <div className="py-8">
             <EmptyState
-<<<<<<< HEAD
               icon={<Heart className='h-8 w-8' />}
               title='No Saved Talents'              description="You haven't saved any talents yet."
-=======
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents"
               description="You haven't saved any talents yet."
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center"
             />
           </div>
         ) : (
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
             {savedTalents.map(talent => (              <TalentCard
                 key = {talent.id,}
@@ -870,7 +886,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onRequestHire = {handleRequestHire,}
                 isAuthenticated = {!!user,}
               />
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map((talent) => (
               <TalentCard
@@ -1037,11 +1052,6 @@ if ( {) {
                 onRequestHire={handleRequestHire}
                 isAuthenticated={!!user}
               />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
@@ -1258,15 +1268,17 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div>)
 }</div> </>)
 }'"}
-=======
       </div>;
     </>;
   );
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 
@@ -8,6 +7,8 @@
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { Input } from '@/components/ui/input',;
@@ -64,6 +65,7 @@ export default function VerifyStatus() {
     setError(''),
     setMessage(''),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -307,6 +309,8 @@ if ( {) {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
@@ -314,7 +318,6 @@ import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
 import { AuthLayout } from '@/layout';
-<<<<<<< HEAD
 
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
@@ -877,7 +880,6 @@ if ( {) {
     router.back()
   }
 
-=======
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client;
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state;
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
@@ -929,10 +931,6 @@ export default function VerifyStatus(req, res) {
     setIsResending(true);
     setError('');
     setMessage('');
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     try {
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
@@ -1037,24 +1035,16 @@ export default function VerifyStatus(req, res) {
   const handleGoBack = () => {
     router.back()
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <AuthLayout>
       <div className="flex min-h-screen items-center justify-center p-4">
         <div className="w-full max-w-md space-y-6">
-<<<<<<< HEAD
           {/* Header */}
-=======
           {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="text-center">
             <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <Mail className="h-6 w-6 text-blue-600" />
@@ -1064,28 +1054,19 @@ export default function VerifyStatus(req, res) {
               Check and manage your email verification status
             </p>
           </div>
-<<<<<<< HEAD
           {/* Success Message */}
-=======
           {/* Success Message */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
               <AlertDescription>{message}</AlertDescription>
             </Alert>
-<<<<<<< HEAD
           )}
           {/* Error Message */}
-=======
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1097,16 +1078,13 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {error && (
             <Alert variant="destructive">
               <AlertCircle className="h-4 w-4" />
               <AlertDescription>{error}</AlertDescription>
             </Alert>
-<<<<<<< HEAD
           )}
           {/* Email Input */}
-=======
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1118,11 +1096,6 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
@@ -1130,11 +1103,13 @@ export default function VerifyStatus(req, res) {
             <Input
               id="email"
               type="email"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-=======
               value={email  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1145,11 +1120,6 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               placeholder="Enter your email address"
               className="w-full"
             />
@@ -1169,7 +1139,6 @@ export default function VerifyStatus(req, res) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 We'll check the verification status for this email address
               </p>
-<<<<<<< HEAD
             )}
           </div>
 <<<<<<< HEAD
@@ -1225,7 +1194,6 @@ export default function VerifyStatus(req, res) {
               <div className=&quot;text-sm text-slate-700 dark:text-slate-300 space-y-1&quot;>
 =======
           {/* Status Info */}
-=======
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1237,11 +1205,6 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {email && (
             <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
               <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>
@@ -1259,7 +1222,10 @@ export default function VerifyStatus(req, res) {
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
                   <Clock className="h-3 w-3 mr-1" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Last email sent: {lastSentTime.toLocaleTimeString()}
                 </p>
               )}
@@ -1286,13 +1252,14 @@ export default function VerifyStatus(req, res) {
             {/* Check Status Button */}
             <Button
               onClick={handleCheckStatus}
-<<<<<<< HEAD
               disabled={!email |isCheckingStatus}
-=======
               disabled={!email || isCheckingStatus}
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Last email sent: {lastSentTime.toLocaleTimeString()  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1334,6 +1301,7 @@ export default function VerifyStatus(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1348,6 +1316,8 @@ export default function VerifyStatus(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="w-full"
               variant="outline"
             >
@@ -1366,6 +1336,7 @@ export default function VerifyStatus(req, res) {
                   <Eye className="h-4 w-4 mr-2" />
                   Check Verification Status
                 </>
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1376,6 +1347,8 @@ export default function VerifyStatus(req, res) {
                   Check Verification Status
                 </>
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
             </Button>
 <<<<<<< HEAD
@@ -1387,6 +1360,7 @@ export default function VerifyStatus(req, res) {
             {/* Resend Email Button */}
             <Button
               onClick={handleResendEmail}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
@@ -1402,6 +1376,10 @@ export default function VerifyStatus(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              disabled={!email |isResending |countdown > 0}
+              disabled={!email || isResending || countdown > 0}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1425,6 +1403,7 @@ export default function VerifyStatus(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1440,6 +1419,8 @@ export default function VerifyStatus(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="w-full"
               variant="secondary"
             >
@@ -1467,6 +1448,7 @@ export default function VerifyStatus(req, res) {
                   <Mail className="h-4 w-4 mr-2" />
                   Resend Verification Email
                 </>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1480,6 +1462,8 @@ export default function VerifyStatus(req, res) {
                   Resend Verification Email
                 </>
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
             </Button>
 <<<<<<< HEAD
@@ -1531,6 +1515,7 @@ export default function VerifyStatus(req, res) {
             <Button;
               on_click={handleTryLogin}
               disabled={!email}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1693,6 +1678,8 @@ export default function VerifyStatus(req, res) {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1715,47 +1702,28 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="w-full"
             >
               Try Login
             </Button>
           </div>
-<<<<<<< HEAD
           {/* Help Text */}
-=======
           {/* Help Text */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
             </p>
             <Button
-<<<<<<< HEAD
               onClick={handleGoBack}
-=======
               onClick={handleGoBack  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
@@ -1764,12 +1732,10 @@ export default function VerifyStatus(req, res) {
               Go Back
             </Button>
           </div>
-<<<<<<< HEAD
           {/* Additional Options */}
           <div className="border-t pt-4 space-y-2">
             <Button
               onClick={() => router.push('/signup')}
-=======
           {/* Additional Options */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1782,30 +1748,18 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               variant="ghost"
               className="w-full text-sm"
             >
               Use Different Email Address
             </Button>
             <Button
-<<<<<<< HEAD
               onClick={() => router.push('/contact')}
-=======
               onClick={() => router.push('/contact')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               variant="ghost"
               className="w-full text-sm"
             >
@@ -1816,19 +1770,20 @@ export default function VerifyStatus(req, res) {
       </div>
     </AuthLayout>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1842,11 +1797,13 @@ export default function VerifyStatus(req, res) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
+;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

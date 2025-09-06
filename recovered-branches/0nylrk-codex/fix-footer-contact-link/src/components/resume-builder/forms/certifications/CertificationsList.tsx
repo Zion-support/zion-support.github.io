@@ -3,13 +3,22 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+import { Certification  } from '@/types/resume';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Edit, Trash2  } from 'lucide-react';
+import { format } from 'date-fns';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Certification} from '@/types/resume';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {Edit, Trash2} from 'lucide-react';
 import {format} from 'date-fns';
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -21,16 +30,21 @@ import { Button  } from '@/components/ui/button';
 import { Edit, Trash2  } from 'lucide-react';
 import { format } from 'date-fns';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -40,6 +54,7 @@ interface CertificationsListProps {;
   certifications: Certification[],;
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -49,6 +64,8 @@ interface CertificationsListProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function CertificationsList({
   certifications
@@ -382,7 +399,11 @@ export function CertificationsList({
                   {cert.issuing_organization}
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">
+<<<<<<< HEAD
 Issued:{" "}
+=======
+                  Issued:{" "}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {cert.issue_date
                     ? typeof cert.issue_date === "string"
                       ? cert.issue_date
@@ -396,6 +417,17 @@ Issued:{" "}
                         ? cert.expiration_date
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
+<<<<<<< HEAD
+=======
+                  Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
+                    ? cert.issue_date 
+                    : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
+                  {cert.expiration_date && (;
+                    <> · Expires: {typeof cert.expiration_date === 'string';
+                      ? cert.expiration_date;
+                      : format(cert.expiration_date, 'MMM yyyy')}
+                    </>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   )}
                 </p>
               </div>
@@ -433,6 +465,7 @@ Issued:{" "}
         </Card>
       ))}
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -466,3 +499,10 @@ Issued:{" "}
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

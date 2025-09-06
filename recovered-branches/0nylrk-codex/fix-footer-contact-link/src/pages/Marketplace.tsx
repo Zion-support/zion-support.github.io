@@ -48,9 +48,12 @@ class ErrorBoundary extends React.Component {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -81,6 +84,7 @@ export default function Marketplace() {;
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Marketplace.tsx
 
 
@@ -88,6 +92,8 @@ export default function Marketplace() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -104,7 +110,6 @@ import { useNavigate } from "react-router-dom",
 import { SearchSuggestion } from "@/types/search";
 import { AppLayout } from "@/layout/AppLayout";
 export default function Marketplace() {
-<<<<<<< HEAD
 
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
@@ -114,7 +119,6 @@ export default function Marketplace() {
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions()
   const filterOptions = generateFilterOptions();
-=======
   const navigate = useNavigate(),
   const [searchQuery, setSearchQuery] = useState(""),
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
@@ -122,14 +126,18 @@ export default function Marketplace() {
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -137,6 +145,8 @@ export default function Marketplace() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
@@ -145,6 +155,7 @@ export default function Marketplace() {
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -153,6 +164,8 @@ export default function Marketplace() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -185,6 +198,7 @@ export default function Marketplace() {;
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -196,6 +210,8 @@ export default function Marketplace() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
@@ -214,18 +230,24 @@ export default function Marketplace() {;
       return false
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return true
   });
   const handleFilterChange = (filterType: string, value: string) => {
     console.log(`Filter changed: ${filterType} = ${value}`)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     return true
   }),
@@ -233,12 +255,15 @@ export default function Marketplace() {;
   const handleFilterChange = (filterType: string, value: string) => {
     // // // console.log(`Filter changed: ${filterType} = ${value}`),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
@@ -346,19 +371,21 @@ export default function Marketplace() {;
         ),
         break
     }
-<<<<<<< HEAD
   }
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const clearAllFilters = () => {
     setSearchQuery(""),
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -370,12 +397,16 @@ export default function Marketplace() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
@@ -384,6 +415,7 @@ export default function Marketplace() {;
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -395,12 +427,16 @@ export default function Marketplace() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      });
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      });
       }),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -411,6 +447,7 @@ export default function Marketplace() {;
             category: listing.category
             image: listing.images?.[0]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -420,6 +457,8 @@ export default function Marketplace() {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     return true;
   }),;
@@ -612,6 +651,7 @@ if ( {) {
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -995,23 +1035,17 @@ navigate("/request-quote", {state: {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         }
       })
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   },
-=======
   };
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <AppLayout>
       <main className="flex-grow container mx-auto px-4 py-8">
@@ -1049,16 +1083,13 @@ navigate("/request-quote", {state: {
           <div className="lg:col-span-1">
             <FilterSidebar
               filters={{
-<<<<<<< HEAD
                 selectedProductTypes;
                 selectedLocations;
                 selectedAvailability
 
-=======
                 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 selectedRating
               }}
               filterOptions={filterOptions}
@@ -1087,15 +1118,16 @@ navigate("/request-quote", {state: {
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-<<<<<<< HEAD
-=======
             
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
@@ -1243,7 +1275,6 @@ navigate("/request-quote", {state: {
                   </Button>
                 </div>
               )}
-<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -1251,8 +1282,11 @@ navigate("/request-quote", {state: {
     </AppLayout>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>;
           </div>;
         </div>;
@@ -1362,5 +1396,8 @@ Discover professional services and products for your AI and tech projects. Brows
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

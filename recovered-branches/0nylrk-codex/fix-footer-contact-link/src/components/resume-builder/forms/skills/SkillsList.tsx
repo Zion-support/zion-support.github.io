@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsList.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ========
 <<<<<<< HEAD
@@ -36,11 +37,20 @@ import { useState, useEffect  } from 'react';
 import { Skill  } from '@/types/resume';
 import { SkillCategory } from './SkillCategory';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { useState, useEffect  } from 'react';
+import { Skill  } from '@/types/resume';
+import { SkillCategory } from './SkillCategory';
+import {useState, useEffect} from 'react';
+import {Skill} from '@/types/resume';
+import {SkillCategory} from './SkillCategory';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -52,12 +62,20 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   const [skillsByCategory, setSkillsByCategory] = useState<
     Record<string, Skill[]>
   >({});
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
+  const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
@@ -100,6 +118,7 @@ const category = skill.category |"Other";
   }, [skills]);
   if (Object.keys(skillsByCategory).length === 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -108,6 +127,11 @@ const category = skill.category |"Other";
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    return null;
+  }
+    return null
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { Skill } from '@/types/resume',;
 import { SkillCategory } from './SkillCategory',;
@@ -132,6 +156,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   }, [skills]);
   if (Object.keys(skillsByCategory).length === 0) {;
     return null;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
@@ -144,6 +169,10 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  }
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
@@ -181,6 +210,7 @@ return null;
             onDelete={onDeleteSkill}
           />
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -351,3 +381,15 @@ return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your S
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      </div>
+    </div>
+  );
+}
+
+  )
+      </div>;
+    </div>;
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

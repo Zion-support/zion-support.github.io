@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -49,6 +50,20 @@ import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+import React, { useEffect, useState, useCallback } from 'react';
+
+import { motion } from 'framer-motion';
+import {
+  Zap
+  Clock
+  TrendingUp
+  Activity
+  Gauge
+  Cpu
+  Database
+  Network;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Zap,
   Clock,
   TrendingUp,
@@ -57,9 +72,12 @@ import {
   Cpu,
   Database,;
   Network,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';
 interface PerformanceMetrics {;
   loadTime: number;
@@ -1327,11 +1345,12 @@ if ( { // LCP should be under 2.5s) {
         observer.disconnect()
       }
   }, [measurePerformance]);
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getPerformanceScore = (): number => {
     let score = 100;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1597,7 +1616,6 @@ onClick={() => setShowMetrics(!showMetrics)}
           />
         </div>
         <div className='text-right mt-1'>
-<<<<<<< HEAD
           <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>        </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="w-full bg-white/10 rounded-full h-3">
@@ -1749,7 +1767,6 @@ onClick={() => setShowMetrics(!showMetrics)}
           <span className="text-sm text-white/60">{performanceScore}/100</span>
         </div>
       </div>
-=======
           <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1757,6 +1774,7 @@ onClick={() => setShowMetrics(!showMetrics)}
 
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1771,6 +1789,8 @@ onClick={() => setShowMetrics(!showMetrics)}
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Metrics Display */}
       {showMetrics && (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1844,16 +1864,17 @@ onClick={() => setShowMetrics(!showMetrics)}
 
 =======
           className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
-<<<<<<< HEAD
-=======
 
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -1966,25 +1987,24 @@ onClick={() => setShowMetrics(!showMetrics)}
 =======
         </motion.div>
       )}
-<<<<<<< HEAD
       {/* Optimization Controls */}
-<<<<<<< HEAD
       <div className='space-y-3'>        <button      <div className="space-y-3">
         <button
-=======
 
       {/* Optimization Controls */}
-=======
-<<<<<<< HEAD
       <div className='space-y-3'>        <button      <div className="space-y-3">
         <button
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='space-y-3'>        <button
 
         <button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2004,6 +2024,8 @@ onClick={() => setShowMetrics(!showMetrics)}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -2053,9 +2075,9 @@ onClick={() => setShowMetrics(!showMetrics)}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="text-sm text-white/80">{optimizationStatus}</div>
           </div>
-<<<<<<< HEAD
         )}
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </button>;
@@ -2161,15 +2183,12 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         <ul className="text-xs text-white/60 space-y-1">
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         )}
       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Performance Tips */}
 <<<<<<< HEAD
       <div className="mt-6 pt-4 border-t border-white/10">
@@ -2193,6 +2212,7 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         </h4>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2203,12 +2223,14 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
-=======
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2216,6 +2238,8 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -2436,7 +2460,6 @@ if (return 'D') {
 }export default PerformanceOptimizer;}
 =======
   );
-<<<<<<< HEAD
 };export default PerformanceOptimizer;}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       // Preload critical resources;
@@ -2460,13 +2483,14 @@ addResourceHint (image, 'image');
       {criticalCSS && (;
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
       )}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 {/* Preload critical resources */}
       {preload_images.map ((image, index) => (
         <link;
@@ -2747,16 +2771,14 @@ export default PerformanceOptimizer;
 =======
 =======
 
-=======
 };export default PerformanceOptimizer;
 
 export default PerformanceOptimizer;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default PerformanceOptimizer;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

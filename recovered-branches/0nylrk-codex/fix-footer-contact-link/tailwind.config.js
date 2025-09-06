@@ -47,6 +47,7 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))"}}
       borderRadius: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   plugins: []}
@@ -147,13 +148,18 @@ module.exports = {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/tailwind.config.js
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         lg: "var(--radius)"
         md: "calc(var(--radius) - 2px)"
         sm: "calc(var(--radius) - 4px)"}}}
-=======
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)"}}},
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   plugins: []}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  plugins: []}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

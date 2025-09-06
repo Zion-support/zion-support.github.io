@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -372,24 +372,20 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 import {
-<<<<<<< HEAD
   authenticateRequest
   enforceRateLimit
   recordRequest;
-=======
   authenticateRequest,
   enforceRateLimit,;
   recordRequest,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../utils/api/partnerAuth';
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -418,18 +414,14 @@ export default async function handler(
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'email required' });
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
   }
-<<<<<<< HEAD
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
     return res.status(429).json({ error: "Rate limit exceeded" })
@@ -455,16 +447,13 @@ await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
   return res.status(200).json({ verified });  return res.status(200).json({ verified })
 }
 
-<<<<<<< HEAD
-=======
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   const { email, programTrack } = req.body || {};
   if (!email) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -472,3 +461,5 @@ await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

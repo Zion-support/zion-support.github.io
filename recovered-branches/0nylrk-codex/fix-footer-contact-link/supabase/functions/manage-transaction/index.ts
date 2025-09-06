@@ -16,8 +16,6 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/manage-transaction/index.ts
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0"
@@ -26,6 +24,7 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -41,20 +40,24 @@ import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -105,6 +108,8 @@ serve(async (req) => {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -112,18 +117,14 @@ serve(async (req) => {
   const supabaseClient = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_ANON_KEY") ?? ""
-<<<<<<< HEAD
   );
-=======
   ),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Create service client for admin operations
   const supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
     { auth: { persistSession: false } }
-<<<<<<< HEAD
   );
   try {
     // Authenticate the user
@@ -131,8 +132,11 @@ serve(async (req) => {
     const token = authHeader.replace("Bearer ", "");
     const { data: { user } } = await supabaseClient.auth.getUser(token);
     if (!user?.id) throw new Error("User not authenticated");
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ),
 
   try {
@@ -144,16 +148,20 @@ serve(async (req) => {
     if (!user?.id) throw new Error("User not authenticated"),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Get request data
     const {
       transactionId
       action, // 'releaserefundcancel'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/manage-transaction/index.ts
 <<<<<<< HEAD
@@ -172,12 +180,16 @@ serve(async (req) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    } = await req.json();
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    } = await req.json();
     } = await req.json(),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!transactionId) {
       throw new Error("Transaction ID is required")
     }
@@ -186,6 +198,7 @@ serve(async (req) => {
       .from("transactions")
       .select("*")
       .eq("id", transactionId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -271,19 +284,19 @@ serve(async (req) => {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .single();
     if (fetchError |!transaction) {
-=======
       .single(),
     
     if (fetchError || !transaction) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       throw new Error("Transaction not found")
     }
     // Verify user is authorized to manage this transaction
-<<<<<<< HEAD
     const isClient = transaction.user_id === user.id;
     const isProvider = transaction.provider_id === user.id;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
     const isClient = transaction.user_id === user.id,
@@ -298,10 +311,16 @@ serve(async (req) => {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    const isClient = transaction.user_id === user.id,
+    const isProvider = transaction.provider_id === user.id,
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Clients can cancel or request refunds, providers can only release funds
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction")
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/manage-transaction/index.ts
 <<<<<<< HEAD
@@ -398,10 +417,11 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") |"", {
       apiVersion: "2023-10-16"});
     let result;
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
@@ -409,6 +429,7 @@ if ( {) {
 
     let result,
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -434,6 +455,8 @@ if ( {) {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     switch (action) {
       case 'release':
         // Only providers or admins can release escrow funds
@@ -443,7 +466,6 @@ if ( {) {
         // Update transaction status
         await supabaseAdmin
           .from("transactions")
-<<<<<<< HEAD
           .update({
             status: "completed";
             in_escrow: false
@@ -452,8 +474,11 @@ if ( {) {
           .eq("id", transactionId);
         result = { message: "Funds released from escrow" }
         break;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .update({ 
             status: "completed",
             in_escrow: false,
@@ -464,6 +489,7 @@ if ( {) {
         result = { message: "Funds released from escrow" },
         break,
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -504,6 +530,8 @@ if ( {) {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case 'refund':
         // Check if transaction can be refunded
         if (transaction.status !== "completed" && transaction.status !== "pending") {
@@ -512,17 +540,13 @@ if ( {) {
         // Process refund via Stripe
         if (transaction.stripe_session_id) {
           // Retrieve payment intent from session
-<<<<<<< HEAD
           const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id);
-=======
           const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({
               payment_intent: session.payment_intent.toString()
               reason: "requested_by_customer"
-<<<<<<< HEAD
             });
             // Update transaction status
             await supabaseAdmin
@@ -530,8 +554,11 @@ if ( {) {
               .update({
                 status: "refunded";
                 refunded_at: new Date().toISOString()
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }),
             
             // Update transaction status
@@ -613,21 +640,23 @@ if ( {) {
               .update({ 
                 status: "refunded",
                 refunded_at: new Date().toISOString(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 refund_id: refund.id
               })
               .eq("id", transactionId)
           }
         }
-<<<<<<< HEAD
         result = { message: "Refund processed successfully" }
         break;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         result = { message: "Refund processed successfully" },
         break,
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -637,6 +666,8 @@ if ( {) {
         if (transaction && transaction.status !== "pending") {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case 'cancel':
         // Only allow cancellation for pending transactions
         if (transaction.status !== "pending") {
@@ -651,6 +682,7 @@ if ( {) {
             cancelled_at: new Date().toISOString()
           })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -662,11 +694,17 @@ if ( {) {
         break;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          .eq("id", transactionId);
+        result = { message: "Transaction cancelled successfully" }
+        break;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .eq("id", transactionId),
         
         result = { message: "Transaction cancelled successfully" },
         break,
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -688,33 +726,33 @@ if ( {) {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       default: throw new Error("Invalid action")
     }
     return new Response(JSON.stringify(result), {
-<<<<<<< HEAD
       headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
       headers: { ...corsHeaders, "Content-Type": "application/json" },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       status: 200})
   } catch (error) {
     console.error("Transaction management error:", error.message),
     return new Response(JSON.stringify({ error: error.message }), {
-<<<<<<< HEAD
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 500})
   }
 });
 
-=======
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -1057,11 +1095,10 @@ cancelled at: new Date () .toISOString ()
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

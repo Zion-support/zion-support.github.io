@@ -276,7 +276,6 @@ import {
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 
 import {
   X
@@ -296,7 +295,6 @@ import {
   Mail
 
   ExternalLink
-=======
 import { 
   X, 
   Building2, 
@@ -322,9 +320,12 @@ import {
 ExternalLink;
 =======
   ExternalLink;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';
 ;
 interface SidebarProps {
@@ -581,10 +582,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
     </AnimatePresence>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 export default Sidebar;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -600,17 +605,18 @@ export default Sidebar;
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 
 export default Sidebar;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

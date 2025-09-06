@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -80,14 +81,18 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) )
 }</select> </>)
-=======
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
 }</select> </>) 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }</div> </div> <PdfExportButton targetRef= {
   targetRef
 }fileName= {
@@ -104,22 +109,28 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 }
 export default function ResumePreviewPage({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   initialData
   versions = []
 }: ResumePreviewPageProps) {
-=======
   initialData,
   versions = [],
 }: ResumePreviewPageProps) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
     versions[0]?.id |'current'
   );  const targetRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { GetServerSideProps } from 'next',
@@ -144,11 +155,14 @@ import { createServerClient } from '../../utils/supabase/server',
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
     return found?.data |initialData;
   }, [selectedVersionId, initialData, versions]);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
@@ -180,6 +194,9 @@ import { createServerClient } from '../../utils/supabase/server';
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GetServerSideProps } from 'next',
 import React, { useMemo, useRef, useState } from 'react',
 import PdfExportButton from '../../components/ui/PdfExportButton',
@@ -204,10 +221,13 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
   const [selectedVersionId, setSelectedVersionId] = useState<string>(versions[0]?.id || 'current'),
   const targetRef = useRef<HTMLDivElement>(null),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData,
     const found = versions.find(v => v.id === selectedVersionId),
@@ -221,9 +241,12 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 
 =======
   }, [selectedVersionId, initialData, versions]),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="relative">
       <div className="flex items-center justify-between mb-4">
@@ -263,13 +286,12 @@ value={theme}
 }
             className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
           >
-<<<<<<< HEAD
             <option value='light'>Light</option>
             <option value='dark'>Dark</option>          </select>
-=======
             <option value="light">Light</option>
             <option value="dark">Dark</option>
           </select>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -277,6 +299,8 @@ value={theme}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {versions.length > 0 && (
             <>
               <label className="text-sm ml-4">Version</label>
@@ -706,14 +730,12 @@ if (return initial_data) {
               >
                 <option value="current">Current</option>
                 {versions.map(v => (
-<<<<<<< HEAD
                   <option value={v.id} key={v.id}>
                     {v.label}
                   </option>                ))}
               </select>
             </>
           )}
-<<<<<<< HEAD
         </div>
       </div>
       <PdfExportButton
@@ -819,7 +841,6 @@ return { props: { initial_data, versions } }
 =======
 =======
 
-=======
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -833,8 +854,6 @@ return { props: { initial_data, versions } }
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       </div>
       <PdfExportButton
@@ -845,8 +864,6 @@ return { props: { initial_data, versions } }
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
-<<<<<<< HEAD
-=======
   );
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
@@ -924,7 +941,6 @@ return { props: { initialData, versions } };
 };
 
 }
-=======
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -945,7 +961,6 @@ return { props: { initialData, versions } };
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
@@ -1002,9 +1017,12 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

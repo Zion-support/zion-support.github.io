@@ -44,9 +44,12 @@ class ErrorBoundary extends React.Component {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -83,6 +86,7 @@ export default function ContentGenerator() {;
   const [previewContent, setPreviewContent] = useState<any>(null);
   const [testEmail, setTestEmail] = useState('');
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ContentGenerator.tsx
 
 
@@ -106,6 +110,8 @@ export default function ContentGenerator() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -121,7 +127,6 @@ import { toast } from "sonner",
 import { Loader2 } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useNavigate } from "react-router-dom";
 export default function ContentGenerator() {
@@ -136,7 +141,6 @@ export default function ContentGenerator() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [previewContent, setPreviewContent] = useState<any>(null);
   const [testEmail, setTestEmail] = useState('');
-=======
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { useNavigate } from "react-router-dom",
 export default function ContentGenerator() {
@@ -150,15 +154,12 @@ export default function ContentGenerator() {
   const [isGenerating, setIsGenerating] = useState(false),
   const [previewContent, setPreviewContent] = useState<any>(null),
   const [testEmail, setTestEmail] = useState(''),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Redirect if not logged in
   React.useEffect(() => {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page"),
       navigate("/login?redirect=/content-generator")
-<<<<<<< HEAD
     }
   }, [user, isLoading, navigate]);
   const generateContent = async () => {
@@ -174,13 +175,15 @@ export default function ContentGenerator() {
           includeImage: contentType === 'blog' ? includeImage : false
         }
       });
-<<<<<<< HEAD
       if (error) throw error;
       setPreviewContent(data);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -284,16 +287,15 @@ export default function ContentGenerator() {;
           includeImage: contentType === 'blog' ? includeImage : false;
         }
       }),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
       if (error) throw error,
       
       setPreviewContent(data),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)
     } catch (error) {
       console.error("Error generating content:", error),
@@ -301,6 +303,7 @@ export default function ContentGenerator() {;
     } finally {
       setIsGenerating(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -330,11 +333,11 @@ export default function ContentGenerator() {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const sendTestNewsletter = async () => {
     if (!testEmail) {
       toast.error("Please enter a test email address"),
@@ -343,7 +346,6 @@ export default function ContentGenerator() {;
     if (!previewContent) {
       toast.error("Generate newsletter content first"),
       return
-<<<<<<< HEAD
     }
     try {
       const { data, error } = await supabase.functions.invoke('send-newsletter', {
@@ -355,12 +357,14 @@ export default function ContentGenerator() {;
           testEmail
         }
       });
-<<<<<<< HEAD
       if (error) throw error;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }),;
       if (error) throw error,;
       setPreviewContent(data),;
@@ -429,20 +433,20 @@ export default function ContentGenerator() {;
           testEmail;
         }
       }),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
       if (error) throw error,
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       console.error("Error sending test newsletter:", error),
       toast.error("Failed to send test newsletter. Please try again.")
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   },
@@ -587,10 +591,10 @@ export default function ContentGenerator() {;
 =======
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   // Check if user is still loading
   if (isLoading) {
@@ -668,11 +672,14 @@ export default function ContentGenerator() {;
                         <Switch
                           id="includeImage"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }),;
       if (error) throw error,;
       toast.success(`Test newsletter sent to ${testEmail}!`);
@@ -842,6 +849,7 @@ export default function ContentGenerator() {;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
                         <Switch;
                           id="includeImage";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1215,16 +1223,15 @@ export default function ContentGenerator() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />
                       </div>
                     </>
                   )}
-<<<<<<< HEAD
-=======
                   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {contentType === 'newsletter' && (
                     <div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
@@ -1832,7 +1839,6 @@ if ( {) {
                       </p>
                     </div>
                   )}
-<<<<<<< HEAD
                 </CardContent>
               </Card>
             </div>
@@ -1843,8 +1849,11 @@ if ( {) {
     </>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </CardContent>;
               </Card>;
             </div>;
@@ -1963,5 +1972,8 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

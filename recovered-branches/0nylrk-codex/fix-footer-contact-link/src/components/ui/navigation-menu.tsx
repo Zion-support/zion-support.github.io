@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/navigation-menu.tsx
 
 
@@ -9,20 +10,25 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from 'react';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 import {cva} from 'class-variance-authority';
 import {ChevronDown} from 'lucide-react';
-<<<<<<< HEAD
 import {cn} from '@/lib/utils';
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
 import { ChevronDown } from "lucide-react"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -108,6 +114,11 @@ const NavigationMenu = React.forwardRef<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+
+import { cn } from "@/lib/utils"
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
@@ -115,12 +126,13 @@ const NavigationMenu = React.forwardRef<
   <NavigationMenuPrimitive.Root
     ref={ref}
     className={cn(
-<<<<<<< HEAD
       'relative z-10 flex max-w-max flex-1 items-center justify-center'
-=======
       "relative z-10 flex max-w-max flex-1 items-center justify-center",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
@@ -130,6 +142,7 @@ const NavigationMenu = React.forwardRef<
   </NavigationMenuPrimitive.Root>
 ));
 NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -145,11 +158,15 @@ NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const NavigationMenuList = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.List>
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitiv</typeof>e.List>
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.List
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -203,11 +220,17 @@ const NavigationMenuList = React.forwardRef<;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    ref={ref}
+    className={cn(
+      'group flex flex-1 list-none items-center justify-center space-x-1'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const NavigationMenuList = React.forwardRef<;
   React.ElementRef<typeof NavigationMenuPrimitive.List>,;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.List;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -230,16 +253,24 @@ const NavigationMenuList = React.forwardRef<;
       "group flex flex-1 list-none items-center justify-center space-x-1",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    ref={ref}
+    className={cn(
+      "group flex flex-1 list-none items-center justify-center space-x-1",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
   />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ));
 NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
@@ -249,8 +280,11 @@ const navigationMenuTriggerStyle = cva(
 const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>
   React.ComponentPropsWithoutRef<typeof NavigationMenuPr</typeof>imitive.Trigger>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ))
 NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 
@@ -263,6 +297,7 @@ const navigationMenuTriggerStyle = cva(
 const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -291,6 +326,8 @@ const NavigationMenuTrigger = React && React.forwardRef<;
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
     ref={ref}
@@ -306,23 +343,30 @@ const NavigationMenuTrigger = React && React.forwardRef<;
   </NavigationMenuPrimitive.Trigger>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ));
 NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName;
 const NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof Navigat</typeof>ionMenuPrimitive.Content>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ))
 NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName
 
 const NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -394,15 +438,14 @@ const NavigationMenuContent = React.forwardRef<;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/navigation-menu.tsx
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-<<<<<<< HEAD
       'left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto '
-=======
       "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       className
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     )}
@@ -410,19 +453,25 @@ const NavigationMenuContent = React.forwardRef<;
   />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/navigation-menu.tsx
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ));
 NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName;
 const NavigationMenuLink = NavigationMenuPrimitive.Link;
 const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>
   React.ComponentPropsWithoutRef<typeof</typeof> NavigationMenuPrimitive.Viewport>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ))
 NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName
 
@@ -431,6 +480,7 @@ const NavigationMenuLink = NavigationMenuPrimitive.Link
 const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -500,15 +550,14 @@ NavigationMenuViewport.displayName =
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >(({ className, ...props }, ref) => (
   <div className={cn("absolute left-0 top-full flex justify-center")}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-<<<<<<< HEAD
         'origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]'
-=======
         "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         className
       )}
       ref={ref}
@@ -518,17 +567,18 @@ NavigationMenuViewport.displayName =
 ));
 NavigationMenuViewport.displayName =
   NavigationMenuPrimitive.Viewport.displayName;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const NavigationMenuIndicator = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>
   React.ComponentPropsWithoutRe</typeof>f<typeof NavigationMenuPrimitive.Indicator>
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Indicator
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -556,11 +606,17 @@ const NavigationMenuIndicator = React && React.forwardRef<;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    ref={ref}
+    className={cn(
+      'top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const NavigationMenuIndicator = React.forwardRef<;
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>,;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.Indicator;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -589,10 +645,11 @@ NavigationMenuIndicator && NavigationMenuIndicator.displayName =;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ref={ref}
     className={cn(
       "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       className
     )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -602,6 +659,7 @@ NavigationMenuIndicator && NavigationMenuIndicator.displayName =;
   </NavigationMenuPrimitive.Indicator>
 ))
 NavigationMenuIndicator.displayName =
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -756,6 +814,8 @@ NavigationMenuIndicator.display_name =;
   NavigationMenuPrimitive.Indicator.display_name;
 ;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   NavigationMenuPrimitive.Indicator.displayName;
 export {
   navigationMenuTriggerStyle
@@ -768,7 +828,6 @@ export {
   NavigationMenuIndicator
   NavigationMenuViewport
 }
-=======
   NavigationMenuPrimitive.Indicator.displayName
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -781,6 +840,7 @@ export {
   NavigationMenuTrigger,
   NavigationMenuLink,
   NavigationMenuIndicator,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/navigation-menu.tsx
 
@@ -834,16 +894,17 @@ React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator> > ( ({
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/navigation-menu.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   NavigationMenuViewport}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   NavigationMenuViewport,;
 };
-=======
   NavigationMenuViewport}
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

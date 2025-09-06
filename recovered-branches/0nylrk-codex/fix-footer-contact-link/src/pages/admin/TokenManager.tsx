@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
@@ -15,6 +16,8 @@ import {useEffect, useState} from 'react';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -28,8 +31,11 @@ import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 export default function TokenManager() {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect, useState} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -44,10 +50,13 @@ import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {useToast} from '@/hooks/use-toast';
 export default function TokenManager() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
@@ -157,6 +166,7 @@ if ( {) {
       })
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -170,12 +180,16 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -459,11 +473,6 @@ return (<ProtectedRoute adminOnly> <div> <Header /> <div className="min-h-screen
       });
     }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <ProtectedRoute adminOnly>

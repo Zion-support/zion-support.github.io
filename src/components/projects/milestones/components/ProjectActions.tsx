@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react'
 import {Button} from '@/components/ui/button'
 import Link from 'next/link'
@@ -13,9 +10,8 @@ interface ProjectActionsProps {
   disputeId?: string
   isTalent: boolean
   onAddMilestone: () => void
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function ProjectActions({
@@ -36,6 +32,8 @@ interface ProjectActionsProps {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import Link from 'next/link';
@@ -55,6 +53,7 @@ export function ProjectActions({
   isTalent
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 xport function ProjectActions({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   projectId,
@@ -63,6 +62,8 @@ xport function ProjectActions({
   isTalent,
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import Link from 'next/link',;
@@ -76,6 +77,7 @@ interface ProjectActionsProps {;
   onAddMilestone: () => void;
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 
@@ -118,12 +120,13 @@ export function ProjectActions(): any ({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ProjectActions({
   projectId,
   isUnderDispute,
   disputeId,
   isTalent,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onAddMilestone
 }: ProjectActionsProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -134,25 +137,31 @@ export function ProjectActions({
           <Link href={`/dashboard/disputes/${disputeId}`}>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <ShieldAlert className='h-4 w-4 mr-2' />            View Active Dispute
           </Link>
         </Button>
       ) : (
         <RaiseDisputeButton projectId={projectId} variant='outline' />            <ShieldAlert className="h-4 w-4 mr-2" />
-=======
             <ShieldAlert className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             View Active Dispute
           </Link>
         </Button>
       ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -184,6 +193,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> >>>>>>>       )}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <RaiseDisputeButton projectId={projectId} variant='outline' />
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>Add Milestone</Button>
@@ -197,16 +208,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           Add Milestone
         </Button>
       )}
-<<<<<<< HEAD
     </div>
   )
 }
-=======
     </div>;
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         <RaiseDisputeButton 
           projectId={projectId}
           variant="outline"
@@ -228,6 +235,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -240,3 +248,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

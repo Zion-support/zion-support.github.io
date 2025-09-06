@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +18,9 @@
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface Service {
   id: string;
   name: string;
@@ -47,6 +51,7 @@ export const findService = ("_serviceName": string) => {
   // Implementation placeholder
   return null;
 };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -77,3 +82,13 @@ export const findService = (_serviceName: string) => { return null};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export const findService = (_serviceName: string) => { return null};
+export const findService = (_serviceName: string) => { return null};
+export const findService = (_serviceName: string) => { return null};
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

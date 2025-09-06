@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {CountryPricing} from "@/data/onsiteServicePricing";
 import {CountryServiceSelector} from "../CountryServiceSelector";
 =======
@@ -14,11 +15,17 @@ import { CountryServiceSelector } from "../CountryServiceSelector",
 <<<<<<< HEAD
 =======
 =======
-import {CountryPricing} from "@/data/onsiteServicePricing";
-import {CountryServiceSelector} from "../CountryServiceSelector";
 =======
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { CountryServiceSelector } from "../CountryServiceSelector";
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { CountryServiceSelector } from "../CountryServiceSelector",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {CountryPricing} from "@/data/onsiteServicePricing";
+import {CountryServiceSelector} from "../CountryServiceSelector";
+import { CountryPricing } from "@/data/onsiteServicePricing",
+import { CountryServiceSelector } from "../CountryServiceSelector",
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -29,6 +36,8 @@ import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
   setSelectedCountry: (country: CountryPricing | null) => void
@@ -71,6 +80,7 @@ export function ServiceDetailsSection({
             pricing
           </p>
         </div>
+<<<<<<< HEAD
 
       )}
     </div>
@@ -86,6 +96,12 @@ import { CountryPricing  } from '@/data / onsiteServicePricing';
 import { CountryServiceSelector  } from '../CountryServiceSelector';
 interface ServiceDetailsSectionProps {
   selected_country: CountryPricing | null;
+=======
+import { CountryPricing } from "@/data/onsiteServicePricing",;
+import { CountryServiceSelector } from "../CountryServiceSelector",;
+interface ServiceDetailsSectionProps {;
+  selectedCountry: CountryPricing | null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   setSelectedCountry: (country: CountryPricing | null) => void;
 }
 export /**
@@ -148,6 +164,7 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
             Choose a country from the options above to see service details and pricing;
           </p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/ServiceDetailsSection.tsx
 
 ========
@@ -203,10 +220,20 @@ setSelectedCountry: (country: CountryPricing | null) => void
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/PageSections/ServiceDetailsSection.tsx
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )}
     </div>
   );
 }
+<<<<<<< HEAD
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      )}
+    </div>
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -286,10 +287,10 @@ Automate SOC 2 readiness with continuous controls, evidence pipelines, and prebu
 
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import SEO from '../components/SEO';
 import Link from 'next/link';
 
@@ -476,6 +477,7 @@ import Link from 'next/link';
 		</>
 	)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -641,9 +643,13 @@ import Link from 'next/link';
 =======
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

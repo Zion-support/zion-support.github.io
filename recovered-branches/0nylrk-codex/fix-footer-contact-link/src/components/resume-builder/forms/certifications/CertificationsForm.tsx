@@ -7,8 +7,6 @@
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { Button  } from '@/components/ui/button';
@@ -22,8 +20,11 @@ import { format  } from 'date-fns';
 import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@/components/ui/button';
@@ -38,12 +39,15 @@ import {CertificationsList} from './CertificationsList';
 import {CertificationFormFields} from './CertificationFormFields';
 import {CertificationFormValues, certificationSchema} from './types';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CertificationsFormProps {
 
   resumeId: string
@@ -52,6 +56,7 @@ interface CertificationsFormProps {
 
   onBack: () => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -83,12 +88,16 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
 
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
 
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -128,10 +137,13 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       } else {
         success = await addCertification(resumeId, certData)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { Button } from '@/components/ui/button',;
@@ -213,6 +225,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       } else {;
         success = await addCertification(resumeId, certData);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -221,6 +234,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       if (success) {
         form.reset({
@@ -235,6 +250,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -251,12 +267,16 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   };
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
@@ -382,12 +402,8 @@ if ( {) {
   };
 =======
     }
-<<<<<<< HEAD
   }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },;
   const handleEdit = (cert: Certification) => {;
     setEditingId(cert.id!),;
@@ -581,12 +597,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 <<<<<<< HEAD
 =======
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div>
@@ -648,6 +659,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -843,9 +855,13 @@ form.reset ({
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsForm.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

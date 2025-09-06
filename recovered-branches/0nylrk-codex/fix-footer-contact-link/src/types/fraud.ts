@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
@@ -18,12 +16,14 @@ export interface FraudFlag {;
 
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 export interface FraudFlag {
-=======
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 
 export interface FraudFlag {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   user_id: string;
   user_email?: string;
@@ -64,13 +64,14 @@ export interface FraudStats {;
   gpt_explanation?: string
   is_false_positive?: boolean
 }
-<<<<<<< HEAD
 export interface FraudStats {
-=======
 
 export interface FraudStats {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   total_flags: number;
   pending_flags: number;
   suspicious_count: number;
@@ -86,8 +87,11 @@ export interface FraudStats {;
 
   actioned_count: number
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous',;
 export interface FraudFlag {;
   id: string,;
@@ -119,6 +123,7 @@ export interface FraudStats {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   false_positives: number,
@@ -133,3 +138,5 @@ export interface FraudStats {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

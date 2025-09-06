@@ -14,9 +14,12 @@ import { ClientDashboard } from "../components/dashboard/ClientDashboard",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -27,6 +30,7 @@ export function MobileHome() {;
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 
@@ -35,11 +39,12 @@ export function MobileHome() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { ClientDashboard } from "../components/dashboard/ClientDashboard",
-<<<<<<< HEAD
 import { TalentDashboard } from "../components/dashboard/TalentDashboard";
 import { useAuth } from "@/hooks/useAuth";
 export function MobileHome() {
@@ -47,16 +52,17 @@ export function MobileHome() {
 
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
 
-=======
 import { TalentDashboard } from "../components/dashboard/TalentDashboard",
 import { useAuth } from "@/hooks/useAuth",
 export function MobileHome() {
   const { user } = useAuth(),
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -65,6 +71,7 @@ export function MobileHome() {
         showSettings
       />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -72,6 +79,9 @@ export function MobileHome() {
       <main className="py-4">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+      <main className="py-4">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <main className="py-4">
 import React from "react",;
@@ -174,11 +184,6 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
         showSettings;
       />;
       <main className="py-4">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
       </main>
       <BottomNavigation />

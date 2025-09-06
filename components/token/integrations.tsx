@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
@@ -43,12 +44,16 @@ import dynamic from 'next/dynamic';
 =======
 =======
 <<<<<<< HEAD
-import dynamic from 'next/dynamic',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import dynamic from 'next/dynamic',
 import dynamic from 'next/dynamic';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react';
 import { useWallet } from '../../hooks/useWallet';
 <<<<<<< HEAD
@@ -70,16 +75,17 @@ import {;
   DepinReward,;
 =======
 import {
-<<<<<<< HEAD
   fetchDepinActivities
   calculateRewards
   DepinReward;
-=======
   fetchDepinActivities,
   calculateRewards,;
   DepinReward,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
 const ClientOnlyBridge = dynamic(;
@@ -88,6 +94,7 @@ const ClientOnlyBridge = dynamic(;
 );import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),;
 export default function TokenIntegrationsPage() {;
 import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
@@ -95,14 +102,18 @@ import { CHAINS } from '../../utils/chains';
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false })
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function TokenIntegrationsPage() {
-=======
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
 export default function TokenIntegrationsPage() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
   const [stake, setStake] = useState('');
@@ -430,23 +441,15 @@ async function syncDepin() {;
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ region, stakeUsd: stake })
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const data = await res.json();
-    setSuggestion(data);
-  }
-=======
-
-=======
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const data = await res.json();
     setSuggestion(data);
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+    const data = await res.json();
+    setSuggestion(data);
+  }
+
   return (
     <div className='space-y-8'>
       <section className='space-y-2'>
@@ -486,14 +489,9 @@ async function syncDepin() {;
                 </span>
                 <span className='font-medium'>+{r.points} ZION$</span>              </div>    const data = await res.json();
 
-<<<<<<< HEAD
     setSuggestion(data)
   }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-8">
       <section className="space-y-2">
@@ -518,15 +516,17 @@ async function syncDepin() {;
                 <span className="font-medium">+{r.points} ZION$</span>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
-=======
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         )}
@@ -674,6 +674,7 @@ async function syncDepin() {;
         </ul>
       </section>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -900,17 +901,17 @@ function run_operator() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

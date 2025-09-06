@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +24,8 @@ export function EmptyState({
 =======
 >>>>>>>   icon
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Package, RefreshCw } from 'lucide-react'
 import { Button } from './button';
 interface EmptyStateProps {
@@ -47,11 +50,7 @@ export function EmptyState({
   description
   onRetry
   showRetry = false
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button',;
 interface EmptyStateProps {;
@@ -68,11 +67,14 @@ export function EmptyState({
   onRetry,
   showRetry = false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   icon
 >>>>>>> }: EmptyStateProps) {
   return (
@@ -86,10 +88,13 @@ export function EmptyState({
       {description && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>
   showRetry = false
   icon
@@ -122,10 +127,13 @@ export function EmptyState({
       {showRetry && onRetry && (
         <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           onClick={onRetry}
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <p className="text-gray-400 mb-6 max-w-md">
 ;
 export function EmptyState({;
@@ -159,17 +167,13 @@ export function EmptyState({;
 >>>>>>>           variant="outline"
 =======
         <Button;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           onClick={onRetry}
           variant="outline"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           className="flex items-center gap-2"
         >
           <RefreshCw className="h-4 w-4" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -180,11 +184,14 @@ export function EmptyState({;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>
       )}
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
           Try Again
 >>>>>>>         </Button>
@@ -209,21 +216,21 @@ export function EmptyState({;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Try Again
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </Button>
       )}
     </div>;
   );
 } ;
+}
+}
+}
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-}
-}
-}
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

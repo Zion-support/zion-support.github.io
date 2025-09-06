@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
 
 <<<<<<< HEAD
@@ -19,6 +20,8 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -27,6 +30,7 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface AIMatchmakerProps {;
   serviceType?: string;
@@ -41,43 +45,36 @@ export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, classNam
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
-<<<<<<< HEAD
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from "lucide-react";
 interface AIMatchmakerProps {
   serviceType?: string;
 
   onMatchSelect?: (match: any) => void
-=======
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles, Search } from "lucide-react",
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface AIMatchmakerProps {
   serviceType?: string,
   onMatchSelect?: (match: any) => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   className?: string
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
 
@@ -102,21 +99,23 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-<<<<<<< HEAD
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
-=======
   const [query, setQuery] = useState(""),
   const [isMatchmaking, setIsMatchmaking] = useState(false),
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -171,12 +170,10 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
     }
-<<<<<<< HEAD
     setIsMatchmaking(true);
     setHasSearched(true);
     try {
       console.log("Starting AI matching with query:", query, "and service type:", serviceType);
-=======
 
     setIsMatchmaking(true),
     setHasSearched(true),
@@ -184,13 +181,17 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     try {
       // // // console.log("Starting AI matching with query:", query, "and service type:", serviceType),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Get AI matches
       const results = await findMatches(
         query,
         serviceType,
         3
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -201,11 +202,17 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       setMatches(results);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+      );
+      console.log("AI matching results:", results);
+      setMatches(results);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ),
       
       // // // console.log("AI matching results:", results),
       setMatches(results),
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -213,6 +220,8 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Matches Found"
         description: `Found ${results.length} matches based on your description.`})
@@ -306,7 +315,6 @@ function AIMatchmaker() {
 =======
     } finally {
       setIsMatchmaking(false)
-<<<<<<< HEAD
     }
   }
   const handleItemSelect = (item: any) => {
@@ -317,16 +325,17 @@ function AIMatchmaker() {
         onMatchSelect(matchResult)
       }
     }
-<<<<<<< HEAD
   }
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item);
 
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -396,6 +405,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   // Extract just the items from each MatchResult
@@ -410,16 +420,21 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>
       <CardHeader className="pb-2">

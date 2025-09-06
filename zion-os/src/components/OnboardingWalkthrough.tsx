@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +27,8 @@ interface WalkthroughStep {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -141,7 +144,6 @@ if ( {) {
   const currentStepData = walkthroughSteps[currentStep];
   if (!isVisible |isCompleted) {return null;
   }
-=======
 "use client",;
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/contexts/AuthContext",;
@@ -229,7 +231,6 @@ export function OnboardingWalkthrough() {;
     return null;
   }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -332,30 +333,30 @@ export function OnboardingWalkthrough() {;
 =======
 =======
           className="fixed z-30 pointer-events-none";
-<<<<<<< HEAD
           style={{top: 0;
             left: 0;
             right: 0;
-=======
           style={{;
             top: 0,;
             left: 0,;
             right: 0,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             bottom: 0}}
         >;
           <div;
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
-<<<<<<< HEAD
             style={{top: "50%";
               left: "50%";
               transform: "translate(-50%, -50%)";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             style={{;
               top: "50%",;
               left: "50%",;
               transform: "translate(-50%, -50%)",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -364,6 +365,8 @@ export function OnboardingWalkthrough() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               width: "300px";
               height: "200px"}}
           />;
@@ -371,11 +374,14 @@ export function OnboardingWalkthrough() {;
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 ;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Hook to add data attributes for walkthrough targeting;
 export function useWalkthroughTarget(id: string) {;
   return {;
@@ -397,12 +403,10 @@ function useWalkthroughTarget() {
     "data - walkthrough - target": id;
 =======
 export function useWalkthroughTarget(id: string) {return {;
-=======
 ;
 // Hook to add data attributes for walkthrough targeting;
 export function useWalkthroughTarget(id: string) {;
   return {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     "data-walkthrough-target": id;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id}

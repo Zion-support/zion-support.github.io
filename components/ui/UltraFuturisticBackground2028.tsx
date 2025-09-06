@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -80,6 +80,8 @@ import React, { useEffect, useRef } from 'react';
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 // Particle system const particles: Array< {
@@ -95,11 +97,8 @@ animate ();
   /* Floating Circles */
 }<motion.div
 export default function UltraFuturisticBackground2028({
-<<<<<<< HEAD
   children
-=======
   children,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -480,6 +479,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         className='absolute inset-0 w-full h-full pointer-events-none'        style={{ zIndex: 0 }}
       />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -492,13 +492,17 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-      {/* Gradient Overlays */}  }, []);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      {/* Gradient Overlays */}  }, []);
       {/* Gradient Overlays */}  }, []);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -849,11 +853,7 @@ if ( {) {
             rotate: [45, 405];
             scale: [1, 1.1, 1];
             opacity: [0.3, 0.6, 0.3]
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Gradient Overlays */}
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -888,11 +888,14 @@ ease: 'easeInOut',          }}
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }}
           transition={{
             duration: 8
@@ -1003,6 +1006,7 @@ ease: 'easeInOut',          }}
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25],          }}
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
@@ -1036,30 +1040,26 @@ ease: 'easeInOut',          }}
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 12
             repeat: Infinity
-=======
             duration: 12,
             repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'easeInOut',            ease: "easeInOut"
           }}
 <<<<<<< HEAD
         />;
 =======
         />
-=======
-<<<<<<< HEAD
             duration: 12,
             repeat: Infinity,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
           }}
 
         />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1067,6 +1067,8 @@ ease: 'easeInOut',          }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Floating Circles */}
         <motion&& motion.div
           className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full'
@@ -1276,6 +1278,7 @@ ease: "easeInOut"
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25]
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             duration: 5,
@@ -1314,10 +1317,13 @@ ease: "easeInOut"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 5
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />;
@@ -1335,24 +1341,20 @@ ease: "easeInOut"
       <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 3 }}>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 5,
             repeat: Infinity,
 
           }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
             duration: 5,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
-=======
 
           }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Energy Waves */}
@@ -1360,6 +1362,7 @@ ease: "easeInOut"
         className='absolute inset-0 pointer-events-none'
         style={{ zIndex: 3 }}
       >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -1370,6 +1373,9 @@ ease: "easeInOut"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <motion.div
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"
             ease: 'easeInOut',            ease: "easeInOut";
@@ -1532,11 +1538,14 @@ ease: "easeInOut"
             opacity: [0, 1, 0]
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 8
             repeat: Infinity
             ease: 'linear'
@@ -1544,6 +1553,7 @@ ease: "easeInOut"
 
             delay: 4
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1658,26 +1668,22 @@ ease: "easeInOut"
           <motion.div;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 8,
             repeat: Infinity,
 
           }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
             duration: 8,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'linear',
             delay: 4,            ease: "linear",
             delay: 4
           }}
-=======
 
           }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Quantum Particles */}
@@ -1685,14 +1691,7 @@ ease: "easeInOut"
         className='absolute inset-0 pointer-events-none'
         style={{ zIndex: 4 }}
       >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {[...Array(20)].map((_, i) => (
           <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1700,6 +1699,7 @@ ease: "easeInOut"
             className="absolute w - 2 h - 2 bg - purple - 400 rounded - full";
             style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
@@ -1709,14 +1709,18 @@ ease: "easeInOut"
               top: `${Math && Math.random() * 100}%`,
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
-=======
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }}
             animate={{
               scale: [0, 1, 0],
@@ -1736,6 +1740,7 @@ ease: "easeInOut"
               scale: [0, 1, 0]
               opacity: [0, 1, 0]
             }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1801,6 +1806,8 @@ ease: "easeInOut"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             transition={{
 <<<<<<< HEAD
               duration: 3 + Math && Math.random() * 2,
@@ -1832,48 +1839,39 @@ ease: "easeInOut"
               repeat: Infinity
               delay: Math.random() * 3
               ease: 'easeInOut',            }}              ease: "easeInOut"
-=======
 
-=======
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 3,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
         ))}
       </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',            }}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             }}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
         ))}
       </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Content */}
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>;
@@ -1938,7 +1936,6 @@ ease: "easeInOut"
 =======
 =======
       </div>
-<<<<<<< HEAD
       {/* Bottom Glow */}
       <div
         className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none'
@@ -1949,27 +1946,25 @@ ease: "easeInOut"
     </div>
   )
 }
+
+      {/* Bottom Glow */}
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+
+      {/* Bottom Glow */}
 <<<<<<< HEAD
-=======
-
-      {/* Bottom Glow */}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-=======
-
-      {/* Bottom Glow */}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

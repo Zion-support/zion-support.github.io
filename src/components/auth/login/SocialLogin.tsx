@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7,23 +8,21 @@
   const handleGoogle = null;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Web3Login } from "./Web3Login",
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
 export function SocialLogin() {
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false);
   const handleGoogle = null;
-=======
   const [isLoading, setIsLoading] = useState(false)
   const handleGoogle = () => {
     setIsLoading(true)
     window.location.href = '/auth/google'
   }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
@@ -41,6 +40,7 @@ export function SocialLogin() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 >>>>>>>   return (
@@ -50,6 +50,8 @@ export function SocialLogin() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="mt-6">
@@ -74,7 +76,10 @@ export function SocialLogin() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='mt-6 grid grid-cols-4 gap-3'>
         <Button
           type='button'
@@ -84,10 +89,13 @@ export function SocialLogin() {
           disabled={isLoading}        >
           <span className='sr-only'>Sign in with Google</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           {isLoading ? (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       <div className="mt-6 grid grid-cols-4 gap-3">
         <Button
@@ -98,11 +106,6 @@ export function SocialLogin() {
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {isLoading ? (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Loader2 className="h-5 w-5 animate-spin" />
@@ -126,7 +129,6 @@ export function SocialLogin() {
           )}
         </Button>
         <Button
-<<<<<<< HEAD
           type='button'
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
@@ -143,17 +145,18 @@ export function SocialLogin() {
           disabled={isLoading}        >
           <span className='sr-only'>Sign in with Twitter</span>
           <Twitter className='h-5 w-5' />
-<<<<<<< HEAD
-=======
         </Button>
         <Web3Login />
       </div>
     </div>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -174,6 +177,7 @@ export function SocialLogin() {
           <Twitter className="h-5 w-5" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -182,11 +186,14 @@ export function SocialLogin() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>
         <Web3Login />
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -200,6 +207,9 @@ export function SocialLogin() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Web3Login } from "./Web3Login",;
@@ -287,8 +297,11 @@ export function SocialLogin() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

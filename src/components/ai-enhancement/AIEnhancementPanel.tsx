@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from 'react'
@@ -15,9 +18,12 @@ import {
   CardTitle
   CardFooter
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import {
   Card,
@@ -25,8 +31,11 @@ import {
   CardHeader,
   CardTitle,;
   CardFooter;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '@/components/ui/card'; import React, { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
 import { Textarea } from '@/components/ui/textarea'
@@ -120,8 +129,11 @@ export function AIEnhancementPanel({
       setGeneratedContent(result)
     }
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -212,17 +224,13 @@ export function AIEnhancementPanel({;
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -233,14 +241,17 @@ export function AIEnhancementPanel({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ...options
       [field]: e.target.value
-=======
       ...options,
-<<<<<<< HEAD
       [field]: e.target.value,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     })
   }
   const handleApply = () => {
@@ -254,6 +265,7 @@ export function AIEnhancementPanel({;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       ...options,
@@ -264,9 +276,9 @@ export function AIEnhancementPanel({;
 =======
 =======
 <<<<<<< HEAD
-      ...options,
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      ...options,
       [field]: e.target.value})
   },
 
@@ -283,6 +295,7 @@ export function AIEnhancementPanel({;
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -292,11 +305,9 @@ export function AIEnhancementPanel({;
 >>>>>>>     <Card className="w-full max-w-2xl mx-auto">
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   return (
     <Card className="w-full max-w-2xl mx-auto">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -313,11 +324,14 @@ export function AIEnhancementPanel({;
           <Textarea
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* Instructions input (optional) */}
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             placeholder='Enter your content to enhance...'
             className='min-h-[100px]'
             value={options.content}
@@ -332,6 +346,7 @@ export function AIEnhancementPanel({;
             value={options.context}
             onChange={e => handleInputChange(e, 'context')}          />
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>         {/* Instructions input (optional) */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -356,6 +371,8 @@ export function AIEnhancementPanel({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
@@ -372,11 +389,6 @@ export function AIEnhancementPanel({;
             onChange={(e) => handleInputChange(e, 'context')}
           />;
         </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Instructions input (optional) */}
         {showInstructions && (
           <div className="space-y-2">
@@ -384,7 +396,6 @@ export function AIEnhancementPanel({;
             <Input
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
-<<<<<<< HEAD
               onChange={e => handleInputChange(e, 'instructions')}            />
           </div>
         )}
@@ -392,13 +403,14 @@ export function AIEnhancementPanel({;
         <Button
           onClick={handleGenerate}
           className='w-full'
-<<<<<<< HEAD
           disabled={isEnhancing |(!options.content && !options.context)}        >
-=======
           disabled={isEnhancing || (!options.content && !options.context)}        >
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
@@ -410,6 +422,7 @@ export function AIEnhancementPanel({;
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -425,6 +438,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {isEnhancing ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -446,11 +461,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         {generatedContent && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 {copied ? (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='space-y-2 mt-4'>
             <div className='flex justify-between items-center'>
               <label className='text-sm font-medium'>Generated content</label>
@@ -459,6 +477,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 size='sm'
                 onClick={handleCopy}
                 className='h-8'              >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 {copied ? (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -498,6 +517,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button variant='outline' onClick={onClose}>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="space-y-2 mt-4">
             <div className="flex justify-between items-center">
               <label className="text-sm font-medium">Generated content</label>
@@ -507,11 +528,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={handleCopy}
                 className="h-8"
               >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
@@ -522,30 +538,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="relative">
               <Textarea
                 value={generatedContent}
-<<<<<<< HEAD
                 onChange={e => setGeneratedContent(e.target.value)}
                 className='min-h-[200px]'              />
-=======
                 onChange={(e) => setGeneratedContent(e.target.value)}
                 className="min-h-[200px]"
               />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           </div>
         )}
       </CardContent>
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {generatedContent && (
         <CardFooter className="flex justify-between">
           {onClose && (
@@ -556,6 +558,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <Button onClick={handleApply}>;
 =======
@@ -564,18 +567,26 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardFooter>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <Button onClick={handleApply}>Apply to Form</Button>
+        </CardFooter>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )}
     </Card>
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )};
     </Card>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>           <Button onClick={handleApply}>;
@@ -583,6 +594,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button onClick={handleApply}>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             Apply to Form;
@@ -593,6 +606,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -607,3 +621,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

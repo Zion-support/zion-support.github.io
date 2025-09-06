@@ -5,8 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { Conversation, Message  } from '@/types/messaging';
 /**
@@ -15,8 +13,11 @@ import { Conversation, Message  } from '@/types/messaging';
 export function useConversationState() {
   const [messages, setMessages] = useState<Message[]>([]),
   const [activeMessages, setActiveMessages] = useState<Message[]>([]),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {Conversation, Message} from '@/types/messaging';
 /**
@@ -26,12 +27,15 @@ export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]);
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
@@ -82,8 +86,11 @@ function useConversationState() {
     unreadCount;
     setUnreadCount;
     activeConversation;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;
 /**;
@@ -107,6 +114,7 @@ export function useConversationState() {;
     unreadCount,;
     setUnreadCount,;
     activeConversation,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -158,6 +166,8 @@ export function useConversationState() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setActiveConversation;
     isLoading;
     setIsLoading}

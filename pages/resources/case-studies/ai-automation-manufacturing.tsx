@@ -41,13 +41,14 @@ export default function ResourceCaseStudyPage() {
     industry: 'Manufacturing'
     results: '40% increase in production efficiency, 60% reduction in downtime'
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-<<<<<<< HEAD
   }
-=======
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
@@ -66,6 +67,7 @@ export default function ResourceCaseStudyPage() {
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -75,11 +77,15 @@ export default function ResourceCaseStudyPage() {
             {/* Breadcrumb */}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            {/* Breadcrumb */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -110,18 +116,18 @@ export default function ResourceCaseStudyPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover: text-cyan-300 transition-colors">
                 ← Back to Resources
               </Link>
             </nav>
-<<<<<<< HEAD
             {/* Header */}
             <header className="mb-12 text-center">
               <div className="mb-4">
                 <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
                   {caseStudy.industry}
-=======
             {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -137,6 +143,7 @@ export default function ResourceCaseStudyPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -148,12 +155,15 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
               <p className="text-xl text-cyan-400 font-semibold mb-4">{caseStudy.company}</p>
               <p className="text-white/80 text-lg max-w-3xl mx-auto">{caseStudy.description}</p>
             </header>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -164,11 +174,15 @@ export default function ResourceCaseStudyPage() {
             {/* Key Results */}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            {/* Key Results */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Key Results */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -181,12 +195,15 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Key Results</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
                 <p className="text-white/90 text-lg">{caseStudy.results}</p>
               </div>
             </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -197,11 +214,15 @@ export default function ResourceCaseStudyPage() {
             {/* Detailed Analysis */}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            {/* Detailed Analysis */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Detailed Analysis */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -214,12 +235,15 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Detailed Analysis</h2>
               <div className="space-y-6">
                 <div className="bg-blue-500/10 rounded-lg p-6 border border-blue-500/20">
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">Implementation Strategy</h3>
                   <p className="text-white/90">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -232,6 +256,8 @@ export default function ResourceCaseStudyPage() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     quality control, and production optimization. Each system was designed to work independently while
@@ -240,6 +266,7 @@ export default function ResourceCaseStudyPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -248,11 +275,15 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance, 
-                    quality control, and production optimization. Each system was designed to work independently while 
 =======
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance, 
+                    quality control, and production optimization. Each system was designed to work independently while 
+                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
+                    quality control, and production optimization. Each system was designed to work independently while
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -263,6 +294,8 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     sharing data for comprehensive insights.
                   </p>
                 </div>
@@ -270,6 +303,7 @@ export default function ResourceCaseStudyPage() {
                   <h3 className="text-xl font-semibold text-purple-400 mb-3">Technology Stack</h3>
                   <p className="text-white/90">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -281,13 +315,17 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and 
                     predictive analytics to create a comprehensive automation solution that could adapt to changing 
-=======
                     We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and
                     predictive analytics to create a comprehensive automation solution that could adapt to changing
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     production requirements.
                   </p>
                 </div>
@@ -295,6 +333,7 @@ export default function ResourceCaseStudyPage() {
                   <h3 className="text-xl font-semibold text-yellow-400 mb-3">Business Impact</h3>
                   <p className="text-white/90">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -306,11 +345,13 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     The implementation resulted in significant improvements across all key metrics, with the most 
                     notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime. 
-=======
                     The implementation resulted in significant improvements across all key metrics, with the most
                     notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -319,11 +360,14 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     These improvements directly translated to increased profitability and customer satisfaction.
                   </p>
                 </div>
               </div>
             </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -338,10 +382,14 @@ export default function ResourceCaseStudyPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            {/* Related Resources */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -350,11 +398,14 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Related Resources */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -365,10 +416,13 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -384,12 +438,15 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   href="/case-studies/ai-automation-manufacturing"
                   className="bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300"
                 >
                   <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Full Case Study</h3>
                   <p className="text-white/80 text-sm">Read the complete case study with detailed implementation insights.</p>
                 </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -400,15 +457,17 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                <Link
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <Link
                 <Link 
-=======
                 <Link
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   href="/resources/whitepapers/autonomous-systems-guide.pdf"
                   className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300"
                 >
@@ -417,6 +476,7 @@ export default function ResourceCaseStudyPage() {
                 </Link>
               </div>
             </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -427,11 +487,15 @@ export default function ResourceCaseStudyPage() {
             {/* Call to Action */}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            {/* Call to Action */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Call to Action */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -444,10 +508,13 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Implement Similar Solutions?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -455,19 +522,25 @@ export default function ResourceCaseStudyPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   This resource demonstrates the real impact of AI automation in manufacturing. 
                   Let's discuss how we can help you achieve similar results.
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   This resource demonstrates the real impact of AI automation in manufacturing.
                   Let's discuss how we can help you achieve similar results.
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -480,11 +553,14 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Get Started
                   </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -497,14 +573,11 @@ export default function ResourceCaseStudyPage() {
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
 =======
 <<<<<<< HEAD
-                  <Link
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  <Link
                   <Link 
-=======
                   <Link
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     href="/resources"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
 <<<<<<< HEAD
@@ -532,6 +605,7 @@ export default function ResourceCaseStudyPage() {
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   )
@@ -555,10 +629,10 @@ export default function ResourceCaseStudyPage(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 }
@@ -855,11 +929,12 @@ export default function ResourceCaseStudyPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

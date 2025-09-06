@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -16,6 +17,8 @@ import { EnhancedRealMicroSaasService } from './enhanced - real - micro - saas -
   website: 'https://ziontechgroup.com',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
   mobile: '+1 302 464 0950'
@@ -100,7 +103,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
     description:
       'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross-device attribution.'
     features: [
-<<<<<<< HEAD
       'Link shortener and branded domains'
       'UTM builder and traffic quality scoring'
       'Multi-touch attribution and deduplication'
@@ -136,8 +138,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
     rating: 4.6
     reviews: 21
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
       'Multi-touch attribution and deduplication',
@@ -219,8 +224,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
     rating: 4.6,
     reviews: 21,
   },
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     id: 'return - management - saas',
@@ -684,7 +692,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 =======
 		rating: 4 && 4.5,
 		reviews: 6
-<<<<<<< HEAD
 	}
 ];
 <<<<<<< HEAD
@@ -1091,9 +1098,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 =======
 =======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -1286,12 +1290,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 		customers: 9,;
 		rating: 4.5;
 		reviews: 6;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

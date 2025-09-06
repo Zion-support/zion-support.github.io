@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -31,11 +32,15 @@ import React from 'react';
 import Link from 'next / link';
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion } from 'framer-motion';
@@ -43,10 +48,13 @@ import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
 import {
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Phone
   Mail
   MapPin
@@ -116,6 +124,7 @@ import React from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 =======
 import {
 =======
@@ -124,6 +133,8 @@ import {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Phone,
   Mail,
   MapPin,
@@ -175,9 +186,12 @@ import {
   MessageCircle as MessageCircleIcon,;
   Star as StarIcon,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
@@ -701,20 +715,18 @@ const contactInfo = {;
 =======
   },}
 const itemVariants = {
-<<<<<<< HEAD
   hidden: { opacity: 0, y: 20 }
   visible: { opacity: 1, y: 0 },}
 export default function UltraFuturisticFooter2032() {
   return (
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>      staggerChildren: 0.1
     }
-<<<<<<< HEAD
   }
 }
-=======
   };
 };
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const itemVariants = {
@@ -1015,6 +1027,8 @@ export default function UltraFuturisticFooter2032() {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const itemVariants = {
   hidden: { opacity: 0, y: 20 }
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
@@ -1033,12 +1047,15 @@ export default function UltraFuturisticFooter2032() {;
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Animated Background Elements */}
@@ -1312,8 +1329,6 @@ function UltraFuturisticFooter2032() {
                   <Globe className="w-4 h-4 text-cyan-400" />
                   <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">
                     {contactInfo.website}
-=======
-<<<<<<< HEAD
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },};
 
@@ -1333,13 +1348,9 @@ export default function UltraFuturisticFooter2032() {
 
                     {contactInfo.website}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
                     {contactInfo.website}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </a>
                 </div>
               </div>
@@ -1347,15 +1358,16 @@ export default function UltraFuturisticFooter2032() {
             {/* Service Categories */}
             <motion.div variants={itemVariants} className='lg:col-span-2'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 Our Revolutionary Services
               </h3>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -1432,7 +1444,18 @@ className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
 <<<<<<< HEAD
               </div>
             </motion.div>
+<<<<<<< HEAD
 
+=======
+            {/* Quick Links & Company Info */}
+            <motion.div variants={itemVariants} className='lg:col-span-1'>
+              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+
+            {/* Quick Links & Company Info */}
+            <motion.div variants={itemVariants} className='lg:col-span-1'>
+              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 Quick Access
               </h3>
               {/* Quick Links */}
@@ -1467,6 +1490,7 @@ className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
                   ))}
                 </ul>
               </div>
+<<<<<<< HEAD
 
 =======
 
@@ -1829,6 +1853,9 @@ className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Company Info */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
@@ -1836,18 +1863,11 @@ className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
                     <li key={index}>
                       <Link
                         href={item.href}
-<<<<<<< HEAD
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >              <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Company</h4>
                 <ul className="space-y-2">
-=======
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -1860,9 +1880,8 @@ className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1870,6 +1889,8 @@ className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Social Links */}
               <div>;
                 <h4 className='text-lg font-medium text-white mb-4'>;
@@ -1906,6 +1927,7 @@ className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
                     <a
                       key={index}
                       href={social.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1948,6 +1970,8 @@ className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
 target="_blank"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       target='_blank'
                       rel='noopener noreferrer'
                       className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20'
@@ -1958,6 +1982,7 @@ target="_blank"
                       className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20"
                     >
                       <social.icon className="w-5 h-5" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </a>
                   ))}
@@ -2064,27 +2089,17 @@ target="_blank"
               <h3 className="text-2xl font-bold text-white mb-4">
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                     </a>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </div>
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Newsletter Signup */}
           <motion.div
             variants={itemVariants}
@@ -2092,15 +2107,16 @@ target="_blank"
           >
             <div className='text-center'>
               <h3 className='text-2xl font-bold text-white mb-4'>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 Stay Ahead with Future Technology
 <<<<<<< HEAD
 
@@ -2422,19 +2438,16 @@ className='text-slate-400 hover:text-cyan-300 transition-colors'>               
         </motion.button>
       </div>
     </footer>
-<<<<<<< HEAD
 );
 }
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

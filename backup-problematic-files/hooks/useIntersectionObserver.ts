@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {useEffect, useRef, useState} from 'react';
 
@@ -11,15 +12,15 @@ import {useEffect, useRef, useState} from 'react';
 =======
 <<<<<<< HEAD:hooks/useIntersectionObserver.ts
 <<<<<<< HEAD
+=======
+:hooks/useIntersectionObserver.ts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useRef, useState } from 'react';
-=======
 import {useEffect, useRef, useState} from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD:backup-problematic-files/hooks/useIntersectionObserver.ts
+:backup-problematic-files/hooks/useIntersectionObserver.ts
 import { useEffect, useRef, useState } from 'react',
-=======
 import {useEffect, useRef, useState} from 'react';
+<<<<<<< HEAD
 >>>>>>> main:hooks/useIntersectionObserver.ts
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useIntersectionObserver.ts
@@ -27,10 +28,16 @@ import {useEffect, useRef, useState} from 'react';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useIntersectionObserver.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+main:hooks/useIntersectionObserver.ts
+:backup-problematic-files/hooks/useIntersectionObserver.ts
+:backup-problematic-files/hooks/useIntersectionObserver.ts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   freezeOnceVisible?: boolean
@@ -38,6 +45,9 @@ interface UseIntersectionObserverProps {
 
 =======
 <<<<<<< HEAD:backup-problematic-files/hooks/useIntersectionObserver.ts
+=======
+:backup-problematic-files/hooks/useIntersectionObserver.ts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   freezeOnceVisible?: boolean;
 }
 export function useIntersectionObserver({
@@ -52,15 +62,11 @@ export function useIntersectionObserver({
   const frozen = entry?.isIntersecting && freezeOnceVisible,
   const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
     setEntry(entry);
-=======
   freezeOnceVisible?: boolean
 }
-<<<<<<< HEAD
 export function useIntersectionObserver({
 
-=======
 export function useIntersectionObserver({;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   threshold = 0;
   root = null;
   rootMargin = '0%';
@@ -72,20 +78,19 @@ export function useIntersectionObserver({;
   const frozen = entry?.isIntersecting && freezeOnceVisible;
   const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
     setEntry(entry)
-<<<<<<< HEAD:hooks/useIntersectionObserver.ts
+:hooks/useIntersectionObserver.ts
   }
   useEffect(() => {
     const hasIOSupport = !!window.IntersectionObserver;
     if (!hasIOSupport |frozen |!node) return;
     const observerParams = { threshold, root, rootMargin }
-=======
->>>>>>> main:hooks/useIntersectionObserver.ts
+main:hooks/useIntersectionObserver.ts
   };
   useEffect(() => {
     const hasIOSupport = !!window.IntersectionObserver;
     if (!hasIOSupport || frozen || !node) return;
     const observerParams = { threshold, root, rootMargin };
-<<<<<<< HEAD:backup-problematic-files/hooks/useIntersectionObserver.ts
+:backup-problematic-files/hooks/useIntersectionObserver.ts
     const currentObserver = new IntersectionObserver(
       updateEntry,
       observerParams
@@ -95,20 +100,24 @@ export function useIntersectionObserver({;
     return () => {
       currentObserver.disconnect();
     };
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useIntersectionObserver.ts
+:backup-problematic-files/hooks/useIntersectionObserver.ts
     const currentObserver = new IntersectionObserver(updateEntry, observerParams);
     observer.current = currentObserver;
     currentObserver.observe(node);
     return () => {
       currentObserver.disconnect()
     }
+<<<<<<< HEAD
 >>>>>>> main:hooks/useIntersectionObserver.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+main:hooks/useIntersectionObserver.ts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
   useEffect(() => {
     if (prevNode.current) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return [setNode, entry] as const
@@ -116,6 +125,9 @@ export function useIntersectionObserver({;
 
 =======
 <<<<<<< HEAD:backup-problematic-files/hooks/useIntersectionObserver.ts
+=======
+:backup-problematic-files/hooks/useIntersectionObserver.ts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       observer.current?.unobserve(prevNode.current);
     }
     if (node) {
@@ -123,17 +135,18 @@ export function useIntersectionObserver({;
     }
     prevNode.current = node;
   }, [node]);
-<<<<<<< HEAD:hooks/useIntersectionObserver.ts
-<<<<<<< HEAD
+:hooks/useIntersectionObserver.ts
 
   return [setNode, entry] as const
 }
-=======
   return [setNode, entry] as const
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return [setNode, entry] as const;
 }
 import { useEffect, useRef, useState } from 'react',;
@@ -179,7 +192,6 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const;
 }
-=======
       observer.current?.unobserve(prevNode.current)
     }
     if (node) {
@@ -189,6 +201,7 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const
 }
+<<<<<<< HEAD
 >>>>>>> main:hooks/useIntersectionObserver.ts
 <<<<<<< HEAD
 
@@ -200,3 +213,8 @@ export function useIntersectionObserver({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useIntersectionObserver.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+main:hooks/useIntersectionObserver.ts
+:backup-problematic-files/hooks/useIntersectionObserver.ts
+:backup-problematic-files/hooks/useIntersectionObserver.ts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProtectedRoute.tsx
 
 =======
@@ -34,8 +35,9 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
-<<<<<<< HEAD
 import { Navigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { useTenantAdminStatus  } from '@/hooks/useWhitelabelTenant';
@@ -44,19 +46,16 @@ export interface ProtectedRouteProps {
 
   children: React.ReactNode
 
-=======
 import {Navigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {useTenantAdminStatus} from '@/hooks/useWhitelabelTenant';
 import {useWhitelabel} from '@/context/WhitelabelContext';
 export interface ProtectedRouteProps {
   children: React.ReactNode,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
 }
-<<<<<<< HEAD
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   children;
 
@@ -68,12 +67,16 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   const { tenant } = useWhitelabel();
   const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id)
   const isCheckingPermissions = isLoading |isCheckingTenantAdmin;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   children;
   adminOnly = false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -82,6 +85,8 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import { Navigate } from 'react-router-dom',
 import { useAuth } from '@/hooks/useAuth',
@@ -98,10 +103,13 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   children,
   adminOnly = false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   tenantAdminAllowed = false,
   requiredUserType
 }) => {
@@ -113,6 +121,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -120,6 +129,8 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
     return <div className="flex h-screen w-full items-center justify-center">
@@ -142,6 +153,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
     return <Navigate to="/unauthorized" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default ProtectedRoute;
 
@@ -150,13 +162,18 @@ export default ProtectedRoute;
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return <>{children}</>
 }
 export default ProtectedRoute;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { Navigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -432,10 +449,9 @@ export default ProtectedRoute,
 ;
   return <>{children}</>;
 };
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ProtectedRoute;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

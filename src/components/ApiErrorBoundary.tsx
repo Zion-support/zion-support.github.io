@@ -1,22 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { Component, ReactNode } from 'react';
-<<<<<<< HEAD
 import { QueryClient  } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
 import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-=======
-<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react'
 import { QueryClient } from '@tanstack/react-query'
 import * as Sentry from '@sentry/nextjs'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { RefreshCw, WifiOff } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ApiErrorBoundaryProps {
@@ -132,6 +135,7 @@ export class ApiErrorBoundary extends Component<
     if (this.state.hasError) {
       // Check if it's a network-related error
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { QueryClient  } from '@tanstack/react-query';
@@ -141,24 +145,33 @@ import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const isNetworkError =
         this.state.error?.message?.includes('fetch') |
         this.state.error?.message?.includes('network') |
         this.state.error?.message?.includes('timeout') |
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const isNetworkError = null;
         this.state.error?.message?.includes('fetch') ||
         this.state.error?.message?.includes('network') ||
         this.state.error?.message?.includes('timeout') ||
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         !this.state.isOnline
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -166,13 +179,15 @@ import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
       }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
-=======
-=======
-=======
 import React, { Component, ReactNode } from 'react';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { QueryClient } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
 import { Button } from '@/components/ui/button';
@@ -288,6 +303,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
         return this.props.fallback;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       }
 
@@ -301,9 +317,10 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="flex min-h-screen items-center justify-center p-4">
@@ -315,11 +332,14 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 ) : (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 </AlertTitle>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <RefreshCw className='h-4 w-4' />
                 )}
                 <AlertTitle>
@@ -327,19 +347,17 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                     ? 'Connection Problem'
                     : 'Something went wrong'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 </AlertTitle>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </AlertTitle>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
@@ -357,15 +375,19 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
             </Alert>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='flex flex-col gap-2'>
               <Button
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className='w-full'              >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 {this.state.isRetrying ? (
 ursor/fix-website-loading-errors-and-merge-6662
@@ -376,6 +398,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             <div className="flex flex-col gap-2">
               <Button
@@ -384,6 +408,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -396,6 +421,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {this.state.isRetrying ? (
                   <>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -414,6 +441,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 )}
               </Button>
               <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -516,19 +544,15 @@ export const useApiErrorHandler = () =>: any {
               </details>;
             )}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 variant='outline'
                 onClick={() => window.location.reload()}
                 className='w-full'              >
-=======
                 variant="outline"
                 onClick={() => window.location.reload()}
                 className="w-full"
               >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Reload Page
               </Button>
             </div>
@@ -546,6 +570,7 @@ export const useApiErrorHandler = () =>: any {
                 </summary>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   {this.state.error.toString()}
 =======
@@ -553,14 +578,10 @@ export const useApiErrorHandler = () =>: any {
 >>>>>>>                   {this.state.error.toString()}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <pre className='mt-2 whitespace-pre-wrap break-all'>
-=======
                 <pre className="mt-2 whitespace-pre-wrap break-all">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {this.state.error.toString()}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   {this.state.errorInfo?.componentStack}
@@ -569,10 +590,13 @@ export const useApiErrorHandler = () =>: any {
             )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           </div>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       )
@@ -592,11 +616,15 @@ export const useApiErrorHandler = () => {
 }
   return { handleApiError }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
   return { handleApiError }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>           </div>;
@@ -617,10 +645,10 @@ export const useApiErrorHandler = () => {;
       Sentry && Sentry.captureException(error);
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }, ;
   return { handleApiError };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           </div>;
         </div>;
       );
@@ -643,6 +671,7 @@ export const useApiErrorHandler = () => {;
   return { handleApiError }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 
@@ -656,10 +685,12 @@ export const useApiErrorHandler = () => {;
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
+};
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

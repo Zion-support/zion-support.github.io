@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/EmptyStateCard.tsx
 
 import React from "react",
@@ -53,6 +54,12 @@ export const EmptyStateCard:React.FC<EmptyStateCardProps> = ({ type }) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 import React from "react",
+=======
+import React from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {MessageSquare, ArchiveIcon} from "lucide-react";
+import React from "react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from "lucide-react";
 
@@ -61,12 +68,19 @@ type EmptyStateCardProps = {
 }
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === "active";
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Card, CardContent } from "@/components/ui/card",
+import { MessageSquare, ArchiveIcon } from "lucide-react",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type EmptyStateCardProps = {
   type: 'active' | 'archived'
 },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -82,6 +96,13 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
   const isActive = type === 'active';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
+  const isActive = type === 'active';
+export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
+  const isActive = type === 'active',
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
       <CardContent>
@@ -101,19 +122,37 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
         </h3>
         <p className="text-zion-slate-light max-w-md mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 {isActive
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
 
+=======
+          {isActive
+            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."}
         </p>
       </CardContent>
     </Card>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+          {isActive 
+            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
+          }
+        </p>
+      </CardContent>
+    </Card>
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { MessageSquare, ArchiveIcon } from "lucide-react",;
@@ -169,6 +208,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -239,3 +279,6 @@ bg-zion-blue-dark border border-zion-blue-light text-center py-12"> <CardContent
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

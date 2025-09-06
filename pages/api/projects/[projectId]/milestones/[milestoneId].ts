@@ -1,6 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { requireUser } from "../../../../../utils/api/auth";
+import {
+  getProject
+  updateMilestone
+  assertParticipantOrAdmin
+  isClient
+  isTalent
+import type { NextApiRequest, NextApiResponse } from "next";
+import { requireUser } from "../../../../../utils/api/auth";
+import {
+  getProject,
+  updateMilestone,
+  assertParticipantOrAdmin,
+  isClient,
+  isTalent,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -10,7 +27,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     projectId: string;
     milestoneId: string;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../../utils/api/auth';
 import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';
@@ -19,6 +39,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
   const { projectId, milestoneId } = req.query as { projectId: string, milestoneId: string };
+<<<<<<< HEAD
 
 =======
 
@@ -137,6 +158,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const project = getProject(projectId);
   if (!project) {
     res.status(404).json({ error: 'Project not found' });
@@ -146,12 +169,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(403).json({ error: 'Forbidden' });
     return;
   }
-<<<<<<< HEAD
   if (req.method === "PATCH") {
-=======
 
   if (req.method === 'PATCH') {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const body = req.body as any;
     if (body.status && !isMilestoneStatus(body.status)) {
       res.status(400).json({ error: 'Invalid status' });
@@ -163,23 +183,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const isTalentUser = isTalent(project, user);
       const status: string = body.status;
       const allowed =
-<<<<<<< HEAD
         (status === "In Progress" && isClientUser) |
         (status === "Submitted" && isTalentUser) |
         (status === "Approved" && isClientUser) |
         (status === "Paid" && isClientUser);
       if (!allowed && user.role !== "admin") {
         res.status(403).json({ error: "Not allowed to set this status" });
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         (status === 'In Progress' && isClientUser) ||
         (status === 'Submitted' && isTalentUser) ||
         (status === 'Approved' && isClientUser) ||
         (status === 'Paid' && isClientUser);
       if (!allowed && user.role !== 'admin') {
         res.status(403).json({ error: 'Not allowed to set this status' });
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return;
       }
       // Add side-effects
@@ -522,13 +547,8 @@ if ( {) {
 =======
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {
-<<<<<<< HEAD
       res.status(404).json({ error: "Milestone not found" });
-=======
-<<<<<<< HEAD
       res.status(404).json({ error: 'Milestone not found' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'PATCH') {
@@ -701,27 +721,20 @@ export default function handler(req, res) {
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {;
       res.status(404).json({ error: 'Milestone not found' });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return;
     }
     res.status(200).json({ milestone: updated });
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }
 
-=======
 
-=======
 
   res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -729,19 +742,22 @@ export default function handler(req, res) {
   }
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   res.setHeader('AllowPATCH');
   res.status(405).end('Method Not Allowed')
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -752,3 +768,5 @@ export default function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -5,20 +5,22 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { Certification  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
 export function addCertificationsSection(
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addCertificationsSection(;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -26,6 +28,8 @@ export function addCertificationsSection(;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   doc: jsPDF;
   certifications: Certification[];
   colors: PdfThemeColors;
@@ -104,8 +108,11 @@ if (certifications && certifications.length === 0) return startY;
       doc.setFontSize(10);
 
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { jsPDF } from 'jspdf',;
 import { Certification } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -150,6 +157,7 @@ export function addCertificationsSection(;
       doc.setFontSize(10);
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -162,6 +170,8 @@ export function addCertificationsSection(;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     yPos += 16
   }

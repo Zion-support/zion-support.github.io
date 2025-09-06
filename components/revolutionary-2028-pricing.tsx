@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -25,16 +26,17 @@ import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
-=======
 import React from 'react';
 import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {
 =======
@@ -42,8 +44,43 @@ import {
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
 =======
+import {
+  CheckCircle
+  ArrowRight
+  Star
+  TrendingUp
+  Phone
+  Zap
+  DollarSign
+  Shield
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Sparkles
+  Globe
+  Atom
+  Heart
+  Leaf
+  Car
+  GraduationCap
+  Scale
+  Building
+  Factory
+  Camera
+  Video
+  Music
+  Gamepad2
+  Crown
+  Award
+  Target
+  Users
+  Clock
+  Globe2;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   CheckCircle,
   ArrowRight,
   Star,
@@ -77,9 +114,12 @@ import {
   Clock,;
   Globe2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
@@ -537,6 +577,7 @@ const servicePricing = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 ];
+<<<<<<< HEAD
 
 =======
 =======
@@ -557,8 +598,9 @@ export default function Revolutionary2028Pricing() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Revolutionary2028Pricing() {
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1232,6 +1274,7 @@ function Revolutionary2028Pricing() {
                           <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
                           <span className='text-purple-200'>{feature}</span>                        </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1240,6 +1283,8 @@ function Revolutionary2028Pricing() {
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className="mb-8">
                       <div className="flex items-baseline space-x-2">
                         <span className="text-4xl font-bold text-white">{tier.price}</span>
@@ -1292,18 +1337,12 @@ function Revolutionary2028Pricing() {
       <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
 =======
                     </ul>
-=======
 
                         </li>
 
                       ))}
                     </ul>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <Link
                       href={tier.href}
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
@@ -1317,14 +1356,7 @@ function Revolutionary2028Pricing() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Service Pricing */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
@@ -1362,6 +1394,7 @@ function Revolutionary2028Pricing() {
             </p>
           </div>
           {servicePricing.map((category, categoryIndex) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <p className='text - sm text - purple - 300 mt - 2'>;
                           Contact us for custom pricing;
@@ -1445,6 +1478,8 @@ function Revolutionary2028Pricing() {
               <h3 className='text - 3xl font - bold text - white mb - 8 text - center'>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div key={category.category} className='mb-16'>
               <h3 className='text-3xl font-bold text-white mb-8 text-center'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1760,6 +1795,7 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
                             <div className="text-xs text-purple-300">Trial</div>
                             <div className="text-white font-medium">{service.trialDays} days</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -1770,6 +1806,9 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           </div>
                         </div>
                       </div>
@@ -1803,14 +1842,7 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 =======
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Value Proposition */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className='py-20 bg-black/50'>
@@ -1821,6 +1853,7 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Our Pricing
               </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1849,6 +1882,9 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               We offer the best value in the market with transparent pricing and
@@ -1863,6 +1899,7 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1995,6 +2032,9 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -2009,15 +2049,16 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -2083,15 +2124,16 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
             >
 =======
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -2157,15 +2199,16 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
             >
 =======
               className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -2234,6 +2277,7 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
           <motion.div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2253,6 +2297,9 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -2508,14 +2555,7 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
 
 =======
             className='space-y-8'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -2635,15 +2675,9 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
     </>);
 =======
       <UltraFuturisticFooter2028 />
-<<<<<<< HEAD
     </>
-<<<<<<< HEAD
 );
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
     </>;
 );
 }
@@ -2665,11 +2699,14 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
 =======
 
 }
-=======
     </>
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

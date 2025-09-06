@@ -24,9 +24,12 @@ interface Message {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -35,6 +38,7 @@ import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "luci
 import {cn} from "@/lib/utils";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface Message {;
   id: string,;
@@ -59,13 +63,14 @@ import { toast } from './sonner';
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 interface Message {
@@ -89,14 +94,16 @@ interface MobileChatViewProps {
   }
   messages: Message[]
   onBack: () => void
-=======
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface Message {
   id: string,
   content: string,
@@ -127,12 +134,15 @@ interface MobileChatViewProps {
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 interface MobileChatViewProps {
@@ -164,9 +174,12 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend()
     }
   };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
@@ -197,6 +210,7 @@ interface MobileChatViewProps {;
   onSendMessage: (content: string) => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -204,10 +218,13 @@ interface MobileChatViewProps {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -246,6 +263,8 @@ export function MobileChatView(): any ({ contact, messages, onBack, onSendMessag
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [newMessage, setNewMessage] = useState("");
 
   const navigate = useNavigate();
@@ -261,8 +280,11 @@ export function MobileChatView(): any ({ contact, messages, onBack, onSendMessag
       handleSend()
     }
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [newMessage, setNewMessage] = useState(""),
   const navigate = useNavigate(),
   
@@ -287,6 +309,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   
 
@@ -305,25 +328,29 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`,
     toast.success("Starting video call", {
       description: `Connecting with ${contact.name}...`
-<<<<<<< HEAD
     });
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }),
     
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -338,17 +365,21 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`,
     toast.success("Starting audio call", {
       description: `Connecting with ${contact.name}...`
-<<<<<<< HEAD
     });
     // Navigate to video call page with audio-only flag
     navigate(`/call/${roomId}?audioOnly=true`)
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }),
     
     // Navigate to video call page with audio-only flag
@@ -356,12 +387,15 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -410,6 +444,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             <div
               className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -422,39 +457,48 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 "max-w-[80%] rounded-2xl px-4 py-2";
                 message.isMe
                   ? "bg-primary text-primary-foreground rounded-tr-none"
-=======
                 "max-w-[80%] rounded-2xl px-4 py-2",
                 message.isMe 
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   : "bg-muted rounded-tl-none"
               )}
             >
               <p>{message.content}</p>
               <div className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 "text-xs mt-1 flex justify-end";
 
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
-=======
                 "text-xs mt-1 flex justify-end",
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
@@ -853,11 +897,14 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground";
               )}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {message.timestamp}
                 {message.isMe && message.status && (
                   <span className="ml-1">
@@ -942,6 +989,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1065,9 +1113,13 @@ setNewMessage ("") contact.avatar
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileChatView.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

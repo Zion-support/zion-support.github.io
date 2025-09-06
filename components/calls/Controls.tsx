@@ -273,12 +273,9 @@ type Props = {
   room: Room | null
   onLeave: () => void
   accent?: 'blue' | 'cyan'
-<<<<<<< HEAD
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
-=======
 
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
@@ -310,12 +307,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
       console.warn('Screen share failed', e)
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-<<<<<<< HEAD
     <div className='flex items-center gap-3'>
       <button
         onClick={toggleMic}
@@ -343,17 +335,16 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
     </div>
 );
 }
-=======
-<<<<<<< HEAD
 
     }
   };
 
   return (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   return (
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

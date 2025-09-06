@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,14 +12,15 @@ const corsHeaders = {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -33,6 +35,11 @@ const corsHeaders = {
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
@@ -78,7 +85,6 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   const supabaseAdmin = createClient(
-<<<<<<< HEAD
     Deno.env.get("SUPABASE_URL") ?? "";
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -145,8 +151,11 @@ const cors_headers = {
           await processContentGeneration(supabaseAdmin, 'newsletter');
           break;
         // Add more job types as needed
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -357,6 +366,7 @@ serve(async (req) => {;
           await processContentGeneration(supabaseAdmin, 'newsletter'),;
           break,;
         // Add more job types as needed;
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
 ;
@@ -575,6 +585,8 @@ function processOnboardingReminder() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       // Update job status
       await supabaseAdmin
@@ -585,7 +597,6 @@ function processOnboardingReminder() {
         })
         .eq('id', job.id)
     }
-<<<<<<< HEAD
     return new Response(JSON.stringify({ processed: jobs?.length |0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 200})
@@ -595,7 +606,6 @@ function processOnboardingReminder() {
       status: 500})
   }
 });
-=======
 
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -607,12 +617,10 @@ function processOnboardingReminder() {
   }
 }),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 async function processOnboardingReminder(supabase, userId, milestone, role) {
   try {
     // Create notification for user
     const milestoneMessages = {
-<<<<<<< HEAD
       profile_completed: "Complete your profile to get noticed by clients";
       skills_added: "Add your skills to get better job matches";
       availability_set: "Set your availability to receive project offers";
@@ -630,8 +638,11 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       type: 'onboarding_reminder'
       read: false
     });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       profile_completed: "Complete your profile to get noticed by clients",
       skills_added: "Add your skills to get better job matches",
       availability_set: "Set your availability to receive project offers",
@@ -653,6 +664,7 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
     }),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -662,6 +674,8 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
     console && console.error("Error processing onboarding reminder:", error)
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Here you could also add logic to send an email
     // For example, call another edge function to send email
   } catch (error) {
@@ -685,33 +699,37 @@ async function processResumeScoring(supabase, applicationId) {
       {
         method: "POST",
         headers: {
-<<<<<<< HEAD
-<<<<<<< HEAD
           "Content-Type": "application/json"
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
-=======
           "Content-Type": "application/json",
-<<<<<<< HEAD
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         body: JSON.stringify({ applicationId })}
     );
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     console.log(`Successfully scored application ${applicationId}`);
-=======
           "Content-Type": "application/json",
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
 ;
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {;
@@ -767,6 +785,7 @@ async function processResumeScoring(supabase, applicationId) {;
       const errorData = await response.json(),;
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }
 
@@ -806,17 +825,23 @@ async function processResumeScoring(supabase, applicationId) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 
     // // // console.log(`Successfully scored application ${applicationId}`),
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Notify the client that their application has been scored
     const { data: application } = await supabase
       .from("job_applications")
       .select("job_id")
       .eq("id", applicationId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -829,12 +854,16 @@ async function processResumeScoring(supabase, applicationId) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      .single();
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      .single();
       .single(),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (application) {
       const { data: job } = await supabase
         .from("jobs")
@@ -949,7 +978,6 @@ if ( {) {
 
 =======
         .eq("id", application.job_id)
-<<<<<<< HEAD
         .single();
       if (job) {
         // Create notification for the client
@@ -959,8 +987,11 @@ if ( {) {
           message: `An application for "${job.title}" has been scored and is ready for review.`;
           type: "application_scored";
           related_id: applicationId
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .single(),
         
       if (job) {
@@ -972,12 +1003,15 @@ if ( {) {
           type: "application_scored",
           related_id: applicationId,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           read: false
         })
       }
@@ -992,6 +1026,7 @@ if ( {) {
 }
 async function processContentGeneration(supabase, contentType) {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1020,18 +1055,17 @@ async function processContentGeneration(supabase, contentType) {
 
 =======
 <<<<<<< HEAD
-    console.log(`Starting scheduled content generation for ${contentType}`);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    console.log(`Starting scheduled content generation for ${contentType}`);
     // // // console.log(`Starting scheduled content generation for ${contentType}`),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Call the content generation function
     const response = await fetch(
       `${Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`,
       {
         method: "POST",
         headers: {
-<<<<<<< HEAD
           "Content-Type": "application/json"
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
         body: JSON.stringify({
@@ -1046,16 +1080,12 @@ async function processContentGeneration(supabase, contentType) {
     }
     const contentData = await response.json();
     console.log(`Successfully generated ${contentType} content`);
-=======
           "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
         body: JSON.stringify({ 
           contentType,
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         })}
     );
 
@@ -1063,9 +1093,12 @@ async function processContentGeneration(supabase, contentType) {
       const errorData = await response.json();
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     // // // console.log(`Successfully scored application ${applicationId}`),;
     // Notify the client that their application has been scored;
@@ -1118,6 +1151,7 @@ async function processContentGeneration(supabase, contentType) {;
       const errorData = await response.json(),;
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const contentData = await response.json(),
@@ -1242,11 +1276,12 @@ async function processContentGeneration(_supabase, _contentType) {_try {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     const contentData = await response.json(),
     // // // console.log(`Successfully generated ${contentType} content`),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {
       // Get admin email from profiles
@@ -1263,14 +1298,15 @@ async function processContentGeneration(_supabase, _contentType) {_try {
           {
             method: "POST",
             headers: {
-<<<<<<< HEAD
               "Content-Type": "application/json"
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
-=======
               "Content-Type": "application/json",
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             body: JSON.stringify({
               subject: contentData.subject;
               previewText: contentData.previewText;
@@ -1312,25 +1348,26 @@ async function processContentGeneration(_supabase, _contentType) {_try {
         // Create notification for admin
         await supabase.from('notifications').insert({
           user_id: null, // System notification visible to admins
-<<<<<<< HEAD
           title: "Newsletter Draft Ready";
           message: "AI-generated newsletter draft has been sent to your email for review.";
           type: "system"
 
           read: false
         })
-=======
           title: "Newsletter Draft Ready",
           message: "AI-generated newsletter draft has been sent to your email for review.",
           type: "system",
           read: false
         })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     const contentData = await response.json(),;
     // // // console.log(`Successfully generated ${contentType} content`),;
@@ -1368,6 +1405,7 @@ async function processContentGeneration(_supabase, _contentType) {_try {
           type: "system";
           read: false;
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1516,16 +1554,19 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
     return contentData
   } catch (error) {
     console.error(`Error processing ${contentType} generation:`, error)
   }
-<<<<<<< HEAD
 }
-=======
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

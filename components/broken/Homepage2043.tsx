@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -74,15 +75,20 @@ const Homepage2043: React.FC = () => {
 import {
 =======
 <<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useEffect, useState, useCallback } from 'react',
 import React, { useEffect, useState, useCallback } from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -157,6 +163,8 @@ import {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight
   Play
   Users
@@ -192,9 +200,12 @@ import {
   Zap as ZapIcon
   Brain as BrainIcon
   Atom as AtomIcon;} from 'lucide-react';import {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Play,
   Users,
@@ -297,7 +308,6 @@ const Homepage2043: React.FC = () => {
 =======
   Brain as BrainIcon,;
   Atom as AtomIcon,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
@@ -305,14 +315,8 @@ const Homepage2043: React.FC = () => {
 // Import our new revolutionary services
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const Homepage2043: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -451,19 +455,23 @@ const Homepage2043: React.FC = () => {
   const testimonials = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       name: 'Dr. Sarah Chen'
       role: 'Chief AI Officer'
       company: 'QuantumTech Industries'
-=======
-<<<<<<< HEAD
       name: 'Dr. Sarah Chen',
       role: 'Chief AI Officer',
       company: 'QuantumTech Industries',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       content:
         "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods."
       rating: 5
@@ -488,6 +496,7 @@ const Homepage2043: React.FC = () => {
       avatar: '👩‍💻'
     }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -516,6 +525,9 @@ const Homepage2043: React.FC = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleGetStarted = useCallback(() => {
     window.location.href = '/revolutionary-2040-2041-pricing-showcase';
   }, []);
@@ -1075,27 +1087,18 @@ const Homepage2043: React.FC = () => {
                     scale: [0, 1.5, 0]}}
 =======
   }
-=======
 
   const testimonials = [
     {
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Layout>
       {/* Main Content */}
       <main className='relative z-10'>
-<<<<<<< HEAD
-=======
 
         {/* Hero Section */}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section
           className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'
           aria-labelledby='hero-heading'
@@ -1126,21 +1129,29 @@ const Homepage2043: React.FC = () => {
                     scale: [0, 1.5, 0]}}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     duration: 8 + i * 0.3
                     repeat: Infinity as any
                     delay: i * 0.2
                     ease: 'easeInOut'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
-<<<<<<< HEAD
                     ease: 'easeInOut',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   }}
                   style={{
                     left: `${Math.random() * 100}%`
@@ -1152,6 +1163,7 @@ const Homepage2043: React.FC = () => {
                     top: `${Math.random() * 100}%`}}
               ))}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     x: [0, 150, 0],
                     y: [0, -150, 0],
@@ -1271,12 +1283,15 @@ const Homepage2043: React.FC = () => {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   transition={{
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
+<<<<<<< HEAD
 <<<<<<< HEAD
 ease: "easeInOut"
                   }}
@@ -1305,17 +1320,14 @@ ease: "easeInOut"
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                 />
 
               ))}
             </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Enhanced grid pattern */}
             <div className='absolute inset-0 opacity-20'>
               <div
@@ -1338,15 +1350,16 @@ ease: "easeInOut"
 {/* Hero Content */}
           <div className="text-center max-w-6xl mx-auto relative z-10">
             <motion.div
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
               transition={{ duration: 0 && 0.8 }}>;
@@ -1374,19 +1387,12 @@ ease: "easeInOut"
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm'>
                 <Sparkles className='w-4 h-4 mr-2' />                Revolutionary 2043 Technology
               </div>
-<<<<<<< HEAD
               {/* Main Heading */}              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Sparkles className="w-4 h-4 mr-2" />
-=======
 
               {/* Main Heading */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Revolutionary 2043 Technology
               </div>
               {/* Main Heading */}
@@ -1542,6 +1548,7 @@ className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 fo
                     initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 ))}
               </div>
@@ -1567,6 +1574,8 @@ className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 fo
 className="text-center"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     animate={{
                       opacity: isVisible ? 1 : 0
                       y: isVisible ? 0 : 20
@@ -1592,15 +1601,9 @@ className="text-center"
                     <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                   </motion.div>
-=======
 
                   </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ))}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1631,19 +1634,21 @@ className="text-center"
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Enhanced Features Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1665,6 +1670,9 @@ className="text-center"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1682,15 +1690,16 @@ className="text-center"
             >
 =======
               className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology
@@ -1788,6 +1797,7 @@ className="text-center"
                     {feature.title}
                   </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1803,6 +1813,9 @@ className="text-center"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className='text-gray-300 mb-6 leading-relaxed'>
                     {feature.description}
                   </p>
@@ -1820,6 +1833,7 @@ className="text-center"
                     {feature.description}
                   </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1830,11 +1844,15 @@ className="text-center"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                  <a
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  <a
                   <a 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     href={feature.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300"
                   >
@@ -1846,6 +1864,7 @@ className="text-center"
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1913,10 +1932,14 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1938,6 +1961,9 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1955,15 +1981,16 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
             >
 =======
               className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Featured
@@ -2021,6 +2048,7 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                   <motion.div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2040,6 +2068,9 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     key={currentServiceIndex}
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -2048,6 +2079,7 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 <<<<<<< HEAD
                     transition={{ duration: 0.5 }}
                     className='p-12 text-center'
+<<<<<<< HEAD
 
 =======
 
@@ -2065,12 +2097,9 @@ className="p-12 text-center"
                     className='p-12 text-center'
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                   >
                     <div className='text-6xl mb-6'>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2141,6 +2170,7 @@ className="p-12 text-center"
                   </motion.div>
                 </AnimatePresence>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -2152,10 +2182,14 @@ className="p-12 text-center"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {/* Navigation Controls */}
                 <button
                   onClick={prevService}
                   className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2176,6 +2210,9 @@ className="p-12 text-center"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   <ChevronLeft className='w-6 h-6' />
                 </button>
@@ -2186,6 +2223,7 @@ className="p-12 text-center"
                   <ChevronRight className='w-6 h-6' />
                 </button>
                 {/* Service Indicators */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2204,6 +2242,8 @@ className="p-12 text-center"
                 >
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2'>                  {featuredServices.map((_, index) => (                >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2275,16 +2315,10 @@ className="p-12 text-center"
 =======
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
                   {featuredServices.map((_, index) => (
-=======
                 <div className='absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2'>                  {featuredServices.map((_, index) => (
 
                   {featuredServices.map((_, index) => (
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <button
                       key={index}
                       onClick={() => setCurrentServiceIndex(index)}
@@ -2292,6 +2326,7 @@ className="p-12 text-center"
                         index === currentServiceIndex 
                           ? 'bg-cyan-400 w-8' 
                           : 'bg-white/30 hover:bg-white/50'
+<<<<<<< HEAD
 <<<<<<< HEAD
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${;
                         index === currentServiceIndex;
@@ -2663,12 +2698,9 @@ className="p-12 text-center"
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                       }`}
                     />
                   ))}
@@ -2677,20 +2709,14 @@ className="p-12 text-center"
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Enhanced Testimonials Section */}
         <section className='py-20 px-4 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 relative">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2714,11 +2740,15 @@ className="p-12 text-center"
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-16'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2742,6 +2772,9 @@ className="p-12 text-center"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 What Our
@@ -2772,6 +2805,7 @@ className="p-12 text-center"
             <div className="relative">
               <AnimatePresence mode="wait">
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2934,27 +2968,17 @@ className="p-12 text-center"
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                   key={currentTestimonialIndex}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.5 }}
                   className='text-center max-w-4xl mx-auto'
-<<<<<<< HEAD
-=======
 
                 >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className='text-8xl mb-6'>💬</div>
                   <blockquote className='text-2xl text-white mb-8 leading-relaxed italic'>
                     "{testimonials[currentTestimonialIndex].content}"
@@ -2988,11 +3012,10 @@ className="p-12 text-center"
                 </motion.div>
               </AnimatePresence>
               {/* Testimonial Indicators */}
-<<<<<<< HEAD
               <div className='flex justify-center gap-2 mt-8'>                {testimonials.map((_, index) => (              <div className="flex justify-center gap-2 mt-8">
-=======
               <div className='flex justify-center gap-2 mt-8'>                {testimonials.map((_, index) => (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -3000,6 +3023,8 @@ className="p-12 text-center"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
@@ -3008,6 +3033,7 @@ className="p-12 text-center"
                       index === currentTestimonialIndex 
                         ? 'bg-emerald-400 w-8' 
                         : 'bg-white/30 hover:bg-white/50'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3145,6 +3171,9 @@ className="p-12 text-center"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     }`}
                   />
                 ))}
@@ -3152,14 +3181,7 @@ className="p-12 text-center"
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Enhanced CTA Section */}
 <<<<<<< HEAD
         <section className="py-20 px-4 relative">
@@ -3186,14 +3208,7 @@ className="p-12 text-center"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -3559,22 +3574,13 @@ transition={{ duration: 0 && 0.8 }}
   /* Main Heading */ ;
 =======
   );
-<<<<<<< HEAD
 }
 Math.random () * 100
-=======
 };
 
-<<<<<<< HEAD
   Math.random () * 100 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 Math.random () * 100 
-=======
   Math.random () * 100 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }%`;
 top: `$ {
   Math.random () * 100
@@ -3672,6 +3678,7 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
   duration: 0 && 0.8 
 }viewport= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3817,6 +3824,8 @@ export default Homepage2043;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   once: true
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion.button> <motion.button > <Phone className="w-6 h-6" /> Contact Us </motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>)
 }
@@ -3824,16 +3833,11 @@ export default Homepage2043;  )
 }
 export default Homepage2043;
 
-=======
   once: true 
 
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion.button> <motion.button > <Phone className="w-6 h-6" /> Contact Us </motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>) 
 };
-<<<<<<< HEAD
 export default Homepage2043;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 export default Homepage2043;  )
 };
 
@@ -3843,9 +3847,11 @@ export default Homepage2043;
 }
 }
 }
-=======
 export default Homepage2043;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 }</div> </div>) };
@@ -35,13 +36,13 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 =======
 <<<<<<< HEAD:components/reviews/ReviewCard.tsx
 <<<<<<< HEAD
+=======
+:components/reviews/ReviewCard.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
  > Report abuse </button> </div>)
 }</div> </div>) }
-=======
  > Report abuse </button> </div>) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD:backup-problematic-files/reviews/ReviewCard.tsx
+:backup-problematic-files/reviews/ReviewCard.tsx
 import React from 'react',
 import StarRating from './StarRating',
 import type { PublicReview } from '../../types/reviews',
@@ -61,15 +62,11 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
         <button
           className="text-xs text-red-500 hover:underline"
           onClick={() => onReport && onReport(review.id)}
-=======
 > Report abuse </button> </div>) 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewCard.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/reviews/ReviewCard.tsx
 }</div> </div>) };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewCard.tsx
+:backup-problematic-files/reviews/ReviewCard.tsx
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
   return (import React from 'react';
@@ -96,6 +93,7 @@ type Props = {;
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
   return (
+<<<<<<< HEAD
     <div className='enhanced-card hover:shadow-lg transition-shadow'>;
       <div className='flex items-center justify-between mb-2'>;
         <div className='flex items-center gap-2'>;
@@ -112,6 +110,9 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
         <div className='flex items-center gap-2'>;
 =======
 <<<<<<< HEAD:components/reviews/ReviewCard.tsx
+=======
+:components/reviews/ReviewCard.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className='enhanced-card hover:shadow-lg transition-shadow'>
       <div className='flex items-center justify-between mb-2'>
         <div className='flex items-center gap-2'>
@@ -212,6 +213,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
         </div>
         <button
           className="text-xs text-red-500 hover:underline"
+<<<<<<< HEAD
 <<<<<<< HEAD:components/reviews/ReviewCard.tsx
           onClick={() => onReport && onReport(review.id)}
 
@@ -227,16 +229,28 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewCard.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
+=======
+
+          onClick={() => onReport && onReport(review.id)}
+
+main:components/reviews/ReviewCard.tsx
+:backup-problematic-files/reviews/ReviewCard.tsx
+:backup-problematic-files/reviews/ReviewCard.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           Report abuse
         </button>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:components/reviews/ReviewCard.tsx
 <div className="flex items-center gap-2 mb-3">
         <span className="text-sm font-medium">{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
 =======
 <<<<<<< HEAD:backup-problematic-files/reviews/ReviewCard.tsx
+=======
+:backup-problematic-files/reviews/ReviewCard.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="flex items-center gap-2 mb-3">
         <span className="text-sm font-medium">{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
@@ -259,7 +273,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
     </div>;
   );
 },;
-=======
       <div className='flex items-center gap-2 mb-3'>
         <span className='text-sm font-medium'>{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
@@ -286,13 +299,10 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD:components/reviews/ReviewCard.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:components/reviews/ReviewCard.tsx
 export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
           <span className="pill pill-success">Would work again</span>
@@ -438,12 +448,11 @@ export default ReviewCard;
   )
 }
 export default ReviewCard;
-<<<<<<< HEAD
 
-<<<<<<< HEAD:components/reviews/ReviewCard.tsx
-=======
->>>>>>> main:components/reviews/ReviewCard.tsx
+:components/reviews/ReviewCard.tsx
+main:components/reviews/ReviewCard.tsx
 export default ReviewCard;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewCard.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -457,3 +466,9 @@ export default ReviewCard;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:backup-problematic-files/reviews/ReviewCard.tsx
+main:components/reviews/ReviewCard.tsx
+export default ReviewCard;
+:backup-problematic-files/reviews/ReviewCard.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

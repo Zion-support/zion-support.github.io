@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Button from '../components/ui/Button';
 
@@ -264,18 +265,17 @@ import Button from '../components / ui / Button';
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
-=======
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
   Search
   TrendingUp
   Target
@@ -300,11 +300,13 @@ import {
 export default function AISeosuitePage() {
   const features = [
     {
-<<<<<<< HEAD
       icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Search,
   TrendingUp,
   Target,
@@ -730,15 +732,11 @@ features: [;
 } from 'lucide-react';
 export default function AISeosuitePage() {
   const features = [
-<<<<<<< HEAD
     {;
       icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
-=======
     {
       icon: <Search className='w-8 h-8 text-white' />,
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AISeosuitePage() {
   const features = [
     {
@@ -785,21 +783,17 @@ export default function AISeosuitePage() {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'Automated Reports'
       description:
-<<<<<<< HEAD
         'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
       color: 'bg-gradient-to-br from-pink-500 to-rose-600'
       gradient: 'from-pink-400 to-rose-500'
     }
   ];
-=======
         'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
       gradient: 'from-pink-400 to-rose-500',
     },;
   ];
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const seoTools = [
     {
       category: 'Keyword Research'
@@ -899,19 +893,13 @@ export default function AISeosuitePage() {
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />
       tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
     }
-=======
-<<<<<<< HEAD
       icon: <Search className='w-8 h-8 text-white' />,
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function AISeosuitePage() {
   const features = [
     {
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const pricingPlans = [
     {
@@ -1081,6 +1069,7 @@ export default function AISeosuitePage() {
 <<<<<<< HEAD
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
 
+<<<<<<< HEAD
 =======
 =======
 
@@ -1357,13 +1346,10 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -1853,7 +1839,6 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 =======
 =======
                 </h3>
-<<<<<<< HEAD
                 <p className='text-gray-400 leading-relaxed'>                  {feature.description}              Powerful SEO Features
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1930,16 +1915,10 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
                 </h3>
                 <p className="text-gray-400 leading-relaxed">
                   {feature.description}
-=======
                 <p className='text-gray-400 leading-relaxed'>                  {feature.description}
 
                   {feature.description}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
               </Card>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1947,6 +1926,7 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1964,12 +1944,9 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* SEO Tools Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -2028,7 +2005,6 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 =======
             </p>
           </div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoTools.map((tool, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2092,6 +2068,7 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           {toolName}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </div>;
 =======
 <<<<<<< HEAD
@@ -2106,14 +2083,11 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                           {toolName}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2129,6 +2103,7 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2146,12 +2121,9 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Success Metrics Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -2215,7 +2187,6 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 =======
             </p>
           </div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {successMetrics.map((metric, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2260,6 +2231,7 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
                 <p className="text-gray-400 text-sm">{metric.description}</p>
               </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -2284,14 +2256,11 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
               </Card>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
 <<<<<<< HEAD
       <section className="py-24 bg-black relative overflow-hidden">
@@ -2299,14 +2268,7 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -2365,7 +2327,6 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 =======
             </p>
           </div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2438,6 +2399,7 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           {benefit}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </div>;
 =======
 <<<<<<< HEAD
@@ -2452,14 +2414,11 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                           {benefit}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2475,6 +2434,7 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2492,12 +2452,9 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -2818,6 +2775,7 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
                 )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -2831,9 +2789,9 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -2935,17 +2893,11 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       {feature}
-=======
-<<<<<<< HEAD
 
                       {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                       {feature}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -2982,6 +2934,7 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2998,12 +2951,9 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -3067,7 +3017,6 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 =======
             </p>
           </div>
-<<<<<<< HEAD
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {integrations.map((integration, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -3114,6 +3063,7 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -3138,14 +3088,11 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
       {/* CTA Section */}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
               </Card>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
 <<<<<<< HEAD
           </div>;
@@ -3162,20 +3109,14 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -3194,6 +3135,9 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             Ready to Dominate Search Rankings?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -3446,13 +3390,8 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
         </div>
       </section>
     </>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -3464,10 +3403,13 @@ className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
 }
 }
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

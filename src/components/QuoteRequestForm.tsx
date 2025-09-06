@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -12,6 +13,9 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react";
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from "@/hooks/use-toast";
@@ -48,6 +52,7 @@ import { z } from "zod",
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -57,6 +62,8 @@ export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useState} from "react"
@@ -80,6 +87,7 @@ export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | 
 const serviceStepSchema = z.object({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   serviceType: z.string().min(1)
@@ -87,14 +95,18 @@ const serviceStepSchema = z.object({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   serviceType: z.string().min(1)
   specificItem: z.object({ id: z.string() })})
-=======
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function QuoteRequestForm() {
   const router = useRouter()
   const { toast } = useToast()
@@ -104,6 +116,7 @@ export function QuoteRequestForm() {
   const [autoFillOpen, setAutoFillOpen] = useState(false)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
@@ -116,6 +129,10 @@ export function QuoteRequestForm() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  serviceType: z.string().min(1),
+  specificItem: z.object({ id: z.string() })}),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function QuoteRequestForm() {
   const router = useRouter(),
@@ -134,11 +151,6 @@ export function QuoteRequestForm() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [formData, setFormData] = useState<QuoteFormData>({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     serviceType: ""
@@ -154,6 +166,7 @@ export function QuoteRequestForm() {
       type: "fixed"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }
@@ -163,14 +176,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     contactInfo: {
 >>>>>>>       name: ""
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
-=======
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     contactInfo: {
       name: ""
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -178,6 +187,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       phone: ""
       company: ""
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -187,6 +197,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   })
   const updateFormData = (data: Partial<QuoteFormData>,) => {
     setFormData(prev => ({
@@ -195,14 +207,16 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
-<<<<<<< HEAD
 
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }),
   
   const updateFormData = (data: Partial<QuoteFormData>) => {
@@ -628,8 +642,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

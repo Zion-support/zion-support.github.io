@@ -18,9 +18,12 @@ import { AspectRatio } from "@/components/ui/aspect-ratio",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -97,8 +100,6 @@ interface EquipmentDetails {
   features: string[],
   warranty?: string;
   returnPolicy?: string
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -107,7 +108,6 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
-<<<<<<< HEAD
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 interface EquipmentSpecification {
@@ -147,7 +147,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     brand: "CineTech"
     category: "Equipment"
     subcategory: "Cameras"
-=======
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 interface EquipmentSpecification {
@@ -187,10 +186,13 @@ interface EquipmentDetails {;
   warranty?: string,;
   returnPolicy?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 // Sample data - in a real app this would come from an API
@@ -203,6 +205,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     category: "Equipment",
     subcategory: "Cameras",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -213,6 +216,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800",
@@ -226,6 +231,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     inStock: true
     expectedShipping: "3-5 business days"
     specifications: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -292,6 +298,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" }
       { name: "Resolution", value: "8K (8192 x 4320)" }
       { name: "Dynamic Range", value: "16+ stops" }
@@ -301,8 +309,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Storage", value: "Dual CFexpress Type B" }
       { name: "Battery Life", value: "~3 hours continuous recording" }
       { name: "Weight", value: "4.5 lbs (body only)" }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" },
       { name: "Resolution", value: "8K (8192 x 4320)" },
       { name: "Dynamic Range", value: "16+ stops" },
@@ -313,6 +324,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Battery Life", value: "~3 hours continuous recording" },
       { name: "Weight", value: "4.5 lbs (body only)" },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
@@ -322,10 +334,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
     ],
     features: [
-<<<<<<< HEAD
       "Advanced 8K full-frame sensor";
       "16+ stops of dynamic range";
       "Internal RAW recording";
@@ -347,8 +360,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
     brand: "AudioTech"
     category: "Equipment"
     subcategory: "Audio"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Advanced 8K full-frame sensor",
       "16+ stops of dynamic range",
       "Internal RAW recording",
@@ -371,6 +387,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
     category: "Equipment",
     subcategory: "Audio",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -378,6 +395,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -421,6 +440,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // In a real app, this would fetch from an API
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined,
@@ -431,6 +451,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string }
@@ -439,28 +461,27 @@ export default function EquipmentDetail() {
   const [isAdding, setIsAdding] = useState(false);
   // In a real app, this would fetch from an API
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
-=======
 },
 
-<<<<<<< HEAD
 export default function EquipmentDetail() {;
   const { equipmentId } = useParams() as { equipmentId?: string };
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
-=======
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string },
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),
   const [quantity, setQuantity] = useState(1),
   const [isAdding, setIsAdding] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // In a real app, this would fetch from an API
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined,
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!equipment) {
     return (
       <>
@@ -479,6 +500,7 @@ export default function EquipmentDetail() {
   }
   const handleAddToCart = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -488,12 +510,16 @@ export default function EquipmentDetail() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    setIsAdding(true);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    setIsAdding(true);
     setIsAdding(true),
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),
@@ -503,6 +529,7 @@ export default function EquipmentDetail() {
     }, 800)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -512,17 +539,25 @@ export default function EquipmentDetail() {
     setIsAdding(true);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+  const handleBuyNow = () => {
+    setIsAdding(true);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleBuyNow = () => {
     setIsAdding(true),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),
@@ -532,17 +567,22 @@ export default function EquipmentDetail() {
     }, 800)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <>
@@ -579,11 +619,14 @@ export default function EquipmentDetail() {
                         />
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Sample data - in a real app this would come from an API;
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
@@ -1422,11 +1465,6 @@ export default function EquipmentDetail() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/EquipmentDetail.tsx
 =======
                       </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
                   </div>
                 )}
@@ -1475,21 +1513,24 @@ export default function EquipmentDetail() {;
                             <span className="text-zion-slate-light">{feature}</span>
                           </li>
                         ))}
-<<<<<<< HEAD
                       </ul>
                     </div>
                   </TabsContent>
                 </Tabs>
               </div>
             </div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       </ul>;
                     </div>;
                   </TabsContent>;
                 </Tabs>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/EquipmentDetail.tsx
 
@@ -1644,6 +1685,8 @@ export default function EquipmentDetail() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
@@ -1661,14 +1704,7 @@ export default function EquipmentDetail() {;
                 {/* Product Title */}
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand}</p>
-<<<<<<< HEAD
-=======
                 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Rating */}
                 {equipment.rating && (
                   <div className="flex items-center gap-2 mb-4">
@@ -1677,13 +1713,10 @@ export default function EquipmentDetail() {;
                         <Star
                           key={i}
                           className={`h-5 w-5 ${
-<<<<<<< HEAD
                             i < Math.floor(equipment.rating!)
                               ? "text-zion-cyan fill-zion-cyan"
-=======
                             i < Math.floor(equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                               : "text-zion-slate-light"
                           }`}
                         />
@@ -1723,6 +1756,7 @@ export default function EquipmentDetail() {;
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -1732,11 +1766,15 @@ export default function EquipmentDetail() {;
 
 =======
 <<<<<<< HEAD
-                    <button
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    <button
                     <button 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
                       disabled={quantity <= 1 |!equipment.inStock}
@@ -1750,6 +1788,7 @@ export default function EquipmentDetail() {;
                       readOnly
                     />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1760,11 +1799,15 @@ export default function EquipmentDetail() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                    <button
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    <button
                     <button 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -1776,6 +1819,7 @@ export default function EquipmentDetail() {;
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1786,11 +1830,15 @@ export default function EquipmentDetail() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                  <Button
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  <Button
                   <Button 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onClick={handleBuyNow}
                     disabled={isAdding |!equipment.inStock}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
@@ -1798,6 +1846,7 @@ export default function EquipmentDetail() {;
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1808,11 +1857,15 @@ export default function EquipmentDetail() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                  <Button
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  <Button
                   <Button 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onClick={handleAddToCart}
                     disabled={isAdding |!equipment.inStock}
                     variant="outline"
@@ -2162,6 +2215,7 @@ export default function EquipmentDetail() {;
                     </div>
                   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                   {equipment.return_policy && (
@@ -2187,6 +2241,8 @@ export default function EquipmentDetail() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/EquipmentDetail.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </div>
             </div>
@@ -2197,8 +2253,11 @@ export default function EquipmentDetail() {;
     </>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>;
               </div>;
             </div>;
@@ -2349,5 +2408,8 @@ if (!equipment) {
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

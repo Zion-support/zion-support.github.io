@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputeForm.tsx
 
 =======
@@ -7,6 +8,8 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -14,15 +17,19 @@ import { z } from 'zod'
 import { Button } from '@/components/ui/button'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -43,16 +50,13 @@ import { log_info, logErrorToProduction } from '@/utils / production_logger';
 import {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputeForm.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
-=======
 import { Button } from "@/components/ui/button",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Form,
@@ -60,6 +64,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputeForm.tsx
 <<<<<<< HEAD
@@ -85,14 +90,15 @@ const formSchema = z.object({
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormMessage} from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea",
 import {
-=======
-<<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea'; import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
   FormMessage} from "@/components/ui/form",
@@ -109,12 +115,20 @@ import { Textarea } from '@/components/ui/textarea'; import {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  FormMessage} from "@/components/ui/form",
+import { Textarea } from "@/components/ui/textarea",
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   SelectValue} from "@/components/ui/select",
 import { Input } from "@/components/ui/input",
 import { disputeReasonLabels } from "@/types/disputes",
@@ -122,9 +136,12 @@ import { useDisputes } from "@/hooks/useDisputes",
 import { toast } from "sonner",
 import { FileText } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   Form
   FormControl
@@ -140,12 +157,14 @@ import { Textarea } from '@/components/ui/textarea'; import {
   SelectTrigger
   SelectValue
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   SelectValue,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/select'
 import { Input } from '@/components/ui/input'
 import { disputeReasonLabels } from '@/types/disputes'
@@ -153,7 +172,6 @@ import { useDisputes } from '@/hooks/useDisputes'
 import { toast } from 'sonner'
 import { FileText } from 'lucide-react'
 const formSchema = z.object({
-<<<<<<< HEAD
   reason_code: z
     .string()
     .min(1, { message: 'Please select a reason for the dispute' })
@@ -177,9 +195,6 @@ export function DisputeForm({
   const { createDispute } = useDisputes()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [files, setFiles] = useState<File[]>([])
-<<<<<<< HEAD
-=======
-=======
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -204,7 +219,6 @@ export function DisputeForm({
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true)
-=======
   SelectValue} from "@/components/ui/select",
 import { Input } from "@/components/ui/input",
 import { disputeReasonLabels } from "@/types/disputes",
@@ -213,8 +227,11 @@ import { toast } from "sonner",
 import { FileText } from 'lucide-react'
 
 const formSchema = z.object({
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" }),
   description: z.string()
@@ -240,6 +257,7 @@ export function DisputeForm({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -261,6 +279,11 @@ export function DisputeForm({
     defaultValues: {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema)
+    defaultValues: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       reason_code: ''
       description: ''
       attachments: []
@@ -289,6 +312,7 @@ export function DisputeForm({
         description: values.description
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       const dispute = await createDispute({
         project_id: projectId,
         milestone_id: milestoneId,
@@ -301,6 +325,8 @@ export function DisputeForm({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       reason_code: "",
       description: "",
       attachments: []}}),
@@ -324,27 +350,16 @@ export function DisputeForm({
     try {
       setIsSubmitting(true),
       
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const dispute = await createDispute({
         project_id: projectId,
         milestone_id: milestoneId,
         reason_code: values.reason_code,
-<<<<<<< HEAD
         description: values.description}),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
         description: values.description,
       })
-=======
         description: values.description}),
       
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (dispute && dispute.id) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         // Future enhancement: Upload attachments
@@ -352,6 +367,7 @@ export function DisputeForm({
         if (files.length > 0) {
           // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -370,24 +386,20 @@ export function DisputeForm({
 =======
 <<<<<<< HEAD
 =======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        toast.success('Your dispute has been submitted')
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
+        toast.success('Your dispute has been submitted')
         
         toast.success("Your dispute has been submitted"),
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         if (onDisputeCreated) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
@@ -401,20 +413,15 @@ export function DisputeForm({
 >>>>>>>       setIsSubmitting(false)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       logErrorToProduction('Error submitting dispute:', { data: error })
       toast.error('Failed to submit dispute. Please try again.')
-<<<<<<< HEAD
 
-=======
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } finally {
       setIsSubmitting(false)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -428,6 +435,7 @@ export function DisputeForm({
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -438,10 +446,14 @@ export function DisputeForm({
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 <FormLabel>Reason for dispute</FormLabel>
@@ -454,6 +466,8 @@ export function DisputeForm({
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             name='reason_code'
             render={({
               field
@@ -463,6 +477,7 @@ export function DisputeForm({
                 'reason_code'
               >
             }) => (              <FormItem>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 <FormLabel>Reason for dispute</FormLabel>
       <Form {...form}>
@@ -479,14 +494,11 @@ export function DisputeForm({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -498,12 +510,15 @@ export function DisputeForm({
                   <SelectContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     {...field}
                   />
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {Object.entries(disputeReasonLabels).map(
                       ([value, label]) => (
                         <SelectItem key={value} value={value}>
@@ -532,6 +547,7 @@ export function DisputeForm({
                   <Textarea
                     placeholder='Please provide specific details about the issue...'
                     className='min-h-[150px]'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                     {...field}
 ursor/fix-website-loading-errors-and-merge-6662
@@ -597,6 +613,8 @@ function on_submit() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (
                       <SelectItem key={value} value={value}>{label}</SelectItem>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1153,11 +1171,6 @@ export function DisputeForm({;
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {...field}
                   />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1166,6 +1179,7 @@ export function DisputeForm({;
               </FormItem>
             )}
           />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1180,6 +1194,11 @@ export function DisputeForm({;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <FormItem>
+            <FormLabel>Attachments (optional)</FormLabel>
+            <FormControl>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='space-y-4'>
                 <Input
                   type='file'
@@ -1208,22 +1227,28 @@ export function DisputeForm({;
                         </li>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           <FormItem>
             <FormLabel>Attachments (optional)</FormLabel>
             <FormControl>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="space-y-4">
                 <Input 
                   type="file" 
@@ -1250,6 +1275,7 @@ export function DisputeForm({;
                         </li>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       ))}
 =======
@@ -1260,6 +1286,8 @@ export function DisputeForm({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </ul>
@@ -1271,6 +1299,7 @@ export function DisputeForm({;
           </FormItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {onCancel && (
 =======
@@ -1278,15 +1307,11 @@ export function DisputeForm({;
 >>>>>>>             {onCancel && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-          <div className='flex justify-end space-x-2'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          <div className='flex justify-end space-x-2'>
           
           <div className="flex justify-end space-x-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {onCancel && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Button type="button" variant="outline" onClick={onCancel}>
@@ -1304,6 +1329,7 @@ export function DisputeForm({;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
 }</ul> </div>) ;
@@ -1312,6 +1338,8 @@ export function DisputeForm({;
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const removeFile = (index: number) => {
   async function onSubmit (values: z.infer<typeof formSchema>) {
   try {
@@ -1341,11 +1369,15 @@ description: values.description
 }</SelectContent> </Select> <FormMessage /> </FormItem>)
 }/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) "
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) )
 }</ul> </div>)
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>)
 }'"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 ========
@@ -1623,11 +1655,16 @@ if ( {) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
 }'"};
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

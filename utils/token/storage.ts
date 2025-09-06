@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   tokenName: string;
   tokenSymbol: string;
@@ -16,11 +16,10 @@ export interface TokenConfig {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
-export interface TokenConfig {
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface TokenConfig {
 export interface TokenConfig {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   tokenName: string;
   tokenSymbol: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -71,6 +70,7 @@ class TokenStore {
     minIssueAmount: 1
     maxIssueAmount: 10000
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -79,14 +79,18 @@ export interface TokenStoreData {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 export interface TokenStoreData {
-=======
   };
 
 export interface TokenStoreData {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -130,14 +134,12 @@ export const token_store = new TokenStore ();
   }
 }
 export const tokenStore = new TokenStore();
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
-=======
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

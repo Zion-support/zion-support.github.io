@@ -17,9 +17,12 @@ import { supabase } from "@/integrations/supabase/client",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {useNavigate, useLocation} from "react-router-dom";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -34,6 +37,7 @@ import {toast} from "@/hooks/use-toast";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {cleanupAuthState} from "@/utils/authUtils";
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Form validation schema;
 const updatePasswordSchema = z;
@@ -67,6 +71,8 @@ export default function UpdatePassword() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useNavigate, useLocation } from "react-router-dom",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -74,7 +80,6 @@ import { useForm } from "react-hook-form",
 import { z } from "zod",
 import { LockKeyhole } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -88,7 +93,6 @@ import { toast } from "@/hooks/use-toast",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer";
 import { cleanupAuthState } from "@/utils/authUtils";
-=======
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import {
@@ -103,11 +107,14 @@ import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { cleanupAuthState } from "@/utils/authUtils",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Form validation schema
 
 const updatePasswordSchema = z
@@ -120,10 +127,13 @@ const updatePasswordSchema = z
   .refine((data) => data.password === data.confirmPassword, {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     message: "Passwords do not match"
     path: ["confirmPassword"]})
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
@@ -134,19 +144,25 @@ export default function UpdatePassword() {
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function UpdatePassword() {;
   const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState<string | null>(null);
@@ -154,7 +170,6 @@ export default function UpdatePassword() {;
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-=======
 export default function UpdatePassword() {
   const [isLoading, setIsLoading] = useState(false),
   const [accessToken, setAccessToken] = useState<string | null>(null),
@@ -162,10 +177,12 @@ export default function UpdatePassword() {
   const [success, setSuccess] = useState(false),
   const navigate = useNavigate(),
   const location = useLocation(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema)
@@ -175,18 +192,23 @@ export default function UpdatePassword() {
   useEffect(() => {
     // Extract access token from URL hash
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const hashParams = new URLSearchParams(location.hash.substring(1));
     const token = hashParams.get("access_token");
-=======
     const hashParams = new URLSearchParams(location.hash.substring(1)),
     const token = hashParams.get("access_token"),
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (token) {
       setAccessToken(token)
     } else {
@@ -194,6 +216,7 @@ export default function UpdatePassword() {
     }
     // Clean up auth state to prevent issues
     cleanupAuthState()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -275,12 +298,16 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }, [location]);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }, [location]);
   }, [location]),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
@@ -402,13 +429,14 @@ export default function UpdatePassword() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
     }
-<<<<<<< HEAD
     setIsLoading(true);
-=======
 
     setIsLoading(true),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
@@ -420,22 +448,29 @@ export default function UpdatePassword() {;
       if (error) {
         toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           title: "Password update failed"
           description: error.message
           variant: "destructive"})
         setError(error.message);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           title: "Password update failed",
           description: error.message,
           variant: "destructive"}),
         setError(error.message),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -446,6 +481,8 @@ export default function UpdatePassword() {;
       setSuccess(true);
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return
       }
       // Show success message and clean up auth state
@@ -481,12 +518,13 @@ export default function UpdatePassword() {;
     }
 =======
     }
-<<<<<<< HEAD
   }
-=======
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <>
@@ -507,22 +545,27 @@ export default function UpdatePassword() {;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Button
                     className="mt-3 text-xs"
                     variant="outline"
-=======
                   <Button 
                     className="mt-3 text-xs"
                     variant="outline"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { useNavigate, useLocation } from "react-router-dom",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -773,17 +816,21 @@ export default function UpdatePassword() {;
                     className="mt-3 text-xs";
                     variant="outline";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onClick={() => navigate('/forgot-password')}
                   >
                     Request new reset link
                   </Button>
                 </div>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -826,6 +873,9 @@ export default function UpdatePassword() {;
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
@@ -1039,6 +1089,7 @@ export default function UpdatePassword() {;
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -1225,6 +1276,9 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       name="confirmPassword";
                       render={({ field }) => (;
                         <FormItem>;
@@ -1371,11 +1425,10 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
 =======
     </>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

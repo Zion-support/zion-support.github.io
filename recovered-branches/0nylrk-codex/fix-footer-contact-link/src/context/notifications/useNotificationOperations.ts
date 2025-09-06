@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/notifications/useNotificationOperations.ts
 
 <<<<<<< HEAD
@@ -170,9 +171,9 @@ if (throw error) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Notification, FilterType, NotificationContextType} from './types';
@@ -269,8 +270,11 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 
 =======
     dismissNotification;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
@@ -361,6 +365,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAllAsRead,;
     dismissNotification,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -375,6 +380,8 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setFilter;
     fetchNotifications}
 }

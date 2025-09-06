@@ -1,9 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/CandidateCard.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+import { useState } from "react";
+import { Draggable } from "react-beautiful-dnd";
+import { formatDistanceToNow } from "date-fns";
+import { Link } from "react-router-dom";
+import { JobApplication } from "@/types/jobs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from "react",
 import { Draggable } from "react-beautiful-dnd",
@@ -12,6 +25,7 @@ import { Link } from "react-router-dom",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -94,6 +108,8 @@ import {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { 
@@ -127,28 +143,50 @@ import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
 interface CandidateCardProps {
   application: JobApplication;
+<<<<<<< HEAD
+=======
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   MessageSquare,
   User, 
   FileText, 
   MoreVertical, 
   Calendar,
   AlertTriangle,
+<<<<<<< HEAD
 BriefcaseIcon,;
 } from "lucide-react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  BriefcaseIcon,;
+} from "lucide-react";
+  BriefcaseIcon
+} from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+DropdownMenuTrigger,;
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
 import { HireConfirmationModal } from "./HireConfirmationModal",
+<<<<<<< HEAD
 
 interface CandidateCardProps {
   application: JobApplication,
@@ -161,6 +199,20 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 
 =======
 const [showNotes, setShowNotes] = useState(false);
+=======
+interface CandidateCardProps {
+  application: JobApplication,
+  index: number
+}
+
+export function CandidateCard({ application, index }: CandidateCardProps) {;
+  const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application.notes || "");
+  const [showHireModal, setShowHireModal] = useState(false);
+
+export function CandidateCard({ application, index }: CandidateCardProps) {
+  const [showNotes, setShowNotes] = useState(false);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [notes, setNotes] = useState(application.notes |"");
   const [showHireModal, setShowHireModal] = useState(false);
   // Check if application is stalled (no activity for 7 days)
@@ -169,11 +221,19 @@ const [showNotes, setShowNotes] = useState(false);
     application.updated_at &&
     new Date(application.updated_at).getTime() <
       Date.now() - 7 * 24 * 60 * 60 * 1000;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const [showNotes, setShowNotes] = useState(false),
+  const [notes, setNotes] = useState(application.notes || ""),
+  const [showHireModal, setShowHireModal] = useState(false),
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Check if application is stalled (no activity for 7 days)
   const isStalled = application.updated_at && 
     new Date(application.updated_at).getTime() < 
     (Date.now() - 7 * 24 * 60 * 60 * 1000),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -192,10 +252,14 @@ interface CandidateCardProps {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -212,6 +276,21 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 
 =======
 
+=======
+      title: "Notes saved"
+      description: "Your notes have been saved"
+    });
+    setShowNotes(false);
+  }
+  const handleHireConfirmed = () => {
+    // Hiring process completed via the modal
+    toast({
+      title: "Hiring process initiated"
+      description: "Offer has been sent to the talent."
+    });
+  }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
@@ -226,6 +305,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
     })
   },
   
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -242,16 +322,21 @@ title: "Notes saved"
     });
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Draggable } from "react-beautiful-dnd",;
 import { formatDistanceToNow } from "date-fns",;
@@ -342,16 +427,20 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
 
           <Card;
             className="mb-2 p-0 shadow-sm border";
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
           >
             <CardContent className="p-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 ========
           <Card
@@ -393,6 +482,10 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
 =======
               {/* Candidate Header */}
 <div className="flex justify-between items-start mb-2">
+=======
+              {/* Candidate Header */}
+              <div className="flex justify-between items-start mb-2">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="flex items-center gap-2">
                   <Avatar className="h-8 w-8">
                     {application.talent_profile?.profile_picture_url ? (
@@ -404,8 +497,21 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
                       />
                     ) : (
                       <User className="h-4 w-4" />
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              <div className="flex justify-between items-start mb-2">;
+                <div className="flex items-center gap-2">;
+                  <Avatar className="h-8 w-8">;
+                    {application.talent_profile?.profile_picture_url ? (;
+                      <img;
+                        src={application.talent_profile.profile_picture_url} ;
+                        alt={application.talent_profile.full_name || "Candidate"} ;
+                      />;
+                    ) : (;
+                      <User className="h-4 w-4" />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     )}
                   </Avatar>
                   <div>
@@ -413,6 +519,7 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
                       {application.talent_profile?.full_name |"Candidate"}
                     </h4>
                     <p className="text-xs text-muted-foreground">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -452,6 +559,13 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/CandidateCard.tsx
 
 
+=======
+                      {application.talent_profile?.professional_title |
+                        "Applicant"}
+                    </p>
+                  </div>
+                </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {application.talent_profile?.professional_title || "Applicant"}
 =======
 {application.talent_profile?.professional_title |
@@ -460,6 +574,7 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
                     </p>
                   </div>
                 </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -467,6 +582,9 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -496,6 +614,7 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
                         </Link>
                       </DropdownMenuItem>
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -670,6 +789,9 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 </DropdownMenuContent>
+=======
+                  </DropdownMenuContent>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </DropdownMenu>
               </div>
               {/* Application Info */}
@@ -695,6 +817,32 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
                   </div>
                 )}
 
+<<<<<<< HEAD
+=======
+                  </DropdownMenuContent>;
+                </DropdownMenu>;
+              </div>;
+              {/* Application Info */}
+              <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;
+                <div className="flex items-center">;
+                  <Calendar className="h-3 w-3 mr-1" />;
+                  {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+                </div>;
+                {isStalled && (;
+                  <div className="flex items-center text-amber-500">;
+                    <AlertTriangle className="h-3 w-3 mr-1" />;
+                    Stalled;
+                  </div>;
+                )}
+              </div>;
+              {/* Match Score */}
+              {application.match_score !== null && application.match_score !== undefined && (;
+                <div className="mb-2">;
+                  <ScoreBadge application={application} />;
+                </div>;
+              )}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Notes Section */}
               {showNotes && (
                 <div className="mt-2">
@@ -709,20 +857,40 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
                   </div>
                 </div>
               )}
+<<<<<<< HEAD
 {/* Action Buttons */}
               <div className="flex justify-between mt-2 gap-1">
                 <Button variant="outline" size="sm" className="flex-1" asChild>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+              {/* Action Buttons */}
+              <div className="flex justify-between mt-2 gap-1">
+                <Button variant="outline" size="sm" className="flex-1" asChild>
+;
+              {/* Action Buttons */}
+              <div className="flex justify-between mt-2 gap-1">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="flex-1"
+                  asChild
+                >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Link to={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+                <Button variant="outline" size="sm" className="flex-1" asChild>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 
                 <Button 
                   variant="outline" 
@@ -730,6 +898,7 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
                   className="flex-1"
                   asChild
                 >
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1063,6 +1232,8 @@ function CandidateCard() {
 =======
 <Button variant="outline" size="sm" className="flex-1" asChild>
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {application.resume?.file_url ? (
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" /> Resume
@@ -1073,10 +1244,20 @@ function CandidateCard() {
                     </span>
                   )}
                 </Button>
+<<<<<<< HEAD
 <Button
                   variant="default"
                   size="sm"
 
+=======
+                <Button
+                  variant="default"
+                  size="sm"
+                
+                <Button 
+                  variant="default" 
+                  size="sm" 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="flex-1"
                   onClick={() => setShowHireModal(true)}
                 >
@@ -1086,8 +1267,13 @@ function CandidateCard() {
             </CardContent>
           </Card>
         )}
+<<<<<<< HEAD
 </Draggable>
 
+=======
+      </Draggable>
+      </Draggable>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1095,6 +1281,7 @@ function CandidateCard() {
         onClose={() => setShowHireModal(false)}
         application={application}
         onConfirm={handleHireConfirmed}
+<<<<<<< HEAD
 <<<<<<< HEAD
       />;
     </>;
@@ -1191,6 +1378,12 @@ index: number
 />
     </>
 
+=======
+      />
+    </>
+      />;
+    </>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

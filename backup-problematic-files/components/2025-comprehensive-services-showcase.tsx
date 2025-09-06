@@ -499,14 +499,21 @@ const allServices = [;
   );
 },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default ComprehensiveServicesShowcase;
 
 =======
 <<<<<<< HEAD:temp_conflicts/pages/2025-comprehensive-services-showcase.tsx
+=======
+:temp_conflicts/pages/2025-comprehensive-services-showcase.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default ComprehensiveServicesShowcase2025;
 }
-=======
 export default ComprehensiveServicesShowcase;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/components/2025-comprehensive-services-showcase.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:backup-problematic-files/components/2025-comprehensive-services-showcase.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

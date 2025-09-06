@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsChart.tsx
 
 <<<<<<< HEAD
@@ -29,8 +30,9 @@ interface PageViewsChartProps {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 import React from "react";
 import {
   Card
@@ -39,8 +41,6 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
-=======
-<<<<<<< HEAD
 import React from "react";
 import {
   Card,
@@ -50,8 +50,6 @@ import {
   CardTitle,;
 } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface PageViewsChartProps {
@@ -65,6 +63,7 @@ export function PageViewsChart({
   timeRange
   onTimeRangeChange
 }: PageViewsChartProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react",
@@ -85,6 +84,11 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>,
   timeRange: string,
@@ -136,7 +140,6 @@ export function PageViewsChart(): any ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -146,8 +149,6 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
       <CardContent className="p-0 pb-4">
         <AnalyticsChart 
           title=""
-<<<<<<< HEAD
-<<<<<<< HEAD
           data={data |[]}
           dataKeys={["views"]}
           timeRange={timeRange}
@@ -155,10 +156,13 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
         />
       </CardContent>
     </Card>
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -178,6 +182,7 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
       <CardContent className="p-0 pb-4">;
         <AnalyticsChart;
           title="";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -303,25 +308,17 @@ onTimeRangeChange: (range: string) => void
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           data={data || []}
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         />
       </CardContent>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />;
       </CardContent>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

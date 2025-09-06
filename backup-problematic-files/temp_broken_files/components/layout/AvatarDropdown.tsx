@@ -42,23 +42,23 @@ export default function AvatarDropdown() {_const { user, _logout} = useUser()
 =======
 import React, {_useState} from 'react'
 import Link from 'next/link'
-<<<<<<< HEAD:components/layout/AvatarDropdown.tsx
+:components/layout/AvatarDropdown.tsx
 import { useUser } from '../../providers/UserProvider'
 export default function AvatarDropdown() {
   const { user, logout } = useUser()
-=======
 
 export default function AvatarDropdown() {_const { user, _logout} = useUser()
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/layout/AvatarDropdown.tsx
+:backup-problematic-files/temp_broken_files/components/layout/AvatarDropdown.tsx
   const [open, setOpen] = useState(false)
   if (!user) return null
-<<<<<<< HEAD
   return (
-=======
 ;
   return (;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className=&quot;relative&quot;>
       <button onClick={() => setOpen(o => !o)} className=&quot;h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500 text-white text-xs font-semibold grid place-items-center ring-1 ring-white/40&quot;>
         {user.name.split(' ').map(n => n[0]).slice(0,2).join('')}
@@ -72,6 +72,7 @@ export default function AvatarDropdown() {_const { user, _logout} = useUser()
       )}
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   );}
 
@@ -79,13 +80,20 @@ export default function AvatarDropdown() {_const { user, _logout} = useUser()
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD:components/layout/AvatarDropdown.tsx
+=======
+:components/layout/AvatarDropdown.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
-=======
   );}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/layout/AvatarDropdown.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/layout/AvatarDropdown.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:backup-problematic-files/temp_broken_files/components/layout/AvatarDropdown.tsx
+:backup-problematic-files/temp_broken_files/components/layout/AvatarDropdown.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

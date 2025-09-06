@@ -12,20 +12,20 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
 import React from 'react';
 import { format  } from 'date-fns';
 import { PaperclipIcon  } from 'lucide-react';
 import { cn  } from '@/lib/utils';
 import { Message } from '@/types/messaging';
 interface MessageBubbleProps {
-<<<<<<< HEAD
-=======
   message: Message,
   isUserMessage: boolean
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { format } from 'date-fns',;
 import { PaperclipIcon } from 'lucide-react',;
@@ -34,6 +34,7 @@ import { Message } from '@/types/messaging',;
 interface MessageBubbleProps {;
   message: Message,;
   isUserMessage: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -53,6 +54,9 @@ interface MessageBubbleProps {;
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   message: Message
 
@@ -60,8 +64,8 @@ interface MessageBubbleProps {;
 }
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className={cn(
       "flex",
@@ -79,21 +83,20 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className={cn(;
       "flex";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className={cn(
       "flex",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(
-<<<<<<< HEAD
         "max-w-[75%] rounded-lg px-4 py-2";
         isUserMessage
           ? "bg-zion-purple text-white"
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
         "max-w-[75%] rounded-lg px-4 py-2",
@@ -106,6 +109,11 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        "max-w-[75%] rounded-lg px-4 py-2",
+        isUserMessage 
+          ? "bg-zion-purple text-white" 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           : "bg-zion-blue-dark text-white"
       )}>
         <div className="whitespace-pre-wrap">{message.content}</div>
@@ -118,6 +126,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
           >
             <PaperclipIcon className="h-3 w-3 mr-1" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -129,10 +138,16 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         )}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            {message.attachment_name |'Attachment'}
+          </a>
+        )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {message.attachment_name || 'Attachment'}
           </Link>
         )}
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -140,6 +155,8 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
         </div>

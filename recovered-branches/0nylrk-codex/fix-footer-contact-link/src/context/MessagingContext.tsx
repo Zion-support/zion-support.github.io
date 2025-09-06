@@ -7,15 +7,17 @@
 
 =======
 
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { MessagingContextType  } from '@/types/messaging';
 import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
 // Default context used when React type definitions are missing
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const defaultContext: MessagingContextType = {
   messages: [],
   conversations: [],
@@ -31,6 +33,7 @@ const defaultContext: MessagingContextType = {
   loadMessages: async () => {}
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -38,6 +41,8 @@ const defaultContext: MessagingContextType = {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -59,6 +64,7 @@ const defaultContext: MessagingContextType = {;
 },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -71,6 +77,8 @@ const defaultContext: MessagingContextType = {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -91,6 +99,7 @@ const defaultContext: MessagingContextType = {
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
   defaultContext as MessagingContextType
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -267,30 +276,23 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     <MessagingContext.Provider value={contextValue}>
 
 =======
-);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+);
 ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Hook for using the messaging context
 export function useMessaging(): MessagingContextType {
-<<<<<<< HEAD
   // Cast to avoid type errors when React type definitions are missing;
   const context = useContext(MessagingContext) as MessagingContextType;
-=======
   // Cast to avoid type errors when React type definitions are missing
   const context = useContext(MessagingContext) as MessagingContextType,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (context === undefined) {
     throw new Error('useMessaging must be used within a MessagingProvider')
   }
   return context
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
   const { user } = useAuth();
@@ -347,15 +349,17 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 
   return (
     <MessagingContext.Provider value={contextValue}>
-<<<<<<< HEAD
       {children}
     </MessagingContext.Provider>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Provider component;
 export function MessagingProvider({ children }: { children: ReactNode }) {;
@@ -640,14 +644,13 @@ loadMessages: async () => {
   };
   return (;
     <MessagingContext.Provider value={contextValue}>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {children}
     </MessagingContext.Provider>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

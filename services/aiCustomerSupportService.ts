@@ -1,15 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:services/aiCustomerSupportService.ts
 
 =======
 <<<<<<< HEAD
-export interface Attachment {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface Attachment {
 export interface Attachment {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   filename: string;
   originalName: string;
@@ -46,13 +51,14 @@ export interface SupportTicket {
 
   uploadedBy: string
 }
-<<<<<<< HEAD
 export interface SupportTicket {
-=======
 
 export interface SupportTicket {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   description: string;
@@ -118,12 +124,9 @@ export interface Customer {
   firstResponseTime?: number, // in minutes
   resolutionTime?: number, // in hours
 }
-<<<<<<< HEAD
 export interface TicketMessage {
-=======
 
 export interface TicketMessage {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   content: string;
   senderType: 'customer' | 'agent' | 'system';
@@ -134,13 +137,14 @@ export interface TicketMessage {;
 
   attachments: Attachment[]
 }
-<<<<<<< HEAD
 export interface Customer {
-=======
 
 export interface Customer {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   email: string;
@@ -177,13 +181,14 @@ export interface SupportAgent {
 
   createdAt: Date
 }
-<<<<<<< HEAD
 export interface SupportAgent {
-=======
 
 export interface SupportAgent {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   email: string;
@@ -204,7 +209,6 @@ export interface SupportAgent {;
   maxTickets: number
 
   performance: AgentPerformance
-<<<<<<< HEAD
 }
 export interface AgentPerformance {
 
@@ -408,7 +412,6 @@ class AICustomerSupportService {
         notHelpful: 12;
         lastUpdated: new Date('2025-01-05')
         createdBy: 'agent_001'
-=======
 export interface Attachment {;
   id: string,;
   filename: string,;
@@ -473,9 +476,12 @@ export interface SupportAgent {;
   currentTickets: number,;
   maxTickets: number,;
   performance: AgentPerformance;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 export interface AgentPerformance {;
@@ -486,10 +492,13 @@ export interface AgentPerformance {;
   escalationRate: number, // percentage;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export interface ChatbotSession {;
   id: string;
@@ -681,7 +690,6 @@ class AICustomerSupportService {
         notHelpful: 12;
         lastUpdated: new Date('2025-01-05'),
         createdBy: 'agent_001'
-=======
   id: string,;
   filename: string,;
   originalName: string,;
@@ -754,8 +762,11 @@ export interface AgentPerformance {;
   firstResponseTime: number, // in minutes;
   escalationRate: number, // percentage;
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export interface ChatbotSession {;
   id: string,;
@@ -1262,6 +1273,7 @@ class AICustomerSupportService {
         lastUpdated: new Date('2025-01-05'),;
         createdBy: 'agent_001';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     this.knowledge_base = [;
 <<<<<<<< HEAD:services/aiCustomerSupportService.ts
@@ -1309,14 +1321,12 @@ export interface Attachment {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     ]
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -1394,6 +1404,7 @@ export interface Attachment {;
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1402,6 +1413,8 @@ export interface Attachment {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   async createTicket(ticketData: Omit<SupportTicket 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {;
     const ticket: SupportTicket = {;
@@ -1437,6 +1450,7 @@ export interface Attachment {;
         ticket.resolvedAt = new Date(),;
         if (ticket.createdAt && ticket.resolvedAt) {;
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1965,16 +1979,14 @@ class AICustomerSupportService {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       }
       this.updateAnalytics()
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
     const ticket = this.tickets.find(t => t.id === ticketId);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2185,10 +2197,13 @@ if ( {) {
       session.intent = intent.intent;
       session.confidence = intent.confidence
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage 'id' | 'createdAt'>): Promise<TicketMessage> {;
     const ticket = this.tickets.find(t => t.id === ticketId),;
@@ -2247,6 +2262,7 @@ if ( {) {
       session.intent = intent.intent,;
       session.confidence = intent.confidence;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     }
@@ -2275,27 +2291,30 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     return message
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
-=======
 
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2311,6 +2330,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
@@ -2417,11 +2438,7 @@ if ( {) {
       return { intent: 'general_inquiry', confidence: 0.6 }
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
     const session = this.chatbotSessions.find(s => s.id === sessionId);
     if (session) {
@@ -2467,8 +2484,11 @@ if ( {) {
     }
     this.knowledgeBase.push(article);
     return article
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
     const session = this.chatbotSessions.find(s => s.id === sessionId),;
@@ -2493,6 +2513,7 @@ if ( {) {
     },;
     this.knowledgeBase.push(article),;
     return article;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2595,6 +2616,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
     const lowerQuery = query.toLowerCase()
@@ -2604,11 +2627,7 @@ if ( {) {
       article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b.views - a.views)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [];
     // Ticket prioritization recommendation
@@ -2717,6 +2736,7 @@ if ( {) {
         ]
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2725,6 +2745,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   async getAIRecommendations(): Promise<AIRecommendation[]> {;
     const recommendations: AIRecommendation[] = [],;
@@ -2774,6 +2796,7 @@ if ( {) {
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles';
         ];
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2917,14 +2940,12 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     return recommendations
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   private updateAnalytics(): void {
     const totalTickets = this.tickets.length;
     const openTickets = this.tickets.filter(t => ['openin_progresswaiting_customer'].includes(t.status)).length;
@@ -2971,8 +2992,11 @@ if ( {) {
       chatbotResolutionRate;
       topCategories;
       agentPerformance
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   private updateAnalytics(): void {;
     const totalTickets = this.tickets.length,;
@@ -3020,6 +3044,7 @@ if ( {) {
       chatbotResolutionRate,;
       topCategories,;
       agentPerformance;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -3322,6 +3347,8 @@ if (highPriorityOpenTickets > 5) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   async getTicket(ticketId: string): Promise<SupportTicket | null> {
@@ -3352,18 +3379,14 @@ if (highPriorityOpenTickets > 5) {
     return this.analytics
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const aiCustomerSupportService = new AICustomerSupportService();
-
-=======
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+;
+export const aiCustomerSupportService = new AICustomerSupportService();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

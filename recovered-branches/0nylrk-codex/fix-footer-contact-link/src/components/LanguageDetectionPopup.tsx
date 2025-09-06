@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/LanguageDetectionPopup.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 =======
 
@@ -34,12 +37,27 @@ import {
   useLanguage
   SupportedLanguage
   LanguageContextType
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+AlertDialogTitle,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "../components/ui/alert-dialog";
 import {
   useLanguage,
   SupportedLanguage,
   LanguageContextType,;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -69,6 +87,8 @@ import {;
   LanguageContextType,;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {;
   const [open, setOpen] = useState(false);
@@ -125,6 +145,7 @@ export function LanguageDetectionPopup() {;
   }, []);
   if (!detectedLanguage) return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/LanguageDetectionPopup.tsx
 
 
@@ -144,6 +165,15 @@ export function LanguageDetectionPopup() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  const languageName =
+    supportedLanguages.find((lang) => lang.code === detectedLanguage)?.name |
+    detectedLanguage;
+  const handleAccept = async () => {
+    await changeLanguage(detectedLanguage);
+    setOpen(false);
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import {;
@@ -181,6 +211,7 @@ export function LanguageDetectionPopup() {;
 
   const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -195,6 +226,8 @@ const handleAccept = async () => {
     setOpen(false);
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage),
@@ -202,8 +235,11 @@ const handleAccept = async () => {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
@@ -213,6 +249,7 @@ const handleAccept = async () => {
             {t('language.switch_to_detected', { language: languageName })}
           </AlertDialogTitle>
           <AlertDialogDescription className="text-zion-slate-light">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -228,10 +265,15 @@ const handleAccept = async () => {
 =======
 {`${supportedLanguages.find((lang) => lang.code === detectedLanguage)?.flag |""} ${languageName}`}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            {`${supportedLanguages.find((lang) => lang.code === detectedLanguage)?.flag |""} ${languageName}`}
+            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -317,6 +359,9 @@ export function LanguageDetectionPopup() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 {t("general.no")}
+=======
+            {t("general.no")}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={handleAccept}
@@ -327,11 +372,17 @@ export function LanguageDetectionPopup() {;
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
+<<<<<<< HEAD
 
   );
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {t('general.no')}
           </AlertDialogCancel>;
           <AlertDialogAction;
@@ -364,6 +415,7 @@ export function LanguageDetectionPopup() {;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -490,3 +542,7 @@ if (return null) {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

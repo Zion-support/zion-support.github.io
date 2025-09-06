@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -13,6 +14,8 @@ const contactMethods = [
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -30,10 +33,8 @@ const contact_methods = [;
   ClockIcon
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline'
-=======
 import React from 'react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const contactMethods = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
@@ -245,19 +246,13 @@ function ContactPage() {
 =======
     question: 'What security measures do you have?'
     answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export default function ContactPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ContactPage() {
   return (
     <div className="bg-black">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -268,13 +263,10 @@ export default function ContactPage() {
                 Touch
               </span>
             </h1>
-<<<<<<< HEAD
             <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
               Ready to transform your business with AI? Let's discuss how our cutting-edge
-=======
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Ready to transform your business with AI? Let's discuss how our cutting-edge 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               technology can accelerate your growth and innovation.
             </p>
           </div>
@@ -296,21 +288,18 @@ export default function ContactPage() {
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {method.name}
                 </dt>
-<<<<<<< HEAD
                 <dd className=&quot;mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300&quot;>
                   <p className=&quot;flex-auto&quot;>{method.description}</p>
                   <p className=&quot;mt-6&quot;>
                     <a
                       href={method.href}
                       className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
-=======
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{method.description}</p>
                   <p className="mt-6">
                     <a 
                       href={method.href} 
                       className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     >
                       {method.value} <span aria-hidden="true">→</span>
                     </Link>
@@ -323,6 +312,7 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* Contact form */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -540,20 +530,16 @@ export default function ContactPage() {
                     <ClockIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Send us a message</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Let's start a conversation
           </p>
         </div>
@@ -683,6 +669,7 @@ export default function ContactPage() {
       </div>;
       {/* FAQ */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -723,20 +710,16 @@ export default function ContactPage() {
                 <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Frequently Asked</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Common questions
           </p>
         </div>
@@ -756,6 +739,7 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -794,19 +778,23 @@ export default function ContactPage() {
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

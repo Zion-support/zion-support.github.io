@@ -27,6 +27,7 @@ import Link from 'next / link';
 =======
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 
 =======
 
@@ -44,6 +45,9 @@ import Link from 'next / link';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
@@ -383,8 +387,8 @@ url: '/it - services',
     </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
@@ -535,3 +539,8 @@ export default SearchBar;
 export default SearchBar;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+};
+
+export default SearchBar;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   }
@@ -13,6 +14,8 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -141,16 +144,14 @@ const features = [
     title: 'Data Protection',
     description: 'Advanced encryption and data protection solutions'
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 
 const securityServices = [
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -279,10 +280,8 @@ const features = [
     title: 'Data Protection',
     description: 'Advanced encryption and data protection solutions'
   },
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
   {
     icon: Eye,
     title: 'Threat Monitoring',
@@ -304,14 +303,15 @@ const features = [
     description: 'Employee security awareness and training programs'
   }
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 export default function CybersecurityPage() {
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const benefits = [
   'Protection against cyber threats and attacks',
   'Compliance with industry regulations',
@@ -321,6 +321,7 @@ const benefits = [
   'Peace of mind with 24/7 monitoring'
 ];
 export default function CybersecurityServices() {
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -342,6 +343,10 @@ export default function CybersecurityServices() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -351,10 +356,13 @@ export default function CybersecurityServices() {;
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     icon: Eye,
     title: 'Threat Monitoring',
@@ -393,7 +401,11 @@ export default function CybersecurityPage() {
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
+<<<<<<< HEAD
 
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -416,6 +428,7 @@ export default function CybersecurityPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -424,6 +437,8 @@ export default function CybersecurityPage() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -441,8 +456,12 @@ export default function CybersecurityPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-red-600" />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -462,11 +481,15 @@ export default function CybersecurityPage() {
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -484,9 +507,14 @@ export default function CybersecurityPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-red-600" />
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -500,8 +528,49 @@ export default function CybersecurityPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
 
 =======
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Why Choose Our Cybersecurity Services?
+                </h2>
+                <p className="text-xl text-gray-600 mb-8">
+                  Our cybersecurity experts provide comprehensive protection against
+                  evolving threats while ensuring compliance with industry regulations.
+                </p>
+                <ul className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-gradient-to-r from-red-600 to-orange-700 p-8 rounded-xl text-white">
+                <h3 className="text-2xl font-bold mb-6">Ready to Secure Your Business?</h3>
+                <p className="text-lg mb-6">
+                  Let our cybersecurity experts help you implement comprehensive
+                  security solutions that protect your business and data.
+                </p>
+                <button className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
+                  Schedule Security Audit
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -539,6 +608,7 @@ export default function CybersecurityPage() {
         </section>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         {/* Benefits Section */}
@@ -610,6 +680,9 @@ export default function CybersecurityPage() {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -631,20 +704,14 @@ export default function CybersecurityPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Layout>
-=======
-<<<<<<< HEAD
-=======
     </Layout>
     </Layout>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </>
-=======
     </Layout>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

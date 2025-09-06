@@ -37,9 +37,12 @@ import React from 'react';
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -70,14 +73,11 @@ export default function SearchPage() {;
   const initial = params.get("q") || "";
   const [query, setQuery] = useState(initial);
   const { results, loading, search } = useAISearch();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from "react",
 import { useNavigate, useSearchParams } from "react-router-dom",
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { SearchSuggestion } from "@/types/search",
-<<<<<<< HEAD
 import { useAISearch } from "@/hooks/useAISearch";
 import { AppLayout } from "@/layout/AppLayout";
 export default function SearchPage() {
@@ -88,7 +88,6 @@ export default function SearchPage() {
   const [query, setQuery] = useState(initial);
   const { results, loading, search } = useAISearch();
   const suggestions: SearchSuggestion[] = generateSearchSuggestions()
-=======
 import { useAISearch } from "@/hooks/useAISearch",
 import { AppLayout } from "@/layout/AppLayout",
 export default function SearchPage() {
@@ -97,18 +96,18 @@ export default function SearchPage() {
   const initial = params.get("q") || "",
   const [query, setQuery] = useState(initial),
   const { results, loading, search } = useAISearch(),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     if (initial) {
       search(initial)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -154,14 +153,19 @@ export default function SearchPage() {;
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [initial]);
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     navigate(`/search?q=${encodeURIComponent(query)}`);
     search(query)
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [initial]),
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -169,6 +173,7 @@ export default function SearchPage() {;
     navigate(`/search?q=${encodeURIComponent(query)}`),
     search(query)
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -182,6 +187,8 @@ export default function SearchPage() {;
         <form onSubmit={handleSubmit} className="mb-6">;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <AppLayout>
@@ -211,8 +218,6 @@ export default function SearchPage() {;
 =======
           />
         </form>
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useEffect, useState } from "react",;
@@ -250,6 +255,7 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -425,6 +431,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results.length === 0 && (
           <p className="text-zion-slate-light">No results found.</p>

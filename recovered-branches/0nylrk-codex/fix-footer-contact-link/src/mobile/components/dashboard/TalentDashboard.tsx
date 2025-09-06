@@ -5,22 +5,23 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ChevronRight, FileText, Image, Clock, Zap, BookOpen} from "lucide-react";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -30,17 +31,21 @@ import { Badge } from "@/components/ui/badge",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
-=======
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TalentDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -177,6 +182,7 @@ export function TalentDashboard() {
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -202,6 +208,9 @@ import {Link} from "react-router-dom";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -596,11 +605,13 @@ function TalentDashboard() {
 =======
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

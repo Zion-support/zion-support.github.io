@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/blog/AuthorBio.tsx
 
 
@@ -7,15 +8,20 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import type { BlogAuthor } from '@/types/blog';
 interface AuthorBioProps {
   author: BlogAuthor
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import type { BlogAuthor } from '@/types/blog'
 interface AuthorBioProps {
@@ -62,15 +68,19 @@ export function AuthorBio({ author }: AuthorBioProps) {
         }}
       />
       <div>
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import type { BlogAuthor } from '@/types/blog',;
 interface AuthorBioProps {;
   author: BlogAuthor;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function AuthorBio({ author }: AuthorBioProps) {
@@ -85,12 +95,12 @@ xport function AuthorBio({ author }: AuthorBioProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AuthorBio({ author }: AuthorBioProps) {
   if (!author.bio) return null,
   return (
-<<<<<<< HEAD
     <div className;
-=======
     <div className="mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6">
       <img
         src={author.avatarUrl}
@@ -98,12 +108,16 @@ export function AuthorBio({ author }: AuthorBioProps) {
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
         onError={(e) => {
           const target = e.currentTarget as HTMLImageElement,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           target.src = '/images/blog-placeholder.svg'
         }}
       />
       <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -117,6 +131,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <p className="font-medium text-lg">{author.name}</p>
         {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -126,15 +142,21 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }/> <div> <p className="font-medium text-lg" > {
   author.name
 }</p> {"
   author.title && <p className="text-sm text-muted-foreground mb-2" > {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   author.title
 }</p>
 }<p> {
@@ -142,18 +164,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 }</p>
 }'"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   author.title 
 }</p>
 }<p> {
   author.bio ;
 }</p>;
 }'"};
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export function AuthorBio({ author }: AuthorBioProps) {;
   if (!author.bio) return null;
@@ -366,8 +394,11 @@ target.src = '/images/blog-placeholder.svg' ;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

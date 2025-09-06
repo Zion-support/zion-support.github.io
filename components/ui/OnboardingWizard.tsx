@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -62,10 +63,10 @@ import { useRole } from '../context/RoleContext';
       const has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true';
 =======
 <<<<<<< HEAD
-import React, { useEffect, useState } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useEffect, useState } from 'react',
 import React, { useEffect, useState } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 export default function OnboardingWizard() {;
@@ -174,21 +175,14 @@ export default function OnboardingWizard() {;
 =======
       }
     } catch {}
-<<<<<<< HEAD
     setOpen(false);  }        window.localStorage.setItem('zion_has_onboarded1')
       }
     } catch {}
     setOpen(false)
-=======
     setOpen(false);  }
 
   }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!open) return null;
 
   return (
@@ -312,6 +306,7 @@ export default function OnboardingWizard() {;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -497,10 +492,12 @@ if (return null) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -508,3 +505,5 @@ if (return null) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -9,6 +9,7 @@ import { useUser } from '../../providers/UserProvider';
 import { useToast } from '../ui/ToastProvider';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function OnboardingWizard() {;
 
@@ -23,21 +24,26 @@ export default function OnboardingWizard() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 export default function OnboardingWizard() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function OnboardingWizard() {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
@@ -276,7 +282,10 @@ import Link from 'next/link'
     if (isClient) {
       return [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser()
   const { addToast } = useToast()
@@ -302,16 +311,10 @@ const isClient = user?.role === 'client'
 =======
 
   const isClient = user?.role === 'client'
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const steps = useMemo(() => {
     if (isClient) {
       return [
-<<<<<<< HEAD
         {
           title: 'Ready to find top IT talent?'
           content: (
@@ -335,15 +338,12 @@ const isClient = user?.role === 'client'
           )
         }
         {
-<<<<<<< HEAD
           title: 'Invite or message talent'
           content: <p>Send invites or start a conversation to move fast.</p>
         }
-=======
           title: 'Invite or message talent',;
           content: <p>Send invites or start a conversation to move fast.</p>,;
         },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ];
     }
     return [
@@ -411,13 +411,10 @@ const isClient = user?.role === 'client'
       }
     ];
   }, [isClient, setUser]);
-<<<<<<< HEAD
   if (!user |user.onboardingCompleted) return null;
-=======
 
   if (!user || user.onboardingCompleted) return null;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className='mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40'>
       <div className='flex items-center justify-between'>
@@ -828,12 +825,12 @@ if (return null) {
     </div>
 );
 }
-=======
 
         )}
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -841,3 +838,5 @@ if (return null) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

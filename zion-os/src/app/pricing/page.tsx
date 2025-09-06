@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -272,6 +273,8 @@ interface PricingTier {
   cta_link: string;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useState } from "react";
 interface PricingTier {name: string;
@@ -695,7 +698,6 @@ function PricingPage() {
 ];
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"];
 export default function PricingPage() {const [selectedCategory, setSelectedCategory] = useState("All");
-=======
 "use client",;
 import { useState } from "react",;
 interface PricingTier {;
@@ -940,7 +942,6 @@ const servicePricing: ServicePricing[] = [;
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"],;
 export default function PricingPage() {;
   const [selectedCategory, setSelectedCategory] = useState("All");
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const filteredServices = selectedCategory === "All";
     ? servicePricing;
     : servicePricing.filter(service => service.category === selectedCategory);
@@ -980,12 +981,9 @@ export default function PricingPage() {;
 =======
 =======
               onClick={() => setSelectedCategory(category)}
-<<<<<<< HEAD
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === category;
-=======
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${;
                 selectedCategory === category;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   ? 'bg-blue-600 text-white';
                   : 'text-gray-300 hover:text-white hover:bg-zinc-700';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1052,12 +1050,9 @@ export default function PricingPage() {;
 =======
 =======
                   key={tierIndex}
-<<<<<<< HEAD
                   className={`relative border rounded-lg p-6 ${tier.popular;
-=======
                   className={`relative border rounded-lg p-6 ${;
                     tier.popular;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       ? 'border-blue-500 bg-blue-500/10';
                       : 'border-white/10';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1090,10 +1085,7 @@ export default function PricingPage() {;
 =======
                     </div>;
                   )}
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   <div className="text-center space-y-4">;
                     <h3 className="text-xl font-semibold">{tier.name}</h3>;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1134,12 +1126,9 @@ export default function PricingPage() {;
 =======
 =======
                       href={tier.ctaLink}
-<<<<<<< HEAD
                       className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${tier.popular;
-=======
                       className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${;
                         tier.popular;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           ? 'bg-blue-600 hover:bg-blue-700 text-white';
                           : 'bg-zinc-700 hover:bg-zinc-600 text-white';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

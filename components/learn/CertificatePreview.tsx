@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -206,6 +207,18 @@ export default function CertificatePreview({
 courseId
   userId = "demo-user"
 }: {
+=======
+import React from "react";
+
+import React from "react";
+export default function CertificatePreview({
+  courseId
+  userId = "demo-user"
+}: {
+  courseId,
+  userId = "demo-user",
+}: {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   courseId: string;
   userId?: string;
 }) {
@@ -227,8 +240,14 @@ courseId
         Download PDF
       </a>
     </div>
+<<<<<<< HEAD
 );
 
+=======
+  );
+);
+  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">
@@ -248,5 +267,9 @@ courseId
     </div>
   );
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

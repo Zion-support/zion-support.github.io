@@ -59,8 +59,6 @@ function AppHeader() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { useMessaging  } from '@/context/MessagingContext';
 import { MainNavigation  } from './MainNavigation';
@@ -71,7 +69,6 @@ import { MobileMenu  } from '@/components/header/MobileMenu';
 import { useIsMobile  } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 export function AppHeader() {
-=======
 import {useState} from 'react';
 import {useMessaging} from '@/context/MessagingContext';
 import {MainNavigation} from './MainNavigation';
@@ -82,7 +79,6 @@ import {MobileMenu} from '@/components/header/MobileMenu';
 import {useIsMobile} from '@/hooks/use-mobile';
 import {MobileBottomNav} from '@/components/header/MobileBottomNav';
 export function AppHeader() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
@@ -94,12 +90,14 @@ export function AppHeader() {;
     unreadCount = count
   } catch (error) {
     console.warn('Messaging context not available')
-<<<<<<< HEAD
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
@@ -119,6 +117,7 @@ export function AppHeader() {;
     unreadCount = count;
   } catch (error) {;
     console.warn('Messaging context not available');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -251,9 +250,10 @@ export function AppHeader() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">
@@ -298,6 +298,7 @@ export function AppHeader() {;
           </div>
         </div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -403,8 +404,9 @@ export function AppHeader() {;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>

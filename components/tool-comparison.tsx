@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -41,17 +42,22 @@ import Button from '../components / ui / Button';
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
-=======
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -61,6 +67,8 @@ import {
   Search;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Search
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Filter
@@ -118,9 +126,12 @@ import {
   Brain
   Globe
   Rocket;} from 'lucide-react';import {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Search,
   Filter,
   TrendingUp,
@@ -133,6 +144,7 @@ import {
   ExternalLink,
   Zap,
   Brain,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -150,13 +162,12 @@ Rocket,} from 'lucide-react';import {
   Users,
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Globe,
   Rocket,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   Globe,;
   Rocket,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Search;
   Filter
   TrendingUp
@@ -271,12 +282,9 @@ function ToolComparisonPage() {
       pros: [;
 =======
 
-<<<<<<< HEAD
 
 export default function ToolComparisonPage() {
-=======
 export default function ToolComparisonPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -345,6 +353,7 @@ export default function ToolComparisonPage() {;
       bestFor: 'Marketing teams, content creators, businesses'
       pros: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -365,6 +374,8 @@ function ToolComparisonPage() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Specialized for marketing'
         'Brand voice training'
         'SEO optimization'
@@ -389,9 +400,12 @@ function ToolComparisonPage() {
       rating: 4.8
       users: '2M+'
       bestFor: 'Businesses looking to automate workflows'
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Specialized for marketing',
         'Brand voice training',
         'SEO optimization',
@@ -748,12 +762,15 @@ best_for: 'Online businesses, SaaS companies, e - commerce',
       users: '10M+',
       bestFor: 'Sales teams, consultants, remote teams',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       pros: [
         'Easy to use'
         'Extensive integrations'
@@ -1604,10 +1621,7 @@ export default function ToolComparisonPage() {;
         return a.name.localeCompare(b.name);
       default: return 0
   });
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getPricingColor = (pricing: string) => {
     if (pricing.includes('Free')) return 'text-green-400';
     if (pricing.includes('$')) return 'text-blue-400';
@@ -1757,6 +1771,7 @@ export default function ToolComparisonPage() {;
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1776,6 +1791,9 @@ export default function ToolComparisonPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -1925,7 +1943,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             </div>
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>
-<<<<<<< HEAD
               {categories.map(category => (                <button            {/* Search */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="relative flex-1 max-w-md">
@@ -1959,8 +1976,11 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {categories.map(category => (                <button
 
               />
@@ -1994,11 +2014,14 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                 <button
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -2024,8 +2047,14 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+            {/* Sort */}
+            <div className='flex items-center space-x-2'>
+              <Filter className='w-5 h-5 text-gray-400' />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             {/* Sort */}
             <div className="flex items-center space-x-2">
@@ -2049,6 +2078,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               <Filter className='w-5 h-5 text-gray-400' />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2061,6 +2091,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -2458,11 +2490,9 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-<<<<<<< HEAD
           )}
         </div>
       </section>
-=======
 
             </div>
 
@@ -2470,25 +2500,13 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
         </div>
       </section>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-<<<<<<< HEAD
-=======
 
               Detailed Analysis
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -2723,14 +2741,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                     </ul>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className='flex items-center justify-between'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2779,6 +2790,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                   </span>
                   <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2792,22 +2804,27 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                 <div className="flex items-center justify-between">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     href={tool.website}                <div className="flex items-center justify-between">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
-=======
                     href={tool.website}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {tool.pricing}
                   </span>
                   <Button
                     href={tool.website}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2847,6 +2864,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 variant="outline"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     variant='outline'
                     size='sm'
                     className='group-hover:border-purple-500 group-hover:text-purple-400'
@@ -2859,6 +2878,7 @@ variant="outline"
                   >
                     Visit Website
                     <ExternalLink className="w-4 h-4 ml-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </Button>
                 </div>
@@ -2895,34 +2915,25 @@ variant="outline"
             >
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                   </Button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </Card>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2943,6 +2954,10 @@ variant="outline"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+            Need Help Choosing?
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
@@ -2991,6 +3006,7 @@ variant="outline"
         </div>
       </section>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -3559,22 +3575,23 @@ className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2
     </>);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

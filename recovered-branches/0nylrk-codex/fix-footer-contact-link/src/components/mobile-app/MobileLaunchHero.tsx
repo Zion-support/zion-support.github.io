@@ -1,14 +1,24 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/MobileLaunchHero.tsx
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, Smartphone} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {AppStoreButtons} from "./AppStoreButtons";
+import {Card, CardContent} from "@/components/ui/card";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, Smartphone } from "lucide-react",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -21,6 +31,13 @@ import { AppStoreButtons } from "./AppStoreButtons";
 import { Card, CardContent } from "@/components/ui/card";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { AppStoreButtons } from "./AppStoreButtons";
+import { Card, CardContent } from "@/components/ui/card";
+import { AppStoreButtons } from "./AppStoreButtons",
+import { Card, CardContent } from "@/components/ui/card",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
@@ -92,6 +109,7 @@ export const MobileLaunchHero: React.FC = () => {
             <div className="relative">
               {/* Phone mockup with glow effect */}
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,10 +122,14 @@ export const MobileLaunchHero: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -117,6 +139,20 @@ export const MobileLaunchHero: React.FC = () => {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                    {/* In production, replace with actual app screenshot */}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, Smartphone } from "lucide-react",;
@@ -288,6 +324,7 @@ export const MobileLaunchHero: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/MobileLaunchHero.tsx
     </section>;
+<<<<<<< HEAD
 
   );
 };
@@ -333,3 +370,7 @@ export const MobileLaunchHero: React.FC = () => {
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

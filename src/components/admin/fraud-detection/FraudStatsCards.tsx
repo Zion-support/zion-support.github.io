@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/fraud-detection/FraudStatsCards.tsx
 
 =======
@@ -7,48 +8,56 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 import React from "react"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats } from "@/types/fraud"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface FraudStatsCardsProps {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {
   stats: FraudStats
 }
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> interface FraudStatsCardsProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-import { FraudStats } from "@/types/fraud",
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { FraudStats } from "@/types/fraud",
 interface FraudStatsCardsProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   stats: FraudStats
 }
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -58,6 +67,8 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -70,6 +81,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
       </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <Card>
@@ -79,12 +91,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         <CardHeader className="pb-2 flex flex-row items-center justify-between">
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -97,6 +106,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <Card>
@@ -106,12 +116,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         <CardHeader className="pb-2 flex flex-row items-center justify-between">
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -124,6 +131,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <Card>
@@ -133,12 +141,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         <CardHeader className="pb-2 flex flex-row items-center justify-between">
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -151,6 +156,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <Card>
@@ -160,12 +166,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         <CardHeader className="pb-2">
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       <Card>
         <CardHeader className="pb-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -175,6 +178,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <Card>
@@ -184,12 +188,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         <CardHeader className="pb-2">
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       <Card>
         <CardHeader className="pb-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -200,6 +201,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   );
 };
@@ -209,20 +211,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
 ";
-=======
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 "
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
@@ -465,8 +469,11 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

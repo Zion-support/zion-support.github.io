@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Note: This is a Vite project, not Next.js
 // Using a generic request type instead of NextApiRequest
 type ApiRequest = {
@@ -14,13 +15,12 @@ export interface Session {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-import type { NextApiRequest } from 'next';
-<<<<<<< HEAD
-export interface Session {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import type { NextApiRequest } from 'next';
+export interface Session {
 
 export interface Session {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   email: string;
@@ -228,29 +228,27 @@ export const is_admin = () =>: any {
 
 =======
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
-<<<<<<< HEAD
   // Check for internal agent headers or IPs
   const userAgent = req.headers['user-agent'] |'';
-=======
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
 export const isAdmin = () => {
   // Placeholder implementation;
   return true;
-<<<<<<< HEAD
 }
-=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-};
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -260,3 +258,5 @@ export const isAdmin = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

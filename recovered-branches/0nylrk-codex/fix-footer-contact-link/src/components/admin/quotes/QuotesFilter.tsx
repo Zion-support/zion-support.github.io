@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesFilter.tsx
@@ -6,6 +7,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {Calendar, RefreshCw} from "@/components/icons";
 import {Card, CardContent} from "@/components/ui/card";
@@ -17,9 +20,12 @@ import {Calendar, as, CalendarComponent} from "@/components/ui/calendar";
 import {format} from "date-fns";
 import type { DateRange } from "@/types/dateRange";
 import type { QuoteStatus } from "@/types/quotes";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Calendar, RefreshCw } from "@/components/icons",
 import { Card, CardContent } from "@/components/ui/card",
@@ -28,6 +34,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 import { Button } from "@/components/ui/button",
 import { Calendar as CalendarComponent } from "@/components/ui/calendar",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -38,19 +45,23 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format } from "date-fns";
 import type { DateRange } from "@/types/dateRange";
 import type { QuoteStatus } from "@/types/quotes";
-=======
 import { format } from "date-fns",
 import type { DateRange } from "@/types/dateRange",
 import type { QuoteStatus } from "@/types/quotes",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface QuotesFilterProps {
 
   searchQuery: string
@@ -64,6 +75,7 @@ interface QuotesFilterProps {
 
   onReset: () => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -145,8 +157,9 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   searchQuery;
   setSearchQuery;
@@ -155,10 +168,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   archiveFilter;
   setArchiveFilter;
   dateRange;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
-<<<<<<< HEAD
   searchQuery;
   setSearchQuery;
   statusFilter;
@@ -168,7 +178,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   dateRange;
 
   setDateRange
-=======
   searchQuery,
   setSearchQuery,
   statusFilter,
@@ -176,9 +185,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   archiveFilter,
   setArchiveFilter,
   dateRange,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   setDateRange,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onReset
 }) => {
   return (
@@ -250,9 +257,12 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                 <CalendarComponent
                   initialFocus
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   mode="range"
 ========
               onChange={(e) => setSearchQuery(e && e.target.value)}
@@ -475,11 +485,14 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
                 <CalendarComponent
                   initialFocus
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   mode="range"
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
@@ -506,6 +519,7 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -657,15 +671,16 @@ onReset
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
-=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 };
-=======
 },
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

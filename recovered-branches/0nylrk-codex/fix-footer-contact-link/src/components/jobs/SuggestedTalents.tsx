@@ -1,25 +1,32 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/SuggestedTalents.tsx
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EmptyMatchesCard } from "./EmptyMatchesCard";
 import { JobMatchCard } from "./JobMatchCard";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useEffect, useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface SuggestedTalentsProps {
   jobId: string,
@@ -29,37 +36,34 @@ interface SuggestedTalentsProps {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { EmptyMatchesCard } from "./EmptyMatchesCard";
 import { JobMatchCard } from "./JobMatchCard";
 interface SuggestedTalentsProps {
   jobId: string;
-=======
 import { EmptyMatchesCard } from "./EmptyMatchesCard",
 import { JobMatchCard } from "./JobMatchCard",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SuggestedTalentsProps {
   jobId: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   jobTitle?: string
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
   const [talents, setTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [talents, setTalents] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
   const [isProcessing, setIsProcessing] = useState(false),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -111,13 +115,14 @@ function SuggestedTalents() {
           talent_profile: talent_id (
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const fetchSuggestedTalents = async () => {
     setIsLoading(true),
     try {
       const { data, error } = await supabase
         .from("suggested_talents")
-<<<<<<< HEAD
         .select(
           `
           *;
@@ -201,8 +206,11 @@ interface SuggestedTalentsProps {
         .eq("job_id", jobId);
       if (error) throw error;
       setTalents(data |[]);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .select(`
           *,
           talent_profile:talent_id(
@@ -226,6 +234,7 @@ interface SuggestedTalentsProps {
       if (error) throw error,
       setTalents(data || [])
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     } catch (error) {
@@ -239,15 +248,17 @@ interface SuggestedTalentsProps {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } catch (error) {
       console.error("Error fetching suggested talents:", error),
       toast({
-<<<<<<< HEAD
         title: "Error"
         description:
           "Failed to load suggested talents. Please try again later."
         variant: "destructive"
       });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
         title: "Error",
@@ -275,30 +286,35 @@ interface SuggestedTalentsProps {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+        title: "Error",
+        description: "Failed to load suggested talents. Please try again later.",
+        variant: "destructive"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
     // // // console.log("View talent profile:", talentId),
     toast({
-<<<<<<< HEAD
       title: "View Profile"
       description: `Navigating to talent profile: ${talentId}`
     });
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "View Profile",
       description: `Navigating to talent profile: ${talentId}`})
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -315,25 +331,23 @@ interface SuggestedTalentsProps {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleInvite = (talentId: string) => {
     // Implement logic to invite talent
     // // // console.log("Invite talent:", talentId),
     toast({
-<<<<<<< HEAD
       title: "Invite Talent"
       description: `Inviting talent: ${talentId}`
     });
   }
-=======
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`})
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleRefresh = () => {
     setIsProcessing(true),
     fetchSuggestedTalents().finally(() => {
-<<<<<<< HEAD
       setIsProcessing(false);
     });
   }
@@ -356,16 +370,12 @@ interface SuggestedTalentsProps {
       skills: talent.talent_profile?.skills |[]
     }
   });
-=======
       setIsProcessing(false)
     })
   },
 
   useEffect(() => {
     if (jobId) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       fetchSuggestedTalents();
     }
   }, [jobId]);
@@ -384,9 +394,12 @@ interface SuggestedTalentsProps {
       skills: talent.talent_profile?.skills || [],
     };
   });
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       fetchSuggestedTalents()
 import { useEffect, useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -477,6 +490,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
       matchPercent: talent.match_score || 85;
       skills: talent.talent_profile?.skills || []}
   }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ========
@@ -638,6 +652,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -645,6 +661,7 @@ if ( {) {
       <CardHeader>
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>
       </CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -665,6 +682,9 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
@@ -878,21 +898,28 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
           </div>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardContent>
     </Card>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardContent>;
     </Card>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -994,3 +1021,5 @@ const handleViewProfile = (talentId: string) => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

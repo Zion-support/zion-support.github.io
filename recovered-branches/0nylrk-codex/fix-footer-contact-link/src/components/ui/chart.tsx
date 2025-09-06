@@ -12,17 +12,20 @@ import * as RechartsPrimitive from "recharts"
 import * as React from "react"
 import type { CSSProperties } from "react"
 import * as RechartsPrimitive from "recharts"
-<<<<<<< HEAD
 import {useReactId} from "@/hooks/useReactId"
 import {cn} from "@/lib/utils"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
 export type ChartConfig = Record<;
   string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -31,10 +34,13 @@ export type ChartConfig = Record<;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -47,6 +53,8 @@ import { cn } from "@/lib/utils"
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Format: { THEME_NAME: CSS_SELECTOR }
 
 const THEMES = { light: "", dark: ".dark" } as const
@@ -57,8 +65,11 @@ export type ChartConfig = Record<
 
 =======
   string,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     label?: React.ReactNode
     icon?: React.ComponentType
@@ -75,6 +86,7 @@ const ChartContext = React.createContext<ChartContextProps>({
 function useChart(): ChartContextProps {
   return React.useContext(ChartContext)
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -212,8 +224,9 @@ const ChartContainer = React.forwardRef<;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const ChartContainer = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div"> & {
@@ -490,7 +503,6 @@ const ChartTooltipContent = React.forwardRef<
 >(
   (
     {
-<<<<<<< HEAD
       active;
       payload;
       className;
@@ -504,8 +516,11 @@ const ChartTooltipContent = React.forwardRef<
       color;
       nameKey;
       labelKey}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       active,
       payload,
       className,
@@ -520,12 +535,15 @@ const ChartTooltipContent = React.forwardRef<
       nameKey,
       labelKey},
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ref
   ) => {
     const { config } = useChart()
@@ -554,6 +572,7 @@ const ChartTooltipContent = React.forwardRef<
       if (!value) {
         return null
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -992,8 +1011,9 @@ if (labelFormatter) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return <div className={cn("font-medium", labelClassName)}>{value}</div>
     }, [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1126,15 +1146,8 @@ className={cn(
                           )}
                             style={
                               {
-<<<<<<< HEAD
                                 "--color-bg": indicatorColor;
-=======
                                 "--color-bg": indicatorColor,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                 "--color-border": indicatorColor} as CSSProperties
                             }
                         />
@@ -1155,15 +1168,8 @@ className={cn(
                       {item.value && (
                         <span className="font-mono font-medium tabular-nums text-foreground">
                           {item.value.toLocaleString()}
-<<<<<<< HEAD
                         </span>
-=======
                         </span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       )}
                     </div>
                   </>
@@ -1189,6 +1195,7 @@ const ChartLegendContent = React.forwardRef<
     }
 >(
   (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1290,11 +1297,15 @@ const ChartLegendContent = React.forward_ref<;
 
 =======
 <<<<<<< HEAD
-    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey }
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ref
   ) => {
     const { config } = useChart()
@@ -1427,10 +1438,7 @@ const ChartLegendContent = React.forwardRef<;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/chart.tsx
 =======
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
       <div
         ref={ref}
@@ -1499,6 +1507,7 @@ function getPayloadConfigFromPayload(
       key as keyof typeof payloadPayload
     ] as string
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1637,13 +1646,13 @@ function getPayloadConfigFromPayload(): any (;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]
 }
-<<<<<<< HEAD
 export {
   ChartContainer;
   ChartTooltip;
@@ -1652,13 +1661,13 @@ export {
   ChartLegendContent;
   ChartStyle}
 
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export {;
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1670,6 +1679,8 @@ export {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return configLabelKey in config;
@@ -1756,6 +1767,7 @@ export {;
   ChartTooltip,;
   ChartTooltipContent,;
 <<<<<<< HEAD
+<<<<<<< HEAD
   ChartLegend,;
   ChartLegendContent,;
   ChartStyle}}`) .join ("\n") 
@@ -1818,9 +1830,14 @@ if (!payload?.length) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ChartLegend;
   ChartLegendContent;
   ChartStyle}
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

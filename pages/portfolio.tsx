@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -131,17 +132,14 @@ import { motion } from 'framer-motion';
 import {
 =======
 <<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
   Rocket
   Brain
   Atom
@@ -288,9 +286,12 @@ export default function PortfolioPage() {
       : projects.filter(project => project.category === selectedCategory);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Rocket,
   Brain,
   Atom,
@@ -417,9 +418,7 @@ import { motion } from 'framer-motion';
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -428,10 +427,6 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function PortfolioPage() {
   const projects = [
     {
@@ -498,12 +493,10 @@ export default function PortfolioPage() {
       results: ["80% faster deployment", "Customer satisfaction increased by 45%", "Operational costs reduced by 30%"],
       image: "/api/placeholder/600/400",
       icon: Rocket,
-<<<<<<< HEAD
       color: 'from-yellow-500 to-orange-500',
     },;
   ];
 
-=======
       color: "from-yellow-500 to-orange-500"
       } catch (error) {
     console.error("Error:", error);
@@ -511,7 +504,6 @@ export default function PortfolioPage() {
   }
 }
   ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const stats = [
     { number: "500+", label: "Projects Delivered", icon: Rocket },
     { number: "50+", label: "Enterprise Clients", icon: Users },
@@ -527,12 +519,10 @@ export default function PortfolioPage() {
   const filteredProjects = selectedCategory === "All"
     ? projects
     : projects.filter(project => project.category === selectedCategory),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Our Work - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions."
@@ -551,7 +541,6 @@ export default function PortfolioPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'
-=======
         <meta name="description" content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions." />
         <meta property="og:title" content="Our Work - Zion Tech Group" />
         <meta property="og:description" content="Explore our portfolio of innovative technology projects and solutions." />
@@ -583,11 +572,14 @@ export default function PortfolioPage() {
 }
             className="mb-8"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Work
@@ -663,6 +655,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -677,6 +670,8 @@ export default function PortfolioPage() {
             {stats.map((stat, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -692,7 +687,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 className="text-center"
 =======
                 className='text-center'
-=======
       {/* Stats Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -905,16 +899,20 @@ export default function PortfolioPage(req, res) {
 }
                 className="text-center"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -966,6 +964,8 @@ export default function PortfolioPage(req, res) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -1185,7 +1185,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 =======
 =======
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
-=======
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
@@ -1277,11 +1276,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -1296,7 +1290,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 }
                     </span>
                   </div>
-<<<<<<< HEAD
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {project.title}
                   </h3>
@@ -1335,7 +1328,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                       Client: {project.client}
                     </span>
                     <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105'>                      View Details
-=======
                   <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-white/70 mb-6">{project.description}</p>
                   <div className="mb-6">
@@ -1382,6 +1374,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       View Details
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1395,10 +1388,13 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </button>
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1407,6 +1403,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     </ul>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         </div>
@@ -1456,7 +1454,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1495,6 +1492,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1507,6 +1505,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1615,14 +1615,10 @@ Start Your Project
 =======
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 )
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) )
-=======
 ),
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div> </section> key= {
   category
 }onClick= {
@@ -1971,7 +1967,6 @@ Start Your Project
 =======
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
-=======
   )
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
@@ -2037,6 +2032,7 @@ Start Your Project
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2052,3 +2048,5 @@ Start Your Project
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

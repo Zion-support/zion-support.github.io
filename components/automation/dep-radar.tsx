@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
   outdated.map (o => (</tr>) )
@@ -62,18 +62,17 @@ export async function getServerSideProps() {;
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
   outdated.map (o => (</tr>) )
 }</tbody> </table> </div>)
 }</div>) import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' }
 export async function getServerSideProps() {
-=======
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
 export async function getServerSideProps() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const file = path.join(process.cwd(), 'datadep-radar.json');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   let outdated: Outdated[] = [];  let generatedAt = '';
@@ -98,7 +97,6 @@ function getServerSideProps() {
 =======
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
-<<<<<<< HEAD
     outdated = json.outdated |[];
     generatedAt = json.generatedAt |''
 
@@ -112,6 +110,7 @@ function getServerSideProps() {
 
 
 }
+<<<<<<< HEAD
 =======
     </div>;
   );
@@ -129,6 +128,15 @@ export default /**
  * DepRadarPage - Function description
  */
 function DepRadarPage() {
+=======
+    outdated = json.outdated || [];
+    generatedAt = json.generatedAt || ''
+  } catch {}
+  return { props: { outdated, generatedAt } }
+}
+
+export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space - y-6">;
       <h1 className="text - 2xl font - semibold">AI Automation: Dependency Radar</h1>;
@@ -160,6 +168,7 @@ function DepRadarPage() {
           </table>
         </div>
       )}
+<<<<<<< HEAD
 
 );
 
@@ -267,17 +276,19 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-    </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-);
 =======
     </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    </div>;
+);
+    </div>
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
-=======
   );
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

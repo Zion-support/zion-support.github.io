@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD:netlify/functions/deps-auto-upgrader.js
 =======
 <<<<<<< HEAD:backup-problematic-files/netlify/functions/deps-auto-upgrader.js
+=======
+:netlify/functions/deps-auto-upgrader.js
+:backup-problematic-files/netlify/functions/deps-auto-upgrader.js
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const path = require('path'),;
 const { spawnSync } = require('child_process'),;
 function runNode(relPath, args = []) {;
@@ -28,6 +33,7 @@ exports.handler = async () => {;
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),;
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
 },;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/deps-auto-upgrader.js
@@ -35,6 +41,10 @@ exports.handler = async () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/deps-auto-upgrader.js
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/netlify/functions/deps-auto-upgrader.js
+:backup-problematic-files/netlify/functions/deps-auto-upgrader.js
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -71,9 +81,13 @@ exports.handler = async () => {
   }
 };function runNode(relPath, args = []) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD:netlify/functions/deps-auto-upgrader.js
+=======
+:netlify/functions/deps-auto-upgrader.js
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const abs = path.resolve(__dirname, '....', relPath)
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
   return { status: res.status |0, stdout: res.stdout |'', stderr: res.stderr |'' }
@@ -94,8 +108,11 @@ exports.handler = async () => {
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
@@ -120,6 +137,7 @@ exports.handler = async () => {
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -137,3 +155,12 @@ exports.handler = async () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/deps-auto-upgrader.js
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+main:netlify/functions/deps-auto-upgrader.js
+:backup-problematic-files/netlify/functions/deps-auto-upgrader.js
+:netlify/functions/deps-auto-upgrader.js
+
+}
+main:netlify/functions/deps-auto-upgrader.js
+:backup-problematic-files/netlify/functions/deps-auto-upgrader.js
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

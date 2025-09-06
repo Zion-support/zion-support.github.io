@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -70,16 +71,15 @@ import {;
 import { 
 =======
 <<<<<<< HEAD
-import React, { useState } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState } from 'react',
 import React, { useState } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Check
   Zap
   Shield
@@ -111,6 +111,7 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
 =======
 const contactInfo = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -118,12 +119,13 @@ const contactInfo = {
 };
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
-=======
   Check,
   Zap,
   Shield,
@@ -147,18 +149,13 @@ import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1
@@ -247,13 +244,12 @@ const serviceCategories = [
     description: 'Innovative business solutions for modern enterprises'
   }
 ];
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const stats = [
   {
     number: '25+'
@@ -282,6 +278,7 @@ const stats = [
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' }
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' }
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ];
@@ -304,11 +301,11 @@ export default function CuttingEdgePricing2025() {;
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-export default function CuttingEdgePricing2025() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function CuttingEdgePricing2025() {
 
 export default function CuttingEdgePricing2025() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -460,7 +457,10 @@ export default function CuttingEdgePricing2025() {;
   const filteredServices = selectedCategory === 'all'
     ? allServices
     : allServices.filter(service => service.category === selectedCategory);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -482,6 +482,20 @@ export default function CuttingEdgePricing2025() {;
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
+=======
+        duration: 0.5
+      }
+    },  };        duration: 0.5
+      }
+    }
+  }
+        duration: 0.5,
+      },
+    },  };
+
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <>
@@ -542,6 +556,7 @@ export default function CuttingEdgePricing2025() {;
                   Pricing 2025
                 </span>
               </motion.h1>
+<<<<<<< HEAD
 
 =======
 
@@ -997,12 +1012,9 @@ className="text-center"
               </motion.h1>
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1011,16 +1023,12 @@ className="text-center"
                   Pricing 2025
                 </span>
               </motion.h1>
-<<<<<<< HEAD
               <motion.p
-=======
               <motion.p 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-<<<<<<< HEAD
                 Experience revolutionary technology at competitive prices. Our
                 cutting-edge services are designed to give you a competitive
                 advantage while maintaining affordability and value.
@@ -1034,6 +1042,7 @@ className="text-center"
               {/* Hero Stats */}
               <motion&& motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1053,6 +1062,11 @@ className="text-center"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+                initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
@@ -1075,6 +1089,7 @@ className="text-center"
                     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 ))}
               </motion.div>
@@ -1094,6 +1109,8 @@ className="text-center"
                 ))}
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>                  <div key={index} className="text-center">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <div className="flex justify-center mb-2">
@@ -1103,6 +1120,7 @@ className="text-center"
                     </div>
                     <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-sm text-white/70">{stat.label}</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </div>
                 ))}
@@ -1131,33 +1149,32 @@ className="text-center"
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
 
                   </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ))}
               </motion.div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Pricing Tiers Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1179,6 +1196,9 @@ className="text-center"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1494,6 +1514,7 @@ className="text-center"
                     </div>
                   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1507,9 +1528,9 @@ className="text-center"
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
                   <div
                     className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                       tier.popular
@@ -1559,6 +1580,7 @@ className="text-center"
                       ))}
                     </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1603,14 +1625,15 @@ className="text-center"
 =======
 =======
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                         </li>
 
                       ))}
                     </ul>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1618,6 +1641,8 @@ className="text-center"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <a
                       href={tier && tier.ctaLink}
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
@@ -1660,6 +1685,7 @@ className="text-center"
                       }`}
                     >
                       {tier.cta}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1705,15 +1731,11 @@ className="text-center"
 
 =======
 <<<<<<< HEAD
-                      <ArrowRight className='ml-2 w-4 h-4' />                    </a>                      <ArrowRight className="ml-2 w-4 h-4" />
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                      <ArrowRight className='ml-2 w-4 h-4' />                    </a>                      <ArrowRight className="ml-2 w-4 h-4" />
                       <ArrowRight className='ml-2 w-4 h-4' />                    </a>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </a>
                   </div>
                 </motion.div>
@@ -1721,19 +1743,21 @@ className="text-center"
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Service Categories Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1755,6 +1779,9 @@ className="text-center"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1875,15 +1902,16 @@ className="text-center"
             <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <button
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
                   selectedCategory === 'all';
@@ -1897,6 +1925,7 @@ className="text-center"
               </button>
               {serviceCategories.map(category => (                <button              {serviceCategories.map((category) => (
                 <button
+<<<<<<< HEAD
 
 =======
 
@@ -1931,6 +1960,9 @@ className="text-center"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -1958,9 +1990,8 @@ className="text-center"
             </div>;
 =======
             </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1978,6 +2009,8 @@ className="text-center"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Services Grid */}
             <motion&& motion.div
               variants={containerVariants}
@@ -2183,6 +2216,7 @@ className="text-center"
                         <span
                           key={tagIndex}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2190,6 +2224,8 @@ className="text-center"
                     <div className="flex flex-wrap gap-2 mb-4">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >                    <div className="flex flex-wrap gap-2 mb-4">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2197,6 +2233,7 @@ className="text-center"
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
+<<<<<<< HEAD
 <<<<<<< HEAD
                         >
 <<<<<<< HEAD
@@ -2236,16 +2273,21 @@ className="text-center"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
                         >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           {tag}
                         </span>;
                       ))}
@@ -2289,24 +2331,29 @@ className="text-center"
                     </div>
 =======
                     </div>
-<<<<<<< HEAD
                     {/* Market Info */}
 <<<<<<< HEAD
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
 =======
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <span>Market: {service.marketSize}</span>
 <<<<<<< HEAD
 
@@ -2409,14 +2456,7 @@ className="text-center"
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
 <<<<<<< HEAD
             </motion && motion.div>;
@@ -2432,19 +2472,21 @@ className="text-center"
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2461,12 +2503,9 @@ className="text-center"
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2579,6 +2618,7 @@ className="text-center"
         </section>
       </Layout>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2804,18 +2844,18 @@ href={`mailto:${contactInfo && contactInfo.email}`}
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

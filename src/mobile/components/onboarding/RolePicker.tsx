@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -22,8 +19,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
       </p>
       <div className='space-y-3 mt-6'>
         <Card
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 <<<<<<< HEAD
 =======
@@ -56,6 +51,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           className={`cursor-pointer transition-all ${
@@ -63,6 +59,8 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type UserRole = any;
   return (
     <div className='space-y-4 px-4'>
@@ -72,6 +70,7 @@ type UserRole = any;
       </p>
       <div className='space-y-3 mt-6'>
         <Card
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>           className={`cursor-pointer transition-all ${
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -105,6 +104,8 @@ type UserRole = any;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type UserRole = "talent" | "client" | null,
 
 interface RolePickerProps {
@@ -126,11 +127,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 
       <div className="space-y-3 mt-6">
         <Card 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent' 
               ? "border-primary bg-primary/5" 
@@ -153,16 +149,9 @@ export function RolePicker({ onSelect }: RolePickerProps) {
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
         <Card
-=======
 
         <Card 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           className={`cursor-pointer transition-all ${
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             selectedRole === 'client' 
@@ -183,10 +172,13 @@ export function RolePicker({ onSelect }: RolePickerProps) {
               {selectedRole === 'client' && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Check className='h-5 w-5 text-primary' />
               )}
             </div>
@@ -198,10 +190,13 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Check className="h-5 w-5 text-primary" />
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -376,8 +371,11 @@ function RolePicker() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

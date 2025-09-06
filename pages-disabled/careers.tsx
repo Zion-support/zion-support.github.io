@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,11 +32,15 @@ import React from 'react';
 =======
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Users, Rocket, Brain, Atom, Shield, Cloud;
@@ -83,13 +88,10 @@ export default function CareersPage() {
 
   const openPositions = [
     {
-<<<<<<< HEAD
       title: "Senior AI Engineer"
       department: "AI & Machine Learning"
-=======
       title: "Senior AI Engineer",
       department: "AI & Machine Learning",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       location: "San Francisco, CA / Remote";
       type: "Full-time"
       experience: "5+ years"
@@ -547,9 +549,8 @@ import React from 'react';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -567,6 +568,8 @@ import React from 'react';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -664,6 +667,7 @@ import React from 'react';
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* CTA Section */}
       <section className="py-20 px-6">
@@ -819,12 +823,9 @@ import React from 'react';
       </section>
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -1050,10 +1051,11 @@ import React from 'react';
       <EnhancedFooter />
     </div>
   )
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

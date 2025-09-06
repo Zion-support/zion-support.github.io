@@ -10,17 +10,19 @@ import { Button } from "@/components/ui/button",
 
 =======
 
-<<<<<<< HEAD
 import React, { useState } from "react";
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Button} from "@/components/ui/button";
 import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -36,6 +38,10 @@ import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { 
   getTalentRateSuggestion;
   PricingSuggestion;
@@ -43,6 +49,7 @@ import {
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -129,6 +136,8 @@ import { Sparkles } from "lucide-react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
 interface TalentRateRecommenderProps {
@@ -163,20 +172,23 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
         yearsExperience
         location}
       const result = await getTalentRateSuggestion(params);
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number) => void,
   rateType: "hourly" | "fixed"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -187,6 +199,8 @@ interface TalentRateRecommenderProps {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -205,6 +219,7 @@ interface TalentRateRecommenderProps {;
   onSuggestionApplied: (value: number) => void,;
   rateType: "hourly" | "fixed";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -215,10 +230,11 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
-<<<<<<< HEAD
   skills;
   yearsExperience;
   location;
@@ -231,8 +247,11 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const generateSuggestion = async () => {
     if (skills.length === 0 || yearsExperience <= 0) {
       return
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   skills,;
   yearsExperience,;
   location,;
@@ -245,6 +264,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
     if (skills.length === 0 || yearsExperience <= 0) {;
       return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -253,6 +273,8 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 
     setIsLoading(true),
@@ -264,15 +286,19 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
       const result = await getTalentRateSuggestion(params),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating rate suggestion:", error)
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -283,6 +309,8 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   const handleApplySuggestion = () => {
@@ -302,13 +330,14 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         })
       }
     }
-<<<<<<< HEAD
   }
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     setIsLoading(true),;
     try {;
@@ -379,12 +408,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         {!suggestion && !isLoading ? (;
 =======
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <div>
@@ -423,6 +447,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
             rateType={rateType}
           />
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -668,22 +693,19 @@ return (<div className="space-y-4" > <div> {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/TalentRateRecommender.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -33,6 +34,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {;
@@ -52,6 +56,7 @@ export type AIAssistantProps = {;
 <<<<<<< HEAD
 }
 export default function AIAssistant({
+<<<<<<< HEAD
 
 =======
 
@@ -61,6 +66,15 @@ export default function AIAssistant({
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+=======
+  buttonLabel = "Generate with AI"
+  title = "AI Writing Assistant"
+  defaultPrompt
+  systemPrompt
+  onAccept
+  authorizationToken
+}: AIAssistantProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
   defaultPrompt,
@@ -68,6 +82,7 @@ export default function AIAssistant({
   onAccept,
   authorizationToken,
 }: AIAssistantProps) {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -83,6 +98,8 @@ authorizationToken
 }: AIAssistantProps) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
@@ -265,8 +282,13 @@ if ( {) {
     try {
       await navigator.clipboard.writeText(output)
     } catch {}
+<<<<<<< HEAD
 }, [output]);
   const onOpen = useCallback(() => {;
+=======
+  }, [output]);
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const onOpen = useCallback(() => {
 
     setIsOpen(true);
@@ -535,6 +557,7 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
       )}
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 
 <<<<<<< HEAD
@@ -577,3 +600,8 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -46,9 +46,13 @@ import { motion } from 'framer-motion';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
 
 =======
+=======
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Brain
   Star
   Users
@@ -74,7 +78,6 @@ import {
   MapPin
   Globe as GlobeIcon;} from 'lucide-react';import {
   Brain, Star, Users, TrendingUp, Zap, Shield
-=======
   Brain,
   Star,
   Users,
@@ -100,8 +103,11 @@ import {
   MapPin,;
   Globe as GlobeIcon,;} from 'lucide-react';import { 
   Brain, Star, Users, TrendingUp, Zap, Shield, ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   CheckCircle, Clock, Award, Target, Globe, Sparkles;
   Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
@@ -288,6 +294,7 @@ const testimonials = [
     rating: 5
     avatar: '👩‍⚕️'
   },  {
+<<<<<<< HEAD
 
 export default function AIConsciousnessEvolution2025() {
 =======
@@ -451,6 +458,8 @@ content:;
     avatar: '👩‍⚕️';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: 'Michael Rodriguez'
     role: 'CEO'
     company: 'InnovateTech Solutions',    content: 'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.'
@@ -483,6 +492,7 @@ content:;
     rating: 5,
     avatar: '👩‍🔬';
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 const testimonials = [;
   {;
@@ -528,6 +538,8 @@ const testimonials = [;
 export default function AIConsciousnessEvolution2025() {;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: 'Michael Rodriguez',
     role: 'CEO',
     company: 'InnovateTech Solutions',
@@ -541,11 +553,8 @@ export default function AIConsciousnessEvolution2025() {;
     name: 'Dr. Emily Watson',
     role: 'Research Director',
     company: 'Consciousness Research Institute',
-<<<<<<< HEAD
 
 ];
-=======
-<<<<<<< HEAD
     content:
       "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.",
     rating: 5,
@@ -554,13 +563,9 @@ export default function AIConsciousnessEvolution2025() {;
     rating: 5,
     avatar: '👩‍🔬'
   }
-=======
 
 ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AIConsciousnessEvolution2025() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
@@ -609,6 +614,7 @@ function AIConsciousnessEvolution2025() {
               key={i}
               className='absolute w-2 h-2 bg-purple-400 rounded-full opacity-30'
               animate={{
+<<<<<<< HEAD
 
 =======
         <div className='absolute inset-0 overflow-hidden'>;
@@ -658,16 +664,20 @@ function AIConsciousnessEvolution2025() {
                 opacity: [0.3, 0.8, 0.3],
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 x: [0, 100, 0]
                 y: [0, -100, 0]
                 opacity: [0.3, 0.8, 0.3]
-=======
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0.3, 0.8, 0.3],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               }}              transition={{
                 duration: 8 + i * 2
                 repeat: Infinity
@@ -687,6 +697,7 @@ function AIConsciousnessEvolution2025() {
         </div>
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <motion.div
+<<<<<<< HEAD
 
 =======
 
@@ -773,6 +784,9 @@ top: `${Math.random() * 100}%`}}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}>;
@@ -901,15 +915,8 @@ top: `${Math.random() * 100}%`}}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6'
-<<<<<<< HEAD
-=======
 
             >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Sparkles className='w-4 h-4 mr-2' />
               Revolutionary AI Technology
             </motion.div>
@@ -1006,6 +1013,7 @@ top: `${Math.random() * 100}%`}}
 <<<<<<< HEAD
                   transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
                   className='text-center'
+<<<<<<< HEAD
 
 =======
 
@@ -1042,12 +1050,9 @@ top: `${Math.random() * 100}%`}}
                   className='text-center'
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {stat.icon}
@@ -1055,7 +1060,6 @@ top: `${Math.random() * 100}%`}}
                   <div className='text-3xl font-bold text-white mb-1'>
                     {stat.value}
                   </div>
-<<<<<<< HEAD
                   <div className='text-sm text-purple-300'>{stat.label}</div>                </motion.div>                >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400">
@@ -1071,7 +1075,6 @@ top: `${Math.random() * 100}%`}}
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
 =======
             </div>
-=======
                   <div className='text-sm text-purple-300'>{stat.label}</div>                </motion.div>
 
                 </motion.div>
@@ -1080,16 +1083,20 @@ top: `${Math.random() * 100}%`}}
             </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1110,10 +1117,12 @@ top: `${Math.random() * 100}%`}}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'              >            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'              >            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'              >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1121,6 +1130,8 @@ top: `${Math.random() * 100}%`}}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -1252,6 +1263,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}
           <motion.div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1271,6 +1283,9 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1288,15 +1303,16 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}
           >
 =======
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Revolutionary Features for
@@ -1376,15 +1392,16 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}
               >
 =======
                 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
                   <Brain className='w-8 h-8 text-purple-400' />
@@ -1429,7 +1446,6 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}
                 </h3>
                 <p className='text-gray-400'>
                   Advanced AI algorithms guide you through personalized
-<<<<<<< HEAD
                   consciousness development exercises.                </p>              >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -1441,16 +1457,10 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}
                 <p className="text-gray-400">
                   Advanced AI algorithms guide you through personalized consciousness development exercises.
                 </p>
-=======
                   consciousness development exercises.                </p>
 
                 </p>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </motion.div>
             ))}
 <<<<<<< HEAD
@@ -1468,19 +1478,21 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1502,6 +1514,9 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1519,15 +1534,16 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}
           >
 =======
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               How AI Consciousness Evolution
@@ -1846,15 +1862,10 @@ description:;
               >
 =======
               {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 step: '01'
                 title: 'AI Assessment'
-=======
                 step: '01',
                 title: 'AI Assessment',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 description:
                   'Our AI analyzes your current consciousness level and creates a personalized development plan.'
                 icon: <Brain className='w-12 h-12' />
@@ -1873,35 +1884,26 @@ description:;
                   'Real-time feedback and adaptation ensure continuous growth and development.'
                 icon: <TrendingUp className='w-12 h-12' />
               },            ].map((step, index) => (              {
-<<<<<<< HEAD
                 step: '02'
                 title: 'Personalized Training'
                 description: 'AI-generated exercises and experiences tailored to your specific needs and goals.'
                 icon: <Target className="w-12 h-12" />
               }
-=======
                 step: '02',
                 title: 'Personalized Training',
                 description: 'AI-generated exercises and experiences tailored to your specific needs and goals.',
                 icon: <Target className="w-12 h-12" />;
               };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {
                 step: '03'
                 title: 'Continuous Evolution'
                 description: 'Real-time feedback and adaptation ensure continuous growth and development.'
                 icon: <TrendingUp className="w-12 h-12" />
               }
-=======
-<<<<<<< HEAD
                 step: '01',
                 title: 'AI Assessment',
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ].map((step, index) => (
               <motion.div
                 key={step.step}
@@ -1910,15 +1912,16 @@ description:;
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className='text-center'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className='relative mb-8'>
                   <div className='w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -1938,7 +1941,6 @@ description:;
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {step.description}
-<<<<<<< HEAD
                 </p>              </motion.div>              >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="relative mb-8">
@@ -1991,16 +1993,10 @@ description:;
                 <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{step.description}</p>
               </motion.div>
-=======
                 </p>              </motion.div>
 
               </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
 <<<<<<< HEAD
           </div>;
@@ -2017,19 +2013,21 @@ description:;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Use Cases Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2051,6 +2049,9 @@ description:;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -2068,15 +2069,16 @@ description:;
           >
 =======
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Transform Your Life with
@@ -2154,15 +2156,16 @@ description:;
               >
 =======
                 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
                   <Lightbulb className='w-8 h-8 text-purple-400' />
@@ -2207,7 +2210,6 @@ description:;
                 </h3>
                 <p className='text-gray-400'>
                   Leverage AI-powered consciousness development for enhanced
-<<<<<<< HEAD
                   personal and professional growth.                </p>              >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -2219,16 +2221,10 @@ description:;
                 <p className="text-gray-400">
                   Leverage AI-powered consciousness development for enhanced personal and professional growth.
                 </p>
-=======
                   personal and professional growth.                </p>
 
                 </p>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </motion.div>
             ))}
 <<<<<<< HEAD
@@ -2246,19 +2242,21 @@ description:;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Technology Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2280,6 +2278,9 @@ description:;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -2297,15 +2298,16 @@ description:;
           >
 =======
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Cutting-Edge
@@ -2587,14 +2589,7 @@ description:;
 
 =======
                 className='text-center group'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>
                   <Cpu className='w-10 h-10 text-purple-400' />
@@ -2605,31 +2600,26 @@ description:;
                 </div>
                 <p className="text-sm text-gray-300 font-medium">{tech}</p>
               </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2651,6 +2641,9 @@ description:;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -2668,15 +2661,16 @@ description:;
           >
 =======
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               What Our Users
@@ -2757,15 +2751,16 @@ description:;
               >
 =======
                 className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className='flex items-center mb-4'>
                   <div className='text-3xl mr-3'>{testimonial.avatar}</div>
@@ -2808,7 +2803,6 @@ description:;
               >
 =======
                 </div>
-<<<<<<< HEAD
                 <p className='text-gray-300 italic'>"{testimonial.content}"</p>              </motion.div>              >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2828,6 +2822,7 @@ description:;
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -2836,10 +2831,13 @@ description:;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <p className='text-gray-300 italic'>"{testimonial.content}"</p>              </motion.div>
 
               </motion.div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -2864,6 +2862,8 @@ description:;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
 <<<<<<< HEAD
           </div>;
@@ -2880,19 +2880,21 @@ description:;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Pricing Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2914,6 +2916,9 @@ description:;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -2931,15 +2936,16 @@ description:;
           >
 =======
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Choose Your
@@ -2975,6 +2981,7 @@ description:;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -3021,6 +3028,35 @@ description:;
 <<<<<<< HEAD
                 popular: false
 
+=======
+                name: 'Starter'
+                price: '$99'
+                period: '/month'
+                description:
+                  'Perfect for individuals beginning their consciousness journey'
+                features: [
+                  'Basic AI assessment'
+                  '10 consciousness exercises'
+                  'Progress tracking'
+                  'Email support'
+                  'Mobile app access'
+                ]
+                popular: false
+              },              {
+                name: 'Professional'
+                price: '$299'
+                period: '/month',                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access'
+                ];
+                popular: false
+              }
+                name: 'Professional'
+                price: '$299'
+                period: '/month'
+              };
+                name: 'Professional',
+                price: '$299',
+                period: '/month',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 description:
                   'Advanced features for serious consciousness development'
                 features: [
@@ -3354,8 +3390,6 @@ features: [;
                 className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${
                   plan.popular
                     ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20'                    : 'border-purple-500/20'
-=======
-<<<<<<< HEAD
               };
 
               {
@@ -3364,12 +3398,8 @@ features: [;
                 period: '/month',
 
                     : 'border-purple-500/20'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
                     : 'border-purple-500/20'
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }`}
               >
                 {plan.popular && (
@@ -3425,6 +3455,7 @@ features: [;
                 )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                   <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
@@ -3444,9 +3475,9 @@ features: [;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -3566,17 +3597,11 @@ features: [;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       {feature}
-=======
-<<<<<<< HEAD
 
                       {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                       {feature}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -3670,6 +3695,7 @@ features: [;
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -3679,10 +3705,14 @@ features: [;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -3695,6 +3725,9 @@ features: [;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -3746,6 +3779,7 @@ features: [;
                 }
                 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -3770,6 +3804,8 @@ features: [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   icon: <MapPin className='w-6 h-6' />
                   label: 'Visit Us'
                   value: contactInfo.address
@@ -3777,25 +3813,20 @@ features: [;
               {[
                 { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
-=======
                   icon: <MapPin className='w-6 h-6' />,
                   label: 'Visit Us',
                   value: contactInfo.address,
-<<<<<<< HEAD
                 },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile },
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email },
                 { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
-=======
                 },              ].map((contact, index) => (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
                 { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
-=======
               ].map((contact, index) => (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -3803,6 +3834,8 @@ features: [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <motion.div
                   key={contact.label}
                 Consciousness?;
@@ -3906,14 +3939,7 @@ features: [;
                 >
 =======
                   className='text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {contact.icon}
@@ -3921,7 +3947,6 @@ features: [;
                   <div className='text-sm text-purple-300 mb-1'>
                     {contact.label}
                   </div>
-<<<<<<< HEAD
                   <div className='text-white font-medium'>{contact.value}</div>                </motion.div>                >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400">
@@ -3930,16 +3955,10 @@ features: [;
                   <div className="text-sm text-purple-300 mb-1">{contact.label}</div>
                   <div className="text-white font-medium">{contact.value}</div>
                 </motion.div>
-=======
                   <div className='text-white font-medium'>{contact.value}</div>                </motion.div>
 
                 </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -4100,11 +4119,10 @@ features: [;
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
 );  )
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -4112,3 +4130,5 @@ features: [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -38,10 +39,13 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -61,10 +65,14 @@ import Footer from "./Footer";
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -81,16 +89,24 @@ import Footer from './Footer';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+origin/automation-improvements-final
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -262,10 +278,6 @@ interface LayoutProps {
       <main>{children}</main>
       <Footer />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import React, { ReactNode } from "react";
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -277,6 +289,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -372,12 +385,14 @@ export default Layout;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
 export default Layout;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { ReactNode } from "react";
 interface LayoutProps {
   children: ReactNode;
@@ -411,13 +426,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 };
 export default Layout;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

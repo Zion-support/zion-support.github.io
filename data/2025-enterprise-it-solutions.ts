@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -16,6 +17,8 @@ import { MicroSaasService } from './enhanced - real - micro - saas - services';
   website: 'https://ziontechgroup.com',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
   mobile: '+1 302 464 0950'
@@ -424,6 +427,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
     realImplementation: true
     implementationDetails:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -482,21 +486,25 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Enterprise platform with monitoring engine, observability tools, and alerting system.'
     launchDate: '2025-01-18'
     customers: 56
     rating: 4.8
     reviews: 38
   }
-=======
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launchDate: '2025-01-18',
     customers: 56,
     rating: 4.8,
     reviews: 38,
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];	{
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -797,7 +805,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 =======
 		rating: 4 && 4.8,
 		reviews: 38
-<<<<<<< HEAD
 	}
 ];
 <<<<<<< HEAD
@@ -1204,9 +1211,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 =======
 =======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { MicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -1399,12 +1403,11 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 		customers: 56,;
 		rating: 4.8;
 		reviews: 38;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { Project  } from '@/types/projects';
@@ -11,6 +12,12 @@ import { Project } from '@/types/projects'
 import { useState } from 'react'
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Project  } from '@/types/projects';
+import { useState } from "react",
+import { Project } from '@/types/projects'
+import { useState } from 'react'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Star } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -47,12 +54,15 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const hasLeftReview = userReview != null
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Project } from '@/types/projects',
 import { useState } from "react",
 import { Star } from 'lucide-react'
@@ -108,15 +118,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const revieweeName = isClient 
     ? talentProfile?.full_name || "Talent" 
     : clientProfile?.full_name || "Client",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 <<<<<<< HEAD
 =======
@@ -147,17 +152,21 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       </CardHeader>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <CardContent>
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <CardContent>
         {isCompleted ? (
           <div className='space-y-6'>
             {(isClient |isTalent) && (
               <div className='border-b pb-4 mb-4'>
+<<<<<<< HEAD
 <<<<<<< HEAD
       
 >>>>>>>       <CardContent>
@@ -166,14 +175,16 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <CardContent>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {isCompleted ? (
           <div className="space-y-6">
             {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -192,6 +203,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 >>>>>>>                       Your review will help build a trustworthy community
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {canLeaveReview ? (
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
@@ -216,17 +229,21 @@ import { useState } from 'react';
                     </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     )}
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {userReview.status === 'pending' && (
                       <Button
                         variant='outline'
                         onClick={() => setIsReviewModalOpen(true)}
                       >                        Edit Review
                       </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                     )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -245,6 +262,8 @@ import { useState } from 'react';
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {userReview.status === "pending" && (
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>
                         Edit Review
@@ -315,16 +334,20 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                         Edit Review;
                       </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     )}
                   </div>
                 ) : null}
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -340,19 +363,24 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <ReviewsList
               reviews = {reviews,}
               isLoading = {isLoading,}
               onReportReview = {reportReview,}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
             <ReviewsList;
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -365,6 +393,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
@@ -376,6 +406,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
             </p>
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -500,6 +531,8 @@ function ProjectReviewSection() {
           </div>)}
 >>>>>>>       </CardContent>;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardContent>
       {/* Review Modal */}
       {(isClient |isTalent) && (
@@ -511,18 +544,14 @@ function ProjectReviewSection() {
           onClose = {(,) => setIsReviewModalOpen(false),}
         />
       )}
-<<<<<<< HEAD
     </Card>
   )
 }
 }
-=======
     </Card>;
   );
 };
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </CardContent>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Review Modal */}
@@ -551,8 +580,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

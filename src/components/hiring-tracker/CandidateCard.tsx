@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -18,7 +21,10 @@ import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   MessageSquare
   User
   FileText
@@ -27,9 +33,12 @@ import {
   AlertTriangle
   BriefcaseIcon
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   MessageSquare,
   User,
   FileText,
@@ -37,8 +46,11 @@ import {
   Calendar,
   AlertTriangle,;
   BriefcaseIcon;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';// Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
 import { Draggable } from "@/lib/dnd-stub"
@@ -78,12 +90,15 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
       Date.now() - 7 * 24 * 60 * 60 * 1000
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -98,6 +113,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -105,10 +121,13 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -122,13 +141,17 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: 'Notes saved'
       description: 'Your notes have been saved'
-=======
       title: 'Notes saved',
       description: 'Your notes have been saved',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     })
     setShowNotes(false)
   }
@@ -141,13 +164,15 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   const candidateName = application.talent_profile?.full_name |'Candidate'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  const candidateName = application.talent_profile?.full_name |'Candidate'
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  const candidateName = application.talent_profile?.full_name |'Candidate'
   const candidateName = application.talent_profile?.full_name || 'Candidate'
   return (
     <>
@@ -156,9 +181,12 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
           <Card
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
@@ -174,12 +202,15 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const candidateName = application.talent_profile?.full_name || "Candidate",
@@ -187,6 +218,7 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -198,10 +230,13 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {provided => (
           <Card
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             {...provided.dragHandleProps}
           >
@@ -209,6 +244,8 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
               {/* Candidate Header */}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"
@@ -272,17 +309,15 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
             className="mb-2 p-0 shadow-sm border";
             ref={provided.innerRef}
             {...provided.draggableProps}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {...provided.dragHandleProps}
           >
             <CardContent className='p-3'>
               {/* Candidate Header */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='flex justify-between items-start mb-2'>
                 <div className='flex items-center gap-2'>
                   <AvatarPrimitive className='h-8 w-8'>
@@ -310,6 +345,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     </p>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 <DropdownMenu>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -418,6 +454,8 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
                   <AvatarPrimitive className="h-8 w-8"> {/* Using renamed AvatarPrimitive */}
@@ -450,6 +488,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 </div>
                 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -466,6 +505,8 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -494,6 +535,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                     )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
@@ -504,6 +546,8 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>
@@ -622,7 +666,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 =======
               <div className='flex justify-between mt-2 gap-1'>
                 <Button variant='outline' size='sm' className='flex-1' asChild>
-=======
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
@@ -669,18 +712,11 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   className="flex-1"
                   asChild
                 >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
-<<<<<<< HEAD
                 <Button variant='outline' size='sm' className='flex-1' asChild>
-=======
                 
                 <Button 
                   variant="outline" 
@@ -688,11 +724,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   className="flex-1"
                   asChild
                 >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {application.resume?.file_url ? (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
@@ -704,6 +735,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                     </span>
                   )}
                 </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -760,6 +792,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/hiring-tracker/CandidateCard.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Button
                   variant='default'
                   size='sm'
@@ -861,16 +895,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 }application= {
   application
 }onConfirm= {
-<<<<<<< HEAD
   handleHireConfirmed
 }/> </>)
 }'"}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   handleHireConfirmed 
 }/> </>) 
 }'"};
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>                 
@@ -878,6 +915,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Button 
@@ -1597,6 +1636,7 @@ import Image from 'next/image';
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -1614,3 +1654,5 @@ import Image from 'next/image';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

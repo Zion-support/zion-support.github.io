@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -89,19 +90,24 @@ const Homepage2038: React.FC = () => {
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Layout from './layout/Layout',
 import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038',
-=======
 import React from 'react';
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -215,6 +221,8 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight
   Star
   Brain
@@ -235,9 +243,12 @@ import {
   Infinity
   Zap as Lightning;} from 'lucide-react';import {
   ArrowRight, Star
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Star,
   Brain,
@@ -459,7 +470,6 @@ const Homepage2038: React.FC = () => {
   Infinity,;
   Zap as Lightning,;} from 'lucide-react';import {
   ArrowRight, Star, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
   CheckCircle, Sparkles, Infinity, Zap as Lightning
@@ -491,7 +501,6 @@ const Homepage2038: React.FC = () => {
   return (
     <Layout>
       {/* Main Content */}
-<<<<<<< HEAD
       <main className='relative z-10'>
         {/* Hero Section */}
         <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
@@ -518,14 +527,16 @@ const Homepage2038: React.FC = () => {
             <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500"></div>
           </div>
           <div className="text-center max-w-5xl mx-auto relative z-10">
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -537,14 +548,7 @@ const Homepage2038: React.FC = () => {
 =======
               className='space-y-8'              className="space-y-8"
             >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Company Badge */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -586,14 +590,7 @@ const Homepage2038: React.FC = () => {
 
 =======
                 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2038</span>
@@ -739,14 +736,7 @@ const Homepage2038: React.FC = () => {
 =======
                 </Link>
               </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -829,6 +819,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             <motion.div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -848,6 +839,9 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -869,14 +863,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               <motion.div 
 =======
               className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1040,6 +1027,7 @@ whileHover={{ scale: 1 && 1.05 }}>;
             <motion.div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1059,6 +1047,9 @@ whileHover={{ scale: 1 && 1.05 }}>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1076,15 +1067,16 @@ whileHover={{ scale: 1 && 1.05 }}>;
             >
 =======
               className='text-center mb-20'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
                 Revolutionary AI Services
@@ -1146,6 +1138,7 @@ whileHover={{ scale: 1 && 1.05 }}>;
                   <UltraFuturisticServiceCard2038
                     service={service}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1166,16 +1159,20 @@ whileHover={{ scale: 1 && 1.05 }}>;
                     variant="consciousness"
 =======
 <<<<<<< HEAD
-                    variant='consciousness'                  />                    variant="consciousness"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    variant='consciousness'                  />                    variant="consciousness"
                     variant='consciousness'                  />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   />
                 </motion.div>
               ))}
@@ -1528,6 +1525,7 @@ whileHover={{ scale: 1 && 1.05 }}>;
           <div className="max-w-7xl mx-auto">
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -1540,6 +1538,9 @@ whileHover={{ scale: 1 && 1.05 }}>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1555,15 +1556,16 @@ whileHover={{ scale: 1 && 1.05 }}>;
             >
 =======
               className='text-center mb-20'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent'>
                 Innovative Micro SAAS
@@ -1625,6 +1627,7 @@ whileHover={{ scale: 1 && 1.05 }}>;
                   <UltraFuturisticServiceCard2038
                     service={service}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1645,16 +1648,20 @@ whileHover={{ scale: 1 && 1.05 }}>;
                     variant="automation"
 =======
 <<<<<<< HEAD
-                    variant='automation'                  />                    variant="automation"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    variant='automation'                  />                    variant="automation"
                     variant='automation'                  />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   />
                 </motion.div>
               ))}
@@ -1804,6 +1811,7 @@ whileHover={{ scale: 1 && 1.05 }}>;
           <div className="max-w-7xl mx-auto">
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -1816,6 +1824,9 @@ whileHover={{ scale: 1 && 1.05 }}>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1831,15 +1842,16 @@ whileHover={{ scale: 1 && 1.05 }}>;
             >
 =======
               className='text-center mb-20'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>
                 Advanced IT Infrastructure
@@ -1901,6 +1913,7 @@ whileHover={{ scale: 1 && 1.05 }}>;
                   <UltraFuturisticServiceCard2038
                     service={service}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1921,16 +1934,20 @@ whileHover={{ scale: 1 && 1.05 }}>;
                     variant="quantum"
 =======
 <<<<<<< HEAD
-                    variant='quantum'                  />                    variant="quantum"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    variant='quantum'                  />                    variant="quantum"
                     variant='quantum'                  />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   />
                 </motion.div>
               ))}
@@ -2080,6 +2097,7 @@ whileHover={{ scale: 1 && 1.05 }}>;
           <div className="max-w-7xl mx-auto">
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -2092,6 +2110,9 @@ whileHover={{ scale: 1 && 1.05 }}>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -2397,15 +2418,8 @@ whileHover={{ scale: 1 && 1.05 }}>;
                 >
 =======
               className='text-center mb-20'
-<<<<<<< HEAD
-=======
 
             >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Why Choose Zion Tech Group?
               </h2>
@@ -2420,14 +2434,12 @@ whileHover={{ scale: 1 && 1.05 }}>;
                   icon: <Brain className='w-12 h-12' />
                   title: 'AI Consciousness Evolution'
                   description:
-<<<<<<< HEAD
                     'Leading the development of artificial consciousness and emotional intelligence'
                   color: 'from-purple-500 to-pink-500'
                 }
                 {
                   icon: <Atom className='w-12 h-12' />
                   title: 'Quantum Computing Power'
-=======
                     'Leading the development of artificial consciousness and emotional intelligence',
                   color: 'from-purple-500 to-pink-500',
                 },
@@ -2462,7 +2474,6 @@ whileHover={{ scale: 1 && 1.05 }}>;
                 {
                   icon: <Award className='w-12 h-12' />,
                   title: 'Proven Results',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   description:
                     'Access to the most advanced quantum computing capabilities available'
                   color: 'from-blue-500 to-cyan-500'
@@ -2506,14 +2517,7 @@ whileHover={{ scale: 1 && 1.05 }}>;
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   whileHover={{ scale: 1.05 }}
                 >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2565,7 +2569,6 @@ whileHover={{ scale: 1 && 1.05 }}>;
                   </h3>
                   <p className='text-gray-300 leading-relaxed'>
                     {feature.description}
-<<<<<<< HEAD
                   </p>                </motion.div>                  whileHover={{ scale: 1.05 }}
                 >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2577,16 +2580,10 @@ whileHover={{ scale: 1 && 1.05 }}>;
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
                 </motion.div>
-=======
                   </p>                </motion.div>
 
                 </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
 <<<<<<< HEAD
             </div>;
@@ -2603,19 +2600,21 @@ whileHover={{ scale: 1 && 1.05 }}>;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* CTA Section */}
         <section className="py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2637,6 +2636,9 @@ whileHover={{ scale: 1 && 1.05 }}>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -2654,15 +2656,16 @@ whileHover={{ scale: 1 && 1.05 }}>;
             >
 =======
               className='space-y-8'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 Ready to Shape the Future?
@@ -2947,30 +2950,23 @@ export default Homepage2038;
 =======
 =======
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Homepage2038;  )
 }
 export default Homepage2038;
 
-<<<<<<< HEAD
-=======
 export default Homepage2038;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
 }
 }
-=======
 export default Homepage2038;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

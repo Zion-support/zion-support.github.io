@@ -14,6 +14,7 @@ files && files.forEach((file) => {
     let content = fs && fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,12 +90,19 @@ if (.ends_with (") {
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    content = content.replace(
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       (match) => {
         return match.replace(";", ";");
       }
     );
     // Fix import statements missing semicolons
     content = content.replace(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -110,12 +118,12 @@ if (.ends_with (") {
     // Fix import statements missing semicolons
     content = content.replace(
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
       (match) => {
-=======
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

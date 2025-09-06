@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -12,10 +13,14 @@ export default async function handler(
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
 export default async function handler(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -237,6 +242,14 @@ export default async function handler(
 req: NextApiRequest
   res: NextApiResponse
 ) {
+=======
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { id } = req.query;
   if (typeof id !== "string")
     return res.status(400).json({ error: "Invalid id" });
@@ -256,8 +269,12 @@ req: NextApiRequest
     }
     ((dispute.status = status |"Resolved")
       (dispute.resolvedAt = dispute.status === "Resolved" ? now : undefined));
+<<<<<<< HEAD
 dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
 
+=======
+    dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -303,6 +320,7 @@ export default async function handler(req, res) {
 ;
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
+<<<<<<< HEAD
 
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
 
@@ -310,17 +328,37 @@ export default async function handler(req, res) {
     await upsertDispute(dispute);
     return res.status(200).json({ dispute });
 } catch (error) {
+=======
+    dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
+    dispute.updatedAt = now;
+    await upsertDispute(dispute);
+    return res.status(200).json({ dispute });
+    } catch (error) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
 
+<<<<<<< HEAD
+=======
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
   } catch (error) {
     console.error("Error:", error);
@@ -343,5 +381,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

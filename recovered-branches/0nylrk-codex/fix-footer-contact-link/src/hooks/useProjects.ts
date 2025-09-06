@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useProjects.ts
@@ -15,6 +16,8 @@ import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -25,19 +28,15 @@ export function useProjects() {;
   const [projects, setProjects] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { Project, ProjectStatus } from "@/types/projects";
 import { toast } from "sonner";
 export function useProjects() {
   const { user } = useAuth();
   const [projects, setProjects] = useState<Project[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-=======
 import { Project, ProjectStatus } from "@/types/projects",
 import { toast } from "sonner",
 export function useProjects() {
@@ -46,11 +45,14 @@ export function useProjects() {
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const [error, setError] = useState<string | null>(null);
   const fetchProjects = async () => {
@@ -74,19 +76,21 @@ export function useProjects() {
       return
     }
     try {
-<<<<<<< HEAD
       setIsLoading(true);
-=======
       setIsLoading(true),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Build the query based on user type
       // For clients, get projects they created
       // For talents, get projects they're hired for
       let query = supabase
         .from("projects")
         .select(`
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -110,6 +114,8 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           *;
           job:jobs(title, description);
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url)
@@ -117,8 +123,11 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
         `)
         .order("created_at", { ascending: false });
       if (user.userType === "jobSeeker" |user.userType === "creator") {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           *,
           job:jobs(title, description),
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
@@ -128,30 +137,38 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
       
       if (user.userType === "jobSeeker" || user.userType === "creator") {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         query = query.eq("talent_id", user.id)
       } else if (user.userType === "employer" |user.userType === "buyer") {
         query = query.eq("client_id", user.id)
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
-=======
       
       const { data, error: fetchError } = await query,
       
       if (fetchError) throw fetchError,
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Transform the data to match our project types
       const transformedData = data.map((project: any) => ({
         ...project,
@@ -159,6 +176,7 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
           ...project.talent_profile
           full_name: project.talent_profile.display_name
         } : undefined
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -250,6 +268,8 @@ if (throw fetch_error) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }));
       setProjects(transformedData as Project[]);
       setError(null)
@@ -294,8 +314,11 @@ if (throw fetch_error) {
 =======
       console.error("Error fetching projects:", err);
       setError("Failed to fetch projects: " + err.message)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       })),
       
       setProjects(transformedData as Project[]),
@@ -304,17 +327,21 @@ if (throw fetch_error) {
       console.error("Error fetching projects:", err),
       setError("Failed to fetch projects: " + err.message),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast.error("Failed to fetch projects")
     } finally {
       setIsLoading(false)
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -323,22 +350,29 @@ if (throw fetch_error) {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getProjectById = async (projectId: string): Promise<Project | null> => {
     try {
       const { data, error } = await supabase
         .from("projects")
         .select(`
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           *;
           job:jobs(title, description);
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url)
@@ -347,8 +381,11 @@ if (throw fetch_error) {
         .eq("id", projectId)
         .single();
       if (error) throw error;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           *,
           job:jobs(title, description),
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
@@ -359,6 +396,7 @@ if (throw fetch_error) {
       
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -424,6 +462,8 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Transform the data to match our project types
       const transformedProject = {
         ...data,
@@ -431,30 +471,29 @@ if (throw error) {
           ...data.talent_profile
           full_name: data.talent_profile.display_name
         } : undefined
-<<<<<<< HEAD
       }
-=======
       },
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return transformedProject as Project
     } catch (err: any) {
       console.error("Error fetching project:", err),
       toast.error("Failed to fetch project details"),
       return null
     }
-<<<<<<< HEAD
   }
-=======
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("projects")
         .update({ status })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useProjects.ts
 
@@ -471,10 +510,15 @@ if (throw error) {
       if (error) throw error;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        .eq("id", projectId);
+      if (error) throw error;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq("id", projectId),
       
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -699,23 +743,21 @@ if ( {) {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Update the local state
       setProjects(prev =>
         prev.map(project => project.id === projectId ? { ...project, status } : project)
-<<<<<<< HEAD
       );
       toast.success(`Project status updated to ${status}`);
-=======
       ),
       
       toast.success(`Project status updated to ${status}`),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return true
     } catch (err: any) {
       console.error("Error updating project status:", err),
       toast.error("Failed to update project status"),
       return false
-<<<<<<< HEAD
     }
   }
   // Fetch projects when component mounts or user changes
@@ -732,8 +774,11 @@ if ( {) {
     getProjectById
 
     updateProjectStatus
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -851,6 +896,7 @@ export function useProjects() {;
     getProjectById;
     updateProjectStatus;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -939,6 +985,8 @@ updateProjectStatus
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }

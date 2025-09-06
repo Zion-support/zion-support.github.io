@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -453,6 +453,8 @@ export default function EnhancedNavigation2025() {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 'use client';
 ]
 }];
@@ -701,14 +703,7 @@ export default function EnhancedNavigation2025() {;
                       activeSubmenu === item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Submenu */}
                   <AnimatePresence>
                     {activeSubmenu === item.name && (
@@ -845,14 +840,7 @@ export default function EnhancedNavigation2025() {;
             <div className="hidden lg:flex items-center space-x-4">;
 =======
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -875,6 +863,7 @@ export default function EnhancedNavigation2025() {;
                 Get Started
               </Link>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -903,6 +892,9 @@ export default function EnhancedNavigation2025() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -1172,14 +1164,7 @@ function EnhancedNavigation2025() {
           </div>
         </div>
       </nav>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -1200,6 +1185,7 @@ function EnhancedNavigation2025() {
                     }`} />
                   </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1219,6 +1205,9 @@ function EnhancedNavigation2025() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {activeDropdown === item.name && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
@@ -1269,6 +1258,7 @@ function EnhancedNavigation2025() {
                 </div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1286,8 +1276,9 @@ function EnhancedNavigation2025() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Mobile CTA */}
               <div className="pt-4">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1316,15 +1307,16 @@ function EnhancedNavigation2025() {
             />;
 =======
             />
-<<<<<<< HEAD
-=======
             
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
               <div className="p-6">;
@@ -1355,6 +1347,7 @@ function EnhancedNavigation2025() {
                           activeSubmenu === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
+<<<<<<< HEAD
 
 =======
 
@@ -1604,12 +1597,9 @@ className="ml - 8 mt - 2 space - y-2";
                       </button>
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                       {/* Mobile Submenu */}
                       <AnimatePresence>
                         {activeSubmenu === item.name && (
@@ -1764,14 +1754,7 @@ export default EnhancedNavigation2025;
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">
                   <Link
@@ -1811,15 +1794,16 @@ export default EnhancedNavigation2025;
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Spacer for fixed navigation */}
       <div className="h - 20" />;
     </>);

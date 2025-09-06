@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const real2026Q2Additions = [
   {
     id: 'ai-governance-compliance-hub'
@@ -304,6 +308,7 @@ export const real2026Q2Additions = [
       'Ticketing and customer portals'
     ]
     useCases: [
+<<<<<<< HEAD
 =======
 
 
@@ -1100,6 +1105,8 @@ export const real2026Q2Additions = [
     ]
     useCases: [
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'MSPs and IT providers'
       'Internal IT for SMBs'
       'BYOD governance'
@@ -1114,8 +1121,11 @@ export const real2026Q2Additions = [
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'MSPs and IT providers',
       'Internal IT for SMBs',
       'BYOD governance',
@@ -1160,7 +1170,6 @@ export const real2026Q2Additions = [
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1430,13 +1439,9 @@ export const real2026Q2Additions = [;
     marketPosition: 'Cost-effective RMM for partners and IT teams';
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const real2026Q2Additions = [;
   {;
     id: 'ai-governance-compliance-hub',;
@@ -1639,12 +1644,11 @@ export const real2026Q2Additions = [;
     marketPosition: 'Cost-effective RMM for partners and IT teams',;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

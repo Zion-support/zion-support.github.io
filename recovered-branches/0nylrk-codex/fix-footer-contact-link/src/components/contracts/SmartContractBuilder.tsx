@@ -45,9 +45,12 @@ export function SmartContractBuilder({
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -60,6 +63,7 @@ import {TemplateManager} from "./templates/TemplateManager";
 import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from "@/types/smart-contracts";
 import {useSmartContracts} from "@/hooks/useSmartContracts";
 import {toast} from "sonner";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface SmartContractBuilderProps {;
   isOpen: boolean,;
@@ -77,6 +81,8 @@ export function SmartContractBuilder(): any ({;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Dialog, DialogContent } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -87,17 +93,10 @@ import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
 import { TemplateManager } from "./templates/TemplateManager",
 import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
-<<<<<<< HEAD
 import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
-=======
 import { useSmartContracts } from "@/hooks/useSmartContracts",
 import { toast } from "sonner",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SmartContractBuilderProps {
 
   isOpen: boolean
@@ -108,10 +107,7 @@ interface SmartContractBuilderProps {
 
   onDeploy?: (contractContent: string) => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function SmartContractBuilder({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   isOpen;
@@ -119,6 +115,7 @@ export function SmartContractBuilder({;
   talent;
   clientName;
   onContractGenerated;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onDeploy;
 }: SmartContractBuilderProps) {;
@@ -134,14 +131,19 @@ export function SmartContractBuilder({;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function SmartContractBuilder({
   isOpen,
   onClose,
   talent,
   clientName,
   onContractGenerated,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onDeploy
 }: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -149,6 +151,7 @@ export function SmartContractBuilder({
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -159,11 +162,15 @@ export function SmartContractBuilder({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
 
     network: 'ethereum'
@@ -171,12 +178,15 @@ export function SmartContractBuilder({
 
     deployToChain: false
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
   const [deployStatus, setDeployStatus] = useState<string>('');
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
@@ -185,8 +195,11 @@ export function SmartContractBuilder({
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }),
   const [deployStatus, setDeployStatus] = useState<string>(''),
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
@@ -198,12 +211,15 @@ export function SmartContractBuilder({
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Convert ContractFormValues to contract content string
   const handleContractGenerated = async (formValues: ContractFormValues) => {
     if (!formValues) return
@@ -314,18 +330,24 @@ if ( {) {
       toast.error("Failed to generate smart contract")
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleDeployContract = async () => {
     if (!generatedContract) return;
     try {
       setDeployStatus('deploying');
       const contractInfo = await deploySmartContract(generatedContract, deployOptions);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const handleDeployContract = async () => {
@@ -335,6 +357,7 @@ if ( {) {
       setDeployStatus('deploying'),
       const contractInfo = await deploySmartContract(generatedContract, deployOptions),
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -379,6 +402,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (contractInfo) {
         setDeploymentInfo(contractInfo),
         setDeployStatus('deployed'),
@@ -388,7 +413,6 @@ if ( {) {
         toast.error("Failed to deploy smart contract")
       }
     } catch (error) {
-<<<<<<< HEAD
       console.error("Error deploying contract:", error);
       setDeployStatus('error');
       toast.error("Failed to deploy smart contract")
@@ -403,13 +427,14 @@ if ( {) {
     }
     setGeneratedContract(contract);
     setActiveTab("preview")
-<<<<<<< HEAD
   }
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
       toast.error("Failed to deploy smart contract")
@@ -505,6 +530,7 @@ export function SmartContractBuilder({;
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -517,6 +543,8 @@ export function SmartContractBuilder({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -540,6 +568,7 @@ export function SmartContractBuilder({;
             </div>
           </div>
           <TabsContent value="form" className="pt-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -692,14 +721,10 @@ export function SmartContractBuilder({;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <ContractForm
-=======
             <ContractForm 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setGeneratedContract(contract);
     setActiveTab("preview");
   };
@@ -820,11 +845,6 @@ if ( {) {
 =======
           <TabsContent value="form" className="pt-4">;
             <ContractForm;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               talent={talent}
               clientName={clientName}
               initialValues={formValues}
@@ -838,6 +858,7 @@ if ( {) {
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -927,10 +948,10 @@ if ( {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
-                <ContractPreview
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <ContractPreview
                 <ContractPreview 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
@@ -958,6 +979,7 @@ if ( {) {
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/SmartContractBuilder.tsx
 
@@ -1109,17 +1131,21 @@ setActiveTab ("preview");
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/SmartContractBuilder.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
       </DialogContent>
     </Dialog>
   )
 }
-=======
         />;
       </DialogContent>;
     </Dialog>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

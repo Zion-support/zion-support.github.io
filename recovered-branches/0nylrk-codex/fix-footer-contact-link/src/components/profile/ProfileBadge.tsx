@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileBadge.tsx
@@ -15,10 +16,14 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -28,10 +33,13 @@ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",
 import { cn } from "@/lib/utils",
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -50,6 +58,9 @@ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProfileBadgeProps {
   type: BadgeType
   className?: string
@@ -70,10 +81,13 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       colors: "bg-green-500/20 text-green-400"}
     "top-rated": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: Award
       text: "Top Rated"
       colors: "bg-purple-500/20 text-purple-400"}}
@@ -83,23 +97,20 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
       colors;
 
-=======
       icon: Award,
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
-<<<<<<< HEAD
 ;
   const { icon: Icon, text, colors } = badgeConfig[type];
-=======
 
   const { icon: Icon, text, colors } = badgeConfig[type],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className={cn(
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",
       colors,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -113,12 +124,15 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}>
       <Icon className="w-3 h-3" />
       <span>{text}</span>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -134,6 +148,9 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -309,11 +326,10 @@ className)
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileBadge.tsx
 =======
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

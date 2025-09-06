@@ -4,13 +4,13 @@
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
   
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -23,10 +23,13 @@ import { Loader2, ShieldCheck, Download } from 'lucide-react'import { toast } fr
 import {logErrorToProduction} from '@/utils/productionLogger'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SmartContractDeploymentProps {
   solidityCode: string
   onDeploy: (options: DeploymentOptions,) => Promise<void>
@@ -36,12 +39,15 @@ export function SmartContractDeployment({
   solidityCode
   onDeploy
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -55,6 +61,7 @@ import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface SmartContractDeploymentProps {
 =======
@@ -64,6 +71,8 @@ interface SmartContractDeploymentProps {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SmartContractDeploymentProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   solidityCode: string,
@@ -72,6 +81,7 @@ interface SmartContractDeploymentProps {
 }
 
 export function SmartContractDeployment({ 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -84,18 +94,14 @@ export function SmartContractDeployment({
 >>>>>>>   isDeploying
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   solidityCode,
   onDeploy,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   solidityCode
   onDeploy
-=======
   solidityCode,
   onDeploy,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isDeploying
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }: SmartContractDeploymentProps) {
@@ -104,6 +110,7 @@ export function SmartContractDeployment({
     useEscrow: true
     deployToChain: false
     walletAddress: ''
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -154,6 +161,8 @@ if ( {) {
   }
 <<<<<<<< HEAD:src/components/contracts/blockchain/SmartContractDeployment.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   })
   const handleDeployContract = async () => {
     if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
@@ -182,6 +191,7 @@ if ( {) {
     document.body.removeChild(a)
     toast.success("Solidity contract downloaded")
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>   return (
 ursor/fix-website-loading-errors-and-merge-6662
@@ -278,6 +288,8 @@ export function SmartContractDeployment(): any ({ ;
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }),
 
   const handleDeployContract = async () => {
@@ -382,11 +394,6 @@ export function SmartContractDeployment({;
     toast.success("Solidity contract downloaded")
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card className="w-full">
       <CardHeader>
@@ -398,35 +405,21 @@ export function SmartContractDeployment({;
           Deploy your agreement as a smart contract for enhanced security and automation
         </CardDescription>
       </CardHeader>
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <CardContent className="space-y-6">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
             <Switch
-<<<<<<< HEAD
               id="deploy-blockchain";
               aria-label="Deploy to blockchain";
               checked={deploymentOptions.deployToChain};
               onCheckedChange={(checked) => setDeploymentOptions({;
                 ...deploymentOptions;                deployToChain: checked
-=======
               id="deploy-blockchain"
               aria-label="Deploy to blockchain"
-<<<<<<< HEAD
-<<<<<<< HEAD
               checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
                 ...deploymentOptions;                deployToChain: checked
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },;
   const handleDownloadSolidity = () => {;
     // Create a blob from the Solidity code;
@@ -561,47 +554,49 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
                 deployToChain: checked;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               })}
             />
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
           </div>
-<<<<<<< HEAD
-=======
           
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {deploymentOptions.deployToChain && (
             <>
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <RadioGroup
                   defaultValue={deploymentOptions.network}
-<<<<<<< HEAD
                   onValueChange={(value) => setDeploymentOptions({
                     ...deploymentOptions;                    network: value as BlockchainNetwork
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <RadioGroup 
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   onValueChange={(value) => setDeploymentOptions({;
@@ -617,14 +612,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   onValueChange={(value) => setDeploymentOptions({
                     ...deploymentOptions;                    network: value as BlockchainNetwork
-=======
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   })}
                   className="flex flex-col space-y-1"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -641,12 +635,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <div className="space-y-2">
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
                 <Input
@@ -659,6 +656,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 />
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               
 >>>>>>>               <div className="space-y-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -666,8 +664,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <div className="space-y-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
@@ -677,23 +676,29 @@ ursor/fix-website-loading-errors-and-merge-6662
                   value={deploymentOptions.walletAddress || ''}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   onChange={(e) => setDeploymentOptions({
                     ...deploymentOptions;                    walletAddress: e.target.value
                   })}
                 />
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   onChange={(e) => setDeploymentOptions({;
                     ...deploymentOptions;
                     walletAddress: e.target.value;
@@ -716,21 +721,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="flex items-center space-x-2">
                 <Switch
                   id="use-escrow"
                   aria-label="Use escrow"
                   checked={deploymentOptions.useEscrow}
-<<<<<<< HEAD
                   onCheckedChange={(checked) => setDeploymentOptions({
                     ...deploymentOptions;                    useEscrow: checked
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -750,6 +749,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    useEscrow: checked;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   })}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 />
@@ -757,6 +761,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -852,8 +857,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div className="rounded-md bg-muted p-4">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
@@ -865,6 +871,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </CardContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <CardFooter className="flex justify-between">
@@ -874,18 +881,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         <Button variant="outline" onClick={handleDownloadSolidity}>
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       <CardFooter className="flex justify-between">
         <Button variant="outline" onClick={handleDownloadSolidity}>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Download className="mr-2 h-4 w-4" />
           Download .sol File
         </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -897,12 +902,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>           {isDeploying ? (
 =======
 =======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        
         <Button onClick={handleDeployContract} disabled={isDeploying}>
           {isDeploying ? (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -915,10 +917,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>
       </CardFooter>
     </Card>
@@ -933,6 +938,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   isDeploying ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract')
 }</Button> </CardFooter> </Card>)
 }'"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 
 }
@@ -1129,6 +1135,8 @@ const handleDeployContract = async () => {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/blockchain/SmartContractDeployment.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>;
       </CardFooter>;
     </Card>;
@@ -1136,8 +1144,11 @@ const handleDeployContract = async () => {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

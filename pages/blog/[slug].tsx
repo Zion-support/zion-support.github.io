@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 
@@ -19,6 +18,8 @@
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -36,6 +37,7 @@ function parseMarkdown(filePath: string): BlogPost | null {
     return null
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -47,6 +49,8 @@ function parseMarkdown(filePath: string): BlogPost | null {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -55,6 +59,7 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
 import { CommentsSection } from '@/components/blog/CommentsSection';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -71,10 +76,14 @@ import { CommentsSection } from '@/components/blog/CommentsSection';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { BlogPost } from '@/types/blog';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -85,6 +94,8 @@ import path from 'path';
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
@@ -660,17 +671,12 @@ if ( {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (error) {
     return <div>{error}</div>
-=======
 function parseMarkdown(filePath: string): BlogPost | null {;
   if (!fs.existsSync(filePath)) {;
     return null;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
   const raw = fs.readFileSync(filePath, 'utf8');
@@ -692,7 +698,6 @@ interface BlogPostPageProps {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
 ;
@@ -724,7 +729,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
   const articleLd = {
 <<<<<<< HEAD
     author: post.author.name,
@@ -766,7 +770,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
           <img
             src={post.author.avatarUrl}
             alt={post.author.name}
-=======
 }
       } catch (error) {
     console.error("Error:", error);
@@ -837,11 +840,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className="w-10 h-10 rounded-full"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             onError={(e) => {
@@ -863,11 +861,13 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
             {post.author.title && (
               <p className="m-0 text-sm text-zion-slate-light">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {post.author.title}
               </p>
             )}
-=======
                 {post.author.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -879,11 +879,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </div>
         {post.featuredImage && (
@@ -896,10 +891,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
 =======
           <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
             <img
-<<<<<<< HEAD
               src={post.featuredImage}
               alt={post.title}
-=======
               src={post.featuredImage  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -910,17 +903,11 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="object-cover w-full h-full"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
-<<<<<<< HEAD
               }}
             />
           </div>
@@ -990,8 +977,11 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
 =======
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1004,6 +994,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1011,11 +1002,11 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return { props: { initialPost: post }, revalidate: 60 }
 },;
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
         <ReactMarkdown>{body}</ReactMarkdown>;
         <AuthorBio author={post.author} />;
@@ -1079,9 +1070,12 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
 }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

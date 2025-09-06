@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -8,6 +9,11 @@ import React, { useState } from 'react';
 import {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React, { useState } from 'react';
+
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Gift
   Star
   Users
@@ -16,9 +22,12 @@ import {
   TrendingUp
   History
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Gift,
   Star,
   Users,
@@ -26,12 +35,16 @@ import {
   MessageSquare,
   TrendingUp,;
   History;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -39,6 +52,8 @@ import { useAuth } from '@/hooks/useAuth';
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Card
   CardContent
   CardDescription
@@ -46,9 +61,12 @@ import { useAuth } from '@/hooks/useAuth';
   CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Card,
   CardContent,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -57,6 +75,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -64,6 +83,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuth } from '@/hooks/useAuth';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { usePoints } from '@/hooks/usePoints';
@@ -141,6 +162,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
     } finally {
       setRedeeming(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -205,6 +227,8 @@ if (return) {
     } finally {
       setRedeeming(false)
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth',;
@@ -269,18 +293,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>       icon: <Users className='h-5 w-5' />
 =======
       setRedeeming(false);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 
   const earningOpportunities = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Users className='h-5 w-5' />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       title: 'Sign Up & Profile Setup'
@@ -394,6 +411,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       icon: <Users className="h-5 w-5" />,
       title: "Sign Up & Profile Setup",
@@ -408,6 +426,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <Users className='h-5 w-5' />,
       title: 'Sign Up & Profile Setup',
       description: 'Complete your profile and verify your email',
@@ -419,17 +439,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       description: 'Make your first purchase on the marketplace',
       points: '100 pts',
       action: 'Browse Marketplace',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       icon: <Users className="h-5 w-5" />,
       title: "Sign Up & Profile Setup",
       description: "Complete your profile and verify your email",
       points: "50 pts",
       action: isAuthenticated ? "✓ Completed" : "Get Started"
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
@@ -442,12 +456,15 @@ ursor/fix-website-loading-errors-and-merge-6662
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <Users className='h-5 w-5' />,
       title: 'Refer Friends',
       description: 'Invite friends to join Zion marketplace',
@@ -458,11 +475,14 @@ ursor/fix-website-loading-errors-and-merge-6662
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <MessageSquare className="h-5 w-5" />,
       title: "Community Engagement",
       description: "Post in the community or comment on discussions",
@@ -474,6 +494,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       title: "Refer Friends",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       description: "Invite friends to join Zion marketplace",
 =======
@@ -483,14 +504,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       description: "Invite friends to join Zion marketplace",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       points: "200 pts per referral",
       action: "Share Referral Link"
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -525,11 +545,14 @@ ursor/fix-website-loading-errors-and-merge-6662
     },
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ],;
   const upcomingRewards = [;
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },;
@@ -538,6 +561,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' };
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -557,12 +581,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!isAuthenticated) {
     return (
       <>
-<<<<<<< HEAD
         <div className='container py-10 max-w-4xl'>
           <div className='text-center mb-8'>
             <Gift className='h-16 w-16 text-primary mx-auto mb-4' />
@@ -595,7 +620,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Button>
           </div>
             <Button onClick={(,) => setLoginOpen(true)} size="lg">
-=======
         <div className="container py-10 max-w-4xl">
           <div className="text-center mb-8">
             <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
@@ -604,27 +628,29 @@ ursor/fix-website-loading-errors-and-merge-6662
               Earn points for every action you take and redeem them for exclusive rewards!
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button onClick={() => setLoginOpen(true)} size="lg">
               Join Now to Start Earning
             </Button>
           </div>
-<<<<<<< HEAD
           <div className='grid md:grid-cols-2 gap-8 mb-12'>
             <Card>
               <CardHeader>
                 <CardTitle className='flex items-center gap-2'>
                   <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className="grid md:grid-cols-2 gap-8 mb-12">
-=======
 
 
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -636,11 +662,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -660,14 +689,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  How to Earn Points
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </CardTitle>
 >>>>>>>                 <CardDescription>
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <CardContent className='space-y-4'>
                 {earningOpportunities.map((opportunity, index) => (
                   <div
@@ -680,6 +715,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <p className='text-sm text-muted-foreground'>
                         {opportunity.description}
                       </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                     <div className="text-primary mt-1">{opportunity.icon}</div>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -695,11 +731,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              <CardContent className="space-y-4">
+                {earningOpportunities.map((opportunity, index) => (
+                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className="text-primary mt-1">{opportunity.icon}</div>
 >>>>>>>                     <div className="flex-1">
                       <h4 className="font-medium">{opportunity.title}</h4>
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -712,13 +754,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>>                   </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <Badge variant="secondary">{opportunity.points}</Badge>
                   </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -727,6 +765,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Card>
             <Card>
               <CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -740,15 +779,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>>                   Upcoming Rewards
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <CardTitle className='flex items-center gap-2'>
                   <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">
-=======
                 <CardTitle className="flex items-center gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Gift className="h-5 w-5" />
                   Upcoming Rewards
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -758,8 +793,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </CardDescription>
               </CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <CardContent className='space-y-4'>
                 {upcomingRewards.map((reward, index) => (
                   <div
@@ -781,7 +819,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <h4 className="font-medium">{reward.title}</h4>
                       <p className="text-sm text-muted-foreground">{reward.category}</p>
                     </div>
-=======
               <CardContent className="space-y-4">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {upcomingRewards.map((reward, index) => (
@@ -790,6 +827,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <h4 className="font-medium">{reward.title}</h4>
                       <p className="text-sm text-muted-foreground">{reward.category}</p>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                     <Badge variant="outline">{reward.cost}</Badge>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -803,6 +841,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Badge variant="outline">{reward.cost}</Badge>
                   </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -811,8 +851,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Card>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Card className='text-center'>
             <CardContent className='pt-6'>
               <Star className='h-12 w-12 text-primary mx-auto mb-4' />
@@ -833,7 +876,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button onClick={() => setLoginOpen(true)}>
                 Create Account
               </Button>
-=======
 
           <Card className="text-center">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -853,11 +895,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
             </CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </Card>
 >>>>>>>         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
@@ -1071,38 +1116,24 @@ ursor/fix-website-loading-errors-and-merge-6662
     )
   }
   return (
-<<<<<<< HEAD
     <div className='container py-10 max-w-4xl'>
       <div className='text-center mb-8'>
         <Gift className='h-16 w-16 text-primary mx-auto mb-4' />
         <h1 className='text-4xl font-bold mb-4'>Your Rewards</h1>
         <div className='text-6xl font-bold text-primary mb-2'>
           {loading ? '...' : balance}
-=======
     <div className="container py-10 max-w-4xl">
       <div className="text-center mb-8">
         <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
         <h1 className="text-4xl font-bold mb-4">Your Rewards</h1>
         <div className="text-6xl font-bold text-primary mb-2">
           {loading ? "..." : balance}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
         <p className="text-xl text-muted-foreground">Points Available</p>
         {!loading && balance === 0 && (
-<<<<<<< HEAD
           <p className='text-sm text-muted-foreground mt-2'>            You haven't earned any points yet. Complete the tasks below to start        </div>
         <p className="text-xl text-muted-foreground">Points Available</p>
         {!loading && balance === 0 && (
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <p className="text-sm text-muted-foreground mt-2">
             You haven't earned any points yet. Complete the tasks below to start
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1111,8 +1142,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='grid md:grid-cols-2 gap-8 mb-12'>
         <Card>
           <CardHeader>
@@ -1124,7 +1158,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
-=======
 
       <div className="grid md:grid-cols-2 gap-8 mb-12">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1139,19 +1172,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               Keep Earning
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </CardTitle>
 >>>>>>>             <CardDescription>
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CardContent className='space-y-4'>
             {earningOpportunities.map((opportunity, index) => (
               <div
@@ -1164,6 +1203,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className='text-sm text-muted-foreground'>
                     {opportunity.description}
                   </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 <div className="text-primary mt-1">{opportunity.icon}</div>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1179,6 +1219,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <CardContent className="space-y-4">
+            {earningOpportunities.map((opportunity, index) => (
+              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="text-primary mt-1">{opportunity.icon}</div>
 >>>>>>>                 <div className="flex-1">
                   <h4 className="font-medium">{opportunity.title}</h4>
@@ -1186,10 +1231,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='text-right'>
                   <Badge variant='secondary' className='mb-1'>
                     {opportunity.points}
@@ -1197,6 +1245,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className='text-xs text-muted-foreground'>
                     {opportunity.action}
                   </p>                </div>                </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 <div className="text-right">
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1209,6 +1258,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="text-right">
 >>>>>>>                   <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
@@ -1219,6 +1270,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Card>
         <Card>
           <CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1232,15 +1284,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>>               Available Rewards
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <CardTitle className='flex items-center gap-2'>
               <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">
-=======
             <CardTitle className="flex items-center gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Gift className="h-5 w-5" />
               Available Rewards
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1250,6 +1298,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardDescription>
           </CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 </div>
                 <div className="text-right space-y-1">
@@ -1258,6 +1307,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
             ))}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CardContent className='space-y-4'>
             {upcomingRewards.map(reward => (
               <div
@@ -1281,24 +1332,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className='text-sm text-muted-foreground'>
                     {reward.category}
                   </p>
-=======
           <CardContent className="space-y-4">
             {upcomingRewards.map((reward) => (
               <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
                 <div>
                   <h4 className="font-medium">{reward.title}</h4>
                   <p className="text-sm text-muted-foreground">{reward.category}</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <div className="text-right space-y-1">
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Button
                       size='sm'
                       onClick={() => handleRedeem(reward)}
@@ -1344,7 +1392,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </div>
               </div>
-=======
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       {redeeming ? 'Processing...' : 'Redeem'}
@@ -1360,11 +1407,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                 </div>;
               </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </CardContent>
@@ -1372,6 +1414,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
       <Card>
         <CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1402,6 +1445,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          <CardTitle className='flex items-center gap-2'>
+            <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
+          <CardTitle className="flex items-center gap-2">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <History className="h-5 w-5" />
             Points History
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1411,17 +1459,21 @@ ursor/fix-website-loading-errors-and-merge-6662
         <CardContent>
           {ledger.length === 0 ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 {ledger.map(entry => (
                   <div key={entry.id} className="flex items-center justify-between py-2 border-b">
                     <div>
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className='text-center py-8 text-muted-foreground'>
               No points activity yet.
             </p>
             <ScrollArea className='h-64'>
               <div className='space-y-2 mt-2'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 {ledger.map(entry => (
                   <div key={entry.id} className="flex items-center justify-between py-2 border-b">
@@ -1452,10 +1504,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>
           ) : (
             <ScrollArea className="h-64">
               <div className="space-y-2 mt-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1501,6 +1556,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 <<<<<<< HEAD
+=======
+                {ledger.map(entry => (
+                  <div key={entry.id} className="flex items-center justify-between py-2 border-b">
+                    <div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <p className='font-medium capitalize'>
                         {entry.reason |'adjustment'}
                       </p>
@@ -1512,10 +1572,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </p>
                     </div>
                     <Badge
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       variant='outline'
                       className={
 <<<<<<< HEAD
@@ -1544,16 +1600,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                     >
                       {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge>
                   </div>
-=======
-<<<<<<< HEAD
                       <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
                       <p className="text-xs text-muted-foreground">
                         {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
                       </p>
                     </div>
                     <Badge
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       variant="outline"
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
                     >;
@@ -1561,11 +1613,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {entry.delta} pts;
                     </Badge>;
                   </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
@@ -1574,8 +1621,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>
       </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Card className='text-center'>
         <CardContent className='pt-6'>
           <Star className='h-12 w-12 text-primary mx-auto mb-4' />
@@ -1585,6 +1635,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <p className='text-muted-foreground mb-4'>
             We're finalizing the redemption system. Keep earning points -
             they'll be ready to spend soon!
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>           </p>
 
@@ -1598,6 +1649,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       <Card className="text-center">
         <CardContent className="pt-6">
@@ -1605,6 +1658,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>
           <p className="text-muted-foreground mb-4">
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1618,11 +1672,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </p>
 >>>>>>>           <div className="flex gap-4 justify-center">
             <Button variant="outline" asChild>
               <Link href="/marketplace">Browse Marketplace</Link>
             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1636,15 +1693,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>>             </Button>
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button variant='outline' asChild>
               <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
-=======
             <Button variant="outline" asChild>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Link href="/community">Join Community</Link>
             </Button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1652,6 +1705,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1683,19 +1737,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

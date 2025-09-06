@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src/layout/AppLayout.tsx
 <<<<<<< HEAD
 
@@ -50,23 +51,17 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import { Footer } from '@/components/Footer'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 import React from 'react'';
 import { Outlet } from 'react-router-dom'';
 import { Footer } from '@/components/Footer';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
 interface AppLayoutProps {
 	children?: React.ReactNode
@@ -81,6 +76,7 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 				{children ?? <Outlet />}
 			</main>
 			{!hideFooter && <Footer />}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src/layout/AppLayout.tsx
 =======
 <<<<<<< HEAD
@@ -94,6 +90,13 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 		</div>
 	)
 }
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+		</div>
+	)
+}
+import React from "react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 =======
 <<<<<<< HEAD:src/layout/AppLayout.tsx
@@ -119,6 +122,7 @@ export function AppLayout({ children }: AppLayoutProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:src/layout/AppLayout.tsx
 <<<<<<< HEAD
 
@@ -155,3 +159,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src/layout/AppLayout.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/layout/AppLayout.tsx
+=======
+origin/chore/build-fixes-and-slim-app
+		</div>;
+	);
+}'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
@@ -15,6 +16,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
@@ -32,6 +36,7 @@ import {Sparkles} from "lucide-react";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -45,16 +50,21 @@ export function QuoteRequestForm() {;
 export function QuoteRequestForm() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
 =======
-export function QuoteRequestForm() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export function QuoteRequestForm() {
 
 export function QuoteRequestForm() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
 
@@ -65,6 +75,8 @@ export function QuoteRequestForm() {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
@@ -87,6 +99,7 @@ export function QuoteRequestForm() {
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
   const [isSubmitting, setIsSubmitting] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -104,6 +117,9 @@ export function QuoteRequestForm() {
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -117,6 +133,7 @@ export function QuoteRequestForm() {
       amount: 0
       type: "fixed"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -127,11 +144,15 @@ export function QuoteRequestForm() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     contactInfo: {
       name: ""
       email: ""
@@ -139,6 +160,7 @@ export function QuoteRequestForm() {
       company: ""
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -150,28 +172,37 @@ export function QuoteRequestForm() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  });
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  });
   }),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev
       ...data
     }))
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleNext = () => {
     switch (currentStep) {
       case "service": setCurrentStep("details"),
@@ -189,15 +220,20 @@ export function QuoteRequestForm() {
         break
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleBack = () => {
     switch (currentStep) {
       case "details": setCurrentStep("service"),
@@ -214,6 +250,7 @@ export function QuoteRequestForm() {
       default:
         break
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -304,6 +341,8 @@ export function QuoteRequestForm() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleSubmit = async () => {
     setIsSubmitting(true);
@@ -312,8 +351,11 @@ export function QuoteRequestForm() {
       console.log("Submitting form data:", formData);
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const handleSubmit = async () => {
@@ -327,12 +369,15 @@ export function QuoteRequestForm() {
       await new Promise(resolve => setTimeout(resolve, 1500)),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Quote Request Submitted"
         description: "We've received your request and will get back to you soon."})
@@ -475,13 +520,14 @@ function QuoteRequestForm() {
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
   }
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const renderStepContent = () => {
     switch (currentStep) {
       case "service":
@@ -497,14 +543,17 @@ function QuoteRequestForm() {
       default: return null
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -561,6 +610,8 @@ function QuoteRequestForm() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">
@@ -611,6 +662,7 @@ function QuoteRequestForm() {
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -619,6 +671,8 @@ function QuoteRequestForm() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
             </div>
           </CardContent>
@@ -626,12 +680,14 @@ function QuoteRequestForm() {
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { useNavigate } from "react-router-dom",;
@@ -1158,11 +1214,10 @@ return (<div className="container mx-auto px-4 py-12" > <div className="max-w-3x
 =======
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

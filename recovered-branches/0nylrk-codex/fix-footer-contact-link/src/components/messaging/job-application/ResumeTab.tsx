@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ResumeTab.tsx
 
 <<<<<<< HEAD
@@ -18,13 +19,11 @@ export interface ResumeTabProps {
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ResumeTab.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ResumeSelector, ResumeOption } from "../resume-selector";
 import { Button } from "@/components/ui/button";
 export interface ResumeTabProps {;
@@ -56,6 +55,7 @@ export function ResumeTab({
     <div className="space-y-4">
       <ResumeSelector onResumeSelected={handleResumeSelected} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { Button } from "@/components/ui/button",
@@ -82,17 +82,15 @@ export function ResumeTab(): any ({;
 }: ResumeTabProps) {;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {onApply && (
         <div className="mt-6">
           <Button
             onClick={onApply}
             disabled={!selectedResumeId |isSubmitting}
-=======
-=======
-=======
 
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { Button } from "@/components/ui/button",
 export interface ResumeTabProps {
@@ -147,13 +145,17 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
     <div className="space-y-4">
       <ResumeSelector onResumeSelected={handleResumeSelected} />
       
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {onApply && (
         <div className="mt-6">
           <Button 
             onClick={onApply} 
             disabled={!selectedResumeId || isSubmitting}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -175,19 +177,22 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="w-full"
           >
             {isSubmitting ? 'Submitting...' : 'Submit Application'}
           </Button>
-<<<<<<< HEAD
-=======
           
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
@@ -332,15 +337,8 @@ isSubmitting?: boolean
           )}
         </div>
       )}
-<<<<<<< HEAD
     </div>
-=======
     </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -15,8 +15,6 @@ interface CertificationsSectionProps {
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Certification  } from '@/types/resume';
 import { format } from 'date-fns';
 interface CertificationsSectionProps {
@@ -33,12 +31,16 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
   }
   if (certifications.length === 0) return null;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[]
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -47,10 +49,13 @@ interface CertificationsSectionProps {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
   certifications: Certification[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -64,6 +69,8 @@ interface CertificationsSectionProps {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -72,6 +79,7 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -83,11 +91,13 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
   },
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return format(date, 'MMM yyyy');
   };
-=======
     return format(date, 'MMM yyyy')
   },
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -99,6 +109,11 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+  if (certifications.length === 0) return null,
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>

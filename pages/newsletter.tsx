@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -35,6 +36,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "./components/Layout";
@@ -52,6 +55,7 @@ import { motion  } from './framer-motion';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -60,16 +64,22 @@ import {
 <<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
 import { motion } from 'framer-motion';
 import { 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Users,
   Calendar,
@@ -84,6 +94,7 @@ import {
   Star,
   TrendingUp,
   Award,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -116,9 +127,11 @@ import {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-  Clock,
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  Clock,
   Clock,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
@@ -142,6 +155,13 @@ import {;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+} from "lucide-react";
+  Clock
+} from 'lucide-react';
+origin/automation-improvements-final
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight
   Users
   Calendar
@@ -159,6 +179,7 @@ import {;
   Clock
 } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -173,6 +194,8 @@ import {;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const benefits = [
   {
     title: "Exclusive Content"
@@ -188,6 +211,7 @@ const benefits = [
 ;
 const benefits = [;
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -214,17 +238,18 @@ const benefits = [;
     title: "Webinar Invitations"
 =======
 <<<<<<< HEAD
-    title: "Webinar Invitations"
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    title: "Webinar Invitations"
     title: "Webinar Invitations",
-=======
     title: "Webinar Invitations"
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description:
       "Receive invitations to our expert-led webinars and virtual events."
     icon: Video
@@ -238,6 +263,7 @@ const benefits = [;
   {
     title: "Industry Insights"
     description:
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     description:;
@@ -262,6 +288,8 @@ const benefits = [;
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Stay updated with the latest trends and developments in technology.",
     icon: TrendingUp,
   },
@@ -280,6 +308,7 @@ const benefits = [;
     icon: TrendingUp
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 =======
@@ -293,12 +322,19 @@ const benefits = [;
     icon: TrendingUp
   }
 
+=======
+origin/automation-improvements-final
+      "Stay updated with the latest trends and developments in technology."
+    icon: TrendingUp
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 
 ;
 const testimonials = [;
 
   {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -322,6 +358,12 @@ const testimonials = [;
     name: "Sarah Johnson"
     role: "CTO, TechCorp"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    name: "Sarah Johnson",
+    role: "CTO, TechCorp",
+    name: "Sarah Johnson"
+    role: "CTO, TechCorp"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     content:
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
     rating: 5
@@ -344,9 +386,12 @@ const testimonials = [;
 export default function NewsletterPage() {
   const [email, setEmail] = useState("");
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: 'Sarah Johnson',
     role: 'CTO, TechCorp',
     content: 'The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.',
@@ -372,6 +417,7 @@ export default function NewsletterPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -381,19 +427,24 @@ export default function NewsletterPage() {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function NewsletterPage() {
   const [email, setEmail] = useState('');
->>>>>>> origin/automation-improvements-final
-=======
+origin/automation-improvements-final
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -464,11 +515,18 @@ export default function NewsletterPage() {;
 <<<<<<< HEAD
 =======
 =======
+=======
+    setIsLoading(true);
+
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
+<<<<<<< HEAD
 
 =======
     // Simulate API call
@@ -482,6 +540,11 @@ export default function NewsletterPage() {;
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/automation-improvements-final
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setIsSubscribed(true);
     setIsLoading(false);
   }
@@ -498,14 +561,22 @@ export default function NewsletterPage() {;
       <Head>
         <title>Newsletter - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta
           name="description"
           content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
         />
+<<<<<<< HEAD
 
         <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
 
+=======
+        <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </Head>
       <div className="min-h-screen bg-gray-50">
 =======
@@ -558,17 +629,18 @@ export default function NewsletterPage() {;
               </h1>
               <p className="text-xl mb-8 text-blue-100">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                Get exclusive insights, industry trends, and early access to new
+                features delivered directly to your inbox.
+              </p>
                 Get exclusive insights, industry trends, and early access to new
                 features delivered directly to your inbox.
               </p>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                Get exclusive insights, industry trends, and early access to new
-                features delivered directly to your inbox.
-              </p>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -595,6 +667,13 @@ export default function NewsletterPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+                Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
+              </p>
+              
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -673,6 +752,7 @@ export default function NewsletterPage() {;
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 Join thousands of professionals who rely on our newsletter for
                 the latest insights and updates.
@@ -699,6 +779,12 @@ export default function NewsletterPage() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                Join thousands of professionals who rely on our newsletter for
+                the latest insights and updates.
+                Join thousands of professionals who rely on our newsletter for the latest insights and updates.
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -867,6 +953,7 @@ function NewsletterPage() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {benefit.title}
                   </h3>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -881,18 +968,21 @@ function NewsletterPage() {
 =======
                   </h3>
 <<<<<<< HEAD
-                  <p className="text-gray-600">{benefit.description}</p>
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className="text-gray-600">{benefit.description}</p>
-=======
+                  <p className="text-gray-600">{benefit.description}</p>
                   <p className="text-gray-600">
                     {benefit.description}
                   </p>
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </motion.div>
               ))}
             </div>
@@ -940,6 +1030,7 @@ function NewsletterPage() {
 =======
                 transition={{ duration: 0.8, delay: 0 }}
               >
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -953,15 +1044,23 @@ function NewsletterPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   10K+
                 </div>
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <div className="text-4xl font-bold text-blue-600 mb-2">
+                  10K+
+                </div>
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
@@ -988,6 +1087,7 @@ function NewsletterPage() {
 =======
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1001,15 +1101,23 @@ function NewsletterPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   Weekly
                 </div>
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <div className="text-4xl font-bold text-blue-600 mb-2">
+                  Weekly
+                </div>
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div
@@ -1057,6 +1165,7 @@ function NewsletterPage() {
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 Don't just take our word for it. Here's what our community has
                 to say.
@@ -1083,6 +1192,12 @@ function NewsletterPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Don't just take our word for it. Here's what our community has to say.
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                Don't just take our word for it. Here's what our community has
+                to say.
+                Don't just take our word for it. Here's what our community has to say.
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1225,22 +1340,19 @@ function NewsletterPage() {
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                       <Star
                         key={i}
                         className="w-4 h-4 text-yellow-400 fill-current"
                       />
-<<<<<<< HEAD
-=======
-=======
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     ))}
                   </div>;
                   <p className="text-gray-600 mb-4 italic">;
@@ -1286,17 +1398,18 @@ function NewsletterPage() {
               </h2>
               <p className="text-xl mb-8 text-green-100">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                Subscribe now and start receiving valuable insights delivered to
+                your inbox every week.
+              </p>
                 Subscribe now and start receiving valuable insights delivered to
                 your inbox every week.
               </p>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                Subscribe now and start receiving valuable insights delivered to
-                your inbox every week.
-              </p>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -1323,6 +1436,13 @@ function NewsletterPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+                Subscribe now and start receiving valuable insights delivered to your inbox every week.
+              </p>
+              
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -1377,6 +1497,7 @@ function NewsletterPage() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 
 }
 
@@ -1483,3 +1604,9 @@ function NewsletterPage() {
 =======
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+}
+origin/automation-improvements-final
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

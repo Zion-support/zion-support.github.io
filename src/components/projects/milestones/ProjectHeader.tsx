@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const router = useRouter(); // Changed from useNavigate to useRouter
@@ -9,6 +9,8 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import { useRouter  } from 'next/router';
 import { Button } from '@/components/ui/button';
@@ -16,10 +18,13 @@ import { ArrowLeft } from 'lucide-react'
 interface ProjectHeaderProps {
   title: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { useRouter } from 'next/router'
 import { Button } from '@/components/ui/button'
@@ -39,8 +44,11 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {;
           onClick={() => router.back()} // Changed to router.back()        >
           <ArrowLeft className='h-4 w-4 mr-1' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react',;
 import { useRouter } from 'next/router',;
@@ -50,11 +58,9 @@ interface ProjectHeaderProps {;
   title: string;
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const router = useRouter(); // Changed from useNavigate to useRouter
   return (
-<<<<<<< HEAD
     <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>
       <div className='flex items-center'>
         <Button
@@ -63,7 +69,6 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
           className='mr-2'
           onClick={() => router.back()} // Changed to router.back()        >
           <ArrowLeft className='h-4 w-4 mr-1' />
-=======
 import React from 'react',;
 import { useRouter } from 'next/router',;
 import { Button } from '@/components/ui/button';
@@ -76,6 +81,7 @@ interface ProjectHeaderProps {;
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const router = useRouter(); // Changed from useNavigate to useRouter
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>
       <div className='flex items-center'>
@@ -90,6 +96,8 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
       <div className="flex items-center">
         <Button 
@@ -101,6 +109,7 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
           <ArrowLeft className="h-4 w-4 mr-1" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -108,6 +117,8 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Back
 =======
 >>>>>>>           Back
@@ -119,6 +130,7 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -128,16 +140,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

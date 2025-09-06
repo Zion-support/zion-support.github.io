@@ -31,7 +31,15 @@ export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
   resultCount !== 1 ? 's' : '' ;
 }`) ;
 }</span>) ;
+<<<<<<< HEAD
 
 }</div>) ;
 }'"
 
+=======
+:temp_broken_files/talent/ResultsHeader.tsx
+}</div>) ;"}'"
+}</div>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/ResultsHeader.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

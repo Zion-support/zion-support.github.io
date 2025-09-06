@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,23 @@ import {;
 =======
 
 
+=======
+
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
+import { AppMetadataValues } from "./MetadataManager";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+  Form
+  FormControl
+  FormDescription
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Form,
   FormControl,
   FormDescription,
@@ -27,6 +45,10 @@ import {;
   FormItem,
   FormLabel,
   FormMessage,;
+<<<<<<< HEAD
+=======
+} from "@/components/ui/form";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -35,6 +57,7 @@ import {;
 } from "@/components/ui/form";
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 
 <<<<<<< HEAD
@@ -58,6 +81,9 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { AppMetadataValues } from "./MetadataManager",
@@ -67,6 +93,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from "lucide-react",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -95,10 +122,16 @@ interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
@@ -115,12 +148,20 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const { control, register, watch, setValue } = form;
   const keywords = watch("keywords");
   const platform = watch("platform");
+<<<<<<< HEAD
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 const { control, register, watch, setValue } = form;
+=======
+
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+  const { control, register, watch, setValue } = form;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const keywords = watch("keywords");
   const platform = watch("platform");
@@ -128,7 +169,14 @@ const { control, register, watch, setValue } = form;
     if (e.key === "Enter" |e.key === ",") {
       e.preventDefault();
       const value = e.currentTarget.value.trim();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const { control, register, watch, setValue } = form,
+  const keywords = watch("keywords"),
+  const platform = watch("platform"),
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
       e.preventDefault(),
@@ -138,6 +186,7 @@ const { control, register, watch, setValue } = form;
 
 =======
       
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -173,12 +222,18 @@ const { control, register, watch, setValue } = form;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (value && !keywords.includes(value)) {
         setValue("keywords", [...keywords, value]),
         e.currentTarget.value = ""
       }
     }
+<<<<<<< HEAD
 }
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const removeKeyword = (keyword: string) => {
     setValue(
       "keywords"
@@ -188,11 +243,14 @@ const { control, register, watch, setValue } = form;
   }
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
   const longDescription = watch("longDescription");
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 =======
 
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const removeKeyword = (keyword: string) => {
@@ -205,8 +263,11 @@ const { control, register, watch, setValue } = form;
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
   const longDescription = watch("longDescription"),
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -235,11 +296,17 @@ const { control, register, watch, setValue } = form;
                   </FormDescription>
                 </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
+=======
+              )}
+            />
+            <FormField
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { UseFormReturn } from "react-hook-form",;
 import { AppMetadataValues } from "./MetadataManager",;
@@ -531,6 +598,7 @@ if ( {) {
               )}
             />;
             <FormField;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -540,6 +608,8 @@ if ( {) {
             <FormField
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               control={control}
               name="shortDescription"
               render={({ field }) => (
@@ -558,6 +628,7 @@ if ( {) {
                 </FormItem>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -571,12 +642,19 @@ if ( {) {
             <FormField
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            />
+            <FormField
+            />;
+            <FormField;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               control={control}
               name="longDescription"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -589,6 +667,10 @@ if ( {) {
 <Textarea
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                    <Textarea
+                    <Textarea 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
@@ -601,6 +683,7 @@ if ( {) {
                 </FormItem>
               )}
             />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -620,6 +703,9 @@ if ( {) {
               <FormLabel htmlFor="keywords">Keywords</FormLabel>;
               <Input
 =======
+=======
+            
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div>
               <FormLabel htmlFor="keywords">Keywords</FormLabel>
               <Input 
@@ -632,6 +718,7 @@ if ( {) {
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 <<<<<<< HEAD
               />
+<<<<<<< HEAD
 
 =======
 
@@ -700,12 +787,20 @@ if ( {) {
 =======
               />
 
+=======
+              
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
                   <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
                     {keyword}
+<<<<<<< HEAD
 <button
 
+=======
+                    <button
+                    <button 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       type="button"
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300"
@@ -720,6 +815,7 @@ if ( {) {
                 Add keywords to improve discoverability (max 100 characters total)
               </FormDescription>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -774,6 +870,9 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+            
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <FormField
               control={control}
               name="version"
@@ -781,6 +880,7 @@ if ( {) {
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -839,6 +939,9 @@ if ( {) {
     </Card>;
 =======
 <Input placeholder="e.g., 1.0.0" {...field} />
+=======
+                    <Input placeholder="e.g., 1.0.0" {...field} />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </FormControl>
                 </FormItem>
               )}
@@ -847,6 +950,7 @@ if ( {) {
         </Form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
   );
 }
@@ -903,3 +1007,23 @@ if (value && !keywords.includes (value) ) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/MetadataForm.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+
+);
+                    <Input 
+                      placeholder="e.g., 1.0.0"
+                      {...field}
+                    />;
+                  </FormControl>;
+                </FormItem>;
+              )}
+            />;
+          </div>;
+        </Form>;
+      </CardContent>;
+    </Card>;
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

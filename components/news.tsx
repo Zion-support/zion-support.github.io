@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 };
@@ -99,19 +100,15 @@ return (<UltraFuturisticBackground> <div className="min - h-screen" > <Head> <ti
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 featured: true
 }
-=======
  featured: true 
-=======
 featured: true 
-=======
  featured: true 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 {
   title: 'Cybersecurity Partnership with Global Tech Leaders';
 excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.';
@@ -319,18 +316,15 @@ export default function News () {
 }</span>) )
 }</div> <Link > Read More <ArrowRight className="w-4 h-4 ml-1" /> </a> </div> <section className="py-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-7xl mx-auto" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6" > <Newspaper className="w-4 h-4 mr-2" /> <section className="relative py-20 px-4" > <div className="container mx-auto max-w-6xl" > <motion.div > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6" > Latest News & Updates </div> <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-6" > News & Press </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Stay updated with the latest developments, breakthroughs, and innovations from Zion Tech Group and the technology industry. </p> </motion.div> > {
   categories.map ( (category, index) => (<button key= {
-<<<<<<< HEAD
   category
 }import {
   {
   {Search, Calendar, Clock, User, Tag;
-=======
   category 
 }import {;
   {;
   {;
   Search, Calendar, Clock, User, Tag;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ArrowRight, ExternalLink, TrendingUp;
 BookOpen, Globe, Video
 }from 'lucide-react';
@@ -855,6 +849,7 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -894,22 +889,24 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
   opacity: 0, y: 20
 =======
 <<<<<<< HEAD
-  duration: 0.8
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  duration: 0.8
   duration: 0.8 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }viewport= {
   {
-<<<<<<< HEAD
   once: true
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Subscribe to our newsletter for the latest news, insights, and updates from Zion Tech Group. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500" /> <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300" > Subscribe </button> </div> </motion.div> </div> </section>
 }</span> </div> <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.article>) )
 }</div> </div> </section> > Latest News </motion.h2> > <div className="h-full bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300" > <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center" > <BookOpen className="w-12 h-12 text-cyan-400" /> </div> </span> </div> </div> </div> </motion.article>) )
 }</div> </div> </section> > Upcoming Events </motion.h2> </div> </div> <a > Register Now <ExternalLink className="w-4 h-4" /> </a> </div> </div> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8" > Get the latest news, insights, and updates delivered directly to your inbox. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email address" className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:bg-white/20 transition-all duration-300" /> <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Subscribe </button> </div> <p className="text-sm text-gray-400 mt-4" > No spam, unsubscribe at any time. We respect your privacy. </p> </motion.div> </div> </section> <div className="max-w-7xl mx-auto" > <motion.div > <h2 className="text-4xl font-bold mb-4" >Latest News</h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Stay updated with our most recent developments and announcements </p> </motion.div> </div> </div> <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2" > Read More <ArrowRight className="w-4 h-4" /> </button> </motion.article>) )
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   once: true 
 
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Subscribe to our newsletter for the latest news, insights, and updates from Zion Tech Group. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500" /> <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300" > Subscribe </button> </div> </motion.div> </div> </section>
@@ -917,6 +914,7 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
 }</div> </div> </section> > Latest News </motion.h2> > <div className="h-full bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300" > <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center" > <BookOpen className="w-12 h-12 text-cyan-400" /> </div> </span> </div> </div> </div> </motion.article>) ) 
 }</div> </div> </section> > Upcoming Events </motion.h2> </div> </div> <a > Register Now <ExternalLink className="w-4 h-4" /> </a> </div> </div> </motion.div>) ) 
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8" > Get the latest news, insights, and updates delivered directly to your inbox. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email address" className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:bg-white/20 transition-all duration-300" /> <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Subscribe </button> </div> <p className="text-sm text-gray-400 mt-4" > No spam, unsubscribe at any time. We respect your privacy. </p> </motion.div> </div> </section> <div className="max-w-7xl mx-auto" > <motion.div > <h2 className="text-4xl font-bold mb-4" >Latest News</h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Stay updated with our most recent developments and announcements </p> </motion.div> </div> </div> <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2" > Read More <ArrowRight className="w-4 h-4" /> </button> </motion.article>) ) 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }</div> </div> </section> Stay Updated </h2> <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8" > Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing. <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30" > <div className="max-w-4xl mx-auto text-center" > <motion.div initial= {
@@ -929,16 +927,19 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }</div> </div> </section> Stay Updated </h2> <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8" > Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing. <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30" > <div className="max-w-4xl mx-auto text-center" > <motion.div initial= {
   {
-<<<<<<< HEAD
   opacity: 0, y: 20
-=======
   opacity: 0, y: 20 
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }animate= {
   {
   opacity: 1, y: 0
@@ -986,11 +987,15 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
 }</div> </div> </section> <motion.div initial= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   opacity: 0, y: 30
 }whileInView= {
   {
   opacity: 1, y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 }transition= {
   {
@@ -998,6 +1003,8 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
   duration: 0 && 0.8 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   opacity: 0, y: 30 
 
 <<<<<<< HEAD
@@ -1007,7 +1014,6 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
   {
   opacity: 1, y: 0 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.8
@@ -1029,6 +1035,7 @@ please contact our communications team. </p> <div className="flex flex-col sm:fl
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2017,11 +2024,11 @@ className="flex flex-wrap justify-center gap-4"
               </button>
 =======
 <<<<<<< HEAD
-  duration: 0.8
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  duration: 0.8
   duration: 0.8 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }viewport= {
   {
   once: true
@@ -2031,12 +2038,9 @@ className="flex flex-wrap justify-center gap-4"
   opacity: 0, y: 20
 }whileInView= {
   {
-<<<<<<< HEAD
   opacity: 1, y: 0
-=======
   opacity: 1, y: 0 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.8
@@ -2095,12 +2099,13 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 }</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>)       {/* Latest News Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
           <motion.h2
-=======
           <motion.h2 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -2153,6 +2158,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* Upcoming Events Section */}
@@ -2294,22 +2300,23 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Upcoming Events Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Upcoming Events Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -2462,14 +2469,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                         {event.location}
                       </div>
                     </div>
-<<<<<<< HEAD
-=======
                     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <a
                       href={event.registration}
                       target="_blank"
@@ -2487,6 +2487,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2510,12 +2511,9 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -2717,14 +2715,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Newsletter Signup */}
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated
@@ -2861,14 +2852,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* News Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -2983,14 +2967,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Recent News */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -3131,14 +3108,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -4285,11 +4255,8 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
 =======
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<<<<<<< HEAD
           <motion.div
-=======
           <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -4526,14 +4493,7 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
                 </button>
               ))}
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Featured Article */}
             {newsArticles.filter(article => article.featured).map((article) => (
               <div key={article.id} className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 mb-12 border border-cyan-400/30">
@@ -4570,6 +4530,7 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
               </div>
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {/* News Grid */}
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
@@ -4598,8 +4559,9 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* News Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.filter(article => !article.featured).map((article) => (
@@ -4631,6 +4593,7 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
               ))}
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {/* Newsletter Signup */}
             <div className=&quot;text-center mt-16&quot;>
@@ -4650,12 +4613,9 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             {/* Newsletter Signup */}
             <div className="text-center mt-16">
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
@@ -4680,9 +4640,9 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -4692,3 +4652,7 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  ),
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

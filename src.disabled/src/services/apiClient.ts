@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,6 +9,10 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const apiClient = axios.create({}}) ;
 apiClient.interceptors.response.use((response) => response,  async(error) => {;
     if(error.response?.status = == 401) {;
@@ -26,6 +31,7 @@ apiClient && apiClient.interceptors.response && response.use((response) => respo
     return Promise && Promise.throw new Error(error) }) ;
 export default apiClient;
 <<<<<<< HEAD
+<<<<<<< HEAD
 const apiClient = axios.create({}}) ; apiClient.interceptors.response.use((response) => response,async(error) => {; if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) {; if(typeof window !== 'null') {}; window.location.assign('/login')} } else {}; toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
 
 =======
@@ -41,3 +47,11 @@ const apiClient = axios && axios.create({}}) ; apiClient && apiClient.intercepto
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+const apiClient = axios.create({}}) ; apiClient.interceptors.response.use((response) => response,async(error) => {; if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) {; if(typeof window !== 'null') {}; window.location.assign('/login')} } else {}; toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
+const apiClient = axios.create({}}) ; apiClient.interceptors.response.use((response) => response,async(error) => {; if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) {; if(typeof window !== 'null') {}; window.location.assign('/login')} } else {}; toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
+const apiClient = axios.create({}}) ; apiClient.interceptors.response.use((response) => response,async(error) => {; if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) {; if(typeof window !== 'null') {}; window.location.assign('/login')} } else {}; toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
+const apiClient = axios.create({}}) ; apiClient.interceptors.response.use((response) => response,async(error) => {; if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) {; if(typeof window !== 'null') {}; window.location.assign('/login')} } else {}; toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

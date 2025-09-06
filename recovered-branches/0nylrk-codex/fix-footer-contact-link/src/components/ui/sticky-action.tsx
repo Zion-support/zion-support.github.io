@@ -27,26 +27,18 @@ interface StickyActionProps {;
 
 =======
 
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react",
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-=======
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import {cn} from "@/lib/utils";
 import {motion, AnimatePresence} from "framer-motion";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface StickyActionProps {
   className?: string;
 
   children: React.ReactNode
 
   showAfterScroll?: number;
-<<<<<<< HEAD
-=======
-=======
   position?: "bottom" | "top"
 }
 
@@ -54,10 +46,12 @@ export function StickyAction({;
   className;
   children;
   showAfterScroll = 300;
-=======
 import React, { useEffect, useState } from "react",
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { cn } from "@/lib/utils",
 import { motion, AnimatePresence } from "framer-motion",
 
@@ -65,6 +59,7 @@ interface StickyActionProps {
   className?: string,
   children: React.ReactNode,
   showAfterScroll?: number,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   position?: "bottom" | "top"
@@ -76,10 +71,11 @@ export function StickyAction({
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   position?: "bottom" | "top"
 }
 export function StickyAction({
-<<<<<<< HEAD
   className;
   children;
 
@@ -87,16 +83,19 @@ export function StickyAction({
   position = "bottom"
 }: StickyActionProps) {
   const [isVisible, setIsVisible] = useState(false);
-=======
   className,
   children,
   showAfterScroll = 300,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   position = "bottom"
 }: StickyActionProps) {
   const [isVisible, setIsVisible] = useState(false),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   position?: "bottom" | "top";
@@ -122,6 +121,8 @@ export function StickyAction(): any ({;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
@@ -185,15 +186,17 @@ if ( {) {
       } else {
         setIsVisible(false)
       }
-<<<<<<< HEAD
     }
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [showAfterScroll]);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
 
     window.addEventListener("scroll", handleScroll),
@@ -203,6 +206,7 @@ if ( {) {
   }, [showAfterScroll]),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const positionClasses = {
     bottom: "bottom-4"
@@ -214,21 +218,25 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const positionClasses = {
     bottom: "bottom-4"
     top: "top-20"
-<<<<<<< HEAD
   }
-=======
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -237,6 +245,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
@@ -244,12 +254,14 @@ if ( {) {
           className={cn(
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
             positionClasses[position];
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
@@ -453,11 +465,6 @@ useEffect ( () => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className
           )}
         >

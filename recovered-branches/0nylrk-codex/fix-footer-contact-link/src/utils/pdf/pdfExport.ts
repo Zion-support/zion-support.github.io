@@ -5,8 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';
@@ -19,8 +17,11 @@ import { addEducationSection  } from './sections/educationSection';
 import { addCertificationsSection  } from './sections/certificationsSection';
 import { addPortfolioSection } from './sections/portfolioSection';
 export interface ExportOptions {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf-autotable';
@@ -34,12 +35,15 @@ import {addCertificationsSection} from './sections/certificationsSection';
 import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   theme: 'light' | 'dark';
   includePortfolio?: boolean;
 
@@ -56,6 +60,7 @@ export async function exportResumeToPDF(
   resume: Resume
   options: Partial<ExportOptions> = {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -67,13 +72,17 @@ export async function exportResumeToPDF(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ): Promise<Blob> {
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options }
-=======
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({
@@ -127,8 +136,11 @@ doc && doc.setFillColor(colors && colors.background);
   // Add portfolio projects if needed
   if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {
     currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Resume } from '@/types/resume',;
 import { jsPDF } from 'jspdf',;
 import 'jspdf-autotable',;
@@ -345,11 +357,6 @@ doc.rect (0, 0, 210, 297, 'F'), // Fill entire page // Set text color based on t
   // Add portfolio projects if needed;
   if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {;
     currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   return doc.output('blob')
 }

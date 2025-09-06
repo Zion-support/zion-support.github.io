@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,15 @@ const React from";react" export: default function StarRating({ value }) { return
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+:src.disabled/components/StarRating.jsx
+import React from\';react\' \"export\": default function StarRating({ value }) { return [...Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid=\'full-star\' className=\'text-yellow-400\'/> : \"value\": >= idx - 0.5 ? <FaStarHalfAlt key={idx} data-testid=\'half-star\' className=\'text-yellow-400\'/> : <\"FaRegStar\": key={idx} data-testid=\'empty-star\' className=\'text-yellow-400\'/> })} \''\';\';
+const React from";react" export: default function StarRating({ value }) { return [.Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid="full-star" className="text-yellow-400"/> : value: >= idx - 0.5 ? <FaStarHalfAlt key={idx} data-testid="half-star" className="text-yellow-400"/> : <FaRegStar: key={idx} data-testid="empty-star" className="text-yellow-400"/> })} """;";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from\';react\' \"export\": default function StarRating({ value }) { return [...Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid=\'full-star\' className=\'text-yellow-400\'/> : \"value\": >= idx - 0.5 ? <FaStarHalfAlt key={idx} data-testid=\'half-star\' className=\'text-yellow-400\'/> : <\"FaRegStar\": key={idx} data-testid=\'empty-star\' className=\'text-yellow-400\'/> })} \''\';\';
+const React from";react" export: default function StarRating({ value }) { return [.Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid="full-star" className="text-yellow-400"/> : value: >= idx - 0.5 ? <FaStarHalfAlt key={idx} data-testid="half-star" className="text-yellow-400"/> : <FaRegStar: key={idx} data-testid="empty-star" className="text-yellow-400"/> })} """;";'"'"
+:temp_exclude/src.disabled/components/StarRating.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React from';react' "export": default function StarRating({ value }) { return [...Array(5)].map((_,i) => { const idx = i + 1 return value >= idx ? <FaStar key={idx} data-testid='full-star' className='text-yellow-400'/> : "value": >= idx - 0.5 ? <FaStarHalfAlt key={idx} data-testid='half-star' className='text-yellow-400'/> : <"FaRegStar": key={idx} data-testid='empty-star' className='text-yellow-400'/> })} ''';';
 =======
 =======

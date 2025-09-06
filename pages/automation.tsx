@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -8,6 +9,8 @@ import Head from 'next / head';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -40,9 +43,8 @@ export default function AutomationPage() {
   Check,;
   BarChart3,;
 } from 'lucide-react';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -78,6 +80,8 @@ export default function AutomationPage() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 
 import {
@@ -308,13 +312,8 @@ export default function AutomationPage() {_const _features = [
     'Custom integration support',  ];
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
 import Head from 'next/head',
 import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AutomationPage() {
   const features = [
     {
@@ -335,12 +334,10 @@ export default function AutomationPage() {
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Smart Triggers',
-<<<<<<< HEAD
       description: 'Automated responses based on events and conditions',
     },;
   ];
 
-=======
       description: 'Automated responses based on events and conditions'
       } catch (error) {
     console.error("Error:", error);
@@ -348,11 +345,9 @@ export default function AutomationPage() {
   }
 }
   ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const benefits = [
     'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -365,7 +360,6 @@ export default function AutomationPage() {
 =======
         <meta name="description" content="AI-powered workflow automation platform that streamlines your business processes and increases efficiency." />
       </Head>
-<<<<<<< HEAD
       <div className='min-h-screen bg-black'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 relative overflow-hidden'>
@@ -381,8 +375,11 @@ export default function AutomationPage() {
               </div>
             </div>
             <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="min-h-screen bg-black">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -404,6 +401,7 @@ export default function AutomationPage() {
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -419,12 +417,15 @@ export default function AutomationPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Automation Hub
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
               AI-powered workflow automation platform that streamlines your business processes and increases efficiency.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -439,13 +440,15 @@ export default function AutomationPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='flex flex-col sm:flex-row gap-6 justify-center'>
               <a href='/contact' className='shadow-2xl shadow-blue-500/25'>
                 Start Automating
                 <ArrowRight className='w-5 h-5 ml-2' />
               </a>
-=======
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -453,6 +456,8 @@ export default function AutomationPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <a
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Start Automating
@@ -550,14 +555,16 @@ export default function AutomationPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */}
         <section className='py-24'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -573,6 +580,7 @@ export default function AutomationPage() {
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -588,6 +596,8 @@ export default function AutomationPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 Automation Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -595,6 +605,7 @@ export default function AutomationPage() {
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -609,9 +620,11 @@ export default function AutomationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 =======
 <<<<<<< HEAD
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -619,6 +632,8 @@ export default function AutomationPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {features.map((feature, index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
@@ -700,7 +715,6 @@ export default function AutomationPage() {
   }
 }
                   </h3>
-<<<<<<< HEAD
                   <p className='text-gray-400 leading-relaxed'>                    {feature.description}
                   </p>
                 </div>
@@ -712,7 +726,6 @@ export default function AutomationPage() {
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
-=======
                   <p className="text-gray-400 leading-relaxed">
                     {feature.description  } catch (error) {
     console.error("Error:", error);
@@ -738,12 +751,15 @@ export default function AutomationPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Transform Your Business with Automation
@@ -770,6 +786,7 @@ export default function AutomationPage() {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -781,19 +798,25 @@ export default function AutomationPage() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='relative'>
                 <div className='bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20'>
                   <div className='text-center'>
                     <RefreshCw className='w-24 h-24 mx-auto mb-6 text-blue-400' />
                     <h3 className='text-2xl font-bold text-white mb-4'>
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
                   <div className="text-center">
                     <RefreshCw className="w-24 h-24 mx-auto mb-6 text-blue-400" />
                     <h3 className="text-2xl font-bold text-white mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -810,6 +833,8 @@ export default function AutomationPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       Smart Workflows
                     </h3>
                     <p className="text-gray-300 mb-6">
@@ -829,12 +854,19 @@ export default function AutomationPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 
+=======
+        {/* CTA Section */}
+        <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700'>
+          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -843,9 +875,12 @@ export default function AutomationPage() {
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Ready to Automate Your Workflows?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -865,6 +900,7 @@ export default function AutomationPage() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1118,13 +1154,11 @@ className='border-white text-white hover:bg-white hover:text-blue-600'>         
               >                Schedule Demo;
 =======
 <<<<<<< HEAD
-);
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+);
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
         <section className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1221,6 +1255,7 @@ className='border-white text-white hover:bg-white hover:text-blue-600'>         
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1236,3 +1271,5 @@ className='border-white text-white hover:bg-white hover:text-blue-600'>         
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

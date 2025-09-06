@@ -149,6 +149,7 @@ if ( {) {
   } catch (e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -232,6 +233,8 @@ if ( {) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
@@ -319,7 +322,6 @@ exports && exports.handler = async function() {
 },
 =======
 
-=======
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };async function fetchHtml(url) {
@@ -376,6 +378,7 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -446,3 +449,5 @@ exports.handler = async function() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

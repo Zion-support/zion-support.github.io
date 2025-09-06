@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
 import {Briefcase} from "lucide-react";
 =======
@@ -14,11 +15,17 @@ import { Briefcase } from "lucide-react",
 <<<<<<< HEAD
 =======
 =======
-import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
-import {Briefcase} from "lucide-react";
 =======
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
+import { Briefcase } from "lucide-react";
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
+import {Briefcase} from "lucide-react";
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
+import { Briefcase } from "lucide-react",
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -32,6 +39,8 @@ import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";
 import { Briefcase } from "lucide-react";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
@@ -64,6 +73,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               <p className="text-zion-slate">{exp.description}</p>
             </div>
           </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,6 +95,8 @@ interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from "lucide-react";
 interface ProfileExperienceProps {;
@@ -113,10 +125,13 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
               <p className="text-zion-slate">{exp.description}</p>;
             </div>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ))}
       </div>
     </div>
@@ -157,6 +172,7 @@ export function ProfileExperience(): any ({ experience }: ProfileExperienceProps
     </div>;
   );
 }
+<<<<<<< HEAD
 import { ProfileExperience, as, ProfileExperienceType  } from '@/types / profile';
 import { Briefcase  } from './lucide-react';
 interface ProfileExperienceProps {
@@ -248,3 +264,11 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        ))}
+      </div>
+    </div>
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

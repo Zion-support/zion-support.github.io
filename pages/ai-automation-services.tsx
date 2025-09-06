@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { motion } from 'framer-motion';
 import {;
@@ -68,6 +69,8 @@ const service_highlights = [;
       'Multi - language support',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -214,14 +217,16 @@ const benefits = [
     icon: BarChart3
     color: 'text-pink-400'
   },];
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {motion} from 'framer-motion';
 import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -513,8 +518,6 @@ const benefits = [
     color: 'text-pink-400',
   },];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { motion } from 'framer-motion';
 import {;
   Zap, Brain, Code, Shield, Users, TrendingUp,;
@@ -600,16 +603,10 @@ const benefits = [;
   }
 }
 ],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AIAutomationServices() {
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>
           AI Automation Services - Zion Tech Group | Advanced AI-Powered
           Automation Solutions
@@ -682,6 +679,7 @@ export default function AIAutomationServices() {
           name='contact:address'
           content='364 E Main St STE 1008 Middletown DE 19709'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -693,6 +691,26 @@ export default function AIAutomationServices() {
     <Layout>
       <Head>
 
+=======
+        />
+        <meta name='contact:website' content='https://ziontechgroup.com' />
+      </Head>
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">AI Automation Services</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your business with our advanced AI automation solutions designed to streamline operations and boost productivity.
+          </p>
+        </div>
+      {/* Hero Section */}
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg'>
+        <div className='absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent'></div>
+        <div className='relative z-10 container mx-auto px-4 text-center'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='max-w-4xl mx-auto'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <title>AI Automation Services - Zion Tech Group | Advanced AI-Powered Automation Solutions</title>
         <meta name="description" content="Transform your business with our advanced AI automation services. From code generation to DevOps automation, customer support to marketing - automate everything with AI intelligence." />
         <meta name="keywords" content="AI automation, code generation, DevOps automation, customer support AI, marketing automation, sales intelligence, Zion Tech Group" />
@@ -752,6 +770,7 @@ export default function AIAutomationServices() {
   }
 }
             className="max-w-4xl mx-auto"
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -941,6 +960,8 @@ export default function AIAutomationServices() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8">
               <Zap className="w-5 h-5 text-emerald-400" />
@@ -948,6 +969,7 @@ export default function AIAutomationServices() {
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
@@ -959,11 +981,13 @@ export default function AIAutomationServices() {
               <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <h1 className='text-5xl md:text-7xl font-bold mb-6 neon-text text-white'>
               <span className='bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent'>
-=======
             <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
               <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -971,6 +995,8 @@ export default function AIAutomationServices() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 AI Automation
               </span>
               <br />
@@ -978,24 +1004,30 @@ export default function AIAutomationServices() {
             </h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
               Transform your business operations with cutting-edge AI
               automation. From code generation to customer support, automate
               everything with intelligent AI that learns and adapts to your
               needs.
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>
                 <button className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1005,6 +1037,8 @@ export default function AIAutomationServices() {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your business operations with cutting-edge AI automation. From code generation to customer support,
               automate everything with intelligent AI that learns and adapts to your needs.
@@ -1012,6 +1046,7 @@ export default function AIAutomationServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="#services" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1031,10 +1066,13 @@ export default function AIAutomationServices() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <span>Explore Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1789,16 +1827,12 @@ export default function AIAutomationServices() {_return (_<Layout>
                 </button>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link href='/contact' className='group'>
                 <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
-=======
               <Link href="/contact" className="group">
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -1807,6 +1841,7 @@ export default function AIAutomationServices() {_return (_<Layout>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         {/* Floating Elements */}
@@ -1827,10 +1862,11 @@ export default function AIAutomationServices() {_return (_<Layout>
           <motion.div
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Floating Elements */}
         <div className='absolute top-20 left-10 opacity-20 animate-float'>
           <div className='w-4 h-4 bg-emerald-400 rounded-full'></div>
-=======
         {/* Floating Elements */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1838,11 +1874,6 @@ export default function AIAutomationServices() {_return (_<Layout>
 }
         <div className="absolute top-20 left-10 opacity-20 animate-float">
           <div className="w-4 h-4 bg-emerald-400 rounded-full"></div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
         <div className="absolute top-40 right-20 opacity-30 animate-float" style={{ animationDelay: '1s' }}>
           <div className="w-6 h-6 bg-teal-400 rounded-full"></div>
@@ -1851,7 +1882,6 @@ export default function AIAutomationServices() {_return (_<Layout>
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Service Highlights */}
       <section
         id='services'
@@ -1867,7 +1897,6 @@ export default function AIAutomationServices() {_return (_<Layout>
             className=&quot;text-center mb-16&quot;
 =======
             className='text-center mb-16'
-=======
       {/* Service Highlights */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1898,11 +1927,14 @@ export default function AIAutomationServices() {_return (_<Layout>
 }
             className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               AI Automation <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Services</span>
@@ -1912,11 +1944,14 @@ export default function AIAutomationServices() {_return (_<Layout>
             </p>
           </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {serviceHighlights.map((service, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights.map((service, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -1941,7 +1976,6 @@ export default function AIAutomationServices() {_return (_<Layout>
                       <CheckCircle className=&quot;w-5 h-5 text-emerald-400 mr-3 flex-shrink-0&quot; />
 =======
                 className='futuristic-card p-6 group hover:scale-105 transition-all duration-300'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceHighlights.map((service, index) => (
               <motion.div
@@ -1971,16 +2005,10 @@ export default function AIAutomationServices() {_return (_<Layout>
   }
 }
                 className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-full h-full text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {service.title}
                 </h3>
@@ -1988,22 +2016,15 @@ export default function AIAutomationServices() {_return (_<Layout>
                   {service.description}
                 </p>
                 <ul className='space-y-2'>
-=======
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 <ul className="space-y-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <span>{feature}</span>
                     </li>
-<<<<<<< HEAD
                   ))}
                 </ul>
               </motion.div>
@@ -2030,7 +2051,6 @@ export default function AIAutomationServices() {_return (_<Layout>
             className=&quot;text-center mb-16&quot;
 =======
             className='text-center mb-16'
-=======
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2076,11 +2096,14 @@ export default function AIAutomationServices() {_return (_<Layout>
 }
             className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span> Portfolio
@@ -2090,11 +2113,14 @@ export default function AIAutomationServices() {_return (_<Layout>
             </p>
           </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
             {advancedAIAutomationServices2025.map((service, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedAIAutomationServices2025.map((service, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -2107,7 +2133,6 @@ export default function AIAutomationServices() {_return (_<Layout>
                 className=&quot;animated-border&quot;
 =======
                 className='animated-border'
-=======
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {advancedAIAutomationServices2025.map((service, index) => (
               <motion.div
@@ -2138,11 +2163,14 @@ export default function AIAutomationServices() {_return (_<Layout>
 }
                 className="animated-border"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className="h-full">
                   <div className="flex items-start justify-between mb-4">
@@ -2174,12 +2202,15 @@ export default function AIAutomationServices() {_return (_<Layout>
 }
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className='text-gray-300 mb-4 leading-relaxed'>
                     {service.description}
                   </p>
@@ -2233,8 +2264,11 @@ export default function AIAutomationServices() {_return (_<Layout>
                       href={service.link}
                       className='text-emerald-400 hover:text-emerald-300 font-medium flex items-center space-x-2 group'
                     >
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="flex items-center justify-between mb-4">
@@ -2311,22 +2345,16 @@ export default function AIAutomationServices() {_return (_<Layout>
                   </div>
                   <div className="flex items-center justify-between">
                     <Link href={service.link} className="text-emerald-400 hover:text-emerald-300 font-medium flex items-center space-x-2 group">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
-<<<<<<< HEAD
                     <Link
                       href='/contact'
                       className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
                     >                      Get Started
-=======
                     <Link href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
                       Get Started
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2334,10 +2362,13 @@ export default function AIAutomationServices() {_return (_<Layout>
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Link>
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2353,6 +2384,8 @@ export default function AIAutomationServices() {_return (_<Layout>
           </div>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
 <<<<<<< HEAD
 </div>;
@@ -2397,7 +2430,6 @@ export default function AIAutomationServices() {_return (_<Layout>
             className="text-center mb-16"
 =======
             className='text-center mb-16'
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2436,12 +2468,15 @@ export default function AIAutomationServices() {_return (_<Layout>
 }
             className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span>
@@ -2450,6 +2485,7 @@ export default function AIAutomationServices() {_return (_<Layout>
               Transform your business with intelligent automation that delivers measurable results
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2467,6 +2503,8 @@ export default function AIAutomationServices() {_return (_<Layout>
             {benefits.map((benefit, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map((benefit, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -2597,7 +2635,6 @@ export default function AIAutomationServices() {_return (_<Layout>
                 className="text-center group"
 =======
                 className='text-center group'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -2628,16 +2665,20 @@ export default function AIAutomationServices() {_return (_<Layout>
 }
                 className="text-center group"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2647,6 +2688,8 @@ export default function AIAutomationServices() {_return (_<Layout>
               </motion.div>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <h3 className='text-xl font-bold text-white mb-4'>
                   {benefit.title}
                 </h3>
@@ -2753,7 +2796,6 @@ className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-5
                 <div className="text-gray-300">Average ROI</div>
 =======
             className='max-w-4xl mx-auto'
-=======
                 <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
               </motion.div>
@@ -2794,11 +2836,6 @@ className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-5
   }
 }
             className="max-w-4xl mx-auto"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?
@@ -2808,6 +2845,7 @@ className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-5
               Join thousands of companies already transforming their operations with AI automation.
               Get started today and see the difference intelligent automation can make.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
             
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
@@ -2841,23 +2879,28 @@ className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-5
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='/contact' className='group'>
                 <button className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <span>Start Your Automation Journey</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             className="max-w-4xl mx-auto"
@@ -2898,25 +2941,30 @@ className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link
                 href='/comprehensive-services-showcase-2025'
                 className='group'
               >
                 <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
-=======
               <Link href="/comprehensive-services-showcase-2025" className="group">
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <span>View All Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2929,15 +2977,19 @@ className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-            <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div>
                 <div className="text-3xl font-bold text-emerald-400 mb-2">24/7</div>
                 <div className="text-gray-300">AI Monitoring</div>
@@ -2959,6 +3011,7 @@ className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-5
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -3052,17 +3105,15 @@ Your Business?;
                 <div className='text - gray - 300'>Average ROI</div>              </div>;
 =======
 <<<<<<< HEAD
+=======
+    </Layout>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-=======
-=======
-<<<<<<< HEAD
     </Layout>;
 );
 
 }
-=======
     </Layout>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
             className="max-w-4xl mx-auto";
           >;
@@ -3138,9 +3189,12 @@ Your Business?;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

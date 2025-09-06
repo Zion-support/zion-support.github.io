@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCenter.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -31,7 +34,27 @@ export default function HelpCenter() {
   const handleBackToArticles = () => {
     setSelectedArticle(null);
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+
+
+import React, { useState } from "react";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {HelpCategoryList} from "./HelpCategoryList";
+import {HelpArticleList} from "./HelpArticleList";
+import {HelpArticleView} from "./HelpArticleView";
+import {HELP_CATEGORIES} from "./help-content";
+import {AppLayout} from "@/layout/AppLayout";
+import {Search} from "lucide-react";
+export default function HelpCenter() {;
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -46,6 +69,7 @@ export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(""),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -93,6 +117,8 @@ export default function HelpCenter() {;
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -119,12 +145,15 @@ export default function HelpCenter() {;
 
 =======
   
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -162,6 +191,7 @@ export default function HelpCenter() {;
 <<<<<<< HEAD
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -170,6 +200,12 @@ export default function HelpCenter() {;
 <HelpCategoryList
                   categories={HELP_CATEGORIES}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                <HelpCategoryList
+                  categories={HELP_CATEGORIES}
+                <HelpCategoryList 
+                  categories={HELP_CATEGORIES} 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -390,11 +426,15 @@ export default function HelpCenter() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <HelpCategoryList;
                   categories={HELP_CATEGORIES} ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}
                 />
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 <HelpCategoryList
@@ -416,6 +456,9 @@ export default function HelpCenter() {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+              
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -425,6 +468,7 @@ export default function HelpCenter() {;
                   >
                     ← All Categories
                   </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -531,13 +575,21 @@ export default function HelpCenter() {;
 
 =======
 <HelpArticleList
+=======
+                  <HelpArticleList
+                  <HelpArticleList 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
                   />
                 </>
               )}
+<<<<<<< HEAD
 
+=======
+              
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {selectedArticle && (
                 <>
                   <Button
@@ -553,10 +605,17 @@ export default function HelpCenter() {;
             </TabsContent>
 <TabsContent value="faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
+<<<<<<< HEAD
 <h2 className="text-xl font-semibold mb-4">
                   Frequently Asked Questions
                 </h2>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                <h2 className="text-xl font-semibold mb-4">
+                  Frequently Asked Questions
+                </h2>
+                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -735,13 +794,20 @@ or services. The process takes into account skills
       </div>
     </AppLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
               {selectedArticle && (;
                 <>;
                   <Button;
                     variant="ghost";
+<<<<<<< HEAD
 
 }
 ;
@@ -1113,3 +1179,7 @@ const handleBackToArticles = () => {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

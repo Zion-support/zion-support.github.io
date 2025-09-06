@@ -5,18 +5,20 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -24,6 +26,8 @@ export function addSkillsSection(;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   doc: jsPDF;
   skills: Skill[];
   colors: PdfThemeColors;
@@ -98,8 +102,11 @@ if (skills && skills.length === 0) return startY;
     doc.text(skillLines, 30, yPos + 5);
 
     yPos += (skillLines.length * 5) + 10
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { jsPDF } from 'jspdf',;
 import { Skill } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -137,6 +144,7 @@ export function addSkillsSection(;
     const skillLines = doc.splitTextToSize(skillsText, 160);
     doc.text(skillLines, 30, yPos + 5);
     yPos += (skillLines.length * 5) + 10;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -271,6 +279,8 @@ return yPos + 5
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return yPos + 5
 }

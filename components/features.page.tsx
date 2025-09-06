@@ -42,19 +42,10 @@ export default function FeaturesPage() {_return (
         <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
 =======
 import EnhancedLayout from '../components/layout/EnhancedLayout';
-<<<<<<< HEAD
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
-=======
 import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function FeaturesPage() {
   return (
     <EnhancedLayout>
@@ -90,9 +81,9 @@ export default function FeaturesPage() {
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import EnhancedLayout from '../components / layout / EnhancedLayout';
@@ -162,3 +153,6 @@ function FeaturesPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

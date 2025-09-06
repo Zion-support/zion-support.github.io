@@ -2,10 +2,29 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/reviews/ProjectReviewSection.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
+=======
+import { useState } from "react";
+import { Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import { ReviewsList } from "@/components/reviews/ReviewsList";
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
+import { useReviews } from "@/hooks/useReviews";
+
+import { Project } from "@/types/projects";
+import { useAuth } from "@/hooks/useAuth";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -15,9 +34,12 @@ import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
 import {useReviews} from "@/hooks/useReviews";
 import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -27,6 +49,7 @@ import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
 import { useReviews } from "@/hooks/useReviews",
 import { Project } from "@/types/projects",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -50,15 +73,26 @@ import { Project } from "@/types/projects";
 import { useAuth } from "@/hooks/useAuth";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProjectReviewSectionProps {
   project: Project;
 }
 
+<<<<<<< HEAD
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 <<<<<<< HEAD
 
 =======
 const { user } = useAuth();
+=======
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
+  const { user } = useAuth();
+  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
+  const { user } = useAuth();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const { reviews, userReview, isLoading, reportReview } = useReviews(
     project.id
@@ -76,6 +110,13 @@ const { user } = useAuth();
     : clientProfile?.display_name |"Client";
   const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview;
   const hasLeftReview = userReview != null;
+<<<<<<< HEAD
+=======
+
+  const { user } = useAuth(),
+  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const isCompleted = project.status === "completed",
@@ -93,6 +134,7 @@ const { user } = useAuth();
   
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -124,6 +166,9 @@ interface ProjectReviewSectionProps {
   const hasLeftReview = userReview != null;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -177,6 +222,7 @@ interface ProjectReviewSectionProps {
                       >
                         Edit Review
                       </Button>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -279,6 +325,8 @@ import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -409,6 +457,7 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
                     {userReview.status === "pending" && (;
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
+<<<<<<< HEAD
                       </Button>;                    )}
                   </div>;
                 ) :null}
@@ -419,6 +468,9 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
 
 
 =======
+=======
+                      </Button>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     )}
                   </div>
                 ) : null}
@@ -496,7 +548,12 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
       </CardContent>
 
       {/* Review Modal */}
+<<<<<<< HEAD
 {(isClient |isTalent) && (
+=======
+      {(isClient |isTalent) && (
+      {(isClient || isTalent) && (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <LeaveReviewModal
           projectId={project.id}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

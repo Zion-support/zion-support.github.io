@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 } from "../../../utils/auth";
 export default async function handler(
@@ -10,6 +8,7 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
+<<<<<<< HEAD
 
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
@@ -22,6 +21,23 @@ export default async function handler(
 ) {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  parseUserFromRequest
+  ensureInvolvedOrAdmin
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getDisputeById } from "../../../utils/fsdb";
+import {
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../utils/auth";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { id } = req.query;
 
   if (typeof id !== "string")
@@ -53,6 +69,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader("Allow", "GET");
   return res.status(405).end("Method Not Allowed");
 }
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -175,6 +192,9 @@ if ( {) {
   return res.status (405).end ("Method Not Allowed");
 }
 
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET']);
@@ -231,5 +251,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

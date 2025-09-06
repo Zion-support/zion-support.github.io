@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useEffect, useState } from 'react';
@@ -104,14 +105,13 @@ export default function DaoMetrics(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from 'react',;
 ;
 type Holder = { address: string, amount: string },
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from 'react';
-<<<<<<< HEAD
 
 type Holder = { address: string, amount: string }
 type Metrics = {
@@ -138,12 +138,7 @@ export default function DaoMetrics() {
   if (loading) return <div>Loading...</div>
   if (!data) return <div>Error loading data</div>
 
-=======
 type Holder = { address: string, amount: string };
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Metrics = {
   updatedAt: number;
   tokenDistribution: { address: string, percent: number }[],;
@@ -172,7 +167,6 @@ export default function DaoMetrics(req, res) {
   }, []),
   if (loading) return <div>Loading...</div>,
   if (!data) return <div>Error loading data</div>,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">
@@ -282,15 +276,20 @@ export default function DaoMetrics(req, res) {
 =======
             <div className="text-sm text-gray-600">No active proposals.</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           )}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -303,6 +302,8 @@ export default function DaoMetrics(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -314,6 +315,7 @@ export default function DaoMetrics(req, res) {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -332,10 +334,10 @@ export default function DaoMetrics(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 }
@@ -456,11 +458,12 @@ if (return <div > Error loading data</div>, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

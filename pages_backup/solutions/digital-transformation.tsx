@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7,6 +8,8 @@
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
@@ -107,6 +110,7 @@ const industries = [
 ];
 export default function DigitalTransformation() {
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react';
@@ -116,6 +120,11 @@ import React from 'react';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
@@ -224,10 +233,8 @@ export default function DigitalTransformationPage() {;
 
 =======
 export default function DigitalTransformation() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
@@ -258,8 +265,13 @@ export default function DigitalTransformationPage() {
       icon: TrendingUp,
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]"
     }
+<<<<<<< HEAD
 
 
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;  ];
   return (;
     <Layout );
@@ -267,11 +279,17 @@ export default function DigitalTransformationPage() {
       description="Complete digital transformation solutions to modernize your business and drive innovation."";
     >;
       <div className="min-h-screen bg-gray-50">";
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
 <<<<<<< HEAD
 
@@ -279,14 +297,8 @@ export default function DigitalTransformationPage() {
 =======
   
     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 :pages/solutions/digital-transformation.tsx
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -299,12 +311,18 @@ export default function DigitalTransformationPage() {
             <motion.div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">"
@@ -324,14 +342,8 @@ export default function DigitalTransformationPage() {
 
 =======
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -346,6 +358,7 @@ export default function DigitalTransformationPage() {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -359,6 +372,11 @@ export default function DigitalTransformationPage() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -381,8 +399,13 @@ export default function DigitalTransformationPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
 
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 :pages/solutions/digital-transformation.tsx
         {/* Transformation Process */}
         <section className="py-20 bg-white">
@@ -421,11 +444,15 @@ export default function DigitalTransformationPage() {
               {transformationSteps.map((step, index) => {
                 const IconComponent = step.icon;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 return (
                   <motion.div
                     key={index}
                     className="bg-gray-50 rounded-lg p-6 text-center"
+<<<<<<< HEAD
 
 
 =======
@@ -441,6 +468,13 @@ export default function DigitalTransformationPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 
 
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+        {/* Services Section */}
+                
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
@@ -455,6 +489,7 @@ export default function DigitalTransformationPage() {
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -465,6 +500,10 @@ export default function DigitalTransformationPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 :pages/solutions/digital-transformation.tsx
                   >
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
@@ -482,11 +521,17 @@ export default function DigitalTransformationPage() {
                       {step.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   >,
                     <div className="text-purple-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
@@ -509,6 +554,7 @@ export default function DigitalTransformationPage() {
                 );
               })}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -519,6 +565,118 @@ export default function DigitalTransformationPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            </div>,
+          </div>;
+        </section>;
+            </div>
+          </div>
+        </section>
+:pages/solutions/digital-transformation.tsx
+        {/* Benefits Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Transformation Benefits
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                See the measurable impact of digital transformation on your business performance.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => {
+                const IconComponent = benefit.icon;
+                
+                  >
+                    <div className="text-blue-600 mb-4">
+                      <IconComponent className="w-12 h-12 mx-auto" />
+                    </div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">{benefit.metric}</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                    <p className="text-gray-600">{benefit.description}</p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+        {/* Industries Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Industry Solutions
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We have experience transforming businesses across various industries with tailored solutions.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index) => {
+                const IconComponent = industry.icon;
+                
+                  >
+                    <div className="text-blue-600 mb-4">
+                      <IconComponent className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{industry.name}</h3>
+                    <p className="text-gray-600">{industry.description}</p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Let our experts help you navigate your digital transformation journey with proven strategies and cutting-edge technology.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Get Free Consultation
+                </Link>
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                  View All Solutions
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+            </div>
+          </div>
+        </section>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            </div>
+          </div>
+        </section>
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>,
           </div>;
         </section>;
@@ -792,10 +950,8 @@ export default function DigitalTransformationPage() {
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -15,10 +16,10 @@ import Head from 'next/head';
 export default function OffworldConsole() {
 =======
 <<<<<<< HEAD
-import { useState  } from 'react';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useState  } from 'react';
 import {useState} from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 export default function OffworldConsole() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -498,7 +499,6 @@ function broadcast() {
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
   }
   async function broadcast() {
-<<<<<<< HEAD
     setStatus('Broadcasting manifesto...');
     const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       method: 'POST'
@@ -586,16 +586,14 @@ function broadcast() {
     </div>
 );
 }
-<<<<<<< HEAD
-=======
     setStatus('Broadcasting manifesto...');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
-=======
     setStatus('Broadcasting manifesto...');
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

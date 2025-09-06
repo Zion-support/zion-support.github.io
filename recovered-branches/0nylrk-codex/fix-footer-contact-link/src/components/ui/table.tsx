@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/table.tsx
 
 =======
@@ -10,10 +11,15 @@ import * as React from &quot;react&quot;
 import { cn } from &quot;@/lib/utils&quot;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import * as React from &quot;react&quot;
+import { cn } from &quot;@/lib/utils&quot;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -21,6 +27,8 @@ import { cn } from "@/lib/utils"
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const Table = React.forwardRef<
   HTMLTableElement
   React.HTMLAttributes<HTMLTableElement>
@@ -39,6 +47,7 @@ const Table = React.forwardRef<
 />
   </div>
 ))
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -68,12 +77,16 @@ Table.displayName = "Table"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-Table.displayName = &quot;Table&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+Table.displayName = &quot;Table&quot;
 Table.displayName = "Table"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const TableHeader = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
@@ -94,13 +107,14 @@ TableHeader.displayName = "TableHeader"
 =======
   <thead ref={ref} className={cn("[&_tr]:border-b", className)} {...props} />
 ))
-<<<<<<< HEAD
 TableHeader.displayName = &quot;TableHeader&quot;
-=======
 TableHeader.displayName = "TableHeader"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const TableBody = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
@@ -115,6 +129,7 @@ const TableBody = React.forwardRef<
     {...props}
 />
 ))
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -150,12 +165,16 @@ TableBody.displayName = "TableBody"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-TableBody.displayName = &quot;TableBody&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+TableBody.displayName = &quot;TableBody&quot;
 TableBody.displayName = "TableBody"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const TableFooter = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
@@ -164,6 +183,7 @@ const TableFooter = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -174,11 +194,15 @@ const TableFooter = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      &quot;border-t bg-muted/50 font-medium [&>tr]:last:border-b-0&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      &quot;border-t bg-muted/50 font-medium [&>tr]:last:border-b-0&quot;
       "border-t bg-muted/50 font-medium [&>tr]:last:border-b-0",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
@@ -186,6 +210,7 @@ const TableFooter = React.forwardRef<
 ))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -196,12 +221,16 @@ TableFooter.displayName = "TableFooter"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-TableFooter.displayName = &quot;TableFooter&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+TableFooter.displayName = &quot;TableFooter&quot;
 TableFooter.displayName = "TableFooter"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const TableRow = React.forwardRef<
   HTMLTableRowElement
   React.HTMLAttributes<HTMLTableRowElement>
@@ -210,6 +239,7 @@ const TableRow = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -220,11 +250,15 @@ const TableRow = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      &quot;border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      &quot;border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted&quot;
       "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
@@ -232,6 +266,7 @@ const TableRow = React.forwardRef<
 ))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -242,12 +277,16 @@ TableRow.displayName = "TableRow"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-TableRow.displayName = &quot;TableRow&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+TableRow.displayName = &quot;TableRow&quot;
 TableRow.displayName = "TableRow"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const TableHead = React.forwardRef<
   HTMLTableCellElement
   React.HTMLAttributes<HTMLTableCellElement>
@@ -256,6 +295,7 @@ const TableHead = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -266,11 +306,15 @@ const TableHead = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      &quot;h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      &quot;h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0&quot;
       "h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
@@ -278,6 +322,7 @@ const TableHead = React.forwardRef<
 ))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -288,12 +333,16 @@ TableHead.displayName = "TableHead"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-TableHead.displayName = &quot;TableHead&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+TableHead.displayName = &quot;TableHead&quot;
 TableHead.displayName = "TableHead"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const TableCell = React.forwardRef<
   HTMLTableCellElement
   React.HTMLAttributes<HTMLTableCellElement>
@@ -308,6 +357,7 @@ const TableCell = React.forwardRef<
     {...props}
 />
 ))
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -374,12 +424,16 @@ TableCell.displayName = "TableCell"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-TableCell.displayName = &quot;TableCell&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+TableCell.displayName = &quot;TableCell&quot;
 TableCell.displayName = "TableCell"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const TableCaption = React.forwardRef<
   HTMLTableCaptionElement
   React.HTMLAttributes<HTMLTableCaptionElement>
@@ -394,6 +448,7 @@ const TableCaption = React.forwardRef<
     {...props}
 />
 ))
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -427,6 +482,8 @@ TableCaption.displayName = "TableCaption"
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 TableCaption.displayName = &quot;TableCaption&quot;
 export {
   Table
@@ -437,7 +494,6 @@ export {
   TableRow
   TableCell
   TableCaption}
-=======
 TableCaption.displayName = "TableCaption"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -449,6 +505,7 @@ export {
   TableHead,
   TableRow,
   TableCell,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/table.tsx
 
@@ -611,14 +668,14 @@ React.HTMLAttributes<HTMLTableCaptionElement> > ( ({
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/table.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   TableCaption};
-=======
   TableCaption}
+;
+;
 <<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

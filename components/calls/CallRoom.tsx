@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -45,12 +46,24 @@ import {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+
+import {
+  Room
+  RoomEvent
+  RemoteParticipant
+  LocalParticipant
+  createLocalTracks
+  VideoPresets;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Room,
   RoomEvent,
   RemoteParticipant,
   LocalParticipant,
   createLocalTracks,;
   VideoPresets,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -59,6 +72,8 @@ import {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
@@ -107,7 +122,6 @@ export default function CallRoom(): any ({;
 =======
 }
 export default function CallRoom({
-<<<<<<< HEAD
   projectId
   userId
   displayName
@@ -117,8 +131,11 @@ export default function CallRoom({
   startMode
   onLeave
 }: Props) {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projectId,
   userId,
   displayName,
@@ -129,6 +146,7 @@ export default function CallRoom({
   onLeave,
 }: Props) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -136,6 +154,8 @@ export default function CallRoom({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
@@ -212,15 +232,16 @@ type Props = {
   token: string
   startMode: StartMode
   onLeave?: (durationSec: number) => void
-<<<<<<< HEAD
 }
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
-=======
 };
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -407,6 +428,7 @@ setRoom(r);
     if (room) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -425,6 +447,8 @@ setRoom(r);
       room && room.disconnect();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       room.disconnect();
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -448,16 +472,14 @@ setRoom(r);
 =======
     const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)
-=======
 
   };
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const gridCols = useMemo(() => {
     const count = participants.length |1;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -490,6 +512,7 @@ setRoom(r);
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     </div>
@@ -513,6 +536,8 @@ setRoom(r);
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <ParticipantTile
             key={String((p as any).sid |(p as any).identity) + idx}
             participant={p}
@@ -740,12 +765,12 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
 =======
 );
 }
-=======
 
         ))}
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -753,3 +778,5 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

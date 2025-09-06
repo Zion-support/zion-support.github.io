@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 <<<<<<< HEAD
@@ -13,6 +16,7 @@ interface EnhancedSearchInputProps {
   onChange: (value: string,) => void
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -21,6 +25,10 @@ import { logInfo, logWarn } from '@/utils/productionLogger'
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+import { logInfo, logWarn } from '@/utils/productionLogger'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -45,26 +53,22 @@ interface EnhancedSearchInputProps {
 =======
 =======
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
-<<<<<<< HEAD
    */;
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
   placeholder?: string;  /**
-=======
    */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> interface EnhancedSearchInputProps {
   value: string,
@@ -77,6 +81,7 @@ interface EnhancedSearchInputProps {
   placeholder?: string;  /**
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   placeholder?: string,
@@ -102,6 +107,14 @@ interface EnhancedSearchInputProps {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
    * Optional list of fallback suggestions (e.g. recent searches).
 >>>>>>>    * If provided, these will be shown when the input is empty.
    */
@@ -117,12 +130,15 @@ export function EnhancedSearchInput({
 }: EnhancedSearchInputProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   searchSuggestions
 }: EnhancedSearchInputProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
 import { Search, X  } from 'lucide-react'
 import { Input } from '@/components/ui/input'
@@ -133,10 +149,8 @@ export function EnhancedSearchInput({
   onChange
   onSelectSuggestion
   placeholder = "Search..."
-<<<<<<< HEAD
   searchSuggestions
 }: EnhancedSearchInputProps) {
-=======
   searchSuggestions;
 }: EnhancedSearchInputProps) {;
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
@@ -152,8 +166,11 @@ export function EnhancedSearchInput({
   searchSuggestions
 }: EnhancedSearchInputProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isFocused, setIsFocused] = useState(false)
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([])
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1)
@@ -167,12 +184,15 @@ export function EnhancedSearchInput({
   const debounced = useDebounce(value, 200)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;
 import { Search, X  } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -186,11 +206,14 @@ export function EnhancedSearchInput({;
   searchSuggestions
 }: EnhancedSearchInputProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isFocused, setIsFocused] = useState(false),
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1),
@@ -209,15 +232,19 @@ export function EnhancedSearchInput({;
   const debounced = useDebounce(value, 200),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const debouncedFetchSuggestions = useMemo(
     () =>
       debounce(async (query: string) => {
         if (!query.trim()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -229,15 +256,17 @@ export function EnhancedSearchInput({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           setApiSuggestions([])
           return
-<<<<<<< HEAD
-=======
           setApiSuggestions([]),
-<<<<<<< HEAD
           return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
         setLoading(true)
         try {
@@ -250,6 +279,7 @@ export function EnhancedSearchInput({;
               setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -260,6 +290,9 @@ export function EnhancedSearchInput({;
           return
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          return
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef, useMemo } from "react",;
 import { useTranslation } from "react-i18next",;
 import { Search, X } from 'lucide-react';
@@ -324,6 +357,7 @@ export function EnhancedSearchInput({;
               setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>             }
@@ -346,6 +380,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }
           } else {
             // Silently fail for search suggestions - don't show error toast
@@ -361,9 +397,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           setLoading(false)
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     if (onSelectSuggestion) {
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }, 300)
     []
   )
@@ -431,6 +470,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj })
     onChange(suggestionObj.text)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>     if (onSelectSuggestion) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
@@ -496,6 +536,8 @@ if ( {) {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }, 300),;
     [];
   ),;
@@ -547,25 +589,13 @@ if ( {) {
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (onSelectSuggestion) {
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
       onSelectSuggestion(suggestionObj)
     } else {
       // Provide a sensible default navigation if the parent did not supply a handler
-<<<<<<< HEAD
       logWarn('onSelectSuggestion callback not provided')
-=======
       logWarn('onSelectSuggestion callback not provided'),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (suggestionObj.id) {
         router.push(`/marketplace/listing/${suggestionObj.id}`)
       } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
@@ -573,14 +603,14 @@ if ( {) {
       } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
         router.push(`/blog/${suggestionObj.slug}`)
       } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
         router.push(`/search/${suggestionObj.slug |slugify(suggestionObj.text)}`)
-=======
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
     setIsFocused(false)
@@ -1057,6 +1087,7 @@ if ( {) {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
@@ -1068,6 +1099,9 @@ if ( {) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -1150,11 +1184,6 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div
@@ -1199,20 +1228,22 @@ if ( {) {
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
         <Input
-<<<<<<< HEAD
           ref = {inputRef,}
-=======
           ref={inputRef}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           type="text"
           id="enhanced-search-input"
           name="search"
           value={value}
+<<<<<<< HEAD
 
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
 =======
@@ -1221,6 +1252,8 @@ if ( {) {
           id="enhanced-search-input"
           name="search"
           value={value}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           onChange={(e) => {
             onChange(e.target.value)
             setEnterHandledPostFocus(false)
@@ -1280,7 +1313,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           }}
           onKeyDown = {handleKeyDown,}
           aria-label = {t('general.search'),}
-=======
           onChange={(e) => {;
             onChange(e.target.value),;
             setEnterHandledPostFocus(false);
@@ -1303,11 +1335,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           }}
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1325,11 +1352,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
       <AutocompleteSuggestions
         suggestions = {filteredSuggestions,}
@@ -1337,27 +1367,26 @@ ursor/fix-website-loading-errors-and-merge-6662
         onSelectSuggestion = {handleSelectSuggestion,}
         visible = {isFocused,}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         highlightedIndex={highlightedIndex} // Pass highlightedIndex
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
       <AutocompleteSuggestions;
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1407,6 +1436,8 @@ break ;
   };
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }setIsFocused (false)
 inputRef.current?.blur ()
 setHighlightedIndex (-1)
@@ -1629,16 +1660,14 @@ break;
     </div>
   )
 }
+}
+;
+;
+}
+;
 <<<<<<< HEAD
-=======
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-;
-=======
-}
-;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

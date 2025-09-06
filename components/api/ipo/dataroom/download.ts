@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -128,9 +129,10 @@ function handler() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -165,16 +167,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   appendAuditLog({ type: "file_download", section, name: file });
   fs.createReadStream(fullPath).pipe(res);
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import path from 'path';
 import mime from 'mime-types';
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
@@ -229,16 +227,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -252,3 +254,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -12,12 +12,8 @@ export function useAuthStatus() {
   // Mock authenticated status
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
-=======
 import {useState} from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function useAuthStatus() {
   // Mock authenticated status;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -134,12 +130,8 @@ if ( {) {
 =======
 
     toggleAuth
-<<<<<<< HEAD
   }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from 'react',;
 export function useAuthStatus() {;
   // Mock authenticated status;
@@ -180,6 +172,7 @@ export function useAuthStatus() {;
     savedTalents;
     handleToggleSave;
     toggleAuth;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -284,3 +277,8 @@ toggleAuth
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

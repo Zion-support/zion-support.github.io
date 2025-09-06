@@ -16,9 +16,12 @@ import { Card, CardContent } from "@/components/ui/card",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Bell, Calendar, X} from "lucide-react";
@@ -38,6 +41,7 @@ export function ProjectOfferBanner() {;
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ProjectOfferBanner.tsx
 
@@ -59,12 +63,13 @@ export function ProjectOfferBanner() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Bell, Calendar, X } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ProjectOfferBanner() {
@@ -73,7 +78,6 @@ export function ProjectOfferBanner() {
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
-=======
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
 export function ProjectOfferBanner() {
@@ -81,14 +85,11 @@ export function ProjectOfferBanner() {
   const { projects, isLoading } = useProjects(),
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
   const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent'),
       setPendingOffers(offers)
-<<<<<<< HEAD
     }
   }, [projects, isLoading]);
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
@@ -105,12 +106,14 @@ export function ProjectOfferBanner() {
   if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
 
     return null
-<<<<<<< HEAD
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -143,6 +146,7 @@ export function ProjectOfferBanner() {;
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
@@ -164,6 +168,10 @@ export function ProjectOfferBanner() {;
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -205,6 +213,7 @@ export function ProjectOfferBanner() {;
             </CardContent>
           </Card>
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -467,13 +476,17 @@ if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismiss
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ProjectOfferBanner.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
 }
-=======
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

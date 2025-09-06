@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/community/ForumCategories.tsx
@@ -7,6 +8,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const categories: ForumCategoryInfo[] = [
@@ -18,15 +21,19 @@ const categories: ForumCategoryInfo[] = [
     icon: "Briefcase"
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -38,12 +45,11 @@ const categories: ForumCategoryInfo[] = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
-=======
 import { ForumCategoryInfo } from "@/types/community",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -55,6 +61,7 @@ import { ForumCategoryInfo } from "@/types/community",
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ForumCategoryInfo } from "@/types/community",
 
@@ -65,8 +72,9 @@ import { ForumCategoryInfo } from "@/types/community",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ForumCategoryInfo } from "@/types/community",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     id: "project-help"
@@ -76,11 +84,14 @@ import { ForumCategoryInfo } from "@/types/community",
     icon: "MessageSquare"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   {
     id: "ai-tools"
@@ -90,10 +101,13 @@ import { ForumCategoryInfo } from "@/types/community",
     icon: "Code"
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   {
     id: "ai-tools",
@@ -102,11 +116,6 @@ import { ForumCategoryInfo } from "@/types/community",
     adminOnly: false,
     icon: "Code"
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     id: "feedback"
@@ -114,6 +123,7 @@ import { ForumCategoryInfo } from "@/types/community",
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -125,14 +135,10 @@ ursor/fix-website-loading-errors-and-merge-6662
   {
 >>>>>>>     id: "announcements"
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
-=======
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
     id: "announcements"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -143,10 +149,13 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ]
 const iconMap = {
   Briefcase
@@ -166,12 +175,15 @@ export const ForumCategories = () => {
       {visibleCategories.map((category) => {;
         const Icon = iconMap[category.icon as keyof typeof iconMap]; return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           <Link key={category.id} href={`/community/category/${category.id}`}>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <Link key={category.id} href={`/community/category/${category.id}`}>
 >>>>>>>             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ],
 
 const iconMap = {
@@ -195,11 +207,6 @@ export const ForumCategories = () => {
       {visibleCategories.map((category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -217,29 +224,33 @@ export const ForumCategories = () => {
         )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
 export default ForumCategories
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       })}
     </div>
   )
 }
 export default ForumCategories
 "
-<<<<<<< HEAD
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
 export default ForumCategories
 
-=======
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
 export default ForumCategories;
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -562,8 +573,11 @@ export default ForumCategories;
 };
 export default ForumCategories;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

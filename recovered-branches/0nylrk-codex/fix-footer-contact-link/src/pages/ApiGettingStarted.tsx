@@ -10,9 +10,6 @@ import React from "react",
 
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
@@ -21,24 +18,24 @@ export function ApiGettingStarted() {
   https: //api.zionai.com/v1/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY"`,;
 const quickStartJs = `import axios from 'axios';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
-<<<<<<< HEAD
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
-=======
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -75,12 +72,14 @@ const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   -H "Authorization: Bearer YOUR_API_KEY"`
 const quickStartJs = `import axios from 'axios';
-=======
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -103,19 +102,27 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
 
 
 =======
+=======
+  -H "Authorization: Bearer YOUR_API_KEY"`,
+
+  const quickStartJs = `import axios from 'axios',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`
   }
-<<<<<<< HEAD
 });
 console.log(response.data),`;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }),
 
 // // // console.log(response.data),`,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -123,6 +130,8 @@ console.log(response.data),`;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
@@ -136,6 +145,7 @@ console.log(response.data),`;
         <h2>Authentication</h2>
         <p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -147,13 +157,17 @@ console.log(response.data),`;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           All API requests must include your API key in the Authorization header.
           You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.
-=======
           All API requests must include your API key in the Authorization header. 
           You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </p>
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
@@ -201,6 +215,7 @@ console.log(response.data),`;
       </div>
     </ApiDocsLayout>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -275,10 +290,11 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {;
 // // // console.log(response.data),`,;
 ;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default ApiGettingStarted;
 
-=======
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock",;
@@ -527,10 +543,9 @@ quotes, and projects. Our RESTful API lets you integrate Zion's features into yo
   );
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ApiGettingStarted;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

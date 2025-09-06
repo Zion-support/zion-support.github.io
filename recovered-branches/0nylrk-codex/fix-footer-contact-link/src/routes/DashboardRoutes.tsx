@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/routes/DashboardRoutes.tsx
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
@@ -28,9 +31,12 @@ import Referrals from "@/pages/Referrals";
 import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -52,6 +58,7 @@ import PortfolioBuilder from "@/pages/PortfolioBuilder",
 import Referrals from "@/pages/Referrals",
 import DeveloperPortal from "@/pages/DeveloperPortal",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const DashboardRoutes = () => {
 ========
@@ -59,17 +66,13 @@ const DashboardRoutes = () => {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/routes/DashboardRoutes.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
 
-=======
 import WalletPage from "@/pages/Wallet",
 import ContractBuilder from "@/pages/ContractBuilder",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const DashboardRoutes = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
@@ -346,21 +349,26 @@ const DashboardRoutes = () => {;
     </Routes>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default DashboardRoutes;
 
-=======
 },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default DashboardRoutes,
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -1134,10 +1142,9 @@ export default DashboardRoutes;
 =======
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default DashboardRoutes;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

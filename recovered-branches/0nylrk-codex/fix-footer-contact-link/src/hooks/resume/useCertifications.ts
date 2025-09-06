@@ -5,16 +5,17 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Certification  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useCertifications() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Certification} from '@/types/resume';
@@ -22,12 +23,15 @@ import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useCertifications() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -36,6 +40,7 @@ export function useCertifications() {;
     if (!user) {
       setError('You must be logged in to add certifications')
       return false
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -53,6 +58,11 @@ export function useCertifications() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+    setIsLoading(true);
+    setError(null);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Certification } from '@/types/resume',;
@@ -67,6 +77,7 @@ export function useCertifications() {;
       setError('You must be logged in to add certifications'),;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -79,6 +90,8 @@ export function useCertifications() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     
     setIsLoading(true),
@@ -88,6 +101,7 @@ export function useCertifications() {;
 
 =======
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -95,10 +109,13 @@ export function useCertifications() {;
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { error } = await supabase
         .from('certifications')
         .insert({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -121,6 +138,8 @@ name: cert && cert.name;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           resume_id: resumeId;
           name: cert.name;
           issuing_organization: cert.issuing_organization;
@@ -130,8 +149,11 @@ name: cert && cert.name;
           credential_url: cert.credential_url
         });
       if (error) throw error;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           resume_id: resumeId,
           name: cert.name,
           issuing_organization: cert.issuing_organization,
@@ -144,17 +166,21 @@ name: cert && cert.name;
       if (error) throw error,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return showSuccessToast("Certification added", "Your certification has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add certification')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -165,20 +191,24 @@ name: cert && cert.name;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update certifications')
       return false
-<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     setIsLoading(true),;
     setError(null),;
@@ -207,6 +237,7 @@ name: cert && cert.name;
       setError('You must be logged in to update certifications'),;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -219,6 +250,8 @@ name: cert && cert.name;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     
     setIsLoading(true),
@@ -228,6 +261,7 @@ name: cert && cert.name;
 
 =======
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -339,10 +373,13 @@ export function useCertifications() {;
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { error } = await supabase
         .from('certifications')
         .update({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/useCertifications.ts
 
@@ -362,6 +399,8 @@ export function useCertifications() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/useCertifications.ts
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name: cert.name;
           issuing_organization: cert.issuing_organization;
           issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
@@ -372,11 +411,14 @@ export function useCertifications() {;
         })
         .eq('id', certId);
       if (error) throw error;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name: cert.name,
           issuing_organization: cert.issuing_organization,
           issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null,
@@ -389,17 +431,21 @@ export function useCertifications() {;
       if (error) throw error,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return showSuccessToast("Certification updated", "Your certification has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update certification')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -410,20 +456,24 @@ export function useCertifications() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   const deleteCertification = async (certId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete certifications')
       return false
-<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     setIsLoading(true),;
     setError(null),;
@@ -452,6 +502,7 @@ export function useCertifications() {;
       setError('You must be logged in to delete certifications'),;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -464,6 +515,8 @@ export function useCertifications() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     
     setIsLoading(true),
@@ -473,6 +526,7 @@ export function useCertifications() {;
 
 =======
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -480,10 +534,13 @@ export function useCertifications() {;
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { error } = await supabase
         .from('certifications')
         .delete()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -495,10 +552,15 @@ export function useCertifications() {;
       if (error) throw error;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        .eq('id', certId);
+      if (error) throw error;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq('id', certId),
       
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -506,11 +568,14 @@ export function useCertifications() {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return showSuccessToast("Certification deleted", "Your certification has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete certification')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/useCertifications.ts
 
@@ -524,6 +589,8 @@ export function useCertifications() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   return {
@@ -560,12 +627,8 @@ if ( {) {
 =======
 
     deleteCertification
-<<<<<<< HEAD
   }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -589,6 +652,7 @@ if ( {) {
     addCertification;
     updateCertification;
     deleteCertification;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -776,3 +840,8 @@ deleteCertification
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/pagination.tsx
 
 =======
@@ -50,47 +51,45 @@ const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from 'react';
 import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
-<<<<<<< HEAD
 import {cn} from '@/lib/utils';
 import {ButtonProps, buttonVariants} from '@/components/ui/button';
 const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
-=======
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
-=======
-=======
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { cn } from "@/lib/utils"
 import { ButtonProps, buttonVariants } from "@/components/ui/button"
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   <nav
     role="navigation"
     aria-label="pagination"
     className={cn("mx-auto flex w-full justify-center", className)}
     {...props}
   />
-<<<<<<< HEAD
 );
 Pagination.displayName = 'Pagination';
 const PaginationContent = React.forwardRef<
   HTMLUListElement
   React.ComponentProps<'ul'>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 )
 Pagination.displayName = "Pagination"
 
 const PaginationContent = React.forwardRef<
   HTMLUListElement,
   React.ComponentProps<"ul">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -155,13 +154,14 @@ type PaginationLinkProps = {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >(({ className, ...props }, ref) => (
   <ul
     ref={ref}
     className={cn('flex flex-row items-center gap-1', className)}
     {...props}
   />
-<<<<<<< HEAD
 ));
 PaginationContent.displayName = 'PaginationContent';
 const PaginationItem = React.forwardRef<
@@ -179,8 +179,11 @@ const PaginationLink = ({
   className
   isActive
   size = 'icon'
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ))
 PaginationContent.displayName = "PaginationContent"
 
@@ -201,6 +204,7 @@ const PaginationLink = ({
   className,
   isActive,
   size = "icon",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -352,25 +356,29 @@ const PaginationNext = ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ...props
 }: PaginationLinkProps) => (
   <a
     aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
-<<<<<<< HEAD
         variant: isActive ? 'outline' : 'ghost'
         size
       })
-=======
         variant: isActive ? "outline" : "ghost",
         size}),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
   />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -382,14 +390,18 @@ PaginationLink.displayName = "PaginationLink"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 PaginationLink.displayName = 'PaginationLink';
-=======
 )
 PaginationLink.displayName = "PaginationLink"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const PaginationPrevious = ({
   className
   ...props
@@ -405,6 +417,7 @@ const PaginationPrevious = ({
   </PaginationLink>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -414,14 +427,18 @@ PaginationPrevious.displayName = "PaginationPrevious"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 PaginationPrevious.displayName = 'PaginationPrevious';
-=======
 )
 PaginationPrevious.displayName = "PaginationPrevious"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const PaginationNext = ({
   className
   ...props
@@ -435,6 +452,7 @@ const PaginationNext = ({
     <span>Next</span>
     <ChevronRight className="h-4 w-4" />
   </PaginationLink>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -465,13 +483,13 @@ const PaginationEllipsis = ({;
 PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 PaginationNext.displayName = 'PaginationNext';
-=======
 )
 PaginationNext.displayName = "PaginationNext"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const PaginationEllipsis = ({
   className
   ...props
@@ -487,8 +505,11 @@ const PaginationEllipsis = ({
   </span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 PaginationEllipsis.displayName = 'PaginationEllipsis';
 export {
@@ -500,7 +521,6 @@ export {
   PaginationNext
   PaginationPrevious
 }
-=======
 )
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
@@ -511,14 +531,14 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationNext,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   PaginationPrevious,;
 };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   />;
 ));
 PaginationContent.displayName = "PaginationContent";
@@ -692,6 +712,7 @@ export {;
   PaginationPrevious}
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   PaginationLink,;
   PaginationNext,;
@@ -803,3 +824,5 @@ export {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

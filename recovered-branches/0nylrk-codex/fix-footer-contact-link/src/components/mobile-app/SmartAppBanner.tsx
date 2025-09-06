@@ -13,13 +13,17 @@ import { X, ArrowRight } from "lucide-react",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react";
 import {X, ArrowRight} from "lucide-react";
 import {Link} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface SmartAppBannerProps {;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/SmartAppBanner.tsx
@@ -52,19 +56,14 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",
 import { X, ArrowRight } from "lucide-react",
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
-=======
 import { Link } from "react-router-dom",
 import { useIsMobile } from "@/hooks/use-mobile",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SmartAppBannerProps {
   appName?: string,
   appIconSrc?: string,
@@ -72,18 +71,12 @@ interface SmartAppBannerProps {
   googlePlayUrl?: string,
   delay?: number, // Delay in milliseconds before showing the banner
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
   appName = "Zion Marketplace";
   appIconSrc;
   appStoreUrl = "/download";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-<<<<<<< HEAD
 
   appName = "Zion Marketplace";
   appIconSrc;
@@ -93,12 +86,14 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
-=======
   appName = "Zion Marketplace",
   appIconSrc,
   appStoreUrl = "/download",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   googlePlayUrl = "/download",
   delay = 1500
 }) => {
@@ -113,32 +108,42 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
 =======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !localStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }, delay);
       return () => clearTimeout(timer)
     }
   }, [isMobile, delay]);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }, delay),
       
       return () => clearTimeout(timer)
     }
   }, [isMobile, delay]),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -170,25 +175,25 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const dismissBanner = () => {
     setIsVisible(false),
     localStorage.setItem("smartBannerDismissed", "true")
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const resetBanner = () => {
     localStorage.removeItem("smartBannerDismissed"),
     setIsVisible(true)
-<<<<<<< HEAD
   }
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Only render on mobile devices
   if (!isMobile |!isVisible) {
     return process.env.NODE_ENV === 'development' ? (
@@ -199,18 +204,23 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   }
   // Detect iOS or Android
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
-=======
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
       <div className="flex items-center">
@@ -240,6 +250,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -377,13 +388,17 @@ export const SmartAppBanner:React.FC<SmartAppBannerProps> = ({;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
-=======
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 import React, { useState, useEffect } from "react",;
 import { X, ArrowRight } from "lucide-react",;
@@ -631,8 +646,11 @@ const isMobile = useIsMobile ();
 
 export default SmartAppBanner;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

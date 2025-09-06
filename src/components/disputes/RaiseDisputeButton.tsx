@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -7,6 +8,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {  Dialog
@@ -31,10 +35,13 @@ interface RaiseDisputeButtonProps {
 export function RaiseDisputeButton({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projectId
   milestoneId
   variant = 'outline'
@@ -59,12 +66,15 @@ export function RaiseDisputeButton({
         Raise Dispute
       </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 Dialog,
   DialogContent,
   DialogHeader,
@@ -96,6 +106,7 @@ interface RaiseDisputeButtonProps {
 export function RaiseDisputeButton({ 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   projectId,
 =======
@@ -105,6 +116,8 @@ export function RaiseDisputeButton({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projectId,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   milestoneId, 
@@ -114,12 +127,15 @@ export function RaiseDisputeButton({
 }: RaiseDisputeButtonProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const router = useRouter()
   const handleDisputeCreated = (disputeId: string) => {
@@ -137,11 +153,14 @@ export function RaiseDisputeButton({
         Raise Dispute
       </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
   
@@ -185,11 +204,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="sm:max-w-[550px]">
           <DialogHeader>
@@ -198,10 +212,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
-<<<<<<< HEAD
           <DisputeForm
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
@@ -212,6 +228,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>>           
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -219,6 +236,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <DisputeForm 
@@ -276,6 +295,7 @@ export function RaiseDisputeButton({;
           <DisputeForm;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             projectId={projectId}
 =======
@@ -283,6 +303,8 @@ export function RaiseDisputeButton({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             projectId={projectId}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             milestoneId={milestoneId}
@@ -294,6 +316,7 @@ export function RaiseDisputeButton({;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 };
@@ -302,13 +325,17 @@ export function RaiseDisputeButton({;
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-};
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+};
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

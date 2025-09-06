@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfile.ts
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {ProfileData} from "@/types/profile";
@@ -17,14 +20,18 @@ export function useTalentProfile(id: string | undefined) {;
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 import { ProfileData } from "@/types/profile",
 import { MOCK_TALENTS } from "@/data/mockTalents",
 import { MOCK_PROFILES } from "@/data/mockProfiles",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -53,6 +60,8 @@ import { MOCK_PROFILES } from "@/data/mockProfiles",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { convertProfileToTalentProfile } from "@/utils/profileConverter";
 export function useTalentProfile(id: string | undefined) {
   const [profile, setProfile] = useState<TalentProfileType | null>(null);
@@ -60,16 +69,13 @@ export function useTalentProfile(id: string | undefined) {
 
   const [error, setError] = useState<string | null>(null);
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
-=======
 import { convertProfileToTalentProfile } from "@/utils/profileConverter",
 export function useTalentProfile(id: string | undefined) {
   const [profile, setProfile] = useState<TalentProfileType | null>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     const fetchProfile = async () => {
       if (!id) {
@@ -77,20 +83,22 @@ export function useTalentProfile(id: string | undefined) {
         setIsLoading(false),
         return
       }
-<<<<<<< HEAD
       setIsLoading(true);
       setError(null);
-=======
 
       setIsLoading(true),
       setError(null),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -177,11 +185,11 @@ if ( {) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-          const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id),
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
           } else {
@@ -203,14 +211,16 @@ if ( {) {
         console.error("Error fetching profile:", err),
         setError("Failed to load profile data"),
         setIsLoading(false)
-<<<<<<< HEAD
       }
     }
     fetchProfile()
   }, [id]);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { TalentProfile as TalentProfileType } from "@/types/talent",;
 import { ProfileData } from "@/types/profile",;
@@ -262,6 +272,7 @@ export function useTalentProfile(id: string | undefined) {;
     };
     fetchProfile();
   }, [id]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -370,6 +381,8 @@ if (mockProfile) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return { profile, isLoading, error, mockProfileData }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

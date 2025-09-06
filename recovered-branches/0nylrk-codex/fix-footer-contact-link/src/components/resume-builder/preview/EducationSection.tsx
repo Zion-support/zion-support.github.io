@@ -30,26 +30,23 @@ export function EducationSection({ education }: EducationSectionProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Education  } from '@/types/resume';
 import { format } from 'date-fns';
-=======
 import {Education} from '@/types/resume';
 import {format} from 'date-fns';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface EducationSectionProps {
   education: Education[]
 }
 export function EducationSection({ education }: EducationSectionProps) {
   // Sort education by date (newest first)
-<<<<<<< HEAD
 
   const sortedEducation = [...education].sort((a, b) => {
-=======
   const sortedEducation = [...education].sort((a, b) => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -61,6 +58,7 @@ export function EducationSection({ education }: EducationSectionProps) {
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -70,15 +68,20 @@ export function EducationSection({ education }: EducationSectionProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     return format(date, 'MMM yyyy')
   }
   if (sortedEducation.length === 0) return null;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Education } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface EducationSectionProps {;
@@ -99,6 +102,7 @@ export function EducationSection({ education }: EducationSectionProps) {;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -111,6 +115,8 @@ export function EducationSection({ education }: EducationSectionProps) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     return format(date, 'MMM yyyy')
   },
@@ -121,6 +127,7 @@ export function EducationSection({ education }: EducationSectionProps) {;
 
 =======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -128,6 +135,8 @@ export function EducationSection({ education }: EducationSectionProps) {;
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Education</h2>

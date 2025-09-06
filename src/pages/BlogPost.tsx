@@ -1,9 +1,12 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -52,6 +55,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { BLOG_POSTS } from "@/data/blog-posts";
@@ -59,14 +63,18 @@ import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
-=======
 import { BLOG_POSTS } from "@/data/blog-posts"
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import Link from 'next/link',
@@ -83,6 +91,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 import { BLOG_POSTS } from "@/data/blog-posts",
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -129,6 +138,8 @@ function BlogPost() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function BlogPost() {
 
   const router = useRouter()
@@ -144,6 +155,7 @@ export default function BlogPost() {
     const fetchPost = async () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         logErrorToProduction('Failed to fetch blog post', { data: err })
@@ -152,6 +164,8 @@ export default function BlogPost() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setIsLoading(true)
       setError(null)
       try {
@@ -166,16 +180,17 @@ export default function BlogPost() {
         setRelatedPosts(related)
         setIsLoading(false)
         return } catch (err) {
-<<<<<<< HEAD
         logErrorToProduction('Failed to fetch blog post', { data: err })
         setError('Failed to load article')
       }
-=======
         logErrorToProduction('Failed to fetch blog post', { data: err });
         setError('Failed to load article');
       };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
@@ -218,8 +233,11 @@ if ( {) {
     fetchPost()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router])
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setIsLoading(true),
       setError(null),
       try {
@@ -312,11 +330,6 @@ export default function BlogPost() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading && !timedOut) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
@@ -348,6 +361,7 @@ export default function BlogPost() {;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -357,6 +371,9 @@ export default function BlogPost() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
     if (!post) return ''
@@ -402,7 +419,10 @@ if (return '') {
         return '#'
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const articleLd = {
     '@context': 'https://schema.org'
     '@type': 'BlogPosting'
@@ -424,6 +444,7 @@ if (return '') {
         description={post.excerpt}
         keywords={post.tags.join(', ')}
         ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -508,6 +529,8 @@ if (return '') {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   // Helper function to get share URL;
   const getShareUrl = (platform: string) => {;
@@ -525,10 +548,6 @@ if (return '') {
     }
   },
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const articleLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -537,9 +556,6 @@ if (return '') {
     image: post.featuredImage,
     datePublished: post.publishedDate,
     author: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       '@type': 'Person',
       name: post.author.name,
     },
@@ -551,8 +567,6 @@ if (return '') {
         description={post.excerpt}
         keywords={post.tags.join(', ')}
         ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       "@type": "Person",
       name: post.author.name}},
   
@@ -578,11 +592,6 @@ if (return '') {
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       />
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
@@ -601,6 +610,7 @@ if (return '') {
               </Link>
             </Button>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -660,12 +670,9 @@ if (return '') {
 
 =======
 =======
-          
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
@@ -674,7 +681,6 @@ if (return '') {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
             </h1>
-<<<<<<< HEAD
             <p className='text-xl text-zion-slate-light mb-8'>{post.excerpt}</p>
             {/* Author and metadata */}
             <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>
@@ -782,6 +788,7 @@ if (return '') {
                   key={tag}
                   className='text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full'                >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                   #{tag}
                 </span>
               ))}
@@ -875,6 +882,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   ))}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="text-xl text-zion-slate-light mb-8">
               {post.excerpt}
             </p>;
@@ -981,33 +990,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                   key={tag} 
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   #{tag}
                 </span>
               ))}
             </div>
-<<<<<<< HEAD
             <Separator className='my-12 bg-zion-blue-light' />
-=======
             
             <Separator className="my-12 bg-zion-blue-light" />
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Related articles */}
             {relatedPosts.length > 0 && (
               <div className="mt-12">
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {relatedPosts.map(relatedPost => (
-<<<<<<< HEAD
                     <Link
                       key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
                       className='bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300'
@@ -1028,7 +1024,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <h4 className='text-white font-bold mt-1 line-clamp-2'>
                           {relatedPost.title}
                         </h4>
-=======
                     <Link 
                       key={relatedPost.id}
                       href={`/blog/${relatedPost.slug}`}
@@ -1045,17 +1040,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <div className="p-4">
                         <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </Link>
                   ))}
                 </div>
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1078,31 +1069,29 @@ ursor/fix-website-loading-errors-and-merge-6662
                 or browse expert{' '}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
             <div className='mt-12 text-center'>
               <p className='text-zion-slate-light'>
-=======
-<<<<<<< HEAD
 
             <div className="mt-12 text-center">
               <p className="text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
             <div className="mt-12 text-center">
               <p className="text-zion-slate-light">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
                 or browse expert{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Link href='/talent' className='text-zion-cyan underline'>
                   talent
                 </Link>{' '}
                 to accelerate your projects.
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               </p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1143,12 +1132,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
-                <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
               </p>
             </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1302,7 +1288,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </>
   )
-<<<<<<< HEAD
 }
 outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {'
   getShareUrl ('facebook') "
@@ -1601,18 +1586,14 @@ export default function BlogPost() {return ("
           Professional BlogPost services to help your business grow.
         </p>
       </div>
-<<<<<<< HEAD
   )
 }
 }
 }
-=======
   );
 };
 };
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
               </p>;
             </div>;
@@ -1637,8 +1618,11 @@ export default function BlogPost() {return ("
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -12,11 +13,15 @@ export interface FeedbackRecord {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-export interface FeedbackRecord {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface FeedbackRecord {
 export interface FeedbackRecord {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   type: string;
   message: string;
@@ -51,7 +56,6 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   ip: string;
 }
 const feedbackData: FeedbackRecord[] = [];
-<<<<<<< HEAD
 export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
   feedbackData.push(feedback);
   console.log('Feedback saved:', feedback.id);
@@ -62,11 +66,13 @@ export function writeAll(rows: any[]): void {
 }
 export function getAllFeedback(): FeedbackRecord[] {
   return [...feedbackData];
-=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
   feedbackData.push(feedback);
@@ -80,6 +86,7 @@ export function writeAll(rows: any[]): void {;
 
 export function getAllFeedback(): FeedbackRecord[] {;
   return [...feedbackData];
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   metadata: Record < string, any>;
@@ -126,3 +133,7 @@ export function getAllFeedback (): FeedbackRecord[] {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

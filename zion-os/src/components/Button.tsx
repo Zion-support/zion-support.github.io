@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +95,8 @@ interface ButtonProps {
   full_width?: boolean,
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 'use client';
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
@@ -195,7 +198,6 @@ if ( {) {
   }
   const widthClasses = fullWidth ? 'w-full' : '';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${widthClasses} ${className}`;
-=======
 'use client',;
 import React, { forwardRef } from 'react',;
 import Link from 'next/link',;
@@ -253,7 +255,6 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
   },;
   const widthClasses = fullWidth ? 'w-full' : '',;
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${widthClasses} ${className}`,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const content = (;
     <>;
       {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
@@ -261,20 +262,22 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
-<<<<<<< HEAD
   );
   if (href) {return (;
-=======
   ),;
   if (href) {;
     return (;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Link href={href} className={classes}>;
         {content}
       </Link>);
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -292,8 +295,9 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <button;
@@ -330,7 +334,6 @@ export default Button,;
 =======
     </button>;
   );
-<<<<<<< HEAD
 });
 Button.displayName = 'Button';
 export default Button;
@@ -377,7 +380,6 @@ export function IconButton({icon;
   children;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {return (;
-=======
 }),;
 Button.displayName = 'Button',;
 export default Button,;
@@ -407,6 +409,7 @@ export function IconButton({;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     <Button {...props} icon={icon} iconPosition="left" size="sm">;
@@ -427,12 +430,13 @@ function FloatingActionButton() {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Button {...props} icon={icon} iconPosition="left" size="sm">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {children}
     </Button>);
 }
-<<<<<<< HEAD
 // Floating action button;
 <<<<<<< HEAD
 export /**
@@ -446,8 +450,11 @@ export function FloatingActionButton({icon;
   className = '';
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {return (;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Floating action button;
 export function FloatingActionButton({;
@@ -458,6 +465,7 @@ export function FloatingActionButton({;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -465,6 +473,8 @@ export function FloatingActionButton({;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Button;
       {...props}
       icon={icon}

@@ -3,6 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
+<<<<<<< HEAD
 
 =======
 
@@ -23,6 +24,10 @@ export const metadata = {
   title: "Services | Zion Tech Group",
   description: "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 
 export default function ServicesOverviewPage() {
@@ -191,6 +196,27 @@ function ServiceCard(): any ({;
           description="Business intelligence, data visualization, and machine learning"
           bullets={["Data engineering", "BI dashboards", "Predictive analytics", "Data visualization"]}
           icon="📊"
+        />
+        <ServiceCard
+          href="/services/ai-powered-tools"
+          title="AI-Powered Tools"
+          description="Cutting-edge AI micro SAAS tools for content, automation, and analytics"
+          bullets={["Content generation", "Business automation", "AI analytics"]}
+          icon="🤖"
+        />
+        <ServiceCard
+          href="/services/business-automation"
+          title="Business Automation"
+          description="Intelligent workflow automation and process optimization tools"
+          bullets={["Workflow automation", "Data processing", "Communication automation"]}
+          icon="⚡"
+        />
+        <ServiceCard
+          href="/services/industry-solutions"
+          title="Industry Solutions"
+          description="Specialized micro SAAS solutions for specific industries"
+          bullets={["Healthcare", "Financial services", "Real estate"]}
+          icon="🏢"
         />
       </div>
       <CTA />

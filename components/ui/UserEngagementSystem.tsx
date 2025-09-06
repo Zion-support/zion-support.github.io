@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react";
 
@@ -38,9 +38,11 @@ import React from './react';
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
-<<<<<<< HEAD
 export type EmptyStateProps = {;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export type EmptyStateProps = {
@@ -60,6 +62,9 @@ export type EmptyStateProps = {
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+export type EmptyStateProps = {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   emoji?: string;
   title: string;
   message: string;
@@ -134,16 +139,14 @@ function EmptyState() {
       <h2 className="mt-4 text-lg font-semibold">{title}</h2>
       <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{message}</p>
       {action && <div className="mt-3">{action}</div>}
-<<<<<<< HEAD
     </div>;
-=======
     </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -21,15 +22,18 @@ const [loading, set_loading] = useState (false);
       set_loading (false);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
 export default function OSDeployPage() {
-=======
 
 export default function OSDeployPage() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const [loading, setLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -706,8 +710,11 @@ ai: 'Advanced AI capabilities and automation',
 =======
                 }`}
               >
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -1096,6 +1103,7 @@ export default function AdminDeployPage() {;
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
               }`}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1111,21 +1119,27 @@ export default function AdminDeployPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {message}
               </div>;
             )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </form>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Submit Button */}
           <div className="text - center">;
@@ -1156,6 +1170,8 @@ export default function AdminDeployPage() {;
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>;
         </form>;
       </div>;
@@ -1205,6 +1221,7 @@ function getFeatureDescription(key: string) {;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1217,3 +1234,5 @@ function getFeatureDescription(key: string) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

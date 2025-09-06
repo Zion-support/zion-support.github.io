@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -37,18 +38,25 @@ import {
 import {
 =======
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu
   X
   ChevronDown
@@ -140,6 +148,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 =======
 import {
 =======
@@ -148,6 +157,8 @@ import {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu,
   X,
   ChevronDown,
@@ -219,6 +230,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -226,6 +238,8 @@ import {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -815,6 +829,7 @@ const mainNavigation = [
       }
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     ];
@@ -829,6 +844,8 @@ const mainNavigation = [
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         name: 'AI HR Management Suite 2030'
         href: '/ai-hr-management-suite-2030'
         description: 'Intelligent human resources management powered by AI'
@@ -841,7 +858,6 @@ const mainNavigation = [
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ]
   }
-=======
         name: 'AI HR Management Suite 2030',
         href: '/ai-hr-management-suite-2030',
         description: 'Intelligent human resources management powered by AI',
@@ -855,7 +871,6 @@ const mainNavigation = [
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ]
   }
-<<<<<<< HEAD
 
 
 
@@ -866,16 +881,14 @@ const mainNavigation = [
 <<<<<<< HEAD
 
 ];
-=======
-<<<<<<< HEAD
-=======
 
 ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -1015,6 +1028,7 @@ const quickLinks = [
   { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' }
   { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-500 to-red-500' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1032,12 +1046,16 @@ export default function UltraFuturisticNavigation2030() {;
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-export default function UltraFuturisticNavigation2030() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function UltraFuturisticNavigation2030() {
 
 export default function UltraFuturisticNavigation2030() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -1154,6 +1172,7 @@ export default function UltraFuturisticNavigation2030() {;
             <div className='flex items-center space-x-2'>
               <Phone className='w-4 h-4 text-cyan-400' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1169,6 +1188,9 @@ export default function UltraFuturisticNavigation2030() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <span>{contactInfo.mobile}</span>
             </div>
             <div className='flex items-center space-x-2'>
@@ -1479,14 +1501,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Logo */}
             <div className='flex items-center space-x-4'>
               <Link href='/' className='flex items-center space-x-3 group'>
@@ -1614,6 +1629,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                                 key={serviceIndex}
                                 href={service.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                               </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1624,6 +1640,8 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
                               >
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                 className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group'
                               >
                                 <div className='flex items-center justify-between'>
@@ -1648,15 +1666,9 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
                                   </div>
                                   <span className="text-xs font-mono text-purple-400">{service.price}</span>
                                 </div>
-=======
 
                                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               </Link>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             ))}
@@ -1851,14 +1863,7 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>
               <Link
@@ -1911,6 +1916,7 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2032,12 +2038,9 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -2046,14 +2049,7 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='px-4 py-6 space-y-6'>
                 {/* Mobile Navigation Links */}
@@ -2153,27 +2149,29 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
                     >
                       <item.icon className="w-5 h-5" />
                       <span>{item.name}</span>
+                    </Link>
+                  ))}
+                </div>
+
+                    </Link>
+                  ))}
+                </div>
+
 <<<<<<< HEAD
-                    </Link>
-                  ))}
-                </div>
-=======
-
-                    </Link>
-                  ))}
-                </div>
-
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {/* Mobile Services */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white px-3">Our Services</h3>
                   <div className="grid grid-cols-2 gap-3">
                     {quickLinks.map((link) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <Link
 =======
@@ -2189,6 +2187,11 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+                      <Link
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         key={link.name}
                         href={link.href}
                         onClick={closeMenu}
@@ -2208,6 +2211,7 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
                       >
                         <link.icon className='w-6 h-6 mx-auto mb-2' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2222,13 +2226,17 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <span className='text-sm font-medium'>{link.name}</span>                      </Link>                          link.color.includes('from-')
                             ? `bg-gradient-to-r ${link.color} text-white`
-=======
                         <span className='text-sm font-medium'>{link.name}</span>                      </Link>                          link.color.includes('from-') 
                             ? `bg-gradient-to-r ${link.color} text-white` 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       >;
@@ -2250,6 +2258,7 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
                 </div>
                 {/* Mobile CTA */}
                 <div className='space-y-3 pt-4 border-t border-purple-500/20'>
+<<<<<<< HEAD
 
                         <span className='text-sm font-medium'>{link.name}</span>                      </Link>
 
@@ -2374,6 +2383,8 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
 =======
                 <div className='space-y-3 pt-4 border-t border-purple-500/20'>
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <span className='text-sm font-medium'>{link.name}</span>                      </Link>
 
                       </Link>
@@ -2386,11 +2397,14 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
                 <div className='space-y-3 pt-4 border-t border-purple-500/20'>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Link
                     href="/contact"
                     onClick={closeMenu}
@@ -2447,8 +2461,11 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
         </AnimatePresence>
       </nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
@@ -2459,6 +2476,7 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
 =======
 =======
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </motion.div>)}
@@ -2481,14 +2499,15 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
 =======
 <<<<<<< HEAD
 =======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+;
 
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2496,3 +2515,5 @@ className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

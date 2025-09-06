@@ -7,7 +7,6 @@
 
 =======
 
-<<<<<<< HEAD
 import React from "react";
 
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
@@ -16,8 +15,11 @@ import {Switch} from "@/components/ui/switch";
 import {toast} from "@/hooks/use-toast";
 import {InfoIcon} from "lucide-react";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import {
   Table,
@@ -35,6 +37,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -67,8 +70,9 @@ function RoleManagement() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
@@ -181,30 +185,30 @@ export function RoleManagement() {
     // In a real app, this would make an API call to update permissions
     toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
 =======
 <<<<<<< HEAD
-      title: "Permission updated"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      title: "Permission updated"
       title: "Permission updated",
-<<<<<<< HEAD
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
   };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
-<<<<<<< HEAD
   }
   const roleDescriptions: Record<string, string> = {
     "Admin": "Full access to all features and settings";
     "Recruiter": "Can manage candidates and job postings";
     "Manager": "Can view candidates and create jobs";
     "Viewer": "Read-only access to candidates"}
-=======
   },
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const roleDescriptions: Record<string string> = {
     "Admin": "Full access to all features and settings",
@@ -212,9 +216,12 @@ export function RoleManagement() {
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="space-y-6">
@@ -336,16 +343,21 @@ export function RoleManagement() {
                 </TableCell>
                 <TableCell className="text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Switch
                     checked={member.permissions.viewCandidates}
-=======
                   <Switch 
                     checked={member.permissions.viewCandidates} 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewCandidates", checked)
                     }
@@ -353,16 +365,21 @@ export function RoleManagement() {
                 </TableCell>
                 <TableCell className="text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Switch
                     checked={member.permissions.editCandidates}
-=======
                   <Switch 
                     checked={member.permissions.editCandidates} 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "editCandidates", checked)
                     }
@@ -370,16 +387,21 @@ export function RoleManagement() {
                 </TableCell>
                 <TableCell className="text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Switch
                     checked={member.permissions.createJobs}
-=======
                   <Switch 
                     checked={member.permissions.createJobs} 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "createJobs", checked)
                     }
@@ -387,16 +409,21 @@ export function RoleManagement() {
                 </TableCell>
                 <TableCell className="text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Switch
                     checked={member.permissions.manageTeam}
-=======
                   <Switch 
                     checked={member.permissions.manageTeam} 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "manageTeam", checked)
                     }
@@ -404,18 +431,23 @@ export function RoleManagement() {
                 </TableCell>
                 <TableCell className="text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Switch
                     checked={member.permissions.viewBilling}
-=======
                   <Switch 
                     checked={member.permissions.viewBilling} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewBilling", checked)
                     }
@@ -423,6 +455,7 @@ export function RoleManagement() {
                 </TableCell>
               </TableRow>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -432,6 +465,10 @@ export function RoleManagement() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onCheckedChange={(checked) => 
                       handlePermissionChange(member.id, "viewBilling", checked)
 import React from "react",;
@@ -1049,6 +1086,7 @@ export function RoleManagement() {;
                 </TableCell>;
               </TableRow>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/RoleManagement.tsx
 <<<<<<< HEAD
 
@@ -1288,6 +1326,8 @@ TooltipProvider;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </TableBody>
         </Table>

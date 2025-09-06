@@ -7,8 +7,6 @@
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -28,8 +26,11 @@ import { Form;
 import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
 import { Education } from '@/types/resume';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -45,12 +46,15 @@ import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Define schema for form validation
 
 const educationSchema = z.object({
@@ -65,18 +69,20 @@ const educationSchema = z.object({
 type EducationFormValues = z.infer<typeof educationSchema>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function EducationFormFields({
   isEditing
   onSubmit
   onCancel
 }: EducationFormFieldsProps) {
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function EducationFormFields({ 
@@ -85,12 +91,15 @@ export function EducationFormFields({
   onCancel 
 }: EducationFormFieldsProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
@@ -150,13 +159,14 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
     }
-<<<<<<< HEAD
   }
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -277,11 +287,6 @@ export function EducationFormFields({;
       setIsLoading(false);
     }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <Form {...form}>
@@ -336,6 +341,7 @@ export function EducationFormFields({;
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             render={({ field }) => (;
@@ -569,13 +575,17 @@ export function EducationFormFields({ ;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Input
                     type="date"
-=======
                   <Input 
                     type="date" 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {...field}
                     value={field.value |''}
                   />
@@ -978,6 +988,7 @@ export function EducationFormFields({ ;
     </Form>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ========
@@ -1074,9 +1085,13 @@ export function EducationFormFields({ ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

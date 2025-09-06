@@ -1,6 +1,24 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4 } from "uuid";
+import {
+  findProjectById
+  hasExistingReview
+  upsertReview
+  counterpartRole
+} from "../../../utils/dataStore";
+import type { Review } from "../../../types/reviews";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { v4 as uuidv4 } from 'uuid';
 import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore';
 import type { Review } from '../../../types/reviews';
@@ -8,6 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -114,6 +133,11 @@ anonymous
 
   }
   try {
+=======
+
+  }
+  try {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     const { projectId, fromRole, fromId, rating, text, categories, anonymous } =
       req.body as {
@@ -135,11 +159,35 @@ anonymous
 
     if (!text |String(text).trim().length === 0) {
       return res.status(400).json({ error: "Review text is required" });
+<<<<<<< HEAD
+=======
+    const {
+      projectId,
+    fromRole,
+      fromId,
+    rating,
+      text,
+    categories,
+      anonymous} = req.body as {
+      projectId: string,
+      fromRole: 'client' | 'talent',
+      fromId: string,
+      rating: number,
+      text: string,
+      categories?: Review['categories'];
+      anonymous?: boolean
+      categories,
+      anonymous
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } = req.body as {
       projectId: string, fromRole: 'client' | 'talent',
       fromId: string, rating: number,
       text: string, categories?: Review['categories'],
+<<<<<<< HEAD
 anonymous?: boolean
+=======
+      anonymous?: boolean;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     };
     if (!projectId || !fromRole || !fromId) {
       return res && res.status(400).json({ error: "Missing required fields" });
@@ -192,6 +240,7 @@ if ( {) {
       return res.status(404).json({ error: 'Project not found' })
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     if (project.status !== 'Completed') {
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
@@ -202,6 +251,14 @@ if ( {) {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+    if (project.status !== "Completed") {
+      return res.status(400).json({
+        error: "Reviews can only be submitted after project completion"
+      });
+    if (project.status !== 'Completed') {
+      return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 <<<<<<< HEAD
 
@@ -216,12 +273,67 @@ if ( {) {
     }
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     }
     const now = new Date().toISOString();
     const review: Review = {
 
+=======
+      return res.status(409).json({
+        error: "You have already submitted a review for this project"
+      });
+      return res.status(409).json({ error: 'You have already submitted a review for this project' })
+    }
+    const now = new Date().toISOString();
+    const review: Review = {
+      id: uuidv4()
+      projectId
+      fromRole
+      fromId
+      toRole
+      toId
+      rating
+      text: String(text).trim()
+      categories
+      anonymous: Boolean(anonymous)
+      approved: false, // requires admin approval
+      reported: false
+      reports: []
+      removed: false
+      createdAt: now
+    }
+    await upsertReview(review);
+    return res
+      .status(201)
+      .json({ message: "Review submitted", reviewId: review.id });
+
+  } catch (error: any) {
+    return res
+      .status(500)
+      .json({ error: "Internal server error", details: error?.message });
+      id: uuidv4(),
+      projectId,
+    fromRole,
+      fromId,
+    toRole,
+      toId,
+    rating,
+      text: String(text).trim(),
+      categories,
+      anonymous: Boolean(anonymous),
+      approved: false, // requires admin approval
+      reported: false,
+      reports: [],
+      removed: false,
+      createdAt: now
+    };
+    await upsertReview(review);
+    return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
+  } catch (error: any) {
+    return res.status(500).json({ error: 'Internal server error', details: error?.message })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Review submitted' });
@@ -564,6 +676,7 @@ const now = new Date ().toISOString ();
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
 =======
 
@@ -571,6 +684,8 @@ const now = new Date ().toISOString ();
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

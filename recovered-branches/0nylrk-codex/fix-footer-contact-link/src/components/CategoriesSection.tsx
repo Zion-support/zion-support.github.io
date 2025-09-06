@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/CategoriesSection.tsx
 
 =======
@@ -35,6 +36,8 @@ const categories = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {GradientHeading} from "./GradientHeading";
 import {Link} from "react-router-dom";
@@ -58,17 +61,20 @@ const categories = [
     icon: <HardDrive className="w-10 h-10" />
     link: "/equipment"
     color: "from-amber-500 to-orange-600"}
-=======
 import {GradientHeading} from "./GradientHeading";
 import {Link} from "react-router-dom";
 import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -80,6 +86,8 @@ import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const categories = [
   {
     title: "Services",
@@ -101,6 +109,7 @@ const categories = [
     color: "from-amber-500 to-orange-600"},
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -109,6 +118,8 @@ const categories = [
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     title: "Innovation"
     description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -117,6 +128,7 @@ const categories = [
     color: "from-emerald-500 to-green-600"}]
 const specialServices = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -128,11 +140,16 @@ const specialServices = [
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    title: "IT Onsite Services"
+    link: "/it-onsite-services"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 ];
 
 interface CategoriesSectionProps {
   showTitle?: boolean
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",;
@@ -159,13 +176,11 @@ const categories = [;
     description: "On-demand IT support, consulting, development, and more";
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
     title: "IT Onsite Services",
     link: "/it-onsite-services"
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { GradientHeading } from "./GradientHeading",;
 import { Link } from "react-router-dom",;
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
@@ -218,6 +233,7 @@ const specialServices = [;
 ];
 interface CategoriesSectionProps {;
   showTitle?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/CategoriesSection.tsx
 <<<<<<< HEAD
@@ -442,9 +458,10 @@ function CategoriesSection() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
     <section className="py-20 bg-zion-blue">
@@ -503,6 +520,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     </section>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -535,11 +553,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           </div>;
         </div>;
         <div className="mt-12 flex justify-center">;
@@ -620,11 +637,10 @@ interface CategoriesSectionProps {
     </section>;
   );
 }
+;
+;
 <<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -115,7 +115,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
-<<<<<<< HEAD
   Code
   Copy
   RefreshCw
@@ -126,8 +125,11 @@ import {
   Upload
   Settings
   Eye;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Code,
   Copy,
   RefreshCw,
@@ -149,7 +151,6 @@ export default function JSONFormatterPage() {
 =======
   Settings,;
   Eye,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
@@ -744,20 +745,17 @@ function JSONFormatterPage() {
       setErrorMessage('');
     } catch (error) {
       setIsValid(false);
-<<<<<<< HEAD
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');    }      setErrorMessage('')
     } catch (error) {
       setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
   }
-=======
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');    }
 
     }
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const clearAll = () => {
     setInputJson('');
     setFormattedJson('');
@@ -1510,23 +1508,28 @@ className='border-gray-600 text-gray-300 hover:bg-gray-700'>;
               <div className='space-y-4'>
                 <div className='relative'>
                   {showLineNumbers && (
-<<<<<<< HEAD
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}              <div className="space-y-4">
                 <div className="relative">
                   {showLineNumbers && (
                     <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
 
                       {getLineNumbers(inputJson)}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </div>
                   }`}>;
                   </span>;
@@ -1624,6 +1627,7 @@ placeholder="Paste your JSON data here..."
                     <strong>Error:</strong> {errorMessage}
                   </div>
                 )}
+<<<<<<< HEAD
 
                     Format JSON
                   </Button>
@@ -1656,17 +1660,19 @@ placeholder="Paste your JSON data here..."
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
 
-<<<<<<< HEAD
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
-=======
                 <div className='flex space-x-3'>
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <strong>Error:</strong> {errorMessage}
                   </div>
                 )}
@@ -1678,8 +1684,11 @@ placeholder="Paste your JSON data here..."
                   >
                     <Code className="w-5 h-5 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                 <div className='flex space-x-3'>
 
@@ -1687,8 +1696,11 @@ placeholder="Paste your JSON data here..."
                   </div>
                 )}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     Format JSON
                   </Button>
                   <Button
@@ -2000,6 +2012,7 @@ className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>
                       • Size: {((formattedJson.length * 2) / 1024).toFixed(2)}{' '}
                       KB
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2008,15 +2021,17 @@ className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </p>                  </div>                  <div className="text-sm text-gray-400">
                     <p>• Characters: {formattedJson.length}</p>
                     <p>• Lines: {formattedJson.split('\n').length}</p>
                     <p>• Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
-=======
                     </p>                  </div>
 
                   </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2024,12 +2039,15 @@ className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 )}
               </div>
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2093,11 +2111,15 @@ className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2126,6 +2148,10 @@ className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+              Professional JSON Formatting Features
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -2428,6 +2454,7 @@ className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>
         </div>
       </section>
     </>
+<<<<<<< HEAD
 
 }
 
@@ -2965,18 +2992,18 @@ className='border-white text-white hover:bg-white hover:text-teal-600'>         
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/SkillsForm.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ========
@@ -66,13 +67,30 @@ export function SkillsForm(props:SkillsFormProps) {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/SkillsForm.tsx
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SkillsForm as SkillsFormComponent  } from './skills';
 import { SkillsFormProps } from './skills/types';
 export function SkillsForm(props: SkillsFormProps) {
   return <SkillsFormComponent {...props} />;
 }
+<<<<<<< HEAD
 
 }
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {SkillsForm, as, SkillsFormComponent} from './skills';
+import {SkillsFormProps} from './skills/types';
+export function SkillsForm(props: SkillsFormProps) {
+  return <SkillsFormComponent {...props} />
+import { SkillsForm as SkillsFormComponent } from './skills',;
+import { SkillsFormProps } from './skills/types';
+export function SkillsForm(props: SkillsFormProps) {;
+  return <SkillsFormComponent {...props} />;
+}
+;
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

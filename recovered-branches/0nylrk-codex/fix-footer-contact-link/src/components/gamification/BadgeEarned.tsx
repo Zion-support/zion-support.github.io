@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/gamification/BadgeEarned.tsx
 
 import React from "react",
@@ -54,8 +55,9 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
-<<<<<<< HEAD
 import { getBadgeMeta, BadgeKey } from "./badgeConfig";
 interface BadgeEarnedProps {
 
@@ -64,8 +66,8 @@ interface BadgeEarnedProps {
   size?: number;
   showName?: boolean;
   showDesc?: boolean;
-=======
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -83,11 +85,17 @@ import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from "react",
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface BadgeEarnedProps {
   badge: BadgeKey,
   size?: number,
   showName?: boolean,
   showDesc?: boolean,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   earnedDate?: string
@@ -98,20 +106,16 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   earnedDate?: string
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
   badge;
   size = 44;
   showName = true;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
-<<<<<<< HEAD
   badge;
 
   size = 44;
@@ -121,18 +125,21 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   const meta = getBadgeMeta(badge);
   if (!meta) return null;
   const Icon = meta.icon;
-=======
   badge,
   size = 44,
   showName = true,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   showDesc = false,
   earnedDate}) => {
   const meta = getBadgeMeta(badge),
   if (!meta) return null,
   const Icon = meta.icon,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -164,6 +171,8 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="flex flex-col items-center text-center gap-1 px-2">
       <div
@@ -184,11 +193,14 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
       {showName && (
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
 interface BadgeEarnedProps {;
@@ -226,6 +238,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       </div>;
       {showName && (;
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -392,6 +405,8 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {meta.name}
         </span>
       )}
@@ -403,21 +418,17 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
       {showDesc && (
         <span className="text-xs text-zion-slate-light">{meta.description}</span>
       )}
-<<<<<<< HEAD
     </div>
   )
-<<<<<<< HEAD
 }
 
-=======
     </div>;
   );
-=======
-=======
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

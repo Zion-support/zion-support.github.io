@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:merge-resolver-fixed.js
@@ -32,9 +33,10 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 console.log('🔧 Starting Merge Conflict Resolution');
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {try {;
@@ -55,22 +57,22 @@ function fixMergeConflicts(filePath) {try {;
 }
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {let files = [];
-=======
-=======
-<<<<<<< HEAD
 const fs = require('fs'),;
 const path = require('path'),;
-=======
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 console.log('🔧 Starting Merge Conflict Resolution'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -111,20 +113,16 @@ function fixMergeConflicts(filePath) {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const originalContent = content,;
     // Remove merge conflict markers and keep HEAD version;
     content = content.replace(/[\s\S]*?
     content = content.replace(/
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),;
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    content = content.replace(/[\s\S]*?[\s\S]*?[a-f0-9]+/g, ''),;
+    content = content.replace(/[\s\S]*?[a-f0-9]+/g, ''),;
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
@@ -157,25 +155,24 @@ function getAllFiles(dir, extensions) {;
 
 =======
 function getAllFiles(dir, extensions) {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   let files = [],;
   try {;
     const items = fs.readdirSync(dir),;
     for (const item of items) {;
       const fullPath = path.join(dir, item),;
       const stat = fs.statSync(fullPath),;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   let files = [];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   try {;
     const items = fs.readdirSync(dir);
     for (const item of items) {;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -304,9 +301,10 @@ if (|| content.includes (') {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
         files = files.concat(getAllFiles(fullPath, extensions));
-<<<<<<< HEAD
       } else if (extensions.some(ext => item.endsWith(ext))) {files.push(fullPath);
       }
     }
@@ -323,8 +321,11 @@ async function main() {;
     try {;
       const content = fs.readFileSync(file, 'utf8');
       if (content.includes('') |content.includes('
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       } else if (extensions.some(ext => item.endsWith(ext))) {;
         files.push(fullPath);
       }
@@ -339,6 +340,7 @@ async function main() {;
 async function main() {;
   console.log('🔍 Scanning for merge conflicts...'),;
   const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -361,6 +363,8 @@ async function main() {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   let fixedCount = 0,;
   for (const file of files) {;
     try {;
@@ -369,13 +373,11 @@ async function main() {;
 }
 }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   let fixedCount = 0;
   for (const file of files) {;
     try {;
       const content = fs.readFileSync(file, 'utf8'),;
-      if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {;
+      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
         if (fixMergeConflicts(file)) {;
           fixedCount++;
         }
@@ -415,8 +417,11 @@ console.log ('🎉 Merge conflict resolution completed!')
 ;
 main().catch(console.error),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

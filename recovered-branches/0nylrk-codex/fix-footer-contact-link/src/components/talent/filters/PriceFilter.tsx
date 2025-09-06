@@ -2,10 +2,18 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/PriceFilter.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ChevronDown, ChevronUp } from "lucide-react",
 =======
 const handleChange = (values: number[]) => {
+=======
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Slider} from "@/components/ui/slider";
+import {PriceFilterProps} from "@/types/filters";
+export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
+  const handleChange = (values: number[]) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setPriceRange([values[0], values[1]]);
   };
 import { ChevronDown, ChevronUp } from "lucide-react",
@@ -22,7 +30,16 @@ export function PriceFilter({
   const handleChange = (values: number[]) => {
     setPriceRange([values[0], values[1]]);
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Slider } from "@/components/ui/slider",
+import { PriceFilterProps } from "@/types/filters",
+export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
+  const handleChange = (values: number[]) => {
+    setPriceRange([values[0], values[1]])
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -48,10 +65,15 @@ export function PriceFilter({
             <span>${priceRange[1]}/hr</span>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <Slider
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <Slider
+          <Slider 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Slider } from "@/components/ui/slider",;
 import { PriceFilterProps } from "@/types/filters",;
@@ -141,6 +163,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/PriceFilter.tsx
           <Slider;
 
@@ -155,6 +178,9 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          <Slider;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             value={[priceRange[0], priceRange[1]]}
 =======
           <Slider ;            value={[priceRange[0], priceRange[1]]}

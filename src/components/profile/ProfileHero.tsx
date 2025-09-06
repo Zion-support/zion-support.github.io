@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { Badge } from '@/components/ui/badge'
@@ -21,8 +18,6 @@ interface ProfileHeroProps {;
   reviewCount?: number
   aiScore?: number
   profileType: 'service' | 'talent'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 <<<<<<< HEAD
 =======
@@ -56,6 +51,7 @@ import { Badge } from "@/components/ui/badge";
 import { Star } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function ProfileHero({
 
@@ -63,9 +59,10 @@ export function ProfileHero({
 import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
-=======
 import { cn } from "@/lib/utils",
 interface ProfileHeroProps {
   name: string,
@@ -78,10 +75,12 @@ interface ProfileHeroProps {
   aiScore?: number,
   profileType: 'service' | 'talent'
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
   name: string
   title: string;  avatarUrl?: string;  name: string
   title: string
@@ -93,6 +92,7 @@ interface ProfileHeroProps {
   aiScore?: number
   profileType: 'service' | 'talent'
 <<<<<<< HEAD
+<<<<<<< HEAD
 xport function ProfileHero({
 =======
 =======
@@ -101,6 +101,9 @@ xport function ProfileHero({
 export function ProfileHero({
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export function ProfileHero({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   name
   title
   avatarUrl
@@ -110,9 +113,12 @@ export function ProfileHero({
   reviewCount
   aiScore
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   name,
   title,
   avatarUrl,
@@ -121,8 +127,11 @@ export function ProfileHero({
   rating,
   reviewCount,
   aiScore,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   profileType
 }: ProfileHeroProps) {
   return (
@@ -135,10 +144,13 @@ export function ProfileHero({
               alt={`${name} cover`}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className='w-full h-full object-cover'
               loading='lazy'
 export function ProfileHero({
@@ -205,7 +217,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />
           )}
         </AspectRatio>
-=======
               className="w-full h-full object-cover"
               loading="lazy"
             />
@@ -215,11 +226,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         </AspectRatio>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="container px-4 md:px-6">
 >>>>>>>           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
             <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">
@@ -229,10 +243,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -267,6 +284,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </h2>
               <div className='flex flex-wrap items-center gap-3 mt-2'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
@@ -282,6 +300,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { Badge } from "@/components/ui/badge",;
@@ -360,6 +380,7 @@ export function ProfileHero({;
               
               <div className="flex flex-wrap items-center gap-3 mt-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -377,8 +398,12 @@ export function ProfileHero({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+                {location && (
+                  <span className="text-sm text-zion-slate-light">{location}</span>
+                )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {rating && (
 =======
 
@@ -428,8 +453,11 @@ export function ProfileHero({;
 ;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -471,6 +499,7 @@ export function ProfileHero({;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -483,3 +512,5 @@ export function ProfileHero({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

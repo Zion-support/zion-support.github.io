@@ -11,6 +11,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
     const r = await fetch(
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -23,6 +24,10 @@ export default async function handler(
       `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
+      `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     );
     const metrics = await r && r.json();
     const jobs24 =

@@ -13,9 +13,7 @@ import React, { useState, useEffect } from 'react';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/NotificationCenter.tsx
 =======
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 // Use the shared icon wrapper
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -86,12 +84,14 @@ export const NotificationCenter: React.FC = () => {
   } = useNotifications();
   const [open, setOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import React, { useState, useEffect } from 'react',
 =======
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -100,6 +100,8 @@ import React, { useState, useEffect } from 'react',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
@@ -118,6 +120,7 @@ export const NotificationCenter: React.FC = () => {
     filteredNotifications,
     unreadCount, 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -127,13 +130,17 @@ export const NotificationCenter: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     markAsRead, ;
     markAllAsRead;
-=======
     markAsRead, 
     markAllAsRead,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     dismissNotification, 
     loading,
     filter,
@@ -146,6 +153,7 @@ export const NotificationCenter: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -153,6 +161,8 @@ export const NotificationCenter: React.FC = () => {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Refresh notifications when popover opens
   useEffect(() => {
     if (open) {
@@ -175,6 +185,7 @@ export const NotificationCenter: React.FC = () => {
           toast.error("Failed to load notifications")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const handleMarkAllAsRead = async () => {
     try {
@@ -188,13 +199,18 @@ export const NotificationCenter: React.FC = () => {
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       }
       loadNotifications()
     }
   }, [open, fetchNotifications]);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',;
 // Use the shared icon wrapper;
 import { Bell } from '@/components/icons',;
@@ -277,6 +293,7 @@ export const NotificationCenter: React.FC = () => {;
     }
   }, [open, fetchNotifications]),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -297,8 +314,9 @@ export const NotificationCenter: React.FC = () => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead(),
@@ -307,25 +325,30 @@ export const NotificationCenter: React.FC = () => {;
       console.error("Failed to mark notifications as read:", err),
       toast.error("Failed to update notifications")
     }
-<<<<<<< HEAD
   }
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -333,6 +356,7 @@ export const NotificationCenter: React.FC = () => {;
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -580,6 +604,8 @@ if ( {) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [open, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
     try {;
@@ -601,6 +627,7 @@ if ( {) {
           <Bell className="h-5 w-5 text-zion-slate-light" />;
           {unreadCount > 0 && (;
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               {unreadCount > 9 ? '9+' :unreadCount}
             </span>;
@@ -626,6 +653,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>
           )}
@@ -636,23 +665,17 @@ if ( {) {
           unreadCount={unreadCount}
           onMarkAllAsRead={handleMarkAllAsRead}
         />
-<<<<<<< HEAD
         <NotificationFilter
           filter={filter as FilterType}
           onFilterChange={handleFilterChange}
         />
-<<<<<<< HEAD
         <NotificationList
-=======
         
-=======
         <NotificationFilter 
           filter={filter as FilterType} 
           onFilterChange={handleFilterChange} 
         />
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <NotificationList 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           loading={loading}
           error={error}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -660,6 +683,7 @@ if ( {) {
           onMarkAsRead={markAsRead}
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
+<<<<<<< HEAD
 <<<<<<< HEAD
         />;
         ;
@@ -717,26 +741,23 @@ open
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/NotificationCenter.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>
   )
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         />;
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

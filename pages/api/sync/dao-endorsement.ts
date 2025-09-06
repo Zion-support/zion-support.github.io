@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -293,6 +294,8 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
@@ -301,8 +304,11 @@ import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
 
@@ -327,7 +333,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const version = nextVersionFor(state, resolutionId)
   const event = {
-<<<<<<< HEAD
     eventId: uuidv4()
     type: "dao_endorsement" as const
     payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp |Date.now() }
@@ -340,7 +345,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
-=======
     eventId: uuidv4(),
     type: "dao_endorsement" as const,
     payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() },
@@ -369,8 +373,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId });
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -432,12 +434,10 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-<<<<<<< HEAD
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
@@ -446,8 +446,11 @@ export default async function handler(req, res) {
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
@@ -569,6 +572,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -576,10 +580,14 @@ export default async function handler(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

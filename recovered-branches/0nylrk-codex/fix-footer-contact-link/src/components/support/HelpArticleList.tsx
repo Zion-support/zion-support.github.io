@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpArticleList.tsx
 
 =======
@@ -23,6 +24,9 @@ import { HELP_CATEGORIES } from "./help-content",
 =======
 import React from "react";
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Card
   CardContent
@@ -47,16 +51,34 @@ export function HelpArticleList({
   if (!category) {
     return <div>Category not found</div>;
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HELP_CATEGORIES} from "./help-content";
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
+  
+  if (!category) {
+    return <div>Category not found</div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HELP_CATEGORIES } from "./help-content",;
@@ -70,6 +92,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
     return <div>Category not found</div>;
+<<<<<<< HEAD
 
   }
 
@@ -109,6 +132,10 @@ export function HelpArticleList({
   }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
@@ -117,6 +144,7 @@ export function HelpArticleList({
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
           article.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -133,6 +161,11 @@ article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
 : category.articles;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    : category.articles;
+    : category.articles,
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div>
       <div className="mb-6">
@@ -180,6 +213,7 @@ article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -300,12 +334,15 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric"
     month: "long"
     day: "numeric"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -463,3 +500,20 @@ year: "numeric"
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  });
+}
+
+  })
+  })
+}
+;
+function formatDate(date: string): string {;
+  return new Date(date).toLocaleDateString("en-US", {;
+    year: "numeric";
+    month: "long";
+    day: "numeric";
+  });
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

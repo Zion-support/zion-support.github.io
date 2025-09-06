@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
 
 <<<<<<< HEAD
@@ -24,11 +25,11 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react";
-=======
 import React from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 interface FraudTabContentProps {
   tabValue: string
@@ -37,7 +38,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({
 }) => {
   switch (tabValue) {    case 'pending':
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return (
 
         <div className='bg-amber-50 dark:bg-amber-950/20 p-8 rounded-lg text-center'>
@@ -49,12 +53,15 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({
         </div>
       )
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface FraudTabContentProps {
   tabValue: string;
 
@@ -70,6 +77,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
     case 'pending':
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       return (
@@ -80,6 +88,8 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return (
         <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -91,6 +101,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     case 'dangerous':
 =======
@@ -100,17 +111,13 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 >>>>>>>     case 'dangerous':
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
       )
-=======
       ),
     
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     case 'dangerous':
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return (
@@ -123,6 +130,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     case 'actioned':
 =======
@@ -130,15 +138,11 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 >>>>>>>     case 'actioned':
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-      )
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      )
       ),
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     case 'actioned':
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return (
@@ -149,6 +153,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows flags where action has already been taken.
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -183,16 +188,21 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 <<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )
     default:
-<<<<<<< HEAD
       return null
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return null;
   };
 };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>       ),
@@ -200,6 +210,8 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     
@@ -361,14 +373,14 @@ default: '"
       );
     default:;
       return null;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
 
-=======
   }
 };
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

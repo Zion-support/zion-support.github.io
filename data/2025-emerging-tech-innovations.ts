@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -17,16 +18,19 @@ import { ServiceVariant } from '../types / service - variants';
 export interface EmergingTechInnovationService {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
-<<<<<<< HEAD
 export interface EmergingTechInnovationService {
 
-=======
 export interface EmergingTechInnovationService {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -1785,6 +1789,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     ]
     marketAdvantage:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1794,14 +1799,27 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
 =======
 
+=======
+      'Only quantum-powered cybersecurity platform with proven AI integration'
+  }
+];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
+    ];
+    marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
+  }
+];
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
   id: string,;
@@ -2267,6 +2285,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting';
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
@@ -2821,3 +2840,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

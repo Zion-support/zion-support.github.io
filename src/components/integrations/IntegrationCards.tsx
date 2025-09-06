@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7,6 +8,8 @@
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -23,8 +26,6 @@ import { Badge } from '@/components/ui/badge'
   Briefcase,
   Users,
 } from 'lucide-react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",
@@ -35,6 +36,7 @@ import { Badge } from "@/components/ui/badge",
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -43,6 +45,9 @@ import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -60,6 +65,7 @@ import { Badge } from '@/components/ui/badge'
   Users
 } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> interface IntegrationCardProps {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -69,6 +75,8 @@ interface IntegrationCardProps {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface IntegrationCardProps {
   title: string
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -79,10 +87,13 @@ interface IntegrationCardProps {
   onConnect?: () => void
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function IntegrationCard({
   title
   description
@@ -91,6 +102,7 @@ export function IntegrationCard({
   href
   onConnect
 }: IntegrationCardProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 xport function IntegrationCard({
 ursor/fix-website-loading-errors-and-merge-6662
@@ -111,14 +123,12 @@ export function IntegrationCard({
 >>>>>>>   title,
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
-=======
-=======
 }
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function IntegrationCard({
   title,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -129,6 +139,7 @@ export function IntegrationCard({
   onConnect}: IntegrationCardProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
@@ -136,6 +147,8 @@ export function IntegrationCard({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card className="overflow-hidden">
@@ -206,11 +219,14 @@ export function IntegrationCard({
             <span>Connect</span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <ArrowRight className='ml-1.5 h-3.5 w-3.5' />          </Button>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
 interface IntegrationCardProps {
@@ -220,6 +236,7 @@ interface IntegrationCardProps {
   status?: "connected" | "disconnected" | "pending"
   href?: string
   onConnect?: () => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> }
 ursor/fix-website-loading-errors-and-merge-6662
@@ -277,6 +294,8 @@ export function IntegrationCards() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 import React from "react",;
@@ -292,11 +311,6 @@ interface IntegrationCardProps {;
   status?: "connected" | "disconnected" | "pending",;
   href?: string,;
   onConnect?: () => void;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 export function IntegrationCard({
@@ -328,7 +342,10 @@ export function IntegrationCard({
             <Badge variant="outline">Not Connected</Badge>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
       </CardHeader>
       <CardContent className="pb-4">
@@ -362,7 +379,6 @@ xport function IntegrationCards() {
       </CardFooter>
     </Card>
   )
-=======
         </div>;
       </CardHeader>;
       <CardContent className="pb-4">;
@@ -387,17 +403,15 @@ xport function IntegrationCards() {
   );
 }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
       <IntegrationCard
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title='Slack'
         description='Send notifications and interact with Zion from Slack.'
         icon={<Slack className='h-5 w-5' />}
@@ -423,6 +437,7 @@ export function IntegrationCards() {
   )
 }        icon={<Briefcase className="h-5 w-5" />}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         onConnect={() => logDebug('Connect Salesforce clicked')}
 ursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -440,6 +455,8 @@ export function IntegrationCards() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title="Slack"
         description="Send notifications and interact with Zion from Slack."
         icon={<Slack className="h-5 w-5" />}
@@ -472,11 +489,6 @@ export function IntegrationCards() {
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
         icon={<Briefcase className="h-5 w-5" />}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -487,10 +499,13 @@ export function IntegrationCards() {
         onConnect={() => logDebug('Connect Teams clicked')}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         icon = {<Users className="h-5 w-5" />,}
         onConnect = {() => logDebug('Connect Teams clicked'),}
       />
@@ -498,17 +513,19 @@ export function IntegrationCards() {
   );
 };
 }
-<<<<<<< HEAD
-=======
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -523,3 +540,5 @@ export function IntegrationCards() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

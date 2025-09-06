@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -376,21 +377,23 @@ color: 'from - emerald - 500 to - green - 500',
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, Grid, List, ArrowRight, ChevronRight;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon
  } from 'lucide-react';
-=======
-<<<<<<< HEAD
 import {motion, AnimatePresence} from 'framer-motion';
 import {Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon,} from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function ExplorePage() {;
@@ -542,17 +545,22 @@ export default function ExplorePage() {;
         return 0;    }
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import Head from 'next/head';
-=======
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
   Search, Filter, Grid, List, ArrowRight, ChevronRight,;
@@ -775,6 +783,7 @@ import React, { useState } from 'react';
 }
   }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -798,11 +807,12 @@ import React, { useState } from 'react';
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Explore Technology Categories | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content='Explore our comprehensive technology categories including AI, quantum computing, cybersecurity, space technology, and more. Discover innovative solutions for your business.'
@@ -823,8 +833,11 @@ import React, { useState } from 'react';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta name="description" content="Explore our comprehensive technology categories including AI, quantum computing, cybersecurity, space technology, and more. Discover innovative solutions for your business." />
         <meta property="og:title" content="Explore Technology Categories | Zion Tech Group" />
         <meta property="og:description" content="Comprehensive technology categories and innovative solutions." />
@@ -871,6 +884,7 @@ import React, { useState } from 'react';
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -883,6 +897,8 @@ import React, { useState } from 'react';
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -909,6 +925,7 @@ import React, { useState } from 'react';
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -948,6 +965,8 @@ transition={{ duration: 0 && 0.8 }}>;
       {/* Search and Filters */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Search and Filters */}
       <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
@@ -957,8 +976,11 @@ transition={{ duration: 0 && 0.8 }}>;
               <div className='flex-1 max-w-md'>
                 <div className='relative'>
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Search and Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -997,11 +1019,6 @@ transition={{ duration: 0 && 0.8 }}>;
               <div className="flex-1 max-w-md">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <input
                     type="text"
                     placeholder="Search categories..."
@@ -1022,6 +1039,7 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1062,20 +1080,16 @@ transition={{ duration: 0 && 0.8 }}>;
                   onChange={(e) => setSortBy(e.target.value)}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Sort Options */}
               <div className='flex items-center gap-4'>
-=======
               {/* Sort Options */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               <div className="flex items-center gap-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <select
                   value={sortBy  } catch (error) {
     console.error("Error:", error);
@@ -1103,6 +1117,7 @@ transition={{ duration: 0 && 0.8 }}>;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 onChange={e => setSortBy(e && e.target.value)}
@@ -1238,6 +1253,8 @@ onChange={e => setSortBy(e && e.target.value)}
 className="mb-12"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Featured Services */}
       <section className='px-6 pb-16'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -1245,7 +1262,6 @@ className="mb-12"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='mb-12'
-=======
       {/* Featured Services */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1271,6 +1287,7 @@ className="mb-12"
 }
             className="mb-12"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1284,6 +1301,8 @@ className="mb-12"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
@@ -1292,6 +1311,7 @@ className="mb-12"
               Explore our most innovative and cutting-edge technology solutions
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1307,6 +1327,8 @@ className="mb-12"
             {featuredServices.map((service, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -1459,7 +1481,6 @@ className="mb-12"
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
 =======
                 className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, index) => (
               <motion.div
@@ -1486,6 +1507,7 @@ className="mb-12"
 }
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1498,12 +1520,15 @@ className="mb-12"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 <div className="relative z-10">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-4 flex items-center justify-center`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1539,6 +1564,8 @@ className="mb-12"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='flex items-center justify-between mb-3'>
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
@@ -1553,7 +1580,6 @@ className="mb-12"
                     </span>
                     <span className='text-xs text-white/40'>
                       {service.category}
-=======
                   <div className="flex items-center justify-between mb-3">
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                       service.status === 'active' ? 'bg-green-500/20 text-green-300' :
@@ -1565,15 +1591,9 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                     <span className="text-xs text-white/40">{service.category}</span>
                   </div>
-<<<<<<< HEAD
                   <h3 className='text-lg font-bold mb-2 text-white'>
                     {service.title}
                   </h3>
@@ -1584,13 +1604,17 @@ className="mb-12"
                     <span className='text-xl font-bold text-cyan-400'>
                       {service.price}
                     </span>
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <h3 className="text-lg font-bold mb-2 text-white">{service.title}</h3>
                   <p className="text-sm text-white/70 mb-4 leading-relaxed">{service.description}</p>
                   <div className="mb-4">
                     <span className="text-xl font-bold text-cyan-400">{service.price}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1609,6 +1633,8 @@ className="mb-12"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </div>
                   <a
                     href={`/services#${service.id}`  } catch (error) {
@@ -1643,7 +1669,6 @@ className="mb-12"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>
               </motion.div>
-<<<<<<< HEAD
             ))}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1679,7 +1704,6 @@ className="mb-12"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='mb-12'
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1713,6 +1737,7 @@ className="mb-12"
 }
             className="mb-12"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1723,6 +1748,8 @@ className="mb-12"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Technology Categories
@@ -1731,6 +1758,7 @@ className="mb-12"
               {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1916,15 +1944,11 @@ className="mb-12"
 
 =======
 <<<<<<< HEAD
-          <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
           <AnimatePresence mode="wait">
             {sortedCategories.length === 0 ? (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.div
                 initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
@@ -1976,9 +2000,12 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                 {sortedCategories.map((category, index) => (
                   <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     key={category.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -1996,7 +2023,6 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                     onClick={() =>
                       (window.location.href = `/category/${category.id}`)
                     }
-=======
                     key={category.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2023,11 +2049,6 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
@@ -2043,6 +2064,7 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                             ⭐ Featured
                           </span>
                         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2078,6 +2100,8 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                       {/* Stats */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       )}
                       {/* Category Icon */}
                       <div
@@ -2099,7 +2123,6 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                             {category.serviceCount}
                           </div>
                           <div className='text-xs text-white/60'>Services</div>
-=======
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2144,6 +2167,7 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                           <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>
                           <div className="text-xs text-white/60">Services</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -2177,6 +2201,8 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         </div>
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">
@@ -2186,7 +2212,6 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
   }
 }
                           </div>
-<<<<<<< HEAD
                           <div className='text-xs text-white/60'>                            {category.featured ? 'Featured' : 'Active'}
                           </div>
                         </div>
@@ -2194,8 +2219,11 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                       {/* CTA */}
                       <div className='flex items-center justify-between'>
                         <span className='text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           <div className="text-xs text-white/60">
                             {category.featured ? 'Featured' : 'Active'  } catch (error) {
     console.error("Error:", error);
@@ -2213,6 +2241,7 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                       <div className="flex items-center justify-between">
                         <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2225,12 +2254,15 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           Explore Category
                         </span>
                         <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" />
                       </div>
                     </div>
                   </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2251,6 +2283,8 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 ))}
 </div>;
             )}
@@ -2332,7 +2366,6 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {[;
 =======
             className='text-center mb-16'
-=======
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2376,11 +2409,6 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Emerging Technology Trends
@@ -2389,10 +2417,12 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
               Stay ahead of the curve with our insights into the latest technology developments
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {[
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {
                 icon: Brain
                 title: 'AI Consciousness'
@@ -2706,12 +2736,8 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                 className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
 =======
                 className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {
                 icon: Brain,
                 title: 'AI Consciousness',
@@ -2752,9 +2778,6 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                 title: 'Autonomous Systems',
                 description: 'Self-improving AI systems and autonomous business operations',
                 trend: 'Growing',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 color: 'from-emerald-500 to-green-500',
               },            ].map((trend, index) => (
               <motion.div
@@ -2764,8 +2787,6 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 color: 'from-emerald-500 to-green-500'
                 } catch (error) {
     console.error("Error:", error);
@@ -2801,15 +2822,19 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
 }
                 className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}>
                   <trend.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className="flex items-center justify-between mb-3">
@@ -2832,6 +2857,8 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='flex items-center justify-between mb-3'>
                   <h3 className='text-xl font-bold text-white'>
                     {trend.title}
@@ -2927,8 +2954,11 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-bold text-white">{trend.title}</h3>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -2985,12 +3015,15 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Explore?
@@ -3127,14 +3160,9 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
 =======
       <SmartFooter />
     </div>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
           >;
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
@@ -3179,6 +3207,7 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -3194,3 +3223,5 @@ className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

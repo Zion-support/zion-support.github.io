@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -15,6 +16,10 @@ export interface EnterpriseService2034 {;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface EnterpriseService2034 {
+export interface EnterpriseService2034 {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   description: string;
@@ -611,6 +616,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [
       'Custom hardware'
     ]
     compliance: [
+<<<<<<< HEAD
 
 ];      'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
 =======
@@ -824,6 +830,8 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     ]
     compliance: [
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Data center standards'
       'Energy efficiency'
       'Security compliance'
@@ -834,9 +842,12 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     contact: '+1 302 464 0950'
     website: 'https://ziontechgroup.com/ai-autonomous-data-center'
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Data center standards',
       'Energy efficiency',
       'Security compliance',
@@ -878,7 +889,6 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com/ai-autonomous-data-center',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -903,6 +913,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     security: ['AI - powered security_physical security_access controls'];
     scalability: 'Unlimited data center management';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     uptime: '99 && 99.999% data center platform availability';
     contact: '+1 302 464 0950',
@@ -911,6 +922,16 @@ export const enterprise2034Services: EnterpriseService2034[] = [
 <<<<<<< HEAD
     website: 'https://ziontechgroup.com/ai-autonomous-data-center'
 
+=======
+    uptime: '99.999% data center platform availability';
+
+    contact: '+1 302 464 0950'
+
+    website: 'https://ziontechgroup.com/ai-autonomous-data-center'
+  }
+];
+export interface EnterpriseService2034 {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string,;
   name: string,;
   description: string,;
@@ -1148,6 +1169,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     uptime: '99.999% data center platform availability',;
     contact: '+1 302 464 0950',;
     website: 'https://ziontechgroup.com/ai-autonomous-data-center';
+<<<<<<< HEAD
 
   }
 ];
@@ -1444,3 +1466,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

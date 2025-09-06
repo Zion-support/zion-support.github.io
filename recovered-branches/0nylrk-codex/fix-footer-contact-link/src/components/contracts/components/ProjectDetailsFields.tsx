@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
 
@@ -12,6 +13,8 @@ import { format } from "date-fns",
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
@@ -34,11 +37,8 @@ import {
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { format } from "date-fns",
-<<<<<<< HEAD
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
 
@@ -62,7 +62,6 @@ import {
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {
-=======
 import { CalendarIcon } from "lucide-react",
 import { UseFormReturn } from "react-hook-form",
 import { 
@@ -151,11 +150,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",;
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   form: UseFormReturn<ContractFormValues>;
 }
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
@@ -174,6 +168,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             <FormMessage />
           </FormItem>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -328,16 +323,12 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
       <FormField
-=======
       />;
       <FormField;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         control={form.control}
         name="scopeSummary"
         render={({ field }) => (
@@ -358,6 +349,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           </FormItem>
         )}
       />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -502,8 +494,9 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           control={form.control}
@@ -540,17 +533,10 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
         />
         <FormField
-=======
         />;
         <FormField;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           control={form.control}
           name="endDate"
           render={({ field }) => (
@@ -589,6 +575,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -740,21 +727,14 @@ FormMessage interface ProjectDetailsFieldsProps {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
       </div>
-<<<<<<< HEAD
     </>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         />;
       </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

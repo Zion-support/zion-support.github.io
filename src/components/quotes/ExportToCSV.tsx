@@ -1,14 +1,17 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
-=======
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
 interface ExportToCSVProps {
@@ -33,12 +36,15 @@ export const ExportToCSV = ({
       'Created Date'
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { Button } from "@/components/ui/button";
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Format quote data for CSV
     const rows = quotes.map(quote => [
       quote.id
@@ -57,10 +63,13 @@ import { Button } from "@/components/ui/button";
       quote.status
       new Date(quote.created_at).toLocaleDateString()
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
@@ -78,8 +87,11 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       'StatusCreated Date'
     ],
     
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Format quote data for CSV
     const rows = quotes.map(quote => [
       quote.id,
@@ -98,11 +110,13 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       quote.status,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       new Date(quote.created_at).toLocaleDateString(),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ])
     // Create CSV content
     const csvContent = [
@@ -117,21 +131,30 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
               : cell
           )
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .join(',')
       )
     ].join('\n')
     // Create download link
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .join(',');
       ),;
     ].join('\n');
     // Create download link;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
@@ -177,6 +200,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       headers.join()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       ...rows.map(row => 
         row.map(cell => 
@@ -190,21 +214,23 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ...rows.map(row =>
         row.map(cell =>
-=======
-=======
       new Date(quote.created_at).toLocaleDateString()
     ]),
     
     // Create CSV content
     const csvContent = [
       headers.join(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       ...rows.map(row => 
         row.map(cell => 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           // Escape commas and quotes in cell values
 >>>>>>>           typeof cell === 'string' && (cell.includes() |cell.includes('"'))
             ? `"${cell.replace(/"/g, '""')}"`
@@ -213,8 +239,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ].join('\n')
     // Create download link
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' })
@@ -251,12 +280,16 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 '"}
   )
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
     ].join('\n'),
     
     // Create download link
@@ -285,6 +318,8 @@ import type { QuoteRequest } from "@/types/quotes",;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes",
@@ -331,13 +366,10 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
             : cell
         ).join()
       )
-=======
 '"},;
 ;
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ].join('\n'),
     
     // Create download link
@@ -470,8 +502,11 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 =======
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

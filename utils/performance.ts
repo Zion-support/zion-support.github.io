@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -24,13 +25,12 @@ export const measure_performance = (): PerformanceMetrics | null => {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { PerformanceMetrics } from '../types';
 export const measurePerformance = (): PerformanceMetrics | null => {
-<<<<<<< HEAD
   if (typeof window === 'undefined' |!('performance' in window)) {
-=======
   if (typeof window === 'undefined' || !('performance' in window)) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return null;
   }
   try {
@@ -70,6 +70,7 @@ export const measurePerformance = (): PerformanceMetrics | null => {
     return null;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -92,14 +93,18 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
-=======
 };
 
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   overall: 'good' | 'needs-improvement' | 'poor';
   scores: {
     fcp: 'good' | 'needs-improvement' | 'poor';
@@ -154,6 +159,7 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -165,6 +171,11 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  return { overall, scores }
+}
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return { overall, scores };
 };
@@ -181,8 +192,11 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   console.group(`🚀 ${label}`);
   if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
   if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);
@@ -190,6 +204,7 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   if (metrics.cls !== undefined) console.log('Cumulative Layout Shift:', metrics.cls.toFixed(4));
   if (metrics.ttfb !== undefined) console.log('Time to First Byte:', `${metrics.ttfb.toFixed(2)}ms`);
   console.groupEnd();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -210,9 +225,11 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -249,3 +266,7 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

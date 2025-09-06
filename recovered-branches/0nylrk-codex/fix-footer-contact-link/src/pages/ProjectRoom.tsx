@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ProjectRoom.tsx
 
 =======
@@ -11,6 +12,8 @@
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import { useParams  } from 'react-router-dom';
 import { Header  } from '@/components/Header';
@@ -23,13 +26,14 @@ import { MessageSquare, FileText, Video, Calendar, Users, Settings, X  } from 'l
 import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
 import { toast  } from 'sonner';
 export default function ProjectRoom() {
-<<<<<<< HEAD
 
   const { projectId } = useParams() as { projectId: string }
-=======
   const { projectId } = useParams() as { projectId: string },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -53,10 +57,13 @@ export default function ProjectRoom() {
   ]);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -89,6 +96,7 @@ export default function ProjectRoom() {;
       isMuted: false;
     }
   ]),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -131,6 +139,9 @@ import {toast} from 'sonner';
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
@@ -140,6 +151,7 @@ import {toast} from 'sonner';
     if (activeTab !== 'video') {
       setActiveTab('video')
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -153,11 +165,11 @@ import {toast} from 'sonner';
     setIsInCall(false);
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const endVideoCall = () => {
     setIsInCall(false),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -166,8 +178,11 @@ import {toast} from 'sonner';
     })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
@@ -183,7 +198,6 @@ import {toast} from 'sonner';
     }
   }
 
-=======
   },
   
   const simulateUserJoining = () => {
@@ -191,9 +205,6 @@ import {toast} from 'sonner';
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ];
     
@@ -204,9 +215,12 @@ import {toast} from 'sonner';
       toast(`${randomUser.name} joined the call`)
     }
   };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ]),;
   const startVideoCall = () => {;
     setIsInCall(true),;
@@ -237,6 +251,7 @@ import {toast} from 'sonner';
       toast(`${randomUser.name} joined the call`);
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -419,8 +434,9 @@ export default function ProjectRoom() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />
@@ -507,6 +523,7 @@ export default function ProjectRoom() {;
               <CardContent className="min-h-[400px] p-4">
                 {isInCall ? (
                   <div className="space-y-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -634,10 +651,10 @@ export default function ProjectRoom() {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-                    <VideoCallRoom
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    <VideoCallRoom
                     <VideoCallRoom 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
@@ -712,6 +729,7 @@ export default function ProjectRoom() {;
       <Footer />
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1043,16 +1061,15 @@ return (<> End Call </Button>)
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ProjectRoom.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
 }
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

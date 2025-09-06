@@ -5,11 +5,9 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { TalentProfile } from "@/types/talent";
 export interface TalentCardProps {
@@ -23,21 +21,21 @@ export interface TalentCardProps {
   isAuthenticated: boolean
 }
 export function TalentCard({
-=======
-<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
 import {Link} from "react-router-dom";
 import {TalentProfile} from "@/types/talent";
-=======
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
 import { Link } from "react-router-dom",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -46,13 +44,15 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export function TalentCard({;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   talent;
   onViewProfile;
   onRequestHire;
@@ -79,11 +79,9 @@ export function TalentCard({;
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved)
     }
-<<<<<<< HEAD
   }
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) |[];
-=======
 import { Link } from "react-router-dom",
 import { TalentProfile } from "@/types/talent",
 export interface TalentCardProps {
@@ -93,11 +91,13 @@ export interface TalentCardProps {
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
-=======
   };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
@@ -307,14 +307,9 @@ export function TalentCard({;
       onToggleSave(talent.id, !isSaved);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
@@ -362,6 +357,7 @@ export function TalentCard({;
               </Button>
             </div>
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -490,12 +486,9 @@ export function TalentCard({;
 =======
 <<<<<<< HEAD
 =======
-            
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -510,7 +503,6 @@ export function TalentCard({;
                   <span>{talent.availability_type}</span>
                 </div>
               )}
-<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -544,7 +536,6 @@ export function TalentCard({;
               </div>
             ) : (
               <div className="text-zion-slate-light">Rate not specified</div>
-=======
             </div>;
           </div>;
         </div>;
@@ -889,11 +880,6 @@ isAuthenticated: boolean
 =======
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </div>
           <div className="flex items-center gap-2">

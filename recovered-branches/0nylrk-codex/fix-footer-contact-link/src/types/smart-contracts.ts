@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -13,13 +12,14 @@ export interface SmartContractInfo {;
 <<<<<<< HEAD
 
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
-<<<<<<< HEAD
 export interface SmartContractInfo {
-=======
 
 export interface SmartContractInfo {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   transactionHash?: string;
   networkName?: BlockchainNetwork;
@@ -61,13 +61,14 @@ export interface EscrowContractDetails {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 }
-<<<<<<< HEAD
 export interface EscrowContractDetails {
-=======
 
 export interface EscrowContractDetails {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   client: string;
   talent: string;
   amount: number;
@@ -91,13 +92,14 @@ export interface DeploymentOptions {;
   completionDeadline: string
   arbitrator?: string
 }
-<<<<<<< HEAD
 export interface DeploymentOptions {
-=======
 
 export interface DeploymentOptions {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean
@@ -109,8 +111,11 @@ export interface DeploymentOptions {;
 
 =======
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none',;
 export interface SmartContractInfo {;
@@ -167,8 +172,11 @@ export interface DeploymentOptions {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

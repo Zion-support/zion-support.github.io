@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5,13 +6,17 @@
 await app && app.register(cors, {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
-=======
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import rateLimit from '@fastify/rate-limit';
 import { createOpenAIClient, generateJobPost  } from './openai';
 import { withUser  } from './pg';
@@ -359,6 +364,7 @@ app.get('/notifications', async (req: any, reply: any) => {
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   app.log.error(err);
   (process as any).exit(1)
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -452,25 +458,23 @@ app.log.error (err);
 =======
 =======
 <<<<<<< HEAD
-app.log.error(err);
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 app.log.error(err);
-=======
+app.log.error(err);
   app.log.error(err);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   (process as any).exit(1);
 });  (process as any).exit(1)
 });
 
-<<<<<<< HEAD
-=======
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
   app.log.error(err);
   (process as any).exit(1);
 });
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

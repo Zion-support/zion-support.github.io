@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -19,6 +20,8 @@ export interface AdvancedCybersecurityService {
   launch_date: string;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedCybersecurityService {;
   id: string;
@@ -660,15 +663,17 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'
       launchDate: '2024-09-25'
       customers: 43
       rating: 4.7
       reviews: 21
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
       launchDate: '2024-09-25',
       customers: 43,
@@ -721,7 +726,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Compliance reporting and auditingSecurity analytics and insights'
 =======
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts';
       'Integration with IoT platformsMobile security management'
@@ -870,6 +874,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4 && 4.7;
     reviews: 21
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',;
@@ -993,6 +998,10 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedCybersecurityService {;
   id: string,;
@@ -1255,12 +1264,11 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 43,;
     rating: 4.7;
     reviews: 21;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

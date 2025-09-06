@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 const token = req && req.headers["x-admin-token"] || req && req.query.token;
@@ -17,6 +17,8 @@ const token = req && req.headers["x-admin-token"] || req && req.query.token;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -29,6 +31,7 @@ export default async function handler(
     const token = req.headers["x-admin-token"] |req.query.token;
     const superToken = process.env.SUPERADMIN_TOKEN;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     const token = req && req.headers["x-admin-token"] || req && req.query.token;
@@ -39,12 +42,16 @@ export default async function handler(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    return !superToken |token === superToken;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    return !superToken |token === superToken;
     return !superToken || token === superToken;
   }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }

@@ -5,11 +5,10 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 import {useState, useEffect} from 'react';
@@ -22,6 +21,11 @@ export function useJobDetails(jobId: string | undefined) {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+export function useJobDetails(jobId: string | undefined) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [job, setJob] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -126,6 +130,7 @@ if (throw error) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -135,12 +140,16 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export default useJobDetails;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default useJobDetails;
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export function useJobDetails(jobId: string | undefined) {;
@@ -261,10 +270,9 @@ export default useJobDetails,; .from ('jobs') .select ('*') .eq ('id', jobId) .s
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useJobDetails.ts
 =======
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default useJobDetails;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

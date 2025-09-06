@@ -1,12 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
-<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Bell
@@ -17,6 +19,7 @@ import {
   Settings
   Users
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 } from 'lucide-react'; import {
 
@@ -25,6 +28,8 @@ import {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Bell,
   FileText,
   Home,
@@ -32,7 +37,6 @@ import {
   Search,
   Settings,;
   Users;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react'; import {
   Sidebar
   SidebarContent
@@ -117,6 +121,7 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -225,18 +230,19 @@ function AppSidebar() {
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Sidebar>
   )
 }
-=======
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     </Sidebar>;
   );
 };
-=======
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

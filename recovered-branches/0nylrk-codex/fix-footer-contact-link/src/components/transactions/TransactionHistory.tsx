@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -19,9 +16,12 @@ import {Badge} from "@/components/ui/badge";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -32,9 +32,12 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { Skeleton } from "@/components/ui/skeleton",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 interface Transaction {
@@ -98,14 +101,16 @@ export function TransactionHistory() {
         body: { transactionId, action }
       });
       if (error) throw error;
-=======
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface Transaction {
   id: string,
   user_id: string,
@@ -125,11 +130,14 @@ interface Transaction {
   service?: {
     title?: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 
@@ -177,9 +185,12 @@ export function TransactionHistory() {;
       });
       
       if (error) throw error;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -287,6 +298,7 @@ export function TransactionHistory() {;
       }),
       
       if (error) throw error,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -666,6 +678,9 @@ interface Transaction {_id: string;
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Success"
         description: data.message |"Transaction updated successfully"})
@@ -682,6 +697,7 @@ interface Transaction {_id: string;
         variant: "destructive"})
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -693,12 +709,16 @@ interface Transaction {_id: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'pending':
@@ -749,6 +769,7 @@ interface Transaction {_id: string;
         )
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -760,17 +781,22 @@ interface Transaction {_id: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: currency.toUpperCase()
     }).format(amount)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1066,11 +1092,11 @@ export function TransactionHistory() {_const { user} = useAuth();
           <Button onClick={() => refetch()} variant=&quot;outline&quot;>
             <RefreshCcw className=&quot;mr-2 h-4 w-4&quot; />            Try Again
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (error) {
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">
@@ -1161,11 +1187,14 @@ export function TransactionHistory() {_const { user} = useAuth();
           <div className="space-y-4">
             {transactions.map((transaction) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               const isClient = user?.id === transaction.user_id;
               const isPending = transaction.status === 'pending';
               const isInEscrow = transaction.in_escrow;
@@ -1175,8 +1204,11 @@ export function TransactionHistory() {_const { user} = useAuth();
               const counterpartyName = isClient
                 ? transaction.provider?.display_name |'Service Provider'
                 : 'Client';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               const isClient = user?.id === transaction.user_id,
               const isPending = transaction.status === 'pending',
               const isInEscrow = transaction.in_escrow,
@@ -1188,12 +1220,15 @@ export function TransactionHistory() {_const { user} = useAuth();
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
@@ -1209,6 +1244,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                           ) : (
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1218,6 +1254,8 @@ export function TransactionHistory() {_const { user} = useAuth();
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }),;
       if (error) throw error,;
       toast({;
@@ -1428,6 +1466,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                           ) : (;
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1440,6 +1479,8 @@ export function TransactionHistory() {_const { user} = useAuth();
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         </CardDescription>
@@ -1462,6 +1503,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                       </span>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1470,11 +1512,15 @@ export function TransactionHistory() {_const { user} = useAuth();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                    {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :
@@ -2078,16 +2124,17 @@ return (<Card key= {
             </p>
           </div>
         )}
-<<<<<<< HEAD
       </div>
     </div>
   )
 }
-=======
       </div>;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -5,14 +5,16 @@
 
 =======
 
-<<<<<<< HEAD
 color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ...cat
 import { GradientHeading } from "./GradientHeading"
 import Link from "next/link"
@@ -20,10 +22,13 @@ import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { He
 import { cn } from "@/lib/utils"
 import { useTranslation } from "react-i18next"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
@@ -31,24 +36,30 @@ interface CategoryType {
   name: string
   description?: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ...cat;
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",
 import Link from "next/link",
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -60,6 +71,8 @@ import { useTranslation } from "react-i18next",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // This is the type definition copied from Categories.tsx for consistency.
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Ideally, this would be in a shared types file.
@@ -68,22 +81,25 @@ interface CategoryType {
   name: string,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-  description?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  description?: string,
   description?: string
-=======
   description?: string,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
   link?: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -98,6 +114,8 @@ interface CategoryType {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
  * CategoriesSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -135,8 +153,6 @@ const categories = [{
 const specialServices = [{
     title: "IT Onsite Services"
     link: "/it - onsite - services"
-<<<<<<< HEAD
-=======
 },
   {
     title: "Comprehensive Services",
@@ -145,9 +161,6 @@ const specialServices = [{
   {
     title: "Services Comparison",
     link: "/services - comparison"
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   {
@@ -157,6 +170,7 @@ const specialServices = [{
   {
     title: "Services Comparison"
     link: "/services - comparison"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -172,15 +186,18 @@ const getDefaultCategories = (t: any,) => [
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 // Default static categories with translation keys
-<<<<<<< HEAD
 
 const getDefaultCategories = (t: any,) => [
-=======
 const getDefaultCategories = (t: any) => [
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "services"
     name: t('categories.services')
@@ -188,6 +205,7 @@ const getDefaultCategories = (t: any) => [
     iconName: "Briefcase", // Corresponds to lucide icon name
     link: "/services"
     color: "from-purple-500 to-indigo-600", // Keep color for styling
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -199,14 +217,10 @@ ursor/fix-website-loading-errors-and-merge-6662
   {
 >>>>>>>     id: "talents"
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
-=======
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
     id: "talents"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -225,16 +239,20 @@ ursor/fix-website-loading-errors-and-merge-6662
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "innovation"
     name: t('categories.innovation')
     description: t('categories.innovation_desc')
     iconName: "Lightbulb"
     link: "/innovation"
     color: "from-emerald-500 to-green-600"}]
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 // Helper to get icon component from name
@@ -245,6 +263,8 @@ const getIcon = (iconName?: string,) => {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "innovation",
     name: t('categories.innovation'),
     description: t('categories.innovation_desc'),
@@ -252,12 +272,14 @@ const getIcon = (iconName?: string,) => {
     link: "/innovation",
     color: "from-emerald-500 to-green-600"}],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
   switch (iconName) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     case "Briefcase": return <Briefcase className="w-10 h-10" />
     case "Users": return <Users className="w-10 h-10" />
     case "HardDrive": return <HardDrive className="w-10 h-10" />
@@ -360,6 +382,7 @@ export function CategoriesSection({
   const { t } = useTranslation()
   const defaultCategories = getDefaultCategories(t)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -367,6 +390,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>   const displayCategories = fetchedCategories && fetchedCategories.length > 0
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     case "Briefcase": return <Briefcase className="w-10 h-10" />,
     case "Users": return <Users className="w-10 h-10" />,
     case "HardDrive": return <HardDrive className="w-10 h-10" />,
@@ -460,11 +485,6 @@ export function CategoriesSection({
   const { t } = useTranslation(),
   const defaultCategories = getDefaultCategories(t),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -477,6 +497,7 @@ export function CategoriesSection({
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -493,20 +514,15 @@ export function CategoriesSection({
 
 >>>>>>>   // If fetchedCategories is an empty array, and we want to show nothing:
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ...cat
-<<<<<<< HEAD
         title: cat.name
         icon: getIcon(cat.iconName)}))
-=======
         ...cat,
-=======
-=======
         ...cat,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         title: cat.name,
         icon: getIcon(cat.iconName)})),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   // If fetchedCategories is an empty array, and we want to show nothing:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -520,6 +536,7 @@ export function CategoriesSection({
           </p>
           <p className="text-zion-slate-light text-md">
             {t('home.no_categories_support')}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -826,26 +843,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </p>
         </div>
       </section>
     )
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           </p>;
         </div>;
       </section>;
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
@@ -860,14 +870,18 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {displayCategories.map((category,) => (
             <Link
               key = {category.id,}
               href = {category.link |'#',}
+<<<<<<< HEAD
 <<<<<<< HEAD
           {displayCategories.map((category) => (
           {displayCategories.map((category,) => (
@@ -955,21 +969,16 @@ export function CategoriesSection({;
 >>>>>>>             >
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
           {displayCategories.map((category) => (
-=======
-<<<<<<< HEAD
           {displayCategories.map((category,) => (
-=======
           {displayCategories.map((category) => (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Link
               key={category.id}
               href={category.link || '#'}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -986,21 +995,27 @@ export function CategoriesSection({;
           ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-        </div>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        </div>
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
           <div className="flex flex-wrap justify-center gap-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1012,6 +1027,8 @@ export function CategoriesSection({;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {getSpecialServices(t).map((service,) => (
               <Link
                 key = {service.title,}
@@ -1022,6 +1039,7 @@ export function CategoriesSection({;
               </Link>            ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>         <div className="mt-12 flex justify-center">
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1034,6 +1052,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {getSpecialServices(t).map((service) => (
               <Link 
                 key={service.title}
@@ -1047,6 +1067,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1059,6 +1080,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="mt-12 flex justify-center">
           <Link
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1068,9 +1091,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             {t('home.view_all_categories')}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </Link>
         </div>
       </div>
@@ -1095,21 +1121,30 @@ categories: fetchedCategories, //Rename prop for clarity
 }: CategoriesSectionProps) {
   const {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   t
 }= useTranslation ()
 const defaultCategories = getDefaultCategories (t)
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   t ;
 }= useTranslation ();
 const defaultCategories = getDefaultCategories (t);
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
@@ -1136,6 +1171,7 @@ icon: getIcon (cat.iconName)
   t ('home.view all categories')
 }</Link> </div> </div> </section>)
 }'"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1232,6 +1268,8 @@ icon: getIcon (cat.iconName)
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </Link>;
         </div>;
       </div>;
@@ -1507,8 +1545,11 @@ icon: getIcon (cat.iconName) ;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

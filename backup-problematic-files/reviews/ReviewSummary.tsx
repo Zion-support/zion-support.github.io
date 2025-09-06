@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  </div> </div> </div>) };
 
@@ -67,10 +68,11 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {;
 <<<<<<< HEAD:components/reviews/ReviewSummary.tsx
 <<<<<<< HEAD
 =======
- </div> </div> </div>) };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
-<<<<<<< HEAD:backup-problematic-files/reviews/ReviewSummary.tsx
+:components/reviews/ReviewSummary.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+ </div> </div> </div>) };
+:backup-problematic-files/reviews/ReviewSummary.tsx
 import React from 'react',
 import type { ReviewsSummary } from '../../types/reviews',
 import StarRating from './StarRating',
@@ -100,14 +102,18 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
 },
 
 export default ReviewSummary,
-=======
 </div> </div> </div>) };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewSummary.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewSummary.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+:backup-problematic-files/reviews/ReviewSummary.tsx
+:backup-problematic-files/reviews/ReviewSummary.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
  </div> </div> </div>) }
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
@@ -154,6 +160,7 @@ export default ReviewSummary;      <div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -227,13 +234,16 @@ export default ReviewSummary
 
 =======
 <<<<<<< HEAD:components/reviews/ReviewSummary.tsx
+=======
+:components/reviews/ReviewSummary.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
 export default ReviewSummary;  )
 }
 export default ReviewSummary;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> main:components/reviews/ReviewSummary.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -247,3 +257,9 @@ export default ReviewSummary;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewSummary.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+main:components/reviews/ReviewSummary.tsx
+:backup-problematic-files/reviews/ReviewSummary.tsx
+main:components/reviews/ReviewSummary.tsx
+:backup-problematic-files/reviews/ReviewSummary.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

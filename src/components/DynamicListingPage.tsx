@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 import { GradientHeading } from "@/components/GradientHeading",
@@ -35,9 +38,12 @@ import { toast } from "@/hooks/use-toast";
 import { captureException } from "@/utils/sentry";
 interface PriceRange {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { GradientHeading } from '@/components/GradientHeading'
@@ -49,9 +55,12 @@ import { ProductListingCard } from "@/components/ProductListingCard"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { GradientHeading } from "@/components/GradientHeading",
@@ -59,6 +68,7 @@ import { ProductListingCard } from "@/components/ProductListingCard",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -70,6 +80,8 @@ import {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Select,
@@ -78,12 +90,15 @@ import {
   SelectContent,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   SelectItem,
 } from '@/components/ui/select'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -111,11 +126,14 @@ initialPrice?: PriceRange
 max: 10000 
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   SelectItem} from "@/components/ui/select",
 import { Checkbox } from "@/components/ui/checkbox",
 import Skeleton from "react-loading-skeleton",
@@ -168,6 +186,7 @@ interface DynamicListingPageProps {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function DynamicListingPage({
 
@@ -178,6 +197,9 @@ export function DynamicListingPage({
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   min: number
 max: number
 }interface DynamicListingPageProps {
@@ -194,6 +216,7 @@ initialPrice?: PriceRange
 max: 10000
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 xport function DynamicListingPage({
 =======
 =======
@@ -202,6 +225,9 @@ xport function DynamicListingPage({
 export function DynamicListingPage({
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export function DynamicListingPage({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title
   description
   categorySlug
@@ -215,8 +241,11 @@ export function DynamicListingPage({
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const toggleCategory = (category: string) => {    setSelectedCategories(prev =>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title,
   description,
   categorySlug,
@@ -224,9 +253,12 @@ export function DynamicListingPage({
   categoryFilters,
   initialPrice = { min: 0, max: 10000 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   detailBasePath = '/marketplace/listing',
 }: DynamicListingPageProps) {
   const router = useRouter()
@@ -234,17 +266,21 @@ export function DynamicListingPage({
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const toggleCategory = (category: string) => {    setSelectedCategories(prev =>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
   const router = useRouter(),
   const [searchQuery, setSearchQuery] = useState(""),
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]),
   const toggleCategory = (category: string) => {
     setSelectedCategories(prev =>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -254,10 +290,13 @@ export function DynamicListingPage({
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       prev.includes(category)
         ? prev.filter(c => c !== category)
         : [...prev, category]
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -268,10 +307,13 @@ export function DynamicListingPage({
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const clearCategories = () => setSelectedCategories([])
   const [view, setView] = useState<ListingView>('grid')
   const isGrid = view === 'grid'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>   // Swap icons to match action
 ursor/fix-website-loading-errors-and-merge-6662
@@ -284,10 +326,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   const clearCategories = () => setSelectedCategories([]),
   const [view, setView] = useState<ListingView>("grid"),
   const isGrid = view === "grid",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -308,11 +353,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
     <List className="h-4 w-4" />
   ) : (
-<<<<<<< HEAD
     <LayoutGrid className='h-4 w-4' />
   )
   const [isLoading, setIsLoading] = useState(false)
@@ -343,22 +389,26 @@ ursor/fix-website-loading-errors-and-merge-6662
   >([0, initialPrice.max])
   const handleSliderChange = (values: number[]) => {
     const [min, max] = values.map(Number)
-<<<<<<< HEAD
     if (min == null |max == null |isNaN(min) |isNaN(max)) return
-=======
     if (min == null || max == null || isNaN(min) || isNaN(max)) return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setCurrentPriceFilter([min, max])
   }
   let filteredListings: ProductListing[] = []
   try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     filteredListings = allListings.filter(listing => {      const matchesSearch =
         !searchQuery |
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
@@ -371,6 +421,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         selectedBrand === 'all' |
         (listing.brand && listing.brand === selectedBrand)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -378,6 +429,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    filteredListings = allListings.filter(listing => {      const matchesSearch = null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <LayoutGrid className="h-4 w-4" />
   ),
   const [isLoading, setIsLoading] = useState(false),
@@ -421,6 +475,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       const matchesSearch =
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         !searchQuery ||
 =======
@@ -430,6 +485,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         !searchQuery ||
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -438,12 +495,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           listing.tags.some((tag: string) =>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             tag.toLowerCase().includes(searchQuery.toLowerCase())
           ))
       const matchesBrand = null;
@@ -470,6 +530,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         (listing.price >= currentPriceFilter[0] &&
           listing.price <= currentPriceFilter[1])
       const matchesRating = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             tag.toLowerCase().includes(searchQuery.toLowerCase()))),
@@ -500,18 +561,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             tag.toLowerCase().includes(searchQuery.toLowerCase()))),
 
       const matchesBrand =
         selectedBrand === "all" ||
         (listing.brand && listing.brand === selectedBrand),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       const matchesSpecs =
         !specQuery |
         (listing.specifications &&
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           listing.specifications.some(s =>
             s.toLowerCase().includes(specQuery.toLowerCase())
           )) |
@@ -525,6 +590,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       const matchesCategory =
         selectedCategories.length === 0 |
         selectedCategories.includes(listing.category)
+<<<<<<< HEAD
 <<<<<<< HEAD
       const matchesPrice =
         listing.price === null |
@@ -543,6 +609,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         matchesSearch &&
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           listing.specifications.some((s) =>
             s.toLowerCase().includes(specQuery.toLowerCase()))) ||
         (listing.tags &&
@@ -557,27 +625,19 @@ ursor/fix-website-loading-errors-and-merge-6662
         selectedCategories.length === 0 ||
         selectedCategories.includes(listing.category),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       const matchesPrice =
         listing.price === null |
         (listing.price >= currentPriceFilter[0] &&
-<<<<<<< HEAD
           listing.price <= currentPriceFilter[1])
-=======
           listing.price <= currentPriceFilter[1]),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       const matchesRating =
         selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
-=======
       const matchesRating =
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         selectedRating === null ||
         (listing.rating !== undefined && listing.rating >= selectedRating),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return (
         matchesSearch &&
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -590,9 +650,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     })
     filteredListings.sort((a, b) => {      switch (sortOption) {
         case 'price-asc':
@@ -613,22 +676,31 @@ ursor/fix-website-loading-errors-and-merge-6662
     logErrorToProduction('Listing filter error:', { data: error })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true)
     const listing = allListings.find(item => item.id === listingId)
     setTimeout(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const handleRequestQuote = (listingId: string) => {;
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
     setTimeout(() => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setIsLoading(false);      if (listing) {
         toast({
           title: 'Quote Requested'
@@ -636,12 +708,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }),
     filteredListings.sort((a, b) => {
       switch (sortOption) {
@@ -925,15 +1000,19 @@ export function DynamicListingPage({;
           description: `Your quote request for ${listing.title} has been sent.`}),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug
           specificItem: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -945,6 +1024,8 @@ export function DynamicListingPage({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             id: listing.id
             title: listing.title
             category: listing.category
@@ -955,43 +1036,53 @@ export function DynamicListingPage({;
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
             image: listing.images?.[0],
           },
         }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             id: listing.id,
             title: listing.title,
             category: listing.category,
-<<<<<<< HEAD
             image: listing.images?.[0],
           },
         }
-=======
             image: listing.images?.[0]}},
         
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         if (typeof window !== 'undefined') {
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         router.push('/request-quote')
       }
     }, 500)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             id: listing.id,
             title: listing.title,
             category: listing.category,
@@ -1002,16 +1093,20 @@ export function DynamicListingPage({;
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         router.push("/request-quote")
       }
     }, 500)
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   return (
@@ -1023,6 +1118,8 @@ export function DynamicListingPage({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -1035,10 +1132,13 @@ export function DynamicListingPage({;
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>
           <div className='lg:col-span-1'>
             <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6'>
@@ -1047,6 +1147,7 @@ export function DynamicListingPage({;
               </h3>
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   Categories
         // Store quote data in sessionStorage for the request-quote page
@@ -1065,6 +1166,8 @@ export function DynamicListingPage({;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
@@ -1075,6 +1178,7 @@ export function DynamicListingPage({;
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1091,6 +1195,8 @@ export function DynamicListingPage({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Categories
                 </label>
                 <div className="space-y-2">
@@ -1103,22 +1209,28 @@ export function DynamicListingPage({;
                         onCheckedChange={() => toggleCategory(filter.value)}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-                        className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'                      />
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                        className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'                      />
                         className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
                       />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <label
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                       >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                         className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'                      />
@@ -1146,6 +1258,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   const handleRequestQuote = (listingId: string) => {;
     setIsLoading(true),;
@@ -1206,6 +1320,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer";
                       >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -1235,6 +1350,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         {filter.label}
                       </label>
                     </div>
@@ -1248,7 +1365,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </label>
                   <Select
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     value = {selectedBrand,}
                     onValueChange = {(value: string,) => setSelectedBrand(value),}
                   >
@@ -1267,10 +1387,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                         >                          {b |'N/A'}
                         </SelectItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                       ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     value={selectedBrand}
                     onValueChange={(value: string) => setSelectedBrand(value)}
                   >
@@ -1285,17 +1408,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <SelectItem key={b || 'unknown-brand'} value={b || ''} className="text-white">
                           {b || 'N/A'}
                         </SelectItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </SelectContent>
                   </Select>
                 </div>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1307,6 +1426,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                   Specifications
@@ -1314,6 +1435,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Input
                   type='text'
                   placeholder='Search specifications...'
+<<<<<<< HEAD
 <<<<<<< HEAD
                   type="text"
                   placeholder="Search specifications..."
@@ -1361,39 +1483,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <label className='text-sm font-medium text-zion-slate-light block mb-2'>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Specifications
                 </label>
                 <Input
-<<<<<<< HEAD
                   type="text"
                   placeholder="Search specifications..."
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
                   type='text'
                   placeholder='Search specifications...'
-=======
                   type="text"
                   placeholder="Search specifications..."
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   value={specQuery}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setSpecQuery(e.target.value)
                   }
-<<<<<<< HEAD
                   className='bg-zion-blue border border-zion-blue-light text-white'                />
-=======
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               {availabilityOptions.length > 0 && (
                 <div className="mb-6">
@@ -1404,14 +1514,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Select
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     value = {selectedAvailability,}
                     onValueChange = {(value: string,) =>
                       setSelectedAvailability(value)
                     ,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1419,15 +1533,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     value={selectedAvailability}
                     onValueChange={(value: string) =>;
                       setSelectedAvailability(value);
                     }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1439,11 +1550,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </SelectItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       ))}
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {availabilityOptions.map(a => (
                         <SelectItem
                           key={a |'unknown-availability'}
@@ -1452,25 +1566,24 @@ ursor/fix-website-loading-errors-and-merge-6662
                         >                          {a |'N/A'}
                         </SelectItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                       ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {availabilityOptions.map((a) => (
                         <SelectItem key={a || 'unknown-availability'} value={a || ''} className="text-white">
                           {a || 'N/A'}
                         </SelectItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </SelectContent>
                   </Select>
                 </div>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1505,33 +1618,35 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
-=======
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   Price Range
                 </label>
                 <div className="mt-6 px-2">
                   <Slider
-<<<<<<< HEAD
                     aria-label='Price range'
-=======
                     aria-label="Price range"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     defaultValue={[0, priceRange.max]}
                     min={0}
                     max={priceRange.max}
                     step={priceRange.max / 100}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1552,17 +1667,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                     <span>${currentPriceFilter[1].toLocaleString()}</span>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className='mb-4'                  />
                   <div className='flex justify-between text-sm text-zion-slate-light'>
-=======
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1571,10 +1682,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                   Minimum Rating
@@ -1601,7 +1715,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         logInfo('Rating selected:', { data: rating })
                         setSelectedRating(rating) }}
                       aria-pressed = {selectedRating === rating,}
-=======
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -1618,11 +1731,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         setSelectedRating(rating)
                       }}
                       aria-pressed={selectedRating === rating}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className={`{
                         selectedRating === rating
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1635,16 +1743,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                       ) : (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                           ))}
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <div className='flex items-center'>
                           {[...Array(rating)].map((_, i) => (
                             <Star
                               key={i}
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                           ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1658,17 +1770,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </Button>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <div className="flex items-center">
                           {[...Array(rating)].map((_, i) => (
                             <Star
                               key={i}
                               className="h-3 w-3 fill-zion-cyan text-zion-cyan"
                             />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           ))}
                           <span className="ml-1">& Up</span>
                         </div>
@@ -1684,10 +1793,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   logInfo('Clearing filters')
                   setSearchQuery('')
                   clearCategories()
@@ -1697,6 +1809,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   setSpecQuery('')
                   setSelectedAvailability('all')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 }}
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1704,6 +1817,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>               >
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   logInfo("Clearing filters"),
                   setSearchQuery(""),
                   clearCategories(),
@@ -1712,11 +1827,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   setSelectedBrand("all"),
                   setSpecQuery(""),
                   setSelectedAvailability("all")
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }}
               >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1726,10 +1836,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='lg:col-span-3'>
             <div className='bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light'>
               <div className='flex flex-col md:flex-row gap-4'>
@@ -1747,12 +1860,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <div className='flex items-center gap-2 ml-auto'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                   <Select value={sortOption} onValueChange={setSortOption}>
                     <SelectTrigger className="w-[150px] bg-zion-blue border border-zion-blue-light text-white">
                       <SelectValue placeholder="Sort" />
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           <div className="lg:col-span-3">
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
@@ -1806,6 +1922,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                 <div className="flex items-center gap-2 ml-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1833,6 +1950,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Select value={sortOption} onValueChange={setSortOption}>
                     <SelectTrigger className="w-[150px] bg-zion-blue border border-zion-blue-light text-white">
                       <SelectValue placeholder="Sort" />
@@ -1848,11 +1967,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     {ToggleViewIcon}
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     variant='outline'
                     size='icon'
                     onClick={() => setView(isGrid ? 'list' : 'grid')}
@@ -1860,10 +1982,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     title={isGrid ? 'List view' : 'Grid view'}
                     className='border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple'                  >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     {ToggleViewIcon}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     variant="outline"
                     size="icon"
                     onClick={() => setView(isGrid ? "list" : "grid")}
@@ -1871,11 +1996,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     title={isGrid ? "List view" : "Grid view"}
                     className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
                   >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {ToggleViewIcon}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <span className="sr-only">
@@ -1885,6 +2005,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1908,17 +2029,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 Showing {filteredListings.length} results
 >>>>>>>                 {selectedCategories.length > 0 &&
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='mb-6'>
               <p className='text-zion-slate-light'>
-=======
 
             <div className="mb-6">
               <p className="text-zion-slate-light">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Showing {filteredListings.length} results
                 {selectedCategories.length > 0 &&
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1931,6 +2048,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className={
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 }
 =======
@@ -1940,18 +2058,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   view === 'grid'
                     ? 'grid grid-cols-1 md:grid-cols-2 gap-6'
                     : 'flex flex-col gap-6'
-=======
                   view === "grid"
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                     : "flex flex-col gap-6"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
@@ -1960,10 +2074,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     key={i}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className='rounded-lg overflow-hidden border border-zion-blue-light'                  >
                     <Skeleton height={192} width='100%' />
                     <div className='p-4'>
@@ -1974,6 +2091,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <div className='flex justify-between items-center pt-4'>
                         <Skeleton height={24} width='25%' />
                         <Skeleton height={32} width='25%' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                       </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1992,6 +2110,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className="rounded-lg overflow-hidden border border-zion-blue-light"
                   >
                     <Skeleton height={192} width="100%" />
@@ -2003,11 +2123,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <div className="flex justify-between items-center pt-4">
                         <Skeleton height={24} width="25%" />
                         <Skeleton height={32} width="25%" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </div>
                   </div>
@@ -2017,7 +2132,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div
                 className={
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   view === 'grid'
                     ? 'grid grid-cols-1 md:grid-cols-2 gap-6'
                     : 'flex flex-col gap-6'
@@ -2031,10 +2149,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     detailBasePath = {detailBasePath,}
                   />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   view === "grid"
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                     : "flex flex-col gap-6"
@@ -2048,11 +2169,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     onRequestQuote={handleRequestQuote}
                     detailBasePath={detailBasePath}
                   />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
@@ -2065,6 +2181,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   Try adjusting your filters or search query
                 </p>
                 <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2089,6 +2206,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   variant='outline'
                   onClick={() => {
                     setSearchQuery('')
@@ -2099,11 +2218,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     setSpecQuery('')
                     setSelectedAvailability('all') }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                   variant="outline"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   onClick={() => {
@@ -2118,6 +2233,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -2125,10 +2241,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   Clear All
                 </Button>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2139,6 +2258,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </div>
         </div>
@@ -2205,12 +2326,13 @@ setSelectedRating (null)
 }</div> </div> </div> </div>)
 }'"  )
 }
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>;
             ) : (;
               <div className="text-center py-20">;
@@ -2285,8 +2407,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { Star } from 'lucide-react'
@@ -16,20 +17,13 @@ import { Star } from 'lucide-react';
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'; import { Star } from 'lucide-react'
 import React from "react"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
 import React from "react";
-=======
 import React from "react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Star } from 'lucide-react'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -38,6 +32,7 @@ export const CommunityTrust: React.FC = () => {
   const stats = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   ]
 
@@ -45,29 +40,37 @@ export const CommunityTrust: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { value: '4.8', label: 'App Store Rating' }
     { value: '50K+', label: 'Downloads' }
     { value: '96%', label: 'User Satisfaction' }
     { value: '12M+', label: 'Matches Made' }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ]
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { value: '4.8', label: 'App Store Rating' },
     { value: '50K+', label: 'Downloads' },
     { value: '96%', label: 'User Satisfaction' },
     { value: '12M+', label: 'Matches Made' },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ]
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
     { value: "12M+", label: "Matches Made" }
   ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -80,6 +83,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>>     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -93,8 +98,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Stats Grid */}
         <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16'>
           {stats.map((stat, index) => (
@@ -117,7 +125,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className='w-6 h-6 text-zion-cyan'
                 fill='currentColor'
               />            ))}
-=======
         
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
@@ -162,11 +169,6 @@ export const CommunityTrust: React.FC = () => {;
             {[1, 2, 3, 4, 5].map((star) => (
               <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />
             ))}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <blockquote className="text-center text-lg text-white italic mb-4">
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."
@@ -178,7 +180,6 @@ export const CommunityTrust: React.FC = () => {;
         </div>
       </div>
     </section>
-<<<<<<< HEAD
           <div className="text-center">
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>
@@ -221,6 +222,7 @@ export const CommunityTrust: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 
 =======
         {/* Stats Grid */}
@@ -256,6 +258,9 @@ export const CommunityTrust: React.FC = () => {;
         </div>
       </div>
     </section>
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }</div>) )
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>)
 }
@@ -263,21 +268,23 @@ export const CommunityTrust: React.FC = () => {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }</div>) ) 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }</div>) ) 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
 };
 '"  );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -297,3 +304,7 @@ export const CommunityTrust: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  )
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

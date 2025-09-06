@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,11 +8,15 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-export interface ModerationFlag {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface ModerationFlag {
 export interface ModerationFlag {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   contentId: string;
   contentType: string;
@@ -55,7 +60,6 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 
 =======
 }
-<<<<<<< HEAD
 
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];
@@ -98,6 +102,7 @@ export async function updateFlagStatus(
 
 }
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 // Moderation database utilities
@@ -119,6 +124,8 @@ export interface ModerationFlag {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];
@@ -158,6 +165,7 @@ export async function updateFlagStatus(
 ): Promise<FlaggedContent | undefined> {;
   const flag = await getFlagById(id);
   if (!flag) return undefined;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   flag.status = status;
@@ -201,6 +209,9 @@ if (return undefined) {
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
@@ -209,9 +220,12 @@ if (return undefined) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

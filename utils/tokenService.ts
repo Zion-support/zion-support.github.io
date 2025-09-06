@@ -5,6 +5,7 @@ import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore
 export function issueTokens(userId: string, amount: number, reason: string) {
   return addTransaction({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
@@ -16,6 +17,8 @@ export function issueTokens(userId: string, amount: number, reason: string) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     userId
     type: 'earn'
     amount
@@ -23,7 +26,6 @@ export function issueTokens(userId: string, amount: number, reason: string) {
   });
 }
 export function revokeTokens(userId: string, amount: number, reason: string) {
-=======
     userId,
     type: 'earn',
     amount,
@@ -32,7 +34,6 @@ export function revokeTokens(userId: string, amount: number, reason: string) {
 }
 
 export function revokeTokens(userId: string, amount: number, reason: string) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

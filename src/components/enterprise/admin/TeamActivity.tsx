@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/TeamActivity.tsx
 
 
@@ -12,21 +13,17 @@ import React from "react"
 >>>>>>> import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-
-<<<<<<< HEAD
-import React from "react";
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
+import React from "react";
     return <Badge variant={style.variant}>{category}</Badge>
   }
 import React from "react"
-=======
 return <Badge variant={style.variant}>{category}</Badge>
   };
 
 import React from "react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -46,6 +43,7 @@ import { CalendarIcon, Search } from 'lucide-react'
   TableRow} from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,6 +67,8 @@ import { CalendarIcon, Search } from 'lucide-react';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/admin/TeamActivity.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -88,18 +88,19 @@ import { Input } from "@/components/ui/input"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   TableRow} from "@/components/ui/table",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Badge } from "@/components/ui/badge",
 import { CalendarIcon, Search } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -112,6 +113,8 @@ xport function TeamActivity() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TeamActivity() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Mock activity data
@@ -154,10 +157,13 @@ export function TeamActivity() {
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: 6
       user: "Jamie Smith"
       action: "Updated budget"
@@ -172,8 +178,11 @@ export function TeamActivity() {
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60))
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
@@ -184,26 +193,33 @@ export function TeamActivity() {
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const now = new Date()
     const diffMs = now.getTime() - date.getTime()
     const diffMins = Math.floor(diffMs / (1000 * 60))
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60))
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const now = new Date(),
     const diffMs = now.getTime() - date.getTime(),
     const diffMins = Math.floor(diffMs / (1000 * 60)),
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     if (diffMins < 60) {
@@ -215,6 +231,8 @@ export function TeamActivity() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (diffMins < 60) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return `${diffMins} minutes ago`
@@ -309,12 +327,14 @@ if ( {) {
     } else {
       return date.toLocaleDateString()
     }
-<<<<<<< HEAD
   }
   const getCategoryBadge = (category: string,) => {
     const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       jobs: { variant: "default" }
       candidates: { variant: "outline" }
       team: { variant: "secondary" }
@@ -323,16 +343,20 @@ if ( {) {
     return <Badge variant={style.variant}>{category}</Badge>
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -457,6 +481,8 @@ export function TeamActivity() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       jobs: { variant: "default" },
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
@@ -465,6 +491,7 @@ export function TeamActivity() {;
 
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -480,16 +507,11 @@ export function TeamActivity() {;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">
@@ -532,6 +554,7 @@ export function TeamActivity() {;
                 <TableCell className="text-muted-foreground">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   {formatDate(activity.timestamp)}
                 </TableCell>
@@ -550,6 +573,8 @@ export function TeamActivity() {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import {;
   Table,;
@@ -824,6 +849,7 @@ export function TeamActivity() {;
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {formatDate(activity.timestamp)}
                 </TableCell>;
               </TableRow>;
@@ -935,6 +961,8 @@ const getCategoryBadge = (category: string) => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {formatDate(activity.timestamp)}
                 </TableCell>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -945,6 +973,7 @@ const getCategoryBadge = (category: string) => {;
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       <div className="flex items-center justify-between">
@@ -953,12 +982,9 @@ const getCategoryBadge = (category: string) => {;
 >>>>>>>         <Button variant="outline" size="sm">
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -973,34 +999,43 @@ const getCategoryBadge = (category: string) => {;
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 const getCategoryBadge = (category: string) => {
 };"
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
 }
-<<<<<<< HEAD
 const getCategoryBadge = (category: string) => {
 };"
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 };
 const getCategoryBadge = (category: string) => {};"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   activities.map ( (activity) => (<TableRow key= {
   activity.id
 }> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>)
 }"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1101,13 +1136,16 @@ const getCategoryBadge = (category: string) => {;
 =======
 =======
 <<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+;
     </div>
   )
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

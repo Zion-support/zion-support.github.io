@@ -23,7 +23,6 @@ import React, { useMemo, useState } from 'react';
 import AIAssistant from '../../components/ui/AIAssistant';
 
 const ResumeBuilder: NextPage = () => {
-<<<<<<< HEAD
   const [role, setRole] = useState('Data Scientist')
   const [experienceYears, setExperienceYears] = useState(5)
   const [skills, setSkills] = useState('Python, Machine Learning, Cloud Systems')
@@ -52,8 +51,11 @@ const ResumeBuilder: NextPage = () => {
 
 =======
   )
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [role, setRole] = useState('Data Scientist'),
   const [experienceYears, setExperienceYears] = useState(5),
   const [skills, setSkills] = useState('Python, Machine Learning, Cloud Systems'),
@@ -69,6 +71,7 @@ const ResumeBuilder: NextPage = () => {
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
   ),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -76,6 +79,8 @@ const ResumeBuilder: NextPage = () => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div>
       <Head>
@@ -121,6 +126,7 @@ const ResumeBuilder: NextPage = () => {
               buttonLabel="Generate with AI"
               title="Generate Resume Summary"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -135,6 +141,11 @@ const ResumeBuilder: NextPage = () => {
               authorizationToken={operatorToken}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              defaultPrompt={generateSummaryPrompt}
+              onAccept={setSummary}
+              authorizationToken={operatorToken}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               defaultPrompt={generateSummaryPrompt  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -151,6 +162,7 @@ const ResumeBuilder: NextPage = () => {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -166,6 +178,8 @@ const ResumeBuilder: NextPage = () => {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <AIAssistant
 <<<<<<< HEAD
@@ -175,6 +189,7 @@ buttonLabel="Improve with AI"
 =======
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
@@ -199,6 +214,12 @@ buttonLabel="Improve with AI"
               authorizationToken={operatorToken}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              defaultPrompt={improveSectionPrompt('summary', summary |'No content provided. Generate a summary based on role, years, and skills.')}
+              defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
+              onAccept={setSummary}
+              authorizationToken={operatorToken}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -214,6 +235,7 @@ buttonLabel="Improve with AI"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -231,6 +253,8 @@ buttonLabel="Improve with AI"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
           </div>
         </div>
@@ -248,6 +272,7 @@ buttonLabel="Improve with AI"
             buttonLabel="Improve with AI"
             title="Improve Experience"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -277,6 +302,12 @@ buttonLabel="Improve with AI"
             authorizationToken={operatorToken}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            defaultPrompt={improveSectionPrompt('experience section', experience |'Add experience details to improve.')}
+            defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
+            onAccept={setExperience}
+            authorizationToken={operatorToken}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -293,6 +324,7 @@ buttonLabel="Improve with AI"
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -308,6 +340,8 @@ buttonLabel="Improve with AI"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
         </div>
 <<<<<<< HEAD
@@ -324,6 +358,7 @@ buttonLabel="Improve with AI"
             buttonLabel="Improve with AI"
             title="Improve Skills"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -353,6 +388,12 @@ buttonLabel="Improve with AI"
             authorizationToken={operatorToken}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            defaultPrompt={improveSectionPrompt('skills list', skillsText |`Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
+            defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
+            onAccept={setSkillsText}
+            authorizationToken={operatorToken}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -368,6 +409,7 @@ buttonLabel="Improve with AI"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -408,6 +450,8 @@ export default ResumeBuilder,
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
         </div>
 <<<<<<< HEAD
@@ -418,8 +462,6 @@ export default ResumeBuilder,
       </section>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 export default ResumeBuilder;
 <<<<<<< HEAD
@@ -516,18 +558,16 @@ const ResumeBuilder: NextPage = () => {
 export default ResumeBuilder,
 =======
 
-=======
 },
 export default ResumeBuilder,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 },
-<<<<<<< HEAD
 
 export default ResumeBuilder,;
-=======
 export default ResumeBuilder,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

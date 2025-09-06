@@ -234,13 +234,10 @@ const IOS_APP_URL =
 const ANDROID_APP_URL =
   process.env.NEXT_PUBLIC_ANDROID_APP_URL |
   'https://play.google.com/store/apps/details?id=com.zion.app';
-<<<<<<< HEAD
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';export default function OpenApp() {
   useEffect(() => {
-=======
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';export default function OpenApp() {
   useEffect(() => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     const isAndroid = /Android/i.test(navigator.userAgent);
     const now = Date.now();
@@ -268,10 +265,7 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';exp
       } catch {}
     }
   }, []);
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='min-h-[50vh] flex items-center justify-center'>
       <div className='text-center'>
@@ -291,10 +285,11 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';exp
       </div>
     </div>
   );
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

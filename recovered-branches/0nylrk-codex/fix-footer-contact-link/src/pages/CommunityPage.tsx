@@ -18,9 +18,12 @@ import PostCard from "@/components/community/PostCard",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -31,6 +34,7 @@ import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import {useAuth} from "@/hooks/useAuth";
 import {ForumPost} from "@/types/community";
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Mock data for featured posts;
 const featuredPosts: ForumPost[] = [;
@@ -75,6 +79,8 @@ const featuredPosts: ForumPost[] = [;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -83,7 +89,6 @@ import { SEO } from "@/components/SEO",
 import { AppLayout } from "@/layout/AppLayout",
 import ForumCategories from "@/components/community/ForumCategories",
 import PostCard from "@/components/community/PostCard",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost } from "@/types/community";
 // Mock data for featured posts
@@ -175,14 +180,16 @@ export default function CommunityPage() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
 
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { ForumPost } from "@/types/community",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
@@ -325,10 +332,10 @@ const recentPosts: ForumPost[] = [
   }
 ],
 
-<<<<<<< HEAD
 export default function CommunityPage() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 export default function CommunityPage() {
@@ -353,8 +360,12 @@ export default function CommunityPage() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CommunityPage.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+export default function CommunityPage() {
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("categories"),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <AppLayout>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -403,6 +414,7 @@ export default function CommunityPage() {;
               {recentPosts.map((post) => (
                 <PostCard key={post.id} post={post} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -413,6 +425,8 @@ export default function CommunityPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))}
             </div>
           </TabsContent>
@@ -420,12 +434,14 @@ export default function CommunityPage() {;
       </div>
     </AppLayout>
   )
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -912,11 +928,10 @@ function CommunityPage() {
 =======
     </AppLayout>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

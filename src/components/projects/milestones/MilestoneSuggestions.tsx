@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -14,22 +14,33 @@ import { Button } from '@/components/ui/button'
 import {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   GeneratedMilestone
   MilestoneInput
   useMilestoneGenerator
 } from '@/hooks/useMilestoneGenerator'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   GeneratedMilestone,
   MilestoneInput,
   useMilestoneGenerator,
 } from '@/hooks/useMilestoneGenerator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Loader2, Sparkles, Check } from 'lucide-react'; import { Badge } from '@/components/ui/badge'
 import { format, parseISO } from 'date-fns'
 interface MilestoneSuggestionsProps {
@@ -45,14 +56,18 @@ interface MilestoneSuggestionsProps {
   startDate: Date
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   endDate?: Date
   projectType: string
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string
   onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -116,12 +131,12 @@ export function MilestoneSuggestions(): any ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   endDate?: Date;
   projectType: string;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string,
   onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export function MilestoneSuggestions({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -330,7 +345,6 @@ export function MilestoneSuggestions({
       return dateString
     }
   }
-=======
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -345,10 +359,6 @@ interface MilestoneSuggestionsProps {;
   endDate?: Date,;
   projectType: string,;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 export function MilestoneSuggestions({
@@ -359,29 +369,20 @@ export function MilestoneSuggestions({
   projectType,
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
-<<<<<<< HEAD
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
   const [showSuggestions, setShowSuggestions] = useState(false),
 
-=======
-<<<<<<< HEAD
   const { generateMilestones, generatedMilestones, isGenerating } =
     useMilestoneGenerator()
   const [showSuggestions, setShowSuggestions] = useState(false)
-=======
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
   const [showSuggestions, setShowSuggestions] = useState(false),
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       projectType: projectType || 'Other',
     }
     const milestones = await generateMilestones(input)
@@ -420,8 +421,6 @@ export function MilestoneSuggestions({
       return dateString
     }
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       projectType: projectType || "Other"
     },
 
@@ -464,18 +463,12 @@ export function MilestoneSuggestions({;
       return dateString;
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-4">
       {!showSuggestions && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Button
-<<<<<<< HEAD
           variant='outline'
           onClick={handleGenerateMilestones}
           disabled={isGenerating |!scopeSummary |!startDate}
@@ -510,11 +503,14 @@ export function MilestoneSuggestions({;
           {isGenerating ? (
             <>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scopeSummary || !startDate}
@@ -523,16 +519,20 @@ ursor/fix-website-loading-errors-and-merge-6662
           {isGenerating ? (
             <>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
 >>>>>>>               Generating milestones...
             </>
           ) : (
             <>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               Suggest Project Milestones with AI
@@ -598,24 +598,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-              <Sparkles className="mr-2 h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <Sparkles className='mr-2 h-4 w-4' />              <Sparkles className="mr-2 h-4 w-4" />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <Sparkles className="mr-2 h-4 w-4" />
               Suggest Project Milestones with AI
             </>
           )}
         </Button>
       )}
-<<<<<<< HEAD
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <CardHeader className='pb-3'>
             <CardTitle className='text-lg flex items-center'>
               <Sparkles className='h-5 w-5 mr-2 text-primary' />              AI-Suggested Milestones
@@ -623,18 +616,17 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardHeader>
           <CardContent>
             <div className='space-y-3'>          <CardHeader className="pb-3">
-=======
-<<<<<<< HEAD
 
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
           <CardHeader className="pb-3">
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <CardTitle className="text-lg flex items-center">
 >>>>>>>               <Sparkles className="h-5 w-5 mr-2 text-primary" />
               AI-Suggested Milestones
@@ -642,8 +634,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardHeader>
           <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='space-y-3'>
               {generatedMilestones.map((milestone, index) => (
                 <div key={index} className='p-3 border rounded-lg bg-muted/10'>
@@ -651,11 +646,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <div className='font-medium flex items-center'>                      {milestone.title}
                       <Badge variant='secondary' className='ml-2 text-xs'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                         AI Suggested
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="space-y-3">
               {generatedMilestones.map((milestone, index) => (
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">
@@ -664,11 +662,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {milestone.title}
                       <Badge variant="secondary" className="ml-2 text-xs">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         AI Suggested
 >>>>>>>                       </Badge>
                     </div>
@@ -678,10 +679,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className='text-sm text-muted-foreground'>
                     {milestone.description}
                   </p>
@@ -702,6 +706,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -713,12 +718,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
 >>>>>>>                   <div className="flex justify-between items-center mt-2 text-sm">
                     <span>Estimated: {milestone.estimatedHours} hours</span>
                   </div>
                 </div>
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -734,21 +742,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
               <div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>
                 <Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
-=======
-<<<<<<< HEAD
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Check className="h-4 w-4 mr-1 text-green-500" />
 >>>>>>>                 These milestones will be added to your contract
               </div>
@@ -756,6 +763,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -769,6 +777,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }</div>)
 }"}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
 }
@@ -778,16 +788,19 @@ ursor/fix-website-loading-errors-and-merge-6662
   isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>)
 }</Button>)
 }AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) "
-<<<<<<< HEAD
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)
 }</div>)
 }"}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
 }</div>) 
 }"};
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>     </div>;
@@ -801,13 +814,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -5,20 +5,22 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useCallback  } from 'react';
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useCallback} from 'react';
 import {checkSignupPatterns} from '@/services/fraud/signupCheck';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -26,6 +28,8 @@ export function useFraudPreventionSignup() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isCheckingFraud, setIsCheckingFraud] = useState(false);
   // Get the user's IP address (in a real app, you'd do this server-side)
 
@@ -63,13 +67,14 @@ const response = await fetch('https: //api && api.ipify.org?format=json');
       console.error('Error getting IP:', error);
       return undefined
     }
-<<<<<<< HEAD
   }
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useCallback } from 'react',;
 import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -87,6 +92,7 @@ export function useFraudPreventionSignup() {;
       return undefined;
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -124,15 +130,15 @@ export function useFraudPreventionSignup() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Check if the signup attempt might be fraudulent
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
     setIsCheckingFraud(true),
     try {
       const ipAddress = await getIP()
       // Check for suspicious patterns
-<<<<<<< HEAD
       const fraudCheck = await checkSignupPatterns(email, ipAddress);
       if (fraudCheck.isSuspicious) {
         console.log('Suspicious signup detected:', fraudCheck.reasons);
@@ -153,11 +159,14 @@ export function useFraudPreventionSignup() {;
           timestamp: new Date().toISOString()
           status: 'pending'
         });
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const fraudCheck = await checkSignupPatterns(email, ipAddress),
       
       if (fraudCheck.isSuspicious) {
@@ -176,6 +185,7 @@ export function useFraudPreventionSignup() {;
           status: 'pending'
         }),
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -197,6 +207,8 @@ export function useFraudPreventionSignup() {;
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         if (error) {
           console.error('Error creating fraud flag:', error)
         }
@@ -207,16 +219,18 @@ export function useFraudPreventionSignup() {;
           r.includes('suspicious email domain')
         )) {
           toast({
-<<<<<<< HEAD
             title: "Signup blocked";
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
             variant: "destructive"});
           return false
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
         // Otherwise, allow but flag for review
         return true
@@ -233,17 +247,23 @@ export function useFraudPreventionSignup() {;
   }, []);
   return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             title: "Signup blocked",
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
             variant: "destructive"}),
           return false
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   // Check if the signup attempt might be fraudulent;
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {;
@@ -522,11 +542,6 @@ status: 'pending'
     }
   }, []);
   return {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     isCheckingFraud;
 
     checkFraudBeforeSignup}

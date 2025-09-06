@@ -92,6 +92,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title |''}\nBio: ${bio |''}\nExperience: 
   } catch (e: any) {
     return res.status(500).json({ error: e.message |'OpenAI error' })
 }
+<<<<<<< HEAD
 
 =======
 INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`;
@@ -237,3 +238,6 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

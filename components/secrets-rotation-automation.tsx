@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function SecretsRotationAutomationPage() {
 
@@ -51,6 +52,15 @@ export default function SecretsRotationAutomationPage() {;
     "CI/CD integration (GitHub Actions, CircleCI)",;
     "Cloud KMS and Vault support",;
   ];
+=======
+import React from 'react',
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function SecretsRotationAutomationPage() {
 
   const features = [
@@ -60,6 +70,7 @@ export default function SecretsRotationAutomationPage() {
     "CI/CD integration (GitHub Actions, CircleCI)"
     "Cloud KMS and Vault support"
   ];
+<<<<<<< HEAD
 return (
     <>;
       <SEO
@@ -119,12 +130,19 @@ export default /**
 function SecretsRotationAutomationPage() {
   const features = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  return (
+
+export default function SecretsRotationAutomationPage() {
+  const features = [
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
     "CI / CD integration (GitHub Actions, CircleCI)",
     "Cloud KMS and Vault support",
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -329,6 +347,11 @@ function SecretsRotationAutomationPage() {
 
   return (
 
+=======
+
+return (
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -450,4 +473,7 @@ function SecretsRotationAutomationPage() {
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'kyc');const FILE = path && path.join(DATA_DIR, 'profiles && profiles.json');
@@ -30,16 +31,16 @@ function load(): Record<string, KycProfile> {
 
 =======
 <<<<<<< HEAD
+=======
+import type { KycProfile } from '../../../utils/kyc';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { validateKycSubmission } from '[^']*';
 import { getAmlProvider } from '[^']*';
 import fs from 'fs';
 import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
-<<<<<<< HEAD
-=======
 
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'KYC submitted' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -50,18 +51,19 @@ import fs from 'fs';
 import path from 'path';
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch {
     return {}
   }
@@ -82,6 +84,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
 =======
@@ -95,13 +98,17 @@ export default async function handler(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string }
-=======
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
 if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
@@ -187,8 +194,11 @@ profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status ==
     if (sameIpCount >= 2) flags && flags.add('duplicate_ip');  }
 =======
     if (sameIpCount >= 2) flags.add('duplicate_ip');  }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { validateKycSubmission } from '../../../utils/kyc';
 import { getAmlProvider } from '../../../utils/aml';
 import fs from 'fs';
@@ -265,9 +275,12 @@ if (sameIpCount >= 2) flags.add('duplicate_ip')
     if (sameIpCount >= 2) flags.add('duplicate_ip')
   }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Compute simple risk score
   let riskScore = 10; // base low risk
   if (flags && flags.has('aml_alert')) riskScore += 50;
@@ -291,7 +304,6 @@ if (sameIpCount >= 2) flags.add('duplicate_ip')
     details: { aml: amlResult, ip },
 =======
   profile.lastUpdatedAt = now;
-<<<<<<< HEAD
   profile.auditTrail.push({
     at: now
     by: userId
@@ -307,9 +319,6 @@ if (sameIpCount >= 2) flags.add('duplicate_ip')
   profile.lastUpdatedAt = now;
 =======
 
-=======
-<<<<<<< HEAD
-=======
   } catch {;
     return {  } catch (error) {
     console.error("Error:", error);
@@ -415,6 +424,7 @@ export default async function handler(req, res) {
   profile.status = 'submitted';
   const now = new Date().toISOString();
   profile.lastUpdatedAt = now;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
@@ -500,11 +510,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const now = new Date().toISOString();
   profile.lastUpdatedAt = now;
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
   db[userId] = profile;
   save(db);
   res.status(200).json({ ok: true, profile, aml: amlResult })
 }
+<<<<<<< HEAD
 
 }
 
@@ -615,12 +628,16 @@ res.status (200).json ({ ok: true, profile, aml: aml_result });
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

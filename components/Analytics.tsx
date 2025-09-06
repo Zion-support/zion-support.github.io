@@ -298,14 +298,15 @@ if ( {) {
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
-<<<<<<< HEAD
                         name: 'load'
                         value: Math.round(loadTime)
-=======
                         name: 'load',
                         value: Math.round(loadTime),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       });
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
@@ -330,11 +331,12 @@ if ( {) {
               });
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          `
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          `
           `,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }}
 <<<<<<< HEAD
       />;
@@ -358,6 +360,7 @@ export default Analytics;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -368,11 +371,16 @@ export default Analytics;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default Analytics;
 =======
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 };
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default Analytics;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default Analytics;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

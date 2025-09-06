@@ -399,7 +399,6 @@ export default UltimateAutomationFactory;
 =======
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 import {execSync} from 'child_process';
 class UltimateAutomationFactory {constructor() {; this.logsDir = path.join(process.cwd(), 'logs'); this.ensureLogsDir()}; ensureLogsDir() {if (!fs.existsSync(this.logsDir)) {; fs.mkdirSync(this.logsDir, { recursive: true })}}; log(message, type = 'info') {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`; console.log(logMessage); const logFile = path.join(this.logsDir, 'ultimate-automation.log'); fs.appendFileSync(logFile, logMessage + '\n')}; async runCommand(command, description) {try {; this.log(`Running: ${description}`); const output = execSync(command, {encoding: 'utf8', cwd: process.cwd(), stdio: 'pipe'}); this.log(`✅ ${description} completed successfully`); return { success: true, output }} catch (error) {this.log(`❌ ${description} failed: ${error.message}`, 'error'); return { success: false, error: error.message }}}; async runAllAutomations() {this.log('🚀 Starting Ultimate Automation Factory...'); const automations = [
     ; { command: 'node automation/master-automation.cjs start', description: 'Master Automation' }; { command: 'node scripts/automation/ai-intelligent-code-analyzer.cjs', description: 'AI Code Analyzer' }; { command: 'node scripts/automation/intelligent-git-workflow.cjs', description: 'Git Workflow' }; { command: 'node scripts/automation/advanced-performance-optimizer.cjs', description: 'Performance Optimizer' }; { command: 'node scripts/automation/advanced-monitoring-alerting.cjs', description: 'Monitoring & Alerting' }
@@ -409,7 +408,6 @@ class UltimateAutomationFactory {constructor() {; this.logsDir = path.join(proce
 // CLI interface;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})}
 export default UltimateAutomationFactory;
-=======
 import { execSync } from 'child_process';
 ;
 class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(process.cwd(), 'logs'); this.ensureLogsDir()};
@@ -432,11 +430,6 @@ class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(pro
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
 ;
 export default UltimateAutomationFactory;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return { succes: s: true, output }
     } catch (error) {,;
       this.log(`❌ ${description} faile: d: ${error.message}`, 'error'),;
@@ -534,9 +527,12 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 ,;
 export default UltimateAutomationFactory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

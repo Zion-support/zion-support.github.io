@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -14,6 +15,10 @@ export interface CybersecurityQuantumService {;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface CybersecurityQuantumService {
+export interface CybersecurityQuantumService {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -526,12 +531,15 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     support:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 =======
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       '24/7 technical support, security consulting, custom development, and dedicated success manager.'
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS']
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment'
@@ -543,10 +551,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.8
     reviews: 1900
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
@@ -558,7 +569,6 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.8,
     reviews: 1900,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
     ];
@@ -700,6 +710,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4 && 4.8,
 
     reviews: 1900
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   id: string,;
@@ -998,13 +1009,11 @@ export interface CybersecurityQuantumService {;
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 ];
-=======
 export interface CybersecurityQuantumService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1266,12 +1275,11 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     customers: 2500,;
     rating: 4.8,;
     reviews: 1900;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -101,8 +101,6 @@ export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[
 
 =======
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { readJson  } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {
@@ -112,7 +110,6 @@ export async function getStaticProps() {
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map(a => a.category)));
 
-=======
 import {readJson} from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {;
@@ -121,8 +118,6 @@ export async function getStaticProps() {;
 
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {;
   const categories = Array.from(new Set(articles.map(a => a.category)));
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { readJson } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {;
@@ -139,11 +134,6 @@ export async function getStaticProps() {;
 }
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map((a) => a.category))),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-8">
       <h1 className="text-2xl font-semibold">Help Center</h1>
@@ -161,7 +151,6 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
                   </Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </Link>
-<<<<<<< HEAD
               ))}
           </div>
         </div>
@@ -221,14 +210,15 @@ function HelpIndex() {
 =======
 =======
 );
-<<<<<<< HEAD
-=======
 
 }
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -249,6 +239,7 @@ function HelpIndex() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -264,3 +255,5 @@ function HelpIndex() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

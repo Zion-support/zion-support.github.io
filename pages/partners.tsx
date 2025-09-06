@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,17 +10,20 @@ import { motion } from 'framer-motion';
 import {
 =======
 <<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import Head from 'next/head',
@@ -64,6 +68,8 @@ import {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Handshake
   Globe
   Rocket
@@ -212,9 +218,12 @@ export default function PartnersPage() {
   ];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Handshake,
   Globe,
   Rocket,
@@ -455,9 +464,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -467,10 +474,13 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function PartnersPage() {
   const partners = [
     {
@@ -579,11 +589,9 @@ export default function PartnersPage() {
 =======
       benefits: ["Hardware optimization", "Edge computing", "Performance tuning"],
       icon: Brain,
-<<<<<<< HEAD
       color: 'from-indigo-500 to-purple-500',;
     },  ];
 
-=======
       color: "from-indigo-500 to-purple-500"
       } catch (error) {
     console.error("Error:", error);
@@ -591,8 +599,11 @@ export default function PartnersPage() {
   }
 }
   ],
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const partnershipTypes = [
     {
       title: "Technology Alliance",
@@ -670,15 +681,21 @@ export default function PartnersPage() {
   }
 }
   ],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Partners - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta
           name='description'
           content='Strategic partnerships and collaboration opportunities with Zion Tech Group. Join our ecosystem of technology leaders and innovators.'
@@ -697,8 +714,11 @@ export default function PartnersPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta name="description" content="Strategic partnerships and collaboration opportunities with Zion Tech Group. Join our ecosystem of technology leaders and innovators." />
         <meta property="og:title" content="Partners - Zion Tech Group" />
         <meta property="og:description" content="Strategic partnerships and collaboration opportunities." />
@@ -757,16 +777,20 @@ className="mb-8"
 }
             className="mb-8"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Strategic Partners
             </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -795,6 +819,8 @@ className="mb-8"
             </p>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Building the future of technology through strategic partnerships
               and collaboration            </p>
@@ -877,14 +903,8 @@ transition={{ duration: 0 && 0.8 }}
               Join our ecosystem of technology leaders, innovators, and industry
               experts to create transformative solutions that shape the future
               of computing.
-=======
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Building the future of technology through strategic partnerships and collaboration
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
           </motion.div>
           <motion.div
@@ -918,6 +938,7 @@ transition={{ duration: 0 && 0.8 }}
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -932,6 +953,8 @@ transition={{ duration: 0 && 0.8 }}
             {stats.map((stat, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -947,7 +970,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 className="text-center"
 =======
                 className='text-center'
-=======
       {/* Stats Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1193,16 +1215,20 @@ export default function PartnersPage(req, res) {
 }
                 className="text-center"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1249,6 +1275,8 @@ export default function PartnersPage(req, res) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -1275,7 +1303,6 @@ export default function PartnersPage(req, res) {
             className="text-center mb-16"
 =======
             className='text-center mb-16'
-=======
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
@@ -1317,18 +1344,22 @@ export default function PartnersPage(req, res) {
 }
             className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl font-bold text-white mb-6">Partnership Types</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               We offer various partnership models to meet your business objectives and growth goals
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1345,6 +1376,8 @@ export default function PartnersPage(req, res) {
             {partnershipTypes.map((type, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {partnershipTypes.map((type, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -1381,7 +1414,6 @@ export default function PartnersPage(req, res) {
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
 =======
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partnershipTypes.map((type, index) => (
               <motion.div
@@ -1412,16 +1444,20 @@ export default function PartnersPage(req, res) {
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <type.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1445,6 +1481,8 @@ export default function PartnersPage(req, res) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {type.title}
                 </h3>
@@ -1514,7 +1552,6 @@ export default function PartnersPage(req, res) {
             className="text-center mb-16"
 =======
             className='text-center mb-16'
-=======
                 <h3 className="text-2xl font-bold text-white mb-4">{type.title}</h3>
                 <p className="text-white/70 mb-6">{type.description}</p>
                 <ul className="space-y-2">
@@ -1572,18 +1609,22 @@ export default function PartnersPage(req, res) {
 }
             className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Partners</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Leading technology companies and organizations that trust us to deliver innovative solutions
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1600,6 +1641,8 @@ export default function PartnersPage(req, res) {
             {partners.map((partner, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {partners.map((partner, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -1782,7 +1825,6 @@ export default function PartnersPage(req, res) {
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
 =======
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {partners.map((partner, index) => (
               <motion.div
@@ -1813,12 +1855,15 @@ export default function PartnersPage(req, res) {
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
@@ -1913,7 +1958,6 @@ export default function PartnersPage(req, res) {
                       </span>
                     </div>
                   </div>
-<<<<<<< HEAD
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {partner.name}
                   </h3>
@@ -1936,7 +1980,6 @@ export default function PartnersPage(req, res) {
                     </ul>
                   </div>
                   <div className='flex items-center justify-between'>
-=======
                   <h3 className="text-xl font-bold text-white mb-3">{partner.name}</h3>
                   <p className="text-white/70 text-sm mb-4">{partner.description}</p>
                   <div className="mb-4">
@@ -1959,11 +2002,6 @@ export default function PartnersPage(req, res) {
                     </ul>
                   </div>
                   <div className="flex items-center justify-between">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <a
                       href={partner.website  } catch (error) {
     console.error("Error:", error);
@@ -1992,9 +2030,12 @@ export default function PartnersPage(req, res) {
                 </div>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
 
 =======
@@ -2037,7 +2078,6 @@ export default function PartnersPage(req, res) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2076,6 +2116,7 @@ export default function PartnersPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2088,6 +2129,8 @@ export default function PartnersPage(req, res) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2174,20 +2217,16 @@ Partnership Inquiry
 =======
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) )
 }</ul> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) )
 }</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion.div>) )
-=======
 ),
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
 }</ul> </motion.div>) ) 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) ) 
 }</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion.div>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div> </section> <motion.div initial= {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
@@ -2279,7 +2318,6 @@ Partnership Inquiry
 =======
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
-=======
   )
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
@@ -2334,6 +2372,7 @@ Partnership Inquiry
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2349,3 +2388,5 @@ Partnership Inquiry
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

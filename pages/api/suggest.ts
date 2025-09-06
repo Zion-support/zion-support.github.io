@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import type { NextApiRequest, NextApiResponse } from "next";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const SAMPLE_QUERIES = [
   'React developers under $50/hr',
   'Part-time DevOps jobs in LATAM',
@@ -96,6 +102,7 @@ const SKILLS = [
   'Rust'
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -120,6 +127,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
@@ -144,6 +153,7 @@ const SAMPLE_QUERIES = [
 <<<<<<< HEAD
 ];
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -181,6 +191,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== "GET") {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  if (req.method !== "GET") {
+  if (req.method !== "GET") {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
@@ -202,6 +216,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ).slice(0, 5);
 <<<<<<< HEAD
   return res.status(200).json({ suggestions });
+<<<<<<< HEAD
 
   const q = ((req.query.q as string) || '').toLowerCase();
   const suggestions = new Set<string>();
@@ -276,6 +291,21 @@ if ( {) {
   return res.status (200).json ({ suggestions });
 
 }
+=======
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+const SAMPLE_QUERIES = [;
+  'React developers under $50/hrPart-time DevOps jobs in LATAMLLM engineers with RAG experienceSecurity projects with Zero TrustNext.js freelancers in Berlin';
+];
+const SKILLS = [;
+  'ReactNext.jsTypeScriptNodePythonAWSKubernetesDevOps', 'DockerTerraformOpenAILangChainRAGNLPPostgreSQLRust';
+],;
+export default function handler(req, res) {
+  try {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const q = ((req.query.q as string) || '').toLowerCase();
   const suggestions = new Set<string>();
 
@@ -287,7 +317,24 @@ if ( {) {
   }
 
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
+<<<<<<< HEAD
 
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

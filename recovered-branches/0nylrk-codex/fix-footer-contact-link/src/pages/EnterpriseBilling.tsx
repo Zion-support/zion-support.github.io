@@ -38,9 +38,12 @@ class ErrorBoundary extends React.Component {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -51,6 +54,7 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {;
   const { user } = useAuth();
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" || ;
@@ -72,13 +76,14 @@ export default function EnterpriseBilling() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
-<<<<<<< HEAD
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {
@@ -88,18 +93,15 @@ export default function EnterpriseBilling() {
   const hasBillingAccess = user?.role === "enterprise_admin" |
                           (user?.permissions && user.permissions.includes('billing_access'));
 
-=======
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 export default function EnterpriseBilling() {
   const { user } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Check if user has billing permissions
   const hasBillingAccess = user?.role === "enterprise_admin" || 
                           (user?.permissions && user.permissions.includes('billing_access')),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
   }
@@ -118,6 +120,7 @@ export default function EnterpriseBilling() {
     </ProtectedRoute>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -134,6 +137,9 @@ export default function EnterpriseBilling() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -272,11 +278,10 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/EnterpriseBilling.tsx
 =======
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

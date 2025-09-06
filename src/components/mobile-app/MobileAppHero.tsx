@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -26,26 +26,19 @@ xport const MobileAppHero: React.FC = () => {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 import React from "react"
 import Link from "next/link"
 import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button"
 import { AppStoreButtons } from "./AppStoreButtons"
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import Link from "next/link",
 import { ArrowRight, Phone } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { AppStoreButtons } from "./AppStoreButtons",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const MobileAppHero: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // These would come from environment variables or a config
@@ -64,18 +57,22 @@ export const MobileAppHero: React.FC = () => {
             </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <div className="mb-8">
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="mb-8">
               <AppStoreButtons
                 appStoreUrl = {appStoreUrl,}
                 googlePlayUrl = {googlePlayUrl,}
               />
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             
 >>>>>>>             <div className="mb-8">
@@ -84,8 +81,9 @@ export const MobileAppHero: React.FC = () => {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div className="mb-8">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <AppStoreButtons 
@@ -93,6 +91,7 @@ export const MobileAppHero: React.FC = () => {
                 googlePlayUrl={googlePlayUrl}
               />
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -107,12 +106,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                 Open App
 =======
 =======
-            
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            
             <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
                 Open App
@@ -121,6 +117,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Button>
             </Link>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -133,10 +130,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react",;
@@ -209,23 +210,21 @@ import { AppStoreButtons } from "./AppStoreButtons";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* This would be replaced with an actual phone mockup image in production */}
             </div>
           </div>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   )
 }
 "
 
-=======
   );
 };
 ";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from "next/link",;
@@ -278,6 +277,7 @@ export const MobileAppHero: React.FC = () => {;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -291,3 +291,5 @@ export const MobileAppHero: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

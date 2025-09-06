@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { useRouter  } from 'next/router';
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
@@ -13,9 +16,12 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { useRouter } from 'next/router'
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
@@ -45,9 +51,12 @@ export function MobileHeader({
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { useRouter } from 'next/router',
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
@@ -64,9 +73,12 @@ interface MobileHeaderProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 =======
 >>>>>>> 
@@ -90,6 +102,7 @@ interface MobileHeaderProps {
   onSettingsClick?: () => void
 export function MobileHeader({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -97,6 +110,8 @@ export function MobileHeader({
 export function MobileHeader({
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title
 export function MobileHeader({
   title
@@ -112,11 +127,14 @@ export function MobileHeader({
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       className
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title,
   showBack = false,
   showNotifications = false,
@@ -130,11 +148,14 @@ ursor/fix-website-loading-errors-and-merge-6662
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
 >>>>>>>     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -142,26 +163,35 @@ ursor/fix-website-loading-errors-and-merge-6662
           {showBack && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button
               variant="ghost"
               size="icon"
               className="mr-2"
               onClick = {(,) => router.back(),}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button 
               variant="ghost" 
               size="icon" 
               className="mr-2" 
               onClick={() => router.back()}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back</span>
@@ -184,6 +214,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Button>
           )}
           {showSettings && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               variant="ghost" 
@@ -312,6 +343,8 @@ export function MobileHeader({;
 =======
           {showSettings && (
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>
               <Settings className='h-5 w-5' />
               <span className='sr-only'>Settings</span>
@@ -357,25 +390,23 @@ export function MobileHeader({;
           {showSettings && (
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>
               <Settings className='h-5 w-5' />
-<<<<<<< HEAD
               <span className='sr-only'>Settings</span>            </Button>            <Button
               variant="ghost"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            <Button 
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            <Button 
               <span className='sr-only'>Settings</span>            </Button>            <Button 
-=======
             <Button 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               variant="ghost" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               size="icon"
               onClick={onSettingsClick}
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </Button>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -416,20 +447,18 @@ export function MobileHeader({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         </div>
       </div>;
     </header>;
   );  )
 }
-<<<<<<< HEAD
-=======
 ;
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             </Button>
 import React from "react",;
 import { useRouter } from 'next/router',;
@@ -505,8 +534,11 @@ export function MobileHeader({;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

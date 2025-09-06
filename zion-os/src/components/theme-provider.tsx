@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +35,8 @@ if ( {) {
   $2
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 type Theme = "dark" | "light" | "system";
@@ -109,6 +112,7 @@ export const use_theme = () =>: any {
 
   return context;
 }
+<<<<<<< HEAD
 =======
 =======
 
@@ -118,6 +122,8 @@ export const use_theme = () =>: any {
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
@@ -194,8 +200,11 @@ export const useTheme = () => {;
   return context;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

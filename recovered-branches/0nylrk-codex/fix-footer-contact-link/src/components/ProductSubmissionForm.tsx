@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductSubmissionForm.tsx
 
 <<<<<<< HEAD
@@ -24,6 +25,8 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -40,6 +43,7 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
 import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Define the form schema with zod;
 const productSchema = z && z.object({;
@@ -68,13 +72,14 @@ export function ProductSubmissionForm() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import z from "zod",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import {
@@ -84,7 +89,6 @@ import {
   FormField;
   FormItem;
   FormLabel;
-=======
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
 import {
@@ -94,25 +98,25 @@ import {
   FormField,
   FormItem,
   FormLabel,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   FormMessage} from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-<<<<<<< HEAD
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from "lucide-react";
-=======
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
 import { Sparkles } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Define the form schema with zod
 
 const productSchema = z.object({
@@ -121,10 +125,13 @@ const productSchema = z.object({
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     message: "Price must be a valid number"})
   category: z.string().min(1, "Please select a category");
   image: z.instanceof(File).optional()
@@ -138,8 +145,11 @@ export function ProductSubmissionForm() {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [imagePreview, setImagePreview] = React.useState(null as string | null);
   const [activeTab, setActiveTab] = React.useState("manual");
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     message: "Price must be a valid number"}),
   category: z.string().min(1, "Please select a category"),
   image: z.instanceof(File).optional(),
@@ -149,10 +159,13 @@ export function ProductSubmissionForm() {
 type ProductFormValues = z.infer<typeof productSchema>,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ProductSubmissionForm() {;
   const { user } = useAuth();
   const { toast } = useToast();
@@ -160,7 +173,6 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [imagePreview, setImagePreview] = React.useState(null as string | null);
   const [activeTab, setActiveTab] = React.useState("manual");
-=======
 export function ProductSubmissionForm() {
   const { user } = useAuth(),
   const { toast } = useToast(),
@@ -168,10 +180,12 @@ export function ProductSubmissionForm() {
   const [isSubmitting, setIsSubmitting] = React.useState(false),
   const [imagePreview, setImagePreview] = React.useState(null as string | null),
   const [activeTab, setActiveTab] = React.useState("manual"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema)
@@ -191,8 +205,11 @@ export function ProductSubmissionForm() {
         setImagePreview(reader.result as string)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       reader.readAsDataURL(file)
     }
@@ -207,7 +224,6 @@ export function ProductSubmissionForm() {
     // Switch to the manual tab to show applied content
     setActiveTab("manual")
   }
-=======
       },
       reader.readAsDataURL(file)
     }
@@ -226,8 +242,11 @@ export function ProductSubmissionForm() {
     setActiveTab("manual")
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
@@ -238,16 +257,21 @@ export function ProductSubmissionForm() {
       return
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-    setIsSubmitting(true);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    setIsSubmitting(true);
 
     setIsSubmitting(true),
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       // Create the product listing
       const productData = {
@@ -266,6 +290,7 @@ export function ProductSubmissionForm() {
         .insert([productData])
         .select('id')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -277,6 +302,11 @@ export function ProductSubmissionForm() {
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        .single();
+      if (productError) {
+        throw new Error(productError.message)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       // If we have an image, upload it
       if (values.image) {
@@ -301,20 +331,25 @@ export function ProductSubmissionForm() {
         if (updateError) {
           throw new Error(updateError.message)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       }
-=======
         .single(),
         
       if (productError) {
         throw new Error(productError.message)
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -506,6 +541,7 @@ export function ProductSubmissionForm() {;
         if (updateError) {;
           throw new Error(updateError.message);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         }
       }
@@ -553,6 +589,11 @@ export function ProductSubmissionForm() {;
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        }
+      }
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Show success message
       toast({
         title: "Product Published!"
@@ -650,12 +691,9 @@ export function ProductSubmissionForm() {;
 =======
 =======
     }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
@@ -686,11 +724,14 @@ export function ProductSubmissionForm() {;
                   <FormMessage />
                 </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Show success message;
       toast({;
@@ -1452,11 +1493,6 @@ if ( {) {
       <TabsContent value="ai">;
 =======
                 </FormItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             />
             <FormField
@@ -1586,6 +1622,7 @@ if ( {) {
         <AIListingGenerator
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1733,11 +1770,11 @@ return (<Tabs value= {
 }/> <div className=" flex justify-end"> <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value=" ai" > <AIListingGenerator /> </TabsContent> </Tabs>) 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             title: form.getValues("title")
 
-=======
             title: form.getValues("title"),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             category: form.getValues("category")
           }}
         />

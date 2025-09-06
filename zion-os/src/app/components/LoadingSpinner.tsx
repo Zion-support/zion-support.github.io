@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +8,13 @@ interface LoadingSpinnerProps {;
   text?: string,;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';
+  text?: string;
+interface LoadingSpinnerProps {;
+  size?: 'sm' | 'md' | 'lg',;
+  text?: string,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   className?: string;
 }
 export default function LoadingSpinner({ size = 'md', text, className = '' }: LoadingSpinnerProps) {
@@ -17,6 +25,7 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
   }
   return (
     <div className={`flex items-center gap-3 ${className}`}>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       >
@@ -97,6 +106,8 @@ function LoadingSpinner() {
 =======
     <div className={`flex items-center gap-3 ${className}`}>
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <svg
         className={`animate-spin ${sizeClasses[size]} text-current`}
         viewBox=&quot;0 0 24 24&quot;
@@ -114,17 +125,13 @@ function LoadingSpinner() {
           className=&quot;opacity-75&quot;
           fill=&quot;currentColor&quot;
           d=&quot;M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z&quot;
-=======
       <svg 
-<<<<<<< HEAD
         className={`animate-spin ${sizeClasses[size]} text-current`} ;
         viewBox=&quot;0 0 24 24&quot;
         fill=&quot;none&quot;
-=======
         className={`animate-spin ${sizeClasses[size]} text-current`} 
         viewBox="0 0 24 24"
         fill="none"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       >
         <circle 
           className="opacity-25" 
@@ -138,7 +145,6 @@ function LoadingSpinner() {
           className="opacity-75" 
           fill="currentColor" 
           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         />
       </svg>
       {text && <span className="text-sm">{text}</span>}

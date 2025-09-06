@@ -1666,8 +1666,6 @@ ease: "easeInOut"
 
 =======
               }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               transition={{
 <<<<<<< HEAD
                 duration: 3,
@@ -1683,33 +1681,18 @@ ease: "easeInOut"
                 repeat: Infinity
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
-=======
 
-=======
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               transition={{
                 duration: 3,
                 delay: i * 0.1,
                 repeat: Infinity,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ease: 'easeInOut',              }}
 
               }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
@@ -1755,18 +1738,20 @@ export default UltraFuturisticBackground2035;
 =======
 =======
   );
-<<<<<<< HEAD
 }
-=======
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default UltraFuturisticBackground2035;
 
@@ -1781,13 +1766,14 @@ export default UltraFuturisticBackground2035;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default UltraFuturisticBackground2035;
 export default UltraFuturisticBackground2035;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default UltraFuturisticBackground2035;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

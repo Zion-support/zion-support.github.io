@@ -24,9 +24,12 @@ import { supabase } from "@/integrations/supabase/client",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -44,6 +47,7 @@ import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Define form schema;
 const serviceProfileSchema = z && z.object({;
@@ -76,6 +80,8 @@ export function ServiceProviderRegistrationForm() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -84,7 +90,6 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Switch } from "@/components/ui/switch",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -94,7 +99,6 @@ import {
   FormField;
   FormItem;
   FormLabel;
-=======
 import { Badge } from "@/components/ui/badge",
 import { Separator } from "@/components/ui/separator",
 import {
@@ -104,24 +108,24 @@ import {
   FormField,
   FormItem,
   FormLabel,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
-=======
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Define form schema
 
 const serviceProfileSchema = z.object({
@@ -133,6 +137,7 @@ const serviceProfileSchema = z.object({
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
@@ -140,6 +145,8 @@ const serviceProfileSchema = z.object({
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     message: "Rate must be a number"})
   availability: z.enum(["available", "limited", "unavailable"]);
   enhancedProfile: z.boolean().default(true)
@@ -152,8 +159,11 @@ export function ServiceProviderRegistrationForm() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null)
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     message: "Rate must be a number"}),
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().default(true),
@@ -162,28 +172,32 @@ export function ServiceProviderRegistrationForm() {
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ServiceProviderRegistrationForm() {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [serviceTags, setServiceTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
-=======
 export function ServiceProviderRegistrationForm() {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [serviceTags, setServiceTags] = useState<string[]>([]),
   const [isGenerating, setIsGenerating] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
     resolver: zodResolver(serviceProfileSchema)
@@ -213,17 +227,23 @@ export function ServiceProviderRegistrationForm() {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Handle removing service tags
   const handleRemoveService = (service: string) => {
     setServiceTags(serviceTags.filter((s) => s !== service))
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Handle removing service tags
@@ -232,16 +252,20 @@ export function ServiceProviderRegistrationForm() {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddService()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -252,6 +276,8 @@ export function ServiceProviderRegistrationForm() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   // Handle avatar upload
@@ -264,17 +290,18 @@ export function ServiceProviderRegistrationForm() {
       }
       reader.readAsDataURL(file)
     }
-<<<<<<< HEAD
   }
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
     if (!formData.bio |formData.bio.length < 20) {
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -381,6 +408,7 @@ export function ServiceProviderRegistrationForm() {;
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -401,17 +429,23 @@ export function ServiceProviderRegistrationForm() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues(),
     if (!formData.bio || formData.bio.length < 20) {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -422,6 +456,8 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     try {
       setIsGenerating(true);
@@ -439,13 +475,15 @@ export function ServiceProviderRegistrationForm() {;
       });
       if (error) {
         throw new Error(error.message)
-<<<<<<< HEAD
       }
       setGeneratedContent(data as { summary: string, services: string[] })
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {;
@@ -474,6 +512,7 @@ export function ServiceProviderRegistrationForm() {;
       if (error) {;
         throw new Error(error.message);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       }
@@ -489,16 +528,21 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
 
       setGeneratedContent(data as { summary: string, services: string[] }),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Enhanced Profile Generated"
         description: "AI has created a professional bio and suggested additional services for your profile."})
@@ -593,7 +637,6 @@ function ServiceProviderRegistrationForm() {
     } finally {
       setIsGenerating(false)
     }
-<<<<<<< HEAD
   }
   // Apply generated content to form
   const applyGeneratedContent = () => {
@@ -603,8 +646,11 @@ function ServiceProviderRegistrationForm() {
         const newServices = generatedContent.services.filter(
           service => typeof service === 'string' && service && !serviceTags.includes(service)
         );
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Apply generated content to form
@@ -617,6 +663,7 @@ function ServiceProviderRegistrationForm() {
           service => typeof service === 'string' && service && !serviceTags.includes(service)
         ),
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -744,18 +791,21 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
         }
       }
     }
-<<<<<<< HEAD
   }
-=======
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle form submission
   const onSubmit = async (values: ServiceFormValues) => {
     if (serviceTags.length === 0) {
@@ -791,18 +841,20 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
     }
-<<<<<<< HEAD
     setIsSubmitting(true);
-=======
 
     setIsSubmitting(true),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error("User not authenticated")
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -856,6 +908,8 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ServiceProviderRegistrationForm.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       // Enhance profile if not already done
       let finalSummary = values.bio;
@@ -878,7 +932,6 @@ if ( {) {
             // Merge AI suggested services with user-provided services
             const aiServices = (aiData as any).services |[];
             finalServices = [...new Set([...serviceTags, ...aiServices])]
-=======
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setGeneratedContent(data as { summary: string, services: string[] }),;
@@ -1081,15 +1134,19 @@ if ( {) {
             const aiServices = (aiData as any).services || [],;
             finalServices = [...new Set([...serviceTags, ...aiServices])];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1120,18 +1177,16 @@ if ( {) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       } else if (generatedContent) {
         finalSummary = generatedContent.summary;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])]
-<<<<<<< HEAD
       }
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser()
       const userEmail = userData.user?.email;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         } catch (error) {;
           console.error("Error enhancing profile:", error),;
           // Continue with submission even if enhancement fails;
@@ -1139,18 +1194,17 @@ if ( {) {
       } else if (generatedContent) {;
         finalSummary = generatedContent.summary,;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
 
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = userData.user?.email,
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Create the service profile
       const { data: profileData, error } = await supabase
         .from('profiles')
@@ -1164,6 +1218,7 @@ if ( {) {
           // Additional fields that might be in profiles table
         })
         .eq('id', user.id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1200,10 +1255,15 @@ if ( {) {
       if (error) throw error;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        .select();
+      if (error) throw error;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .select(),
 
       if (error) throw error,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1211,6 +1271,8 @@ if ( {) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
       /*
@@ -1219,11 +1281,14 @@ if ( {) {
         .insert({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           user_id: user.id
           services: finalServices
           hourly_rate: Number(values.hourlyRate)
@@ -1231,8 +1296,11 @@ if ( {) {
           location: values.location
           website: values.website |null})
       if (serviceError) throw serviceError;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           user_id: user.id,
           services: finalServices,
           hourly_rate: Number(values.hourlyRate),
@@ -1241,6 +1309,7 @@ if ( {) {
           website: values.website || null}),
 
       if (serviceError) throw serviceError,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1337,6 +1406,8 @@ if ( {) {
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       */
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
@@ -1382,17 +1453,22 @@ if ( {) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
@@ -1496,16 +1572,22 @@ if ( {) {
                           <FormMessage className="text-red-400" />
                         </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       )}
                     />
                   </div>
                 </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
@@ -2374,11 +2456,6 @@ export function ServiceProviderRegistrationForm() {;
 <<<<<<< HEAD
 =======
                 </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Upload Avatar */}
                 <div className="space-y-2">
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>
@@ -3223,17 +3300,10 @@ export function ServiceProviderRegistrationForm() {;
                     {serviceTags.length === 0 && (
                       <p className="text-zion-slate text-sm italic">No services added yet</p>
                     )}
-<<<<<<< HEAD
                   </div>
                 </div>
-=======
                   </div>;
                 </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>
@@ -3409,6 +3479,7 @@ export function ServiceProviderRegistrationForm() {;
       </Card>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -3712,9 +3783,13 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ServiceProviderRegistrationForm.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

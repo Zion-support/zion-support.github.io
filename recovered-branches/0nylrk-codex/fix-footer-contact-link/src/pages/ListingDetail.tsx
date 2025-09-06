@@ -25,9 +25,12 @@ import { ProfileContact } from "@/components/profile/ProfileContact",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
@@ -54,6 +57,7 @@ export default function ListingDetail() {
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ListingDetail.tsx
 
 =======
@@ -63,6 +67,8 @@ export default function ListingDetail() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
@@ -75,7 +81,6 @@ import { toast } from "@/hooks/use-toast",
 import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { AppLayout } from "@/layout/AppLayout",
 import { ProfileContact } from "@/components/profile/ProfileContact",
-<<<<<<< HEAD
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -85,7 +90,6 @@ export default function ListingDetail() {
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   // Find the listing from our shared data source - now also checking equipment listings
-=======
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 
 export default function ListingDetail() {
@@ -95,12 +99,14 @@ export default function ListingDetail() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),
   const [isLoading, setIsLoading] = useState(false),
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
@@ -124,6 +130,7 @@ export default function ListingDetail() {
     setIsContactDialogOpen(true)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -132,12 +139,16 @@ export default function ListingDetail() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <AppLayout>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -180,6 +191,7 @@ export default function ListingDetail() {
                           className="w-full h-full object-cover"
                           onError={(e) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -188,6 +200,10 @@ export default function ListingDetail() {
                             target.src = "/placeholder.svg"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+                            const target = e.target as HTMLImageElement;
+                            target.src = "/placeholder.svg"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             const target = e.target as HTMLImageElement,
                             target.src = "/placeholder.svg"
 import { useState } from "react",;
@@ -424,6 +440,7 @@ export default function ListingDetail() {;
                             const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -442,6 +459,8 @@ export default function ListingDetail() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           }}
                         />
                       </div>
@@ -454,6 +473,7 @@ export default function ListingDetail() {;
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -474,6 +494,9 @@ export default function ListingDetail() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -747,15 +770,8 @@ export default function ListingDetail() {;
                         <Star
                           key={i}
                           className={cn(
-<<<<<<< HEAD
                             "h-5 w-5";
-=======
                             "h-5 w-5",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
                         />
@@ -794,6 +810,7 @@ export default function ListingDetail() {;
                           description: "Redirecting to secure checkout..."
                         })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -802,6 +819,8 @@ export default function ListingDetail() {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="space-y-3 mb-8">;
                   {listing.price !== null ? (;
                     <PaymentButton;
@@ -815,6 +834,7 @@ export default function ListingDetail() {;
                           title: "Payment Processing";
                           description: "Redirecting to secure checkout...";
                         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -935,6 +955,8 @@ export default function ListingDetail() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       }}
                     />
                   ) : (
@@ -966,13 +988,14 @@ export default function ListingDetail() {;
                         alt={listing.author.name}
                         className="h-12 w-12 rounded-full"
                         onError={(e) => {
-<<<<<<< HEAD
                           const target = e.target as HTMLImageElement;
 
-=======
                           const target = e.target as HTMLImageElement,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                         }}
                       />
@@ -1019,6 +1042,7 @@ export default function ListingDetail() {;
     </AppLayout>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                         onError={(e) => {;
@@ -1052,6 +1076,9 @@ export default function ListingDetail() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -1486,11 +1513,10 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ListingDetail.tsx
 =======
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

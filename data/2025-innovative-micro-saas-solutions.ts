@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -6,6 +7,9 @@
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const innovativeMicroSaasSolutions2025 = [
   {
 
@@ -410,6 +414,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Marketing ROI optimization'
     ]
     integrations: [
+<<<<<<< HEAD
 =======
 
 =======
@@ -1435,6 +1440,8 @@ export const innovativeMicroSaasSolutions2025 = [
     ]
     integrations: [
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'CRM systems'
       'E-commerce platforms'
       'Analytics tools'
@@ -1443,7 +1450,6 @@ export const innovativeMicroSaasSolutions2025 = [
     ]
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
   }
-=======
       'CRM systems',
       'E-commerce platforms',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1493,19 +1499,20 @@ export const innovativeMicroSaasSolutions2025 = [
 =======
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
-<<<<<<< HEAD
   }
 ];
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const innovativeMicroSaasSolutions2025 = [;
   {;
     id: 'ai-powered-customer-feedback-analyzer',;
@@ -1712,6 +1719,7 @@ export const innovativeMicroSaasSolutions2025 = [;
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'],;
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
@@ -1734,3 +1742,7 @@ export const innovativeMicroSaasSolutions2025 = [;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

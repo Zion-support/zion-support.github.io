@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 
@@ -8,6 +7,8 @@
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -61,6 +62,7 @@ const whitepapers = {
       ],
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -858,11 +860,12 @@ export default function WhitepaperPage() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
 // Mock whitepaper data - in a real app, this would come from an API or database
 const whitepapers = {
   'autonomous-systems-guide': {
@@ -929,7 +932,6 @@ export default function WhitepaperPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const whitepaper = whitepapers[id as keyof typeof whitepapers]
 
-=======
 // Mock whitepaper data - in a real app, this would come from an API or database;
 const whitepapers = {;
   'autonomous-systems-guide': {;
@@ -949,10 +951,6 @@ const whitepapers = {;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
   },;
@@ -1005,7 +1003,6 @@ export default function WhitepaperPage() {
   const router = useRouter(),
   const { id } = router.query,
   const whitepaper = whitepapers[id as keyof typeof whitepapers],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!whitepaper) {
     return (
 <<<<<<< HEAD
@@ -1027,6 +1024,7 @@ export default function WhitepaperPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
     );}
 
@@ -1087,8 +1085,9 @@ export default function WhitepaperPage() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -1099,25 +1098,17 @@ export default function WhitepaperPage() {
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-<<<<<<< HEAD
           {/* Breadcrumb */}
-=======
           {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <nav className="mb-8">
             <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               ← Back to Resources
             </Link>
           </nav>
-<<<<<<< HEAD
           {/* Header */}
           <header className="text-center mb-16">
             <div className="mb-6">
@@ -1130,7 +1121,6 @@ export default function WhitepaperPage() {
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-6">
               {whitepaper.description}
-=======
           {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1159,11 +1149,6 @@ export default function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
               <span>By {whitepaper.author}</span>
@@ -1173,19 +1158,12 @@ export default function WhitepaperPage() {
               <span>{whitepaper.publishDate}</span>
             </div>
           </header>
-<<<<<<< HEAD
           {/* Whitepaper Content */}
-=======
           {/* Whitepaper Content */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="max-w-4xl mx-auto">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>
@@ -1232,19 +1210,12 @@ export default function WhitepaperPage() {
               <h2 className="text-3xl font-bold mb-6 text-green-400">Target Audience</h2>
               <p className="text-lg text-white/80">{whitepaper.content.targetAudience}</p>
             </section>
-<<<<<<< HEAD
             {/* Download Section */}
-=======
             {/* Download Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="mb-12">
               <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Download?</h2>
@@ -1252,19 +1223,12 @@ export default function WhitepaperPage() {
                   Get instant access to this comprehensive whitepaper and start implementing autonomous systems today.
                 </p>
                 <button className="px-8 py-4 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300 text-lg">
-<<<<<<< HEAD
                   Download {whitepaper.title}
-=======
                   Download {whitepaper.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </button>
                 <p className="text-white/60 text-sm mt-4">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1272,6 +1236,7 @@ export default function WhitepaperPage() {
                 </p>
               </div>
             </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             {/* Related Whitepapers */}
@@ -1294,18 +1259,14 @@ export default function WhitepaperPage() {
                       <span className=&quot;inline-block px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs rounded-full border border-fuchsia-400/30&quot;>
 =======
 <<<<<<< HEAD
-            {/* Related Whitepapers */}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            {/* Related Whitepapers */}
             {/* Related Whitepapers */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1313,13 +1274,8 @@ export default function WhitepaperPage() {
                   .filter(w => w.id !== whitepaper.id)
                   .slice(0, 2)
                   .map((relatedPaper) => (
-<<<<<<< HEAD
                     <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                     <Link 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       key={relatedPaper.id}
                       href={`/resources/whitepapers/${relatedPaper.id}`}
                       className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300"
@@ -1345,11 +1301,7 @@ export default function WhitepaperPage() {
                 <p className=&quot;text-white/80 mb-6&quot;>
 =======
             {/* CTA */}
-=======
-<<<<<<< HEAD
-=======
                     <Link
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       key={relatedPaper.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1561,11 +1513,6 @@ export default function WhitepaperPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Need Custom Research?</h2>
@@ -1596,13 +1543,8 @@ export default function WhitepaperPage(req, res) {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 
@@ -1633,11 +1575,12 @@ export default function WhitepaperPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

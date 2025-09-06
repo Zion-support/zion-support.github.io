@@ -38,10 +38,14 @@ export default function TokenomicsWhitepaperBuilder() {;
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
+<<<<<<< HEAD
 
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
@@ -50,14 +54,16 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
 
 
 =======
+=======
+export default function TokenomicsWhitepaperBuilder() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 export default function TokenomicsWhitepaperBuilder() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -65,11 +71,14 @@ export default function TokenomicsWhitepaperBuilder() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,6 +91,8 @@ export default function TokenomicsWhitepaperBuilder() {;
   );  const [distribution, setDistribution] = useState<DistributionItem[]>([;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [useCases, setUseCases] = useState<string>(
     'Access to premium AI agents, marketplace discounts, reputation staking, governance participation'
   );
@@ -196,11 +207,7 @@ export default function TokenomicsWhitepaperBuilder() {;
     value: string
   ) {
     setDistribution(prev => {      const copy = [...prev];
-<<<<<<< HEAD
       const item = { ...copy[index] }
-=======
-=======
-=======
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
@@ -210,7 +217,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),;
   const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),;
   const [distribution, setDistribution] = useState<DistributionItem[]>([;
@@ -728,17 +734,13 @@ if (item.label = value) {
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
     setDistribution((prev) => {;
       const copy = [...prev];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const item = { ...copy[index] };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
       copy[index] = item;
       return copy;
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -746,6 +748,8 @@ if (item.label = value) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   function addDistributionItem() {
     setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
@@ -759,7 +763,6 @@ if (item.label = value) {
       body: JSON.stringify({ markdown: previewMarkdown, publicPreview })
     });
     if (!res.ok) {
-=======
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1192,11 +1195,6 @@ function jurisdictionalNote(): any (j: string) {;
 =======
       body: JSON.stringify({ markdown: previewMarkdown, publicPreview })}),;
     if (!res.ok) {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       alert('Failed to create share link');
       return;
       } catch (error) {
@@ -1213,10 +1211,12 @@ function jurisdictionalNote(): any (j: string) {;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -1226,15 +1226,17 @@ function jurisdictionalNote(): any (j: string) {;
     'Governance Model'
     'Risks + Disclaimers'
   ];
-=======
 }
   const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
@@ -1256,6 +1258,7 @@ function jurisdictionalNote(): any (j: string) {;
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1263,19 +1266,25 @@ function jurisdictionalNote(): any (j: string) {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
           <div className='space-y-6'>
             <div className='rounded-lg border p-4 space-y-4'>
               <h2 className='font-medium'>Builder Inputs</h2>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-6">
             <div className="rounded-lg border p-4 space-y-4">
               <h2 className="font-medium">Builder Inputs</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1292,6 +1301,8 @@ function jurisdictionalNote(): any (j: string) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
                   <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
@@ -1322,6 +1333,7 @@ function jurisdictionalNote(): any (j: string) {;
                   </select>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1340,6 +1352,8 @@ function jurisdictionalNote(): any (j: string) {;
                   <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='flex items-center gap-2'>
                   <input
                     id='legalReview'
@@ -1393,10 +1407,10 @@ function jurisdictionalNote(): any (j: string) {;
                   >
                     Add allocation
                   </button>
-=======
                 <div className="flex items-center gap-2">
                   <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
                   <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1404,6 +1418,8 @@ function jurisdictionalNote(): any (j: string) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </div>
             </div>
@@ -1435,6 +1451,7 @@ function jurisdictionalNote(): any (j: string) {;
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1446,6 +1463,8 @@ function jurisdictionalNote(): any (j: string) {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='rounded-lg border p-4 space-y-3'>
               <h3 className='font-medium'>Operator Prompt</h3>
               <textarea
@@ -1456,12 +1475,13 @@ function jurisdictionalNote(): any (j: string) {;
               />
               <div className='flex gap-3'>
                 <button
-<<<<<<< HEAD
                   disabled={!isAdmin |isGenerating}
-=======
                   disabled={!isAdmin || isGenerating}
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
                 >
@@ -1474,6 +1494,7 @@ function jurisdictionalNote(): any (j: string) {;
                   Clear AI Draft
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1482,6 +1503,8 @@ function jurisdictionalNote(): any (j: string) {;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Operator Prompt</h3>
               <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
@@ -1501,6 +1524,7 @@ function jurisdictionalNote(): any (j: string) {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1516,10 +1540,13 @@ function jurisdictionalNote(): any (j: string) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1528,6 +1555,8 @@ function jurisdictionalNote(): any (j: string) {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='rounded-lg border p-4 space-y-2'>
               <h3 className='font-medium'>Output</h3>
               <div className='flex gap-3'>
@@ -1557,9 +1586,12 @@ function jurisdictionalNote(): any (j: string) {;
                     {s}
                   </button>
                 ))}
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="rounded-lg border p-4 space-y-2">
               <h3 className="font-medium">Output</h3>
               <div className="flex gap-3">
@@ -1596,11 +1628,6 @@ function jurisdictionalNote(): any (j: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1610,6 +1637,7 @@ function jurisdictionalNote(): any (j: string) {;
         </div>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1721,9 +1749,10 @@ function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
   const total = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 function buildLocalMarkdown(input: {
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -1732,11 +1761,6 @@ function buildLocalMarkdown(input: {
 }
 ;
 function buildLocalMarkdown(input: {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   tokenName: string;
   tokenSupply: string;
   useCases: string;
@@ -1753,15 +1777,16 @@ function buildLocalMarkdown(input: {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) |1;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 function jurisdictionalNote(j: string) {;
@@ -1787,6 +1812,7 @@ function jurisdictionalNote(j: string) {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
@@ -1804,6 +1830,11 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+function DistributionDonut({ data }: { data: DistributionItem[] }) {
+  // Simple textual donut placeholder until a chart lib is added
+  const total = data.reduce((a, b) => a + b.percent, 0) || 1,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-1 text-sm">
       {data.map((d, idx) => (
@@ -1859,7 +1890,6 @@ function MarkdownPreview(): any ({;
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
 =======
         </div>
-<<<<<<< HEAD
       ))}
     </div>
   );
@@ -1870,7 +1900,6 @@ function MarkdownPreview({
   markdown: string;
   activeSection: string;
 }) {  // Very lightweight section filter: split by headings
-<<<<<<< HEAD
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g)
     const map: Record<string, string> = {}
@@ -1892,6 +1921,7 @@ function MarkdownPreview({
       {content || markdown}
     </pre>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )
@@ -1969,6 +1999,8 @@ if (return) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1984,6 +2016,7 @@ if (return) {
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
   // Very lightweight section filter: split by headings
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1996,6 +2029,8 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
@@ -2009,12 +2044,15 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   const content = parts[activeSection] || '',
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 <pre className='whitespace-pre-wrap text-sm leading-6'>
       {content || markdown}
     </pre>
@@ -2025,9 +2063,12 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
 }
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )
 ;
@@ -2053,6 +2094,7 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2066,3 +2108,5 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

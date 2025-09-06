@@ -444,12 +444,9 @@ async function resolveDisplayName(addr: string): Promise<string | null> {
   } catch {
     return null;
   }
-<<<<<<< HEAD
 export default function Web3LoginButton() {
-=======
 
 export default function Web3LoginButton() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{
     address: string;
@@ -459,12 +456,9 @@ export default function Web3LoginButton() {;
   useEffect(() => {    return did.lens |did.ens |null
   } catch { return null }
 }
-<<<<<<< HEAD
 export default function Web3LoginButton() {
-=======
 
 export default function Web3LoginButton() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null)
   const [displayName, setDisplayName] = useState<string | null>(null);
@@ -503,16 +497,11 @@ export default function Web3LoginButton() {;
       await fetch('/api/auth/logout', { method: 'POST' });
     } catch {}
     setUser(null);
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (user) {
     const base =
       displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
 
-<<<<<<< HEAD
     return (
       <div className='flex items-center gap-2'>
         <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5'>
@@ -560,19 +549,16 @@ export default function Web3LoginButton() {;
     </>
 );
 }
-<<<<<<< HEAD
-=======
 
 }
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   }
 
   return (
     <>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -580,3 +566,5 @@ export default function Web3LoginButton() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -49,16 +49,20 @@ const AutomationDetail: NextPage = () => {const router = useRouter();
     }
   } catch (e) {data = null;
   }
-<<<<<<< HEAD:components/automation/[slug].tsx
+:components/automation/[slug].tsx
 return (
-=======
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
+:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <EnhancedLayout>
       <Head>
         <title>{_title} - Zion Tech Solutions</title>
@@ -79,21 +83,25 @@ export default AutomationDetail;
 =======
         <div className=&quot;opacity-70&quot;>No report found.</div>
       ) : (
-<<<<<<< HEAD:components/automation/[slug].tsx
+:components/automation/[slug].tsx
         <pre className=&quot;text-xs whitespace-pre-wrap break-words rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white dark:bg-zinc-900 overflow-x-auto&quot;>{JSON.stringify(data, null, 2)}</pre>
       )}
     </EnhancedLayout>;
   );
 }
 export default AutomationDetail;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <pre className=&quot;text-xs whitespace-pre-wrap break-words rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white dark:bg-zinc-900 overflow-x-auto&quot;>{JSON.stringify(data, null, 2)}</pre>      )}
     </EnhancedLayout>
   )
 },
 
 export default AutomationDetail,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -105,3 +113,7 @@ export default AutomationDetail,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
+:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

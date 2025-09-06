@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -14,11 +15,15 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -31,15 +36,19 @@ import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   getProposal
   updateProposalMeta
   updateArtifacts
-=======
   getProposal,
   updateProposalMeta,
   updateArtifacts,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "../../../utils/data/proposals";
 async function submitByEmail(
   to: string
@@ -47,6 +56,7 @@ async function submitByEmail(
   text: string
   attachments: any[] = []
 ) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -54,6 +64,8 @@ async function submitByEmail(
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -80,27 +92,58 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
 =======
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  const from = process.env.EMAIL_FROM |user;
+  if (!host |!user |!pass) throw new Error("Email not configured");
+  const from = process.env.EMAIL_FROM || user;
+  if (!host || !user || !pass) throw new Error("Email not configured");
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const transporter = nodemailer.createTransport({
     host
     port
     secure: port === 465
     auth: { user, pass }
   });
+<<<<<<< HEAD
 
   await transporter.sendMail({ from, to, subject, text, attachments });
 }
 
+=======
+  if (!host || !user || !pass) throw new Error('Email not configured');
+  const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
+  await transporter.sendMail({ from, to, subject, text, attachments });
+}
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
     const { id, channels = ["email"], emailTo, delegateNote } = req.body |{}
@@ -133,6 +176,7 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
   } catch (error: any) {
     return res
       .status(500)
+<<<<<<< HEAD
 =======
 
 =======
@@ -329,6 +373,9 @@ function handler() {
 }
 =======
 =======
+=======
+      .json({ error: error?.message |"Submission failed" });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
@@ -346,12 +393,9 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status($1).json({$2});
-=======
       .json({ error: error?.message || "Submission failed" });
-=======
 ;
 export default async function handler(req, res) {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   try {
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
     if (!id) return res.status($1).json({$2});
@@ -382,6 +426,7 @@ export default async function handler(req, res) {
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -407,10 +452,10 @@ export default async function handler(req, res) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }
-<<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
+}
 }
   } catch (error) {
     console.error("Error:", error);
@@ -454,6 +499,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
@@ -466,3 +512,7 @@ export default async function handler(req, res) {
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -14,9 +14,7 @@ import React from 'react';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/components/ProjectActions.tsx
 =======
 
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Button  } from '@/components/ui/button';
 import { Link  } from 'react-router-dom';
 import { ShieldAlert } from "lucide-react";
@@ -28,12 +26,16 @@ interface ProjectActionsProps {
   disputeId?: string;
   isTalent: boolean
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -43,11 +45,14 @@ import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
 import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -61,11 +66,14 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
   disputeId?: string,
   isTalent: boolean,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   onAddMilestone: () => void
@@ -74,25 +82,28 @@ interface ProjectActionsProps {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onAddMilestone: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function ProjectActions({;
   projectId;
   isUnderDispute;
   disputeId;
   isTalent;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ProjectActions({
   projectId,
   isUnderDispute,
   disputeId,
   isTalent,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -106,6 +117,8 @@ export function ProjectActions({
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onAddMilestone
 }: ProjectActionsProps) {
   return (
@@ -124,11 +137,14 @@ export function ProjectActions({
           variant="outline"
         />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
@@ -228,11 +244,14 @@ export function ProjectActions({;
           variant="outline";
         />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>

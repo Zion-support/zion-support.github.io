@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/EnhancedNewsletterForm.tsx
 
 <<<<<<< HEAD
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 =======
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -21,6 +24,7 @@ export function EnhancedNewsletterForm() {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+<<<<<<< HEAD
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
@@ -44,12 +48,19 @@ export function EnhancedNewsletterForm() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState } from "react";
 import { Mail } from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+import { useState } from "react",
+import { Mail } from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -58,8 +69,12 @@ export function EnhancedNewsletterForm() {
   const handleSubmit = (e: React.FormEvent) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 e.preventDefault();
+=======
+    e.preventDefault();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setIsSubmitting(true);
     // Simulate API call
     setTimeout(() => {
@@ -67,7 +82,20 @@ e.preventDefault();
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    e.preventDefault(),
+    setIsSubmitting(true),
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false),
+      setIsSubmitted(true),
+      setEmail("")
+    }, 1000)
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
@@ -80,6 +108,7 @@ e.preventDefault();
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -197,6 +226,9 @@ function EnhancedNewsletterForm() {
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
 
 =======
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
@@ -331,6 +363,7 @@ function EnhancedNewsletterForm() {
         </form>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             <div
@@ -340,6 +373,12 @@ function EnhancedNewsletterForm() {
           {[...Array(3)].map((_, i) => (
 <div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      <div className="mt-4 flex items-center text-xs text-zion-slate-light">
+        <div className="flex -space-x-1 mr-2">
+          {[...Array(3)].map((_, i) => (
+            <div
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               key={i}
               className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan"
             >
@@ -350,12 +389,22 @@ function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+      
+      <div className="mt-4 flex items-center text-xs text-zion-slate-light">
+        <div className="flex -space-x-1 mr-2">
+          {[...Array(3)].map((_, i) => (
+);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -423,6 +472,7 @@ export function EnhancedNewsletterForm() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
 }
 
@@ -448,3 +498,6 @@ setIsSubmitting (true);
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/EnhancedNewsletterForm.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

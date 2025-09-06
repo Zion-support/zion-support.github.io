@@ -16,14 +16,18 @@ import { ChevronLeft, Bell, Settings } from "lucide-react",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {ChevronLeft, Bell, Settings} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface MobileHeaderProps {;
   title: string,;
@@ -34,10 +38,11 @@ interface MobileHeaderProps {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { useNavigate } from "react-router-dom",
 import { ChevronLeft, Bell, Settings } from "lucide-react",
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
@@ -50,6 +55,7 @@ interface MobileHeaderProps {
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onSettingsClick?: () => void;
 }
@@ -82,6 +88,10 @@ import { Button } from "@/components/ui/button",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
@@ -89,6 +99,7 @@ interface MobileHeaderProps {
   showSettings?: boolean,
   className?: string,
   onNotificationsClick?: () => void,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   onSettingsClick?: () => void
@@ -99,12 +110,11 @@ export function MobileHeader({
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onSettingsClick?: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function MobileHeader({;
   title;
   showBack = false;
@@ -112,10 +122,7 @@ export function MobileHeader({;
   showSettings = false;
   className;
   onNotificationsClick;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function MobileHeader({
-<<<<<<< HEAD
   title;
 
   showBack = false;
@@ -129,21 +136,24 @@ export function MobileHeader({
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
 
-=======
   title,
   showBack = false,
   showNotifications = false,
   showSettings = false,
   className,
   onNotificationsClick,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onSettingsClick}: MobileHeaderProps) {
   const navigate = useNavigate(),
 
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -153,6 +163,8 @@ export function MobileHeader({
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -204,6 +216,7 @@ export function MobileHeader({
               <span className="sr-only">Settings</span>
             </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -215,17 +228,21 @@ export function MobileHeader({
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/common/MobileHeader.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         </div>
       </div>
     </header>
   )
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
 import { ChevronLeft, Bell, Settings } from "lucide-react",;
@@ -517,11 +534,10 @@ className)
       </div>;
     </header>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

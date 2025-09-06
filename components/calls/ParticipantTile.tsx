@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -48,17 +49,24 @@ import type {;
 } from 'livekit-client';
 
 =======
+=======
+import React, { useEffect, useRef } from 'react';
+
+import type {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   RemoteParticipant
   LocalParticipant
   TrackPublication
   Track;
-=======
   RemoteParticipant,
   LocalParticipant,
   TrackPublication,;
   Track,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'livekit-client';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 type Props = {;
@@ -117,16 +125,17 @@ type Props = {
 =======
 }
 export default function ParticipantTile({
-<<<<<<< HEAD
   participant
   isLocal
   displayName
-=======
   participant,
   isLocal,
   displayName,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
 type Props = {;
   participant: RemoteParticipant | LocalParticipant,;
@@ -139,15 +148,12 @@ type Props = {
 };
 =======
   displayName?: string
-<<<<<<< HEAD
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
-=======
 };
 
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
@@ -507,7 +513,6 @@ if ( {) {
           (isLocal ? 'You' : 'Participant')}
       </div>
     </div>
-<<<<<<< HEAD
   );  }, [participant]);
 
   return (
@@ -520,8 +525,8 @@ if ( {) {
     </div>
 );
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -529,3 +534,5 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,15 @@ const React from";react" export: default function SitemapPage() { const publicRo
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+:src.disabled/components/SitemapPage.jsx
+import React from\';react\' \"export\": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>\'';
+const React from";react" export: default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>"";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from\';react\' \"export\": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>\'';
+const React from";react" export: default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>"";'"'"
+:temp_exclude/src.disabled/components/SitemapPage.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
 =======
 =======

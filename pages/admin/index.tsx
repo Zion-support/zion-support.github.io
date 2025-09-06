@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function AdminIndex() {
@@ -41,14 +42,11 @@ function AdminIndex() {
 =======
 =======
 <<<<<<< HEAD
-import Link from 'next/link';
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import Link from 'next/link';
 import Link from 'next/link',;
-=======
 import Link from 'next/link';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AdminIndex() {
   return (
     <div className="space-y-2">
@@ -57,17 +55,20 @@ export default function AdminIndex() {
         <li><Link href="/admin/partners"><a className="text-blue-600 underline">Partners</a></Link></li>
       </ul>
     </div>
-<<<<<<< HEAD
   )
 };
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -76,3 +77,5 @@ export default function AdminIndex() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { motion } from 'framer-motion';
 import {;
@@ -166,6 +167,8 @@ const pricing_plans = [;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -456,13 +459,9 @@ const integrations = [
   'Zapier'
   'API Access',];
 
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {motion} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award, Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code, ShoppingCart,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -594,8 +593,6 @@ const useCases = [
   },
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { motion } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
@@ -887,14 +884,9 @@ const useCases = [;
   }
 }
 ],
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const integrations = [
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
 ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AIContentIntelligencePlatform() {
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -911,6 +903,7 @@ export default function AIContentIntelligencePlatform() {
         <link rel="canonical" href="https://ziontechgroup.com/ai-content-intelligence-platform" />
       </Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -923,6 +916,8 @@ export default function AIContentIntelligencePlatform() {
       {/* Hero Section */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">AI Content Intelligence Platform</h1>
@@ -938,7 +933,6 @@ export default function AIContentIntelligencePlatform() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-=======
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -971,12 +965,15 @@ export default function AIContentIntelligencePlatform() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <div className="flex items-center space-x-2 mb-6">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
@@ -1107,6 +1104,7 @@ className="relative"
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1163,6 +1161,8 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
           <motion.div
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Features Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -1181,7 +1181,6 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             className="text-center mb-16"
 =======
             className='text-center mb-16'
-=======
       </section>
       {/* Features Section */  } catch (error) {
     console.error("Error:", error);
@@ -1213,12 +1212,15 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
 }
             className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Powerful Features for Content Success
@@ -1231,6 +1233,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             {features.map((feature, index) => (
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1238,6 +1241,8 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1247,7 +1252,6 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 className="group relative"
 =======
                 className='group relative'
-=======
                 key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1275,12 +1279,15 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 }
                 className="group relative"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -1290,6 +1297,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   <p className="text-gray-400">{feature.description}</p>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1304,6 +1312,8 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1348,7 +1358,6 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
             className="text-center mb-16"
 =======
             className='text-center mb-16'
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1387,12 +1396,15 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 }
             className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Perfect For Every Content Need
@@ -1405,6 +1417,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
             {useCases.map((useCase, index) => (
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1412,6 +1425,8 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -1421,7 +1436,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                 className="group"
 =======
                 className='group'
-=======
                 key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1449,12 +1463,15 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
 }
                 className="group"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -1464,6 +1481,7 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1478,6 +1496,8 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1522,7 +1542,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
             className="text-center mb-16"
 =======
             className='text-center mb-16'
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1561,12 +1580,15 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
 }
             className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Flexible Pricing Plans
@@ -1578,6 +1600,7 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1594,13 +1617,14 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                 className={`relative ${plan.popular ? 'scale-105' : ''}`}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className={`relative ${plan.popular ? 'scale-105' : ''}`}
-=======
                 key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1632,12 +1656,15 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1666,6 +1693,7 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1683,6 +1711,8 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                     className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200`}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <li
                         key={featureIndex}
                         className='flex items-center text-gray-300'
@@ -1690,8 +1720,11 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                         <Check className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                        {feature}
                       </li>
                     ))}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature  } catch (error) {
@@ -1705,6 +1738,7 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1720,6 +1754,8 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </ul>
                   <Link
                     href="/contact"
@@ -1736,9 +1772,12 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                 </div>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
 
 =======
@@ -2238,7 +2277,6 @@ function AIContentIntelligencePlatform() {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
 =======
             className='text-center mb-16'
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2276,11 +2314,6 @@ function AIContentIntelligencePlatform() {
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Seamless Integrations
@@ -2292,7 +2325,6 @@ function AIContentIntelligencePlatform() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {integrations.map((integration, index) => (
               <motion.div
-<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -2312,7 +2344,6 @@ function AIContentIntelligencePlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
                 key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2378,11 +2409,6 @@ function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2460,6 +2486,7 @@ function AIContentIntelligencePlatform() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2553,17 +2580,15 @@ className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm borde
                 className='inline - flex items - center px - 8 py - 4 bg - white / 10 backdrop - blur - sm border border - gray - 600 text - white font - semibold rounded - lg hover:bg - white / 20 transition - all duration - 200'              >;
 =======
 <<<<<<< HEAD
+=======
+    </Layout>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-=======
-=======
-<<<<<<< HEAD
     </Layout>;
 );
 
 }
-=======
     </Layout>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
           >;
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
@@ -2653,9 +2678,12 @@ className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm borde
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -11,6 +12,9 @@ try {
   const { job } = req && req.body as { job?: Record<string, any> };
   if (!job) return res && res.status(400).json({ error: "Missing job payload" });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -142,6 +146,7 @@ results.push({ providerId: conn.providerId, ok: true })
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   writeState(s => {
@@ -238,6 +243,9 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
+=======
+res.status(200).json({ ok: true, results });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -281,7 +289,11 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

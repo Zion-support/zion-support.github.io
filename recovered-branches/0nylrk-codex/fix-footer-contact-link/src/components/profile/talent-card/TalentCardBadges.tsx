@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 =======
 import React from "react",
@@ -14,10 +15,21 @@ import { Badge } from "@/components/ui/badge";
 import { Award } from "lucide-react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+import React from "react";
+import {Badge} from "@/components/ui/badge";
+import {Award} from "lucide-react";
+import React from "react",
+import { Badge } from "@/components/ui/badge";
+import { Award } from "lucide-react";
+import { Badge } from "@/components/ui/badge",
+import { Award } from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TalentCardBadgesProps {
   featured: boolean | undefined;
 }
 
+<<<<<<< HEAD
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
 <<<<<<< HEAD
 
@@ -36,6 +48,14 @@ interface TalentCardBadgesProps {
 if (!featured) return null;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export function TalentCardBadges({ featured }: TalentCardBadgesProps) {;
+  if (!featured) return null;
+export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
+  if (!featured) return null;
+  if (!featured) return null,
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">
       <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">
@@ -43,9 +63,17 @@ if (!featured) return null;
         <span>Featured</span>
       </Badge>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+  )
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Award } from "lucide-react",;
@@ -71,6 +99,7 @@ export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardBadges.tsx
 <<<<<<< HEAD
 ;
@@ -148,3 +177,6 @@ absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

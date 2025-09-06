@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react';
 
 import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
@@ -12,12 +15,16 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Calendar
   Clock
   DollarSign
   Tag
   Users
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   Briefcase;
@@ -27,13 +34,14 @@ import {;
   DollarSign,;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Calendar,
   Clock,
   DollarSign,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Tag,;
   Users;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Briefcase;
 } from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
@@ -82,6 +90,7 @@ interface Job {
   category: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -120,6 +129,8 @@ export default function JobDetails() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   deadline?: string;
 
 export default function JobDetails() {;
@@ -135,8 +146,6 @@ export default function JobDetails() {;
     error: any;
   };
   const { user, isAuthenticated } = useAuth();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams, useNavigate;
 import { Header } from '@/components/Header',;
@@ -164,14 +173,9 @@ interface Job {;
   category: string,;
   deadline?: string;
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   deadline?: string;
 export default function JobDetails() {
-<<<<<<< HEAD
   const router = useRouter(); // Init router
   const { jobId: rawJobId } = router.query; // Get jobId from query
   const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
@@ -190,16 +194,22 @@ export default function JobDetails() {
     return `$${budget.min} - $${budget.max}`;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const router = useRouter(), // Init router
   const { jobId: rawJobId } = router.query, // Get jobId from query
   const jobId = typeof rawJobId === 'string' ? rawJobId : undefined,
   const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },
   const { user, isAuthenticated } = useAuth(),
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // navigate is now router
   const { isWhitelabel, brandName } = useWhitelabel(),
   
@@ -210,6 +220,7 @@ export default function JobDetails() {
     return `$${budget.min} - $${budget.max}`
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   if (isLoading) {
@@ -232,6 +243,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     return <JobDetailsSkeleton />;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return <JobDetailsSkeleton />
   }
@@ -242,11 +255,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         <Header />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       </>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='container mx-auto px-4 py-16 text-center'>
           <h1 className='text-2xl font-bold mb-4'>Job Not Found</h1>
           <p className='mb-8'>
@@ -254,22 +270,20 @@ ursor/fix-website-loading-errors-and-merge-6662
           </p>
           <Button onClick={() => router.push('/careers')}>View All Jobs</Button>        </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       </>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     )
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
           <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
           <Button onClick={() => router.push('/careers')}>View All Jobs</Button>
         </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </>
     )
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -278,11 +292,14 @@ ursor/fix-website-loading-errors-and-merge-6662
     if (!isAuthenticated) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast.error('Please log in to apply for this job');
       router.push(
         `/login?redirect=${encodeURIComponent(`/jobs/${jobId |''}`)}`
@@ -319,7 +336,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     setIsApplyModalOpen(false);
   }
   const isOwnJob = user?.id === job.client_id;
-=======
       toast.error("Please log in to apply for this job"),
       router.push(`/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`), // Added null check for jobId
       return
@@ -339,11 +355,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     setIsApplyModalOpen(false)
   },
 
-<<<<<<< HEAD
 
   const isOwnJob = user?.id === job.client_id,
-=======
-<<<<<<< HEAD
   const handleApplySuccess = async (appliedJobId: string) => {
     toast.success('Application submitted successfully!');
     setIsApplyModalOpen(false);
@@ -363,13 +376,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
   };
   const isOwnJob = user?.id === job.client_id;
-=======
 
   const isOwnJob = user?.id === job.client_id,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
@@ -380,10 +389,13 @@ ursor/fix-website-loading-errors-and-merge-6662
       <Header />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <main className='container mx-auto px-4 py-8'>
         <div className='mb-6'>
           <Button
@@ -395,6 +407,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           <div className='lg:col-span-2'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             <Card>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -408,6 +421,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <Button 
@@ -421,17 +436,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Card>
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <CardTitle className='text-2xl mb-2'>{job.title}</CardTitle>
                     <div className='flex items-center text-muted-foreground'>
                       <Calendar className='mr-2 h-4 w-4' />
@@ -442,15 +455,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                         })}
                       </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>
                     <div className="flex items-center text-muted-foreground">
                       <Calendar className="mr-2 h-4 w-4" />
                       <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </div>
                   </div>
                   <Badge>{job.category}</Badge>
@@ -478,7 +497,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {job.description}
                   </div>
                 </div>
-<<<<<<< HEAD
                 <div>
                   <h3 className='font-semibold text-lg mb-3'>
                     Required Skills
@@ -489,10 +507,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Badge key={i} variant='secondary'>                        {skill}
                       </Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
@@ -595,11 +616,6 @@ export default function JobDetails() {;
                       <Badge key={i} variant="secondary">;
                         {skill}
                       </Badge>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </div>
@@ -607,6 +623,7 @@ export default function JobDetails() {;
               </CardContent>
             </Card>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -619,6 +636,9 @@ export default function JobDetails() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div>
             <Card>
               <CardContent className="pt-6 space-y-4">
@@ -662,7 +682,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                   </div>
                 </div>
-<<<<<<< HEAD
                 <div className='flex items-start'>
                   <Clock className='mt-1 h-5 w-5 text-muted-foreground' />
                   <div className='ml-3'>
@@ -697,11 +716,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     Apply Now
                   </Button>
                 )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 
                 <div className="flex items-start">
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
@@ -734,7 +749,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {isOwnJob && (
 =======
                 
@@ -745,12 +763,40 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </main>
+              </CardContent>;
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal
           job={{
+<<<<<<< HEAD
 
+=======
+            id: job.id
+            title: job.title
+            description: job.description
+            company_name: job.company_name ?? 'Company'
+            budget: formatBudget(job.budget)
+            client_id: job.client_id
+            id: job.id,
+            title: job.title,
+            description: job.description,
+            company_name: job.company_name ?? "Company",
+            budget: formatBudget(job.budget),
+            client_id: job.client_id,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }}
 
           isOpen={isApplyModalOpen}
@@ -789,6 +835,7 @@ const isOwnJob = user?.id === job.client id;
 }'"
 }
 }
+<<<<<<< HEAD
 
 =======
               </CardContent>
@@ -1185,15 +1232,14 @@ const isOwnJob = user?.id === job.client id;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             id: job.id,
             title: job.title,
             description: job.description,
             company_name: job.company_name ?? "Company",
             budget: formatBudget(job.budget),
-=======
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             client_id: job.client_id}}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
@@ -1204,8 +1250,11 @@ const isOwnJob = user?.id === job.client id;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -11,9 +12,10 @@ real_implementation: boolean;
   launch_date: string;
 =======
 =======
+=======
+export interface AdvancedITService {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface AdvancedITService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -763,6 +765,7 @@ export const advancedITServices: AdvancedITService[] = [
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 
 =======
 =======
@@ -1682,21 +1685,25 @@ export const advancedITServices: AdvancedITService[] = [;
     realImplementation: true
     implementationDetails:
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
     launchDate: '2024-10-01'
     customers: 89
     rating: 4.8
     reviews: 45
   }
-=======
       'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
     launchDate: '2024-10-01',
     customers: 89,
     rating: 4.8,
     reviews: 45,
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1727,6 +1734,7 @@ export const advancedITServices: AdvancedITService[] = [;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     rating: 4 && 4.8,
     reviews: 45
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2195,13 +2203,11 @@ export interface AdvancedITService {;
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 ];
-=======
 export interface AdvancedITService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -2629,12 +2635,11 @@ export const advancedITServices: AdvancedITService[] = [;
     customers: 89,;
     rating: 4.8,;
     reviews: 45;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

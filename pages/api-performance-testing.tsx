@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
@@ -286,17 +287,13 @@ import {Check, ExternalLink} from 'lucide-react';
 	];
 =======
 <<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
-<<<<<<< HEAD
-=======
   const features = [
     'k6/Gatling-compatible test runner',
     'SLO-aware latency reports',
@@ -304,7 +301,6 @@ export default function ApiPerformanceTestingPage() {
     'CI checks and PR annotations',
     'Synthetic traffic for staging',;
   ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const features = [
     'k6/Gatling-compatible test runner'
@@ -447,14 +443,9 @@ export default function ApiPerformanceTestingPage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
-=======
-=======
 
 }
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
 export default function ApiPerformanceTestingPage() {
@@ -791,9 +782,12 @@ export default function ApiPerformanceTestingPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

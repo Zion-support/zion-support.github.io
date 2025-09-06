@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/page/ContractTypeCards.tsx
 
 <<<<<<< HEAD
@@ -11,6 +12,9 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from '@/components/ui/button'
 import {
   Card
@@ -30,6 +34,7 @@ export function ContractTypeCards({
   onSmartClick
 }: ContractTypeCardsProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -38,6 +43,9 @@ export function ContractTypeCards({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { FileText, ShieldCheck } from 'lucide-react'
@@ -55,15 +63,19 @@ interface ContractTypeCardsProps {
 
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
         <CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -74,6 +86,8 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CardTitle className='flex items-center gap-2'>
             <FileText className='h-5 w-5' />            Standard Contracts
           <CardTitle className="flex items-center gap-2">
@@ -102,6 +116,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
       <Card>
         <CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           <CardTitle className="flex items-center gap-2">
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -114,6 +129,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CardTitle className="flex items-center gap-2">
             <FileText className="h-5 w-5" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -138,10 +155,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         <CardFooter>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button variant='outline' onClick={onStandardClick}>            Create Standard Contract
           </Button>
         </CardFooter>
@@ -183,6 +203,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardTitle>
             <span className='px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>              Blockchain Powered      <Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -192,6 +213,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>           <div className="flex justify-between items-center">
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button variant="outline" onClick={onStandardClick}>
             Create Standard Contract
           </Button>
@@ -199,11 +222,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Card>
       
       <Card>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -240,6 +258,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>
         <CardFooter>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/page/ContractTypeCards.tsx
 <<<<<<< HEAD
 
@@ -259,6 +278,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             onClick={onSmartClick}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button
             className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'            onClick={onSmartClick}          <ul className="space-y-2">
             <li className="text-sm">✓ All standard contract features</li>
@@ -278,7 +299,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
           </Button>
         </CardFooter>
       </Card>
-<<<<<<< HEAD
     </div>
 import { Button } from '@/components/ui/button';
 import {;
@@ -295,9 +315,6 @@ import {;
     </div>
   )
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -557,6 +574,7 @@ function ContractTypeCards() {
       </Card>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/page/ContractTypeCards.tsx
 
     </div>;
@@ -601,17 +619,20 @@ onSmartClick: () => void ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/page/ContractTypeCards.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 };
 }
-<<<<<<< HEAD
 }
-=======
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

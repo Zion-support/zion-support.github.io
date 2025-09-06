@@ -5,9 +5,6 @@
 
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import {useInterviews} from "@/hooks/useInterviews";
 import {Interview} from "@/types/interview";
@@ -23,9 +20,12 @@ import {format, isAfter, parseISO, startOfDay} from "date-fns";
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
@@ -37,6 +37,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { InterviewCard } from "@/components/interviews/InterviewCard",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -47,25 +48,25 @@ import { Button } from "@/components/ui/button",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Calendar, Clock, Video } from "lucide-react";
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
-=======
 import { Calendar, Clock, Video } from "lucide-react",
 import { format, isAfter, parseISO, startOfDay } from "date-fns",
 
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
 
@@ -73,11 +74,14 @@ function InterviewsContent() {
       await fetchInterviews()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     loadInterviews()
   }, []);
@@ -88,8 +92,11 @@ function InterviewsContent() {
     .filter((interview) => {
       const interviewDate = parseISO(interview.scheduled_date);
       return isAfter(interviewDate, now) &&
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     loadInterviews()
@@ -104,23 +111,29 @@ function InterviewsContent() {
       const interviewDate = parseISO(interview.scheduled_date),
       return isAfter(interviewDate, now) && 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ['confirmedrequested'].includes(interview.status)
     })
     .sort((a, b) =>
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     );
   const pendingInterviews = interviews.filter(interview =>
     interview.status === 'requested'
@@ -133,8 +146,11 @@ function InterviewsContent() {
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
     const grouped: Record<string, Interview[]> = {}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ),
   
   const pendingInterviews = interviews.filter(interview => 
@@ -151,6 +167,7 @@ function InterviewsContent() {
   const groupInterviewsByDate = (interviews: Interview[]) => {
     const grouped: Record<string Interview[]> = {},
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -244,13 +261,14 @@ function InterviewsContent() {;
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     interviews.forEach((interview) => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),
       if (!grouped[dateKey]) {
         grouped[dateKey] = []
       }
       grouped[dateKey].push(interview)
-<<<<<<< HEAD
     });
     return grouped
   }
@@ -258,8 +276,11 @@ function InterviewsContent() {;
   const pendingGrouped = groupInterviewsByDate(pendingInterviews);
   const pastGrouped = groupInterviewsByDate(pastInterviews);
   const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }),
     
     return grouped
@@ -271,12 +292,15 @@ function InterviewsContent() {;
 
   const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return Object.entries(groupedInterviews)
       .sort(([dateA], [dateB]) =>
         parseISO(dateA).getTime() - parseISO(dateB).getTime()
@@ -290,21 +314,26 @@ function InterviewsContent() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <InterviewCard
                 key={interview.id}
-=======
               <InterviewCard 
                 key={interview.id} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from "react",;
 import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
@@ -513,11 +542,6 @@ function InterviewsContent() {;
             {interviews.map((interview) => (;
               <InterviewCard;
                 key={interview.id} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 interview={interview}
                 onRefresh={async () => {
                   await fetchInterviews()
@@ -527,12 +551,13 @@ function InterviewsContent() {;
           </div>
         </div>
       ))
-<<<<<<< HEAD
   }
-=======
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <>
@@ -618,27 +643,30 @@ function InterviewsContent() {;
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </TabsContent>
         </Tabs>
       </main>
       <Footer />
     </>
   )
-<<<<<<< HEAD
-=======
-=======
           </TabsContent>;
         </Tabs>;
       </main>;
       <Footer />;
     </>;
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default function Interviews() {
   return (
@@ -1038,8 +1066,11 @@ if ( {) {
 =======
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -1130,8 +1161,9 @@ return (<> <SEO title="Interviews | Zion AI Marketplace" description="Manage you
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

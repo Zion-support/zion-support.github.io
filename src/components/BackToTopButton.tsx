@@ -1,11 +1,14 @@
 import { ArrowUp } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from "react";
 export function BackToTopButton() {
   const [visible, setVisible] = useState(false);
@@ -15,9 +18,12 @@ export function BackToTopButton() {
     <button
       aria-label="Back to top"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from 'react'
 import { useEffect, useState } from "react"
 export function BackToTopButton() {
@@ -41,9 +47,12 @@ export function BackToTopButton() {
     </button>;
   );
 }"};
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from "react",
 
 export function BackToTopButton() {
@@ -103,14 +112,18 @@ export function BackToTopButton() {;
       aria-label="Back to top";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       onClick={scrollToTop}
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -121,11 +134,14 @@ export function BackToTopButton() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
       <ArrowUp className="h-5 w-5" />
     </button>
   )
 }"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -133,6 +149,8 @@ export function BackToTopButton() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >;
       <ArrowUp className="h-5 w-5" />;
     </button>;
@@ -140,8 +158,11 @@ export function BackToTopButton() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

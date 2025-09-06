@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -96,18 +97,17 @@ const seoFactors = [
       icon: '📝',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
   Search
   TrendingUp
   CheckCircle
@@ -120,6 +120,7 @@ import {
   Zap;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -145,6 +146,8 @@ export default function SEOAnalyzerToolPage() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Search,
   TrendingUp,
   CheckCircle,
@@ -156,6 +159,7 @@ export default function SEOAnalyzerToolPage() {
   Smartphone,;
   Zap,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -165,16 +169,18 @@ export default function SEOAnalyzerToolPage() {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 export default function SEOAnalyzerToolPage() {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 export default function SEOAnalyzerToolPage() {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
@@ -252,6 +258,7 @@ export default function SEOAnalyzerToolPage() {
       factors: [
         'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     {
       category: 'Content SEO'
@@ -295,6 +302,8 @@ export default function SEOAnalyzerToolPage() {
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ]
       icon: '📍'
       color: 'text-orange-400'
@@ -644,13 +653,11 @@ features: [;
       icon: '⚙️'
       color: 'text-blue-400'
     }
-=======
       ],
       icon: '📍',
       color: 'text-orange-400',
 
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       category: 'Content SEO'
       factors: [
@@ -838,7 +845,26 @@ features: [;
 <<<<<<< HEAD
       });
       setIsAnalyzing(false);
+<<<<<<< HEAD
 
+=======
+    }, 4000);  };        recommendations: [
+          'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
+        ];
+        keywords: [
+          { keyword: 'website optimization', volume: '12K', difficulty: 'medium' }
+          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' }
+          { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
+        ]
+      });
+      setIsAnalyzing(false)
+    }, 4000)
+  }
+    }, 4000);  };
+
+  };
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
@@ -1262,11 +1288,14 @@ disabled={isAnalyzing || !url && url.trim()}>;
             </Button>;
             <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               href='/contact'
               variant='outline'
               size='lg'
@@ -1620,15 +1649,9 @@ href="/contact"
                     </h3>
                     <p className="text-gray-400 leading-relaxed">
                       {feature.description}
-=======
 
                       {feature.description}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                 </div>
@@ -1637,28 +1660,22 @@ href="/contact"
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Comprehensive SEO Analysis
 <<<<<<< HEAD
 
@@ -1707,6 +1724,7 @@ href="/contact"
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
 =======
 
@@ -1805,6 +1823,9 @@ href="/contact"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Demo Analysis Results */}
       {analysis_results && (
         <section className='section - padding bg - gradient - cursor - accent'>;
@@ -2025,15 +2046,32 @@ href="/contact"
                         <div className='text-xs text-gray-500 mt-1'>
                           Priority: {issue.priority}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                        </div>                      </div>                  {analysisResults.issues.map((issue, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                      ) : issue.type === 'warning' ? (
+                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
+                      ) : (
+                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                      )}
+                      <div>
+                        <span className="text-gray-300">{issue.message}</span>
+                        <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
+                      </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         </div>                      </div>
 
                       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2068,6 +2106,8 @@ href="/contact"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </div>
                   ))}
 <<<<<<< HEAD
@@ -2098,15 +2138,16 @@ href="/contact"
                 </div>
               </Card>
             </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Recommendations and Keywords */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <Card className="border-gradient-green">
@@ -2191,6 +2232,7 @@ href="/contact"
                           'bg-red-500/20 text-red-400'
                         }`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                         </span>
                       </div>
@@ -2229,6 +2271,11 @@ href="/contact"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+                          {keyword.difficulty}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         </span>
                       </div>
                     </div>
@@ -2449,24 +2496,22 @@ href="/contact"
           </div>
         </section>
       )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Pricing Section */}
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -2573,6 +2618,7 @@ href="/contact"
                 )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -2587,9 +2633,9 @@ href="/contact"
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {plan.name}
@@ -2692,17 +2738,11 @@ href="/contact"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       {feature}
-=======
-<<<<<<< HEAD
 
                       {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                       {feature}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -2719,7 +2759,6 @@ href="/contact"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
-<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2728,6 +2767,7 @@ href="/contact"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </Button>
 =======
@@ -2792,34 +2832,25 @@ href="/contact"
             >
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>
 
                 </Button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Card>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2840,6 +2871,10 @@ href="/contact"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+            Ready to Improve Your SEO Rankings?
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our SEO analyzer to improve their
@@ -2887,6 +2922,7 @@ href="/contact"
         </div>
       </section>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -2995,18 +3031,18 @@ className='border-white text-white hover:bg-white hover:text-green-600 shadow-2x
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

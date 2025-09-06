@@ -48,7 +48,12 @@ function ensureStorage() {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  ensureStorage()
+  ensureStorage(),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes.map(e => ({
     id: e.id
@@ -146,6 +151,7 @@ function handler() {
 =======
 =======
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 function ensureStorage() {
@@ -201,17 +207,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ensureStorage();
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
 }
-=======
   ensureStorage();
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/EmptyResumeState.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -13,17 +14,28 @@ import { Button } from "@/components/ui/button",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {FilePlus} from "lucide-react";
+import {EmptyResumeProps} from "./types";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { FilePlus } from "lucide-react";
 import { EmptyResumeProps } from "./types";
 
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FilePlus } from "lucide-react";
 import { EmptyResumeProps } from "./types";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { FilePlus } from "lucide-react",
+import { EmptyResumeProps } from "./types",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -41,6 +53,7 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
       </CardContent>
     </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -57,6 +70,12 @@ import {EmptyResumeProps} from "./types";
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  );
+}
+
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 },
 import { Card, CardContent } from "@/components/ui/card",;
@@ -121,6 +140,7 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any {
 =======
 
 export default EmptyResumeState;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -151,3 +171,5 @@ export default EmptyResumeState;
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

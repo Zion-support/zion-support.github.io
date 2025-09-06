@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/routes/ContentRoutes.tsx
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Fragment} from "react";
 import {Route, Routes, Navigate} from "react-router-dom";
 import Home from "@/pages/Home";
@@ -20,9 +23,12 @@ import HelpCenterPage from "@/pages/HelpCenterPage";
 import AccountSettings from "@/pages/AccountSettings";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Fragment } from "react",
 import { Route, Routes, Navigate } from "react-router-dom",
 import Home from "@/pages/Home",
@@ -35,6 +41,7 @@ import SearchPage from "@/pages/SearchPage",
 import { SitemapPage } from "@/components/SitemapPage",
 import HelpCenterPage from "@/pages/HelpCenterPage",
 import AccountSettings from "@/pages/AccountSettings",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -105,17 +112,13 @@ const ContentRoutes = () => {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 
-=======
 import ProjectRoom from "@/pages/ProjectRoom",
 import VideoCall from "@/pages/VideoCall",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const ContentRoutes = () => {
   return (
     <Routes>
@@ -145,19 +148,20 @@ const ContentRoutes = () => {
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
   )
-<<<<<<< HEAD
 }
 export default ContentRoutes;
 
-=======
 },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default ContentRoutes,
 import { Fragment } from "react",;
 import { Route, Routes, Navigate } from "react-router-dom",;
@@ -250,6 +254,7 @@ const ContentRoutes = () =>: any {
     </Routes>;
   );
 },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default ContentRoutes;
@@ -367,3 +372,6 @@ export default ContentRoutes;
 export default ContentRoutes;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default ContentRoutes;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

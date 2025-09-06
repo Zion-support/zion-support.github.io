@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -13,11 +14,11 @@ export type UseAutoTranslateResult = {;
 =======
 <<<<<<< HEAD:hooks/useAutoTranslate.ts
 <<<<<<< HEAD
+=======
+:hooks/useAutoTranslate.ts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useMemo, useState  } from 'react';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD:backup-problematic-files/hooks/useAutoTranslate.ts
+:backup-problematic-files/hooks/useAutoTranslate.ts
 import { useEffect, useMemo, useState } from 'react',;
 import { translateTextViaAI } from '../utils/translation',;
 export type UseAutoTranslateResult = {;
@@ -56,45 +57,51 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
   }, [key, debounceMs]);
   return { translations, loading, error }
 }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useAutoTranslate.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/hooks/useAutoTranslate.ts
 import { useEffect, useMemo, useState } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useAutoTranslate.ts
+:backup-problematic-files/hooks/useAutoTranslate.ts
 import { translateTextViaAI } from '../utils/translation';
-<<<<<<< HEAD
 
 export type UseAutoTranslateResult = {
-=======
 export type UseAutoTranslateResult = {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   translations: Record<string, string>;
   loading: boolean;
   error?: string;
 }
 export function useAutoTranslate(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   text: string
   targets: string[]
   debounceMs = 600
 ): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   text: string,
   targets: string[],
   debounceMs = 600;
 ): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
@@ -128,17 +135,25 @@ export function useAutoTranslate(
 
   return { translations, loading, error }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
 =======
 <<<<<<< HEAD:hooks/useAutoTranslate.ts
+=======
+:hooks/useAutoTranslate.ts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }, [key, debounceMs]);
   return { translations, loading, error }
 }
-=======
 }
+<<<<<<< HEAD
 >>>>>>> main:hooks/useAutoTranslate.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useAutoTranslate.ts
+=======
+main:hooks/useAutoTranslate.ts
+:backup-problematic-files/hooks/useAutoTranslate.ts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

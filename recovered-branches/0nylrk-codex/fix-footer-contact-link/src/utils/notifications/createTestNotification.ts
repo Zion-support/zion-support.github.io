@@ -25,14 +25,10 @@ const randomType = types[Math && Math.floor(Math && Math.random() * types && typ
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notifications/createTestNotification.ts
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { NotificationType  } from './types';
 import { createNotification } from './createNotification';
-=======
 import {NotificationType} from './types';
 import {createNotification} from './createNotification';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /**
  * Demo function to create test notifications for the current user
  */
@@ -112,12 +108,14 @@ function createTestNotification() {
 
     actionText: actions[randomType].text
   })
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { NotificationType } from './types',;
 import { createNotification } from './createNotification',;
 /**;
@@ -149,6 +147,7 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -230,3 +229,7 @@ export async function createTestNotification(userId:string) {;
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

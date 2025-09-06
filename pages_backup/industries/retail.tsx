@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -17,6 +18,8 @@ import { motion } from 'framer-motion';
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -47,12 +50,11 @@ import { ShoppingCart,
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/fix-syntax-push-and-merge-to-main-40de
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -63,10 +65,8 @@ import { motion } from 'framer-motion';
 import { ShoppingCart, 
   Brain, 
   BarChart3, 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 import {
   ShoppingCart,
   Brain,
@@ -81,8 +81,13 @@ import {
   Globe,;
   Database;
 } from 'lucide-react';
+<<<<<<< HEAD
 
 
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../../components/Layout';';
 const services = [;
   {}
@@ -94,12 +99,18 @@ const services = [;
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -228,14 +239,20 @@ const services = [
       'Social commerce integration'';
     ];
   }
+<<<<<<< HEAD
 
 
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;];
 const benefits = [;
   {}
     title: 'Increased Sales,',
     description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',
     icon: ShoppingCart;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -250,6 +267,11 @@ const benefits = [;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 const benefits = [
   {
@@ -290,8 +312,13 @@ const benefits = [
     icon: Database;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
+<<<<<<< HEAD
 
 
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;];
 export default function RetailPage() {
   return (;
@@ -354,11 +381,17 @@ export default function RetailPage() {
             </motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 <<<<<<< HEAD
 
@@ -428,14 +461,8 @@ export default function RetailPage() {
 
 =======
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -456,12 +483,18 @@ export default function RetailPage() {
                 <motion.div}),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -479,8 +512,13 @@ export default function RetailPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 
 
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">";
@@ -492,6 +530,7 @@ export default function RetailPage() {
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -506,6 +545,11 @@ export default function RetailPage() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">
@@ -524,6 +568,7 @@ export default function RetailPage() {
                 </motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -538,10 +583,20 @@ export default function RetailPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
             </div>,
           </div>;
         </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            </div>,
+          </div>;
+        </section>;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            </div>,
+          </div>;
+        </section>;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
@@ -559,14 +614,8 @@ export default function RetailPage() {
 
 =======
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -587,12 +636,18 @@ export default function RetailPage() {
                 <motion.div}),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -620,6 +675,7 @@ export default function RetailPage() {
                 </motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -634,10 +690,20 @@ export default function RetailPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
             </div>,
           </div>;
         </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            </div>,
+          </div>;
+        </section>;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            </div>,
+          </div>;
+        </section>;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
@@ -654,14 +720,8 @@ export default function RetailPage() {
 
 =======
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Retail?;
@@ -694,6 +754,7 @@ export default function RetailPage() {
       </div>;
     </Layout>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -707,6 +768,11 @@ export default function RetailPage() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Retail?

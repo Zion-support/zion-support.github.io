@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/offline-shims.d.ts
 
 <<<<<<< HEAD
@@ -6,22 +7,27 @@
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 declare module 'react' {
   const React: any;
-<<<<<<< HEAD
 
   export default React
   // Basic overloads for useRef to handle common cases
   export function useRef<T>(initialValue: T): { current: T }
   export function useRef<T>(initialValue: T | null): { current: T | null }
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   export default React,
   // Basic overloads for useRef to handle common cases;
   export function useRef<T>(initialValue: T): { current: T };
   export function useRef<T>(initialValue: T | null): { current: T | null };
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -29,6 +35,8 @@ declare module 'react' {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S)
@@ -112,14 +120,15 @@ declare module 'react' {
   export const StrictMode: any;
   export const cloneElement: any;
   export type ReactNode = any;
-<<<<<<< HEAD
   export type ReactElement = any
   export type ComponentType<P = {}> = (props: P) => any
-=======
   export type ReactElement = any,
   export type ComponentType<P = {}> = (props: P) => any,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   export type FC<P = {}> = (props: P) => any;
   export type ComponentProps<T = any> = any;
   export type ComponentPropsWithoutRef<T = any> = any;
@@ -138,6 +147,7 @@ declare module 'react' {
   export type LegacyRef<T = any> = any;
   export type ElementRef<T = any> = any
   export type CSSProperties = Record<string, string | number | undefined>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -189,6 +199,8 @@ declare module 'react / jsx - runtime' {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 declare module 'react-dom' {
@@ -201,6 +213,7 @@ declare module 'react/jsx-runtime' {;
   export const Fragment: any;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -208,6 +221,8 @@ declare module 'react/jsx-runtime' {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 declare module 'react' {;
   const React: any,;
   export default React,;
@@ -291,41 +306,50 @@ declare module 'react' {;
   export type ElementRef<T = any> = any,;
   export type CSSProperties = Record<string string | number | undefined>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/offline-shims.d.ts
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 declare module 'react-dom' {
   export * from 'react-dom/index'
 }
-<<<<<<< HEAD
 declare module 'react/jsx-runtime' {
   export const jsx: any;
   export const jsxs: any
 
   export const Fragment: any
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 declare module 'react-dom' {;
   export * from 'react-dom/index';
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 declare module 'react/jsx-runtime' {;
   export const jsx: any,;
   export const jsxs: any;
   export const Fragment: any;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -352,9 +376,13 @@ declare module 'react/jsx-runtime' {;
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

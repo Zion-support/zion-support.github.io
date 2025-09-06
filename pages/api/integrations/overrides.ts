@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState, writeState } from '[^']*';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -31,6 +36,7 @@ if (req && req.method === "GET") {
       jobId?: string;
       disableCrmSync?: boolean;
       disableAtsSync?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     };
@@ -144,6 +150,34 @@ if (state.overrides[idx] = entry) {
 =======
 
 =======
+=======
+    }
+    if (!jobId) return res.status(400).json({ error: "jobId required" });
+    const updated = writeState((state) => {
+      const idx = state.overrides.findIndex((o) => o.jobId === jobId);
+      const entry = {
+        jobId
+        disableCrmSync: !!disableCrmSync
+        disableAtsSync: !!disableAtsSync
+      }
+      if (idx >= 0) state.overrides[idx] = entry;
+      else state.overrides.push(entry);
+    });
+    return res.status(200).json({
+      ok: true
+      override: updated.overrides.find((o) => o.jobId === jobId)
+    });
+
+  }
+  return res.status(405).json({ error: "Method not allowed" });
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState } from "../../../lib/integrations/fileStore";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "GET") {;
+    const state = readState();
+    return res.status(200).json({ overrides: state.overrides });
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -198,13 +232,17 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -217,3 +255,9 @@ export default function handler(req, res) {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+return res.status(405).json({ error: "Method not allowed" });
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

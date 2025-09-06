@@ -21,6 +21,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -28,6 +29,10 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import MainLayout from '../components/layout/MainLayout';
 const jobOpenings = [{;
     "id": 1,;
@@ -59,18 +64,25 @@ const jobOpenings = [
       "5+ years experience in AI/ML development",
       "Proficiency in Python, TensorFlow, PyTorch",
       "Experience with cloud platforms (AWS, Azure, GCP)",
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Strong problem-solving and communication skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -78,6 +90,10 @@ const jobOpenings = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     "id": 2,
     "title": "Full-Stack Developer"
     "department": "Micro SaaS"
@@ -102,6 +118,7 @@ const jobOpenings = [
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -112,11 +129,17 @@ const jobOpenings = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Knowledge of cloud deployment and DevOps"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -125,6 +148,10 @@ const jobOpenings = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     "id": 3,
     "title": "Cloud Solutions Architect"
     "department": "IT Services"
@@ -149,6 +176,7 @@ const jobOpenings = [
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -159,11 +187,17 @@ const jobOpenings = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Strong understanding of security best practices"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -172,6 +206,10 @@ const jobOpenings = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     "id": 4,
     "title": "Cybersecurity Specialist"
     "department": "Security"
@@ -196,6 +234,7 @@ const jobOpenings = [
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -206,11 +245,17 @@ const jobOpenings = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -219,6 +264,10 @@ const jobOpenings = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     "id": 5,
     "title": "DevOps Engineer"
     "department": "Engineering"
@@ -243,6 +292,7 @@ const jobOpenings = [
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -253,11 +303,17 @@ const jobOpenings = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Knowledge of monitoring and logging tools"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -266,6 +322,10 @@ const jobOpenings = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     "id": 6,
     "title": "UX/UI Designer"
     "department": "Design"
@@ -290,6 +350,7 @@ const jobOpenings = [
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -300,11 +361,17 @@ const jobOpenings = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Strong portfolio demonstrating design skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -313,6 +380,8 @@ const jobOpenings = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const benefits = [{
     "title": "Competitive Compensation"
     "description": "We offer competitive salaries and performance-based bonuses"
@@ -370,6 +439,7 @@ const values = [
   "Work-life balance",
   "Diversity and inclusion",
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -593,6 +663,11 @@ const values = [;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const benefits = [{
     "title": "Competitive Compensation"
     "description": "We offer competitive salaries and performance-based bonuses"
@@ -661,6 +736,7 @@ const benefits = [;
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -701,6 +777,25 @@ export default function TalentPage() {;
     <MainLayout,
     title="Careers - Zion Tech Group"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+const values = [
+  "Innovation and creativity",
+  "Collaboration and teamwork",
+  "Continuous learning",
+  "Work-life balance",
+  "Diversity and inclusion",
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+  "Client success focus"
+];
+export default function TalentPage() {
+  return (
+ursor/fix-syntax-push-and-merge-to-main-40de
+    <MainLayout,
+    title="Careers - Zion Tech Group"
+  
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Join Our Team - Zion Tech Group</title>
@@ -739,6 +834,7 @@ export default function TalentPage() {;
     <Layout 
       title="Careers - Zion Tech Group"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -749,6 +845,11 @@ export default function TalentPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
       <div className="min-h-screen bg-gray-50">;
@@ -757,7 +858,12 @@ export default function TalentPage() {;
 <<<<<<< HEAD
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
 
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div,
 =======
 
@@ -781,12 +887,18 @@ export default function TalentPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -810,6 +922,7 @@ export default function TalentPage() {;
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -817,6 +930,10 @@ export default function TalentPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div,
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
@@ -854,12 +971,18 @@ export default function TalentPage() {;
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
@@ -922,7 +1045,12 @@ export default function TalentPage() {;
 <<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
 
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div,
 =======
 
@@ -950,12 +1078,18 @@ export default function TalentPage() {;
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -1041,7 +1175,12 @@ export default function TalentPage() {;
 <<<<<<< HEAD
         <section id="openings" className="py-20 bg-white">
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
 
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div,
 =======
 
@@ -1069,12 +1208,18 @@ export default function TalentPage() {;
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
@@ -1200,7 +1345,12 @@ export default function TalentPage() {;
 <<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
+<<<<<<< HEAD
 
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div,
 =======
 
@@ -1226,12 +1376,18 @@ export default function TalentPage() {;
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See the Right Role?

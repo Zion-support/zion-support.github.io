@@ -28,6 +28,7 @@ type AdminAction =;
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
@@ -57,6 +58,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
+  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
@@ -90,6 +98,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 const key = req && req.headers['x-admin-key'];
   if (key !== ADMIN_KEY) {
@@ -165,8 +174,9 @@ const key = req && req.headers['x-admin-key'];
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const key = req.headers['x-admin-key'];
   if (key !== ADMIN_KEY) {
     return res.status(401).json({ error: 'Unauthorized' });
@@ -212,6 +222,7 @@ const key = req && req.headers['x-admin-key'];
     data[section] = arr as any;
     writeOrgData(data);
     return res.status(200).json({ ok: true });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -403,17 +414,19 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }
   return res.status(400).json({ error: 'Unknown action' });
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ApplicationsTracker.tsx
 
 <<<<<<< HEAD
@@ -9,6 +10,8 @@ import { ApplicationStatus } from "@/types/jobs";
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -16,14 +19,18 @@ import { ApplicationCard } from "./ApplicationCard",
 import { LoadingState } from "./LoadingState",
 import { EmptyState } from "./EmptyState",
 import { ErrorState } from "./ErrorState",
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { ApplicationCard } from "./ApplicationCard";
 import { LoadingState } from "./LoadingState";
 import { EmptyState } from "./EmptyState";
 import { ErrorState } from "./ErrorState";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { Button } from "@/components/ui/button";
@@ -45,13 +52,12 @@ export function ApplicationsTracker() {
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
-<<<<<<< HEAD
 export function ApplicationsTracker() {;
-=======
 export function ApplicationsTracker() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { applications, isLoading, error } = useJobApplications();
 
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(
@@ -73,10 +79,13 @@ export function ApplicationsTracker() {
   
   if (isLoading) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return <LoadingState />;
   }
   if (error) {
@@ -91,8 +100,11 @@ export function ApplicationsTracker() {
       ? applications
       : applications.filter((app) => app.status === statusFilter);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return <LoadingState />
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -142,6 +154,7 @@ const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
     ? applications
     : applications.filter(app => app.status === statusFilter),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -208,6 +221,8 @@ const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap gap-2">
@@ -263,6 +278,7 @@ const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
         </Button>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           variant={statusFilter === "rejected" ? "default" : "outline"}
@@ -284,11 +300,15 @@ const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -552,26 +572,16 @@ if (isLoading) {
 =======
 <<<<<<< HEAD
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">No applications with this status.</p>
         </div>
       )}
-<<<<<<< HEAD
     </div>
-=======
     </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

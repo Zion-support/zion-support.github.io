@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,11 +19,11 @@ function TermsPage() {
     <div className="min - h-screen bg - white">;
 =======
 <<<<<<< HEAD
-export default function TermsPage() {return (;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function TermsPage() {return (;
 export default function TermsPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen bg-white">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}

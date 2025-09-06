@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,15 @@ const React from";react" import { Link } from";";react-router-dom" import { Zap 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+:src.disabled/components/header/Logo.jsx
+import React from\';react\' import { Link } from\';\';react-router-dom\' import { Zap } from\';\';lucide-react\' \"export\": function Logo({ customLogo,customColor,className = \'';\'}) { \"if\": (customLogo) { return ( <Link to=\'/\' className={`flex-shrink-0 group ${className}`}>\' <img\'' src={customLogo} \''\'; alt=\'Logo\''\'; className=\'h-\"8\": w-auto\' / / / / / /> </Link>\' )\'}\'; const logoColor = customColor || \'#3b82f6\''\';`
+const React from";react" import { Link } from";";react-router-dom" import { Zap } from";";lucide-react" export: function Logo({ customLogo,customColor,className = "";"}) { if: (customLogo) { return ( <Link to="/" className={`flex-shrink-0 group ${className}`}>" <img"" src={customLogo} """; alt="Logo"""; className="h-8: w-auto" / / / / / /> </Link>" )"}"; const logoColor = customColor | "#3b82f6""";`'"`'"`
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from\';react\' import { Link } from\';\';react-router-dom\' import { Zap } from\';\';lucide-react\' \"export\": function Logo({ customLogo,customColor,className = \'';\'}) { \"if\": (customLogo) { return ( <Link to=\'/\' className={`flex-shrink-0 group ${className}`}>\' <img\'' src={customLogo} \''\'; alt=\'Logo\''\'; className=\'h-\"8\": w-auto\' / / / / / /> </Link>\' )\'}\'; const logoColor = customColor || \'#3b82f6\''\';`
+const React from";react" import { Link } from";";react-router-dom" import { Zap } from";";lucide-react" export: function Logo({ customLogo,customColor,className = "";"}) { if: (customLogo) { return ( <Link to="/" className={`flex-shrink-0 group ${className}`}>" <img"" src={customLogo} """; alt="Logo"""; className="h-8: w-auto" / / / / / /> </Link>" )"}"; const logoColor = customColor | "#3b82f6""";`'"`'"`
+:temp_exclude/src.disabled/components/header/Logo.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React from';react' import { Link } from';';react-router-dom' import { Zap } from';';lucide-react' "export": function Logo({ customLogo,customColor,className = '';'}) { "if": (customLogo) { return ( <Link to='/' className={`flex-shrink-0 group ${className}`}>' <img'' src={customLogo} '''; alt='Logo'''; className='h-"8": w-auto' / / / / / /> </Link>' )'}'; const logoColor = customColor || '#3b82f6''';`
 =======
 =======

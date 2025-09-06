@@ -35,6 +35,7 @@ import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -42,6 +43,8 @@ import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Card
   CardContent
@@ -69,6 +72,7 @@ export function PartnerDashboard() {
     pendingRevenue: 200.0
   }
 
+<<<<<<< HEAD
 import {
   Card,
   CardContent,
@@ -87,6 +91,15 @@ import {
 } from "lucide-react";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -94,6 +107,7 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
+<<<<<<< HEAD
 <<<<<<< HEAD
     totalRevenue: 850.00,
 
@@ -104,6 +118,14 @@ pendingRevenue: 200.00;
   };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    totalRevenue: 850.00,
+    pendingRevenue: 200.00;
+  };
+    pendingRevenue: 200.00
+  },
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -208,11 +230,17 @@ pendingRevenue: 200.00;
       </Card>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
   return (
 =======
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerDashboard.tsx
 
+=======
+  );
+}
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",;
@@ -481,6 +509,7 @@ function PartnerDashboard() {
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerDashboard.tsx
     </div>;
   );
+<<<<<<< HEAD
 
 }
 ;
@@ -532,3 +561,7 @@ return (<div className="space-y-6" > {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

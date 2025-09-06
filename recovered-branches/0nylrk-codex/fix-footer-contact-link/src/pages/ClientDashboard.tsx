@@ -27,9 +27,12 @@ import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingIntervie
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -47,6 +50,7 @@ import {ClientOnboardingSteps} from "@/components/onboarding/ClientOnboardingSte
 import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
 import {useIsMobile} from "@/hooks/use-mobile";
+<<<<<<< HEAD
 <<<<<<< HEAD
 function ClientDashboardContent() {;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ClientDashboard.tsx
@@ -82,6 +86,8 @@ function ClientDashboardContent() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -98,7 +104,6 @@ import { useJobs } from "@/hooks/useJobs",
 import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-<<<<<<< HEAD
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
@@ -107,13 +112,15 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
-=======
 import { useIsMobile } from "@/hooks/use-mobile",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -123,18 +130,22 @@ function ClientDashboardContent() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
       setSelectedJobId(jobs[0].id),
       setSelectedJobTitle(jobs[0].title)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -155,20 +166,21 @@ function ClientDashboardContent() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }, [jobs, selectedJobId]);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }, [jobs, selectedJobId]);
   }, [jobs, selectedJobId]),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
-<<<<<<< HEAD
   }
-=======
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <>
@@ -230,6 +242,7 @@ function ClientDashboardContent() {
           <div>
             <div className="sticky top-4 space-y-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -240,6 +253,8 @@ function ClientDashboardContent() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -490,11 +505,6 @@ function ClientDashboardContent() {;
 =======
           <div>;
             <div className="sticky top-4 space-y-6">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Active Projects Card */}
               <ActiveProjectsCard />
               {/* Upcoming Interviews Card */}
@@ -707,7 +717,6 @@ function ClientDashboard() {
 }
 =======
 }
-<<<<<<< HEAD
 export default function ClientDashboard() {
   return (
     <ProtectedRoute>
@@ -716,8 +725,11 @@ export default function ClientDashboard() {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export default function ClientDashboard() {;
   return (;
@@ -773,8 +785,9 @@ Client Dashboard | Zion AI Marketplace"description=" Manage your jobs and talent
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

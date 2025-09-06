@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -91,6 +92,8 @@ return (
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react';
 import Head from 'next/head';
@@ -105,22 +108,15 @@ export default function CybersecurityPage() {
     { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' }
     { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }]
 
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
 import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CybersecurityPage() {
   const features = [
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
@@ -129,8 +125,11 @@ export default function CybersecurityPage() {
     { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
     { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
     { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout>
       <Head>
@@ -149,6 +148,7 @@ export default function CybersecurityPage() {
             <div className="mt-2 text-sm text-gray-400">New: VAPT and MDM offerings below.</div>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -161,17 +161,21 @@ export default function CybersecurityPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <a href="/contact" className="px-8 py-4">Security Assessment</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
-=======
               <a href="/contact" className="px-8 py-4">Security Assessment</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
           </header>
           <section>
@@ -208,6 +212,7 @@ export default function CybersecurityPage() {
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -218,12 +223,17 @@ export default function CybersecurityPage() {
               ))}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                </a>
+              ))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -236,6 +246,8 @@ export default function CybersecurityPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40 transition-colors">
                 <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>
                 <p className="text-gray-300 text-sm">Learn more</p>
@@ -257,6 +269,7 @@ export default function CybersecurityPage() {
       </div>
     </Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   )
@@ -275,10 +288,10 @@ export default function CybersecurityPage(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 }
@@ -451,11 +464,12 @@ export default function CybersecurityPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

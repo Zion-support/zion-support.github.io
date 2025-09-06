@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/TalentDirectoryHeader.tsx
 
 =======
@@ -16,6 +17,10 @@ import React from "react",
 ========
 import React from './react';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/TalentDirectoryHeader.tsx
+=======
+import React from "react";
+import React from "react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TalentDirectoryHeaderProps {
   title: string;
   description: string
@@ -42,6 +47,7 @@ export function TalentDirectoryHeader({
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
           {title}
         </h1>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react",;
@@ -68,11 +74,23 @@ interface TalentDirectoryHeaderProps {;
 ;
 export function TalentDirectoryHeader({ title, description } TalentDirectoryHeaderProps) {;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <p className="text-zion-slate-light max-w-2xl">{description}</p>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+        <p className="text-zion-slate-light max-w-2xl">
+        <p className="text-zion-slate-light max-w-2xl">
+          {description}
+        </p>
+      </div>
+    </div>
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 interface TalentDirectoryHeaderProps {;
   title: string;
@@ -102,6 +120,7 @@ export function TalentDirectoryHeader({ title, description }: TalentDirectoryHea
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -162,3 +181,7 @@ description: string
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/TalentDirectoryHeader.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

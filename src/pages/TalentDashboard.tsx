@@ -1,11 +1,13 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -38,8 +40,6 @@ import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
 import { MyApplications } from '@/components/jobs/MyApplications'
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
-<<<<<<< HEAD
-=======
 function TalentDashboardContent() {
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState('job-matches')
@@ -49,15 +49,19 @@ function TalentDashboardContent() {
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
     onboardingStatus.matchReceived
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 <<<<<<< HEAD
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
   const onboardingStatus = null;
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -101,6 +105,8 @@ function TalentDashboardContent() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -131,6 +137,7 @@ function TalentDashboardContent() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 >>>>>>>   return (
@@ -140,6 +147,8 @@ function TalentDashboardContent() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
@@ -171,6 +180,7 @@ function TalentDashboardContent() {
         <ProjectOfferBanner />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div>
 =======
@@ -178,15 +188,11 @@ function TalentDashboardContent() {
 >>>>>>>           <div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Card className="mb-8">
@@ -195,6 +201,7 @@ function TalentDashboardContent() {
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -206,6 +213,8 @@ function TalentDashboardContent() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <img
                           src={user.avatarUrl}
                           alt={user.displayName |'User'}
@@ -214,6 +223,7 @@ function TalentDashboardContent() {
                       ) : (
                         <div className='flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase'>
                           {user?.displayName?.charAt(0) |'U'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -240,26 +250,31 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
                           {user?.displayName?.charAt(0) || "U"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 >>>>>>>                         </div>
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       )}
                     </Avatar>
                     <div>
-<<<<<<< HEAD
                       <CardTitle>{user?.displayName |'User'}</CardTitle>
                       <CardDescription>
                         {user?.headline |'AI Professional'}
                       </CardDescription>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -268,6 +283,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                      <CardTitle>{user?.displayName || "User"}</CardTitle>
+                      <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Online</Badge>
@@ -289,37 +308,47 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='mt-4'>
                   <Button className='w-full' asChild>
                     <Link href='/messages'>
                       <MessageSquare className='h-4 w-4 mr-2' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                       Messages
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 
                 <div className="mt-4">
                   <Button className="w-full" asChild>
                     <Link href="/messages">
                       <MessageSquare className="h-4 w-4 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       Messages
 >>>>>>>                     </Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -329,12 +358,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-            
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            
             {/* New Onboarding Progress Tracker */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <TalentOnboardingSteps />
@@ -344,10 +370,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
             {/* Upcoming Interviews Card */}
             <div className='mt-8'>
@@ -355,11 +384,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
             <Card className='mt-8'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -618,11 +650,6 @@ function TalentDashboardContent() {
             </div>
             
             <Card className="mt-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
               </CardHeader>
@@ -651,15 +678,19 @@ function TalentDashboardContent() {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='lg:col-span-2'>
             <Tabs defaultValue='job-matches' onValueChange={setActiveTab}>
               <TabsList className='mb-6'>
                 <TabsTrigger value='job-matches' className='flex items-center'>
                   <BriefcaseIcon className='h-4 w-4 mr-2' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   AI Job Matches
 ursor/fix-website-loading-errors-and-merge-6662
@@ -675,28 +706,29 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="job-matches" className="flex items-center">
                   <BriefcaseIcon className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   AI Job Matches
                 </TabsTrigger>
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <TabsContent value='job-matches' className='mt-0'>
                 <SuggestedJobs />
               </TabsContent>
               <TabsContent value='applications' className='mt-0'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 <MyApplications />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -714,17 +746,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                     </Link>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <TabsContent value="job-matches" className="mt-0">
                 <SuggestedJobs />
               </TabsContent>
               
               <TabsContent value="applications" className="mt-0">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <MyApplications />
                 <div className="mt-4 flex justify-center">
                   <Button variant="outline" asChild>
@@ -737,14 +766,18 @@ ursor/fix-website-loading-errors-and-merge-6662
               </TabsContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <TabsContent value='saved' className='mt-0'>
                 <Card className='bg-muted/30'>
                   <CardContent className='pt-6 text-center'>
                     <p className='text-muted-foreground'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                       You haven't saved any jobs yet.
 ursor/fix-website-loading-errors-and-merge-6662
@@ -755,16 +788,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Link href='/jobs'>Browse Jobs</Link>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <TabsContent value="saved" className="mt-0">
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
                     <p className="text-muted-foreground">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       You haven't saved any jobs yet.
                     </p>
                     <Button className="mt-4" asChild>
@@ -782,6 +812,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -790,10 +821,16 @@ export default function TalentDashboard() {
     <ProtectedRoute>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default function TalentDashboard() {
+  return (
+    <ProtectedRoute>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <TalentDashboardContent />
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
@@ -801,12 +838,12 @@ export default function TalentDashboard() {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <TalentDashboardContent />;
     </ProtectedRoute>;
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 }
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -818,6 +855,7 @@ export default function TalentDashboard() {;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -835,3 +873,5 @@ export default function TalentDashboard() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

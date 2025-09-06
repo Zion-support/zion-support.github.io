@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/referrals/ReferralTable.tsx
 
 <<<<<<< HEAD
@@ -15,26 +16,27 @@ import { Referral, ReferralStatus } from "@/types/referrals",
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Referral, ReferralStatus} from "@/types/referrals";
 import {Badge} from "@/components/ui/badge";
 import {formatDate} from "@/utils/referralUtils";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Referral, ReferralStatus } from "@/types/referrals",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { formatDate } from "@/utils/referralUtils";
-=======
 import { Badge } from "@/components/ui/badge",
 import { formatDate } from "@/utils/referralUtils",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReferralTableProps {
 
   referrals: Referral[]
@@ -45,6 +47,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
   // Helper function to render status badges
 
   const renderStatusBadge = (status: ReferralStatus) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -80,12 +83,12 @@ export function ReferralTable(): any ({ referrals, isLoading }: ReferralTablePro
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     switch (status) {;
       case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>;
-=======
     switch (status) {
       case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       case "completed":
         return <Badge variant="outline" className="bg-green-50 text-green-800 border-green-200">Completed</Badge>,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -136,12 +139,13 @@ export function ReferralTable({ referrals, isLoading } ReferralTableProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
     }
-<<<<<<< HEAD
   }
-=======
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   if (isLoading) {
     return (
@@ -180,6 +184,7 @@ export function ReferralTable({ referrals, isLoading } ReferralTableProps) {;
       </div>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -190,6 +195,8 @@ export function ReferralTable({ referrals, isLoading } ReferralTableProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return (
     <Table>
@@ -210,15 +217,16 @@ export function ReferralTable({ referrals, isLoading } ReferralTableProps) {;
             <TableCell>{referral.email |'-'}</TableCell>
             <TableCell>{renderStatusBadge(referral.status)}</TableCell>
             <TableCell>
-<<<<<<< HEAD
               {referral.referred_user_type
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1)
-=======
               {referral.referred_user_type 
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Referral, ReferralStatus } from "@/types/referrals",;
 import { Badge } from "@/components/ui/badge",;
@@ -517,11 +525,6 @@ isLoading: boolean
 =======
               {referral.referred_user_type;
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 : '-'}
             </TableCell>
             <TableCell>{referral.completed_at ? formatDate(referral.completed_at) : '-'}</TableCell>

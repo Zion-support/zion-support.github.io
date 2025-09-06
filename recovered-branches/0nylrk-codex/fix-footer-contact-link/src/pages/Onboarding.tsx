@@ -32,9 +32,12 @@ import { Steps, Step } from "@/components/ui/steps",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useAuth} from "@/hooks/useAuth";
@@ -58,6 +61,7 @@ export default function Onboarding() {;
   const [currentStep, setCurrentStep] = useState(0);
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Onboarding.tsx
 
@@ -85,6 +89,8 @@ export default function Onboarding() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
@@ -94,7 +100,6 @@ import { Footer } from "@/components/Footer",
 import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection",
 import { ProfileSetup } from "@/components/onboarding/ProfileSetup",
 import { Steps, Step } from "@/components/ui/steps",
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 export default function Onboarding() {
@@ -103,7 +108,6 @@ export default function Onboarding() {
 
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
-=======
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 export default function Onboarding() {
@@ -111,12 +115,7 @@ export default function Onboarding() {
   const [currentStep, setCurrentStep] = useState(0),
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null),
   const navigate = useNavigate(),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Convert our user types to match what's expected in the database
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
@@ -128,17 +127,20 @@ export default function Onboarding() {
       default:
         return "buyer"
     }
-<<<<<<< HEAD
   }
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -146,6 +148,8 @@ export default function Onboarding() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
@@ -160,6 +164,7 @@ export default function Onboarding() {
     }
     // Continue with the onboarding flow for clients
     setCurrentStep(1)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -249,15 +254,14 @@ export default function Onboarding() {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user |!userType) {
       toast({
-<<<<<<< HEAD
         title: "Authentication Error"
         description: "Your session may have expired. Please log in again."
         variant: "destructive"})
@@ -265,8 +269,11 @@ export default function Onboarding() {;
       return
     }
     const dbUserType = mapUserTypeToDatabase(userType);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Authentication Error",
         description: "Your session may have expired. Please log in again.",
         variant: "destructive"}),
@@ -277,12 +284,15 @@ export default function Onboarding() {;
     const dbUserType = mapUserTypeToDatabase(userType),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       await updateProfile({
         id: user.id
@@ -292,6 +302,7 @@ export default function Onboarding() {;
         headline: data.headline
         profileComplete: true
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -303,18 +314,23 @@ export default function Onboarding() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      });
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      });
       }),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Update onboarding milestone
       await supabase.rpc('update_onboarding_milestone', {
         _user_id: user.id
         _milestone: 'profile_completed'
         _status: true
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -326,16 +342,21 @@ export default function Onboarding() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      });
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      });
       }),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: 'Profile completed!'
         description: 'Your profile has been set up successfully.'})
       // Get the appropriate dashboard route based on user type
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -348,10 +369,16 @@ export default function Onboarding() {;
         : "/talent-dashboard";
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      const dashboardRoute = userType === "client"
+        ? "/client-dashboard"
+        : "/talent-dashboard";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const dashboardRoute = userType === "client" 
         ? "/client-dashboard" 
         : "/talent-dashboard",
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -362,6 +389,8 @@ export default function Onboarding() {;
       console.error('Error updating profile:', error);
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Redirect to dashboard
       navigate(dashboardRoute)
     } catch (error) {
@@ -374,6 +403,7 @@ export default function Onboarding() {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -384,16 +414,21 @@ export default function Onboarding() {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const steps = [
     { label: "Select Role", description: "Choose how you'll use the platform" }
     { label: "Create Profile", description: "Tell us about yourself" }]
   if (!user) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -459,11 +494,11 @@ export default function Onboarding() {;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     navigate('/login');
 
-=======
     navigate('/login'),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return null
   }
   return (
@@ -492,11 +527,14 @@ export default function Onboarding() {;
                       ? "current"
                       : "incomplete"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -745,11 +783,6 @@ export default function Onboarding() {;
                       : currentStep === index;
                       ? "current";
                       : "incomplete";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }
                   label={step.label}
                   description={step.description}
@@ -770,6 +803,7 @@ export default function Onboarding() {;
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Onboarding.tsx
 
@@ -798,6 +832,8 @@ export default function Onboarding() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   Back to Role Selection
                 </Button>
@@ -809,12 +845,14 @@ export default function Onboarding() {;
       <Footer />
     </>
   )
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >;
                   Back to Role Selection;
                 </Button>;
@@ -1055,11 +1093,10 @@ return null;
 =======
     </>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+import { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect, useState} from 'react';
 function useCounter(): any (target: number, durationMs: number) {;
 =======
@@ -10,12 +14,15 @@ import { useEffect, useState } from 'react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
+<<<<<<< HEAD
 
 import {useEffect, useState} from 'react';
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {
@@ -69,8 +76,11 @@ export default function InteractiveStats() {;
       const progress = Math.min(1, (ts - start) / durationMs);
       setValue(Math.floor(progress * target));
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (progress < 1) raf = requestAnimationFrame(step);
     }
     raf = requestAnimationFrame(step);
@@ -97,6 +107,7 @@ export default function InteractiveStats() {;
   return value
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function InteractiveStats() {
@@ -112,9 +123,11 @@ export default function InteractiveStats() {;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function InteractiveStats() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function InteractiveStats() {;
 =======
@@ -125,6 +138,10 @@ export default function InteractiveStats() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+export default function InteractiveStats() {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
@@ -213,6 +230,7 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
       <div className="text-3xl font-bold">{value}{suffix}</div>
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
     </div>
+<<<<<<< HEAD
 
 =======
 
@@ -310,14 +328,10 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-=======
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function Stat({
   label
   value
@@ -335,11 +349,10 @@ function Stat({
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -347,3 +360,5 @@ function Stat({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

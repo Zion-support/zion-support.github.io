@@ -1,6 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { writeState } from '[^']*';
+import { getProviderById } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req.method !== "POST")
+import type { NextApiRequest, NextApiResponse } from "next";
+import { writeState } from "../../../lib/integrations/fileStore";
+import { getProviderById } from "../../../lib/integrations/registry";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST");
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return res.status(405).json({ error: "Method not allowed" });
   const { providerId } = req.body as { providerId?: string }
   if (!providerId |!getProviderById(providerId)) {
@@ -95,6 +109,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -115,6 +130,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 res.status (200).json ({ ok: true });
 }
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -156,5 +175,8 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

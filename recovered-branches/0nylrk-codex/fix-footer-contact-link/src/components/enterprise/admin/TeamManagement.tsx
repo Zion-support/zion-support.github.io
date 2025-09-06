@@ -7,9 +7,7 @@
 
 =======
 
-<<<<<<< HEAD
 import React, { useState } from "react";
-<<<<<<< HEAD
 import {
   Table;
   TableBody;
@@ -24,8 +22,11 @@ import {
   DialogFooter;
   DialogHeader;
   DialogTitle;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -38,6 +39,7 @@ export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -45,6 +47,8 @@ export function TeamManagement() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import {
   Table,
@@ -61,6 +65,7 @@ import {
   DialogHeader,
   DialogTitle,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -69,6 +74,8 @@ import {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -76,23 +83,30 @@ import { Label } from "@/components/ui/label",
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false),
   const [newMemberEmail, setNewMemberEmail] = useState(""),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -107,6 +121,9 @@ export function TeamManagement() {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Mock team members data
 
   const teamMembers = [
@@ -150,18 +167,24 @@ export function TeamManagement() {
     toast({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "Invitation sent"
       description: `An invitation has been sent to ${newMemberEmail}`})
     setNewMemberEmail("");
     setIsAddingMember(false)
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -170,12 +193,15 @@ export function TeamManagement() {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleRemoveMember = (memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
@@ -183,6 +209,7 @@ export function TeamManagement() {
       description: "The team member has been removed from your workspace."})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -193,17 +220,22 @@ export function TeamManagement() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent"
       description: `A new invitation has been sent to ${memberEmail}`})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -513,10 +545,10 @@ if ( {) {
 =======
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/TeamManagement.tsx
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="space-y-6">
@@ -633,11 +665,14 @@ if ( {) {
                         size="sm"
                         className="text-destructive hover:text-destructive"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import {;
   Table,;
@@ -985,11 +1020,14 @@ export function TeamManagement() {;
                         size="sm";
                         className="text-destructive hover:text-destructive";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         onClick={() => handleRemoveMember(member.id)}
                       >
                         <Trash className="h-4 w-4" />

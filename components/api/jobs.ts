@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -161,16 +162,16 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 =======
 =======
 <<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const JOBS_FILE = path.join(process.cwd(), 'data', 'jobs', 'jobs.json');
 export default async function handler(
   req: NextApiRequest
@@ -199,18 +200,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ jobs })
   } catch (e) {
     return res.status(500).json({ error: "Failed to load jobs" })
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 };
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
   };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -218,3 +215,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

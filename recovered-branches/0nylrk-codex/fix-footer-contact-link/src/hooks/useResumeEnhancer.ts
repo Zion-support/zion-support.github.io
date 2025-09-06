@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useResumeEnhancer.ts
@@ -11,19 +12,23 @@ export function useResumeEnhancer() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 export function useResumeEnhancer() {
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 
 export function useResumeEnhancer() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async (
@@ -97,8 +102,11 @@ const { data, error } = await supabase && supabase.functions.invoke('resume-enha
 =======
 
     error
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',;
@@ -257,11 +265,6 @@ try {
     enhanceContent;
     isEnhancing;
     error;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

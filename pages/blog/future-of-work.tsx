@@ -1,6 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+import Head from 'next/head',
+import Link from 'next/link';
+
+import React from 'react'
+
+import React from 'react',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function FutureOfWork() {
   return (
     <>
@@ -259,6 +268,7 @@ export default function FutureOfWork() {
     </>
   )
 }
+<<<<<<< HEAD
 
 import React from 'react';
 export default function FutureOfWork(req, res) {
@@ -1037,10 +1047,10 @@ export default function FutureOfWork() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import Link from 'next/link';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 export default function FutureOfWork(req, res) {
   try {
@@ -1305,9 +1315,12 @@ export default function FutureOfWork(req, res) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

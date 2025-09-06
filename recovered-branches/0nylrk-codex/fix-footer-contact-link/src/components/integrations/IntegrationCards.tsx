@@ -17,14 +17,18 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {ArrowRight, Check, ExternalLink} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface IntegrationCardProps {;
   title: string,;
@@ -52,10 +56,11 @@ export function IntegrationCard(): any ({;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink } from "lucide-react";
 interface IntegrationCardProps {
@@ -66,21 +71,24 @@ interface IntegrationCardProps {
 
   status?: "connected" | "disconnected" | "pending";
   href?: string;
-=======
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight, Check, ExternalLink } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface IntegrationCardProps {
   title: string,
   description: string,
   icon: React.ReactNode,
   status?: "connected" | "disconnected" | "pending",
   href?: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   onConnect?: () => void
@@ -96,38 +104,36 @@ export function IntegrationCard({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onConnect?: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function IntegrationCard({;
   title;
   description;
   icon;
   status = "disconnected";
   href;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function IntegrationCard({
-<<<<<<< HEAD
   title;
   description;
   icon;
   status;
-=======
   title,
   description,
   icon,
   status = "disconnected",
   href,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -170,11 +176,14 @@ export function IntegrationCard({
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -453,30 +462,23 @@ href?: string;
 =======
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
           </Button>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       </CardFooter>
     </Card>
   )
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
       {/* Integration cards would go here */}
     </div>
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

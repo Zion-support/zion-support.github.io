@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 }
@@ -276,6 +277,9 @@ export function runHeuristics(data: any): HeuristicResult {
 
 =======
 <<<<<<< HEAD:utils/fraud/heuristics.ts
+=======
+:utils/fraud/heuristics.ts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
 const suspiciousLinkHosts = [
   'paypal.me'
@@ -318,8 +322,7 @@ const vagueScammyJobPhrases = [
 function containsSuspiciousHost(text: string): boolean {
   const lower = text.toLowerCase();
   return suspiciousLinkHosts.some(host => lower.includes(host));
-=======
-<<<<<<< HEAD:backup-problematic-files/utils/fraud/heuristics.ts
+:backup-problematic-files/utils/fraud/heuristics.ts
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types',;
 const suspiciousLinkHosts = [;
   'paypal.mecash.appvenmo.comwa.met.metelegram.mewhatsapp.comwesternunion.com',;
@@ -333,11 +336,8 @@ const vagueScammyJobPhrases = [;
 function containsSuspiciousHost(text: string): boolean {;
   const lower = text.toLowerCase(),;
   return suspiciousLinkHosts.some((host) => lower.includes(host));
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/fraud/heuristics.ts
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/heuristics.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/utils/fraud/heuristics.ts
+:backup-problematic-files/utils/fraud/heuristics.ts
 }
 function containsSuspiciousPhrase(text: string): string[] {
   const lower = text.toLowerCase();
@@ -355,15 +355,12 @@ function containsVagueJobClaims(text: string): string[] {
 }
 export interface HeuristicDeps {
   countEventsByIp: (
-<<<<<<< HEAD
     ip: string
     source: MonitoredSource
     withinMinutes: number
-=======
     ip: string,
     source: MonitoredSource,
     withinMinutes: number;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ) => Promise<number>;
 export async function evaluateHeuristics(
   event: FraudEvent
@@ -404,7 +401,7 @@ export async function evaluateHeuristics(
       if (severity === 'low') severity = 'medium';
     }
   }
-<<<<<<< HEAD:utils/fraud/heuristics.ts
+:utils/fraud/heuristics.ts
 export function runHeuristics(data: any): HeuristicResult {
   // Mock implementation - in production, this would run actual fraud detection heuristics;
   const flags = new Set<string>();
@@ -423,6 +420,7 @@ export function runHeuristics(data: any): HeuristicResult {
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
 =======
 }
 
@@ -444,12 +442,15 @@ export function shouldBlockEvent(result: HeuristicResult): boolean {
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   return {;
     flagged: reasons.length > 0;
     reasons;
     severity}
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -475,3 +476,13 @@ export function shouldBlockEvent(result: HeuristicResult): boolean {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/heuristics.ts
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+main:utils/fraud/heuristics.ts
+:backup-problematic-files/utils/fraud/heuristics.ts
+:utils/fraud/heuristics.ts
+
+}
+}
+main:utils/fraud/heuristics.ts
+:backup-problematic-files/utils/fraud/heuristics.ts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

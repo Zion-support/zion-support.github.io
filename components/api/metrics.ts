@@ -33,6 +33,7 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   return series;
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,6 +60,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const labels = Array.from({ length: 14 }, (_, i) => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+  const now = new Date()
+  const labels = Array.from({ length: 14 }, (_, i) => {
+  const now = new Date(),
+  const labels = Array.from({ length: 14 }, (_, i) => {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const d = new Date(now);
     d && d.setDate(d && d.getDate() - (13 - i));
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
@@ -417,6 +424,7 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -455,12 +463,16 @@ if ( {) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   res.status(200).json(response)
 }
-=======
 
   res.status(200).json(response)
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import fs from 'fs';
 import path from 'path';
@@ -27,14 +28,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const { userId = 'demo-user' } = req && req.query;
 =======
 <<<<<<< HEAD
+=======
+import fs from 'fs';
+import path from 'path';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 function writeUsers(data: any) {
   fs.writeFileSync(usersPath, JSON.stringify(data, null, 2));
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-<<<<<<< HEAD
     const users = readUsers()
     if (req.method === 'GET') {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
@@ -42,6 +47,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const users = readUsers(),
 <<<<<<< HEAD
     if (req && req.method === 'GET') {
@@ -63,7 +70,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 =======
     if (req.method === 'GET') {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const { userId = 'demo-user' } = req.query;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const user = users[userId as string];
@@ -148,6 +154,7 @@ if ( {) {
       if (typeof percent === 'number') {
         courseProgress.percent = Math.max(courseProgress.percent, percent);      }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json');
 function readUsers() {
@@ -155,6 +162,8 @@ function readUsers() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const usersPath = path.join(process.cwd(), 'datalearnusers.json');
 function readUsers() {
   return JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
@@ -184,13 +193,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (typeof percent === 'number') {
         courseProgress.percent = Math.max(courseProgress.percent, percent);
       }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       user.progress[courseId] = courseProgress;
       users[userId] = user;
       writeUsers(users);
       return res.status(200).json({ ok: true, progress: courseProgress });
     }
-<<<<<<< HEAD
     res.setHeader('Allow', 'GET, POST');
     return res.status(405).end('Method Not Allowed');
 
@@ -199,9 +206,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res
       .status(500)
       .json({ error: e?.message ?? 'Failed to handle progress' });
-<<<<<<< HEAD
-=======
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -362,19 +366,20 @@ export default function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
-=======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     res.setHeader('AllowGET, POST');
     return res.status(405).end('Method Not Allowed')
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Failed to handle progress' })
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
       const course_progress = user.progress[course_id] || {
@@ -430,3 +435,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

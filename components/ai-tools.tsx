@@ -49,7 +49,6 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
   Brain
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   MessageSquare
@@ -94,9 +93,12 @@ import {
   CheckCircle
   TrendingUp
   Shield;} from 'lucide-react';import {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Brain,
   MessageSquare,
   Image,
@@ -107,6 +109,7 @@ import {
   Star,
   ExternalLink,
   CheckCircle,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -129,13 +132,12 @@ Shield,} from 'lucide-react';import {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   TrendingUp,
   Shield,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   TrendingUp,;
   Shield,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain;
   MessageSquare
   Image
@@ -482,21 +484,18 @@ export default function AiToolsPage() {
       description:
         'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.'
       features: [
-<<<<<<< HEAD
         'Advanced reasoning & analysis'
         'Web browsing & real-time info'
         'Plugin ecosystem access'
         'Code generation & debugging'
         'Professional writing assistance'
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
-=======
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
         'Plugin ecosystem access',
         'Code generation & debugging',
         'Professional writing assistance',
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ];
       pricing: '$20/month'
       marketPrice: '$20/month'
@@ -614,7 +613,6 @@ export default function AiToolsPage() {
       description:
         'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.'
       features: [
-<<<<<<< HEAD
         'Content generation'
         'Brand voice training'
         'SEO optimization'
@@ -632,9 +630,12 @@ export default function AiToolsPage() {
       category: 'Content Creation'
     },  ];      category: 'Content Creation'
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Advanced reasoning abilities',
         'Document analysis',
         'Code generation',
@@ -939,7 +940,6 @@ description: 'Average productivity improvement',
       category: 'Content Creation',
     },  ];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const aiMarketStats = [
     {
@@ -1304,6 +1304,7 @@ description: 'Average productivity improvement',
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1315,11 +1316,15 @@ description: 'Average productivity improvement',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* AI Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1347,6 +1352,9 @@ description: 'Average productivity improvement',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Curated AI Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1794,6 +1802,7 @@ description: 'Average productivity improvement',
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* AI Categories Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>
@@ -1940,26 +1949,16 @@ description: 'Average productivity improvement',
       </section>
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* AI Categories Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
               AI Tool Categories
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of AI tools helps you build a
@@ -2019,6 +2018,7 @@ description: 'Average productivity improvement',
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -2030,11 +2030,15 @@ description: 'Average productivity improvement',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* AI Implementation Guide */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2062,6 +2066,9 @@ description: 'Average productivity improvement',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Getting Started with AI Tools
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -2419,6 +2426,7 @@ href="/contact"
               Explore More Tools
             </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2429,6 +2437,8 @@ href="/contact"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button
               href='/contact'
               variant='outline'
@@ -2445,8 +2455,8 @@ href="/contact"
     </>
 );
 }
-=======
             <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2454,3 +2464,5 @@ href="/contact"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

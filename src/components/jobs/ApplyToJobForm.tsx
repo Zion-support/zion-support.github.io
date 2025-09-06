@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/ApplyToJobForm.tsx
 
 
@@ -16,9 +17,10 @@ import { useRouter } from 'next/router',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react";
 import { useRouter  } from 'next/router';
-=======
     import { useRouter } from 'next/router'
 import { useJobApplications } from "@/hooks/useJobApplications"
 import { useResume } from "@/hooks/useResume"
@@ -31,11 +33,8 @@ import { Alert, AlertDescription } from "@/components/ui/alert"
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'import { formatDistanceToNow } from "date-fns"
 import { Job } from "@/types/jobs"
 import { toast } from "sonner"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",
 import { useRouter } from 'next/router',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { useJobApplications } from "@/hooks/useJobApplications",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useResume } from "@/hooks/useResume",
@@ -49,6 +48,7 @@ import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { Job } from "@/types/jobs";
@@ -59,16 +59,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 interface ApplyToJobFormProps {
 >>>>>>> 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
-=======
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplyToJobFormProps {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -78,6 +74,7 @@ interface ApplyToJobFormProps {
 }
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -86,6 +83,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
   const { resumes, isLoading: isResumesLoading } = useResume()
@@ -102,10 +102,13 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return
     }
     if (!coverLetter.trim()) {
@@ -113,9 +116,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       return
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return;
     }
     
@@ -124,8 +130,11 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       return;
     }
     
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setIsSubmitting(true)
     setError(null)
     try {
@@ -134,6 +143,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         coverLetter
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       )
       if (success) {
@@ -147,17 +157,20 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         toast.success("Your application has been submitted!")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         selectedResumeId |undefined
         resumeFile |undefined
-=======
         selectedResumeId || undefined
         resumeFile || undefined
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )
       if (success) {
         toast.success("Your application has been submitted!")
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth(),
   const { applyToJob } = useJobApplications(),
   const { resumes, isLoading: isResumesLoading } = useResume(),
@@ -198,6 +211,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         toast.success("Your application has been submitted!"),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>         if (onSuccess) {
@@ -210,6 +224,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         if (onSuccess) {
           onSuccess()
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -275,20 +291,12 @@ if ( {) {
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
   }
-<<<<<<< HEAD
 
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
   },
   
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -298,6 +306,7 @@ if ( {) {
           Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
         </p>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -316,12 +325,9 @@ if ( {) {
 >>>>>>>         <Alert variant="destructive">
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       {error && (
         <Alert variant="destructive">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -329,6 +335,7 @@ if ( {) {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -539,8 +546,9 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
 <<<<<<<< HEAD:src/components/jobs/ApplyToJobForm.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
@@ -559,6 +567,7 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>         <div>
@@ -568,12 +577,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>           <Label htmlFor="resume">Select Resume (Optional)</Label>
 =======
 =======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -605,6 +611,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   }
 =======
@@ -624,6 +631,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       ;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { useRouter } from 'next/router',;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -873,11 +882,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/ApplyToJobForm.tsx
 =======
                     );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }
                   return null
                 })}
@@ -909,6 +913,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             accept=".pdf"
             className="mt-1"
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/ApplyToJobForm.tsx
 <<<<<<< HEAD
 
@@ -922,10 +927,13 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             onChange = {(e,) => setResumeFile(e.target.files?.[0] |null),}
           />
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>       <div className="flex justify-end gap-2">
         <Button
@@ -938,35 +946,23 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
           />
         </div>
       </div>
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="flex justify-end gap-2">
         <Button
           type="button"
           variant="outline"
-<<<<<<< HEAD
           disabled = {isSubmitting,}
           onClick={() => {
             if (onSuccess) onSuccess()
-=======
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         >
@@ -981,6 +977,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           ) : (
             "Submit Application"
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1242,6 +1239,8 @@ handle_submit;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/ApplyToJobForm.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>
       </div>
     </form>
@@ -1264,16 +1263,12 @@ handleSubmit
 }return null
 })
 }</SelectContent> </Select> > Create Resume </Button> </div>) "
-<<<<<<< HEAD
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
 }</Button> </div> </form>)
 }"}
-=======
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         </Button>;
       </div>;
     </form>;
@@ -1281,8 +1276,11 @@ handleSubmit
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

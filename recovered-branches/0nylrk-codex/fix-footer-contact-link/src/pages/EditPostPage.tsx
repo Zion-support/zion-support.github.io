@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -17,9 +14,12 @@ import PostForm from "@/components/community/PostForm";
 import {useToast} from "@/hooks/use-toast";
 import {ForumPost, ForumCategory} from "@/types/community";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -27,6 +27,7 @@ import { SEO } from "@/components/SEO",
 import { Button } from "@/components/ui/button",
 import PostForm from "@/components/community/PostForm",
 import { useToast } from "@/hooks/use-toast",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -36,17 +37,21 @@ import { useToast } from "@/hooks/use-toast",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ForumPost, ForumCategory } from "@/types/community";
 import { useAuth } from "@/hooks/useAuth";
-=======
 import { ForumPost, ForumCategory } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PostFormValues {
 
   title: string
@@ -56,6 +61,7 @@ interface PostFormValues {
   tags: string
 }
 // Mock post data
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -116,6 +122,8 @@ export default function EditPostPage() {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
@@ -135,6 +143,7 @@ const mockPost: ForumPost = {
   isFeatured: true
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -143,8 +152,9 @@ const mockPost: ForumPost = {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 const mockPost: ForumPost = {
   id: "1"
   title: "Best practices for AI model fine-tuning"
@@ -163,8 +173,6 @@ const mockPost: ForumPost = {
   isAnswered: true
   isFeatured: true
 }
-=======
-<<<<<<< HEAD
 export default function EditPostPage() {;
   const { postId } = useParams() as { postId?: string };
   const navigate = useNavigate();
@@ -172,31 +180,30 @@ export default function EditPostPage() {;
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
   const [isLoading, setIsLoading] = useState(true);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function EditPostPage() {
-<<<<<<< HEAD
   const { postId } = useParams() as { postId?: string }
   const navigate = useNavigate();
   const { toast } = useToast();
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
   const [isLoading, setIsLoading] = useState(true);
-=======
   const { postId } = useParams() as { postId?: string },
   const navigate = useNavigate(),
   const { toast } = useToast(),
   const { user } = useAuth(),
   const [post, setPost] = useState<ForumPost | null>(mockPost),
   const [isLoading, setIsLoading] = useState(true),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
     setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -316,11 +323,11 @@ export default function EditPostPage() {;
 
 =======
 <<<<<<< HEAD
-  }, [postId]);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }, [postId]);
   }, [postId]),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <AppLayout>
@@ -347,18 +354,23 @@ export default function EditPostPage() {;
   }
   // Check if the user is the author or an admin
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const isAuthor = user?.id === post.authorId;
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
-=======
   const isAuthor = user?.id === post.authorId,
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!isAuthor && !isAdmin) {
     return (
       <AppLayout>
@@ -377,6 +389,7 @@ export default function EditPostPage() {;
     content: post.content
     categoryId: post.categoryId as ForumCategory
     tags: post.tags.join(", ")
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -428,12 +441,16 @@ export default function EditPostPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally update the post in the database
@@ -441,6 +458,7 @@ export default function EditPostPage() {;
       toast({
         title: "Post updated"
         description: "Your post has been updated successfully"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -453,12 +471,16 @@ export default function EditPostPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-      });
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      });
       }),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Redirect back to the post
       navigate(`/community/post/${postId}`)
     } catch (error) {
@@ -521,11 +543,8 @@ export default function EditPostPage() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/EditPostPage.tsx
 =======
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <AppLayout>
@@ -554,21 +573,28 @@ export default function EditPostPage() {;
         </div>
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <PostForm
           initialValues={initialValues}
           onSubmit={handleSubmit}
           isEditing={true}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <PostForm 
           initialValues={initialValues} 
           onSubmit={handleSubmit} 
           isEditing={true} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -576,10 +602,13 @@ export default function EditPostPage() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
       </div>
     </AppLayout>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -597,6 +626,9 @@ export default function EditPostPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -1044,11 +1076,10 @@ return (<AppLayout> <SEO title="Edit Post | Community Forum | Zion AI Marketplac
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/EditPostPage.tsx
 =======
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/EnterpriseHero.tsx
 
 
@@ -17,24 +18,17 @@ export function EnterpriseHero() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
-=======
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterpriseHero() {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -46,6 +40,7 @@ export function EnterpriseHero() {
               Enterprise <GradientHeading className="inline">Talent Solutions</GradientHeading>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">;
@@ -62,12 +57,16 @@ export function EnterpriseHero() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Scale your talent acquisition with a custom-branded hiring portal
               dedicated talent pool, and powerful admin controls.
-=======
               Scale your talent acquisition with a custom-branded hiring portal, dedicated talent pool, and powerful admin controls.
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </p>
             <div className="flex flex-col sm: flex-row gap-4">
               <Button size="lg" className="w-full sm:w-auto">
@@ -257,25 +256,26 @@ export function EnterpriseHero() {;
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/EnterpriseHero.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </section>
-<<<<<<< HEAD
   );
 }
-=======
-=======
-<<<<<<< HEAD
     </section>;
   );
 }
-=======
     </section>
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -330,6 +330,7 @@ export function EnterpriseHero() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -353,3 +354,5 @@ export function EnterpriseHero() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { 
   Star, CheckCircle, ArrowRight, TrendingUp, Users, 
@@ -37,8 +38,40 @@ import {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
 =======
+
+import {
+  Star
+  CheckCircle
+  ArrowRight
+  TrendingUp
+  Users
+  Award
+  Clock
+  Zap
+  Shield
+  Brain
+  Atom
+  Rocket
+  ShoppingCart
+  Cpu
+  Globe
+  Lock
+  Video
+  Palette
+  BarChart
+  UserCheck
+  FileText
+  Heart
+  Eye
+  Search
+  Phone;
+} from 'lucide-react';
+import { realMarketServices } from '../../data/2024-real-market-services';
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
+  Star, CheckCircle, ArrowRight, TrendingUp, Users
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   Star,
   CheckCircle,
   ArrowRight,
@@ -68,9 +101,12 @@ import {
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
   Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
@@ -182,8 +218,14 @@ const serviceCategories = [
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+export default function UltraFuturisticServiceShowcase2034() {
+
+export default function UltraFuturisticServiceShowcase2034() {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const allServices = [...realMarketServices, ...aiEmergingTechServices];
@@ -207,6 +249,7 @@ const serviceCategories = [
       }
     },  }
   const itemVariants = {
+<<<<<<< HEAD
 
 =======
 
@@ -606,6 +649,8 @@ function UltraFuturisticServiceShowcase2034() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     hidden: { opacity: 0, y: 20 }
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -618,18 +663,18 @@ function UltraFuturisticServiceShowcase2034() {
     visible: { opacity: 1, coordinate_y: 0 },
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
       }
     }
-=======
     visible: { opacity: 1, y: 0 },
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   };
 
   const itemVariants = {
@@ -638,8 +683,11 @@ function UltraFuturisticServiceShowcase2034() {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden'>;
       {/* Animated Background */}
@@ -657,16 +705,15 @@ function UltraFuturisticServiceShowcase2034() {
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
       </div>
-<<<<<<< HEAD
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
-=======
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
-=======
         {/* Header */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <section className="py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden">;
       {/* Animated Background */}
@@ -677,6 +724,7 @@ function UltraFuturisticServiceShowcase2034() {
       </div>;
       <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
         {/* Header */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 20 }}
@@ -695,6 +743,8 @@ function UltraFuturisticServiceShowcase2034() {
           </p>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 
@@ -705,21 +755,13 @@ function UltraFuturisticServiceShowcase2034() {
 
         {/* Header */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
             Revolutionary Technology Services
@@ -736,6 +778,7 @@ function UltraFuturisticServiceShowcase2034() {
               {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -747,6 +790,8 @@ function UltraFuturisticServiceShowcase2034() {
         >
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 label: 'Total Services'
                 value: allServices.length.toString()
                 icon: Rocket
@@ -891,19 +936,14 @@ function UltraFuturisticServiceShowcase2034() {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
-=======
                 label: 'Total Services',
                 value: allServices.length.toString(),
                 icon: Rocket,
               },
               { label: 'Happy Customers', value: '50K+', icon: Users },
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
-<<<<<<< HEAD
               { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
               { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (        >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
             Revolutionary Technology Services
@@ -919,12 +959,14 @@ function UltraFuturisticServiceShowcase2034() {
               { label: 'Happy Customers', value: '50K+', icon: Users },
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
-=======
               { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ].map((stat, index) => (
               <motion.div
 
@@ -951,6 +993,7 @@ function UltraFuturisticServiceShowcase2034() {
                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -975,6 +1018,8 @@ function UltraFuturisticServiceShowcase2034() {
         {/* Search and Filter */}
         <motion&& motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='text-sm text-gray-400'>{stat.label}</div>              </motion.div>                className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
@@ -983,7 +1028,6 @@ function UltraFuturisticServiceShowcase2034() {
             ))}
           </div>
         </motion.div>
-=======
                 <div className='text-sm text-gray-400'>{stat.label}</div>              </motion.div>
 
               </motion.div>
@@ -992,11 +1036,6 @@ function UltraFuturisticServiceShowcase2034() {
           </div>
         </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Search and Filter */}
         <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1021,14 +1060,7 @@ function UltraFuturisticServiceShowcase2034() {
         >
 =======
           className='mb-12'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1056,7 +1088,6 @@ function UltraFuturisticServiceShowcase2034() {
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
               />
-<<<<<<< HEAD
               <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />            </div>        >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
@@ -1101,17 +1132,19 @@ function UltraFuturisticServiceShowcase2034() {
               />
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             </div>
-=======
               <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />            </div>
 
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -1139,6 +1172,7 @@ function UltraFuturisticServiceShowcase2034() {
           </div>
         </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1159,12 +1193,9 @@ function UltraFuturisticServiceShowcase2034() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Service Categories */}
         <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1227,6 +1258,7 @@ function UltraFuturisticServiceShowcase2034() {
           </div>
         </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1259,6 +1291,9 @@ function UltraFuturisticServiceShowcase2034() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -1299,7 +1334,6 @@ function UltraFuturisticServiceShowcase2034() {
             >
               {/* Popular Badge */}
               {service.popular && (
-<<<<<<< HEAD
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
@@ -1307,27 +1341,22 @@ function UltraFuturisticServiceShowcase2034() {
               {service.popular && (
                 <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   Popular
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
 
                   Popular
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Service Icon */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300';
@@ -1526,6 +1555,7 @@ function UltraFuturisticServiceShowcase2034() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
               {/* Service Info */}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1559,6 +1589,8 @@ function UltraFuturisticServiceShowcase2034() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1636,8 +1668,11 @@ function UltraFuturisticServiceShowcase2034() {
                     className='flex items-center space-x-2 text-sm text-gray-400'
                   >
                     <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />                    <span>{feature}</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                 {service.description}
               </p>
@@ -1645,11 +1680,6 @@ function UltraFuturisticServiceShowcase2034() {
               {/* Features */}
 
                     <span>{feature}</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 ))}
                 {service.features.length > 3 && (
@@ -1660,7 +1690,6 @@ function UltraFuturisticServiceShowcase2034() {
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                     <span>{feature}</span>
                   </div>
-<<<<<<< HEAD
                 ))}
                 {service.features.length > 3 && (
 <<<<<<< HEAD
@@ -1674,6 +1703,7 @@ function UltraFuturisticServiceShowcase2034() {
                 )}
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 {/* Service Meta */}
               <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                 <div className="flex items-center space-x-2 text-gray-400">
@@ -1681,14 +1711,11 @@ function UltraFuturisticServiceShowcase2034() {
                   <span>{service.setupTime}</span>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 )}
               </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                 <div className='flex items-center space-x-2 text-gray-400'>
@@ -1822,15 +1849,16 @@ function UltraFuturisticServiceShowcase2034() {
               <div className="flex space-x-3">
 =======
               <div className='flex space-x-3'>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <a
 <<<<<<< HEAD
 
@@ -1867,6 +1895,7 @@ function UltraFuturisticServiceShowcase2034() {
             </motion.div>
           ))}
         </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1918,12 +1947,9 @@ function UltraFuturisticServiceShowcase2034() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Call to Action */}
         <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1945,15 +1971,16 @@ function UltraFuturisticServiceShowcase2034() {
         >
 =======
           className='text-center mt-20'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -2277,19 +2304,16 @@ function UltraFuturisticServiceShowcase2034() {
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

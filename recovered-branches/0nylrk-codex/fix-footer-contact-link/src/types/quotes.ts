@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -14,14 +15,20 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
 export type BudgetType = "fixed" | "hourly" | "range";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface ListingItem {
   id: string;
   title: string;
@@ -29,7 +36,6 @@ export interface ListingItem {
   image?: string
 }
 export interface ContactInfo {
-=======
 
 export interface ListingItem {;
   id: string;
@@ -39,13 +45,17 @@ export interface ListingItem {;
 }
 
 export interface ContactInfo {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   name: string;
   email: string;
   phone: string
   company: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -96,16 +106,21 @@ export interface Budget {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export interface Budget {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface Budget {
 
 export interface Budget {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   amount: number;
   maxAmount?: number
   type: BudgetType
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -116,12 +131,16 @@ export interface QuoteFormData {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-export interface QuoteFormData {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface QuoteFormData {
 
 export interface QuoteFormData {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
@@ -156,13 +175,14 @@ export interface QuoteRequest {;
   contactInfo: ContactInfo
 }
 export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived';
-<<<<<<< HEAD
 export interface QuoteRequest {
-=======
 
 export interface QuoteRequest {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   talent_id: string;
   talent_name?: string;
@@ -192,8 +212,11 @@ export interface QuoteRequest {;
 
   updated_at: string
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type ServiceType = "service" | "talent" | "equipment" | "",
 export type ServiceCategory = string,
 export type TimelineType = "fixed" | "flexible",
@@ -266,6 +289,7 @@ export interface QuoteRequest {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   created_at: string,
@@ -280,3 +304,5 @@ export interface QuoteRequest {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

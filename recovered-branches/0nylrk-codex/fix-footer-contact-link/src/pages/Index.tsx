@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Index.tsx
@@ -15,6 +16,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TrustedBySection} from "@/components/TrustedBySection";
@@ -38,18 +42,22 @@ import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarCh
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 
 =======
-export default function Index() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function Index() {
 export default function Index() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { TrustedBySection } from "@/components/TrustedBySection",
@@ -85,12 +93,16 @@ export default function Index() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Tools and features showcase
 
   const toolsFeatures = [
@@ -99,6 +111,7 @@ export default function Index() {
       description: t("home.tool_ai_matcher_desc")
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />
       link: "/match"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -116,17 +129,22 @@ export default function Index() {;
 
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: t("home.tool_talent")
       description: t("home.tool_talent_desc")
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -137,17 +155,22 @@ export default function Index() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: t("home.tool_services")
       description: t("home.tool_services_desc")
       icon: <Zap className="h-6 w-6 text-zion-cyan" />
       link: "/services"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -158,17 +181,22 @@ export default function Index() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: t("home.tool_equipment")
       description: t("home.tool_equipment_desc")
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -179,17 +207,22 @@ export default function Index() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: t("home.tool_analytics")
       description: t("home.tool_analytics_desc")
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />
       link: "/analytics"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -200,11 +233,15 @@ export default function Index() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Mobile App"
       description: "Take Zion with you on the go with our mobile app for iOS and Android"
@@ -373,8 +410,11 @@ function Index() {
                 </div>
               </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { TrustedBySection } from "@/components/TrustedBySection",;
@@ -515,6 +555,7 @@ export default function Index() {;
                 </div>;
               </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -526,6 +567,8 @@ export default function Index() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         </div>

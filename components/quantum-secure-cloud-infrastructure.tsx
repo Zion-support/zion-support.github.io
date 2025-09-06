@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -64,8 +65,9 @@ export default function QuantumSecureCloudInfrastructure() {;
 	return (<ServiceLanding
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
-<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -73,13 +75,8 @@ export default function QuantumSecureCloudInfrastructure() {
 	return (
 		<ServiceLanding
 			title;
-=======
  import React from 'react';
-=======
-=======
  import React from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -93,6 +90,7 @@ export default function QuantumSecureCloudInfrastructure() {
 			implementationWeeks="6-10 weeks"
 			roiNote="Meet emerging PQC compliance and safeguard long-lived data"
 <<<<<<< HEAD
+<<<<<<< HEAD
 features={[
 				"PQC algorithms for data at-rest and in-transit"
 				"Hybrid crypto transition plans"
@@ -101,17 +99,20 @@ features={[
 				"Threat modeling and validation"
 =======
 <<<<<<< HEAD
-			features={[;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+			features={[;
 			features={[
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 				"PQC algorithms for data at-rest and in-transit";
 				"Hybrid crypto transition plans";
 				"HSM/KMS integrations and key rotation";
 				"Zero Trust + PQC reference designs";
 				"Threat modeling and validation";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
@@ -156,8 +157,8 @@ return (<ServiceLanding;
 =======
 		/>
 	)
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -166,3 +167,6 @@ return (<ServiceLanding;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

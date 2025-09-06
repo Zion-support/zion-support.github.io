@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Star } from 'lucide-react'
 
@@ -9,16 +9,18 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card'
 import React from "react";
 =======
 <<<<<<< HEAD
-import React from "react";
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from "react";
 import React from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Star } from 'lucide-react'
 
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const testimonials = [
   {
     name: 'Alex Johnson'
@@ -42,14 +44,11 @@ const testimonials = [
 
 =======
 const testimonials = [
-=======
-=======
 
 import React from "react",
 import { Star } from 'lucide-react'
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const testimonials = [
   {
     name: "Alex Johnson",
@@ -58,12 +57,14 @@ const testimonials = [
     rating: 5,
     avatar: "/placeholder.svg"
   },
-<<<<<<< HEAD
 const testimonials = [
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
 =======
 const testimonials = [
@@ -77,26 +78,34 @@ const testimonials = [
   }
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: 'Michael Chen'
     role: 'Full Stack Developer'
     text: 'I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.'
     rating: 4
     avatar: '/placeholder.svg'
 <<<<<<< HEAD
+<<<<<<< HEAD
     avatar: '/placeholder.svg',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: "Michael Chen",
     role: "Full Stack Developer",
     text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
     rating: 4,
-<<<<<<< HEAD
     avatar: '/placeholder.svg',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },]
 export const AppTestimonials: React.FC = () => {
   return (    avatar: "/placeholder.svg"
@@ -129,12 +138,15 @@ export const AppTestimonials: React.FC = () => {
                       className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-400'}`}                    />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Star } from 'lucide-react'
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
@@ -159,6 +171,7 @@ const testimonials = [
     role: "Full Stack Developer",
     text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
     rating: 4,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     avatar: "/placeholder.svg"
@@ -191,6 +204,8 @@ export const AppTestimonials: React.FC = () => {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     avatar: "/placeholder.svg"
   }
 ],
@@ -223,6 +238,7 @@ export const AppTestimonials: React.FC = () => {
                     />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   ))}
 =======
@@ -233,6 +249,8 @@ export const AppTestimonials: React.FC = () => {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </div>
@@ -246,10 +264,13 @@ export const AppTestimonials: React.FC = () => {
                   <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <p className='font-semibold text-white'>
                       {testimonial.name}
                     </p>
@@ -280,6 +301,7 @@ export const AppTestimonials: React.FC = () => {
                     <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" loading="lazy" />
                   </div>
                   <div>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -287,6 +309,8 @@ export const AppTestimonials: React.FC = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <p className="font-semibold text-white">{testimonial.name}</p>
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
           </p>
@@ -324,8 +348,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </div>
       </div>
@@ -349,7 +376,10 @@ avatar: "/placeholder.svg"
 export const AppTestimonials: React.FC = () => {"
   return (<section className="py-16 bg-zion-blue" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <h2 className="text-3xl md:text-4xl font-bold mb-4" >What Our Users Say</h2> <p className="text-lg text-gray-300 max-w-2xl mx-auto" >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }</div> </div> </section>)
 }
 '"}
@@ -357,6 +387,7 @@ export const AppTestimonials: React.FC = () => {"
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
 import React from "react",;
 import { Star } from 'lucide-react';
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -424,14 +455,14 @@ export const AppTestimonials: React.FC = () => {;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }</div> </div> </section>) 
 }
 '"},
 
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { Star } from 'lucide-react';
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -503,6 +534,7 @@ export const AppTestimonials: React.FC = () => {;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -516,3 +548,5 @@ export const AppTestimonials: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

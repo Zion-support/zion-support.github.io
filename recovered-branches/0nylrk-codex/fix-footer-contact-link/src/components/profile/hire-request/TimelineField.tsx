@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   FormField,
 ========
@@ -11,6 +12,8 @@ FormField,
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   FormField
   FormItem
@@ -28,6 +31,7 @@ import {
 
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
+<<<<<<< HEAD
 
 import {
   FormField,
@@ -60,17 +64,23 @@ interface TimelineFieldProps {
   form: UseFormReturn < FormValues>;
 }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 } from "@/components/ui/select";
@@ -78,12 +88,15 @@ import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TimelineFieldProps {
   form: UseFormReturn<FormValues>;
 }
 export function TimelineField({ form }: TimelineFieldProps) {
 
   const timelineOptions = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     { value: "Ongoing", label: "Ongoing" }
@@ -103,12 +116,21 @@ import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
 =======
 
+=======
+    { value: "Less than 1 week", label: "Less than 1 week" }
+    { value: "1-2 weeks", label: "1-2 weeks" }
+    { value: "2-4 weeks", label: "2-4 weeks" }
+    { value: "1-2 months", label: "1-2 months" }
+    { value: "3-6 months", label: "3-6 months" }
+    { value: "6+ months", label: "6+ months" }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { value: "Less than 1 week", label: "Less than 1 week" },
     { value: "1-2 weeks", label: "1-2 weeks" },
     { value: "2-4 weeks", label: "2-4 weeks" },
     { value: "1-2 months", label: "1-2 months" },
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -123,6 +145,12 @@ import {FormValues} from "./useHireRequestForm";
     { value: "Ongoing", label: "Ongoing" }
   ],
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    { value: "Ongoing", label: "Ongoing" };
+  ];
+    { value: "Ongoing", label: "Ongoing" }
+  ],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <FormField
@@ -143,10 +171,13 @@ import {FormValues} from "./useHireRequestForm";
               <SelectContent>
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { UseFormReturn } from "react-hook-form",;
@@ -270,6 +301,7 @@ export function TimelineField({ form } TimelineFieldProps) {;
               onValueChange={field.onChange} ;
               value={field.value}
               defaultValue={field.value}
+<<<<<<< HEAD
             >;
               <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white">;
                 <SelectValue placeholder="Select estimated timeline" />;
@@ -329,6 +361,15 @@ export function TimelineField({ form } TimelineFieldProps) {;
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
+=======
+            >
+              <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white">
+                <SelectValue placeholder="Select estimated timeline" />
+              </SelectTrigger>
+              <SelectContent>
+                {timelineOptions.map((option) => (
+                  <SelectItem key={option.value} value={option.value}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {option.label}
                   </SelectItem>
                 ))}

@@ -1,12 +1,18 @@
 import React from 'react';
 interface OpenAppRedirectProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function OpenAppRedirect({ }: OpenAppRedirectProps) {
   return (
     <div>
@@ -14,6 +20,7 @@ export default function OpenAppRedirect({ }: OpenAppRedirectProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -34,3 +41,12 @@ export default function OpenAppRedirect({ }: OpenAppRedirectProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:src.disabled/src/pages.disabled/OpenAppRedirect.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/src/pages.disabled/OpenAppRedirect.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

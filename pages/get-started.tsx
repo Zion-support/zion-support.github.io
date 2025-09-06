@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React, { useState } from 'react',
@@ -237,9 +238,10 @@ export default function GetStarted() {
   const onboardingSteps = [
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
 import {
   Rocket
@@ -406,7 +408,6 @@ import {
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1);    }
   }
-=======
 import {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -454,8 +455,6 @@ export default function GetStarted() {;
   const [selectedPath, setSelectedPath] = useState<string>('');
   const [currentStep, setCurrentStep] = useState(1);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import {
@@ -466,7 +465,6 @@ import {
 export default function GetStarted() {
   const [selectedPath, setSelectedPath] = useState<string>(''),
   const [currentStep, setCurrentStep] = useState(1),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const onboardingSteps = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
@@ -870,9 +868,6 @@ export default function GetStarted() {;
       duration: '4-8 weeks',
       icon: <Rocket className="w-6 h-6" />,
       action: 'Discuss Pilot',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       color: 'from-orange-500 to-red-600',
     },  ];
 
@@ -898,8 +893,6 @@ export default function GetStarted() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       color: 'from-orange-500 to-red-600'
       } catch (error) {
     console.error("Error:", error);
@@ -944,11 +937,6 @@ export default function GetStarted() {;
   }
 }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */  } catch (error) {
@@ -989,22 +977,27 @@ className="text-center max-w-4xl mx-auto"
               Get Started Today
             </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Begin your journey into the future of AI consciousness, quantum computing;
               and autonomous systems. Our expert team will guide you every step of the way.
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className='text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed'>
               Begin your journey into the future of AI consciousness, quantum
               computing, and autonomous systems. Our expert team will guide you
               every step of the way.
 
-=======
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Begin your journey into the future of AI consciousness, quantum computing,
               and autonomous systems. Our expert team will guide you every step of the way.
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <div className="flex items-center gap-2 text-cyan-400">
@@ -1024,6 +1017,7 @@ className="text-center max-w-4xl mx-auto"
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1135,6 +1129,8 @@ if ( {) {
 className="text-center mb-16"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Onboarding Steps */}
       <section className='py-20'>
         <div className='container mx-auto px-4'>          <motion.div
@@ -1142,7 +1138,6 @@ className="text-center mb-16"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
-=======
       {/* Onboarding Steps */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1168,18 +1163,22 @@ className="text-center mb-16"
 }
             className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Simple 4-Step Process
             </h2>
             <p className="text-xl text-gray-400">From initial consultation to full implementation</p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1217,6 +1216,8 @@ className="text-center mb-16"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid md:grid-cols-4 gap-8'>            {onboardingSteps.map((step, index) => (
               <motion.div
                 key={step.step}
@@ -1235,7 +1236,6 @@ className="text-center mb-16"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
                 }`}
-=======
           <div className="grid md:grid-cols-4 gap-8">
             {onboardingSteps.map((step, index) => (
               <motion.div
@@ -1269,11 +1269,14 @@ className="text-center mb-16"
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
 <<<<<<< HEAD
@@ -1307,7 +1310,6 @@ className="text-center mb-16"
   }
 }
                 </div>
-<<<<<<< HEAD
                 <div className='flex justify-center mb-4'>{step.icon}</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
                   {step.title}
@@ -1321,8 +1323,11 @@ className="text-center mb-16"
       </section>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Technology Paths */}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="flex justify-center mb-4">{step.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{step.description}</p>
@@ -1352,11 +1357,14 @@ className="text-center mb-16"
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {currentStep === 1 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -1391,6 +1399,7 @@ className="text-center mb-16"
               <p className="text-xl text-gray-400">Select the area that best aligns with your business goals</p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1407,6 +1416,8 @@ className="text-center mb-16"
               {technologyPaths.map((path, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='grid lg:grid-cols-2 gap-8'>              {technologyPaths.map((path, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <motion.div
@@ -1575,7 +1586,6 @@ className="text-center mb-16"
 =======
                   className='group cursor-pointer'
                   onClick={() => handlePathSelection(path.id)}
-=======
             <div className="grid lg:grid-cols-2 gap-8">
               {technologyPaths.map((path, index) => (
                 <motion.div
@@ -1607,6 +1617,7 @@ className="text-center mb-16"
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1619,6 +1630,8 @@ className="text-center mb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-6">
@@ -1639,6 +1652,7 @@ className="text-center mb-16"
                       </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1653,9 +1667,11 @@ className="text-center mb-16"
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
 =======
 <<<<<<< HEAD
-                    <div className='grid md:grid-cols-2 gap-6 mb-6'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    <div className='grid md:grid-cols-2 gap-6 mb-6'>
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1663,6 +1679,8 @@ className="text-center mb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Key Features</h4>
                         <ul className="space-y-2">
@@ -1708,6 +1726,7 @@ className="text-center mb-16"
                         <div className="flex flex-wrap gap-2">
                           {path.useCases.map((useCase) => (
                             <span
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1842,6 +1861,8 @@ className="text-center mb-16"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                               key={useCase}
                               className='px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm'                            >
                               {useCase}
@@ -1855,7 +1876,6 @@ className="text-center mb-16"
                         <span className='flex items-center gap-1'>
                           <Clock className='w-4 h-4' />
                           {path.timeline}
-=======
                               key={useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1900,11 +1920,6 @@ className="text-center mb-16"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                         <span className="flex items-center gap-1">
                           <Target className="w-4 h-4" />
@@ -1924,6 +1939,7 @@ className="text-center mb-16"
                   </div>
                 </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1931,6 +1947,8 @@ className="text-center mb-16"
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))}
             </div>
           </div>
@@ -1940,8 +1958,11 @@ className="text-center mb-16"
 {/* Requirements Definition */}
 =======
       {/* Requirements Definition */}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1962,6 +1983,7 @@ className="text-center mb-16"
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1974,6 +1996,8 @@ className="text-center mb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {currentStep === 2 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -2012,6 +2036,7 @@ className="text-center mb-16"
               <p className="text-xl text-gray-400">Help us understand your project goals and constraints</p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2021,15 +2046,20 @@ className="text-center mb-16"
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='max-w-4xl mx-auto'>
               <div className='bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl p-8 border border-gray-800/50'>
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     Selected Path:{' '}
                     {technologyPaths.find(p => p.id === selectedPath)?.name}
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="max-w-4xl mx-auto">
               <div className="bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl p-8 border border-gray-800/50">
                 <div className="text-center mb-8">
@@ -2047,6 +2077,7 @@ className="text-center mb-16"
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2059,12 +2090,15 @@ className="text-center mb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </h3>
                   <p className="text-gray-300">
                     Now let's gather more details about your specific needs
                   </p>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2081,11 +2115,13 @@ className="text-center mb-16"
                   <div className="grid md:grid-cols-2 gap-6">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='space-y-6'>
                   <div className='grid md:grid-cols-2 gap-6'>
-=======
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2093,6 +2129,8 @@ className="text-center mb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Project Timeline</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
@@ -2306,6 +2344,7 @@ transition={{ duration: 0 && 0.8 }}
                     />
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -2315,14 +2354,10 @@ transition={{ duration: 0 && 0.8 }}
                       onClick={handlePreviousStep}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='flex justify-between pt-6'>
-=======
                   <div className="flex justify-between pt-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <button
                       onClick={handlePreviousStep  } catch (error) {
     console.error("Error:", error);
@@ -2359,6 +2394,7 @@ className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white round
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2378,6 +2414,8 @@ className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white round
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )}
 <<<<<<< HEAD
 {/* Quick Start Options */}
@@ -2397,7 +2435,6 @@ className="text-center mb-16"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
-=======
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2429,6 +2466,7 @@ className="text-center mb-16"
 }
             className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -2442,12 +2480,15 @@ className="text-center mb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options
             </h2>
             <p className="text-xl text-gray-400">Get started immediately with these quick options</p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2457,6 +2498,9 @@ className="text-center mb-16"
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickStartOptions.map((option, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>            {quickStartOptions.map((option, index) => (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <motion.div
 
 =======
@@ -2641,7 +2685,6 @@ className="text-center mb-16"
 =======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className='group cursor-pointer'
-=======
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickStartOptions.map((option, index) => (
               <motion.div
@@ -2666,11 +2709,6 @@ className="text-center mb-16"
   }
 }
                 className="group cursor-pointer"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -2680,7 +2718,6 @@ className="text-center mb-16"
   }
 }
                   </div>
-<<<<<<< HEAD
                   <h3 className='text-xl font-bold text-white mb-3 text-center'>
                     {option.title}
                   </h3>
@@ -2755,7 +2792,6 @@ className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{option.title}</h3>
                   <p className="text-gray-300 mb-4 text-center leading-relaxed">{option.description}</p>
                   <div className="text-center mb-4">
@@ -2809,12 +2845,15 @@ className="text-center mb-16"
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Begin Your Journey?
@@ -2891,6 +2930,7 @@ className="text-center mb-16"
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2934,12 +2974,16 @@ className='inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-40
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-)
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+)
 ),
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -3059,7 +3103,6 @@ className='inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-40
 =======
   duration: 0.8
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion.div> </div> </section> </div>)
-=======
   )
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">;
         <div className="container mx-auto px-4 text-center">;
@@ -3159,6 +3202,7 @@ className='inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-40
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -3174,3 +3218,5 @@ className='inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-40
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -7,13 +7,15 @@
 
 =======
 
-<<<<<<< HEAD
 import React from "react";
 
 import {Link} from "react-router-dom";
 import {ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone} from "lucide-react";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Link } from "react-router-dom",
 import { 
@@ -26,6 +28,7 @@ import {
   Smartphone 
 } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -42,15 +45,16 @@ export function QuickAccess() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function QuickAccess() {
   const quickLinks = [
     {
-<<<<<<< HEAD
       title: "AI Matcher"
       description: "Find the perfect match for your project needs"
       icon: <Search className="h-6 w-6 text-zion-cyan" />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
       title: "AI Matcher",
@@ -63,27 +67,32 @@ export function QuickAccess() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs",
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       link: "/match";
     };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       link: "/match"
-<<<<<<< HEAD
     }
-=======
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Talent Directory"
       description: "Browse verified tech specialists"
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -94,17 +103,22 @@ export function QuickAccess() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Service Marketplace"
       description: "Discover professional services"
       icon: <Briefcase className="h-6 w-6 text-zion-cyan" />
       link: "/services"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -115,17 +129,22 @@ export function QuickAccess() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Equipment Catalog"
       description: "Find specialized hardware"
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -136,17 +155,22 @@ export function QuickAccess() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Community"
       description: "Connect with tech professionals"
       icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />
       link: "/community"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -157,11 +181,15 @@ export function QuickAccess() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Mobile App"
       description: "Zion on the go"
@@ -304,8 +332,6 @@ import { Link } from "react-router-dom",;
                 <ArrowRight className="ml-1 h-3 w-3" />
               </div>
             </Link>
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { Link } from "react-router-dom",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -457,6 +483,7 @@ export function QuickAccess() {;
               </div>
             </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -542,6 +569,8 @@ Smartphone const quickLinks = [ {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </div>
       </div>

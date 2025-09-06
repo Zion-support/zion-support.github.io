@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@ export interface Innovative2026AIService {
   launch_date: string;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026AIService {;
   id: string;
@@ -812,20 +815,21 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
     launchDate: '2025-06-20'
     customers: 1900
     rating: 4.8
     reviews: 950
-=======
       'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',
     launchDate: '2025-06-20',
     customers: 1900,
     rating: 4.8,
     reviews: 950,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -840,7 +844,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
 
     reviews: 950
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
   id: string,;
@@ -1103,6 +1112,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     customers: 1900,;
     rating: 4.8;
     reviews: 950;
+<<<<<<< HEAD
 
   }
 ];
@@ -1466,3 +1476,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

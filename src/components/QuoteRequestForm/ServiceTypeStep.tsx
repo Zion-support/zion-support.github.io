@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -8,6 +9,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
@@ -20,6 +24,7 @@ import { useDebounce } from "@/hooks/useDebounce",
 import { useIsMounted } from "@/hooks/useIsMounted",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const listingSchema = z.object({
 =======
@@ -29,16 +34,13 @@ const listingSchema = null;
 onst listingSchema = z.object({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { z } from "zod";
 import {logErrorToProduction} from '@/utils/productionLogger';
 const listingSchema = null;
-=======
 import { z } from "zod",
 import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const listingSchema = z.object({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: z.string(),
@@ -47,11 +49,14 @@ const listingSchema = z.object({
   image: z.string().optional()}),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const maxRetries = 3
   const sourceListings = listings
 }
@@ -59,11 +64,14 @@ const listingSchema = z.object({
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const listingsSchema = z.array(listingSchema),
 
 interface ServiceTypeStepProps {
@@ -195,12 +203,15 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">
@@ -254,10 +265,13 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             <Input
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -278,10 +292,13 @@ const listingSchema = z.object({
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },;
     fetchServices();
   }, [formData.serviceType, debouncedQuery, isMounted]),;
@@ -403,6 +420,7 @@ const listingSchema = z.object({
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
@@ -414,3 +432,5 @@ const listingSchema = z.object({
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -45,12 +46,12 @@ if ( {) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query
   if (!id |typeof id !== 'string') {
@@ -60,6 +61,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // In a real system, look up persisted deployment by id;
   const fake = {
 <<<<<<< HEAD
+<<<<<<< HEAD
     id,
     exported_at: new Date ().toISOString (),
     note: 'This is a stub export. Connect to persistence to return real deployment state.'},
@@ -68,16 +70,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id
     exportedAt: new Date().toISOString()
     note: 'This is a stub export. Connect to persistence to return real deployment state.'}
   res.setHeader('Content-Typeapplication/json')
 
   return res.status(200).json(fake)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id,
 <<<<<<< HEAD
 
@@ -89,6 +96,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json(fake);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -96,6 +104,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Export endpoint' });
@@ -151,9 +161,8 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 }
@@ -179,3 +188,6 @@ export default function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

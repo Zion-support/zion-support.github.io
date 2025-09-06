@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -47,6 +48,8 @@ const AutonomousBusinessOperationsPlatform = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react';
 import Head from 'next/head';
@@ -174,25 +177,18 @@ const AutonomousBusinessOperationsPlatform = () =>: any {
       description: "Increase in team productivity"
     }
   ]
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
 import { motion } from 'framer-motion',;
 import { 
   Bot, Brain, Cpu, Zap, Shield, Globe, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   Bot, Brain, Cpu, Zap, Shield, Globe,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Building2, Gauge, BarChart3, Settings, Workflow
@@ -260,18 +256,19 @@ const AutonomousBusinessOperationsPlatform = () => {
 =======
       description: "AI-powered security monitoring and threat prevention",
       color: "from-red-500 to-orange-500"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -282,6 +279,8 @@ const AutonomousBusinessOperationsPlatform = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ],
   const capabilities = [
     "24/7 autonomous operation",
@@ -355,13 +354,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 =======
     "Compliance automation"
   ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const industries = [
     {
       title: "Manufacturing",
@@ -378,21 +371,12 @@ const AutonomousBusinessOperationsPlatform = () => {
     {
       title: "Retail",
       description: "Inventory management, customer service, and sales optimization"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const benefits = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -422,24 +406,18 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "Team Productivity",
       value: "250%",
       description: "Increase in team productivity"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
@@ -452,6 +430,7 @@ const AutonomousBusinessOperationsPlatform = () => {
         <meta property="og:url" content="https://ziontechgroup.com/autonomous-business-operations-platform" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Boost in operational efficiency";
     },
@@ -951,18 +930,14 @@ const _AutonomousBusinessOperationsPlatform = () => {_const _features = [
                 <Link href=&quot;/services&quot; className=&quot;inline-flex items-center px-8 py-3 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200&quot;>
 =======
 <<<<<<< HEAD
-        {/* Hero Section */}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        {/* Hero Section */}
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -995,17 +970,17 @@ const _AutonomousBusinessOperationsPlatform = () => {_const _features = [
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Transform your business with AI-powered autonomous operations that work 24/7
-=======
                 Transform your business with AI-powered autonomous operations that work 24/7,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-                Transform your business with AI-powered autonomous operations that work 24/7, 
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                Transform your business with AI-powered autonomous operations that work 24/7, 
                 Transform your business with AI-powered autonomous operations that work 24/7,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1015,6 +990,8 @@ const _AutonomousBusinessOperationsPlatform = () => {_const _features = [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1033,6 +1010,7 @@ const _AutonomousBusinessOperationsPlatform = () => {_const _features = [
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1230,6 +1208,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
           <div className=&quot;max-w-7xl mx-auto&quot;>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -1239,6 +1219,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
             >
@@ -1253,6 +1234,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1458,6 +1441,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1469,6 +1453,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1503,12 +1489,16 @@ const AutonomousBusinessOperationsPlatform = () => {;
               {features.map((feature, index) => (
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1525,6 +1515,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   <p className=&quot;text-gray-400&quot;>{feature.description}</p>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1551,11 +1543,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -1594,7 +1589,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </motion.div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -1615,6 +1609,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
             >
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
@@ -1629,6 +1624,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1666,6 +1663,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1677,6 +1675,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1711,12 +1711,16 @@ const AutonomousBusinessOperationsPlatform = () => {;
               {capabilities.map((capability, index) => (
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1730,6 +1734,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   <span className=&quot;text-gray-300&quot;>{capability}</span>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1756,11 +1762,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
@@ -1793,7 +1802,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </motion.div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -1814,6 +1822,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
             >
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
@@ -1828,6 +1837,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1865,6 +1876,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1876,6 +1888,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1891,6 +1905,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1914,11 +1929,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
                 <motion.div
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1937,6 +1955,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
                     <p className=&quot;text-gray-400 text-sm&quot;>{benefit.description}</p>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1963,11 +1983,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -2013,7 +2036,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </div>
                 </motion.div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -2034,6 +2056,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
             >
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
@@ -2048,6 +2071,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2085,6 +2110,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2096,6 +2122,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -2130,12 +2158,16 @@ const AutonomousBusinessOperationsPlatform = () => {;
               {industries.map((industry, index) => (
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2149,6 +2181,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   <p className=&quot;text-gray-400 text-lg&quot;>{industry.description}</p>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2175,11 +2209,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{industry.title}</h3>
@@ -2191,7 +2228,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </motion.div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -2222,7 +2258,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
                 <Link href=&quot;/services&quot; className=&quot;inline-flex items-center px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200 text-lg&quot;>
 =======
         {/* CTA Section */}
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2237,11 +2272,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -2291,6 +2329,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
       </div>
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default AutonomousBusinessOperationsPlatform,
@@ -2354,19 +2393,15 @@ export default AutonomousBusinessOperationsPlatform
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default AutonomousBusinessOperationsPlatform;
 
-=======
 },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 export default AutonomousBusinessOperationsPlatform,;
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default AutonomousBusinessOperationsPlatform,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >;
@@ -2398,6 +2433,7 @@ export default AutonomousBusinessOperationsPlatform,
 },;
 export default AutonomousBusinessOperationsPlatform;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     </>);
@@ -2419,3 +2455,5 @@ export default AutonomousBusinessOperationsPlatform,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

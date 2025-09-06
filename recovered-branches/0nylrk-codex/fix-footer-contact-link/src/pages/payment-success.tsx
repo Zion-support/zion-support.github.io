@@ -1,14 +1,16 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/payment-success.tsx
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
-<<<<<<< HEAD
 import { Button  } from '@/components/ui/button';
 import { useNavigate  } from 'react-router-dom';
 import { CheckCircle2 } from 'lucide-react';
@@ -16,13 +18,17 @@ export default function PaymentSuccess() {
 
   const navigate = useNavigate();
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {CheckCircle2} from 'lucide-react';
 export default function PaymentSuccess() {;
   const navigate = useNavigate();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -31,12 +37,15 @@ export default function PaymentSuccess() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
 import { CheckCircle2 } from 'lucide-react',
 export default function PaymentSuccess() {
   const navigate = useNavigate(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -50,6 +59,9 @@ export default function PaymentSuccess() {
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -68,6 +80,7 @@ export default function PaymentSuccess() {
             Go to Dashboard
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -78,11 +91,15 @@ export default function PaymentSuccess() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-          <Button
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          <Button
           <Button 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             variant="outline"
             onClick={() => navigate('/')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -93,6 +110,7 @@ export default function PaymentSuccess() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -115,6 +133,9 @@ import {CheckCircle2} from 'lucide-react';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -268,11 +289,10 @@ function PaymentSuccess() {
 =======
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

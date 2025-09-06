@@ -1,12 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/home/QuickAccess.tsx
 
 =======
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import React from 'react'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
@@ -25,12 +25,13 @@ interface QuickAccessProps {
   className?: string;
   style?: React.CSSProperties
 export function QuickAccess({ className, style }: QuickAccessProps) {
-<<<<<<< HEAD
-=======
   const { t } = useTranslation()
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const { t } = useTranslation()
   const quickLinks = [
@@ -88,12 +89,15 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import Link from "next/link",
 import { useTranslation } from "react-i18next",
@@ -109,6 +113,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
   const { t } = useTranslation(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const quickLinks = [
 =======
@@ -118,6 +123,8 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const quickLinks = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
@@ -153,12 +160,15 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: t('home.tool_mobile_app', 'Mobile App'),
       description: t('home.tool_mobile_app_desc', 'Zion on the go'),
       icon: <Smartphone className='h-6 w-6 text-zion-purple' />,
@@ -171,11 +181,14 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
         <div className='text-center mb-8'>
           <h2 className='text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: t('home.tool_mobile_appMobile App'),
       description: t('home.tool_mobile_app_descZion on the go'),
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
@@ -198,6 +211,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
           <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {t('home.quick_access_title', 'Quick Access')}
 =======
@@ -207,6 +221,8 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {t('home.quick_access_title', 'Quick Access')}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </h2>
@@ -214,6 +230,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
             {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -347,22 +364,17 @@ function QuickAccess() {
   const hoverVariants = {
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
-=======
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {quickLinks.map((link, index) => (
             <Link
               key={index}
               href={link.link}
-<<<<<<< HEAD
               className='group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20'            >
               <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110'>
                 {link.icon}
@@ -378,12 +390,16 @@ function QuickAccess() {
             </Link>
 import React, { useState } from 'react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion  } from 'framer-motion'
 export default function Page() {"
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },"
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>       transition: {
@@ -428,12 +444,13 @@ function Page() {";
         duration: 0.3, "  ease: "ease_out";
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion  } from 'framer-motion';
 export default function Page() {";
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       transition: {
         duration: 0.5,"
         ease: "easeOut"}}}
@@ -990,20 +1007,25 @@ export default function Page() {;";
 export default QuickAccess }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default QuickAccess
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default QuickAccess
 
-=======
 
 export default QuickAccess;
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
@@ -1246,8 +1268,11 @@ return (</p> </div> <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols
 ;
 export default QuickAccess;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

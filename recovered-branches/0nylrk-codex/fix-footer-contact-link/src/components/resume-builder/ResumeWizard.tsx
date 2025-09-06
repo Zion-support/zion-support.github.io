@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/ResumeWizard.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ResumeWizard as WizardComponent } from './wizard';
 
@@ -63,3 +64,16 @@ export function ResumeWizard() {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {ResumeWizard, as, WizardComponent} from './wizard';
+export function ResumeWizard() {
+  return <WizardComponent />
+import { ResumeWizard as WizardComponent } from './wizard';
+export function ResumeWizard() {
+  return <WizardComponent />;
+}
+export function ResumeWizard() {;
+  return <WizardComponent />;
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

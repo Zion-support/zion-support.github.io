@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }const completion = await client.chat.completions.create ({
 =======
@@ -19,6 +19,8 @@
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
@@ -646,27 +648,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .slice(0, 8);
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-}
-}
-}
-}
-}
-}
-}
-}
-}
-
-  // Tags
-
-=======
-  // Tags
-
-=======
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+
+  // Tags
+
+=======
+  // Tags
+
+=======
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   // Tags
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const undersupplied = (skills || []).some(s =>
@@ -688,6 +691,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const response: InsightResponse = {
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     recommendedHourlyUsd: recommendedHourly,
@@ -883,10 +887,10 @@ return res.status (200).json (response);  return res.status (200).json (response
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   // Tags
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 }
 }
@@ -896,9 +900,11 @@ return res.status (200).json (response);  return res.status (200).json (response
 }
 }
 }
-=======
   // Tags
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

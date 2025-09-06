@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -35,15 +36,20 @@ import {
 import {
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -82,6 +88,8 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Zap
   Globe
   Phone
@@ -136,9 +144,12 @@ import {
   Headphones;} from 'lucide-react';import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight
 
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Zap,
   Globe,
   Phone,
@@ -190,6 +201,7 @@ import {
   HelpCircle,
   FileText,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -201,23 +213,24 @@ import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight,
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Video,
   Headphones,;} from 'lucide-react';import { 
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   Video,;
   Headphones,;} from 'lucide-react';import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, ;
-=======
   Video,
   Headphones,;} from 'lucide-react';import { 
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
@@ -443,6 +456,7 @@ const contactInfo = {
       { name: 'Energy & Utilities', href: '/energy-utilities-solutions' }
       { name: 'Biotech AI Research', href: '/biotech-ai-research-platform' }
     ]
+<<<<<<< HEAD
 
 const socialLinks = [
 =======
@@ -1028,6 +1042,8 @@ const footerSections = [;
 =======
     ]
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   {
     title: 'Resources'
@@ -1056,6 +1072,7 @@ const footerSections = [;
     ],;
   },;
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 const socialLinks = [;
   {;
@@ -1102,6 +1119,8 @@ const UltraFuturisticFooter2035: React.FC = () => {;
   };
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   };
   {
     title: 'Resources',
@@ -1124,7 +1143,6 @@ const UltraFuturisticFooter2035: React.FC = () => {;
   },
 ];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const socialLinks = [
   {
     name: 'Twitter'
@@ -1166,16 +1184,16 @@ const UltraFuturisticFooter2035: React.FC = () => {
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
 const UltraFuturisticFooter2035: React.FC = () => {
   const scrollToTop = () => {
-<<<<<<< HEAD
     window.scrollTo({ top: 0, behavior: 'smooth' });
-<<<<<<< HEAD
   }
-=======
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <footer className='relative bg-black text-white overflow-hidden'>;
       {/* Background Effects */}
@@ -1199,6 +1217,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
             duration: 20
             repeat: Infinity
             ease: 'linear',          }}
+<<<<<<< HEAD
 <<<<<<< HEAD
         />;
       </div>;
@@ -1274,13 +1293,11 @@ const UltraFuturisticFooter2035: React.FC = () => {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           }}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
           }}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       <div className='relative z-10'>            ease: 'linear'
@@ -1498,7 +1515,6 @@ className="space-y-6"
                     </p>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <p className='text-gray-300 leading-relaxed max-w-md'>
                   Leading the future with cutting-edge AI consciousness, quantum
                   computing, and innovative micro SAAS solutions. Transform your
@@ -1660,31 +1676,18 @@ className="space-y-6"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
-=======
 
                 {/* Social Links */}
 
                     >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {social.icon}
                     </a>
                   ))}
                 </div>
               </motion.div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div
@@ -1693,14 +1696,7 @@ className="space-y-6"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className='space-y-4'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='flex items-center gap-2'>
                   {section.icon}
@@ -1750,6 +1746,7 @@ className="space-y-6"
                             ? 'text-cyan-400 hover:text-cyan-300'                          link.featured
                             ? 'text-cyan-400 hover:text-cyan-300'
                             : 'text-gray-400 hover:text-white'
+<<<<<<< HEAD
 
 =======
 
@@ -1789,6 +1786,9 @@ className="space-y-6"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         }`}
                       >
                         {link.name}
@@ -1854,28 +1854,14 @@ className="space-y-6"
               <div className='flex items-center gap-6 text-sm text-gray-400'>;
 =======
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Bottom Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className='mt-16 pt-8 border-t border-gray-800/50'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
               <div className='text-sm text-gray-400'>
@@ -1954,6 +1940,7 @@ className="space-y-6"
       </div>
     </footer>
   );
+<<<<<<< HEAD
 
 =======
 
@@ -2028,21 +2015,15 @@ className="space-y-6"
 =======
   );
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 /* Animated grid */
-=======
 };
 
-<<<<<<< HEAD
   /* Animated grid */ 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 /* Animated grid */ 
-=======
   /* Animated grid */ 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
   social.icon
 }</a>) )
@@ -2284,7 +2265,6 @@ export default UltraFuturisticFooter2035;
 }> </li>) )
 }</ul> </motion.div>) )
 }</div> {
-<<<<<<< HEAD
   /* Bottom Section */
 }<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>)
 }
@@ -2292,22 +2272,19 @@ export default UltraFuturisticFooter2035;  )
 }
 export default UltraFuturisticFooter2035;
 
-=======
   /* Bottom Section */ 
 }<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>) 
 };
-<<<<<<< HEAD
 export default UltraFuturisticFooter2035;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 export default UltraFuturisticFooter2035;  )
 };
 
 export default UltraFuturisticFooter2035;
-=======
 export default UltraFuturisticFooter2035;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

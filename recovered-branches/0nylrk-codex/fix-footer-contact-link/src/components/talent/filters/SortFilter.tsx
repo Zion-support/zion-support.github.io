@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SortFilter.tsx
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
 
   Select
@@ -13,7 +16,13 @@ import {
 } from "@/components/ui/select";
 
 import { SortFilterProps } from "@/types/filters";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {SortFilterProps} from "@/types/filters";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Select,
   SelectContent,
@@ -22,6 +31,7 @@ import {
 <<<<<<< HEAD
   SelectValue} from "@/components/ui/select",
 import { SortFilterProps } from "@/types/filters",
+<<<<<<< HEAD
 =======
 
 
@@ -32,6 +42,8 @@ SelectValue} from "@/components/ui/select",
 import { SortFilterProps } from "@/types/filters",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -52,8 +64,14 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
       </Select>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {;
   Select,;
   SelectContent,;
@@ -109,10 +127,14 @@ export function SortFilter({ sortOption, setSortOption } SortFilterProps) {;
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SortFilter.tsx
 ;
+<<<<<<< HEAD
 
 =======
 }
@@ -184,3 +206,7 @@ function SortFilter() {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

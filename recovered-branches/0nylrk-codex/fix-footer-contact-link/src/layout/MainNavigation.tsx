@@ -12,13 +12,17 @@ import { cn } from "@/lib/utils",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Link, useLocation} from "react-router-dom";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface MainNavigationProps {;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/layout/MainNavigation.tsx
@@ -42,26 +46,30 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Link, useLocation } from "react-router-dom",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare } from "lucide-react";
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
   className?: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -71,30 +79,32 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
-=======
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
-<<<<<<< HEAD
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
-=======
   const { user } = useAuth(),
   const isAuthenticated = !!user,
   const location = useLocation(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const links = [
     {
       name: "Home"
       href: "/"
       matches: (path: string) => path === "/"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -105,16 +115,21 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Marketplace"
       href: "/marketplace"
       matches: (path: string) => path.startsWith("/marketplace")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -125,16 +140,21 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Categories"
       href: "/categories"
       matches: (path: string) => path.startsWith("/categories")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -145,16 +165,21 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Talent"
       href: "/talent"
       matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -165,9 +190,17 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+    }
     },
+    {
+      name: "Equipment"
+      href: "/equipment"
+      matches: (path: string) => path.startsWith("/equipment")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
+    },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
@@ -190,11 +223,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Community"
       href: "/community"
       matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -207,12 +243,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  ];
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  ];
   ],
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
@@ -248,11 +288,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Link, useLocation } from "react-router-dom",;
 import { cn } from "@/lib/utils",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -474,6 +517,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   ? "bg-zion-purple/20 text-zion-cyan";
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -484,6 +528,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
             >
               {link.name}
@@ -531,14 +577,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
             <Link
               to="/messages"
               className={cn(
-<<<<<<< HEAD
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
                 location.pathname === "/messages" |location.pathname === "/inbox"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -789,6 +834,8 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}
@@ -798,21 +845,14 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
               {unreadCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {unreadCount}
-<<<<<<< HEAD
                 </span>
               )}
             </Link>
           </li>
-=======
                 </span>;
               )}
             </Link>;
           </li>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       </ul>
     </nav>

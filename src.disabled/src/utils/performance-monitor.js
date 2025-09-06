@@ -4,6 +4,7 @@ if (typeof window !== 'undefined') {
 <<<<<<< HEAD
   window.addEventListener('load', () => {
     const perfData = performance.getEntriesByType('navigation')[0];
+<<<<<<< HEAD
 
 =======
 
@@ -24,3 +25,18 @@ if (typeof window !== 'undefined') { window && window.addEventListener('load',()
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart)})}
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+    console.log('Page load "time": ', perfData.loadEventEnd - perfData.loadEventStart)})}
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+    console.log('Page load "time": ', perfData.loadEventEnd - perfData.loadEventStart)})}
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+    console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart)})}
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+    console.log('Page load "time": ', perfData.loadEventEnd - perfData.loadEventStart)})}
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

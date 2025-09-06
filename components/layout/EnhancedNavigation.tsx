@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -59,6 +60,33 @@ import {
 
 <<<<<<< HEAD
 =======
+=======
+
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Menu
+  X
+  ChevronDown
+  Search
+  User
+  Settings
+  LogOut
+  Bell
+  Globe
+  Zap
+  Brain
+  Rocket
+  Dna
+  DollarSign
+  Lock
+  Wifi
+  Truck
+  Gamepad2
+  Bot
+  Factory
+  Car
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu,
   X,
   ChevronDown,
@@ -80,6 +108,7 @@ import {
   Bot,
   Factory,
   Car,;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -110,11 +139,14 @@ Menu
   Car
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
   className?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -124,6 +156,9 @@ interface EnhancedNavigationProps {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
 }) => {
@@ -206,10 +241,24 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       ]
       hasDropdown: true
       dropdownItems: [
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+        { name: "AI & Machine Learning", href: "/services?category=ai-ml" }
+        { name: "Quantum Computing", href: "/services?category=quantum" }
+        { name: "Space Technology", href: "/services?category=space" }
+        { name: "Biotech & Healthcare", href: "/services?category=biotech" }
+        { name: "Financial Services", href: "/services?category=finance" }
+        { name: "Cybersecurity", href: "/services?category=security" }
+        { name: "Edge Computing", href: "/services?category=edge" }
+        { name: "Blockchain", href: "/services?category=blockchain" }
+        { name: "View All Services", href: "/services" }
+      ]
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         { name: "AI & Machine Learning", href: "/services?category=ai-ml" },
         { name: "Quantum Computing", href: "/services?category=quantum" },
         { name: "Space Technology", href: "/services?category=space" },
@@ -221,9 +270,12 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         { name: "View All Services", href: "/services" },
       ],
     },
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Solutions"
       href: "/solutions"
@@ -241,6 +293,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     { name: "Blog", href: "/blog" }
     { name: "Contact", href: "/contact" }
   ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -249,6 +302,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const contactInfo = {
     mobile: "+1 302 464 0950"
     email: "kleber@ziontechgroup.com"
@@ -671,6 +727,7 @@ href={item && item.href}
             >
               <Search className="w-5 h-5" />
             </motion.button>
+<<<<<<< HEAD
 
 =======
 
@@ -733,6 +790,9 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Notifications */}
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
@@ -744,7 +804,10 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             </motion.button>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -775,6 +838,7 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
           </motion.button>
         </div>
       </div>
+<<<<<<< HEAD
 
 =======
 
@@ -804,6 +868,8 @@ className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 
           <motion&& motion.div
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       {/* Mobile Navigation */}
       <AnimatePresence>
@@ -888,6 +954,7 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                   )}
                 </div>
               ))}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1071,6 +1138,9 @@ export default EnhancedNavigation;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20">
                 <div className="space-y-2 text-sm text-gray-400">
@@ -1099,11 +1169,27 @@ export default EnhancedNavigation;
         )}
       </AnimatePresence>
     </nav>
+<<<<<<< HEAD
 );
 
 }
 export default EnhancedNavigation;
+=======
+  );
+}
+export default EnhancedNavigation;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 export default EnhancedNavigation;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default EnhancedNavigation;
+);
+};
+export default EnhancedNavigation;
+
+export default EnhancedNavigation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

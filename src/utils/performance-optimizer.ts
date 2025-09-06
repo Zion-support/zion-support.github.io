@@ -10,6 +10,7 @@ export const optimizeImages = () => {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 
@@ -20,6 +21,11 @@ export const optimizeImages = () => {
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  });
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const preloadCriticalResources = null;
     '/css/critical.css'
   ];
@@ -32,6 +38,7 @@ export const preloadCriticalResources = null;
     document.head.appendChild(link);
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font'
@@ -41,13 +48,12 @@ export const preloadCriticalResources = null;
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const lazyLoadComponents = () => {
   console.log('Lazy loading components...');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 };
 
-=======
-<<<<<<< HEAD
   })
 }
 export const preloadCriticalResources = () => {
@@ -59,22 +65,16 @@ export const preloadCriticalResources = () => {
     document.head.appendChild(link)
   })
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-<<<<<<< HEAD
   const loadComponent = componentName => {    return import(`./components/${componentName}`)
   }
   return { loadComponent }
 }
     link.rel = 'preload'
-<<<<<<< HEAD
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font'
-=======
-=======
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
 ;
-=======
   });
 };
 
@@ -84,7 +84,6 @@ export const lazyLoadComponents = () => {
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -93,6 +92,7 @@ export const optimizeBundleSize = () => {
   return { loadComponent };
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -106,3 +106,5 @@ export const optimizeBundleSize = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,17 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return;
 import React, {
-<<<<<<< HEAD
-=======
   useState,
   useEffect,
   useRef,
@@ -31,9 +32,12 @@ export interface Message {
   message: string,
   timestamp: Date,
   read?: boolean
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, {;
   useState,;
   useEffect,;
@@ -56,6 +60,7 @@ export interface Message {;
   read?: boolean;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
@@ -65,6 +70,8 @@ export interface Message {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
@@ -215,6 +222,7 @@ export function ChatAssistant({;
   }, [isOpen, onClose]),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -223,6 +231,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>   useState
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   useState
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -419,19 +429,24 @@ if ( {) {
     } else {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       const newMessages =
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const newMessages =
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
-=======
       const newMessages = null;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setLoggedInMessages(newMessages)
     }
   }
@@ -925,6 +940,7 @@ export function ChatAssistant({;
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD
 
@@ -979,14 +995,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             onClick = {onClose,}
-=======
             onClick={onClose}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
@@ -1011,11 +1023,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="flex flex-wrap justify-center gap-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       {q}
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {starterQuestions.map((q, idx,) => (
                     <Button
                       key = {idx,}
@@ -1023,6 +1038,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className="text-xs"
                       onClick = {(,) => handleSendMessage(q),}
                     >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                       {q}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1086,6 +1102,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatAssistant.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {starterQuestions.map((q, idx) => (
                     <Button
                       key={idx}
@@ -1093,11 +1111,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className="text-xs"
                       onClick={() => handleSendMessage(q)}
                     >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {q}
                     </Button>
                   ))}
@@ -1176,21 +1189,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex justify-end space-x-3">
               <Button
                 variant="outline"
-<<<<<<< HEAD
                 onClick = {handleModalCancel,}
-=======
                 onClick={handleModalCancel}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 Cancel
               </Button>
               <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1201,14 +1208,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
 >>>>>>>               >
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onClick = {handleModalSendConfirm,}
-=======
                 onClick={handleModalSendConfirm}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1536,19 +1539,15 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
       )}
     </div>
   );
-<<<<<<< HEAD
 };
 };
-=======
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

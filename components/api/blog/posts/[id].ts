@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readPosts, writePosts } from "@/utils/data/blogStore";
@@ -9,11 +9,21 @@ import { requireAdmin } from "@/utils/api/auth";
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readPosts, writePosts } from "@/utils/data/blogStore";
+import { requireAdmin } from "@/utils/api/auth";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const { id } = req.query;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (typeof id !== "string")
     return res && res.status(400).json({ error: "Invalid id" });
   if (req && req.method === "PUT") {
     if (!requireAdmin(req, res)) return;
     const posts = readPosts();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -23,10 +33,18 @@ import { requireAdmin } from "@/utils/api/auth";
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    const idx = posts.findIndex((p) => p.id === id);
+    if (idx < 0) return res.status(404).json({ error: "Not found" });
+    const updated = { ...posts[idx], ...req.body, id }
+    const idx = posts.findIndex(p => p.id === id);    if (idx < 0) return res.status(404).json({ error: 'Not found' });
+    const updated = { ...posts[idx], ...req.body, id };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     posts[idx] = updated;
     writePosts(posts);
     return res.status(200).json(updated);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const { id } = req.query;
 =======
@@ -132,6 +150,33 @@ function handler() {
 }
 <<<<<<< HEAD
 
+=======
+  }
+  return res.status(405).end();
+  export default function handler(req: NextApiRequest, res: NextApiResponse) {
+return res.status(405).end();
+  export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+    const { id } = req.query;
+    if (typeof id !== "string")
+      return res.status(400).json({ error: "Invalid id" });
+    if (req.method === "PUT") {
+      if (!requireAdmin(req, res)) return;
+      const posts = readPosts();
+      const idx = posts.findIndex((p) => p.id === id);
+      const idx = posts.findIndex((p) => p.id === id);
+      if (idx < 0) return res.status(404).json({ error: "Not found" });
+      const updated = { ...posts[idx], ...req.body, id }
+      posts[idx] = updated;
+      writePosts(posts);
+      return res.status(200).json(updated);
+    }
+    return res.status(405).end();
+    return res.status(200).json(updated);
+  }
+  return res.status(405).end();
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return res.status(405).end();
 
   if (req.method === 'PUT') {
@@ -142,6 +187,7 @@ function handler() {
     const updated = { ...posts[idx], ...req.body, id };
     posts[idx] = updated;
     writePosts(posts);
+<<<<<<< HEAD
 
 =======
   // Check condition
@@ -218,3 +264,5 @@ if ( {) {
     writePosts(posts);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,11 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import * as React from 'react'
 import {
 <<<<<<< HEAD
@@ -43,7 +44,6 @@ export interface EmptyStateProps {
     onClick: () => void
   }
   icon?: React.ReactNode
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -125,6 +125,7 @@ export function EmptyState({
           className='flex items-center gap-2'        >
           <RefreshCw className='w-4 h-4' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
@@ -181,6 +182,8 @@ onst defaultContent = {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -197,10 +200,6 @@ export interface EmptyStateProps {;
   icon?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const defaultContent = {
   products: {
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
@@ -234,9 +233,12 @@ const defaultContent = {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description:
       "We're fetching the latest data for you. This should only take a moment.",
   },
@@ -269,12 +271,15 @@ export function EmptyState({
           className='flex items-center gap-2'        >
           <RefreshCw className='w-4 h-4' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
 
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
 
 export function EmptyState({
@@ -313,6 +318,7 @@ export function EmptyState({
           <RefreshCw className="w-4 h-4" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {action.label}
         </Button>
@@ -343,26 +349,26 @@ export function EmptyState({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {action.label}
         </Button>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
-=======
       
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {type === 'error' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -381,12 +387,12 @@ export function EmptyState({
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {type === 'network' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>
-<<<<<<< HEAD
             {t('general.check_status_page')}{' '}
             <Link href='https://status.zion.ai' className='underline'>
               {t('general.status_page')}
@@ -418,8 +424,6 @@ export function ProductsEmptyState({
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
       />
-<<<<<<< HEAD
-=======
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
@@ -449,8 +453,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             {t('general.check_status_page')}
             {" "}
             <Link href="https://status.zion.ai" className="underline">
@@ -506,8 +508,11 @@ export function ProductsEmptyState({;
     />;
   );
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const customDescription = isAuthenticated 
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
@@ -537,7 +542,6 @@ export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
 >>>>>>> 
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
-<<<<<<< HEAD
       />
   )
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -558,12 +562,15 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <EmptyState
       type="categories"
@@ -617,8 +624,11 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
   );
 } ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

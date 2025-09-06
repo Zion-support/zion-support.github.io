@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -22,33 +23,32 @@ interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement
   showChevron?: boolean
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { forwardRef } from 'react'
 import { ChevronDown } from 'lucide-react'
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
-=======
 import { cn } from '@/lib/utils'
 import { SafeRef } from '@/types/ref-types'
-=======
 
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
   icon?: React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   (
     {
@@ -73,12 +73,15 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
             onClick={() => setExpanded(!expanded)}          >
             <div className='flex items-center gap-2'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { forwardRef } from "react",
@@ -91,11 +94,14 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   defaultExpanded?: boolean,
   showChevron?: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { forwardRef } from "react",;
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -123,6 +129,7 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
             onClick={() => setExpanded(!expanded)}
           >
             <div className="flex items-center gap-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -159,11 +166,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {icon}
               <span>{title}</span>
             </div>
             {showChevron && (
               <ChevronDown
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -174,13 +184,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className={cn(
                   'h-4 w-4 transition-transform'
                   expanded ? 'rotate-0' : '-rotate-90'
                 )}              />
-=======
                 className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
               />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -198,16 +210,21 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 <<<<<<< HEAD
+=======
+            )}
+          </button>
+        )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className={cn('mt-1', !expanded && 'hidden')}>{children}</div>
       </div>
     )
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 )
-<<<<<<< HEAD
 SidebarGroup.displayName = 'SidebarGroup'
 export { SidebarGroup }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 SidebarGroup && SidebarGroup.displayName = 'SidebarGroup';
@@ -270,11 +287,11 @@ export { SidebarGroup };
   }
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup };
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>
       </div>
     )
@@ -293,6 +310,7 @@ SidebarGroup.displayName = "SidebarGroup",;
 export { SidebarGroup };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -305,3 +323,5 @@ export { SidebarGroup };
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

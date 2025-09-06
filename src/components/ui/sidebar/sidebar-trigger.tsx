@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export const SidebarTrigger = React.forwardRef<
 =======
@@ -8,11 +9,14 @@ export const SidebarTrigger = React.forwardRef<
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from &quot;react&quot;
 import { PanelLeft } from 'lucide-react';
 import { Button } from &quot;@/components/ui/button&quot;
 import { cn } from &quot;@/lib/utils&quot;
 import { useSidebar } from &quot;./sidebar-context&quot;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Button } from &quot;@/components/ui/button&quot;
 import { cn } from &quot;@/lib/utils&quot;
@@ -22,19 +26,17 @@ xport const SidebarTrigger = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react"
 import { PanelLeft } from 'lucide-react'
-<<<<<<< HEAD
 import { Button } from &quot;@/components/ui/button&quot;
 import { cn } from &quot;@/lib/utils&quot;
 import { useSidebar } from &quot;./sidebar-context&quot;
-=======
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const SidebarTrigger = React.forwardRef<
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   React.ElementRef<typeof Button>
@@ -57,18 +59,22 @@ export const SidebarTrigger = React.forward_ref<;
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
   return (
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Button;
       ref={ref};
       data-sidebar=&quot;trigger&quot;
       variant=&quot;ghost&quot;
       size=&quot;icon&quot;
       className={cn(&quot;h-7 w-7&quot; props.className)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       onClick={(event) => {
@@ -77,13 +83,14 @@ export const SidebarTrigger = React.forward_ref<;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Button
       ref={ref}
       data-sidebar="trigger"
       variant="ghost"
       size="icon"
       className={cn("h-7 w-7", props.className)}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()
@@ -98,6 +105,7 @@ export const SidebarTrigger = React.forward_ref<;
 })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
@@ -105,8 +113,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
 SidebarTrigger.displayName = "SidebarTrigger"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

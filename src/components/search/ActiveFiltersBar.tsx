@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7,6 +8,8 @@
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 export default ActiveFiltersBar; import React from 'react'
@@ -20,9 +23,12 @@ interface SearchFilters {
   maxPrice: number,
   minRating: number,
   sort: string
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -34,6 +40,7 @@ interface SearchFilters {;
   maxPrice: number,;
   minRating: number,;
   sort: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -101,6 +108,8 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 interface ActiveFiltersBarProps {;
@@ -191,7 +200,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   if (activeFilters.length === 0) {;
     return null;
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 
 export default ActiveFiltersBar; import React from 'react'
@@ -416,6 +424,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       {activeFilters.map(filter => (
         <Badge 
@@ -428,21 +437,25 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
           key = {filter.key,}
           variant="secondary"
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {activeFilters.map(filter => (
-<<<<<<< HEAD
         <Badge
           key = {filter.key,}
           variant="secondary"
-=======
         <Badge 
           key = {filter.key,}
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>           variant="secondary" 
 >>>>>>>           className="flex items-center gap-1 pl-2 pr-1"
@@ -456,6 +469,9 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
           variant="secondary" 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          variant="secondary" 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className="flex items-center gap-1 pl-2 pr-1"
 >>>>>>>         >
           <span className="text-xs">
@@ -482,6 +498,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
             className="h-4 w-4 p-0 hover:bg-transparent"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             aria-label={`Remove ${filter.label} filter`}
 =======
@@ -489,14 +506,10 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 >>>>>>>             aria-label={`Remove ${filter.label} filter`}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             onClick = {(,) => removeFilter(filter.key),}
-=======
             onClick={() => removeFilter(filter.key)}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             aria-label={`Remove ${filter.label} filter`}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >
@@ -513,6 +526,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
         size="sm"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         onClick = {onClearAll,}
@@ -520,15 +534,19 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-        onClick = {onClearAll,}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        onClick = {onClearAll,}
         onClick={onClearAll}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className="text-xs h-6 px-2"
 >>>>>>>       >
         Clear all
@@ -537,17 +555,22 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default ActiveFiltersBar
-=======
 },
 
 export default ActiveFiltersBar,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface Filter {
   key: string
   value: string
@@ -561,11 +584,21 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
       >
         Clear all
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+      </button>
+    </div>
+  )}
+'"
+
+export default ActiveFiltersBar,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </button>;
     </div>;
   )};
 '";
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       </button>
@@ -598,3 +631,5 @@ export default ActiveFiltersBar,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

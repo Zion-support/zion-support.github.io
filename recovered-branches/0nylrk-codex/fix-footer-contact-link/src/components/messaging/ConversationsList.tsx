@@ -13,7 +13,6 @@ export function ConversationsList({ ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
 import React from 'react';
 import { User  } from 'lucide-react';
 import { Conversation  } from '@/types/messaging';
@@ -26,20 +25,21 @@ interface ConversationsListProps {
 
   markAsRead: (conversationId: string) => Promise<void>
 }
-<<<<<<< HEAD
 export function ConversationsList({
   conversations;
 
   activeConversation
   setActiveConversation
   markAsRead
-=======
 
 export function ConversationsList({ ;
   conversations;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -53,6 +53,7 @@ interface ConversationsListProps {;
 
 export function ConversationsList({ 
   conversations,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   activeConversation, 
@@ -71,6 +72,11 @@ export function ConversationsList({
   markAsRead 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  activeConversation, 
+  setActiveConversation, 
+  markAsRead 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -96,6 +102,7 @@ export function ConversationsList({
               key={conversation.id}
               conversation={conversation}
               isActive={activeConversation?.id === conversation.id}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -268,19 +275,15 @@ function ConversationsList() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onClick={() => {
                 setActiveConversation(conversation);
 
                 markAsRead(conversation.id)
-=======
               onClick={() => {;
                 setActiveConversation(conversation);
                 markAsRead(conversation.id);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
             />
           ))}

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -405,22 +406,29 @@ export default function HomePage() {
 
 =======
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight
   Brain
   Shield
@@ -447,8 +455,11 @@ import {
   Network;} from 'lucide-react';import {
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Brain,
   Shield,
@@ -472,27 +483,29 @@ import {
   TrendingUp,
   BarChart3,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Cloud,
   Network,;} from 'lucide-react';import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   Cloud,;
   Network,;} from 'lucide-react';import {
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, ;
-=======
   Cloud,
   Network,;} from 'lucide-react';import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
  } from 'lucide-react';
@@ -1008,12 +1021,15 @@ className="mb-8"
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60'          />          <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             animate={{ y: [0, -20, 0] }}
@@ -1065,6 +1081,7 @@ className="mb-8"
 
           <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1072,6 +1089,8 @@ className="mb-8"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60'          />
 
           />
@@ -1086,11 +1105,14 @@ className="mb-8"
           <motion.div
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1108,15 +1130,16 @@ className="mb-8"
           >
 =======
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Revolutionary Technology Solutions
@@ -1218,15 +1241,8 @@ className="mb-8"
                   <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
 =======
                 className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-<<<<<<< HEAD
-=======
 
               >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
                 <div className='relative z-10'>
                   <div
@@ -1288,14 +1304,12 @@ className="mb-8"
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Stats Section */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-=======
 
       {/* Stats Section */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
@@ -1303,12 +1317,15 @@ className="mb-8"
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {stats.map((stat, index) => (
               <motion.div
 import {
@@ -1696,14 +1713,7 @@ function HomePage() {
               >
 =======
                 className='text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center'>
                   <stat.icon className='w-8 h-8 text-white' />
@@ -1719,6 +1729,7 @@ function HomePage() {
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1744,12 +1755,9 @@ function HomePage() {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             ))}
 <<<<<<< HEAD
       <div id="services">
@@ -1757,14 +1765,13 @@ function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Enhanced Services Showcase */}
       <div id='services'>        <EnhancedServicesShowcase />      <div id="services">
-=======
 
       {/* Enhanced Services Showcase */}
       <div id='services'>        <EnhancedServicesShowcase />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1772,11 +1779,13 @@ function HomePage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <EnhancedServicesShowcase />
       </div>
-<<<<<<< HEAD
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1791,6 +1800,8 @@ function HomePage() {
       </div>;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
       {/* Enhanced Services Showcase */}
@@ -1821,12 +1832,15 @@ function HomePage() {
       <EnhancedTestimonialsSection />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Latest Updates Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-6">;
@@ -1842,6 +1856,7 @@ function HomePage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1863,6 +1878,9 @@ function HomePage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1959,15 +1977,8 @@ function HomePage() {
             <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
 =======
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Latest Autonomous Updates
             </h2>
@@ -2165,6 +2176,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
         <div className="max-w-7xl mx-auto">
           <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2180,6 +2192,9 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -2198,15 +2213,16 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
           >
 =======
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Ready to Get Started?
@@ -2227,6 +2243,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
       </section>
       <EnhancedFooter />
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2347,34 +2364,28 @@ and digital transformation solutions that drive innovation and growth. </p> <div
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-<<<<<<< HEAD
 and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Explore Services <ArrowRight className="w-5 h-5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Revolutionary Technology Solutions </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Discover our cutting-edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) )
 }</div> </div> </section> > <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center" > <stat.icon className="w-8 h-8 text-white" /> </div> </motion.div>) )
 }</div> </div> </section> <EnhancedServicesShowcase /> </div> {
   /* Enhanced Testimonials Section */
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) }
-=======
   );
-=======
-=======
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Explore Services <ArrowRight className="w-5 h-5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Revolutionary Technology Solutions </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Discover our cutting-edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) ) 
 }</div> </div> </section> > <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center" > <stat.icon className="w-8 h-8 text-white" /> </div> </motion.div>) ) 
 }</div> </div> </section> <EnhancedServicesShowcase /> </div> {
   /* Enhanced Testimonials Section */ 
-<<<<<<< HEAD
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>)
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) }
-=======
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>)
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

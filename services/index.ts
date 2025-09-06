@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:services/index.ts
 <<<<<<< HEAD
 
@@ -12,6 +13,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Export all micro SaaS services
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export { urlShortenerService } from './urlShortenerService';
@@ -116,44 +119,36 @@ export type {;
   ClickEvent;
   CreateShortUrlRequest
 } from './urlShortenerService';
-<<<<<<< HEAD
 export type {
-=======
 
 export type {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword
 } from './passwordGeneratorService';
-<<<<<<< HEAD
 export type {
-=======
 
 export type {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   QRCodeOptions;
   QRCodeResult;
   QRCodeTemplate
 } from './qrCodeService';
-<<<<<<< HEAD
 export type {
-=======
 
 export type {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
   FileInfo
 } from './fileConverterService';
-<<<<<<< HEAD
 export type {
-=======
 
 export type {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   TextAnalysisResult;
   BasicTextStats;
   ReadabilityMetrics;
@@ -249,11 +244,8 @@ export const SERVICE_CATEGORIES = {
 // Service metadata for the application
 export const SERVICES_METADATA = {
   urlShortener: {
-<<<<<<< HEAD
     name: 'URL Shortener'
-=======
     name: 'URL Shortener',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     description: 'Create short, trackable URLs with analytics';
     icon: '🔗';
     category: 'UTILITIES';
@@ -378,6 +370,7 @@ export const SERVICES_METADATA = {
 // Service availability and status
 export const getServiceStatus = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:services/index.ts
 
 <<<<<<< HEAD
@@ -385,18 +378,24 @@ export const getServiceStatus = () => {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return {
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return {;
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -413,6 +412,8 @@ export const getServiceStatus = () => {
     textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
@@ -429,6 +430,7 @@ export const getServiceStats = () => {
     averageResponseTime: 125
     services: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:services/index.ts
 
 <<<<<<< HEAD
@@ -436,6 +438,8 @@ export const getServiceStats = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 }
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 }
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 }
@@ -630,12 +634,16 @@ textAnalysis: {
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -644,6 +652,8 @@ textAnalysis: {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Export all micro SaaS services;
 export { urlShortenerService } from './urlShortenerService',;
 export { passwordGeneratorService } from './passwordGeneratorService',;
@@ -801,6 +811,7 @@ export const getServiceStats = () => {;
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },;
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -832,9 +843,14 @@ export const getServiceStats = () => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
   }
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

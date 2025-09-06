@@ -24,15 +24,16 @@ export default function RequestToHirePage() {
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function RequestToHirePage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
 
 export default function RequestToHirePage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(
@@ -582,11 +583,8 @@ if ( {) {
         <button disabled={submitting} className=&quot;px-4 py-2 rounded bg-black text-white&quot;>
 =======
     }
-<<<<<<< HEAD
   }
-=======
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   if (result) {
     return (
@@ -692,6 +690,7 @@ if ( {) {
       </form>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 
 }
@@ -707,11 +706,15 @@ if ( {) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
-=======
   );
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

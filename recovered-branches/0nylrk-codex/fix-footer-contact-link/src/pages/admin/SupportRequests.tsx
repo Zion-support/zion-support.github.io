@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Input} from "@/components/ui/input";
@@ -19,9 +16,12 @@ import {Badge} from "@/components/ui/badge";
 import {Search, Filter} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -32,6 +32,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge",
 import { Search, Filter } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -40,17 +41,21 @@ import { Search, Filter } from "lucide-react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
-=======
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -65,6 +70,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-15T15:45:00Z"
     category: "authentication"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -75,11 +81,15 @@ const MOCK_SUPPORT_REQUESTS = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "SR-1002"
     user: "sarah.smith@company.co"
@@ -91,6 +101,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-15T13:20:00Z"
     category: "billing"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -101,11 +112,15 @@ const MOCK_SUPPORT_REQUESTS = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "SR-1003"
     user: "tech.guru@startup.io"
@@ -117,6 +132,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-15T11:00:00Z"
     category: "billing"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -127,11 +143,15 @@ const MOCK_SUPPORT_REQUESTS = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "SR-1004"
     user: "developer@codelab.dev"
@@ -143,6 +163,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T16:45:00Z"
     category: "api"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -153,11 +174,15 @@ const MOCK_SUPPORT_REQUESTS = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "SR-1005"
     user: "maria.rodriguez@design.co"
@@ -169,6 +194,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-15T09:15:00Z"
     category: "disputes"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -179,11 +205,15 @@ const MOCK_SUPPORT_REQUESTS = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "SR-1006"
     user: "alex.wong@datacompany.com"
@@ -195,6 +225,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-15T08:30:00Z"
     category: "verification"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -205,11 +236,15 @@ const MOCK_SUPPORT_REQUESTS = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "SR-1007"
     user: "jamie.taylor@tech.org"
@@ -221,6 +256,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T11:25:00Z"
     category: "profile"
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -265,31 +301,32 @@ import {SEO} from "@/components/SEO";
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
-=======
 ],
 
-<<<<<<< HEAD
 export default function SupportRequests() {;
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
-=======
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [statusFilter, setStatusFilter] = useState<string | null>(null),
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
@@ -299,11 +336,14 @@ export default function SupportRequests() {
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
@@ -469,6 +509,7 @@ export default function SupportRequests() {;
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -480,6 +521,8 @@ export default function SupportRequests() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -494,6 +537,7 @@ export default function SupportRequests() {;
       return false
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const resetFilters = () => {
@@ -506,6 +550,8 @@ export default function SupportRequests() {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return true
   });
   // Count by status for the summary dashboard
@@ -513,8 +559,11 @@ export default function SupportRequests() {;
   const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     return true
   }),
@@ -525,6 +574,7 @@ export default function SupportRequests() {;
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
   const totalCount = MOCK_SUPPORT_REQUESTS.length,
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -542,19 +592,22 @@ export default function SupportRequests() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const resetFilters = () => {
     setSearchQuery(""),
     setStatusFilter(null),
     setPriorityFilter(null),
     setCategoryFilter(null)
-<<<<<<< HEAD
   }
 
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <AppLayout>
       <SEO
@@ -912,6 +965,7 @@ export default function SupportRequests() {;
                 />
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -921,11 +975,15 @@ export default function SupportRequests() {;
 
 =======
 <<<<<<< HEAD
-              <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -937,6 +995,7 @@ export default function SupportRequests() {;
                 </SelectContent>
               </Select>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -947,11 +1006,15 @@ export default function SupportRequests() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-              <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -963,6 +1026,7 @@ export default function SupportRequests() {;
                 </SelectContent>
               </Select>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -973,11 +1037,15 @@ export default function SupportRequests() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-              <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -1027,6 +1095,7 @@ export default function SupportRequests() {;
                               : 'outline'
                           }>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1039,6 +1108,8 @@ export default function SupportRequests() {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     return true;
   }),;
@@ -1249,6 +1320,7 @@ export default function SupportRequests() {;
                               : 'outline';
                           }>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1259,6 +1331,8 @@ export default function SupportRequests() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             {request.status}
                           </Badge>
                         </TableCell>
@@ -1378,6 +1452,7 @@ export default function SupportRequests() {;
       </div>
     </AppLayout>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1826,9 +1901,13 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

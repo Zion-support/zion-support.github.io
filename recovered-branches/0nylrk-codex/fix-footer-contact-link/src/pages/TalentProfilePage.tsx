@@ -44,9 +44,12 @@ class ErrorBoundary extends React.Component {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/components/profile/TalentProfile";
@@ -83,6 +86,7 @@ export default function TalentProfilePage() {
   const { userDetails } = useAuthStatus();
   const { isAuthenticated, user } = useAuth();
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
 
 
@@ -92,6 +96,8 @@ export default function TalentProfilePage() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { TalentProfile } from "@/components/profile/TalentProfile",
@@ -107,7 +113,6 @@ import { Handshake, MessageSquare } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
-<<<<<<< HEAD
 import { toast } from "@/hooks/use-toast";
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped
@@ -119,7 +124,6 @@ export default function TalentProfilePage() {
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
   const { isAuthenticated, user } = useAuth();
-=======
 import { toast } from "@/hooks/use-toast",
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped
@@ -130,10 +134,12 @@ export default function TalentProfilePage() {
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user ? {
     id: user.id |''
@@ -155,6 +161,7 @@ export default function TalentProfilePage() {
     role: '' // Default empty string since userDetails doesn't have this property
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -165,12 +172,16 @@ export default function TalentProfilePage() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle loading error gracefully
   useEffect(() => {
     if (error) {
@@ -179,18 +190,24 @@ export default function TalentProfilePage() {
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }, [error]);
   if (isLoading) {
     return <ProfileLoadingState />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { TalentProfile } from "@/components/profile/TalentProfile",;
@@ -248,6 +265,7 @@ export default function TalentProfilePage() {;
   if (isLoading) {;
     return <ProfileLoadingState />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -259,10 +277,13 @@ export default function TalentProfilePage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -278,6 +299,9 @@ export default function TalentProfilePage() {;
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
@@ -290,6 +314,7 @@ export default function TalentProfilePage() {;
     setIsHireModalOpen(true)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -300,12 +325,16 @@ export default function TalentProfilePage() {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
       toast({
@@ -317,17 +346,19 @@ export default function TalentProfilePage() {;
     }
     setIsMessageModalOpen(true)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
   return (
     <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile
         profile={profile}
-=======
   },
 
   return (
@@ -335,11 +366,14 @@ export default function TalentProfilePage() {;
       <TalentProfile 
         profile={profile} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   const handleRequestHire = () => {;
     if (!isAuthenticated) {;
@@ -368,6 +402,7 @@ export default function TalentProfilePage() {;
       <TalentProfile;
         profile={profile} ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   },
@@ -386,6 +421,8 @@ export default function TalentProfilePage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />
@@ -597,6 +634,7 @@ export default function TalentProfilePage() {;
         </div>
       </StickyAction>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -782,6 +820,9 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}
@@ -798,6 +839,7 @@ if ( {) {
         talent={profile}
         isOpen={isMessageModalOpen}
         onClose={() => setIsMessageModalOpen(false)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -825,12 +867,17 @@ if ( {) {
 ========
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />;
     </div>;
   );
@@ -942,5 +989,8 @@ const handleMessageTalent = () => {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

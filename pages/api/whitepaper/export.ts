@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -54,6 +55,8 @@ function escape_html() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -61,10 +64,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { markdown, tokenName } = req.body || {},
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' }),
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
@@ -84,10 +84,13 @@ function escapeHtml(str: string) {
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next',
@@ -97,15 +100,19 @@ export default async function handler(req, res) {
   const { markdown, tokenName } = req.body || {},
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`,
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -113,6 +120,8 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 function escapeHtml(str: string) {
@@ -121,9 +130,12 @@ function escapeHtml(str: string) {
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,');
 };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -167,6 +179,7 @@ function escapeHtml(str: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -175,10 +188,14 @@ function escapeHtml(str: string) {;
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

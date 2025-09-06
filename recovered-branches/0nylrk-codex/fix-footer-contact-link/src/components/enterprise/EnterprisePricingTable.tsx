@@ -12,18 +12,12 @@ import React from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Check, X} from "lucide-react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
 import {
@@ -34,7 +28,6 @@ import {
   TableHeader;
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
-=======
 import { Button } from "@/components/ui/button",
 import { Check, X } from "lucide-react",
 import {
@@ -46,11 +39,14 @@ import {
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function EnterprisePricingTable() {
 
   const plans = [
@@ -73,6 +69,7 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false }]}
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -88,25 +85,28 @@ export function EnterprisePricingTable() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       name: "Business"
       price: "$1,999";
       billing: "/month"
       description: "Ideal for growing companies"
       users: "Up to 50 users"
       popular: true
-=======
       name: "Business",;
       price: "$1,999";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       name: "Business",
       price: "$1,999",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -117,6 +117,8 @@ export function EnterprisePricingTable() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       features: [
         { name: "Private hiring portal", included: true }
         { name: "Dedicated talent pool", included: true }
@@ -165,6 +167,7 @@ export function EnterprisePricingTable() {
                       {plan.popular && (
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -182,6 +185,8 @@ import {Badge} from "@/components/ui/badge";
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Check, X } from "lucide-react",;
@@ -716,11 +721,6 @@ features: [ return (<section id=" pricing"className="py-20 px-4 md:px-6"> plans.
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       )}
                       <span className="font-bold text-xl">{plan.name}</span>
                       <div className="flex items-baseline mt-1">

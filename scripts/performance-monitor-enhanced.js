@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -11,6 +12,10 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
 const fs = require('fs');
 const path = require('path');
@@ -61,6 +66,7 @@ Object.entries(performanceChecks).forEach(([name, check]) => {
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 console.log('🎉 Performance monitoring completed!');
@@ -84,3 +90,13 @@ const fs = require('fs'); const path = require('path'); console.log('📊 Enhanc
 const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+console.log('🎉 Performance monitoring completed!');
+const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
+const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
+const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/referralUtils.ts
@@ -11,11 +12,15 @@ import {format} from 'date-fns';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { format } from 'date-fns';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { format } from 'date-fns';
 import {format} from 'date-fns';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -103,10 +108,13 @@ export function checkUrlForReferralCode(): string | null {;
     window.history.replaceState({}, document.title, url.toString());
     return refCode
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format } from 'date-fns',;
 /**;
  * Formats a date for display in the referral system;
@@ -151,6 +159,7 @@ export function checkUrlForReferralCode(): string | null {;
     url.searchParams.delete('ref'),;
     window.history.replaceState({}, document.title, url.toString()),;
     return refCode;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -197,14 +206,12 @@ function track_referral() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return localStorage.getItem('referral_code')
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /**
  * Track referral when a user signs up
  */
@@ -254,8 +261,11 @@ export async function trackReferral(userId: string, email: string) {
     if (response.ok) {
       // Clear the stored referral code
       localStorage.removeItem('referral_code')
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 /**;
  * Track referral when a user signs up;
@@ -278,6 +288,7 @@ export async function trackReferral(userId: string, email: string) {;
     if (response.ok) {;
       // Clear the stored referral code;
       localStorage.removeItem('referral_code');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -398,6 +409,8 @@ export async function trackReferral(userId:string, email:string) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   } catch (error) {
     console.error('Error tracking referral:', error)

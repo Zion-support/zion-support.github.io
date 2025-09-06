@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -46,17 +47,22 @@ import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../components/layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -117,6 +123,8 @@ import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Search
   Filter
   Grid3X3
@@ -157,9 +165,12 @@ import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services
   Zap as ZapIcon
   Target as TargetIcon;} from 'lucide-react';import {
   Search, Filter, Grid3X3, List
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Search,
   Filter,
   Grid3X3,
@@ -227,7 +238,6 @@ import { emergingTechServicesEnhanced2025 } from '../data / emerging - tech - se
   Zap as ZapIcon,;
   Target as TargetIcon,;} from 'lucide-react';import {
   Search, Filter, Grid3X3, List, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
@@ -299,6 +309,7 @@ const allServices: Service[] = [
   launchDate: string;
   badge?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -350,8 +361,9 @@ const allServices: Service[] = [
     icon: <Atom className="w-6 h-6" />
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   icon?: React.ReactNode;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   icon?: React.ReactNode;
 const allServices: Service[] = [
@@ -417,6 +429,7 @@ const categories = [
 const priceRanges = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -426,18 +439,24 @@ const priceRanges = [
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   { label: 'All Prices', value: 'all' }
   { label: 'Under $50/month', value: 'under-50' }
   { label: '$50 - $200/month', value: '50-200' }
   { label: '$200 - $500/month', value: '200-500' }
   { label: 'Over $500/month', value: 'over-500' },];  { label: 'Over $500/month', value: 'over-500' }
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   { label: 'All Prices', value: 'all' },
   { label: 'Under $50/month', value: 'under-50' },
   { label: '$50 - $200/month', value: '50-200' },
   { label: '$200 - $500/month', value: '200-500' },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -452,19 +471,20 @@ const sortOptions = [
   { label: 'Over $500/month', value: 'over-500' }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   { label: 'Over $500/month', value: 'over-500' },];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   { label: 'Over $500/month', value: 'over-500' },];  { label: 'Over $500/month', value: 'over-500' }
-=======
   { label: 'Over $500/month', value: 'over-500' },];
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 const sortOptions = [
   icon?: React && React.ReactNode;
@@ -544,15 +564,18 @@ const sortOptions = [;
   { label: 'Price: High to Low', value: 'price-high' },];  { label: 'Price: High to Low', value: 'price-high' }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function ComprehensiveServicesShowcase2025() {;
 =======
 <<<<<<< HEAD
-export default function ComprehensiveServicesShowcase2025() {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function ComprehensiveServicesShowcase2025() {
 
 <<<<<<< HEAD
 =======
 export default function ComprehensiveServicesShowcase2025() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -568,6 +591,8 @@ export default function ComprehensiveServicesShowcase2025() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -876,7 +901,6 @@ if ( {) {
 =======
     setFilteredServices(filtered);  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
   const getCategoryColor = (category: string) => {
-<<<<<<< HEAD
     switch (category) {        case 'price-low':
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -886,6 +910,7 @@ if ( {) {
         default: return 0
       }
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     setFilteredServices(filtered);  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
@@ -901,19 +926,22 @@ if ( {) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     switch (category) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    setFilteredServices(filtered)
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    setFilteredServices(filtered)
     switch (category) {
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
   const getCategoryColor = (category: string) => {
     switch (category) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -938,6 +966,8 @@ if ( {) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case 'Micro SAAS':
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1070,6 +1100,7 @@ if ( {) {
       case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />;
       default: return <Globe className="w-5 h-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   };
 <<<<<<< HEAD
@@ -1108,13 +1139,17 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout>
       <Head>
@@ -1332,15 +1367,9 @@ left: `${Math.random () * 100}%`,
                 left: `${Math.random() * 100}%`
                 top: `${Math.random() * 100}%`
               }}            />
-=======
-<<<<<<< HEAD
 
             />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
             />
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           ))}
         </div>
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion.div                top: `${Math.random() * 100}%`}}
@@ -1474,6 +1503,7 @@ left: `${Math.random () * 100}%`,
                   transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
                   className='text-center'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1491,6 +1521,9 @@ left: `${Math.random () * 100}%`,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400'>
                     {stat.icon}
@@ -1500,12 +1533,15 @@ left: `${Math.random () * 100}%`,
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
                   <div className='text-sm text-cyan-300'>{stat.label}</div>                </motion.div>
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='text-sm text-cyan-300'>{stat.label}</div>                </motion.div>                >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400">
                     {stat.icon}
@@ -1515,7 +1551,6 @@ left: `${Math.random () * 100}%`,
                 </motion.div>
               ))}
             </div>
-=======
                   <div className='text-sm text-cyan-300'>{stat.label}</div>                </motion.div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1524,6 +1559,7 @@ left: `${Math.random () * 100}%`,
               ))}
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1535,10 +1571,13 @@ left: `${Math.random () * 100}%`,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Search Bar */}
             <div className='max-w-2xl mx-auto'>
               <div className='relative'>
                 <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1559,6 +1598,9 @@ left: `${Math.random () * 100}%`,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <input
                   type='text'
                   placeholder='Search for services, features, or solutions...'
@@ -1686,7 +1728,6 @@ left: `${Math.random () * 100}%`,
           <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0'>
             {/* Category Filters */}
             <div className='flex flex-wrap items-center space-x-2'>
-<<<<<<< HEAD
               {categories.map(category => (                <button      <div className="bg-black/50 backdrop-blur-lg border-b border-cyan-500/20 sticky top-20 z-40">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -1694,6 +1735,7 @@ left: `${Math.random () * 100}%`,
             {/* Category Filters */}
             <div className="flex flex-wrap items-center space-x-2">
               {categories.map((category) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <button
             <div className='max - w-2xl mx - auto'>;
@@ -1745,10 +1787,13 @@ left: `${Math.random () * 100}%`,
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {categories.map(category => (                <button
 
                 <button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1762,6 +1807,8 @@ left: `${Math.random () * 100}%`,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={category.name}
                   on_click={() => setSelectedCategory (category.name)}
                   className={`flex items - center space - x-2 px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 200 ${
@@ -1848,36 +1895,22 @@ left: `${Math.random () * 100}%`,
               </select>;
 =======
                   <span>{category.name}</span>
-<<<<<<< HEAD
                   <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>                    {category.count}                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}
-=======
                   <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>                    {category.count}
 
                     {category.count}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </span>
                 </button>
               ))}
             </div>
-<<<<<<< HEAD
             {/* Price and Sort Controls */}
             <div className='flex flex-wrap items-center space-x-4'>
-=======
 
             {/* Price and Sort Controls */}
             <div className='flex flex-wrap items-center space-x-4'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Price Range Filter */}
               <select
                 value={selectedPriceRange}
@@ -1889,7 +1922,6 @@ left: `${Math.random () * 100}%`,
                     key={range.value}
                     value={range.value}
                     className='bg-gray-900 text-white'
-<<<<<<< HEAD
                   >                    {range.label}              {/* Price Range Filter */}
               <select
                 value={selectedPriceRange}
@@ -1902,7 +1934,6 @@ left: `${Math.random () * 100}%`,
                   </option>
                 ))}
               </select>
-=======
                   >                    {range.label}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1912,6 +1943,7 @@ left: `${Math.random () * 100}%`,
                 ))}
               </select>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1951,6 +1983,8 @@ left: `${Math.random () * 100}%`,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Sort Options */}
               <select
                 value={sortBy}
@@ -1967,15 +2001,17 @@ left: `${Math.random () * 100}%`,
                 ))}
               </select>
 <<<<<<< HEAD
+<<<<<<< HEAD
 {/* View Mode Toggle */}
               <div className="flex items-center space-x-1 bg-white/10 rounded-lg p-1">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* View Mode Toggle */}
               <div className='flex items-center space-x-1 bg-white/10 rounded-lg p-1'>                <button              <div className="flex items-center space-x-1 bg-white/10 rounded-lg p-1">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <button
-=======
 
               {/* View Mode Toggle */}
               <div className='flex items-center space-x-1 bg-white/10 rounded-lg p-1'>                <button
@@ -1983,11 +2019,14 @@ left: `${Math.random () * 100}%`,
                 <button
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-200 ${;
                     viewMode === 'grid';
@@ -2156,6 +2195,7 @@ left: `${Math.random () * 100}%`,
 
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2183,12 +2223,9 @@ left: `${Math.random () * 100}%`,
                 className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {/* Category Badge */}
@@ -2221,6 +2258,7 @@ left: `${Math.random () * 100}%`,
                 </div>
                 {/* Service Icon */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   </div>
                 </div>
@@ -2247,20 +2285,16 @@ left: `${Math.random () * 100}%`,
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='mb-4'>
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>                <div className="mb-4">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
-=======
 
                     {service.icon}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 </div>
                 {/* Service Info */}
@@ -2333,14 +2367,7 @@ left: `${Math.random () * 100}%`,
                 </h3>
 =======
                 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {service.name}
                 </h3>
                 <p className='text-gray-400 mb-3 line-clamp-2'>
@@ -2348,6 +2375,7 @@ left: `${Math.random () * 100}%`,
                 </p>
                 <p className='text-sm text-gray-500 mb-4 line-clamp-3'>                  {service.description}
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2357,6 +2385,8 @@ left: `${Math.random () * 100}%`,
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {/* Price */}                  {service.name}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </h3>
@@ -2391,7 +2421,6 @@ left: `${Math.random () * 100}%`,
 <<<<<<< HEAD
 
                     <Users className="w-4 h-4" />
-=======
 
 
 =======
@@ -2407,6 +2436,7 @@ left: `${Math.random () * 100}%`,
                 {/* Price */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2418,6 +2448,8 @@ left: `${Math.random () * 100}%`,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <span>{service.customers.toLocaleString()}</span>
                   </div>
                 </div>
@@ -2486,6 +2518,7 @@ left: `${Math.random () * 100}%`,
                       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2499,6 +2532,8 @@ left: `${Math.random () * 100}%`,
                     )}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     ))}
                     {service.features.length > 3 && (
                       <div className="text-xs text-cyan-400">
@@ -2525,7 +2560,6 @@ left: `${Math.random () * 100}%`,
 =======
                   <div className='flex items-center justify-between'>                    <span>Market Size: {service.marketSize}</span>                <div className="mb-4 text-xs text-gray-500">
                   <div className="flex items-center justify-between">
-=======
                     )}
                   </div>
                 </div>
@@ -2535,12 +2569,15 @@ left: `${Math.random () * 100}%`,
                   <div className='flex items-center justify-between'>                    <span>Market Size: {service.marketSize}</span>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <span>Market Size: {service.marketSize}</span>
                     <span>Growth: {service.growthRate}</span>
                   </div>
@@ -2583,6 +2620,7 @@ left: `${Math.random () * 100}%`,
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'
+<<<<<<< HEAD
 
 =======
 =======
@@ -2810,12 +2848,9 @@ left: `${Math.random () * 100}%`,
                 className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               >
                 <div className='flex items-start space-x-6'>
                   {/* Service Icon */}
@@ -2831,15 +2866,8 @@ left: `${Math.random () * 100}%`,
                   {/* Service Details */}
                   <div className='flex-1 min-w-0'>
                     <div className='flex items-start justify-between mb-3'>
-<<<<<<< HEAD
-=======
 
                       <div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <h3 className='text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
                           {service.name}
                         </h3>
@@ -2861,17 +2889,18 @@ left: `${Math.random () * 100}%`,
                         <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>
                         <div className="text-gray-500 text-sm">/month</div>
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white mt-2`}>
-<<<<<<< HEAD
-=======
 
                           {service.category}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         </span>
                       </div>
                     </div>
@@ -2889,6 +2918,7 @@ left: `${Math.random () * 100}%`,
                         <span className='text-gray-500'>
                           ({service.reviews} reviews)
                         </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2911,6 +2941,10 @@ left: `${Math.random () * 100}%`,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+                      </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div className='flex items-center space-x-1 text-gray-400'>
                         <Users className='w-4 h-4' />
                         <span className='text-white font-medium'>
@@ -3017,8 +3051,6 @@ left: `${Math.random () * 100}%`,
                         ))}
                       </div>
                     </div>
-<<<<<<< HEAD
-=======
 
                     {/* Features */}
 
@@ -3029,11 +3061,6 @@ left: `${Math.random () * 100}%`,
                       </div>
                     </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* CTA */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <div className='flex items-center justify-between'>
@@ -3067,6 +3094,7 @@ left: `${Math.random () * 100}%`,
 <<<<<<< HEAD
           </div>
         )}
+<<<<<<< HEAD
 
 =======
 </div>;
@@ -3081,6 +3109,9 @@ left: `${Math.random () * 100}%`,
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* No Results */}
         {filteredServices.length === 0 && (
           <div className='text-center py-20'>
@@ -3143,6 +3174,7 @@ left: `${Math.random () * 100}%`,
           </div>
         )}
       </div>
+<<<<<<< HEAD
 
       {/* CTA Section */}
       <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20'>
@@ -3565,25 +3597,15 @@ top: `$ {;
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* CTA Section */}
       <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>          <motion.div      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -3694,13 +3716,14 @@ href="/pricing"
 =======
 =======
   );
-<<<<<<< HEAD
   filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () )
-=======
   filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () ) 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }//Sort services filtered.sort ( (a, b) => {
   switch (sort_by) {
   case 'popular': return b.customers - a.customers;
@@ -3774,6 +3797,7 @@ top: `$ {
 }viewport= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
   once: true;
 }> <h2 className=" text - 4xl font - bold text - white mb - 6"> Ready to Transform Your Business? </h2> <p className=" text - xl text - cyan - 300 mb - 8 max - w-3xl mx - auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - medium py - 4 px - 8 rounded - xl transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 500 / 25 hover:scale - 105"> Get Started Today </a> <a href=" /pricing"className=" border border - cyan - 500 / 50 text - cyan - 300 hover:text - white hover:bg - gradient - to - r hover:from - cyan - 500 / 20 hover:to - blue - 500 / 20 font - medium py - 4 px - 8 rounded - xl transition - all duration - 200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   );
 }
@@ -3798,24 +3822,24 @@ top: `$ {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   once: true
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   )
 }
-=======
   once: true 
 
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   once: true 
 
-<<<<<<< HEAD
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   )
 }
 ;
-=======
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

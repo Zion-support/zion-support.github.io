@@ -5,16 +5,17 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Skill  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useSkills() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Skill} from '@/types/resume';
@@ -22,12 +23,15 @@ import {useAuth} from '@/hooks/useAuth';
 import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -36,6 +40,7 @@ export function useSkills() {;
     if (!user) {
       setError('You must be logged in to add skills')
       return false
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -53,6 +58,11 @@ export function useSkills() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+    setIsLoading(true);
+    setError(null);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Skill } from '@/types/resume',;
@@ -67,6 +77,7 @@ export function useSkills() {;
       setError('You must be logged in to add skills'),;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -79,6 +90,8 @@ export function useSkills() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     
     setIsLoading(true),
@@ -88,6 +101,7 @@ export function useSkills() {;
 
 =======
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -95,10 +109,13 @@ export function useSkills() {;
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { error } = await supabase
         .from('resume_skills')
         .insert({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -121,6 +138,8 @@ name: skill && skill.name;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           resume_id: resumeId;
           name: skill.name;
           proficiency: skill.proficiency;
@@ -128,8 +147,11 @@ name: skill && skill.name;
           years_experience: skill.years_experience
         });
       if (error) throw error;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           resume_id: resumeId,
           name: skill.name,
           proficiency: skill.proficiency,
@@ -140,17 +162,21 @@ name: skill && skill.name;
       if (error) throw error,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add skill')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/useSkills.ts
 
@@ -162,20 +188,24 @@ name: skill && skill.name;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   const deleteSkill = async (skillId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete skills')
       return false
-<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     setIsLoading(true),;
     setError(null),;
@@ -202,6 +232,7 @@ name: skill && skill.name;
       setError('You must be logged in to delete skills'),;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -214,6 +245,8 @@ name: skill && skill.name;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     
     setIsLoading(true),
@@ -223,6 +256,7 @@ name: skill && skill.name;
 
 =======
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -301,10 +335,13 @@ export function useSkills() {;
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { error } = await supabase
         .from('resume_skills')
         .delete()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -316,10 +353,15 @@ export function useSkills() {;
       if (error) throw error;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        .eq('id', skillId);
+      if (error) throw error;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq('id', skillId),
       
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -327,11 +369,14 @@ export function useSkills() {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/useSkills.ts
 
@@ -345,6 +390,8 @@ export function useSkills() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   return {
@@ -380,12 +427,8 @@ if ( {) {
 =======
 
     deleteSkill
-<<<<<<< HEAD
   }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -408,6 +451,7 @@ if ( {) {
     error;
     addSkill;
     deleteSkill;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -539,3 +583,8 @@ deleteSkill
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

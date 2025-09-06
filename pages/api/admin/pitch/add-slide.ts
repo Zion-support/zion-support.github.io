@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -25,6 +26,8 @@ function handler() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -37,14 +40,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     title: 'Additional Insight',
     content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'});
 };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
 =======
 
@@ -66,7 +71,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'})
 }
 
-=======
   try {
     const { allowed } = await ensureAdminFromApi(req);
     if (!allowed) return res.status(403).json({ error: 'Forbidden' });
@@ -94,9 +98,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

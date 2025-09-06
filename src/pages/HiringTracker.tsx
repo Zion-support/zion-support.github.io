@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard'
@@ -14,8 +11,6 @@ function HiringTrackerContent() {
   const router = useRouter()
   const jobId = router.query.jobId as string
   const [activeTab, setActiveTab] = useState<string>('kanban')
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 <<<<<<< HEAD
 =======
@@ -46,32 +41,33 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function HiringTrackerContent() {
 
   const router = useRouter()
   const jobId = router.query.jobId as string
   const [activeTab, setActiveTab] = useState<string>('kanban')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 function HiringTrackerContent() {
   const router = useRouter(),
   const jobId = router.query.jobId as string,
   const [activeTab, setActiveTab] = useState<string>("kanban"),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
@@ -88,10 +84,13 @@ function HiringTrackerContent() {
             </h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className='text-muted-foreground mt-1'>              Track and manage your candidates through the hiring process  const [activeTab, setActiveTab] = useState<string>("kanban")
 
   return (
@@ -107,6 +106,7 @@ function HiringTrackerContent() {
               <Briefcase className="mr-2 h-6 w-6 text-primary" />
               Hiring Pipeline
             </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             <p className="text-muted-foreground mt-1">
 ursor/fix-website-loading-errors-and-merge-6662
@@ -127,12 +127,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="text-muted-foreground mt-1">
 >>>>>>>               Track and manage your candidates through the hiring process
             </p>
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
@@ -140,28 +143,27 @@ ursor/fix-website-loading-errors-and-merge-6662
           </TabsList>
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Tabs
           defaultValue='kanban'
           onValueChange={setActiveTab}
           className='mb-8'
         >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           <TabsList>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <TabsList>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
-<<<<<<< HEAD
           <TabsContent value='kanban' className='mt-6'>
             <KanbanBoard jobId={jobId} />
           </TabsContent>
@@ -187,22 +189,28 @@ ursor/fix-website-loading-errors-and-merge-6662
             <KanbanBoard jobId={jobId} />
           </TabsContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           <TabsContent value="analytics" className="mt-6">
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <TabsContent value="analytics" className="mt-6">
 >>>>>>>             <HiringAnalytics jobId={jobId} />
           </TabsContent>
@@ -212,30 +220,42 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <HiringTrackerContent />
     </ProtectedRoute>
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <HiringTrackerContent />;
     </ProtectedRoute>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { useRouter } from "next/router",;
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",;
@@ -297,6 +317,7 @@ export default function HiringTracker() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -309,3 +330,5 @@ export default function HiringTracker() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

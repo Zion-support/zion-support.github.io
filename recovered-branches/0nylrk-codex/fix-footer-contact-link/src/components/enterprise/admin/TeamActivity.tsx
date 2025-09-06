@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/TeamActivity.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react";
 import {
 
+<<<<<<< HEAD
 =======
 
 
@@ -29,12 +33,21 @@ import {;
 import React from "react";
 import {
 
+=======
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
 TableRow,;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -58,6 +71,8 @@ Table
   TableHead
   TableHeader
   TableRow
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
@@ -111,11 +126,21 @@ export function TeamActivity() {
     }
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   ];
 
 =======
 
+=======
+      id: 6
+      user: "Jamie Smith"
+      action: "Updated budget"
+      target: "Monthly spending cap"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
+      category: "billing"
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
@@ -123,9 +148,20 @@ export function TeamActivity() {
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
       category: "billing",
     },;
+<<<<<<< HEAD
 
   ];
 
+=======
+  ];
+  // Function to format the date in a readable way
+  const formatDate = (date: Date) => {
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffMins = Math.floor(diffMs / (1000 * 60));
+    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import {
@@ -210,6 +246,7 @@ export function TeamActivity() {
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -420,6 +457,8 @@ export function TeamActivity() {;
 <<<<<<< HEAD
             <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (diffMins < 60) {
       return `${diffMins} minutes ago`
     } else if (diffHrs < 24) {
@@ -429,7 +468,11 @@ export function TeamActivity() {;
     } else {
       return date.toLocaleDateString()
     }
+<<<<<<< HEAD
 }
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<
       string
@@ -442,6 +485,20 @@ export function TeamActivity() {;
     }
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
+<<<<<<< HEAD
+=======
+  },
+
+  const getCategoryBadge = (category: string) => {
+    const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {
+      jobs: { variant: "default" },
+      candidates: { variant: "outline" },
+      team: { variant: "secondary" },
+      billing: { variant: "destructive" }},
+
+    return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="space-y-6">
@@ -488,12 +545,15 @@ export function TeamActivity() {;
                 </TableCell>
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>
                 <TableCell className="text-muted-foreground">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import {;
   Table,;
@@ -639,6 +699,7 @@ export function TeamActivity() {;
                 </TableCell>;
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
+<<<<<<< HEAD
                   {formatDate(activity.timestamp)}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </TableCell>;
@@ -818,6 +879,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -825,6 +888,7 @@ if ( {) {
           </TableBody>
         </Table>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -835,6 +899,9 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -847,6 +914,7 @@ if ( {) {
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -980,3 +1048,10 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

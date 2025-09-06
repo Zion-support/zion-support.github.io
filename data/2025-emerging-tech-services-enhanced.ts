@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -17,16 +18,19 @@ import { ServiceVariant } from '../types / service - variants';
 export interface EmergingTechService {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
-<<<<<<< HEAD
 export interface EmergingTechService {
 
-=======
 export interface EmergingTechService {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -2419,21 +2423,18 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Quantum metaverse platform with enhanced graphics and AI capabilities.'
     launchDate: '2024-04-30'
     customers: 18
     rating: 4.8
     reviews: 11
   }
-=======
       'Quantum metaverse platform with enhanced graphics and AI capabilities.',
     launchDate: '2024-04-30',
     customers: 18,
     rating: 4.8,
     reviews: 11,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -2448,12 +2449,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     rating: 4.8
 
     reviews: 11
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
   id: string,;
@@ -3112,12 +3109,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     customers: 18,;
     rating: 4.8;
     reviews: 11;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:zion-ai-assistant/src/server/index.ts
@@ -35,6 +36,8 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
@@ -62,8 +65,11 @@ app.post("/api/ai/milestones", async (req, res) => {try {;
 });
 const port = process.env.PORT ? Number(process.env.PORT) : 4321;
 app.listen(port, () => {// // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import "dotenv/config",;
 import express from "express",;
 import cors from "cors",;
@@ -105,6 +111,7 @@ app.post("/api/ai/milestones", async (req, res) => {;
 const port = process.env.PORT ? Number(process.env.PORT) : 4321,;
 app.listen(port, () => {;
   // // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -161,3 +168,6 @@ app.listen(port, () => {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

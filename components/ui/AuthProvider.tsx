@@ -261,24 +261,15 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
   useEffect(() => {
     try {
       const stored = window.localStorage.getItem('userRole') as UserRole | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (stored === 'talent' |stored === 'client') {
         setRoleState(stored);      }        setRoleState(stored)
-=======
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored);      }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
       if (stored === 'talent' || stored === 'client') {
-<<<<<<< HEAD
         setRoleState(stored);      }        setRoleState(stored)
-=======
         setRoleState(stored);      }
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch {}
   }, []);
@@ -294,20 +285,21 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
     } catch {}
   }
 
-<<<<<<< HEAD
   return (
     <AuthContext.Provider value={{ role, setRole }}>
       {children}
     </AuthContext.Provider>
   );
-<<<<<<< HEAD
 export function useAuth() {
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
   )
 }
 export function useAuth() {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
@@ -315,6 +307,7 @@ export function useAuth() {;
 }
 
 export function useAuth() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -331,10 +324,12 @@ return useContext(AuthContext);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 return useContext(AuthContext);
 }
-=======
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -342,3 +337,5 @@ return useContext(AuthContext);
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

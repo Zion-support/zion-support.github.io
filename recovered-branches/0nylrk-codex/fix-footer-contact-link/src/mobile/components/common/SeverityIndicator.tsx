@@ -32,16 +32,10 @@ interface SeverityIndicatorProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {cn} from "@/lib/utils";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 interface SeverityIndicatorProps {
@@ -60,15 +54,17 @@ export function SeverityIndicator({
   showText = true
   size = "md";
   className
-=======
 import { cn } from "@/lib/utils",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous",
   showIcon?: boolean,
@@ -80,6 +76,7 @@ interface SeverityIndicatorProps {
 export function SeverityIndicator({ 
   severity, 
   showIcon = true, 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -95,15 +92,18 @@ export function SeverityIndicator({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   showText = true, ;
   size = "md";
-=======
   showText = true, 
   size = "md",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }: SeverityIndicatorProps) {
   const getSeverityIcon = () => {
     switch (severity) {
@@ -131,9 +131,12 @@ export function SeverityIndicator(): any ({ ;
           "text-amber-500"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )} />;
       default: return <CheckCircle className={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
@@ -141,8 +144,11 @@ export function SeverityIndicator(): any ({ ;
         )} />
     }
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )} />,
       default:
         return <CheckCircle className={cn(
@@ -152,11 +158,14 @@ export function SeverityIndicator(): any ({ ;
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className={cn("flex items-center gap-1", className)}>
@@ -164,6 +173,7 @@ export function SeverityIndicator(): any ({ ;
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -179,6 +189,9 @@ export function SeverityIndicator(): any ({ ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
@@ -374,11 +387,10 @@ return (</div>)
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

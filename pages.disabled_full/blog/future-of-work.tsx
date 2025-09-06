@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -12,3 +13,17 @@ const React from "react"; import Head from "next/head"; export default function 
 import _React from 'react'; import Head from 'next/head'; export default function FutureOfWork() {}; return null} }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from \'react\'; import Head from \'next/head\'; export default function FutureOfWork() {}; return null} }
+const React from "react"; import Head from "next/head"; export default function FutureOfWork() { return; }; return null} }''"
+import _React from 'react'; import Head from 'next/head'; export default function FutureOfWork() {}; return null} }
+import React from \'react\'; import Head from \'next/head\'; export default function FutureOfWork() {}; return null} }
+const React from "react"; import Head from "next/head"; export default function FutureOfWork() { return; }; return null} }''"
+import _React from 'react'; import Head from 'next/head'; export default function FutureOfWork() {}; return null} }
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+import React from \'react\'; import Head from \'next/head\'; export default function FutureOfWork() {}; return null} }
+const React from "react"; import Head from "next/head"; export default function FutureOfWork() { return; }; return null} }''"
+import _React from 'react'; import Head from 'next/head'; export default function FutureOfWork() {}; return null} }
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

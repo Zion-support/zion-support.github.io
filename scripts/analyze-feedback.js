@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:scripts/analyze-feedback.js
 
 <<<<<<< HEAD
@@ -32,6 +33,8 @@ function read_all() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const fs = require('fs');
 const path = require('path');
 const { OpenAI } = require('openai');
@@ -46,8 +49,11 @@ function readAll() {
 
   } catch (e) {
     return []
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const fs = require('fs'),;
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
@@ -60,6 +66,7 @@ function readAll() {;
     return JSON.parse(raw || '[]');
   } catch (e) {;
     return [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -107,6 +114,8 @@ async function main() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 function lastNDays(days) {
@@ -122,7 +131,6 @@ async function main() {
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
   }
-<<<<<<< HEAD
   const all = readAll()
   const recent = all.filter(lastNDays(7))
   const downs = recent.filter((r) => r.rating === 'down')
@@ -132,7 +140,6 @@ async function main() {
   if (downs.length === 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.')
     console.log('No low-rated feedback to analyze.')
-=======
   const all = readAll(),
   const recent = all.filter(lastNDays(7)),
   const downs = recent.filter((r) => r.rating === 'down'),
@@ -147,6 +154,7 @@ async function main() {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
     // // // console.log('No low-rated feedback to analyze.'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -158,6 +166,8 @@ async function main() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return
   }
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`
@@ -199,35 +209,45 @@ async function main() {
   fs.writeFileSync(summaryPath, md)
   // Append to prompt improvements
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:scripts/analyze-feedback.js
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
-=======
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   console.log('Analysis written to', summaryPath)
 }
 main().catch((e) => { console.error(e), process.exit(1) });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
-=======
 main().catch((e) => { console.error(e), process.exit(1) }),;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // // // console.log('Analysis written to', summaryPath)
   const all = readAll(),;
   const recent = all.filter(lastNDays(7)),;
@@ -445,8 +465,11 @@ fs.writeFileSync (summaryPath, md);
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -24,17 +25,19 @@ if ( {) {
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',;
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req)
   const internal = isInternalAgentRequest(req)
@@ -43,21 +46,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   res.status(200).json({ message: 'OK' })
 }
 
-=======
-=======
   res.status(200).json({ message: 'OK' });
 };
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req, res) {
   try {
   const session = getSessionFromReq(req);
@@ -72,6 +78,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -90,3 +97,5 @@ export default function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

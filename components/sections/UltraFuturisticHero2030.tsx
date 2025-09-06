@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -81,22 +82,29 @@ export default function UltraFuturisticHero2030() {;
       {/* Background Glow Effects */}
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight
   Zap
   Brain
@@ -116,8 +124,11 @@ import {
   Phone
   Mail;} from 'lucide-react';import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Zap,
   Brain,
@@ -138,12 +149,15 @@ import {
   Mail,;} from 'lucide-react';import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   TrendingUp, Shield, Globe, Cpu, Sparkles;
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
 const contactInfo = {
@@ -261,12 +275,7 @@ import { motion } from 'framer-motion';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
-<<<<<<< HEAD
       {/* Background Glow Effects */}
       <div className='absolute inset-0 pointer-events-none'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl'></div>
@@ -332,9 +341,7 @@ import { motion } from 'framer-motion';
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Main Heading */}
-=======
 
-<<<<<<< HEAD
 ];
 
 export default function UltraFuturisticHero2030() {
@@ -342,25 +349,24 @@ export default function UltraFuturisticHero2030() {
 
         {/* Main Heading */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
         {/* Main Heading */}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className=&quot;mb-8&quot;
 
 =======
 <<<<<<< HEAD
-          className='mb-8'        >          className="mb-8"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          className='mb-8'        >          className="mb-8"
           className='mb-8'        >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -368,6 +374,8 @@ export default function UltraFuturisticHero2030() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -510,6 +518,7 @@ className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
         </motion.div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -578,26 +587,16 @@ className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
 
 =======
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
           className='flex flex-col sm:flex-row items-center justify-center gap-6 mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <Link
             href='/contact'
@@ -699,15 +698,16 @@ className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
             </span>
           </Link>
         </motion.div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -752,17 +752,18 @@ className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           transition={{ duration: 0.8, delay: 1.2 }}
-<<<<<<< HEAD
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-=======
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           {features.map((feature, index) => (
             <motion.div
@@ -1012,15 +1013,16 @@ function UltraFuturisticHero2030() {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
 =======
               className='group p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-purple-500/30 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:bg-white/10'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
                 <feature.icon className='w-6 h-6 text-white' />
@@ -1035,6 +1037,7 @@ function UltraFuturisticHero2030() {
               <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-400 text-sm">{feature.description}</p>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1065,28 +1068,23 @@ function UltraFuturisticHero2030() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </motion.div>
-=======
 
           ))}
         </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.6 }}
-<<<<<<< HEAD
           className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-=======
           className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'        >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1094,6 +1092,8 @@ function UltraFuturisticHero2030() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -1129,6 +1129,7 @@ function UltraFuturisticHero2030() {
 <<<<<<< HEAD
               transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
               className='text-center group'
+<<<<<<< HEAD
 
 =======
 
@@ -1287,12 +1288,9 @@ function UltraFuturisticHero2030() {
               className='text-center group'
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             >
               <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
                 <stat.icon className='w-8 h-8 text-purple-400' />
@@ -1307,34 +1305,20 @@ function UltraFuturisticHero2030() {
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </motion.div>
-<<<<<<< HEAD
           ))}
         </motion.div>
-=======
 
           ))}
         </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.0 }}
           className='bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8 backdrop-blur-sm'
-<<<<<<< HEAD
-=======
 
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <h3 className='text-2xl font-bold text-white mb-6'>
             Ready to Transform Your Business?
           </h3>
@@ -1373,29 +1357,23 @@ function UltraFuturisticHero2030() {
             </div>
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.2 }}
           className='mt-16 text-center'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <p className='text-gray-400 text-sm mb-4'>
             Trusted by leading companies worldwide
@@ -1634,6 +1612,7 @@ transition={{ duration: 0 && 0.8, delay: 2 && 2.2 }}
             opacity: [0.2, 0.6, 0.2]
           }}
           transition={{
+<<<<<<< HEAD
 
             ease: 'easeInOut',          }}
         />
@@ -1752,12 +1731,12 @@ ease: "easeInOut"
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 5
             repeat: Infinity
-=======
             duration: 5,
             repeat: Infinity,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             ease: 'easeInOut',          }}
         />
       </div>
@@ -1767,12 +1746,11 @@ ease: "easeInOut"
           }}
         />
       </div>
-<<<<<<< HEAD
     </section>
 );  )
 }
-=======
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1780,3 +1758,5 @@ ease: "easeInOut"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

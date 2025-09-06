@@ -176,7 +176,6 @@ import {
 =======
 import Head from 'next/head';
 import {
-<<<<<<< HEAD
   Check
   Star
   Zap
@@ -245,8 +244,11 @@ import {
   Microscope as MicroscopeIcon
   GraduationCap as GraduationCapIcon
   ShieldCheck as ShieldCheckIcon;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Check,
   Star,
   Zap,
@@ -1319,25 +1321,21 @@ if ( {) {
 =======
   GraduationCap as GraduationCapIcon,;
   ShieldCheck as ShieldCheckIcon,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
-<<<<<<< HEAD
   revolutionaryMicroSaasServices
   revolutionaryServiceCategories
   getRevolutionaryServicesByCategory
   getPopularRevolutionaryServices
   getRevolutionaryServicesByPriceRange;
-=======
   revolutionaryMicroSaasServices,
   revolutionaryServiceCategories,
   getRevolutionaryServicesByCategory,
   getPopularRevolutionaryServices,;
   getRevolutionaryServicesByPriceRange,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -1426,10 +1424,7 @@ export default function RevolutionaryServicesPage() {;
         return a.name.localeCompare(b.name);    }      default: return a.name.localeCompare(b.name)
     }
   });
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -1540,16 +1535,9 @@ export default function RevolutionaryServicesPage() {;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length
       color: 'from-yellow-500 to-orange-600'
     }
-<<<<<<< HEAD
-=======
 
   ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -1567,26 +1555,17 @@ export default function RevolutionaryServicesPage() {;
       y: 0
       opacity: 1
       transition: {
-<<<<<<< HEAD
         duration: 0.5
       }
     }
-=======
         duration: 0.5,
       },
     },
 
-<<<<<<< HEAD
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
   };
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <div className='min-h-screen'>
@@ -1639,7 +1618,6 @@ export default function RevolutionaryServicesPage() {;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-<<<<<<< HEAD
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Revolutionary
                 </span>
@@ -1660,8 +1638,8 @@ export default function RevolutionaryServicesPage() {;
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1669,10 +1647,13 @@ export default function RevolutionaryServicesPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1704,6 +1685,8 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 Experience the future of technology with our revolutionary micro
                 SaaS platform. Quantum AI, autonomous systems, space technology
                 and cutting-edge solutions that redefine what's possible.
@@ -1727,6 +1710,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -1737,6 +1721,9 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -2072,6 +2059,7 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
 =======
 
@@ -2131,12 +2119,9 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
         </section>
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Popular Services Showcase */}
         <section className='py-16'>
           <div className='container mx-auto px-4'>
@@ -2145,6 +2130,7 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
@@ -2169,6 +2155,11 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+              initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -2245,6 +2236,7 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2274,6 +2266,10 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            <motion.div
+            <motion.div 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
@@ -2292,6 +2288,7 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                     variant={service.variant as any}
                     size='large'
                     className='h-full cursor-pointer'
+<<<<<<< HEAD
 
 =======
 
@@ -2630,12 +2627,9 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                     className='h-full cursor-pointer'
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                     onClick={() => setSelectedService(service)}
                   >
                     <div className='text-center mb-6'>
@@ -2719,7 +2713,6 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                     <div className='text-center'>;
 =======
                     </div>
-<<<<<<< HEAD
                     <div className='text-center'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <Button
@@ -2798,6 +2791,7 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
             <motion&& motion.div 
 
               className="mb-8"
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2867,14 +2861,11 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                     <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
               initial={{ opacity: 0, y: 20 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -3210,16 +3201,16 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
               }
               variants={containerVariants}
               initial='hidden'
-<<<<<<< HEAD
-<<<<<<< HEAD
               whileInView='visible'              viewport={{ once: true }}            <motion.div
               className={viewMode === 'grid'
-=======
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -3228,6 +3219,7 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
 <<<<<<< HEAD
 <<<<<<< HEAD
               whileInView="visible"
+<<<<<<< HEAD
 
               whileInView='visible'              viewport={{ once: true }}
 =======
@@ -3240,10 +3232,13 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
               viewport={{ once: true }}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               whileInView='visible'              viewport={{ once: true }}
 
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -3251,6 +3246,8 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -3762,7 +3759,6 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
 =======
                 transition={{ duration: 0.6 }}
               >
-<<<<<<< HEAD
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
                   No Services Found
@@ -3876,8 +3872,8 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
               className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 =======
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -3885,6 +3881,8 @@ onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -4543,7 +4541,6 @@ className='text-gray-400 hover:text-white text-2xl'                      classNa
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
               </motion.div>
             </motion.div>
           )}
@@ -4689,20 +4686,23 @@ className='text-gray-400 hover:text-white text-2xl'                      classNa
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -4957,10 +4957,12 @@ className='text-gray-400 hover:text-white text-2xl'                      classNa
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );  )
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -4968,3 +4970,5 @@ className='text-gray-400 hover:text-white text-2xl'                      classNa
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

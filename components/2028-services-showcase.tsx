@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -120,24 +121,31 @@ const serviceCategories = [
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
-=======
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   CheckCircle
   ArrowRight
   Star
@@ -166,9 +174,12 @@ import {
   Gamepad2;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
 
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   CheckCircle,
   ArrowRight,
   Star,
@@ -316,8 +327,11 @@ export default function ServicesShowcase2028() {_return (_<>
   Music,;
   Gamepad2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
@@ -515,6 +529,7 @@ export default function ServicesShowcase2028() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -551,6 +566,8 @@ export default function ServicesShowcase2028() {
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='space-y-8'
           >
             <div className='inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm'>
@@ -702,7 +719,6 @@ export default function ServicesShowcase2028() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">24/7</div>
                 <div className="text-cyan-300">Support Available</div>
-=======
 
               </Link>
             </div>
@@ -710,11 +726,14 @@ export default function ServicesShowcase2028() {
             {/* Stats */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
             </div>
           </motion.div>
@@ -1143,6 +1162,7 @@ function ServicesShowcase2028() {
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200 text-sm">{service.name}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1152,9 +1172,10 @@ function ServicesShowcase2028() {
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       ))}
                     </div>
-=======
 
                         </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1162,6 +1183,7 @@ function ServicesShowcase2028() {
                       ))}
                     </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1176,6 +1198,8 @@ function ServicesShowcase2028() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Link
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
@@ -1237,14 +1261,7 @@ function ServicesShowcase2028() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Featured Services */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1568,15 +1585,16 @@ function ServicesShowcase2028() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Market Analysis */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1735,15 +1753,16 @@ Our services target markets with exponential growth potential
 =======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -2022,6 +2041,7 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
           <motion.div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2041,11 +2061,15 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='space-y-8'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             className='space-y-8'
@@ -2059,12 +2083,9 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2318,15 +2339,9 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
     </>);
 =======
       <UltraFuturisticFooter2028 />
-<<<<<<< HEAD
     </>
-<<<<<<< HEAD
 );
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
     </>;
 );
 }
@@ -2349,11 +2364,14 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
 
 }
 }
-=======
     </>
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

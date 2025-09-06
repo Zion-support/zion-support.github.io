@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/MobileAppHero.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Link } from "react-router-dom",
@@ -14,12 +15,20 @@ import { ArrowRight, Phone } from "lucide-react",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, Phone} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {AppStoreButtons} from "./AppStoreButtons";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, Phone } from "lucide-react",
 import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
 
+<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone } from "lucide-react";
@@ -27,6 +36,10 @@ import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Button } from "@/components/ui/button",
+import { AppStoreButtons } from "./AppStoreButtons",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
@@ -72,6 +85,7 @@ export const MobileAppHero: React.FC = () => {
               </Button>
             </Link>
           </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,10 +98,14 @@ export const MobileAppHero: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -105,6 +123,17 @@ import {AppStoreButtons} from "./AppStoreButtons";
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              {/* This would be replaced with an actual phone mockup image in production */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, Phone } from "lucide-react",;
@@ -226,6 +255,7 @@ export const MobileAppHero: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/MobileAppHero.tsx
     </section>;
+<<<<<<< HEAD
 
   );
 };
@@ -268,3 +298,7 @@ export const MobileAppHero: React.FC = () => {
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

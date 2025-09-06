@@ -3,16 +3,26 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+interface NotificationHeaderProps {
+  unreadCount: number;
+  onMarkAllAsRead: () => Promise<void>
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 interface NotificationHeaderProps {;
   unreadCount: number,;
   onMarkAllAsRead: () => Promise<void>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -25,6 +35,10 @@ interface NotificationHeaderProps {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
   unreadCount
@@ -68,15 +82,20 @@ unreadCount
         </Button>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </div>;
 =======
 </div>
 
+=======
+    </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+<<<<<<< HEAD
   );
 };
 
@@ -185,3 +204,8 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/notifications/NotificationHeader.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    </div>;
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

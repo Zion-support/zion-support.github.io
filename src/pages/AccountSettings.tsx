@@ -1,10 +1,12 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { useLocalStorage  } from '@/hooks';
 import { Header  } from '@/components/Header';
@@ -13,10 +15,13 @@ import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { useLocalStorage } from '@/hooks'
 import { Header } from '@/components/Header'
@@ -25,10 +30,13 @@ import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Wallet, Database, Save } from 'lucide-react'
 
 import {
@@ -120,12 +128,12 @@ export default function AccountSettings() {
       toast.error(error.message |'Failed to connect wallet')
     }
   }
-=======
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { useLocalStorage } from '@/hooks',;
 import { Header } from '@/components/Header',;
@@ -200,14 +208,13 @@ export default function AccountSettings() {;
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
@@ -222,26 +229,31 @@ export default function AccountSettings() {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <Header />
-<<<<<<< HEAD
       <main className='container mx-auto py-8 px-4'>
         <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
         <div className='grid gap-6 md:grid-cols-2'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>           <Card>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
         
         <div className="grid gap-6 md:grid-cols-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Card>
 >>>>>>>             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
@@ -253,10 +265,13 @@ export default function AccountSettings() {;
                 <Input
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   id='email'
                   value={user?.email |''}                  disabled
                   className='bg-gray-100'
@@ -278,11 +293,14 @@ export default function AccountSettings() {;
                     className='flex items-center gap-1'                  >
                     <Wallet className='h-4 w-4' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     Connect
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   id="email"
                   value={user?.email || ''}
                   disabled
@@ -307,11 +325,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   >
                     <Wallet className="h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     Connect
 >>>>>>>                   </Button>
                 </div>
@@ -321,10 +342,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='flex items-center justify-between'>
                 <div className='space-y-0.5'>
                   <Label htmlFor='displayWeb3'>Display Web3 Identity</Label>
@@ -343,6 +367,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Label htmlFor='backup' className='flex items-center gap-1'>
                     <Database className='h-4 w-4' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     Decentralized Backup
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -351,6 +376,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className='text-xs text-gray-500'>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
@@ -370,11 +397,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
                     <Database className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     Decentralized Backup
                   </Label>
                   <p className="text-xs text-gray-500">
@@ -383,6 +405,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </p>
                 </div>
                 <Switch
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -400,6 +423,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>;
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   id='backup'
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}                />
@@ -416,10 +441,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 disabled={isSubmitting}
                 className='w-full'              >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 {isSubmitting ? 'Saving...' : 'Save Settings'}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   id="backup"
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
@@ -437,17 +465,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 disabled={isSubmitting}
                 className="w-full"
               >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
               </Button>
             </CardContent>
           </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -472,6 +496,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Card>
 >>>>>>>             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
@@ -522,6 +549,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <div>
 =======
@@ -529,12 +557,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-              
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              
               <div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <h3 className="font-medium mb-2">Backup Status</h3>
@@ -567,6 +592,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     </>
@@ -575,6 +601,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div>
                 <h3 className='font-medium mb-2'>Recovery Options</h3>
                 <Button
@@ -593,16 +621,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Card>
         </div>
       </main>
-<<<<<<< HEAD
     </>
   )
 }
-=======
     </>;
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div>
@@ -759,6 +783,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -774,3 +799,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

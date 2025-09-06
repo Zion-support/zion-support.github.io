@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 
 =======
 ========
@@ -86,3 +87,15 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   return <div>Activity will be shown here</div>;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+interface MilestoneActivitiesProps {
+  projectId: string
+interface MilestoneActivitiesProps {;
+  projectId: string;
+}
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+  return <div>Activity will be shown here</div>;
+}
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -33,6 +34,8 @@ import React, { useEffect, useMemo, useState } from 'react';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter  } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -77,9 +80,12 @@ export default function NewDisputePage() {
     clientId
   } = router.query as Record<string, string>;  const user = useCurrentUser();
   const [projectId, setProjectId] = useState(qProjectId |'');
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -98,6 +104,7 @@ const REASONS = [
 type ReasonType = (typeof REASONS)[number];
 
 export default function NewDisputePage() {;
+<<<<<<< HEAD
 
 
 =======
@@ -544,6 +551,8 @@ type ReasonType = (typeof REASONS)[number];
 export default function NewDisputePage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -553,17 +562,14 @@ const REASONS = [;
 type ReasonType = typeof REASONS[number];
 export default function NewDisputePage(req, res) {
   try {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const router = useRouter();
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
   const [projectId, setProjectId] = useState(qProjectId || '');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
   const [files, setFiles] = useState<File[]>([]);
-<<<<<<< HEAD
   const [talentUserId, setTalentUserId] = useState(talentId |'');
   const [clientUserId, setClientUserId] = useState(
     clientId |(user.role === 'client' ? user.id : '')
@@ -610,7 +616,6 @@ export default function NewDisputePage(req, res) {
     } finally {
       setSubmitting(false);    }
   }
-=======
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
@@ -628,9 +633,6 @@ export default function NewDisputePage(req, res) {
         body: JSON.stringify({ projectId, entityType, entityId, clientUserId, talentUserId, reason, reasonDetails, description })}),;
       if (!res.ok) throw new Error('Failed to create');
       const { dispute } = await res.json();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
       if (files.length > 0) {
         const filePayload = await Promise.all(
@@ -653,8 +655,6 @@ export default function NewDisputePage(req, res) {
       setSubmitting(false);    }
   }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (files.length > 0) {;
         const filePayload = await Promise.all(;
           files.map(async (f) => ({;
@@ -687,11 +687,6 @@ export default function NewDisputePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <EnhancedLayout>
@@ -815,8 +810,11 @@ export default function NewDisputePage() {
           </div>
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label className='block text-sm font-medium'>Attachments</label>
             <input
               type='file'
@@ -824,32 +822,40 @@ export default function NewDisputePage() {
               onChange={e => setFiles(Array.from(e.target.files |[]))}
               className='mt-1'
             />
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label className="block text-sm font-medium">Attachments</label>
             <input type="file" multiple onChange={e => setFiles(Array.from(e.target.files || []))} className="mt-1" />
           </div>
           <div className="pt-2">
             <button disabled={submitting} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </form>
       </div>
     </EnhancedLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function toBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
 const reader = new FileReader();
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -860,11 +866,6 @@ const reader = new FileReader();
 function toBase64(file: File): Promise<string> {;
   return new Promise((resolve, reject) => {;
     const reader = new FileReader();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -878,6 +879,7 @@ function toBase64(): any (file: File): Promise<string> {;
 
 
   });
+<<<<<<< HEAD
 
 
     reader.readAsDataURL(file)
@@ -913,19 +915,23 @@ const reader = new FileReader ();
 =======
 =======
 <<<<<<< HEAD
-
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 }
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -942,3 +948,5 @@ const reader = new FileReader ();
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

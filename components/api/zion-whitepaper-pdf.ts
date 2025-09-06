@@ -45,13 +45,10 @@ function write_section() {
 =======
 
 import {
-<<<<<<< HEAD
   getWhitepaperSections
   OPERATOR_PROMPT;
-=======
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.addPage()
@@ -73,6 +70,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   try {
@@ -87,14 +85,18 @@ export default async function handler(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ) {
   const editionParam = (req.query.edition as string) |'full';
-=======
 ) {;
   const editionParam = (req.query.edition as string) || 'full';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
@@ -110,6 +112,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `attachment; filename="zion-protocol-${edition}.pdf"`
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     align: 'left'})
@@ -127,13 +130,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const editionParam = (req.query.edition as string) |'full';
@@ -194,6 +201,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
   const sections = getWhitepaperSections(edition as any);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -205,6 +213,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));  doc.moveDown();
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   doc.fontSize(14).fillColor('#444444').text(`Edition: ${edition.toUpperCase()}`);
@@ -353,20 +363,22 @@ function handler() {
 
   doc.end()
 }
-<<<<<<< HEAD
-=======
 
 }
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
   doc.moveDown(0.5);
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
 
   const sections = getWhitepaperSections(edition as any);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -383,3 +395,5 @@ function handler() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

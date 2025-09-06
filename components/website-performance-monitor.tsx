@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 } from 'lucide-react';
 
@@ -8,6 +9,12 @@ export default function WebsitePerformanceMonitorPage() {
 =======
 
 
+=======
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -23,6 +30,7 @@ import {
   Gauge,
   BarChart3,;
   Clock,;
+<<<<<<< HEAD
 
 
 
@@ -273,14 +281,12 @@ color: 'text - pink - 400';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 export default function WebsitePerformanceMonitorPage() {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
 import {
   Activity
   Zap
@@ -293,11 +299,12 @@ import {
   BarChart3
   Clock;
 } from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function WebsitePerformanceMonitorPage() {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const features = [
@@ -374,11 +381,14 @@ export default function WebsitePerformanceMonitorPage() {
       description:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Real user experience metrics and conversion impact analysis.'
       icon: '👥'
       color: 'text-pink-400'
@@ -438,13 +448,17 @@ export default function WebsitePerformanceMonitorPage() {
       icon: '👥'
       color: 'text-pink-400'
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Real user experience metrics and conversion impact analysis.',
       icon: '👥',
       color: 'text-pink-400',
     },  ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -452,6 +466,8 @@ export default function WebsitePerformanceMonitorPage() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   const pricing = [
     {
@@ -494,23 +510,28 @@ export default function WebsitePerformanceMonitorPage() {
       ];
       popular: true
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
       name: 'Enterprise'
       price: '$199'
       period: '/month'
-=======
     };
       name: 'Enterprise',
       price: '$199',
       period: '/month',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       description:
         'For large organizations with critical performance requirements'
       features: [
@@ -571,6 +592,7 @@ export default function WebsitePerformanceMonitorPage() {;
       ];
       popular: false
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
@@ -592,6 +614,9 @@ export default function WebsitePerformanceMonitorPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleAnalyzeWebsite = async () => {
     setIsAnalyzing(true);
     // Simulate website analysis
@@ -639,6 +664,7 @@ export default function WebsitePerformanceMonitorPage() {;
       });
       setIsAnalyzing(false)
     }, 4000)
+<<<<<<< HEAD
 
     };
 
@@ -670,6 +696,8 @@ export default function WebsitePerformanceMonitorPage() {;
     }, 4000)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     };
 
     {
@@ -689,8 +717,11 @@ export default function WebsitePerformanceMonitorPage() {;
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
@@ -1095,6 +1126,7 @@ export default function WebsitePerformanceMonitorPage() {;
                       {feature.title}
                     </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1151,6 +1183,8 @@ export default function WebsitePerformanceMonitorPage() {;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <p className='text-gray-400 leading-relaxed'>                      {feature.description}              Powerful Monitoring Features
             </h2>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1265,16 +1299,10 @@ export default function WebsitePerformanceMonitorPage() {;
                     </h3>
                     <p className="text-gray-400 leading-relaxed">
                       {feature.description}
-=======
                     <p className='text-gray-400 leading-relaxed'>                      {feature.description}
 
                       {feature.description}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                 </div>
@@ -1283,27 +1311,13 @@ export default function WebsitePerformanceMonitorPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Metrics Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Comprehensive Performance Metrics
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1327,6 +1341,7 @@ export default function WebsitePerformanceMonitorPage() {;
                   {metric.description}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             ))}
           </div>
@@ -1347,6 +1362,8 @@ export default function WebsitePerformanceMonitorPage() {;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </p>              </Card>              Comprehensive Performance Metrics
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1425,16 +1442,10 @@ export default function WebsitePerformanceMonitorPage() {;
                 <h3 className={`text-xl font-bold mb-3 ${metric.color}`}>{metric.name}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{metric.description}</p>
               </Card>
-=======
                 </p>              </Card>
 
               </Card>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1472,14 +1483,7 @@ export default function WebsitePerformanceMonitorPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Demo Analysis Section */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -1687,6 +1691,7 @@ export default function WebsitePerformanceMonitorPage() {;
                     <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1699,6 +1704,8 @@ export default function WebsitePerformanceMonitorPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <span className='text-gray-300'>{rec}</span>                  </div>            <Card className="border-gradient-blue mt-8">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
@@ -1708,13 +1715,17 @@ export default function WebsitePerformanceMonitorPage() {;
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </div>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
                   </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1722,12 +1733,15 @@ export default function WebsitePerformanceMonitorPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 ))}
               </div>
             </Card>
           </div>
         </section>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1797,14 +1811,16 @@ export default function WebsitePerformanceMonitorPage() {;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Pricing Section */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1819,6 +1835,9 @@ export default function WebsitePerformanceMonitorPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -2101,6 +2120,7 @@ export default function WebsitePerformanceMonitorPage() {;
                 )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -2115,9 +2135,9 @@ export default function WebsitePerformanceMonitorPage() {;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {plan.name}
@@ -2220,17 +2240,11 @@ export default function WebsitePerformanceMonitorPage() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       {feature}
-=======
-<<<<<<< HEAD
 
                       {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                       {feature}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -2247,7 +2261,6 @@ export default function WebsitePerformanceMonitorPage() {;
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
-<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2256,6 +2269,7 @@ export default function WebsitePerformanceMonitorPage() {;
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </Button>
 =======
@@ -2320,34 +2334,25 @@ export default function WebsitePerformanceMonitorPage() {;
             >
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>
 
                 </Button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Card>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className='section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2368,6 +2373,10 @@ export default function WebsitePerformanceMonitorPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+            Ready to Monitor Your Website Performance?
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </h2>
           <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our monitoring platform to keep
@@ -2415,6 +2424,7 @@ export default function WebsitePerformanceMonitorPage() {;
         </div>
       </section>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -2523,18 +2533,18 @@ className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -176,6 +177,8 @@ export default function InnovationDigest({ items }: Props) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
 <<<<<<< HEAD
@@ -187,27 +190,15 @@ export default function InnovationDigest({ items }: Props) {
 }</li>) )
 }</ul> </div>)
 
-=======
  
-=======
-=======
  
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 </header> {
   items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
 }</li>) ) 
-<<<<<<< HEAD
 }</ul> </div>) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 }</ul> </div>)
-=======
 }</ul> </div>) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">
@@ -231,8 +222,8 @@ export default function InnovationDigest({ items }: Props) {
           </li>
         ))}
       </ul>
-<<<<<<< HEAD
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 
@@ -240,13 +231,16 @@ export default function InnovationDigest({ items }: Props) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
 }
-=======
   );
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

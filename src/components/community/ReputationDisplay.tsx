@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/community/ReputationDisplay.tsx
 
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
 interface ReputationDisplayProps {
@@ -14,12 +17,16 @@ interface ReputationDisplayProps {
 export const ReputationDisplay = ({
   reputation
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   size = 'md',}: ReputationDisplayProps) => {
 export const ReputationDisplay = ({
   reputation
   size = 'md'
 }: ReputationDisplayProps,) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
@@ -35,6 +42,8 @@ import { Progress } from "@/components/ui/progress";
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress",
@@ -61,13 +70,8 @@ export const ReputationDisplay = ({
 
 export const ReputationDisplay = ({ 
   reputation,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   size = 'md' 
 }: ReputationDisplayProps) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Calculate next milestone
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const currentLevel = Math.floor(reputation / 100)
@@ -76,6 +80,7 @@ export const ReputationDisplay = ({
   // Styling based on size
   const sizeClasses = {
     sm: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -103,12 +108,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       container: 'text-xs'
       icon: 'w-3 h-3'
-=======
       container: 'text-xs',
       icon: 'w-3 h-3',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       progress: 'h-1',  // Styling based on size
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const sizeClasses = {
@@ -118,12 +123,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       progress: "h-1"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       container: "text-xs",
       icon: "w-3 h-3",
       progress: "h-1"
@@ -139,6 +147,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       progress: "h-3"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>     }
@@ -151,6 +160,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     md: {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -222,6 +233,7 @@ export const ReputationDisplay = ({
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -380,6 +392,8 @@ export const ReputationDisplay = ({ ;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 
 export default ReputationDisplay,
@@ -388,16 +402,10 @@ import { Progress } from "@/components/ui/progress",;
 interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export default ReputationDisplay
 '
     }
-<<<<<<< HEAD
     md: {
       container: 'text-sm'
       icon: 'w-4 h-4'
@@ -423,12 +431,10 @@ export default ReputationDisplay
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
 export default ReputationDisplay
 '
 
-=======
   },;
   return (;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -451,6 +457,7 @@ export default ReputationDisplay
   );
 };
 export default ReputationDisplay;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ';
     },;
@@ -494,12 +501,16 @@ export default ReputationDisplay;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 export default ReputationDisplay;
-<<<<<<< HEAD
 ';
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ProfilePage.tsx
@@ -15,6 +16,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -29,28 +33,32 @@ import {HireNowCTA} from "@/components/profile/HireNowCTA";
 import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const { profileId } = useParams() as { profileId?: string }
-=======
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { profileId } = useParams() as { profileId?: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useParams } from "react-router-dom",
 import { supabase } from "@/integrations/supabase/client",
@@ -81,6 +89,7 @@ export default function ProfilePage() {
   const [isLoading, setIsLoading] = useState(true),
   const [isError, setIsError] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -103,8 +112,9 @@ export default function ProfilePage() {
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     const fetchProfile = async () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -117,6 +127,7 @@ export default function ProfilePage() {
           .eq("id", profileId)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -125,12 +136,16 @@ export default function ProfilePage() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-          .single();
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          .single();
           .single(),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         if (error) {
           throw error
         }
@@ -146,19 +161,25 @@ export default function ProfilePage() {
         setIsLoading(false)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (isLoading) {
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
     if (profileId) {
       fetchProfile()
     }
   }, [profileId]);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { useParams } from "react-router-dom",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -382,12 +403,7 @@ if ( {) {
       fetchProfile();
     }
   }, [profileId]),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -403,6 +419,7 @@ if ( {) {
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -427,18 +444,20 @@ if ( {) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <SEO
         title={`${profileData.full_name} | Talent Profile`}
-<<<<<<< HEAD
         description={profileData.bio |"View the profile of this talented individual."}
-=======
         description={profileData.bio || "View the profile of this talented individual."}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
@@ -490,6 +509,7 @@ if ( {) {
                         <span>{profileData.availability}</span>
                       </div>
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -652,18 +672,14 @@ if ( {) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </div>
                 </div>
               </div>
-=======
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && (
                 <div className="mt-4">
@@ -680,6 +696,7 @@ if ( {) {
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -750,10 +767,10 @@ if ( {) {
                   profileData && profileData.portfolio_links.map((link, index) => (;
 =======
 <<<<<<< HEAD
-              <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
@@ -806,6 +823,7 @@ if ( {) {
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -925,10 +943,10 @@ if ( {) {
 ========
 =======
 <<<<<<< HEAD
-              <p className="text-zion-slate-light">{profileData.experience |"No experience provided."}</p>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <p className="text-zion-slate-light">{profileData.experience |"No experience provided."}</p>
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
@@ -942,15 +960,8 @@ if ( {) {
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Github className="h-6 w-6" />
-<<<<<<< HEAD
                   </a>
-=======
                   </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
                 {profileData.twitter_link && (
                   <a
@@ -960,15 +971,8 @@ if ( {) {
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Twitter className="h-6 w-6" />
-<<<<<<< HEAD
                   </a>
-=======
                   </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
                 {profileData.linkedin_link && (
                   <a
@@ -978,15 +982,8 @@ if ( {) {
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Linkedin className="h-6 w-6" />
-<<<<<<< HEAD
                   </a>
-=======
                   </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
             </div>
@@ -996,7 +993,10 @@ if ( {) {
             <HireNowCTA
               talentProfile={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
@@ -1180,8 +1180,11 @@ if ( {) {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
@@ -1326,11 +1329,10 @@ if (isLoading) {
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

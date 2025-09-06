@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +24,8 @@ function Analytics() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useEffect } from "react";
 interface FirstInputEntry extends PerformanceEntry {processingStart: number;
@@ -30,8 +33,11 @@ interface FirstInputEntry extends PerformanceEntry {processingStart: number;
   target?: Element;
 }
 export function Analytics() {useEffect(() => {;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 import { useEffect } from "react",;
 interface FirstInputEntry extends PerformanceEntry {;
@@ -43,6 +49,7 @@ interface FirstInputEntry extends PerformanceEntry {;
 export function Analytics() {;
   useEffect(() => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -50,6 +57,8 @@ export function Analytics() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Performance monitoring;
     // Check condition
 if ( {) {
@@ -64,6 +73,7 @@ if ( {) {
 }
             // // // console.log ("LCP:", entry.start_time);
           }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,6 +95,8 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           if (entry.entryType === "first-input") {const firstInputEntry = entry as FirstInputEntry;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -127,7 +139,6 @@ if ( {) {
         observer2.disconnect ();
 =======
       return () => {observer.disconnect();
-=======
           if (entry.entryType === "first-input") {;
             const firstInputEntry = entry as FirstInputEntry,;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
@@ -153,7 +164,6 @@ if ( {) {
       // Cleanup;
       return () => {;
         observer.disconnect();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         observer2.disconnect();
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

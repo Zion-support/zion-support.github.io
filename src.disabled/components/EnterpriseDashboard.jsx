@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -12,9 +13,13 @@ export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics 
 =======
 <<<<<<< HEAD:src.disabled/components/EnterpriseDashboard.jsx
 <<<<<<< HEAD
+=======
+:src.disabled/components/EnterpriseDashboard.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 :src.disabled/components/EnterpriseDashboard.js.jsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("overview") const [refreshInterval,setRefreshInterval] = useState (30000) ";"";"""
+<<<<<<< HEAD
 
 
 =======
@@ -33,4 +38,10 @@ export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+:src.disabled/components/EnterpriseDashboard.js.jsx
+export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("overview") const [refreshInterval,setRefreshInterval] = useState (30000) ";"";"""
+:temp_exclude/src.disabled/components/EnterpriseDashboard.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "export": const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [activeTab,setActiveTab] = useState ('overview') const [refreshInterval,setRefreshInterval] = useState (30000) ';"";""

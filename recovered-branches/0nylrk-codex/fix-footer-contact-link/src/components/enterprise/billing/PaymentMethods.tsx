@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/billing/PaymentMethods.tsx
 
 import React from "react";
@@ -25,26 +26,29 @@ import React from "react";
 import {
 
 =======
-
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import React from "react";
 import {
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -62,17 +66,17 @@ import { CreditCard, Plus, Trash } from "lucide-react";
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
-<<<<<<< HEAD
 export function PaymentMethods() {
   // Mock payment methods
 
   const paymentMethods = [
     {
-<<<<<<< HEAD
       id: "pm-1"
       type: "credit_card"
       brand: "Visa"
@@ -91,8 +95,11 @@ export function PaymentMethods() {
       isDefault: false
     }
   ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
@@ -102,6 +109,7 @@ export function PaymentMethods() {
       isDefault: true,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -109,12 +117,15 @@ export function PaymentMethods() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -126,6 +137,8 @@ import { CreditCard, Plus, Trash } from "lucide-react",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: "pm-2",
       type: "credit_card",
@@ -135,6 +148,7 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       expYear: 2026,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
       isDefault: false}
@@ -143,18 +157,22 @@ import { CreditCard, Plus, Trash } from "lucide-react",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       isDefault: false,
     },;
   ];
-=======
       isDefault: false}
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Card>
@@ -207,6 +225,7 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       </CardFooter>
     </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -221,11 +240,10 @@ import { CreditCard, Plus, Trash } from "lucide-react",
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",;
@@ -501,6 +519,7 @@ function PaymentMethods() {
       </CardFooter>;
     </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;}
  //Mock payment methods const paymentMethods = [ {
   return (<Card> <CardHeader> <CardTitle>Payment Methods</CardTitle> <CardDescription>Manage your payment methods for automatic billing</CardDescription> </CardHeader> > <div className="flex items-center space-x-4" > <div className="h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background" > <CreditCard className="h-5 w-5" /> </div> <div> Default </span>) 
@@ -520,3 +539,8 @@ function PaymentMethods() {
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

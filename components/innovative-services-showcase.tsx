@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -57,15 +58,20 @@ export default function InnovativeServicesShowcase() {
 import {
 =======
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -106,6 +112,8 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Star
   TrendingUp
   Zap
@@ -123,9 +131,12 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
   ExternalLink;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield
 
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Star,
   TrendingUp,
   Zap,
@@ -167,7 +178,6 @@ function InnovativeServicesShowcase() {
   MapPin,;
   ExternalLink,;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Phone, Mail, MapPin, ExternalLink
@@ -178,9 +188,12 @@ import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-service
 import { nextGenAIServices } from '../data/next-gen-ai-services';
 export default function InnovativeServicesShowcase() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const contactInfo = {
 
 =======
@@ -732,7 +745,6 @@ export default function InnovativeServicesShowcase() {;
   },
 =======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -745,7 +757,6 @@ export default function InnovativeServicesShowcase() {;
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
         staggerChildren: 0.1
         delayChildren: 0.2
       }
@@ -766,7 +777,6 @@ export default function InnovativeServicesShowcase() {;
       }
     }
   }
-=======
         staggerChildren: 0.1,
         delayChildren: 0.2,
       },
@@ -895,7 +905,6 @@ export default function InnovativeServicesShowcase() {;
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const featuredServices = [
     {
       title: '🔐 Quantum Internet Security Platform'
@@ -968,11 +977,7 @@ export default function InnovativeServicesShowcase() {;
       link: 'https://ziontechgroup.com/neural-interface-development-platform'
       color: 'from-purple-600 to-indigo-700'
     },  ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>      color: 'from-indigo-600 to-purple-700'
@@ -1011,17 +1016,10 @@ export default function InnovativeServicesShowcase() {;
       color: 'from-purple-600 to-indigo-700'
     }
   ];
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>
-<<<<<<< HEAD
           <title>
             Innovative Services Showcase - Zion Tech Group | Cutting-Edge
             Technology
@@ -1197,9 +1195,12 @@ transition={{ duration: 1, ease: 'easeOut' }}>;
             <motion.div
               className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   ];
 
@@ -1209,11 +1210,14 @@ transition={{ duration: 1, ease: 'easeOut' }}>;
               initial={{ opacity: 0, y: 30 }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -1407,14 +1411,7 @@ transition={{ duration: 1, ease: 'easeOut' }}>;
                     <h3 className='text - 2xl font - bold text - white mb - 4'>;
 =======
                   className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='mb-6'>
                     <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1758,34 +1755,28 @@ transition={{ duration: 1, ease: 'easeOut' }}>;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Emerging Tech Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-<<<<<<< HEAD
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-=======
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
 
               initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -1809,14 +1800,7 @@ transition={{ duration: 1, ease: 'easeOut' }}>;
                 transforming industries
               </p>
             </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
                 .slice(0, 6)
@@ -1860,7 +1844,6 @@ transition={{ duration: 1, ease: 'easeOut' }}>;
                 ))}
             </div>
             <motion.div
-<<<<<<< HEAD
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}                  Emerging
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2233,14 +2216,8 @@ className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 
             </div>
             <motion.div
               className="text-center mt-16"
-=======
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -2267,21 +2244,14 @@ className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-<<<<<<< HEAD
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-=======
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
 
               initial={{ opacity: 0, y: 30 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -2412,16 +2382,9 @@ className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 
               ))}
             </div>
             <motion.div
-<<<<<<< HEAD
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}              className="text-center mt-16"
-=======
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -2486,6 +2449,7 @@ className='bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2500,12 +2464,9 @@ className='bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2622,6 +2583,7 @@ href="/services"
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -2876,18 +2838,18 @@ className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-b
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
@@ -19,13 +16,17 @@ export default function GreenIT() {
     {
       title: "Energy-Efficient Hardware",;
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Leaf, Server, Cloud } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -33,20 +34,25 @@ import { Leaf, Server, Cloud } from "lucide-react",
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
-=======
 import { Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function GreenIT() {
 
   const greenITSolutions = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -63,16 +69,19 @@ export default function GreenIT() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "Energy-Efficient Hardware"
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
       icon: Server}
-=======
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       icon: Server},
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Optimized Cooling Systems"
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."
@@ -89,6 +98,7 @@ export default function GreenIT() {
 
   return (
     <AppLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -153,15 +163,19 @@ function GreenIT() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <SEO
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
-=======
       <SEO 
         title="Green IT Solutions - Sustainable Technology" 
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
@@ -254,6 +268,7 @@ function GreenIT() {
     </AppLayout>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -270,6 +285,9 @@ function GreenIT() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -651,11 +669,10 @@ Green IT Solutions - Sustainable Technology"description=" Explore eco-friendly I
 =======
     </AppLayout>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

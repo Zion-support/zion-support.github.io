@@ -56,7 +56,13 @@ type Props = {
   questions: Question[]
   onComplete: (score: number) => void
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+export default function Quiz({ questions, onComplete }: Props) {
+
+export default function Quiz({ questions, onComplete }: Props) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
   const score = questions.reduce(
@@ -121,6 +127,7 @@ export default function Quiz({ questions, onComplete }: Props) {;
   function submit() {
     setSubmitted(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     onComplete(score)
@@ -153,9 +160,10 @@ export default function Quiz({ questions, onComplete }: Props) {
     setSubmitted(true);
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     onComplete(score)
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -210,6 +218,7 @@ export default function Quiz({ questions, onComplete }: Props) {
   );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
+<<<<<<< HEAD
 
 =======
 
@@ -387,20 +396,20 @@ function submit() {
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
-<<<<<<< HEAD
-=======
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

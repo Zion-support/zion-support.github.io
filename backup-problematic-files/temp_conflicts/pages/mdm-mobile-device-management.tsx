@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7,11 +8,11 @@
 =======
 <<<<<<< HEAD:pages-disabled/quantum-metaverse.tsx
 <<<<<<< HEAD
+=======
+:pages-disabled/quantum-metaverse.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
+:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
 import React from 'react',;
 import Head from 'next/head',;
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react',;
@@ -65,9 +66,7 @@ export default function MDMPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   ),;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
+:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
 import React from "react";
 import Head from "next/head";
 import {
@@ -78,9 +77,13 @@ import {
   ArrowRight
   Shield
   Star
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import Head from "next/head";
 import {
@@ -91,7 +94,6 @@ import {
   ArrowRight,
   Shield,
   Star,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
@@ -99,16 +101,21 @@ import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     s.link.endsWith("/quantum-internet-security-platform"),;
 
 =======
 <<<<<<< HEAD
-    s.link.endsWith("/quantum-internet-security-platform")
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    s.link.endsWith("/quantum-internet-security-platform")
     s.link.endsWith("/quantum-internet-security-platform"),;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
   if (!service) return null;
 
@@ -200,6 +207,7 @@ export default function QuantumInternetSecurityPage() {
     </UltraAdvancedFuturisticBackground>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -211,15 +219,14 @@ export default function QuantumInternetSecurityPage() {
 =======
 <<<<<<< HEAD:pages-disabled/quantum-metaverse.tsx
 <<<<<<< HEAD
+=======
+:pages-disabled/quantum-metaverse.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
->>>>>>> main:pages-disabled/quantum-metaverse.tsx
-=======
-=======
->>>>>>> main:pages-disabled/quantum-metaverse.tsx
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+main:pages-disabled/quantum-metaverse.tsx
+main:pages-disabled/quantum-metaverse.tsx
+:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
+:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,8 @@ const AUTO_SERVICE_TITLES = [
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import {toast} from "@/hooks/use-toast"
@@ -30,8 +33,6 @@ import {NextSeo} from '@/components/NextSeo'
 import {Header} from "@/components/Header"
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
 import {logErrorToProduction} from '@/utils/productionLogger'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { GradientHeading } from "@/components/GradientHeading",
 import { ProductListingCard } from "@/components/ProductListingCard",
 import { useState, useEffect, useRef, Suspense } from "react",
@@ -46,7 +47,10 @@ import { Header } from "@/components/Header",
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',
 import {logErrorToProduction} from '@/utils/productionLogger',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support",
   "Cloud Infrastructure Management",
@@ -58,9 +62,12 @@ const AUTO_SERVICE_TITLES = [
   "Blockchain Data Solutions"
 ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -70,12 +77,15 @@ import {Header} from "@/components/Header"
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
 import {logErrorToProduction} from '@/utils/productionLogger'
 <<<<<<< HEAD
+<<<<<<< HEAD
 onst AUTO_SERVICE_TITLES = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const AUTO_SERVICE_TITLES = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   "AI-Powered Customer Support"
@@ -88,11 +98,16 @@ const AUTO_SERVICE_TITLES = [
   "Blockchain Data Solutions"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ]
 function generateInnovationListing(index: number): ProductListing {
 
 =======
+=======
+]
+function generateInnovationListing(index: number): ProductListing {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] |'AI Service'
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
@@ -110,6 +125,7 @@ function generateInnovationListing(index: number): ProductListing {
       description: "Rent or buy specialized hardware, servers, and devices"
       icon: <Code className="w-6 h-6" />
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
@@ -201,10 +217,11 @@ function generateInnovationListing(index: number): ProductListing {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ],
 
 function generateInnovationListing(index: number): ProductListing {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
@@ -320,15 +337,19 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       icon: <Code className="w-6 h-6" />
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -340,89 +361,73 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 >>>>>>>     'ai-models-apis': {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
-=======
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'ai-models-apis': {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
-<<<<<<< HEAD
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>     'content-creation': {
 =======
 =======
-    },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    },
     'content-creation': {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
       icon: <PenLine className="w-6 h-6" />
-<<<<<<< HEAD
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>     'data-analysis': {
 =======
 =======
-    },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    },
     'data-analysis': {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
-<<<<<<< HEAD
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>     'computer-vision': {
 =======
 =======
-    },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    },
     'computer-vision': {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       title: "Computer Vision"
       description: "Image and video processing solutions"
       icon: <Eye className="w-6 h-6" />
-<<<<<<< HEAD
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>     'virtual-assistants': {
 =======
 =======
-    },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    },
     'virtual-assistants': {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
       icon: <Bot className="w-6 h-6" />
-<<<<<<< HEAD
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>     'voice-speech': {
       title: "Voice & Speech"
@@ -504,30 +509,34 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
-<<<<<<< HEAD
-=======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",;
       icon: <Code className="w-6 h-6" />;
     };          icon: <Bot className="w-6 h-6" />},
-=======
     },
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'developer-tools': {
 =======
 
@@ -555,14 +564,13 @@ ursor/fix-website-loading-errors-and-merge-6662
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
     };          icon: <Bot className="w-6 h-6" />}
         setCategory(currentCategory)
         innovationCounterRef.current = 0
     : 'Category | Zion Marketplace'
   const seoDescription =
     category.description |'Explore listings in this category.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
     'developer-tools': {
@@ -584,6 +592,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     'business-solutions': {
       title: "Business Solutions",
@@ -693,6 +703,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     category.description || 'Explore listings in this category.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -702,6 +713,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         setCategory(currentCategory)
         innovationCounterRef.current = 0
@@ -710,18 +724,21 @@ ursor/fix-website-loading-errors-and-merge-6662
     category.description || 'Explore listings in this category.'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>   return (
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
       <Header />
-<<<<<<< HEAD
       <Suspense fallback={<ListingGridSkeleton />}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -736,6 +753,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       <Suspense fallback={<ListingGridSkeleton />}> 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      <Suspense fallback={<ListingGridSkeleton />}> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="min-h-screen bg-zion-blue">
 =======
 
@@ -752,7 +772,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="text-center mb-12">
 =======
 >>>>>>>           <div className="text-center mb-12">
@@ -773,6 +797,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <ListingGridSkeleton />
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -917,6 +942,8 @@ function generateInnovationListing(): any (index: number): ProductListing {;
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {listings.map((listing,) => (
                 <ProductListingCard
                   key = {listing.id,}
@@ -924,8 +951,11 @@ function generateInnovationListing(): any (index: number): ProductListing {;
                   onRequestQuote = {handleRequestQuote,}
                   detailBasePath="/marketplace/listing"
                 />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {listings.map((listing) => (
                 <ProductListingCard
                   key={listing.id}
@@ -1131,6 +1161,7 @@ function generateInnovationListing(): any (index: number): ProductListing {;
                   detailBasePath="/marketplace/listing";
                 />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1150,6 +1181,11 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+              ))}
+            </div>
+          )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       </Suspense>
@@ -1157,9 +1193,12 @@ function generateInnovationListing(): any (index: number): ProductListing {;
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>;
         </div>;
       </Suspense>;
@@ -1198,11 +1237,10 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

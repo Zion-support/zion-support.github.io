@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
@@ -28,6 +29,8 @@ import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -38,17 +41,34 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
+<<<<<<< HEAD
 
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {useState} from "react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Copy, Facebook, Link, Share, Twitter} from "lucide-react";
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
+
+import { Input } from "@/components/ui/input";
+import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
@@ -67,6 +87,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ReferralLink({
   referralLink
   onCopy
@@ -77,7 +99,15 @@ export function ReferralLink({
     onCopy();
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+<<<<<<< HEAD
 }
+=======
+  }
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
+  const [copied, setCopied] = useState(false),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleCopy = () => {
@@ -85,6 +115,7 @@ export function ReferralLink({
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -95,6 +126,8 @@ export function ReferralLink({
 
   };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Card className="mt-6">
@@ -231,8 +264,16 @@ export function ReferralLink({ referralLink, onCopy, onShare } ReferralLinkProps
         </div>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+  )
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -501,5 +542,9 @@ mt-6"> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Link class
 =======
   );
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { authenticateRequest } from '@/utils/auth';
 
 <<<<<<< HEAD
@@ -227,8 +230,11 @@ return res.status (405).json ({ error: 'Method not allowed' });
     return res.status(200).json({ tenant: result });
   }
   return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   createTenant,
   getTenants,
@@ -260,6 +266,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
     const result = updateTenant(tenantId, update || {});
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
 
@@ -271,6 +278,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
     if (!tenantId || !rotateKey)
@@ -279,12 +290,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (method === 'PATCH') {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const { tenantId, rotateKey } = req.body || {};
     if (!tenantId || !rotateKey)
       return res.status(400).json({ error: 'tenantId and rotateKey required' });
@@ -295,21 +309,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(200).json({ tenant: result })
   }
-<<<<<<< HEAD
 return res.status(405).json({ error: 'Method not allowed' });
 }
-=======
-<<<<<<< HEAD
 
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     const { tenantId, rotateKey } = req.body || {};
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

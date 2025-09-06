@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -13,15 +14,19 @@ import { toast } from "@/hooks/use-toast",
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
-=======
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export const useSocialAuth = () => {
@@ -34,6 +39,7 @@ export const useSocialAuth = () => {
 =======
       const { error } = await supabase.auth.signInWithOAuth({;
         provider: "google"});
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { supabase } from "@/integrations/supabase/client",
@@ -52,10 +58,15 @@ import { toast } from "@/hooks/use-toast",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const useSocialAuth = () => {
   const loginWithGoogle = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -64,20 +75,25 @@ export const useSocialAuth = () => {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         provider: "google"});
       if (error) {
         toast({
           title: "Google login failed";
           description: error.message
-=======
         provider: "google"}),
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       if (error) {
         toast({
           title: "Google login failed",
           description: error.message,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -98,12 +114,13 @@ export const useSocialAuth = () => {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant: "destructive"})
       }
     } catch (error: any) {
       console.error("Google login error:", error),
       toast({
-<<<<<<< HEAD
         title: "Google login failed";
         description: error.message |"An unexpected error occurred"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -129,8 +146,11 @@ export const useSocialAuth = () => {
 
 =======
           description: error.message
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Google login failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"})
@@ -146,6 +166,7 @@ export const useSocialAuth = () => {
         toast({
           title: "Facebook login failed",
           description: error.message,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -163,12 +184,13 @@ export const useSocialAuth = () => {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant: "destructive"})
       }
     } catch (error: any) {
       console.error("Facebook login error:", error),
       toast({
-<<<<<<< HEAD
         title: "Facebook login failed";
         description: error.message |"An unexpected error occurred"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -194,8 +216,11 @@ export const useSocialAuth = () => {
 
 =======
           description: error.message
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Facebook login failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"})
@@ -212,6 +237,7 @@ export const useSocialAuth = () => {
           title: "Twitter login failed",
           description: error.message,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -224,12 +250,13 @@ export const useSocialAuth = () => {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant: "destructive"})
       }
     } catch (error: any) {
       console.error("Twitter login error:", error),
       toast({
-<<<<<<< HEAD
         title: "Twitter login failed";
         description: error.message |"An unexpected error occurred"
         variant: "destructive"})
@@ -238,19 +265,18 @@ export const useSocialAuth = () => {
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
 }
 
-=======
         title: "Twitter login failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"})
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
   };
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 export const useSocialAuth = () => {;
@@ -308,6 +334,7 @@ export const useSocialAuth = () => {;
         variant: "destructive"});
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
@@ -417,3 +444,7 @@ if ( {) {
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

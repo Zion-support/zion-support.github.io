@@ -11,17 +11,14 @@ import * as React from 'react';
 
 =======
 import * as React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {cn} from '@/lib/utils';
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -71,15 +68,13 @@ const Card = React.forwardRef<;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/card.tsx
 =======
 <<<<<<< HEAD
-import {cn} from '@/lib/utils';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {cn} from '@/lib/utils';
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const Card = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
@@ -87,11 +82,8 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-<<<<<<< HEAD
       'rounded-lg border bg-card text-card-foreground shadow-sm'
-=======
       "rounded-lg border bg-card text-card-foreground shadow-sm",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       className
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     )}
@@ -99,24 +91,31 @@ const Card = React.forwardRef<
   />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/card.tsx
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ));
 Card.displayName = 'Card';
 const CardHeader = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<</HTMLDivElement>HTMLDivElement>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ))
 Card.displayName = "Card"
 
 const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -143,26 +142,31 @@ const CardHeader = React && React.forwardRef<;
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
     className={cn('flex flex-col space-y-1.5 p-6', className)}
     {...props}
   />
-<<<<<<< HEAD
 ));
 CardHeader.displayName = 'CardHeader';
 const CardTitle = React.forwardRef<
   HTMLParagraphElement
   React.HT</HTMLHeadingElement>MLAttributes<HTMLHeadingElement>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ))
 CardHeader.displayName = "CardHeader"
 
 const CardTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -218,15 +222,14 @@ const CardTitle = React.forwardRef<;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/card.tsx
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >(({ className, ...props }, ref) => (
   <h3
     ref={ref}
     className={cn(
-<<<<<<< HEAD
       'text-2xl font-semibold leading-none tracking-tight'
-=======
       "text-2xl font-semibold leading-none tracking-tight",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       className
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     )}
@@ -234,21 +237,26 @@ const CardTitle = React.forwardRef<;
   />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/card.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ));
 CardTitle.displayName = 'CardTitle';
 const CardDescription = React.forwardRef<
   HTMLParagraph</HTMLParagraphElement>Element
-=======
 ))
 CardTitle.displayName = "CardTitle"
 
 const CardDescription = React.forwardRef<
   HTMLParagraphElement,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
@@ -256,6 +264,7 @@ const CardDescription = React.forwardRef<
     className={cn('text-sm text-muted-foreground', className)}
     {...props}
   />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -402,6 +411,8 @@ export {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ));
 CardDescription.displayName = 'CardDescription';
 const CardContent </HTMLDivElement>= React.forwardRef<
@@ -413,8 +424,11 @@ const CardContent </HTMLDivElement>= React.forwardRef<
 CardContent.displayName = 'CardContent';
 </HTMLDivElement>const CardFooter = React.forwardRef<
   HTMLDivElement
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ))
 CardDescription.displayName = "CardDescription"
 
@@ -429,11 +443,14 @@ CardContent.displayName = "CardContent"
 const CardFooter = React.forwardRef<
   HTMLDivElement,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
@@ -441,6 +458,7 @@ const CardFooter = React.forwardRef<
     className={cn('flex items-center p-6 pt-0', className)}
     {...props}
   />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -516,6 +534,8 @@ React.HTMLAttributes<HTMLDivElement> > ( ({
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/card.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ));
 CardFooter.displayName = 'CardFooter';
 export {
@@ -526,16 +546,11 @@ export {
   CardDescription
   CardContent
 }
-=======
 ))
 CardFooter.displayName = "CardFooter"
 
-<<<<<<< HEAD
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 export {
   Card,
   CardHeader,
@@ -544,9 +559,11 @@ export {
   CardDescription,
   CardContent,;
 };
-=======
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

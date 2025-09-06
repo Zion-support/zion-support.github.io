@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseStickyNav.tsx
 
 import { Menu } from 'lucide-react'
@@ -19,24 +20,27 @@ import Link from 'next/link'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-import { useState } from "react";
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useState } from "react";
 import { useState } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Menu } from 'lucide-react'
 
-<<<<<<< HEAD
 import Link from 'next/link'
   const [ open, setOpen ] = useState(false)
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Menu } from 'lucide-react'
 import Link from "next/link",
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -47,13 +51,14 @@ export function EnterpriseStickyNav() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-12">
           <button
-<<<<<<< HEAD
             className='md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
             onClick={() => setOpen(!open)}
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseStickyNav.tsx
@@ -186,7 +191,6 @@ export function EnterpriseStickyNav() {;
             aria-label='Toggle navigation'
             aria-expanded={open}          >
             <Menu className='h-6 w-6' />
-=======
             className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation"
@@ -194,11 +198,14 @@ export function EnterpriseStickyNav() {;
           >
             <Menu className="h-6 w-6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </button>
           <ul className={`${open ? "flex" : "hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>
             <li>
@@ -213,12 +220,15 @@ export function EnterpriseStickyNav() {;
             <li>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
 =======
 >>>>>>>               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link
                 href='#contact'
                 className='text-sm font-medium hover:text-primary'
@@ -252,18 +262,13 @@ export function EnterpriseStickyNav() {
               <Link href="#testimonials" className="text-sm font-medium hover:text-primary">Testimonials</Link>
             </li>
             <li>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </li>
           </ul>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -274,19 +279,21 @@ export function EnterpriseStickyNav() {
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </nav>;
   );
 };
-=======
     </nav>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
 import Link from "next/link",;
@@ -400,6 +407,7 @@ function EnterpriseStickyNav() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseStickyNav.tsx
 
 =======
@@ -429,3 +437,5 @@ return (<nav className="sticky top-16 z-40 bg-card border-b border-border" > <di
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

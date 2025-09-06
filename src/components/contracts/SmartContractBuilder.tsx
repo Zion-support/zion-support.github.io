@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -14,14 +17,14 @@ import { ContractPreview } from "./components/ContractPreview",
 import { TemplateManager } from "./templates/TemplateManager",
 import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
 import { useSmartContracts } from "@/hooks/useSmartContracts",
-<<<<<<< HEAD
 import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
-=======
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SmartContractBuilderProps {
 
   isOpen: boolean
@@ -187,6 +190,7 @@ export function SmartContractBuilder({
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
     network: 'ethereum', // Default network
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { toast } from "sonner";
@@ -197,15 +201,19 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     useEscrow: true
     deployToChain: false // Default to not deploying to chain immediately
 })
-=======
     useEscrow: true,
     deployToChain: false // Default to not deploying to chain immediately;
 });
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [deployStatus, setDeployStatus] = useState<string>(''); // e.g., 'deploying', 'deployed', 'error'
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null); // Existing from Solidity part
   // States for on-chain agreement UI and deployment
@@ -804,10 +812,13 @@ if ( {) {
           </TabsContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
@@ -882,6 +893,7 @@ setActiveTab ("preview")
           </TabsContent>
         </Tabs>
         <TemplateManager
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { toast } from "sonner",
@@ -973,6 +985,8 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -984,7 +998,6 @@ import { ContractPreview } from "./components/ContractPreview",
 import { TemplateManager } from "./templates/TemplateManager",
 import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
 import { useSmartContracts } from "@/hooks/useSmartContracts",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1406,12 +1419,16 @@ export function SmartContractBuilder({;
 
 =======
           
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
                 <ContractPreview 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />
@@ -1428,26 +1445,28 @@ export function SmartContractBuilder({;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
                   deploymentInfo={deploymentInfo}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   generatedContract = {generatedContract,}
                   talent = {talent,}
                   onClose = {onClose,}
                   deploymentInfo = {deploymentInfo,}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 />
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
-<<<<<<< HEAD
-=======
                       onClick = {handleDeployContract,}
                       disabled = {deployStatus === 'deploying',}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
@@ -1511,7 +1530,6 @@ setActiveTab ("preview")
           </TabsContent>
         </Tabs>
         <TemplateManager
-=======
                   generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
@@ -1521,8 +1539,11 @@ setActiveTab ("preview")
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       onClick={handleDeployContract}
                       disabled={deployStatus === 'deploying'}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
@@ -1537,6 +1558,7 @@ setActiveTab ("preview")
           </TabsContent>;
         </Tabs>;
         <TemplateManager;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1668,10 +1690,13 @@ setActiveTab ("preview");
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
 
@@ -1687,11 +1712,14 @@ setActiveTab ("preview");
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
       </DialogContent>
     </Dialog>
   )}
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
           <TabsContent value="form" className="pt - 4">;
@@ -1805,6 +1833,9 @@ setActiveTab ("preview");
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />;
       </DialogContent>;
     </Dialog>;
@@ -1889,8 +1920,11 @@ setActiveTab ("preview");
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

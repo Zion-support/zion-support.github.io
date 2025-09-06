@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,6 +8,8 @@
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Messaging storage utilities
 export interface Message {;
   id: string;
@@ -41,9 +44,7 @@ export interface Message {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }>;
 }
-<<<<<<< HEAD
 export interface Conversation {
-=======
 
 <<<<<<< HEAD
 
@@ -53,8 +54,11 @@ export interface Conversation {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 export interface Conversation {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -102,12 +106,9 @@ export interface MessageThread {;
     tags?: string[]
   }
 }
-<<<<<<< HEAD
 export interface MessageThread {
-=======
 
 export interface MessageThread {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   conversationId: string;
   rootMessageId: string;
@@ -116,8 +117,8 @@ export interface MessageThread {;
   updatedAtIso: string
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
-<<<<<<< HEAD
 export interface MessageSearchResult {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   updatedAtIso: string
@@ -138,9 +139,10 @@ export interface MessageSearchResult {;
   relevanceScore: number
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export interface MessageSearchResult {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   message: Message;
   conversation: Conversation;
   highlights: string[];
@@ -1195,8 +1197,8 @@ export async function getMessage(id: string): Promise<Message | null> {
   return messagingStorage.getMessage(id)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
-<<<<<<< HEAD
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return messagingStorage && messagingStorage.updateMessage(id, updates);
 =======
@@ -1230,9 +1232,10 @@ export async function markAsRead(id: string): Promise<boolean> {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.updateMessage(id, updates);
 }
 export async function deleteMessage(id: string): Promise<boolean> {
@@ -1242,12 +1245,9 @@ export async function markAsRead(id: string): Promise<boolean> {
   return messagingStorage.markAsRead(id)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
-<<<<<<< HEAD
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
-=======
 
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.createConversation(conversation);
 }
 export async function getConversation(id: string): Promise<Conversation | null> {
@@ -1262,7 +1262,6 @@ export async function getConversation(id: string): Promise<Conversation | null> 
   return messagingStorage.getConversation(id)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
-<<<<<<< HEAD
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
   return messagingStorage.updateConversation(id, updates);
 }
@@ -1270,7 +1269,6 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
   return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
 }
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {
-=======
 
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
   return messagingStorage.updateConversation(id, updates);
@@ -1281,7 +1279,6 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
 }
 
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
@@ -1296,8 +1293,8 @@ export async function getUnreadMessageCount(userId: string): Promise<number> {
   return messagingStorage.getUnreadMessageCount(userId)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
-<<<<<<< HEAD
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
 =======
@@ -1349,9 +1346,10 @@ export async function searchMessages(query: string, userId: string, limit?: numb
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.searchMessages(query, userId, limit);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
@@ -1365,24 +1363,29 @@ export function createMessageData(
 ): Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'> {
   return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     conversationId
     senderId
     recipientId
     body
     ...additionalData
   }
-=======
     conversationId,
     senderId,
     recipientId,
     body,
     ...additionalData;
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function createConversationData(
   participants: string[]
@@ -1390,12 +1393,15 @@ export function createConversationData(
 ): Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
   return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     participants
     lastMessageAtIso: new Date().toISOString()
     isArchived: false
@@ -1411,7 +1417,6 @@ export function generateConversationId(): string {
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 export function formatMessageTime(isoString: string): string {
-=======
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -1429,7 +1434,6 @@ export function generateConversationId(): string {;
 }
 
 export function formatMessageTime(isoString: string): string {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const date = new Date(isoString);
   const now = new Date();
 <<<<<<< HEAD
@@ -1485,6 +1489,7 @@ export function formatMessageTime(isoString: string): string {;
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
     return date.toLocaleDateString();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1500,12 +1505,9 @@ export function formatMessageTime(isoString: string): string {;
 =======
     return date.toLocaleDateString();
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

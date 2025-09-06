@@ -1,16 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import Image from "next/image";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-import Image from "next/image";
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import Image from "next/image";
 import Image from 'next/image'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Twitter, Linkedin } from 'lucide-react'
 interface Speaker {
   name: string
@@ -23,14 +28,15 @@ interface Speaker {
 interface Speaker {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   name: string,
   title: string,
   avatar: string,
   twitter?: string
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -39,14 +45,13 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   linkedin?: string
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -78,7 +83,6 @@ interface Speaker {
 }
 const speakers: Speaker[] = [
   {
-<<<<<<< HEAD
 
 <<<<<<< HEAD
     linkedin: '#'}],
@@ -92,6 +96,7 @@ const speakers: Speaker[] = [
   }
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
     linkedin: '#',
   },
 ]
@@ -102,26 +107,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: 'Alex Zion',
     title: 'Founder & CEO',
     avatar: 'https://placehold.co/100x100',
     twitter: '#',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     linkedin: '#',
   },
 ]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     linkedin: '#'}],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function SpeakersSection() {
 >>>>>>>   return (
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
@@ -132,9 +136,12 @@ export function SpeakersSection() {
             <div key={sp.name} className="text-center space-y-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Image
 import Image from "next/image",;
 import { Twitter, Linkedin } from 'lucide-react';
@@ -163,15 +170,19 @@ export function SpeakersSection() {;
             <div key={sp.name} className="text-center space-y-2">;
               <Image;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 src={sp.avatar}
                 alt={sp.name}
                 width={96}
                 height={96}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -182,6 +193,8 @@ export function SpeakersSection() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className='rounded-full mx-auto'
                 loading='lazy'
               <p className='font-semibold'>{sp.name}</p>
@@ -196,6 +209,7 @@ export function SpeakersSection() {;
                     className='flex items-center'
                     href = {sp.twitter,}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     aria-label="Twitter"
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
                 src={sp.avatar}
@@ -208,6 +222,8 @@ export function SpeakersSection() {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className="rounded-full mx-auto"
                 loading="lazy"
               />
@@ -227,6 +243,7 @@ export function SpeakersSection() {;
                   <a
                     href={sp.twitter}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -239,6 +256,8 @@ export function SpeakersSection() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     aria-label="Twitter"
 >>>>>>>                     target="_blank"
                     rel="noopener noreferrer"
@@ -246,10 +265,13 @@ export function SpeakersSection() {;
                   >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Twitter className='h-4 w-4' aria-hidden='true' />
                     <span className='sr-only'>Twitter</span>                  </a>                    <Twitter className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">Twitter</span>
@@ -266,11 +288,14 @@ export function SpeakersSection() {;
                     <Linkedin className='h-4 w-4' aria-hidden='true' />
                     <span className='sr-only'>LinkedIn</span>                  </a>                    aria-label="LinkedIn"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     target="_blank"
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Twitter className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">Twitter</span>
                   </Link>
@@ -280,17 +305,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                     href={sp.linkedin}
                     aria-label="LinkedIn"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     target="_blank"
 >>>>>>>                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
                     <Linkedin className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">LinkedIn</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -321,23 +350,32 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  </Link>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 )}
               </div>
             </div>
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
       </div>;
     </section>;
   );
 };
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>;
       </div>;
     </section>;
@@ -393,8 +431,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

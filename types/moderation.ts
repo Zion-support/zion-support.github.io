@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:types/moderation.ts
 
 =======
@@ -11,14 +12,17 @@ export interface ModerationAction {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-<<<<<<< HEAD
-export interface ModerationAction {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+export interface ModerationAction {
 
 export interface ModerationAction {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   flagId: string;
   action: ModerationStatus;
@@ -112,12 +116,9 @@ export type FlaggedContent = {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/types/moderation.ts
 =======
 }
-<<<<<<< HEAD
 export interface ModerationFlag {
-=======
 
 export interface ModerationFlag {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   content: string;
@@ -128,13 +129,15 @@ export interface ModerationFlag {;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+ursor/fix-syntax-push-and-merge-to-main-7db5
 }
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

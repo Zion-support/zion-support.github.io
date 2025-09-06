@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -8,10 +9,11 @@ import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
-
 =======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import EnhancedCard from '../../components/ui/EnhancedCard',
+import EnhancedButton from '../../components/ui/EnhancedButton';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import {useEffect, useState} from 'react';
 const STEPS = [
   { key: 'profile', label: 'Profile completed' }
@@ -55,17 +57,14 @@ export default function TalentDashboard() {
 type StepKey = (typeof STEPS)[number]['key'];
 export default function TalentDashboard() {
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
-<<<<<<< HEAD
     profile: false
     skills: false
     availability: false
     match: false
-=======
     profile: false,
     skills: false,
     availability: false,
     match: false,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
   useEffect(() => {
     try {
@@ -87,12 +86,8 @@ export default function TalentDashboard() {
     setCompleted(c => ({ ...c, [key]: !c[key] }));
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
-<<<<<<< HEAD
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from 'react';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const STEPS = [;
@@ -176,6 +171,7 @@ export default function TalentDashboard(req, res) {
   }, [completed]),
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
+<<<<<<< HEAD
 =======
 =======
     setCompleted(c => ({ ...c, [key]: !c[key] }));
@@ -283,6 +279,8 @@ export default function TalentDashboard(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -309,6 +307,7 @@ export default function TalentDashboard(req, res) {
               {completed[s.key] ? (
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -486,6 +485,8 @@ export default function TalentDashboard() {
               )}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <EnhancedButton
                   onClick={() => toggle(s.key)}
                   variant='secondary'
@@ -505,12 +506,8 @@ export default function TalentDashboard() {
 
 =======
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -534,6 +531,7 @@ export default function TalentDashboard() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -549,3 +547,5 @@ export default function TalentDashboard() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -4,12 +4,13 @@
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -37,10 +38,13 @@ const formSchema = z.object({
 export type ContractFormValues = z.infer<typeof formSchema>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         values
         talent
         clientName
@@ -48,6 +52,7 @@ export type ContractFormValues = z.infer<typeof formSchema>
 
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Button } from "@/components/ui/button";
@@ -61,6 +66,8 @@ import { Loader2 } from 'lucide-react'import { Button } from "@/components/ui/bu
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/components/ContractForm.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         values, 
         talent, 
         clientName, 
@@ -68,8 +75,6 @@ import { Loader2 } from 'lucide-react'import { Button } from "@/components/ui/bu
 };
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { Button } from "@/components/ui/button";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Form } from "@/components/ui/form";
@@ -592,8 +597,11 @@ talent.full name ;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

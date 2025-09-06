@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -1099,29 +1100,16 @@ export default function SitemapPage() {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
-=======
 import React from 'react';
 import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 import { 
   Home, 
   Brain, 
@@ -1135,12 +1123,7 @@ import {
   Globe, 
   ArrowRight ;
 } from 'lucide-react';
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/main
 
 import {
   Home
@@ -1194,10 +1177,7 @@ const sitemapData = [
     ]
   }
 ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function SitemapPage() {
   return (
     <>
@@ -1262,31 +1242,13 @@ export default function SitemapPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+origin/automation-improvements-final
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/main
 import {
   Home
   Search
@@ -1300,7 +1262,6 @@ import {
   ChevronRight
   Globe
   Building;
-=======
     </>;
   );
 }
@@ -1317,7 +1278,6 @@ import {
   ChevronRight,
   Globe,;
   Building,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
@@ -1345,17 +1305,14 @@ export default function SitemapPage() {
       description: 'Browse services by category and technology area'
     }
     {
-<<<<<<< HEAD
       href: '/contact'
       label: '📧 Contact'
       description: 'Get in touch and start your project'
     }
-=======
       href: '/contact',
       label: '📧 Contact',
       description: 'Get in touch and start your project',
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const serviceCategories = [
     {
@@ -1502,13 +1459,7 @@ export default function SitemapPage() {
       action: 'https://maps.google.com/?q=Middletown,DE'
     }
   ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 import {;
   Home, Search, Rocket, FileText, Users, Mail, Map,;
   ArrowRight, ExternalLink, ChevronRight, Globe, Building;
@@ -1586,17 +1537,18 @@ export default function SitemapPage(req, res) {
   }
 }
   ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
         <title>Sitemap | Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta
           name='description'
           content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category."
@@ -1608,9 +1560,12 @@ export default function SitemapPage(req, res) {
         />
         <link rel='canonical' href='https://ziontechgroup.com/sitemap' />      </Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <SmartHeader />
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>
@@ -1618,7 +1573,6 @@ export default function SitemapPage(req, res) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
       <SmartHeader />
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>
@@ -1626,7 +1580,6 @@ export default function SitemapPage(req, res) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
         <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />
         <meta property="og:title" content="Sitemap | Zion Tech Group" />
         <meta property="og:description" content="Complete website sitemap and navigation guide." />
@@ -1656,9 +1609,12 @@ export default function SitemapPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
               Site Map
@@ -1741,6 +1697,7 @@ export default function SitemapPage(req, res) {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       {/* Main Pages */}
       <section id='main-pages' className='py-20 px-6'>
@@ -1771,6 +1728,8 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Main Pages */}
       <section id='main-pages' className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -1798,9 +1757,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
             {mainPages.map((page, index) => (
 =======
             className='mb-16'
-<<<<<<< HEAD
-=======
-=======
       {/* Main Pages */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1830,9 +1786,12 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
   }
 }
             className="mb-16"
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Main Pages
@@ -1842,6 +1801,7 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
               and services
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages.map((page, index) => (
@@ -1855,6 +1815,8 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages.map((page, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -1932,9 +1894,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
                 </Link>
 =======
                 className='group'
-<<<<<<< HEAD
-=======
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {mainPages.map((page, index) => (
               <motion.div
@@ -1964,8 +1923,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
   }
 }
                 className="group"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Link
                   href={page.href}
@@ -1982,10 +1939,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
                   </p>                </Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
 <<<<<<< HEAD
           </div>;
@@ -2004,12 +1957,12 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Service Categories */}
 <<<<<<< HEAD
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -2078,6 +2031,7 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -2105,6 +2059,8 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2142,8 +2098,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
   }
 }
             className="mb-16"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Service Categories
@@ -2153,10 +2107,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
               by category
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -2209,9 +2159,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
                 </Link>
 =======
                 className='group'
-<<<<<<< HEAD
-=======
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {serviceCategories.map((category, index) => (
               <motion.div
@@ -2241,8 +2188,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
   }
 }
                 className="group"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Link
                   href={category.href}
@@ -2259,10 +2204,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
                   </p>                </Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
 <<<<<<< HEAD
           </div>;
@@ -2281,12 +2222,12 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Featured Services */}
 <<<<<<< HEAD
       <section className="py-20 px-6">
@@ -2351,6 +2292,7 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -2378,6 +2320,8 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2415,8 +2359,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
   }
 }
             className="mb-16"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Featured Services
@@ -2424,10 +2366,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -2478,9 +2416,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
                 </Link>
 =======
                 className='group'
-<<<<<<< HEAD
-=======
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, index) => (
               <motion.div
@@ -2510,8 +2445,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
   }
 }
                 className="group"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Link
                   href={service.href}
@@ -2526,10 +2459,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
                   <p className='text-white/60 text-xs'>{service.category}</p>                </Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
 <<<<<<< HEAD
           </div>;
@@ -2548,12 +2477,12 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Resources & Tools */}
 <<<<<<< HEAD
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -2620,6 +2549,7 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -2647,6 +2577,8 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2684,8 +2616,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
   }
 }
             className="mb-16"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Resources & Tools
@@ -2693,10 +2623,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources.map((resource, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -2747,9 +2673,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
                 </Link>
 =======
                 className='group'
-<<<<<<< HEAD
-=======
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {resources.map((resource, index) => (
               <motion.div
@@ -2779,8 +2702,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
   }
 }
                 className="group"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Link
                   href={resource.href}
@@ -2797,10 +2718,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
                   </p>                </Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
 <<<<<<< HEAD
           </div>;
@@ -2819,12 +2736,12 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* External Resources */}
 <<<<<<< HEAD
       <section className="py-20 px-6">
@@ -2893,6 +2810,7 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -2920,6 +2838,8 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2957,8 +2877,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
   }
 }
             className="mb-16"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               External Resources
@@ -2966,10 +2884,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks.map((link, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -3022,9 +2936,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
                 </a>
 =======
                 className='group'
-<<<<<<< HEAD
-=======
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {externalLinks.map((link, index) => (
               <motion.div
@@ -3054,8 +2965,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
   }
 }
                 className="group"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <a
                   href={link.href}
@@ -3074,10 +2983,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
                   </p>                </a>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
 <<<<<<< HEAD
           </div>;
@@ -3096,12 +3001,12 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Contact Information */}
 <<<<<<< HEAD
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -3169,9 +3074,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
 =======
 =======
             className='mb-16'
-<<<<<<< HEAD
-=======
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3209,8 +3111,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
   }
 }
             className="mb-16"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Contact Information
@@ -3220,10 +3120,6 @@ className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
               project
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {contactInfo.map((contact, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -3304,9 +3200,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
 =======
 =======
                 className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
-<<<<<<< HEAD
-=======
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactInfo.map((contact, index) => (
               <motion.div
@@ -3336,8 +3229,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
   }
 }
                 className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <h3 className='text-lg font-bold text-white mb-3'>
                   {contact.type}
@@ -3357,10 +3248,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
                   {contact.value}
                 </a>
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
 <<<<<<< HEAD
           </div>;
@@ -3463,13 +3350,7 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Quick Navigation */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -3478,6 +3359,7 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -3525,6 +3407,8 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3561,8 +3445,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Need Help Finding Something?
@@ -3601,6 +3483,7 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
       <SmartFooter />
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   );
 =======
@@ -3610,16 +3493,15 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ),
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
   );
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
   )
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> origin/automation-improvements-final
@@ -3642,6 +3524,12 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/main
+origin/automation-improvements-final
+
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }animate= {
   {
   opacity: 1, y: 0
@@ -3706,6 +3594,7 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
   once: true
 }> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>)
   )
+<<<<<<< HEAD
 
 }
 
@@ -3730,6 +3619,9 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >;
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
               Need Help Finding Something?;
@@ -3763,9 +3655,8 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       type: 'Address',
       value: 'Middletown, DE',
@@ -4151,3 +4042,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

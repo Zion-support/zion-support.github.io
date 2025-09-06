@@ -4,6 +4,7 @@ const ProductManagementChat: NextPage = () => {
 =======
 import Link from 'next/link';
 import Seo from '../../components/seo/Seo';
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -21,6 +22,9 @@ const ProductManagementChat: NextPage = () => {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div>
@@ -77,6 +81,7 @@ export default ProductManagementChat;
 =======
 export default ProductManagementChat;
 
+<<<<<<< HEAD
 
 export default ProductManagementChat;
 
@@ -102,3 +107,6 @@ export default ProductManagementChat;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default ProductManagementChat;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

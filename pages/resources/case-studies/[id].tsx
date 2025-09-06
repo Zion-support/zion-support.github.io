@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -52,6 +53,8 @@ id: 'ai-automation-manufacturing',
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -59,15 +62,11 @@ import { useRouter } from 'next/router',;
 export default function CaseStudyResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
 export default function CaseStudyResourcePage() {
   const router = useRouter()
   const { id } = router.query
@@ -494,6 +493,7 @@ function CaseStudyResourcePage() {
       `
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -508,16 +508,24 @@ function CaseStudyResourcePage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
+=======
+  ]
+  const caseStudy = caseStudies.find(study => study.id === id)
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CaseStudyResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -700,6 +708,7 @@ export default function CaseStudyResourcePage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   ],
@@ -723,6 +732,10 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  ],
+  const caseStudy = caseStudies.find(study => study.id === id),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!caseStudy) {
     return (
       <>
@@ -744,6 +757,7 @@ export default function CaseStudyResourcePage(req, res) {
                 The case study resource you're looking for doesn't exist.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -758,13 +772,18 @@ export default function CaseStudyResourcePage(req, res) {
 =======
 =======
 <<<<<<< HEAD
-              <Link 
 =======
               <Link
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <Link 
+              <Link
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -779,6 +798,7 @@ export default function CaseStudyResourcePage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -798,6 +818,9 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
@@ -825,6 +848,7 @@ export default function CaseStudyResourcePage(req, res) {
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -834,11 +858,15 @@ export default function CaseStudyResourcePage(req, res) {
                   {caseStudy.industry}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                  {caseStudy.industry}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {caseStudy.industry  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -851,6 +879,8 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -862,6 +892,7 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -881,6 +912,8 @@ export default function CaseStudyResourcePage(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div 
                 className="prose prose-invert max-w-none"
                 dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
@@ -888,23 +921,19 @@ export default function CaseStudyResourcePage(req, res) {
             </div>
             <div className="text-center">
               <Link 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div
                 className="prose prose-invert max-w-none"
-<<<<<<< HEAD
                 dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
-=======
                 dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               />
             </div>
             <div className="text-center">
               <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -913,6 +942,8 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -923,6 +954,7 @@ export default function CaseStudyResourcePage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -940,10 +972,10 @@ export default function CaseStudyResourcePage(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 }
@@ -1183,11 +1215,12 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

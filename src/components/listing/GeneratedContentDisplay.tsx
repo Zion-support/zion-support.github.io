@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react'
@@ -23,18 +22,16 @@ import { Badge } from "@/components/ui/badge";
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge";
-=======
-<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ArrowRight } from 'lucide-react'
-<<<<<<< HEAD
-=======
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {
   Card
@@ -46,10 +43,13 @@ import {
 interface GeneratedContent {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   description: string
 tags: string[]
 suggestedPrice: {
@@ -66,11 +66,14 @@ export function GeneratedContentDisplay({
   onApply
 }: GeneratedContentDisplayProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -79,8 +82,11 @@ import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
 interface GeneratedContent {
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   description: string,
   tags: string[],
   suggestedPrice: {
@@ -111,6 +117,7 @@ interface GeneratedContentDisplayProps {;
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -118,6 +125,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 =======
 >>>>>>>   return (
@@ -131,6 +140,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
           <p className="text-white">{content.description}</p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -149,6 +159,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Tags
@@ -159,20 +171,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                 key={index}
                 className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'
               >                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
-=======
         
         <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
 >>>>>>>           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -181,32 +196,41 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Badge>
             ))}
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         <div>
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Badge>;
             ))}
           </div>
         </div>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         
@@ -216,6 +240,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Key Selling Points
@@ -377,12 +403,8 @@ function GeneratedContentDisplay() {
   );
 };
 }
-<<<<<<< HEAD
-=======
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
@@ -433,8 +455,11 @@ function GeneratedContentDisplay() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

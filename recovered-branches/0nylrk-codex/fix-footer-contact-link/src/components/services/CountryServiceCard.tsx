@@ -14,31 +14,27 @@ import { Badge } from "@/components/ui/badge",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Globe, Server, Clock, MapPin, Check} from "lucide-react";
 import {CountryPricing} from "@/data/onsiteServicePricing";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react";
 import { CountryPricing } from "@/data/onsiteServicePricing";
-=======
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",
 import { CountryPricing } from "@/data/onsiteServicePricing",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CountryServiceCardProps {
 
   country: CountryPricing
@@ -50,6 +46,7 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
   // Get region flag based on country name (for demo purposes)
 
   const getRegionEmoji = (countryName: string): string => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -106,15 +103,20 @@ function CountryServiceCard() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-    const emojiMap: Record<string, string> = {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    const emojiMap: Record<string, string> = {
     const emojiMap: Record<string, string> = {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "United States": "🇺🇸";
       "United Kingdom": "🇬🇧";
       "Canada": "🇨🇦";
       "Australia": "🇦🇺";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/CountryServiceCard.tsx
 
@@ -129,6 +131,8 @@ function CountryServiceCard() {
       "Germany": "🇩🇪",
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Germany": "🇩🇪"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       "France": "🇫🇷";
@@ -157,20 +161,26 @@ function CountryServiceCard() {
   const getResponseTime = (countryName: string): string => {
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const emojiMap: Record<string string> = {
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
       "Canada": "🇨🇦",
       "Australia": "🇦🇺",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "Germany": "🇩🇪", 
       "France": "🇫🇷",
       "Japan": "🇯🇵",
@@ -197,6 +207,7 @@ function CountryServiceCard() {
 
 =======
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -204,6 +215,8 @@ function CountryServiceCard() {
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (tier1.includes(countryName)) {
       return "4 hours"
     } else if (tier2.includes(countryName)) {
@@ -212,6 +225,7 @@ function CountryServiceCard() {
       return "8-24 hours"
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -223,13 +237,17 @@ function CountryServiceCard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular
@@ -279,6 +297,7 @@ function CountryServiceCard() {
           onClick={() => onSelect(country)}
           className={`w-full ${
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -290,6 +309,11 @@ function CountryServiceCard() {
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            isPopular
+              ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }`}
         >
           Select Service
@@ -298,18 +322,23 @@ function CountryServiceCard() {
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
             isPopular 
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" 
               : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
@@ -679,11 +708,10 @@ isPopular?: boolean
 =======
     </Card>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

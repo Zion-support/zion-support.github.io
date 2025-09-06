@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -10,6 +11,98 @@ import Head from 'next/head';
 
 import React from 'react';
 
+=======
+import React, { useState } from 'react',
+import React from 'react';
+
+import Head from 'next/head';
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+
+const PricingPage: React.FC = () => {
+  return (
+    <>
+      <Head>
+        <title>Pricing - Zion Tech Group</title>
+        <meta name="description" content="Transparent, flexible pricing for AI, IT, and Micro SaaS services." />
+      </Head>
+      <section className="bg-white">
+        <div className="container mx-auto px-4 py-12">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
+          <p className="text-gray-600 mb-10 max-w-3xl">
+            We tailor solutions to your needs. Below are typical starting ranges observed in the market. Get a custom quote at any time.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="border rounded-xl p-6 shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">AI Development</h3>
+              <p className="text-gray-600 mb-4">Model prototyping, fine-tuning, RAG, and integrations.</p>
+              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
+                <li>POC: $5,000–$15,000</li>
+                <li>MVP: $20,000–$60,000</li>
+                <li>Enterprise: $75,000+</li>
+              </ul>
+            </div>
+            <div className="border rounded-xl p-6 shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Micro SaaS</h3>
+              <p className="text-gray-600 mb-4">Idea validation, build, payments, analytics, hosting.</p>
+              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
+                <li>Starter: $8,000–$25,000</li>
+                <li>Growth: $30,000–$80,000</li>
+                <li>Scale: $100,000+</li>
+              </ul>
+            </div>
+            <div className="border rounded-xl p-6 shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Cloud & DevOps</h3>
+              <p className="text-gray-600 mb-4">AWS/GCP/Azure architecture, IaC, observability.</p>
+              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
+                <li>Audit & Setup: $3,000–$12,000</li>
+                <li>Migration: $10,000–$40,000</li>
+                <li>Managed: from $2,000/mo</li>
+              </ul>
+            </div>
+            <div className="border rounded-xl p-6 shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Cybersecurity</h3>
+              <p className="text-gray-600 mb-4">Pen-testing, hardening, SOC, compliance.</p>
+              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
+                <li>Security Audit: $4,000–$15,000</li>
+                <li>Remediation: $8,000–$50,000</li>
+                <li>Managed SOC: from $3,000/mo</li>
+              </ul>
+            </div>
+            <div className="border rounded-xl p-6 shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Data & Analytics</h3>
+              <p className="text-gray-600 mb-4">Warehouses, pipelines, BI, ML ops.</p>
+              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
+                <li>Strategy & Setup: $5,000–$20,000</li>
+                <li>Dashboards: $6,000–$25,000</li>
+                <li>ML Ops: $25,000+</li>
+              </ul>
+            </div>
+            <div className="border rounded-xl p-6 shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Web & Mobile</h3>
+              <p className="text-gray-600 mb-4">React/Next.js, React Native, APIs.</p>
+              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
+                <li>Website: $3,000–$15,000</li>
+                <li>MVP App: $20,000–$70,000</li>
+                <li>Enterprise: $80,000+</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+export default PricingPage;
+
+origin/cursor/integrate-build-improve-and-re-verify-242d
+import React from 'react';
+import Head from 'next/head';
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+ursor/fix-lint-push-and-merge-to-main-ae4e
+import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Check,
   Star,
@@ -204,6 +297,7 @@ export default function PricingPage() {
     },  ];
 
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
 import Head from 'next/head';
 
@@ -535,6 +629,11 @@ import React from 'react';
 import Head from 'next / head';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import Head from 'next/head';
+
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Check
   Star
@@ -808,6 +907,7 @@ export default function PricingPage() {
     website: 'https://ziontechgroup.com'
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
   ],
@@ -819,6 +919,8 @@ export default function PricingPage() {
 =======
     website: 'https://ziontechgroup.com'
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const popularServices = getPopularServices();
   // Combine all services for comprehensive pricing
   const allServices = [
@@ -830,6 +932,7 @@ export default function PricingPage() {
   ];
   // Enhanced service categories with pricing
   const serviceCategories = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1403,6 +1506,62 @@ export default function PricingPage() {;
 }
   ],
 
+=======
+    {
+      name: 'Next-Generation AI'
+      description: 'Revolutionary AI platforms'
+      services: [
+        'AI Multimodal Fusion'
+        'AI Autonomous Decision Engine'
+        'AI Emotional Intelligence'
+      ]
+      avgPrice: '$3,199/month'
+      savings: 'Save 60-80% vs. competitors'
+    }
+    {
+      name: 'Cutting-Edge IT Infrastructure'
+      description: 'Advanced infrastructure solutions'
+      services: [
+        'Zero Trust Architecture'
+        'Edge Computing Orchestration'
+        '5G Private Networks'
+      ]
+      avgPrice: '$4,999/month'
+      savings: 'Save 50-70% vs. competitors'
+    }
+    {
+      name: 'Innovative Micro SaaS'
+      description: 'Creative and practical SaaS tools'
+      services: [
+        'AI Brand Personality'
+        'Virtual Event Holograms'
+        'AI Meeting Transcriber'
+      ]
+      avgPrice: '$199/month'
+      savings: 'Save 40-60% vs. competitors'
+    }
+    {
+      name: 'Quantum & Space Technology'
+      description: 'Quantum computing and space solutions'
+      services: [
+        'Quantum AI Hybrid'
+        'Space Technology Platform'
+        'Quantum Cybersecurity'
+      ]
+      avgPrice: '$5,999/month'
+      savings: 'Save 70-85% vs. competitors'
+    }
+    {
+      name: 'Enterprise IT Services'
+      description: 'Comprehensive enterprise solutions'
+      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening']
+      avgPrice: '$2,999/month'
+      savings: 'Save 45-65% vs. competitors'
+    },  ];
+
+}
+  ],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -1882,8 +2041,11 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <Head>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <title>
           Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI &
           Quantum Services
@@ -1927,10 +2089,56 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
           name='twitter:image'
           content='https://ziontechgroup.com/og-image.jpg'
         />
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+      </Head>
+      <div className='container mx-auto px-4 py-12'>
+        {/* Hero Section */}
+        <div className='text-center mb-16'>
+          <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+      </Head>
+      <div className='container mx-auto px-4 py-12'>
+        {/* Hero Section */}
+        <div className='text-center mb-16'>
+          <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+        <title>Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services</title>
+        <meta name="description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans with generous free trials." />
+        <meta name="keywords" content="pricing, micro SaaS pricing, AI services pricing, quantum computing pricing, enterprise pricing" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        {/* Open Graph */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <meta property="og:title" content="Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services" />
+        <meta property="og:description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/pricing" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        {/* Twitter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services" />
+        <meta name="twitter:description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+      </Head>
+      <div className="container mx-auto px-4 py-12">
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             Transparent Pricing
           </h1>
           <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
@@ -1938,6 +2146,7 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
             generous free trials and access to our revolutionary AI & quantum
             computing services.
           </p>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2013,6 +2222,21 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          {/* New 2026 Pricing Link */}
+          <div className='mb-8 p-6 bg-gradient-to-r from-purple-800/60 to-pink-800/60 border border-purple-700/50 rounded-2xl max-w-4xl mx-auto'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+          {/* New 2026 Pricing Link */}
+          <div className='mb-8 p-6 bg-gradient-to-r from-purple-800/60 to-pink-800/60 border border-purple-700/50 rounded-2xl max-w-4xl mx-auto'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+          {/* New 2026 Pricing Link */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="mb-8 p-6 bg-gradient-to-r from-purple-800/60 to-pink-800/60 border border-purple-700/50 rounded-2xl max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               🚀 New for 2026: Revolutionary Services
             </h3>
             <p className='text-gray-300 mb-6'>
@@ -2033,6 +2257,7 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
               </span>
             </Button>
           </div>
+<<<<<<< HEAD
 
 =======
 
@@ -2049,6 +2274,8 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Billing Toggle */}
 =======
         'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
@@ -2227,6 +2454,7 @@ icon: <TrendingUp className="w-8 h-8" />,
 <<<<<<< HEAD
               className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}
             >
+<<<<<<< HEAD
 =======
               className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>;
               Monthly;
@@ -2248,6 +2476,15 @@ icon: <TrendingUp className="w-8 h-8" />,
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+          {/* Billing Toggle */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Monthly
             </span>
             <button
@@ -2278,7 +2515,62 @@ onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly'
               <span className='ml-2 text-sm text-green-400'>Save 20%</span>            </span>
           </div>
         </div>
+<<<<<<< HEAD
 
+=======
+        {/* Pricing Tiers */}
+        <div className='mb-20'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>            {pricingTiers.map((tier, index) => (
+              <UltraFuturisticCard
+                key={tier.name}
+                variant={tier.variant}
+                interactive={true}
+                glowIntensity={tier.popular ? 'high' : 'medium'}
+                className={`relative h-full ${tier.popular ? 'scale-105' : ''}`}
+        {/* Pricing Tiers */}
+        <div className='mb-20'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>            {pricingTiers.map((tier, index) => (
+              <UltraFuturisticCard
+                key={tier.name}
+                variant={tier.variant}
+                interactive={true}
+                glowIntensity={tier.popular ? 'high' : 'medium'}
+                className={`relative h-full ${tier.popular ? 'scale-105' : ''}`}
+        {/* Pricing Tiers */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {pricingTiers.map((tier, index) => (
+              <UltraFuturisticCard
+                key={tier.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                variant={tier.variant  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                interactive={true  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                glowIntensity={tier.popular ? 'high' : 'medium'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`relative h-full ${tier.popular ? 'scale-105' : ''}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 {tier.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
@@ -2388,6 +2680,7 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                     {tier.icon}
 <<<<<<< HEAD
                   </div>
+<<<<<<< HEAD
 
                   <h3 className='text-2xl font-bold text-white mb-2'>
 =======
@@ -2497,6 +2790,9 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                     {tier.icon}
                   </div>
 <h3 className='text-2xl font-bold text-white mb-2'>
+=======
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {tier.name}
                   </h3>
                   <p className='text-gray-300 mb-6'>{tier.description}</p>
@@ -2508,19 +2804,26 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                       <span className="text-xl text-gray-400 ml-2">
                         {tier.period}
                       </span>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <p className="text-gray-300 mb-6">{tier.description}</p>
                   <div className="mb-6">
                     <div className="flex items-baseline justify-center">
                       <span className="text-5xl font-bold text-cyan-400">${tier.price}</span>
                       <span className="text-xl text-gray-400 ml-2">{tier.period}</span>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </div>
                     {tier.savings && (
 <div className="text-green-400 text-sm mt-2">{tier.savings}</div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     )}
+<<<<<<< HEAD
 </div>;
                   <ul className='text-left space-y-3 mb-8'>;
                     {tier && tier.features.map((feature, idx) => (;
@@ -2530,6 +2833,17 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                       </li>;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                  </div>
+                  <ul className='text-left space-y-3 mb-8'>
+                  <ul className='text-left space-y-3 mb-8'>
+                  <ul className="text-left space-y-3 mb-8">
+                    {tier.features.map((feature, idx) => (
+                      <li key={idx} className='flex items-start'>
+                        <Check className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
+                        <span className='text-gray-300'>{feature}</span>
+                      </li>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     ))}
                   </ul>;
 
@@ -2543,7 +2857,27 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 <<<<<<< HEAD
                     size='lg'
                     className='w-full'
+<<<<<<< HEAD
 =======
+=======
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </ul>;
+                  <Button;
+                    href={tier.name === 'Enterprise' ? '/contact' : '/services'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    variant={tier.ctaVariant  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     size="lg"
 =======
 
@@ -2563,6 +2897,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 size="lg"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     className="w-full"
+<<<<<<< HEAD
                   >
                     {tier.cta}
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -2602,11 +2937,14 @@ size="lg"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   >
                     {tier.cta}
                     <ArrowRight className='ml-2 w-5 h-5' />                  </Button>
                 </div>
               </UltraFuturisticCard>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2618,6 +2956,15 @@ size="lg"
 
 =======
 
+=======
+            ))}
+          </div>
+        </div>
+
+            ))}
+          </div>
+        </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Value Propositions */}
 =======
         {/* Value Propositions */}
@@ -2626,13 +2973,30 @@ size="lg"
           <h2 className="text-3xl font-bold text-white mb-12 text-center">
             Why Choose Zion Tech Group?
           </h2>
+<<<<<<< HEAD
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions.map((proposition, index) => (
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions.map((proposition, index) => (
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+        {/* Value Propositions */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {valuePropositions.map((proposition, index) => (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -2641,6 +3005,8 @@ size="lg"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <UltraFuturisticCard
                 key={index}
                 variant={index % 2 === 0 ? "quantum" : "holographic"}
@@ -2656,6 +3022,7 @@ className="text-center p-6"
                   {proposition.icon}
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
@@ -2663,6 +3030,8 @@ className="text-center p-6"
                 </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <h3 className='text-xl font-bold text-white mb-2'>
                   {proposition.title}
                 </h3>
@@ -2685,12 +3054,16 @@ className="text-center p-6"
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Service Category Pricing Examples */}
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
             Service Category Pricing
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+<<<<<<< HEAD
 =======
 
 
@@ -2713,6 +3086,9 @@ className="text-center p-6"
           </h2>
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 <h3 className="text-xl font-bold text-white mb-2">{proposition.title}</h3>
+=======
+                <h3 className="text-xl font-bold text-white mb-2">{proposition.title}</h3>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <p className="text-gray-300 text-sm mb-4">{proposition.description}</p>
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{proposition.metric}</div>
                 <div className="text-sm text-gray-400">{proposition.detail}</div>
@@ -2720,6 +3096,7 @@ className="text-center p-6"
 ))}
           </div>;
         </div>;
+<<<<<<< HEAD
         {/* Service Category Pricing Examples */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       </div>)}
@@ -2780,6 +3157,18 @@ className="text-center p-6"
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
             {serviceCategoryPricing.map ((category, index) => (
               <UltraFuturisticCard;
+=======
+        {/* Service Category Pricing Examples */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceCategoryPricing.map((category, index) => (
+              <UltraFuturisticCard
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 key={index}
                 variant={
                   index % 3 === 0;
@@ -2814,7 +3203,10 @@ className="text-center p-6"
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <ul className='space-y-2 mb-4'>
                   {category.services.map((service, idx) => (
 =======
@@ -2849,6 +3241,7 @@ className="text-center p-6"
 <<<<<<< HEAD
                     </li>
                   ))}
+<<<<<<< HEAD
 
 =======
                     </li>;
@@ -2859,6 +3252,23 @@ className="text-center p-6"
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                <ul className="space-y-2 mb-4">
+                  {category.services.map((service, idx) => (
+                    <li key={idx} className="text-sm text-gray-300 flex items-center">
+                      <Check className="w-4 h-4 text-green-400 mr-2" />
+                      {service  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </li>;
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </ul>
 =======
 =======
@@ -2965,6 +3375,7 @@ className="p-6"
                 </Button>
               </UltraFuturisticCard>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2977,6 +3388,21 @@ className="p-6"
 =======
 
 =======
+=======
+            ))}
+          </div>
+        </div>
+
+            ))}
+          </div>
+        </div>
+        {/* Popular Services Pricing */}
+        <div className='mb-20'>
+          <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+            Popular Services Pricing
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices.slice(0, 6).map((service, index) => (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3018,6 +3444,7 @@ className="p-6"
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Popular Services Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularServices.slice(0, 6).map((service, index) => (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -3027,6 +3454,8 @@ className="p-6"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <UltraFuturisticCard
                 key={service && service.id}
                 variant={service && service.variant as any}
@@ -3091,7 +3520,10 @@ className='p - 6';
 <<<<<<< HEAD
                   </div>
                 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='mb-4'>
                   <div className='text-xs text-gray-400 mb-2'>
                     Key Features:
@@ -3146,6 +3578,7 @@ className='p-6'>;
                   variant='primary'
                   size='sm'
                   className='w-full'
+<<<<<<< HEAD
 
                 >
                   Learn More
@@ -3156,6 +3589,8 @@ className='p-6'>;
                 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="mb-4">
                   <div className="text-xs text-gray-400 mb-2">Key Features:</div>
                   <ul className="text-xs text-gray-300 space-y-1">
@@ -3197,6 +3632,7 @@ className='p-6'>;
                   variant="primary"
                   size="sm"
                   className="w-full"
+<<<<<<< HEAD
 =======
 
 
@@ -3215,6 +3651,34 @@ className='p-6'>;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                >
+                  Learn More
+                  <ExternalLink className='ml-2 w-4 h-4' />                </Button>
+              </UltraFuturisticCard>
+            ))}
+          </div>
+        </div>
+
+            ))}
+          </div>
+        </div>
+        {/* FAQ Section */}
+        <div className='mb-20'>
+          <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+            Frequently Asked Questions
+          </h2>
+          <div className='max-w-4xl mx-auto space-y-4'>
+            <UltraFuturisticCard variant='quantum' className='p-6'>
+              <h3 className='text-lg font-bold text-white mb-3'>
+                What's included in the free trial?
+              </h3>
+              <p className='text-gray-300'>
+                All plans include a generous free trial period with full access
+                to the selected services. No credit card required to start your
+                trial.
+              </p>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </UltraFuturisticCard>
             <UltraFuturisticCard variant='holographic' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
@@ -3282,18 +3746,43 @@ className='p-6'>;
               <p className='text-gray-400 text-sm mt-2'>Global operations</p>            </UltraFuturisticCard>
           </div>
         </div>
+<<<<<<< HEAD
 
 =======
 =======
+=======
+        {/* CTA Section */}
+        <div className='text-center'>
+          <UltraFuturisticCard
+            variant='quantum-holographic-advanced'
+            className='p-12'
+          >
+            <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+        {/* FAQ Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
           <div className="max-w-4xl mx-auto space-y-4">
             <UltraFuturisticCard variant="quantum" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">What's included in the free trial?</h3>
               <p className="text-gray-300">All plans include a generous free trial period with full access to the selected services. No credit card required to start your trial.</p>
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </UltraFuturisticCard>
             
             <UltraFuturisticCard variant="holographic" className="p-6">
@@ -3366,6 +3855,7 @@ variant='primary'
             </UltraFuturisticCard>
           </div>
         </div>
+<<<<<<< HEAD
         {/* Contact Information */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="mb-16">
@@ -3486,6 +3976,15 @@ variant='primary'
         {/* CTA Section */}
 
 
+=======
+        {/* CTA Section */}
+        <div className='text-center'>
+          <UltraFuturisticCard
+            variant='quantum-holographic-advanced'
+            className='p-12'
+          >
+            <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3494,10 +3993,13 @@ variant='primary'
         <div className="text-center">
           <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Ready to Get Started?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -3505,6 +4007,7 @@ variant='primary'
               revolutionary AI & quantum computing services. No credit card
               required, instant setup, and full support included.
             </p>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -3645,6 +4148,11 @@ variant='primary'
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Button
                 href='/services'
                 variant='primary'
@@ -3664,7 +4172,10 @@ variant='primary'
                 <MessageSquare className='ml-2 w-5 h-5' />
               </Button>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='text-sm text-gray-400'>
 =======
         <div className="text-center">
@@ -3925,6 +4436,7 @@ Can I change my plan later?
               <p className='mt-2'>
                 ✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure
               </p>            </div>
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -3934,10 +4446,17 @@ Can I change my plan later?
 </p>            </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+            <div className="text-sm text-gray-400">
+              <p>✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant Setup</p>
+              <p className="mt-2">✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure</p>
+            </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </UltraFuturisticCard>
         </div>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3978,6 +4497,77 @@ className='text-lg px-8 py-4'>;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
+=======
+  );
+
+    </UltraFuturisticBackground>
+  )
+  )
+        <div className="mb-20">;
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>;
+          <div className="max-w-4xl mx-auto space-y-4">;
+            <UltraFuturisticCard variant="quantum" className="p-6">;
+              <h3 className="text-lg font-bold text-white mb-3">What's included in the free trial?</h3>;
+              <p className="text-gray-300">All plans include a generous free trial period with full access to the selected services. No credit card required to start your trial.</p>;
+            </UltraFuturisticCard>;
+            <UltraFuturisticCard variant="holographic" className="p-6">;
+              <h3 className="text-lg font-bold text-white mb-3">Can I change my plan later?</h3>;
+              <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.</p>;
+            </UltraFuturisticCard>;
+            <UltraFuturisticCard variant="neural" className="p-6">;
+              <h3 className="text-lg font-bold text-white mb-3">What support is included?</h3>;
+              <p className="text-gray-300">All plans include 24/7 support. Professional and Enterprise plans include priority support with dedicated account managers.</p>;
+            </UltraFuturisticCard>;
+            <UltraFuturisticCard variant="quantum" className="p-6">;
+              <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>;
+              <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>;
+            </UltraFuturisticCard>;
+          </div>;
+        </div>;
+        {/* Contact Information */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="mb-16">;
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Get In Touch</h2>;
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">;
+            <UltraFuturisticCard variant="quantum" className="text-center p-6">;
+              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />;
+              <h3 className="text-xl font-bold text-white mb-3">Phone</h3>;
+              <p className="text-cyan-400 text-lg font-semibold">{contactInfo.mobile}</p>;
+              <p className="text-gray-400 text-sm mt-2">Available 24/7</p>;
+            </UltraFuturisticCard>;
+            <UltraFuturisticCard variant="holographic" className="text-center p-6">;
+              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />;
+              <h3 className="text-xl font-bold text-white mb-3">Email</h3>;
+              <p className="text-purple-400 text-lg font-semibold">{contactInfo.email}</p>;
+              <p className="text-gray-400 text-sm mt-2">Quick response guaranteed</p>;
+            </UltraFuturisticCard>;
+            <UltraFuturisticCard variant="neural" className="text-center p-6">;
+              <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />;
+              <h3 className="text-xl font-bold text-white mb-3">Address</h3>;
+              <p className="text-green-400 text-sm font-semibold leading-relaxed">{contactInfo.address}</p>;
+              <p className="text-gray-400 text-sm mt-2">Global operations</p>;
+            </UltraFuturisticCard>;
+          </div>;
+        </div>;
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="text-center">;
+          <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">;
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+              Ready to Get Started?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Start your free trial today and experience the power of revolutionary AI & quantum computing services.;
+              No credit card required, instant setup, and full support included.;
+            </p>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Button;
                 href='/services';
                 variant='primary';
@@ -4013,6 +4603,7 @@ className='text-lg px-8 py-4'>;
           </UltraFuturisticCard>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -4070,3 +4661,27 @@ className='text-lg px-8 py-4'>;
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    </UltraFuturisticBackground>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </UltraFuturisticBackground>
+  )
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+origin/main
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+  );
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

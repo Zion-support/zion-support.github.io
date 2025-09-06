@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 if (req && req.method !== "POST") {
@@ -7,17 +7,34 @@ if (req && req.method !== "POST") {
   }
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { supabase } from "../../../utils/supabase/client";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { supabase } from '../../../utils/supabase/client';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -29,11 +46,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  try {;
+    const { name, email, role, country, source } = req.body || {};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     const { name, email, role, country, source } = req.body |{}
     if (!name |!email |!role |!country) {
 
       return res.status(400).json({ error: "Missing required fields" });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const { name, email, role, country, source } = req.body || {};
@@ -67,6 +89,11 @@ if ( {) {
     if (!name || !email || !role || !country) {
 return res && res.status(400).json({ error: "Missing required fields" });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    const { name, email, role, country, source } = req.body || {};
+    if (!name || !email || !role || !country) {
+      return res.status(400).json({ error: 'Missing required fields' })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     const { data, error } = await supabase
       .from("summit_registrations")
@@ -91,8 +118,20 @@ if ( {) {
       .from ("summit_registrations");
       .insert ([;
         {
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+          name
+          email
+          role
+          country
+          source: source |"zion-global-2025"
+          created_at: new Date().toISOString()
+        }
+      ])
+      .select("*")
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name,
           email,
           role,
@@ -101,15 +140,28 @@ if ( {) {
           source: source || 'zion-global-2025',
           created_at: new Date().toISOString()}])
       .select('*')
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .single();
     if (error) {
 <<<<<<< HEAD
       return res.status(500).json({ error: error.message });
     }
+<<<<<<< HEAD
 
+=======
+    return res.status(200).json({ ok: true, registration: data });
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message |"Unknown error" });
+
+    return res.status(200).json({ ok: true, registration: data })
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message || 'Unknown error' })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -205,6 +257,7 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
 =======
 =======
@@ -221,6 +274,8 @@ export default async function handler(req, res) {
   } catch (e: any) {
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
 }

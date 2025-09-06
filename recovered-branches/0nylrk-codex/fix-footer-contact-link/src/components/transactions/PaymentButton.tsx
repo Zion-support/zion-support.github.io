@@ -19,9 +19,12 @@ import { supabase } from "@/integrations/supabase/client",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -30,6 +33,7 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Loader2} from "lucide-react";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface PaymentButtonProps {;
   amount: number,;
@@ -84,13 +88,14 @@ export function PaymentButton(): any ({;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
 import { Loader2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 interface PaymentButtonProps {
@@ -102,14 +107,16 @@ interface PaymentButtonProps {
   buttonText?: string;
   className?: string;
   onPaymentInitiated?: () => void;
-=======
 import { Loader2 } from "lucide-react",
 import { useNavigate } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -117,6 +124,7 @@ interface PaymentButtonProps {
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   redirectUrl?: string
@@ -127,12 +135,11 @@ export function PaymentButton({
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   redirectUrl?: string
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function PaymentButton({;
   amount;
   serviceId;
@@ -140,10 +147,7 @@ export function PaymentButton({;
   buttonText = "Purchase";
   className;
   onPaymentInitiated;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function PaymentButton({
-<<<<<<< HEAD
   amount;
   serviceId;
   providerId;
@@ -179,15 +183,17 @@ export function PaymentButton({
           userId: user?.id
           successUrl: redirectUrl |window.location.href
           cancelUrl: window.location.href}})
-=======
   amount,
   serviceId,
   providerId,
   buttonText = "Purchase",
   className,
   onPaymentInitiated,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   redirectUrl}: PaymentButtonProps) {
   const [isProcessing, setIsProcessing] = useState(false),
   const { isAuthenticated, user } = useAuth(),
@@ -204,11 +210,14 @@ export function PaymentButton({
       }),
       return
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     
     try {
@@ -216,9 +225,12 @@ export function PaymentButton({
       
       if (onPaymentInitiated) {
         onPaymentInitiated()
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { cn } from "@/lib/utils",;
@@ -264,6 +276,7 @@ export function PaymentButton({;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -274,6 +287,8 @@ export function PaymentButton({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       
       // Call the create-checkout edge function
@@ -290,6 +305,7 @@ export function PaymentButton({;
 
 =======
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -297,6 +313,8 @@ export function PaymentButton({;
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (error) {
         throw error
       }
@@ -430,6 +448,7 @@ if ( {) {
         setIsProcessing(false)
       }, 1500)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -462,19 +481,17 @@ if ( {) {
       console && console.error("Payment error:", error);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   return (
     <Button
-<<<<<<< HEAD
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]";
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
       // Call the create-checkout edge function;
       const { data, error } = await supabase.functions.invoke("create-checkout", {;
@@ -521,14 +538,18 @@ if ( {) {
   return (;
     <Button;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -563,6 +584,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className
       )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -576,6 +599,7 @@ if ( {) {
         buttonText
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 ;
@@ -588,10 +612,12 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Button>
   )
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </Button>;
@@ -798,11 +824,16 @@ return (<Button)
 }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/transactions/PaymentButton.tsx
 =======
+=======
     </Button>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    </Button>;
+  );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

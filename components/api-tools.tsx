@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -43,17 +44,22 @@ import Button from '../components / ui / Button';
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
-=======
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -63,6 +69,8 @@ import {
   Code;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Code
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Database
@@ -124,9 +132,12 @@ import {
   BookOpen
   Github
   Terminal;} from 'lucide-react';import {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Code,
   Database,
   Globe,
@@ -142,6 +153,7 @@ import {
   Play,
   BookOpen,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
@@ -152,15 +164,18 @@ import {
 Terminal,} from 'lucide-react';import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Github,
   Terminal,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   Github,;
   Terminal,;} from 'lucide-react';import { ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Code;
   Database,
   Globe,
@@ -375,6 +390,7 @@ export default function ApiToolsPage() {
         'Hardware security module (HSM) support'
       ]
       pricing: {
+<<<<<<< HEAD
 =======
 
 
@@ -1065,6 +1081,8 @@ rating: 4.8,
     pro: '$119/month',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         free: '1,000 operations/month'
         pro: '$119/month'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1081,7 +1099,6 @@ rating: 4.8,
 rating: 4.9,
       responseTime: '<20ms'
     }
-=======
         free: '1,000 operations/month',
         pro: '$119/month',
         enterprise: 'Custom',
@@ -1094,7 +1111,6 @@ rating: 4.9,
       users: '4,200+',
       responseTime: '<20ms',
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const categories = ['AllDevelopmentDataLocationSecurityIntegrationAI/MLAnalytics'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
@@ -1113,6 +1129,7 @@ rating: 4.9,
     <>
       <Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <title>API Tools & Developer Services | Zion Tech Group - Powerful APIs for Modern Applications</title>
 <meta name="description" content="Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronization, we provide the building blocks you need." />
         <meta property="og:title" content="API Tools & Developer Services | Zion Tech Group" />
@@ -1121,6 +1138,8 @@ rating: 4.9,
       </Head>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <title>
           API Tools & Developer Services | Zion Tech Group - Powerful APIs for
           Modern Applications
@@ -1464,16 +1483,18 @@ rating: 4.9,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
               <button
-=======
 
               <button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${;
@@ -1515,14 +1536,7 @@ rating: 4.9,
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* API Tools Grid */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className='py-24 bg-gray-900'>
@@ -1532,6 +1546,7 @@ rating: 4.9,
               {selectedCategory === 'All'
                 ? 'All API Tools'
                 : `${selectedCategory} APIs`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1561,6 +1576,9 @@ rating: 4.9,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               {filteredTools.length} APIs available. Each tool is
@@ -1754,6 +1772,7 @@ rating: 4.9,
                     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1782,6 +1801,8 @@ rating: 4.9,
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <p className='text-gray-400 leading-relaxed mb-6'>
                       {tool.description}
                     </p>
@@ -1974,6 +1995,7 @@ rating: 4.9,
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -1984,6 +2006,9 @@ rating: 4.9,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         Visit API
                       </Button>
                       <Button
@@ -2094,20 +2119,22 @@ variant="ghost"
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2131,6 +2158,9 @@ variant="ghost"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -2282,6 +2312,7 @@ variant="ghost"
         </div>
       </section>
     </>
+<<<<<<< HEAD
 
 }
 =======
@@ -2616,12 +2647,10 @@ className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2
     </>);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -2629,10 +2658,13 @@ className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2
 =======
 
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

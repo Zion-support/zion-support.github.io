@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/useFetchResume.ts
@@ -7,18 +8,24 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 export function useFetchResume() {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -26,6 +33,8 @@ export function useFetchResume() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -88,12 +97,15 @@ let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
           setIsLoading(false);
           return null
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/useFetchResume.ts
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume } from '@/types/resume',;
@@ -171,6 +183,7 @@ if ( {) {
           setIsLoading(false),;
           return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         }
         throw resumeError
@@ -223,15 +236,17 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
         throw resumeError
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Fetch work experience
       const { data: workData, error: workError } = await supabase
         .from('work_history')
@@ -427,8 +442,11 @@ if (throw cert_error) {
   }
   return {
     isLoading;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Fetch work experience;
       const { data: workData, error: workError } = await supabase;
@@ -485,6 +503,7 @@ if (throw cert_error) {
   },;
   return {;
     isLoading,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -654,6 +673,8 @@ is active: resumeData.is active
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     error;
     resume;
 

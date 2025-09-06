@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -17,6 +18,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth',;
 import { updateFlagStatus } from '../../../../../../utils/moderationDb',;
@@ -100,16 +103,18 @@ ban: 'banned'},
   res.setHeader('AllowPOST'),;
   return res.status(405).end('Method Not Allowed');
 };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth';
 import { updateFlagStatus } from '../../../../../../utils/moderationDb';
 import type { ModerationStatus } from '../../../../../../types/moderation';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
 =======
 
@@ -145,7 +150,6 @@ ban: 'banned'}
   return res.status(405).end('Method Not Allowed');
 }
 
-=======
   try {
     const user = parseUserFromRequest(req);
     try { 
@@ -181,9 +185,12 @@ ban: 'banned'}
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

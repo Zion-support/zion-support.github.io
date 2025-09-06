@@ -13,33 +13,28 @@ import { MessageSquare } from "lucide-react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState} from "react";
 import {MessageSquare} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {ChatAssistant} from "@/components/ChatAssistant";
 export function ChatAssistantTrigger() {;
   const [isOpen, setIsOpen] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { MessageSquare } from "lucide-react",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { ChatAssistant } from "@/components/ChatAssistant";
 export function ChatAssistantTrigger() {
   const [isOpen, setIsOpen] = useState(false);
-=======
 import { Button } from "@/components/ui/button",
 import { ChatAssistant } from "@/components/ChatAssistant",
 export function ChatAssistantTrigger() {
   const [isOpen, setIsOpen] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle sending messages to the AI chat assistant
 
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -48,23 +43,30 @@ export function ChatAssistantTrigger() {
         method: "POST"
         headers: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "Content-Type": "application/json"}
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
         })});
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -72,6 +74,8 @@ export function ChatAssistantTrigger() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -95,14 +99,16 @@ import {ChatAssistant} from "@/components/ChatAssistant";
 =======
       console.error("Error in AI chat:", error),
       return Promise.resolve()
-<<<<<<< HEAD
     }
   }
   return (
     <>
       <Button
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { MessageSquare } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -345,11 +351,6 @@ export function ChatAssistantTrigger() {;
   return (;
     <>;
       <Button;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         onClick={() => setIsOpen(true)}
         size="icon"
         variant="outline"
@@ -372,14 +373,15 @@ export function ChatAssistantTrigger() {;
           onSendMessage={handleSendMessage}
         />
       )}
-<<<<<<< HEAD
     </>
   )
 }
-=======
     </>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

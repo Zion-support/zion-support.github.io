@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 export default function ServicesIndexPage () {
@@ -80,28 +78,19 @@ import { Star } from 'lucide-react';
 <<<<<<< HEAD
 
 export default function ServicesIndexPage () {
-=======
  export default function ServicesIndexPage () {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 export default function ServicesIndexPage () {
-=======
  export default function ServicesIndexPage () {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handleSubmit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api/quote-request', {
   method: 'POST', headers: {
-<<<<<<< HEAD
   'Content-Type': 'application/json'
 }
-=======
   'Content-Type': 'application/json' ;
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
@@ -704,12 +693,9 @@ export default function ServicesIndexPage() {_const _all = (enhancedRealMicroSaa
       const err = await res.json().catch(() => ({}));
       throw new Error(err?.message |'Failed to submit')
     }
-<<<<<<< HEAD
   }
-=======
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
       <Head>
@@ -727,17 +713,19 @@ export default function ServicesIndexPage() {_const _all = (enhancedRealMicroSaa
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {filtered.map((service) => (
-<<<<<<< HEAD
                 <EnhancedMarketplaceCard key={service.slug |service.id} service={service} onRequestQuote={handleRequestQuote} />
-=======
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))}
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <QuoteRequestModal
@@ -755,12 +743,9 @@ export default ServicesPage
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -771,17 +756,15 @@ export default ServicesPage
   )
 }
 export default ServicesPage;
-<<<<<<< HEAD
 
+}
+}
+}
 <<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
-}
-}
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

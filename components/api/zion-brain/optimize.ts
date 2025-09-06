@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -59,6 +59,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -70,12 +72,9 @@ export default async function handler(
   function isAuthorized(req: NextApiRequest): boolean {
     const token = req.headers["x-admin-token"] |req.query.token;
     const superToken = process.env.SUPERADMIN_TOKEN;
-<<<<<<< HEAD
     return !superToken |token === superToken;
-=======
     return !superToken || token === superToken;
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }

@@ -1,12 +1,18 @@
 import React from 'react';
 interface MainNavigationProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function MainNavigation({ }: MainNavigationProps) {
   return (
     <div>
@@ -14,6 +20,7 @@ export default function MainNavigation({ }: MainNavigationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -34,3 +41,12 @@ export default function MainNavigation({ }: MainNavigationProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:src.disabled/layout/MainNavigation.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/layout/MainNavigation.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

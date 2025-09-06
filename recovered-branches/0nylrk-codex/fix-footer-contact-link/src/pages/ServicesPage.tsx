@@ -5,9 +5,6 @@
 
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import {AppLayout} from "@/layout/AppLayout";
@@ -15,14 +12,18 @@ import {TrustedBySection} from "@/components/TrustedBySection";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
 import {Globe} from "lucide-react";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import { AppLayout } from "@/layout/AppLayout",
 import { TrustedBySection } from "@/components/TrustedBySection",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -31,6 +32,8 @@ import { Button } from "@/components/ui/button",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 // Sample service listings
@@ -44,14 +47,16 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 5000
     currency: "$"
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
-=======
 import { Link } from "react-router-dom",
 import { Globe } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -63,6 +68,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["AI Integration", "Machine Learning", "Enterprise"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -71,6 +77,8 @@ const SERVICE_LISTINGS: ProductListing[] = [
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: {
       name: "TechSolutions Inc."
       id: "tech-solutions"
@@ -82,12 +90,15 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 124}
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "service-2"
     title: "Cloud Infrastructure Management"
     description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
@@ -95,8 +106,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 3000
     currency: "$"
     tags: ["Cloud", "DevOps", "Security"];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "service-2",
     title: "Cloud Infrastructure Management",
     description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
@@ -105,12 +119,15 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Cloud", "DevOps", "Security"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: {
       name: "CloudPro Experts"
       id: "cloud-pro"}
@@ -121,12 +138,15 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 92}
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "service-3"
     title: "Big Data Analysis & Insights"
     description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services."
@@ -134,8 +154,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 4500
     currency: "$"
     tags: ["Big Data", "Analytics", "Business Intelligence"];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "service-3",
     title: "Big Data Analysis & Insights",
     description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services.",
@@ -144,12 +167,15 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Big Data", "Analytics", "Business Intelligence"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: {
       name: "DataMind Solutions"
       id: "datamind"
@@ -161,12 +187,15 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 78}
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "service-4"
     title: "Cybersecurity Assessment & Protection"
     description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats."
@@ -174,8 +203,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 6000
     currency: "$"
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "service-4",
     title: "Cybersecurity Assessment & Protection",
     description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",
@@ -184,12 +216,15 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: {
       name: "SecureNet Team"
       id: "secure-net"}
@@ -200,12 +235,15 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 103}
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "service-5"
     title: "IT Infrastructure Modernization"
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
@@ -213,8 +251,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 8500
     currency: "$"
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "service-5",
     title: "IT Infrastructure Modernization",
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
@@ -223,12 +264,15 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: {
       name: "ModernizeIT Consulting"
       id: "modernize-it"}
@@ -239,12 +283,15 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 67}
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "service-6"
     title: "AI Strategy & Implementation"
     description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage."
@@ -252,8 +299,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 7500
     currency: "$"
     tags: ["AI Strategy", "Digital Transformation", "Business Growth"];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "service-6",
     title: "AI Strategy & Implementation",
     description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
@@ -262,12 +312,15 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: {
       name: "AI Future Consulting"
       id: "ai-future"
@@ -312,9 +365,12 @@ export default function ServicesPage() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <DynamicListingPage
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
@@ -327,14 +383,10 @@ export default function ServicesPage() {
     </AppLayout>
   )
 }
-=======
       <DynamicListingPage 
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
         categorySlug="services"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         listings={SERVICE_LISTINGS}
         categoryFilters={SERVICE_FILTERS}
         initialPrice={{ min: 3000, max: 10000 }}
@@ -344,9 +396,12 @@ export default function ServicesPage() {
   )
 };
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -909,8 +964,11 @@ reviewCount: 85
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

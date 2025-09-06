@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Apple, GithubIcon } from 'lucide-react'
@@ -10,6 +11,8 @@ import { Apple, GithubIcon } from 'lucide-react'
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react"
 import { Apple, GithubIcon } from 'lucide-react'import { cn } from "@/lib/utils"
 import { logInfo } from '@/utils/productionLogger'
@@ -27,15 +30,18 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
   googlePlayUrl = "#";
 };  className,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Apple, GithubIcon } from 'lucide-react'
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { logInfo } from '@/utils/productionLogger';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -44,6 +50,10 @@ import { cn } from "@/lib/utils",
 import { logInfo } from '@/utils/productionLogger',
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { cn } from "@/lib/utils",
+import { logInfo } from '@/utils/productionLogger',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface AppStoreButtonsProps {
   className?: string,
   appStoreUrl?: string,
@@ -52,6 +62,7 @@ interface AppStoreButtonsProps {
   onGooglePlayClick?: () => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   appStoreUrl = "#",
@@ -64,6 +75,8 @@ interface AppStoreButtonsProps {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className
   appStoreUrl = "#"
@@ -86,6 +99,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       e.preventDefault()
       logInfo("Google Play download clicked")
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   appStoreUrl = "#",
   googlePlayUrl = "#",
   onAppStoreClick,
@@ -98,29 +112,22 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
-  className,
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
   className,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
+  className,
   appStoreUrl = "#",
   googlePlayUrl = "#",
   onAppStoreClick,
   onGooglePlayClick
-<<<<<<< HEAD
 }) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-=======
-<<<<<<< HEAD
 },) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
-=======
 }) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (!appStoreUrl || appStoreUrl === "#") {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       e.preventDefault(),
@@ -129,6 +136,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     }
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     if (!googlePlayUrl || googlePlayUrl === "#") {
@@ -188,18 +196,14 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
-=======
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (!googlePlayUrl || googlePlayUrl === "#") {
       e.preventDefault(),
       logInfo("Google Play download clicked"),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       onGooglePlayClick?.()
     }
   }
@@ -207,6 +211,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
   return (
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
       <a
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -244,18 +249,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         aria-label="Get it on Google Play">;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         href = {appStoreUrl,}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick = {handleAppStoreClick,}
-=======
         href={appStoreUrl}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleAppStoreClick}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Download on the App Store"
@@ -267,19 +268,12 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </a>
       <a
-<<<<<<< HEAD
         href = {googlePlayUrl,}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick = {handleGooglePlayClick,}
-=======
         href={googlePlayUrl}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Get it on Google Play"
@@ -304,6 +298,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </a>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -401,12 +396,11 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 },
 import React from "react",;
 import { Apple, GithubIcon } from 'lucide-react';
@@ -486,8 +480,11 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

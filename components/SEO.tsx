@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -58,40 +59,37 @@ import Head from './next / head';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-=======
 import React from "react";
 import Head from "next/head";
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-=======
 import Head from "next/head";
 import { useRouter } from "next/router";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
 import React from "react";
 import Head from "next/head";
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
+origin/main
+origin/automation-improvements-final
 
+<<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SEOProps {
 interface SEOProps {;
   title?: string;
   description?: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,6 +157,10 @@ export default SEO;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   keywords?: string;
 }
 const SEO: React.FC<SEOProps> = ({
@@ -174,19 +176,19 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 };
 
 export default SEO;
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   image?: string;
   url?: string;
   type?: string;
@@ -229,6 +231,7 @@ export default SEO;
       <link rel="canonical" href={canonicalUrl} />
     </Head>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -274,3 +277,13 @@ export default SEO;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+export default SEO;
+origin/main
+origin/automation-improvements-final
+}
+export default SEO;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

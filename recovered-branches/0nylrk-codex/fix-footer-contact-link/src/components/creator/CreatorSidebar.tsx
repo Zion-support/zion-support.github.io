@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/creator/CreatorSidebar.tsx
 
 <<<<<<< HEAD
@@ -24,12 +25,11 @@ import {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import {
-<<<<<<< HEAD
 
   Bell
   FileText
@@ -48,8 +48,11 @@ import {
   SidebarMenuButton
   SidebarGroupLabel
   SidebarGroupContent
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Bell,
   FileText,
   Home,
@@ -100,7 +103,6 @@ import {
   SidebarMenuButton,
   SidebarGroupLabel,
   SidebarGroupContent,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/sidebar";
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",
@@ -137,6 +139,7 @@ import {
           </SidebarGroupContent>
         </SidebarGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
@@ -154,6 +157,9 @@ import {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -186,6 +192,7 @@ import {
           </SidebarGroupContent>
         </SidebarGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -205,6 +212,9 @@ import {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -238,20 +248,24 @@ import {
         </SidebarGroup>
       </SidebarContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Sidebar>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
 import {;
@@ -542,6 +556,7 @@ function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/creator/CreatorSidebar.tsx
@@ -586,9 +601,14 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/creator/CreatorSidebar.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Sidebar>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

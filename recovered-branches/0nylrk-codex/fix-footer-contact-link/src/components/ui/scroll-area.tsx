@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/scroll-area.tsx
 
 =======
@@ -11,11 +12,17 @@ import * as ScrollAreaPrimitive from &quot;@radix-ui/react-scroll-area&quot;
 import { cn } from &quot;@/lib/utils&quot;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import * as React from &quot;react&quot;
+import * as ScrollAreaPrimitive from &quot;@radix-ui/react-scroll-area&quot;
+import { cn } from &quot;@/lib/utils&quot;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react"
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -23,6 +30,8 @@ import { cn } from "@/lib/utils"
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const ScrollArea = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
@@ -38,18 +47,19 @@ const ScrollArea = React.forwardRef<
     ref={ref}
     className={cn("relative overflow-hidden", className)}
     {...props}
-<<<<<<< HEAD
 >
     <ScrollAreaPrimitive.Viewport className=&quot;h-full w-full rounded-[inherit]&quot;>
-=======
   >
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {children}
     </ScrollAreaPrimitive.Viewport>
     <ScrollBar />
@@ -65,6 +75,7 @@ const ScrollBar = React.forwardRef<
     ref={ref}
     orientation={orientation}
     className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -96,18 +107,24 @@ const ScrollArea = React.forward_ref<;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       &quot;flex touch-none select-none transition-colors&quot;
       orientation === &quot;vertical&quot; &&
         &quot;h-full w-2.5 border-l border-l-transparent p-[1px]&quot;
       orientation === &quot;horizontal&quot; &&
         &quot;h-2.5 flex-col border-t border-t-transparent p-[1px]&quot;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "flex touch-none select-none transition-colors",
       orientation === "vertical" &&
         "h-full w-2.5 border-l border-l-transparent p-[1px]",
       orientation === "horizontal" &&
         "h-2.5 flex-col border-t border-t-transparent p-[1px]",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -115,6 +132,8 @@ const ScrollArea = React.forward_ref<;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
@@ -127,6 +146,7 @@ const ScrollArea = React.forward_ref<;
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -196,20 +216,23 @@ export { ScrollArea, ScrollBar }
 
 =======
 <<<<<<< HEAD
-export { ScrollArea, ScrollBar }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export { ScrollArea, ScrollBar }
 
 export { ScrollArea, ScrollBar }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-export { ScrollArea, ScrollBar };
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export { ScrollArea, ScrollBar };
 
 export { ScrollArea, ScrollBar }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -257,3 +280,5 @@ React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>)
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/scroll-area.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

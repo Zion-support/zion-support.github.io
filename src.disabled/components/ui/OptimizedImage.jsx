@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,15 @@ const React,{ useState,useRef,useEffect } from";react"; import { cn } from";";@/
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+:src.disabled/components/ui/OptimizedImage.jsx
+import React,{ useState,useRef,useEffect } from\';react\'; import { cn } from\';\';@/lib/utils\'; import { motion,AnimatePresence } from\';\';framer-motion\'; \"export\": function OptimizedImage({ src,alt,width,height,className,placeholder =\';\';/images/placeholder.svg\',fallback =\';\';/images/fallback.svg\',\"priority\": \'= false\',sizes =\';\';100vw\',loading =\';\';lazy\',onLoad,onError,aspectRatio =\';\';auto\',objectFit =\';\';cover\',\"blur\": \'= false\',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)\'';\';
+const React,{ useState,useRef,useEffect } from";react"; import { cn } from";";@/lib/utils"; import { motion,AnimatePresence } from";";framer-motion"; export: function OptimizedImage({ src,alt,width,height,className,placeholder =";";/images/placeholder.svg",fallback =";";/images/fallback.svg",priority: "= false",sizes =";";100vw",loading =";";lazy",onLoad,onError,aspectRatio =";";auto",objectFit =";";cover",blur: "= false",quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)"";";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React,{ useState,useRef,useEffect } from\';react\'; import { cn } from\';\';@/lib/utils\'; import { motion,AnimatePresence } from\';\';framer-motion\'; \"export\": function OptimizedImage({ src,alt,width,height,className,placeholder =\';\';/images/placeholder.svg\',fallback =\';\';/images/fallback.svg\',\"priority\": \'= false\',sizes =\';\';100vw\',loading =\';\';lazy\',onLoad,onError,aspectRatio =\';\';auto\',objectFit =\';\';cover\',\"blur\": \'= false\',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)\'';\';
+const React,{ useState,useRef,useEffect } from";react"; import { cn } from";";@/lib/utils"; import { motion,AnimatePresence } from";";framer-motion"; export: function OptimizedImage({ src,alt,width,height,className,placeholder =";";/images/placeholder.svg",fallback =";";/images/fallback.svg",priority: "= false",sizes =";";100vw",loading =";";lazy",onLoad,onError,aspectRatio =";";auto",objectFit =";";cover",blur: "= false",quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)"";";"""
+:temp_exclude/src.disabled/components/ui/OptimizedImage.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 =======
 =======

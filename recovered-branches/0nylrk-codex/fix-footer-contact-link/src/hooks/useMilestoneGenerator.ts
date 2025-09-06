@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMilestoneGenerator.ts
 
 =======
@@ -40,16 +41,16 @@ export interface GeneratedMilestone {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 export interface MilestoneInput {
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from 'sonner';
 export interface MilestoneInput {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   scope: string;
   startDate: string;
 
@@ -57,12 +58,9 @@ export interface MilestoneInput {;
 
   projectType: string
 }
-<<<<<<< HEAD
 export interface GeneratedMilestone {
-=======
 
 export interface GeneratedMilestone {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   title: string;
   description: string;
   dueDate: string;
@@ -71,13 +69,14 @@ export interface GeneratedMilestone {;
 
   isAiGenerated: boolean
 }
-<<<<<<< HEAD
 export function useMilestoneGenerator() {
-=======
 
 export function useMilestoneGenerator() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isGenerating, setIsGenerating] = useState(false);
 
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
@@ -177,12 +176,15 @@ if (throw error) {
   }
   return {
     generateMilestones;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from 'sonner',;
@@ -230,6 +232,7 @@ export function useMilestoneGenerator() {;
   },;
   return {;
     generateMilestones,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -326,6 +329,8 @@ if (error) throw error;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     generatedMilestones;
     isGenerating;
 

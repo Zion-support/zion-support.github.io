@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Input } from "@/components/ui/input",
 
@@ -37,6 +38,16 @@ import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
 import { SearchFilterProps } from "@/types/filters";
 
+=======
+import {Input} from "@/components/ui/input";
+import {SearchIcon} from "lucide-react";
+import {SearchFilterProps} from "@/types/filters";
+import { Input } from "@/components/ui/input",
+import { SearchIcon } from "lucide-react";
+import { SearchFilterProps } from "@/types/filters";
+import { SearchIcon } from "lucide-react",
+import { SearchFilterProps } from "@/types/filters",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
   return (
     <div className="mb-6">
@@ -58,7 +69,13 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  );
+}
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Input } from "@/components/ui/input",;
 import { SearchIcon } from "lucide-react",;
 import { SearchFilterProps } from "@/types/filters";
@@ -103,10 +120,14 @@ export function SearchFilter({ searchTerm, setSearchTerm } SearchFilterProps) {;
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
 ;
+<<<<<<< HEAD
 
 =======
 }
@@ -162,3 +183,7 @@ function SearchFilter() {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

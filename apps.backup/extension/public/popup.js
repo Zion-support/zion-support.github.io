@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const API_BASE = 'http: //localhost:4000';
 <<<<<<< HEAD
 document && document.querySelectorAll('.example';
@@ -56,6 +59,7 @@ document.getElementById ('sign_in').addEventListener ('click';
 =======
 function getUserId(cb) {
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id))
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 const API_BASE = 'http: //localhost:4000',;
@@ -73,10 +77,16 @@ function getUserId(cb) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+const API_BASE = 'http: //localhost:4000',;
+function getUserId(cb) {;
+  chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -92,6 +102,9 @@ function setUserId(id) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.getElementById('prompt').value = btn.dataset.text |''
@@ -215,11 +228,7 @@ document.querySelectorAll ('.example').for_each ((btn) => {
 =======
   document.getElementById('result').textContent = 'Signed in (local).';
 });
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 document.querySelectorAll('.example').forEach((btn) => {;
   btn.addEventListener('click', () => {;
@@ -274,6 +283,7 @@ document.getElementById('signIn').addEventListener('click', async () => {;
   document.getElementById('result').textContent = 'Signed in (local).';
 }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -289,3 +299,5 @@ document.getElementById('signIn').addEventListener('click', async () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

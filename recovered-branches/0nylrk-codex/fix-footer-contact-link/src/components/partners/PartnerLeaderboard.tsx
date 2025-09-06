@@ -21,18 +21,12 @@ import { Crown, Medal, Trophy } from './lucide-react';
 interface LeaderboardEntry {
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Badge} from "@/components/ui/badge";
 import {Crown, Medal, Trophy} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
 interface LeaderboardEntry {
@@ -52,15 +46,17 @@ interface LeaderboardEntry {
   referrals: number
   earnings: number
 
-=======
 import { Badge } from "@/components/ui/badge",
 import { Crown, Medal, Trophy } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface LeaderboardEntry {
   id: string,
   rank: number,
@@ -68,6 +64,7 @@ interface LeaderboardEntry {
   avatar?: string,
   referrals: number,
   earnings: number,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -77,6 +74,8 @@ interface LeaderboardEntry {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -89,6 +88,7 @@ export function PartnerLeaderboard() {
       name: "AI Tech Guru"
       avatar: "", // URL would be here
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       badges: ["gold", "trending"]
@@ -103,28 +103,27 @@ export function PartnerLeaderboard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       referrals: 178
       earnings: 4500
 
-=======
       referrals: 178,
       earnings: 4500,
-<<<<<<< HEAD
       badges: ["gold", "trending"];
     };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       badges: ["gold", "trending"]
-<<<<<<< HEAD
     }
-=======
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
 
       id: "2"
@@ -136,6 +135,7 @@ export function PartnerLeaderboard() {
 
       badges: ["silver"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -146,11 +146,15 @@ export function PartnerLeaderboard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
 
       id: "3"
@@ -162,6 +166,7 @@ export function PartnerLeaderboard() {
 
       badges: ["bronze"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -172,11 +177,15 @@ export function PartnerLeaderboard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
 
       id: "4"
@@ -187,6 +196,7 @@ export function PartnerLeaderboard() {
       earnings: 2450
 
       badges: []
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -201,6 +211,8 @@ export function PartnerLeaderboard() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     {
 
@@ -212,10 +224,6 @@ export function PartnerLeaderboard() {
       earnings: 2175
 
       badges: ["newcomer"]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   ];
   // Function to render rank badge
@@ -254,10 +262,13 @@ export function PartnerLeaderboard() {
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     {
       id: "5",
@@ -267,9 +278,12 @@ export function PartnerLeaderboard() {
       referrals: 87,
       earnings: 2175,
       badges: ["newcomer"]
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
@@ -510,6 +524,7 @@ function PartnerLeaderboard() {
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :;
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           <div className="space - y-4">;
             {leaderboard.length > 0 ? (
@@ -524,6 +539,8 @@ function PartnerLeaderboard() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -744,10 +761,13 @@ export function PartnerLeaderboard() {;
                         </Badge>
                       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </div>
                   </div>
                 </div>
@@ -760,7 +780,6 @@ export function PartnerLeaderboard() {;
                   Start referring to earn your spot on the leaderboard
                 </p>
               </div>
-=======
                     </div>;
                   </div>;
                 </div>;
@@ -774,11 +793,14 @@ export function PartnerLeaderboard() {;
                 </p>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </div>
         </CardContent>
@@ -836,6 +858,7 @@ export function PartnerLeaderboard() {;
       </Card>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1111,9 +1134,13 @@ return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zi
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerLeaderboard.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

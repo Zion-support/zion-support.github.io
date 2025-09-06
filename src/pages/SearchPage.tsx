@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from "react";
 import { useRouter  } from 'next/router';
 import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
@@ -20,9 +23,12 @@ import {
   TabsTrigger} from "@/components/ui/tabs",
 import { Loader2 } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const pageKey = `search-${routeKey}-${router.asPath}`
 import { useRouter } from 'next/router'
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
@@ -35,9 +41,12 @@ import {
   TabsContent
   TabsList
   TabsTrigger} from "@/components/ui/tabs"
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
@@ -52,13 +61,15 @@ import {
   TabsTrigger} from "@/components/ui/tabs",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Loader2 } from 'lucide-react'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface SearchResult {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -80,8 +91,6 @@ interface SearchResult {
   description: string
 }
 function highlight(text: string, term: string) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
@@ -91,13 +100,11 @@ function highlight(text: string, term: string) {
   return (
 =======
   if (!term) return text
-=======
   if (!term) return text,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
   const regex = new RegExp(`(${escaped})`, "gi")
   const parts = text.split(regex)
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!term) return text,
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
@@ -115,23 +122,20 @@ function highlight(text: string, term: string) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!term) return text,
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
   const regex = new RegExp(`(${escaped})`, "gi"),
   const parts = text.split(regex),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
   const regex = new RegExp(`(${escaped})`, "gi"),
   const parts = text.split(regex),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       {parts.map((part, i) =>
         regex.test(part) ? (
           <mark key={i} className="bg-yellow-200 text-black">
-<<<<<<< HEAD
             {part}
           </mark>
         ) : (
@@ -146,21 +150,30 @@ export default function SearchPage() {
   const [query, setQuery] = useState("")
   const [results, setResults] = useState<SearchResult[]>([])
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [loading, setLoading] = useState(false)
   const suggestions: SearchSuggestion[] = generateSearchSuggestions()
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [loading, setLoading] = useState(false);
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   // Force re-render and reset state when route changes;
   const routeKey = useRouteChange(() => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setResults([]);    setLoading(false)
   })
   const productResults = results.filter(
@@ -174,19 +187,24 @@ export default function SearchPage() {
   useEffect(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     if (!router.isReady) return
     const urlQuery = (router.query.q as string) |""
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!router.isReady) return
     const urlQuery = (router.query.q as string) |""
-=======
     if (!router.isReady) return;
     const urlQuery = (router.query.q as string) || ""
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (urlQuery !== query) {
       setQuery(urlQuery)
     }
@@ -203,6 +221,7 @@ export default function SearchPage() {
   }, [router.isReady, query]), // Fixed dependency array
   const fetchResults = async (term: string,) => {
     if (!term.trim()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -336,12 +355,12 @@ if (return) {
   const fetchResults = async (term: string,) => {
     if (!term.trim()) {
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setResults([])
       return
-=======
       setResults([]),
       return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     setLoading(true)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -375,7 +394,6 @@ if (return) {
 =======
         setResults([])
         logErrorToProduction('Search API response structure is not as expected:', { data: data })
-=======
 import { useEffect, useState } from "react",;
 import { useRouter } from 'next/router',;
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',;
@@ -498,6 +516,7 @@ export default function SearchPage() {;
         logErrorToProduction('Search API response structure is not as expected:', { data: data });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       }
 =======
@@ -508,6 +527,8 @@ export default function SearchPage() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } catch (error) {
@@ -518,11 +539,14 @@ export default function SearchPage() {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();    if (query.trim()) {
@@ -531,6 +555,7 @@ export default function SearchPage() {;
   }
   // Add key prop to force re-render when route changes
   const pageKey = `search-${routeKey}-${router.asPath}`
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -553,6 +578,8 @@ export default function SearchPage() {;
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault(),;
@@ -565,11 +592,14 @@ ursor/fix-website-loading-errors-and-merge-6662
   const pageKey = `search-${routeKey}-${router.asPath}`,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">
@@ -577,6 +607,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
+<<<<<<< HEAD
+=======
+            onSelectSuggestion={(suggestion) => {
+              const searchTerm = suggestion.text.trim()
+              setQuery(searchTerm);              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
             onSelectSuggestion={(suggestion) => {;
@@ -592,7 +628,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
             searchSuggestions = {suggestions,}
-=======
             onSelectSuggestion={(suggestion) => {;
               const searchTerm = suggestion.text.trim();
               setQuery(searchTerm);
@@ -600,11 +635,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             }}
             searchSuggestions={suggestions}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             placeholder="Search talent, jobs, and projects..."
 >>>>>>>           />
         </form>
@@ -649,6 +687,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               {results
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   <div
                     key={`${r.type}-${r.id}`}
@@ -677,12 +716,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 .filter((r,) => r.type === "product" |r.type === "service")
                 .map((r,) => (
-=======
                 .filter((r) => r.type === "product" || r.type === "service")
                 .map((r) => (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   <div
                     key={`${r.type}-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -752,11 +791,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 return
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </main>
     </div>
   )
@@ -770,12 +812,13 @@ if (query.trim () ) {
 }, [router.isReady, query]), //Fixed dependency array const fetchResults = async (term: string) => {
   if (!term.trim () ) {
   setResults ([])
-<<<<<<< HEAD
 return
-=======
 return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }setLoading (true)
 try {
   const res = await fetch (`/api/search?query=$ {
@@ -1076,6 +1119,7 @@ router.push (`/search?q=$ {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -1084,6 +1128,9 @@ router.push (`/search?q=$ {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </main>;
     </div>;
   );
@@ -1140,8 +1187,11 @@ router.push (`/search?q=$ {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

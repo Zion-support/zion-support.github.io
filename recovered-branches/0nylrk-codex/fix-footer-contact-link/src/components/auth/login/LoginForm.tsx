@@ -1,25 +1,30 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/auth/login/LoginForm.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
 import {LogIn, User, Eye, EyeOff} from "lucide-react";
-=======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { LogIn, User, Eye, EyeOff } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -34,6 +39,7 @@ import {
 import { Link } from "react-router-dom",
 // Form validation schema
 const loginSchema = z.object({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -57,6 +63,8 @@ import {Link} from "react-router-dom";
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   email: z.string().email("Please enter a valid email").min(1, "Email is required");
   password: z.string().min(6, "Password must be at least 6 characters")});
 type LoginFormValues = z.infer<typeof loginSchema>;
@@ -64,32 +72,39 @@ export function LoginForm() {
   const { login, isLoading } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters")}),
 
 type LoginFormValues = z.infer<typeof loginSchema>,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function LoginForm() {;
   const { login, isLoading } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-=======
 export function LoginForm() {
   const { login, isLoading } = useAuth(),
   const [showPassword, setShowPassword] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema)
     defaultValues: {
@@ -97,6 +112,7 @@ export function LoginForm() {
       password: ""}})
   const onSubmit = async (data: LoginFormValues) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -108,12 +124,16 @@ export function LoginForm() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    if (isSubmitting) return;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    if (isSubmitting) return;
     if (isSubmitting) return,
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       setIsSubmitting(true)
       await login(data.email, data.password)
@@ -132,12 +152,13 @@ export function LoginForm() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
     }
-<<<<<<< HEAD
   }
-=======
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Form {...form}>
@@ -166,11 +187,14 @@ export function LoginForm() {
               <FormMessage className="text-red-400" />
             </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -389,11 +413,6 @@ export function LoginForm() {;
 <<<<<<< HEAD
 =======
             </FormItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         />
         <FormField
@@ -501,6 +520,7 @@ export function LoginForm() {;
       </form>
     </Form>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -699,9 +719,13 @@ await login (data.email, data.password)
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/auth/login/LoginForm.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

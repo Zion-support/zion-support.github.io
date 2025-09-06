@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 // All services combined const allServices = [ ...advancedAIMLServices;
@@ -29,17 +27,16 @@
 <<<<<<< HEAD
 
 // All services combined const allServices = [ ...advancedAIMLServices;
-=======
  // All services combined const allServices = [ ...advancedAIMLServices;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 // All services combined const allServices = [ ...advancedAIMLServices;
-=======
  // All services combined const allServices = [ ...advancedAIMLServices;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
 ...industrySpecificSolutions;
@@ -2077,12 +2074,13 @@ const _allServices = [
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">
                     <a
-<<<<<<< HEAD
                       href={`mailto:${(service as any).contact |'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
-=======
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Mail className="w-4 h-4" />
@@ -2090,14 +2088,19 @@ const _allServices = [
                     </a>
                     <a
 <<<<<<< HEAD
+<<<<<<< HEAD
                       href={_`tel:${(service as any).mobile || '+1 302 464 0950'}`}
 =======
 <<<<<<< HEAD
-                      href={`tel:${(service as any).mobile |'+1 302 464 0950'}`}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                      href={`tel:${(service as any).mobile |'+1 302 464 0950'}`}
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Phone className="w-4 h-4" />
@@ -2108,6 +2111,7 @@ const _allServices = [
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           {_/* Services Display */}
@@ -2135,20 +2139,17 @@ const _allServices = [
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
               <motion.div
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
               <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 key="grid"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -2211,14 +2212,7 @@ const _allServices = [
 =======
                       <h3 className="text-xl font-bold mb-2">{service.name}</h3>
                       <p className="text-blue-100 text-sm">{service.tagline}</p>
-<<<<<<< HEAD
-=======
                       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Price */}
                       <div className="mt-4">
                         <span className="text-2xl font-bold">
@@ -2226,43 +2220,27 @@ const _allServices = [
                         </span>
                       </div>
                     </div>
-<<<<<<< HEAD
                     {/* Service Content */}
                     <div className="p-6">
                       <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
-=======
 
                     {/* Service Content */}
                     <div className="p-6">
                       <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
                       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Price */}
                       <div className="mb-4">
                         <span className="text-3xl font-bold text-gray-900">
                           {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
                         </span>
                         <span className="text-gray-500">
-<<<<<<< HEAD
                           {typeof service.price === 'string' ? (service as any).period |'/month' : '/month'}
                         </span>
                       </div>
-=======
                           {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                         </span>
                       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Features */}
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -2276,6 +2254,7 @@ const _allServices = [
                           ))}
                         </ul>
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       {_/* Category Badge */}
@@ -2300,12 +2279,9 @@ const _allServices = [
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -2313,14 +2289,7 @@ const _allServices = [
                           <span className="ml-1">{service.category}</span>
                         </span>
                       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
                         <div>
@@ -2330,14 +2299,7 @@ const _allServices = [
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days
                         </div>
                       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* ROI and Popularity */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <div className="flex items-center justify-between mb-4">
@@ -2364,15 +2326,16 @@ const _allServices = [
 
 =======
                         </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         {/* Price and Features */}
                         <div className="lg:w-1/3">
                           <div className="text-right mb-4">
@@ -2396,22 +2359,13 @@ const _allServices = [
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
                             </span>
                             <span className="text-gray-500">
-<<<<<<< HEAD
                               {typeof service.price === 'string' ? (service as any).period |'/month' : '/month'}
                             </span>
                           </div>
-=======
                               {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                             </span>
                           </div>
-<<<<<<< HEAD
-=======
                           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -2424,6 +2378,7 @@ const _allServices = [
                               ))}
                             </ul>
                           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                           {_/* Category and Action */}
@@ -2438,26 +2393,16 @@ const _allServices = [
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
                               {getCategoryIcon(service.category)}
                               <span className="ml-1">{service.category}</span>
                             </span>
-<<<<<<< HEAD
-=======
                             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             <a
                               href={service.link}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2478,18 +2423,16 @@ const _allServices = [
             )}
           </AnimatePresence>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {_/* No Results */}
           {_filteredServices.length === 0 && (
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
           {/* No Results */}
           {filteredServices.length === 0 && (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2504,17 +2447,15 @@ const _allServices = [
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       {_/* Why Choose Us */}
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Why Choose Us */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <section className="py-20 bg-white">
@@ -2528,6 +2469,7 @@ const _allServices = [
             </p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
@@ -2537,12 +2479,9 @@ const _allServices = [
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -2560,6 +2499,7 @@ const _allServices = [
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <motion.div
               initial={_{ opacity: 0, _y: 20}}
@@ -2568,12 +2508,9 @@ const _allServices = [
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -2590,6 +2527,7 @@ const _allServices = [
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <motion.div
               initial={_{ opacity: 0, _y: 20}}
@@ -2598,12 +2536,9 @@ const _allServices = [
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -2623,17 +2558,15 @@ const _allServices = [
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       {_/* Contact Section */}
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Contact Section */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
@@ -2697,33 +2630,31 @@ export default ComprehensiveServicesShowcase
 =======
 }
 export default ComprehensiveServicesShowcase;
-<<<<<<< HEAD
 
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 <<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

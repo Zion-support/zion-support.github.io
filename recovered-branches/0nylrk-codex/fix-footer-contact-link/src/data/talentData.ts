@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -15,6 +16,13 @@
     ],
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { TalentProfile } from '@/types/talent';
+
+import { TalentProfile } from "@/types/talent";
+// Sample talent profiles with realistic data for the talent directory
+export const TALENT_PROFILES: TalentProfile[] = [
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
 
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
@@ -308,8 +316,12 @@
     full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import { TalentProfile } from "@/types/talent",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -562,15 +574,27 @@ export const TALENT_PROFILES: TalentProfile[] = [
       };
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+title: 'Cancer Treatment Response Prediction',
+        description:
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
+      },
+    ],
+  },;
+];
+}];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Cancer Treatment Response Prediction",
         description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes."
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
     ]
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ];
 
@@ -597,3 +621,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

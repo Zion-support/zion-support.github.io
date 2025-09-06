@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/community/EmptyState.tsx
 
 =======
@@ -8,13 +9,17 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Link from 'next/link';
-=======
 import React from 'react'
 import Link from 'next/link'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -104,6 +109,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -160,6 +166,8 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
@@ -183,6 +191,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
       <h2 className="text-xl font-medium mb-2">{title}</h2>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <p className="text-muted-foreground mb-6">{subtitle}</p>
 =======
@@ -193,6 +202,8 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <p className="text-muted-foreground mb-6">{subtitle}</p>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <TooltipProvider>
@@ -337,7 +348,6 @@ export default EmptyState;
 =======
           </TooltipTrigger>
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-<<<<<<< HEAD
         </Tooltip>
       </TooltipProvider>
     </div>
@@ -345,12 +355,8 @@ export default EmptyState;
 };
 export default EmptyState;
 }
-<<<<<<< HEAD
 export default EmptyState
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         </Tooltip>;
       </TooltipProvider>;
     </div>;
@@ -358,8 +364,11 @@ export default EmptyState
 },;
 export default EmptyState;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

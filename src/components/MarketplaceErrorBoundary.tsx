@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/MarketplaceErrorBoundary.tsx
 
 =======
@@ -7,22 +8,29 @@
 import React from 'react';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
 import { mutate  } from 'swr';
 import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import {ErrorBoundary, FallbackProps} from 'react-error-boundary'
 import * as Sentry from '@sentry/nextjs'
 import { mutate } from 'swr'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
@@ -34,6 +42,8 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
@@ -143,6 +153,7 @@ function MarketplaceErrorFallback({
             className="w-full"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -154,8 +165,9 @@ import * as Sentry from '@sentry/nextjs';
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {ErrorBoundary, FallbackProps} from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -247,6 +259,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
           <Button 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             onClick={() => window.location.reload()}
 =======
@@ -257,6 +270,8 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             onClick={() => window.location.reload()}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             variant="outline"
@@ -266,6 +281,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
           </Button>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/MarketplaceErrorBoundary.tsx
 <<<<<<< HEAD
 
@@ -274,18 +290,24 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/MarketplaceErrorBoundary.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='text-center text-sm text-muted-foreground'>
           If the problem persists, please{' '}
           <a
             href='mailto:support@example.com'
             className='text-primary hover:underline'          >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a
             href="mailto: support@example.com"
             className="text-primary hover:underline"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/MarketplaceErrorBoundary.tsx
 >>>>>>>         <div className="text-center text-sm text-muted-foreground">
@@ -294,18 +316,17 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 >>>>>>>           If the problem persists, please{' '}
 =======
 =======
-        
 =======
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <a 
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -315,14 +336,10 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 >>>>>>>             contact support
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-          >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
             contact support
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </Link>
@@ -330,6 +347,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -408,6 +426,8 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary } MarketplaceError
   },;
 ;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
 export function MarketplaceErrorBoundary({
@@ -432,7 +452,6 @@ export function MarketplaceErrorBoundary({
     </ErrorBoundary>
   )
 }   return (
-<<<<<<< HEAD
     <ErrorBoundary
 
       FallbackComponent={MarketplaceErrorFallback}
@@ -442,10 +461,7 @@ export function MarketplaceErrorBoundary({
     </ErrorBoundary>
   )
 }
-=======
     <ErrorBoundary 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (;
@@ -791,7 +807,6 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
   };
   return (;
     <ErrorBoundary;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}
     >
@@ -799,14 +814,13 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     </ErrorBoundary>;
   );
 } ;
+}
+}
+}
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-}
-}
-}
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

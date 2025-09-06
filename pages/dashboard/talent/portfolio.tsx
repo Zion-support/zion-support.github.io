@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -202,6 +203,8 @@ import PdfExportButton from '../../../components / ui / PdfExportButton';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
@@ -249,6 +252,7 @@ function TalentPortfolio() {
     portfolio: [{ title: 'Top Project', description: 'Showcase' }],
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
   return (
     <div className='relative'>;
@@ -278,6 +282,8 @@ if ( {) {
 }
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';
@@ -289,8 +295,6 @@ export default function TalentPortfolio() {;
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const ref = useRef<HTMLDivElement>(null);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { GetServerSideProps } from 'next',
 import React, { useRef, useState } from 'react',
 import PdfExportButton from '../../../components/ui/PdfExportButton',
@@ -299,7 +303,6 @@ import { createServerClient } from '../../../utils/supabase/server',
 export default function TalentPortfolio() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const ref = useRef<HTMLDivElement>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const data: ResumeData = {
     name: 'Your Name',
     contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' },
@@ -310,7 +313,6 @@ export default function TalentPortfolio() {
     education: [{ institution: 'University of Example', degree: 'B.Sc.', start: '2016', end: '2020' }],
     certifications: ['AWS SAA-C03'],
     portfolio: [{ title: 'Top Project', description: 'Showcase' }]},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="relative">
       <div className="flex items-center gap-3 mb-4">
@@ -332,7 +334,6 @@ export default function TalentPortfolio() {
           <option value="dark">Dark</option>
         </select>
       </div>
-<<<<<<< HEAD
       <PdfExportButton
         targetRef={ref}
         fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
@@ -348,9 +349,12 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 return { props: {} }
 }
 <<<<<<< HEAD
@@ -366,13 +370,10 @@ return { props: {} }
 =======
 =======
 
-=======
 return { props: {} };
 };
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       <PdfExportButton targetRef={ref} fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
       <ResumePreview ref={ref} data={data} theme={theme} />
     </div>
@@ -400,9 +401,12 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

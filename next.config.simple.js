@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
 
 module.exports = nextConfig;
 =======
@@ -29,6 +30,9 @@ const next_config = {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 reactStrictMode: true
+=======
+  reactStrictMode: true
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   compress: true
   poweredByHeader: false
   eslint: { ignoreDuringBuilds: true }
@@ -52,6 +56,15 @@ reactStrictMode: true
   // Dist directory
   distDir: '.next'
 }
+<<<<<<< HEAD
+=======
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Image optimization
   images: {
     domains: [
@@ -77,6 +90,7 @@ reactStrictMode: true
 <<<<<<< HEAD
   distDir: '.next',
 };
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -86,3 +100,9 @@ reactStrictMode: true
 module.exports = nextConfig;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+module.exports = nextConfig;
+
+module.exports = nextConfig;
+module.exports = nextConfig;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

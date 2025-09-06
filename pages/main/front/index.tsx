@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Head from 'next/head',
@@ -13,13 +14,12 @@ export default function FrontLanding() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -32,23 +32,22 @@ export default function FrontLanding() {
 <<<<<<< HEAD
 =======
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
-=======
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function FrontLanding() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
         <meta name="description" content="Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously." />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { motion } from 'framer-motion';
@@ -127,6 +126,8 @@ export default function FrontLanding() {
       {/* Animated background layers */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Animated background layers */}
       <div aria-hidden className='pointer-events-none absolute inset-0 -z-10'>
         <div className='absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float' />
@@ -145,7 +146,6 @@ export default function FrontLanding() {
                 Zion
               </a>
             </Link>
-=======
       {/* Animated background layers */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -303,15 +303,9 @@ className="mx-auto inline-flex items-center gap-2 rounded-full border border-whi
             <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</Link></Link>
             <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</Link></Link>
             <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</Link></Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </nav>
       </header>
-<<<<<<< HEAD
       {/* Hero */}
       <main className='relative z-10'>
         <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'>
@@ -490,8 +484,11 @@ className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
               Self-improving, cloud-native agents that invent, generate, and run
               new automation factories—fixing, optimizing, and syncing changes
               to the repository continuously.            </motion.p>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Hero */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -500,6 +497,7 @@ className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
       <main className="relative z-10">
         <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
           <div className="text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -511,6 +509,8 @@ className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div
               initial={{ opacity: 0, y: 10 }  } catch (error) {
     console.error("Error:", error);
@@ -533,24 +533,30 @@ className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
               Autonomous agents running continuous improvements
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Quick stats */}
             <div className='mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>
               {[
-<<<<<<< HEAD
                 ['24/7', 'Autonomous']
                 ['Main', 'Direct Sync']
                 ['0 Ops', 'Cloud‑Native']
                 ['Safety', 'Guardrails']
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 ['24/7', 'Autonomous'],
                 ['Main', 'Direct Sync'],
                 ['0 Ops', 'Cloud‑Native'],
                 ['Safety', 'Guardrails'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -558,6 +564,8 @@ className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ].map(([k, v]) => (                <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -677,7 +685,6 @@ className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
           <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
             {[
               {
-<<<<<<< HEAD
                 title: 'Self‑Improving'
                 desc: 'Agents continuously analyze, invent, and evolve automations.'
               }
@@ -701,8 +708,11 @@ className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
                 title: 'Observability'
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.'
               }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 title: 'Self‑Improving',
                 desc: 'Agents continuously analyze, invent, and evolve automations.',
               },
@@ -732,11 +742,14 @@ className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.',
               },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             ].map(f => (              <motion.article
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ].map(f => (              <motion.article
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1217,7 +1230,6 @@ export default function FrontLanding(req, res) {
           <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-3'>
             {[
               {
-<<<<<<< HEAD
                 title: 'Code Quality & Refactors'
                 desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.'
               }
@@ -1231,7 +1243,6 @@ export default function FrontLanding(req, res) {
               }
             ].map(c => (              <motion.article
 
-=======
                 title: 'Code Quality & Refactors',
                 desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.',
               },
@@ -1244,9 +1255,12 @@ export default function FrontLanding(req, res) {
                 desc: 'Curates content, updates promotions, and tunes metadata for reach.',
               },
             ].map(c => (              <motion.article
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 key={c.title}
                 initial={{ opacity: 0, coordinate_y: 8 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1324,17 +1338,14 @@ export default function FrontLanding(req, res) {
           </h2>
           <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2'>
             {[
-<<<<<<< HEAD
               '24/7 progress without human intervention'
               'Rapid feedback loop with safe, incremental edits'
               'Continuous delivery directly to main branch'
               'Fewer regressions via layered checks and reports'
-=======
               '24/7 progress without human intervention',
               'Rapid feedback loop with safe, incremental edits',
               'Continuous delivery directly to main branch',
               'Fewer regressions via layered checks and reports',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ].map(b => (              <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1397,7 +1408,6 @@ export default function FrontLanding(req, res) {
 className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
 =======
             className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'
-=======
             <motion.h1
               initial={{ opacity: 0, y: 8 }  } catch (error) {
     console.error("Error:", error);
@@ -1836,6 +1846,7 @@ export default function FrontLanding(req, res) {
 }
             className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1845,6 +1856,8 @@ export default function FrontLanding(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>
             <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>
@@ -2131,7 +2144,6 @@ export default function FrontLanding(req, res) {
             </div>
           </motion.div>
         </section>
-<<<<<<< HEAD
         {/* Explore more */}
         <section className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -2196,15 +2208,18 @@ export default function FrontLanding(req, res) {
             </Link>          </div>
         </section>
       </main>
-<<<<<<< HEAD
     </div>
   );
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2213,6 +2228,8 @@ export default function FrontLanding(req, res) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Explore more */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2287,6 +2304,7 @@ export default function FrontLanding(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2302,3 +2320,5 @@ export default function FrontLanding(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

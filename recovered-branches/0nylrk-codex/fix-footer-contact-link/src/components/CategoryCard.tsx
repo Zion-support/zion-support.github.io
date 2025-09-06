@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/CategoryCard.tsx
 
 <<<<<<< HEAD
@@ -15,26 +16,27 @@ import { cn } from "@/lib/utils",
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { ReactNode } from "react";
 import {cn} from "@/lib/utils";
 import {slugify} from "@/lib/slugify";
 import {Link} from "react-router-dom";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { ReactNode } from "react",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
 import { slugify } from "@/lib/slugify";
 import { Link } from "react-router-dom";
-=======
 import { slugify } from "@/lib/slugify",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CategoryCardProps {
 
   title: string
@@ -65,6 +67,7 @@ import {Link} from "react-router-dom";
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   // Create a URL-friendly slug from the category title
@@ -72,19 +75,21 @@ export function CategoryCard({ title, description, icon, color, count, className
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Create a URL-friendly slug from the category title;
   const slug = slugify(title);
-=======
   // Create a URL-friendly slug from the category title
-<<<<<<< HEAD
-=======
   const slug = slugify(title),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const slug = slugify(title);
   return (
@@ -92,6 +97,7 @@ export function CategoryCard({ title, description, icon, color, count, className
       to={`/category/${slug}`}
       className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -100,16 +106,21 @@ export function CategoryCard({ title, description, icon, color, count, className
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
         "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className
       )}
     >
       <div
         className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -120,6 +131,11 @@ export function CategoryCard({ title, description, icon, color, count, className
           !color && "text-zion-cyan"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+          "mb-4 p-3 bg-zion-blue-dark rounded-full";
+
+          !color && "text-zion-cyan"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "mb-4 p-3 bg-zion-blue-dark rounded-full",
           !color && "text-zion-cyan"
 import React, { ReactNode } from "react",;
@@ -321,11 +337,6 @@ icon: ReactNode | string;
 =======
           "mb-4 p-3 bg-zion-blue-dark rounded-full";
           !color && "text-zion-cyan";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
         style={color ? { color } : undefined}
       >

@@ -36,12 +36,13 @@ class ErrorBoundary extends React.Component {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Notifications.tsx
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -57,6 +58,7 @@ import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -65,6 +67,8 @@ import {cn} from "@/lib/utils";
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -86,6 +90,7 @@ import { SEO } from "@/components/SEO",
 import { useNavigate } from "react-router-dom",
 import { cn } from "@/lib/utils",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -99,6 +104,8 @@ import { cn } from "@/lib/utils",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
@@ -117,17 +124,22 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
       return <Bell className={cn(className, "text-gray-500")} />
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Notifications.tsx
 <<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':
@@ -144,6 +156,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {
       return <Badge className="bg-yellow-500">System</Badge>
     default:
       return <Badge variant="outline">Notification</Badge>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -205,6 +218,8 @@ const getNotificationIcon = (type: NotificationType, class_name: string = "h - 5
       return <AlertCircle className={cn (class_name, "text - yellow - 500")} />;
     default:;
       return <Bell className={cn (class_name, "text - gray - 500")} />;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 ;
@@ -259,8 +274,11 @@ const NotificationCard: React.FC<{
   const handleAction = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -520,28 +538,15 @@ const NotificationCard: React.FC<{;
   const handleAction = () => {;
     if (!notification.read) {;
       onMarkAsRead(notification.id);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     if (notification.action_url) {
       navigate(notification.action_url)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   },
-=======
   };
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors",
@@ -676,6 +681,7 @@ const NotificationCard: React.FC<{;
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function NotificationsPage() {
 
@@ -802,13 +808,12 @@ export default function NotificationsPage() {
 
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function NotificationsPage() {
-<<<<<<< HEAD
   const {;
     filteredNotifications;
     unreadCount;
@@ -817,8 +822,11 @@ export default function NotificationsPage() {
     dismissNotification;
     loading;
     filter;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const {
     filteredNotifications,
     unreadCount,
@@ -827,6 +835,7 @@ export default function NotificationsPage() {
     dismissNotification,
     loading,
     filter,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     setFilter
@@ -1037,14 +1046,13 @@ export default function NotificationsPage() {;
                     <NotificationCard;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setFilter
-<<<<<<< HEAD
   } = useNotifications() as NotificationContextType;
 
-=======
   } = useNotifications() as NotificationContextType,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <SEO
@@ -1117,7 +1125,6 @@ export default function NotificationsPage() {;
                   ))}
                 </div>
               )}
-<<<<<<< HEAD
             </TabsContent>
           </Tabs>
         </div>
@@ -1126,8 +1133,11 @@ export default function NotificationsPage() {;
     </>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </TabsContent>;
           </Tabs>;
         </div>;
@@ -1214,5 +1224,8 @@ return (<> <SEO title="Notifications | Zion AI Marketplace" description="View an
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

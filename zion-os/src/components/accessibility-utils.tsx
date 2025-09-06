@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,17 +20,23 @@ function SkipLink() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useEffect, useRef, useState } from "react";
 // Skip link component for keyboard navigation;
 export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {return (;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 import { useEffect, useRef, useState } from "react",;
 // Skip link component for keyboard navigation;
 export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -38,6 +45,8 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <a;
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
@@ -45,6 +54,7 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
       {children}
     </a>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -59,6 +69,8 @@ function LiveRegion() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Live region for screen reader announcements;
 <<<<<<< HEAD
 export /**
@@ -74,8 +86,11 @@ export function LiveRegion({message;
   role?: "status" | "alert" | "log";
   "aria-live"?: "polite" | "assertive" | "off";
 }) {return (;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Live region for screen reader announcements;
 export function LiveRegion({;
@@ -89,6 +104,7 @@ export function LiveRegion({;
 }) {;
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -96,6 +112,8 @@ export function LiveRegion({;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div;
       role={role}
       aria - live={aria_live}
@@ -217,6 +235,7 @@ export function Announcement({;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -242,6 +261,8 @@ export function ProgressIndicator({;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Focus trap for modals and dialogs;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -301,7 +322,6 @@ export function useFocusTrap(enabled: boolean = true) {const containerRef = useR
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-=======
 ;
 // Focus trap for modals and dialogs;
 export function useFocusTrap(enabled: boolean = true) {;
@@ -314,30 +334,25 @@ export function useFocusTrap(enabled: boolean = true) {;
     ),;
     const firstElement = focusableElements[0] as HTMLElement,;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
-<<<<<<< HEAD
             e.preventDefault();
             lastElement.focus();
           }
         } else {if (document.activeElement === lastElement) {;
             e.preventDefault();
-=======
             e.preventDefault(),;
             lastElement.focus();
           }
         } else {;
           if (document.activeElement === lastElement) {;
             e.preventDefault(),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             firstElement.focus();
           }
         }
       }
-<<<<<<< HEAD
     }
     container.addEventListener("keydown", handleKeyDown);
     return () => container.removeEventListener("keydown", handleKeyDown);
@@ -404,7 +419,6 @@ if ( {) {
     </div>);
 =======
   }, [message]);
-=======
     },;
     container.addEventListener("keydown", handleKeyDown),;
     return () => container.removeEventListener("keydown", handleKeyDown);
@@ -461,7 +475,6 @@ export function Announcement({;
       return () => clearTimeout(timer);
     }
   }, [message]),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
@@ -471,7 +484,6 @@ export function Announcement({;
   );
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
-<<<<<<< HEAD
 // Progress indicator component;
 <<<<<<< HEAD
 export /**
@@ -490,7 +502,6 @@ export function ProgressIndicator({value;
   max: number;
   label: string;
 }) {const percentage = Math.round((value / max) * 100);
-=======
 ;
 // Progress indicator component;
 export function ProgressIndicator({;
@@ -503,7 +514,6 @@ export function ProgressIndicator({;
   label: string;
 }) {;
   const percentage = Math.round((value / max) * 100),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
@@ -525,11 +535,14 @@ export function ProgressIndicator({;
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 ;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Collapsible section component;
 export function CollapsibleSection({;
   title,;
@@ -570,7 +583,6 @@ export function CollapsibleSection({title;
   defaultExpanded?: boolean;
 }) {const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const contentRef = useRef<HTMLDivElement>(null);
-=======
 ;
 // Collapsible section component;
 export function CollapsibleSection({;
@@ -584,7 +596,6 @@ export function CollapsibleSection({;
 }) {;
   const [isExpanded, setIsExpanded] = useState(defaultExpanded),;
   const contentRef = useRef<HTMLDivElement>(null),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -626,14 +637,15 @@ export function CollapsibleSection({;
 =======
         id={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
         ref={contentRef}
-<<<<<<< HEAD
         className={`overflow-hidden transition-all duration-300 ${isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
-=======
         className={`overflow-hidden transition-all duration-300 ${;
           isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }`}
         aria - hidden={!is_expanded}
       >;
@@ -644,11 +656,14 @@ export function CollapsibleSection({;
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 ;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Tooltip component with proper accessibility;
 export function Tooltip({;
   children,;
@@ -690,10 +705,13 @@ function Tooltip() {
     right: "left - full top - 1/2 transform -translate - y-1 / 2 ml - 2";
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div className="relative inline - block">;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Tooltip component with proper accessibility;
 export function Tooltip({;
@@ -713,7 +731,6 @@ export function Tooltip({;
     left: "right-full top-1/2 transform -translate-y-1/2 mr-2";
     right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="relative inline-block">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

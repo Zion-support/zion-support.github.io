@@ -26,6 +26,7 @@ import React, { useState } from 'react';
 
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -71,6 +72,24 @@ type Service = CuttingEdgeInnovation2029 | any;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {
+  ChevronDown
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Cpu
+  Shield
+  Rocket
+  Globe
+  Database
+  Lock
+  Cloud
+  Eye
+  Timer
+  Sparkles;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ChevronDown,
   Star,
   TrendingUp,
@@ -227,7 +246,6 @@ const category_icons: { [key: string]: any } = {
 =======
   Timer,;
   Sparkles,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
@@ -237,6 +255,7 @@ interface UltraFuturistic2029ServiceShowcaseProps {
   title?: string;
   subtitle?: string;
   maxServices?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -252,6 +271,9 @@ interface UltraFuturistic2029ServiceShowcaseProps {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-600 to-pink-600'
   'Quantum & Neuroscience': 'from-indigo-600 to-purple-600'
@@ -638,6 +660,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       opacity: 1
       transition: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   };
 
@@ -655,22 +678,26 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         staggerChildren: 0.1
       }
     },  };        staggerChildren: 0.1
       }
     }
   }
-=======
         staggerChildren: 0.1,
       },
     },  };
 
   };
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -816,6 +843,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
     <section className="py-20 relative overflow-hidden">
@@ -885,12 +913,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background Elements */}
@@ -902,33 +929,27 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Header */}
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
         {/* Header */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className=&quot;text-center mb-16&quot;
 
 =======
 <<<<<<< HEAD
-          className='text-center mb-16'        >          className="text-center mb-16"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          className='text-center mb-16'        >          className="text-center mb-16"
           className='text-center mb-16'        >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -936,6 +957,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -961,14 +984,7 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
             className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'          >            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {title}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1055,13 +1071,11 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             {subtitle}
           </motion.p>
         </motion.div>
-=======
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >
 
           >
@@ -1070,11 +1084,6 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
           </motion.p>
         </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Filters and Controls */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1092,11 +1101,10 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
             <span className="text-gray-300 text-sm font-medium">Filter by:</span>
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
-<<<<<<< HEAD
-=======
 
                 <button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1104,6 +1112,8 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
@@ -1283,17 +1293,16 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
               ))}
             </div>
           </div>
-<<<<<<< HEAD
           {/* Sort Options */}
           <div className='flex items-center space-x-2'>
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Sort Options */}
           <div className='flex items-center space-x-2'>
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1305,6 +1314,8 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
@@ -1314,10 +1325,13 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
               <option value='price'>Price</option>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <option value='rating'>Rating</option>            </select>            <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
@@ -1329,8 +1343,11 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
             </select>
           </div>
         </motion.div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <option value='rating'>Rating</option>            </select>
 
             </select>
@@ -1338,6 +1355,7 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
           </div>
         </motion.div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1353,6 +1371,8 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -1404,7 +1424,6 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
             >
               <UltraFuturisticServiceCard
                 service={service}
-<<<<<<< HEAD
                 className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />              className="group"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
@@ -1425,7 +1444,6 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
         >
 =======
         </motion.div>
-=======
                 className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />
 
               />
@@ -1434,11 +1452,6 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
           ))}
         </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1447,6 +1460,7 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
 <<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.4 }}
           className='text-center mt-16'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1463,6 +1477,9 @@ className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -1535,6 +1552,7 @@ href="/pricing"
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1736,27 +1754,17 @@ className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Innovation Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className='mt-20'
-<<<<<<< HEAD
-=======
 
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {
@@ -1785,7 +1793,6 @@ className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /
                   services.length
-<<<<<<< HEAD
                 ).toFixed(1)
                 icon: TrendingUp
                 color: 'from-green-500 to-teal-500'
@@ -1793,7 +1800,6 @@ className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30
               { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-=======
                 ).toFixed(1),
                 icon: TrendingUp,
                 color: 'from-green-500 to-teal-500',
@@ -1801,20 +1807,18 @@ className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30
               { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-<<<<<<< HEAD
 
             ].map((stat, index) => (
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 
             ].map((stat, index) => (
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <motion.div
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
             {[;
@@ -1859,6 +1863,7 @@ className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30
 
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className='text-center'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1879,12 +1884,9 @@ className="text-center"
                 className='text-center'
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
               >
                 <div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1906,6 +1908,7 @@ className="text-center"
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   className={`w-16 h-16 bg-gradient-to-br ${stat && stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>;
@@ -1940,6 +1943,9 @@ className="text-center"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         </motion.div>
@@ -2007,18 +2013,20 @@ export default UltraFuturistic2029ServiceShowcase;
 =======
 =======
   );
-<<<<<<< HEAD
 }
-=======
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default UltraFuturistic2029ServiceShowcase;  )
 }
 export default UltraFuturistic2029ServiceShowcase;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default UltraFuturistic2029ServiceShowcase;
 
@@ -2033,13 +2041,14 @@ export default UltraFuturistic2029ServiceShowcase;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default UltraFuturistic2029ServiceShowcase;
 export default UltraFuturistic2029ServiceShowcase;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default UltraFuturistic2029ServiceShowcase;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

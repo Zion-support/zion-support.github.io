@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/IntegrationsHub.tsx
 
 =======
@@ -25,27 +26,30 @@ import {
 
 <<<<<<< HEAD
 =======
-
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -55,6 +59,8 @@ import {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
@@ -78,7 +84,6 @@ export function IntegrationsHub() {
 
 import { WebhookManager } from "./WebhookManager";
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
-<<<<<<< HEAD
 export function IntegrationsHub() {;
   const [activeTab, setActiveTab] = useState("marketplace");
 
@@ -91,10 +96,8 @@ export function IntegrationsHub() {;
             Connect your platform with the tools and services you use every day
           </p>
         </div>
-=======
 export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace");
-<<<<<<< HEAD
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
@@ -104,7 +107,6 @@ export function IntegrationsHub() {
             Connect your platform with the tools and services you use every day
           </p>
         </div>
-=======
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -119,16 +121,20 @@ export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace"),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
           <Button>Connect New Integration</Button>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -149,6 +155,9 @@ export function IntegrationsHub() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="pb-2">
@@ -187,6 +196,7 @@ export function IntegrationsHub() {
           </CardContent>
         </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -206,6 +216,9 @@ export function IntegrationsHub() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Recent Activity</CardTitle>
@@ -263,15 +276,16 @@ export function IntegrationsHub() {
           </CardFooter>
         </Card>
       </div>
-<<<<<<< HEAD
-=======
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
@@ -279,6 +293,7 @@ export function IntegrationsHub() {
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
         </TabsList>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -298,11 +313,15 @@ export function IntegrationsHub() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="mt-6">
           <TabsContent value="marketplace" className="m-0">
             <IntegrationCards />
           </TabsContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -314,11 +333,17 @@ export function IntegrationsHub() {
           </TabsContent>
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <TabsContent value="zapier" className="m-0">
+            <ZapierIntegration />
+          </TabsContent>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           <TabsContent value="zapier" className="m-0">
             <ZapierIntegration />
           </TabsContent>
           
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -331,6 +356,8 @@ export function IntegrationsHub() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <TabsContent value="webhooks" className="m-0">
             <Card>
               <CardHeader>
@@ -349,6 +376,7 @@ export function IntegrationsHub() {
               </CardContent>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -368,6 +396,9 @@ export function IntegrationsHub() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
@@ -389,6 +420,7 @@ export function IntegrationsHub() {
       </Tabs>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -408,11 +440,10 @@ export function IntegrationsHub() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react",;
@@ -831,12 +862,11 @@ function IntegrationsHub() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/IntegrationsHub.tsx
 =======
     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -9,10 +10,13 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
+<<<<<<< HEAD
 
 
   {
@@ -123,6 +127,19 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  {
+
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion, FilterOptions } from "@/types/search";
+  {;
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion, FilterOptions } from "@/types/search";
+  {
+
+// Mock marketplace listings with more realistic data
+export const MARKETPLACE_LISTINGS: ProductListing[] = [
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
 
       'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',
@@ -529,9 +546,20 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
       id: 'serverpro'
     }
     images: [
+<<<<<<< HEAD
 =======
 
 
+=======
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
+    ]
+    createdAt: '2023-12-15T09:45:00.000Z'
+    rating: 4.9
+    reviewCount: 18
+    featured: true
+    location: 'North America'
+    availability: '2-4 Weeks'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2023-12-15T09:45:00.000Z',
@@ -540,9 +568,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true,
     location: 'North America',
     availability: '2-4 Weeks',;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },];      name: "ServerPro Systems";
       id: "serverpro"}
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
@@ -803,11 +834,32 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
+=======
+    'AI models'
+    'GPT integration'
+    'Machine learning'
+    'Computer vision'
+    'Speech recognition'
+    'Data analysis'
+    'Content generation'
+    'Code assistant'
+    'Virtual assistant'
+    'Enterprise AI solutions'
+    'Robotics'
+    'AI workstation'
+    'Business intelligence'
+    'Custom model development'
+    'Server rack'
+    'GPU cluster'
+    'Edge computing'
+    'High performance storage'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'AI models',
     'GPT integration',
     'Machine learning',
@@ -825,9 +877,13 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Server rack',
     'GPU cluster',
     'Edge computing',
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    'High performance storage',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   // Convert strings to SearchSuggestion objects
 
@@ -835,6 +891,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     text,
 
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }));};
@@ -863,13 +920,25 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  }));};  ];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Convert strings to SearchSuggestion objects
   return suggestions && suggestions.map(text => ({
     text;
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
+<<<<<<< HEAD
 
     ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
+=======
+}
+// Generate filter options for sidebar
+export const generateFilterOptions = (): FilterOptions => {
+  // Extract unique categories, locations, and availability options from listings
+  const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ].sort();
   const locations = [
     ...new Set(
@@ -919,7 +988,12 @@ ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+};
+  }));};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
@@ -1238,25 +1312,48 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
 },
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
+  ].sort();
+  const locations = [
+    ...new Set(
+      MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)
+    ),
+  ].sort();
+  const availability = [
+    ...new Set(
+      MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
+    ),
+  ].sort();
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     productTypes: productTypes.map(type => ({
       label: type,
       value: type
@@ -1270,7 +1367,33 @@ export const generateFilterOptions = (): FilterOptions => {
       value: item
 <<<<<<< HEAD
     })),
+<<<<<<< HEAD
 
+=======
+    ratingOptions: [1, 2, 3, 4, 5], // Add rating options
+  };
+};
+
+export const MAX_PRICE = Math.max(
+  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
+);
+export const MIN_PRICE = Math.min(
+  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
+);
+  return {
+  productTypes: productTypes.map (type => ({
+  label: type, value: type 
+}) );
+locations: locations.map (location => ({
+  label: location, value: location 
+}) );
+availabilityOptions: availability.map (item => ({
+  label: item, value: item 
+}) );
+ratingOptions: [1, 2, 3, 4, 5] // Add rating options 
+
+};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -1659,6 +1782,7 @@ export const generateFilterOptions = (): FilterOptions => {
 <<<<<<< HEAD
 },;
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+<<<<<<< HEAD
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 
@@ -1693,3 +1817,6 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

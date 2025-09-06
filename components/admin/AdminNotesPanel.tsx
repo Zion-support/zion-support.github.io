@@ -60,7 +60,6 @@ export type AdminNotesPanelProps = {
 };
 =======
 import React, { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -68,9 +67,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 =======
 export type AdminNotesPanelProps = {
-=======
 export type AdminNotesPanelProps = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
 }
@@ -83,16 +80,19 @@ type Note = {
   createdAt: number;
 }
 export default function AdminNotesPanel({
-<<<<<<< HEAD
   targetType
   targetId
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -101,6 +101,8 @@ export default function AdminNotesPanel({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type Note = {
   id: string
   targetType: string
@@ -108,6 +110,7 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -140,6 +143,13 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+};
+
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -391,34 +401,20 @@ if ( {) {
       <div className='space-y-2'>;
 =======
     } finally {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setAdding(false);    }      if (!res.ok) {
         alert('Failed to add note');
         return
       }
       setText('');
 
-<<<<<<< HEAD
       await fetchNotes()
     } finally {
       setAdding(false)
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
       setAdding(false);    }
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!isAdmin) {
     return (
       <div className='rounded border p-3'>
@@ -787,6 +783,7 @@ if ( {) {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 
 }
@@ -796,18 +793,18 @@ if ( {) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
+  );
+}
 <<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

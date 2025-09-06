@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -12,6 +13,8 @@ export function updateProposalMeta(
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import fs from 'fs',;
 import path from 'path',;
 import { v4 as uuidv4 } from 'uuid',;
@@ -28,23 +31,31 @@ export type ProposalMeta = {;
   supportingMultiverses: string[],;
   languages: string[],;
   status: ProposalStatus,;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-export type ProposalMeta = {id: string;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export type ProposalMeta = {id: string;
 export type ProposalMeta = {
   id: string;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   createdAt: string;
   updatedAt: string;
   title: string;
@@ -55,6 +66,7 @@ export type ProposalMeta = {
   supportingMultiverses: string[];
   languages: string[];
   status: ProposalStatus;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   artifacts: {;
@@ -67,8 +79,9 @@ export type ProposalMeta = {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   artifacts: {;
-<<<<<<< HEAD
     markdownPath?: string;
     jsonPath?: string;
     pdfPath?: string;
@@ -254,14 +267,18 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {
   ensureDirs();
 =======
 export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     markdownPath?: string,;
     jsonPath?: string,;
     pdfPath?: string,;
     ipfsCid?: string,;
     ensRecordHash?: string,;
     signature?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -270,6 +287,8 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 },;
 export type ProposalPayload = {;
@@ -362,8 +381,6 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   return `/proposals/${id}/proposal.pdf`;
 }
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -477,14 +494,18 @@ export function getProposal(id: string): ProposalMeta | null {;
 ;
 export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   ensureDirs(),;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -714,34 +735,27 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
   return updateProposalMeta(id, (meta) => ({;
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -750,3 +764,6 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

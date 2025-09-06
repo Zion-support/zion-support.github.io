@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/automation-improvements-final
@@ -34,9 +35,15 @@
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false;  return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components");  export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
 =======
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false;  return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components");  export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false;  return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") |file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components");  export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> origin/automation-improvements-final
@@ -49,6 +56,12 @@ const fs = require("fs"); const path = require("path"); function fixCorruptedFil
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+origin/main
+origin/automation-improvements-final
+const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false;  return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components");  export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
+const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false;  return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") |file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components");  export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const fs = require("fs");
 const path = require("path");
 // Function to fix corrupted TypeScript files
@@ -58,6 +71,7 @@ function fixCorruptedFile(filePath) {
     // Fix common corruption patterns
     content = content
       // Fix import statements with extra commas
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -75,17 +89,25 @@ function fixCorruptedFile(filePath) {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .replace(
         /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g
         "import type { NextPage } from 'next'")
       .replace(
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .replace(;
         /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,
         "import type { NextPage } from 'next'")
       .replace(;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -98,10 +120,15 @@ function fixCorruptedFile(filePath) {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .replace(;
         /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,
         "import type { NextPage } from 'next'")
       .replace(;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
@@ -114,9 +141,11 @@ function fixCorruptedFile(filePath) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> origin/automation-improvements-final
@@ -128,6 +157,12 @@ function fixCorruptedFile(filePath) {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+origin/main
+origin/automation-improvements-final
+        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
+        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "import type { NextPage } from 'next'")
       // Fix component declarations
       .replace(
@@ -139,6 +174,7 @@ function fixCorruptedFile(filePath) {
       // Fix text content with extra commas
       .replace(/(\w+),\s*(\w+),\s*(\w+)/g, "$1$2$3")
       .replace(/(\w+),\s*(\w+)/g, "$1$2")
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -170,6 +206,15 @@ function fixCorruptedFile(filePath) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      // Fix export statements
+      // Fix export statements
+      // Fix export statements;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+      // Fix export statements;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default $1;");
       // Fix return statements
       .replace(/retu,\s*r,\s*n\s*\(/g, "return (")
@@ -265,6 +310,7 @@ export default $1;");
     console.error (`Error fixing ${file_path}:`, error.message);
     return false}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -277,12 +323,12 @@ export default $1;");
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
+}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -290,6 +336,11 @@ export default $1;");
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Function to recursively find and fix corrupted files
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function files = fs && fs.readdirSync(directory);
@@ -315,6 +366,7 @@ function files = fs.readdir_sync (directory);
       fixCorruptedFile (file_path)}
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -325,12 +377,12 @@ function files = fs.readdir_sync (directory);
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
+}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -339,6 +391,11 @@ function files = fs.readdir_sync (directory);
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Start fixing from the pages directory
 // // // // // // // console && console.log("Fixing corrupted TypeScript files...");
 fixCorruptedFiles("./pages");
@@ -385,6 +442,7 @@ export default fixCorruptedFile;
 export default fixCorruptedFile;
 export default fixCorruptedFile;
 export default fixCorruptedFile;
+<<<<<<< HEAD
 
 =======
 
@@ -452,42 +510,28 @@ function fixCorruptedFile() { try { let content = fs.readFileSync (file_path, "u
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
+origin/automation-improvements-final
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
-=======
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
-<<<<<<< HEAD
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
+ursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';;'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';;'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") |file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") |file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
 const fs = require("fs"); const path = require("path"); function fixCorruptedFile(filePath) { try { let content = fs.readFileSync(filePath,"utf8"); content = content .replace( /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,"import type { NextPage } from 'next'",) .replace( /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,"import type { NextPage } from 'next'",) .replace( /const\s+(\w+),\s*:\s*NextPage\s*=\s*\(\)\s*=>\s*{/g,"const $1: NextPage = () => {",) .replace(/<(\w+)\s*,\s*>/g,"<$1>") .replace(/<\/(\w+)\s*,\s*>/g,"</$1>") .replace(/(\w+),\s*(\w+),\s*(\w+)/g,"$1$2$3") .replace(/(\w+),\s*(\w+)/g,"$1$2") export default $1;"); .replace(/retu,\s*r,\s*n\s*\(/g,"return (") .replace(/\)\s*,\s*;/g,");") .replace(/}\s*,\s*;/g,"};") .replace(/nam\s*e=/g,"name=") .replace(/conte\s*n\s*t=/g,"content=") .replace(/descripti\s*o\s*n/g,"description") .replace(/BlockchainSolutio,\s*n,\s*s/g,"BlockchainSolutions") .replace(/Zion,\s*Tech,\s*Solutions/g,"Zion Tech Solutions") .replace( /{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,"{}",) .replace(/\s*,\s*/g," ") .replace(/\s+/g," ") .trim(); fs.writeFileSync(filePath,content); return true} catch (error) { return false; console.log(`Fixed: ${filePath}`); return true} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function files = fs.readdirSync(directory); for (const filePath = path.join(directory,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") |file.endsWith(".ts")) { fixCorruptedFile(filePath)} } } fixCorruptedFiles("./pages"); fixCorruptedFiles("./components"); console.log("Finished fixing corrupted files."); export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile; export default fixCorruptedFile;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/main
 =======
@@ -495,3 +539,6 @@ const fs = require("fs"); const path = require("path"); function fixCorruptedFil
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

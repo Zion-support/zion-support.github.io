@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/DynamicListingPage.tsx
 
 <<<<<<< HEAD
@@ -22,6 +23,8 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -82,8 +85,6 @@ export function DynamicListingPage({;
   categorySlug;
   listings: allListings,
   categoryFilters;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { useNavigate } from "react-router-dom",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -94,7 +95,6 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 import { Skeleton } from "@/components/ui/skeleton",
 import { Slider } from "@/components/ui/slider",
 import { ProductListing, ListingView } from "@/types/listings",
-<<<<<<< HEAD
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 interface PriceRange {
@@ -129,7 +129,6 @@ export function DynamicListingPage({
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-=======
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 interface PriceRange {
@@ -356,10 +355,13 @@ export function DynamicListingPage(_{title, description, categorySlug, listings:
   listings: allListings,;
   categoryFilters,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -371,6 +373,7 @@ export function DynamicListingPage(_{title, description, categorySlug, listings:
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/DynamicListingPage.tsx
@@ -390,17 +393,20 @@ export function DynamicListingPage(_{title, description, categorySlug, listings:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null),
     if (listingsWithPrice.length > 0) {
-<<<<<<< HEAD
       const min = Math.min(...listingsWithPrice.map(l => l.price |0));
       const max = Math.max(...listingsWithPrice.map(l => l.price |0));
-=======
       const min = Math.min(...listingsWithPrice.map(l => l.price || 0)),
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0)),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setPriceRange({ min, max })
     }
   }, [allListings]);
@@ -412,11 +418,14 @@ export function DynamicListingPage(_{title, description, categorySlug, listings:
     setCurrentPriceFilter([values[0], values[1]])
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const filteredListings = allListings.filter(listing => {
     const matchesSearch = !searchQuery |
@@ -426,8 +435,11 @@ export function DynamicListingPage(_{title, description, categorySlug, listings:
     const matchesCategory = selectedCategory === "all" |listing.category === selectedCategory;
     const matchesPrice = listing.price === null |(
       listing.price >= currentPriceFilter[0] &&
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const filteredListings = allListings.filter(listing => {
@@ -441,12 +453,15 @@ export function DynamicListingPage(_{title, description, categorySlug, listings:
     const matchesPrice = listing.price === null || (
       listing.price >= currentPriceFilter[0] && 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       listing.price <= currentPriceFilter[1]
     );
     const matchesRating =
@@ -473,6 +488,7 @@ export function DynamicListingPage(_{title, description, categorySlug, listings:
               category: listing.category
               image: listing.images?.[0]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -483,6 +499,8 @@ export function DynamicListingPage(_{title, description, categorySlug, listings:
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }: DynamicListingPageProps) {;
   const navigate = useNavigate(),;
   const [searchQuery, setSearchQuery] = useState(""),;
@@ -699,6 +717,7 @@ if ( {) {
               category: listing.category,;
               image: listing.images?.[0];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -727,11 +746,12 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }
           }
         })
       }
-<<<<<<< HEAD
     }, 500)
   }
   return (
@@ -740,7 +760,6 @@ if ( {) {
         <div className="text-center mb-12">
           <GradientHeading>{title}</GradientHeading>
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-=======
     }, 500);
   },;
   return (;
@@ -750,6 +769,7 @@ if ( {) {
         <div className="text-center mb-12">;
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -766,6 +786,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {description}
           </p>
         </div>
@@ -795,6 +817,7 @@ if ( {) {
                     {categoryFilters.map((filter) => (
                       <SelectItem key={filter.value} value={filter.value} className="text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -805,6 +828,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </p>;
         </div>;
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
@@ -878,11 +903,6 @@ if ( {) {
 =======
                     {categoryFilters.map((filter) => (;
                       <SelectItem key={filter.value} value={filter.value} className="text-white">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {filter.label}
                       </SelectItem>
                     ))}
@@ -902,8 +922,11 @@ if ( {) {
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
@@ -926,6 +949,7 @@ if ( {) {
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -937,6 +961,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className="mb-4"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   />
@@ -1101,9 +1127,12 @@ value={selectedCategory}
                           <span className="ml-1">& Up</span>
                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className="mb-4";
 
 ========
@@ -1333,36 +1362,31 @@ defaultValue={_[priceRange.min, priceRange.max]}
 <<<<<<< HEAD
 =======
                         </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       )}
                     </Button>
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
               <Button
                 variant="outline"
-=======
               <Button 
                 variant="outline" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
-<<<<<<< HEAD
                   console.log("Resetting filters");
                   setSearchQuery("");
                   setSelectedCategory("all")
                   setCurrentPriceFilter([priceRange.min, priceRange.max]);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   // // // console.log("Resetting filters"),
                   setSearchQuery(""),
                   setSelectedCategory("all"),
                   setCurrentPriceFilter([priceRange.min, priceRange.max]),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1370,6 +1394,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   setSelectedRating(null)
                 }}
               >
@@ -1507,6 +1533,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
                 {filteredListings.map((listing) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -1531,15 +1558,19 @@ defaultValue={_[priceRange.min, priceRange.max]}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                  <ProductListingCard
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  <ProductListingCard
                   <ProductListingCard 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>;
               </div>;
               <Button;
@@ -1798,11 +1829,6 @@ defaultValue={_[priceRange.min, priceRange.max]}
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
                 {filteredListings.map((listing) => (;
                   <ProductListingCard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     key={listing.id}
                     listing={listing}
                     view={view}
@@ -1819,6 +1845,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   variant="outline"
                   onClick={() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1826,13 +1853,18 @@ defaultValue={_[priceRange.min, priceRange.max]}
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     setSearchQuery("");
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
 
                     setSelectedRating(null)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     setSearchQuery(""),
                     setSelectedCategory("all"),
                     setCurrentPriceFilter([priceRange.min, priceRange.max]),
@@ -1912,6 +1944,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
                     setSelectedRating(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2008,6 +2041,8 @@ return (<div className="min-h-screen bg-zion-blue py-12 px-4"> <div className="c
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                 >

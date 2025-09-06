@@ -23,6 +23,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { region, stakeUsd } = req.body |{}
@@ -35,12 +36,12 @@ export default async function handler(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body || {};export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { region, stakeUsd } = req.body |{}
   const stake = Number(stakeUsd |0);
@@ -107,8 +108,8 @@ const regionLc = (region || '').toString().toLowerCase();
   }
   const ranked = candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] }));
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
   const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }));
   res
     .status(200)
@@ -206,14 +207,16 @@ if (||) {
 }
 <<<<<<< HEAD
 =======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

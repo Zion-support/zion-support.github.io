@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -88,6 +89,9 @@ function handler() {
 
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -125,6 +129,7 @@ export default async function handler(
       note: `Talent ${match.talentId} matched. ${match.summary |""}`.trim()
     });
     writeState((s) => s.logs.push(log));
+<<<<<<< HEAD
 }
   res.status(200).json({ ok: true, eventId });
 }
@@ -171,6 +176,13 @@ res && res.status(200).json({ ok: true, eventId });
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+  }
+  res.status(200).json({ ok: true, eventId });
+}
+res.status(200).json({ ok: true, eventId });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -220,6 +232,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
 
@@ -235,3 +248,6 @@ export default async function handler(req, res) {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -28,8 +28,6 @@ export interface TalentGridProps {;
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { TalentCard } from "@/components/talent/TalentCard";
 import { TalentProfile } from "@/types/talent";
 export interface TalentGridProps {
@@ -42,16 +40,18 @@ export interface TalentGridProps {
   isAuthenticated: boolean
   viewProfile?: (id: string) => void
   clearFilters?: () => void;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
-=======
 import {TalentCard} from "@/components/talent/TalentCard";
 import {TalentProfile} from "@/types/talent";
-=======
 import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -60,6 +60,8 @@ import { TalentProfile } from "@/types/talent",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface TalentGridProps {
   talents: TalentProfile[],
   isLoading: boolean,
@@ -67,6 +69,7 @@ export interface TalentGridProps {
   savedTalentIds: string[],
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -80,16 +83,12 @@ export interface TalentGridProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   viewProfile?: (id: string) => void,;
   clearFilters?: () => void;
-=======
   viewProfile?: (id: string) => void,
   clearFilters?: () => void,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   handleRequestHire?: (talent: TalentProfile) => void
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
@@ -108,17 +107,20 @@ export function TalentGrid({
 
 =======
 
-<<<<<<< HEAD
   isAuthenticated;
   viewProfile;
   clearFilters;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TalentGrid({ 
   talents, 
   isLoading, 
   onTalentClick, 
   savedTalentIds, 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -126,21 +128,25 @@ export function TalentGrid({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onToggleSave, ;
   isAuthenticated;
   viewProfile;
   clearFilters;
-=======
   onToggleSave, 
   isAuthenticated,
   viewProfile,
   clearFilters,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   handleRequestHire
 }: TalentGridProps) {
 
@@ -210,7 +216,6 @@ if ( {) {
 =======
     } else {
       // Default implementation
-<<<<<<< HEAD
       console.log("Request to hire:", talent.id)
     }
   }
@@ -220,14 +225,15 @@ if ( {) {
     } else {
       onTalentClick(id)
     }
-<<<<<<< HEAD
   }
 
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // // // console.log("Request to hire:", talent.id)
 import { TalentCard } from "@/components/talent/TalentCard",;
 import { TalentProfile } from "@/types/talent",;
@@ -270,6 +276,7 @@ export function TalentGrid({;
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -287,6 +294,9 @@ export function TalentGrid({;
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
@@ -361,6 +371,7 @@ export function TalentGrid({ ;
           Clear Filters
         </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       )}
@@ -394,6 +405,8 @@ export function TalentGrid({ ;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (isLoading) {;
@@ -585,18 +598,10 @@ if (isLoading) {
         >
           Clear Filters
         </button>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
     </div>
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {talents.map((talent) => (
@@ -610,14 +615,15 @@ if (isLoading) {
           isAuthenticated={isAuthenticated}
         />
       ))}
-<<<<<<< HEAD
     </div>
   )
 }
-=======
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

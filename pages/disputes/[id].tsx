@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -605,15 +606,18 @@ export default function DisputeDetailPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+import { useRouter  } from 'next/router';
+import useSWR from 'swr',
+import React, { useMemo, useState } from 'react',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 import {useCurrentUser} from '../../utils/auth';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
-<<<<<<< HEAD
 export default function DisputeDetailPage() {
   const router = useRouter();
   const { id } = router.query as { id?: string }
@@ -643,10 +647,7 @@ export default function DisputeDetailPage() {
     setResolutionSummary('');
     mutate();  }
 
-=======
 export default function DisputeDetailPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
@@ -656,14 +657,18 @@ const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function DisputeDetailPage(req, res) {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const router = useRouter();
   const { id } = router.query as { id?: string };
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
   const user = useCurrentUser();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -679,6 +684,8 @@ export default function DisputeDetailPage(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const dispute = data?.dispute;
   const [activeTab, setActiveTab] = useState<
@@ -706,8 +713,6 @@ export default function DisputeDetailPage(req, res) {
     setResolutionSummary('');
     mutate();  }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const dispute = data?.dispute;
   const [activeTab, setActiveTab] = useState<'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'>('Overview');
   const [message, setMessage] = useState('');
@@ -735,6 +740,7 @@ export default function DisputeDetailPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -747,6 +753,8 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <EnhancedLayout>
       {!dispute ? (
@@ -758,20 +766,27 @@ export default function DisputeDetailPage(req, res) {
             <span className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}</span>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
             <div className='p-3 border rounded'>
               <div className='font-medium text-gray-500'>Project</div>
               <div className='mt-1'>{dispute.projectId}</div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
             <div className="p-3 border rounded">
               <div className="font-medium text-gray-500">Project</div>
               <div className="mt-1">{dispute.projectId}</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -785,6 +800,8 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
             <div className="p-3 border rounded">
               <div className="font-medium text-gray-500">Client</div>
@@ -796,10 +813,13 @@ export default function DisputeDetailPage(req, res) {
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='border-b mb-4 flex gap-4 text-sm'>
             {(
               ['Overview', 'Messages', 'Attachments', 'Admin Notes'] as const
@@ -811,8 +831,11 @@ export default function DisputeDetailPage(req, res) {
               >
                 {t}
               </button>            ))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="border-b mb-4 flex gap-4 text-sm">
             {(['OverviewMessagesAttachmentsAdmin Notes'] as const).map(t => (
               <button key={t} onClick={() => setActiveTab(t)} className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}>{t}</button>
@@ -826,6 +849,7 @@ export default function DisputeDetailPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -837,6 +861,8 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           {activeTab === 'Overview' && (
             <div className="space-y-6">
@@ -869,6 +895,7 @@ export default function DisputeDetailPage(req, res) {
 }
                   {dispute.resolvedAt && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -880,6 +907,8 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <li className='mb-6 ml-4'>
                       <div className='absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white' />
                       <time className='text-xs text-gray-500'>
@@ -893,6 +922,7 @@ export default function DisputeDetailPage(req, res) {
             </div>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 {activeTab === 'Messages' && (
 =======
 <<<<<<< HEAD
@@ -901,6 +931,9 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <li className="mb-6 ml-4">
                       <div className="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white" />
                       <time className="text-xs text-gray-500">{new Date(dispute.resolvedAt).toLocaleString()}</time>
@@ -994,6 +1027,7 @@ export default function DisputeDetailPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1008,6 +1042,8 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {activeTab === 'Messages' && (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="space-y-4">
@@ -1017,6 +1053,7 @@ export default function DisputeDetailPage(req, res) {
                 ) : (
                   <ul className="space-y-3">
                     {dispute.messages.map((m: any) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1036,6 +1073,8 @@ export default function DisputeDetailPage(req, res) {
                       </li>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <li key={m.id} className='text-sm'>
                         <div className='text-gray-500 text-xs'>
                           {m.authorRole} •{' '}
@@ -1071,11 +1110,7 @@ export default function DisputeDetailPage(req, res) {
               )}
             </div>
           )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                       <li key={m.id} className="text-sm">
                         <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
                         <div className="whitespace-pre-wrap">{m.body}</div>
@@ -1187,11 +1222,6 @@ export default function DisputeDetailPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {activeTab === 'Attachments' && (
             <div className="space-y-3">
               {dispute.attachments.length === 0 ? (
@@ -1204,7 +1234,6 @@ export default function DisputeDetailPage(req, res) {
                         <div className="font-medium">{a.fileName}</div>
                         <div className="text-xs text-gray-500">{a.mimeType} • {(a.fileSize / 1024).toFixed(1)} KB</div>
                       </div>
-<<<<<<< HEAD
                       <a
                         className='text-blue-600 hover:underline'
                         href={`/api/disputes/${encodeURIComponent(dispute.id)}/download?fileName=${encodeURIComponent(a.fileName)}`}
@@ -1217,6 +1246,7 @@ export default function DisputeDetailPage(req, res) {
               )}
             </div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {activeTab === 'Admin Notes' && (;
@@ -1268,6 +1298,9 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <a className="text-blue-600 hover:underline" href={`/api/disputes/${encodeURIComponent(dispute.id)}/download?fileName=${encodeURIComponent(a.fileName)}`}>Download</Link>
                     </li>
                   ))  } catch (error) {
@@ -1288,6 +1321,7 @@ export default function DisputeDetailPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1303,6 +1337,8 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {activeTab === 'Admin Notes' && (
             <div className="space-y-4">
               {user.role !== 'admin' ? (
@@ -1315,6 +1351,7 @@ export default function DisputeDetailPage(req, res) {
                     <button onClick={() => resolve('Resolved')} className="px-3 py-2 rounded bg-green-600 text-white">Resolve</button>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1333,6 +1370,8 @@ export default function DisputeDetailPage(req, res) {
 }
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>;
@@ -1474,12 +1513,8 @@ export default function DisputeDetailPage(req, res) {
 =======
 =======
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1506,6 +1541,7 @@ export default function DisputeDetailPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1521,3 +1557,5 @@ export default function DisputeDetailPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

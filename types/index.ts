@@ -1,19 +1,30 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 export interface ContactInfo {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface ContactInfo {
+export interface ContactInfo {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   phone: string;
   email: string;
   address: string;
   site: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export interface Service {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface Service {
+
+export interface Service {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   description: string;
@@ -49,20 +60,30 @@ export interface Service {
   support: string;
   image?: string;
   popular?: boolean;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: string;
   href: string;
   icon: string;
   color: string;
+<<<<<<< HEAD
 ;
 
 }
 export interface ServiceCategory {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+export interface ServiceCategory {
+
+export interface ServiceCategory {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: string;
   description: string;
   count: number;
@@ -70,9 +91,28 @@ export interface ServiceCategory {
   href: string;
   color: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   image?: string;
 =======
+=======
+}
+
+export interface SEOProps {;
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+export interface LoadingState {;
+  isLoading: boolean;
+  error?: string;
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export interface SEOProps {
   title?: string;
@@ -129,9 +169,14 @@ export interface SEOProps {;
   type?: string;
 
   noindex?: boolean;
+<<<<<<< HEAD
 
 
 
+=======
+;
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface LoadingState {;
   isLoading: boolean, error?: string,
 
@@ -183,7 +228,14 @@ export interface AnimationState {,
   hasError: boolean,
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+export interface SEOProps {
+  title: string, description: string,
+  keywords?: string;
+  image?: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export interface LoadingState {
   is_loading: boolean;
@@ -193,19 +245,26 @@ export interface LoadingState {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface AnimationState {
   isLoaded: boolean;
   hasError: boolean;
 }
 export interface FormData {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface AnimationState {;
   isLoaded: boolean;
   hasError: boolean;
 }
 
 export interface FormData {;
+<<<<<<< HEAD
 
 =======
 export interface AnimationState {
@@ -215,6 +274,8 @@ export interface AnimationState {
 
 export interface FormData {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   name: string;
   email: string;
   company?: string;
@@ -222,10 +283,13 @@ export interface FormData {
   service?: string;
   message: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export interface ContactForm {
@@ -236,6 +300,7 @@ export interface ContactForm {
   service: string;
   budget?: string;
   message: string;
+<<<<<<< HEAD
 
 }
 
@@ -308,10 +373,18 @@ export interface FormData {
 }
 export interface Testimonial {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  preferredContact: 'email' | 'phone' | 'both';
+}
+export interface Testimonial {
+
+export interface Testimonial {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   role: string;
   company: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -319,11 +392,17 @@ export interface Testimonial {
 }
 
 =======
+=======
+  content: string;
+  avatar?: string;
+  rating?: number;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   position: string;
   content: string;
   rating: number;
   avatar?: string;
   image?: string;
+<<<<<<< HEAD
 
 ;
 =======
@@ -337,22 +416,31 @@ content: string;
 export interface BlogPost {
 <<<<<<< HEAD
 =======
+=======
+  project?: string;
+}
+export interface BlogPost {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   project?: string;
 }
 
 
 export interface BlogPost {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   excerpt: string;
   content: string;
   author: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   date: string;
@@ -367,6 +455,9 @@ export interface BlogPost {;
   published_at: string;
   updated_at: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  date: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   tags: string[];
   category: string;
   image: string;
@@ -419,6 +510,7 @@ tags: string[];
   category?: string;
   featured?: boolean;
   readTime?: number;
+<<<<<<< HEAD
 
 }
 export interface TeamMember {
@@ -429,10 +521,34 @@ bio: string;
   image: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  publishedAt: string;
+  updatedAt: string;
+  tags: string[];
+  category: string;
+  image: string;
+  slug: string;
+  featured?: boolean;
+  readTime: number;
+}
+export interface TeamMember {
+
+export interface TeamMember {;
+  id: string;
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  position: string;
+  bio: string;
+  image: string;
+  skills: string[];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   social: {
     linkedin?: string;
     twitter?: string;
     github?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -445,101 +561,25 @@ skills?: string[];
 export interface Project {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-  id: string, title: string,
-  description: string, image: string,
-  technologies: string[], liveUrl?: string,
-
-export interface Project {;
-
-  id: string;
-  title: string;
-
-<<<<<<< HEAD
-  name: string;
 =======
-id: string;
-  title: string;
-name: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
-  description: string;
-  image: string;
-  technologies: string[];
-  liveUrl?: string;
-
-  githubUrl?: string;
-  featured: boolean;
-
-  status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
-<<<<<<< HEAD
-=======
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  };
+  skills?: string[];
+  position?: string;
   }
   linkedin?: string;
   github?: string;
   twitter?: string;
-
-;
-
 }
 export interface Project {
-
-
-  id: string;
-  title: string;
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  "id": string;
   name: string;
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
-=======
-;
   description: string;
-  image: string;
-  technologies: string[];
-  live_url?: string;
-  github_url?: string;
-  featured: boolean;
-  status: 'planning' | 'in - progress' | 'completed' | 'on - hold' | 'cancelled';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  start_date: Date;
-  end_date: Date;
-  budget: {
-
-<<<<<<< HEAD
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  id: string, title: string,
-  description: string, image: string,
-  technologies: string[], liveUrl?: string,
-
-  githubUrl?: string;
-  featured: boolean;
-=======
+  status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
   priority: 'low' | 'medium' | 'high' | 'critical';
   startDate: Date;
   endDate: Date;
   budget: {
-allocated: number;
+    allocated: number;
     spent: number;
     currency: string};
   "team": {
@@ -660,9 +700,264 @@ export interface Environment {
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string}
 export interface Service { id: string; name: string; description: string; category: | 'micro-saas' | 'ai-services' | 'it-services'; price: { min: number; max: number; currency: string} }; features: 'string[]; technologies: string[]; deliveryTime: string; support: string; image?: string; popular?: boolean;' } export interface ContactForm { name: string; email: string; company?: string; phone?: string; service: string; budget?: string; message: string; preferredContact: | 'email' | 'phone' | 'both'} } export interface TeamMember { id: 'string; name: string; position: string; bio: string; image: string; skills: string[]; linkedin?: string; github?: string; twitter?: string;' } } export interface Testimonial { id: 'string; name: string; company: string; position: string; content: string; rating: number; image?: string; project?: string;' } } export interface CaseStudy { id: 'string; title: string; client: string; industry: string; challenge: string; solution: string; results: string[]; technologies: string[]; duration: string; teamSize: number; image: string; featured?: boolean;' } } export interface BlogPost { id: 'string; title: string; excerpt: string; content: string; author: string; publishedAt: string; updatedAt: string; tags: string[]; category: string; image: string; featured?: boolean; readTime: number;' } } export interface PricingTier { id: string; name: string; price: number; currency: string; period: | 'month' | 'year' | 'one-time'; features: string[]; limitations?: string[]; popular?: boolean; cta: string; description: string} } export interface ApiResponse<T> { success: 'boolean; data?: T; error?: string; message?: string;' } export interface PaginationParams { page: number; limit: number; sort?: string; order?: 'asc' | 'desc'} } export interface PaginatedResponse<T> { data: T[]; pagination: { page: number; limit: number; total: number; pages: number; hasNext: boolean; hasPrev: boolean}} export interface SEOProps { title?: string; description?: string; keywords?: string; ogImage?: string; url?: string; type?: string; noindex?: boolean} } export interface PerformanceMetrics { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number} } export interface AccessibilitySettings { highContrast: 'boolean; fontSize: number; reducedMotion: boolean; screenReader: boolean;' } } export interface UserPreferences { theme: | 'light' | 'dark' | 'system'; language: string; accessibility: AccessibilitySettings; notifications: { email: boolean; browser: boolean; marketing: boolean} }} export interface NavigationItem { name: 'string; href: string; submenu?: NavigationItem[]; external?: boolean;' } } export interface SocialLink { platform: | 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram'; url: string; label: string} } export interface CompanyInfo { name: string; tagline: string; description: string; address: { street: string; city: string; state: string; zip: string; country: string} }; contact: { phone: string; email: string; website: string}; certifications: 'string[];' } export interface ErrorInfo { message: 'string; code?: string; details?: any; timestamp: string; userAgent?: string; url?: string;' } } export interface LoadingState { isLoading: 'boolean; error?: string; progress?: number;' } } export interface FormField { name: string; label: string; type: | 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio'; required: boolean; placeholder?: string} options?: { value: 'string; label: string' }[]; validation?: { min?: number; max?: number; pattern?: string; message?: string}} export interface Project { id: string; name: string; description: string; status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled'; priority: 'low' | 'medium' | 'high' | 'critical'; startDate: Date; endDate: Date; budget: { allocated: number; spent: number; currency: string} }; team: { lead: string; members: string[]; external: string[]}; client: { name: string; contact: string; industry: string}; deliverables: { name: string; description: string; status: 'pending' | 'in-progress' | 'completed' | 'review'; dueDate: Date}[]; risks: { description: string; probability: 'low' | 'medium' | 'high'; impact: 'low' | 'medium' | 'high'; mitigation: string}[]; dependencies: { project: string; type: 'blocking' | 'influencing'; description: string}[]; metrics: { name: string; value: number; unit: string; target: number}[]; lessons: { learned: string; category: 'technical' | 'process' | 'communication' | 'management'; impact: 'positive' | 'negative' | 'neutral'}[]} export interface User { id: string; email: string; name: string; role: 'admin' | 'manager' | 'developer' | 'client' | 'guest'; permissions: string[]; profile: { avatar?: string; bio?: string; skills: string[]; experience: number; location: string; timezone: string} }; preferences: { theme: 'light' | 'dark' | 'auto'; language: string; notifications: { email: boolean; push: boolean; sms: boolean}}; activity: { lastLogin: Date; loginCount: number; projects: string[]; tasks: string[]}; subscription: { plan: 'free' | 'basic' | 'premium' | 'enterprise'; status: 'active' | 'inactive' | 'cancelled' | 'expired'; startDate: Date; endDate: Date; features: string[]}} export interface Notification { id: string; type: 'info' | 'success' | 'warning' | 'error'; title: string; message: string; timestamp: Date; read: boolean; action?: { label: string; url: string} }; category: 'system' | 'project' | 'team' | 'client' | 'billing'; priority: 'low' | 'medium' | 'high'; expires?: Date} export interface BaseComponentProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'button' | 'submit' | 'reset'} } export interface InputProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number'; placeholder?: string; value?: string; onChange?: (value: 'string) => void; error?: string; required?: boolean;' } } export interface ApiRequest { method: | 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'; url: string; data?: any; params?: Record<string,any> headers?: Record<string,string> } } export interface Environment { NODE_ENV: | 'development' | 'production' | 'test'; NEXT_PUBLIC_API_URL?: string; NEXT_PUBLIC_APP_URL?: string; NEXT_PUBLIC_GA_ID?: string; NEXT_PUBLIC_SENTRY_DSN?: string} }
+export interface Service { id: string; name: string; description: string; category: | 'micro-saas' | 'ai-services' | 'it-services'; price: { min: number; max: number; currency: string}; features: string[]; technologies: string[]; deliveryTime: string; support: string; image?: string; popular?: boolean} export interface ContactForm { name: string; email: string; company?: string; phone?: string; service: string; budget?: string; message: string; preferredContact: | 'email' | 'phone' | 'both'} export interface TeamMember { id: string; name: string; position: string; bio: string; image: string; skills: string[]; linkedin?: string; github?: string; twitter?: string} export interface Testimonial { id: string; name: string; company: string; position: string; content: string; rating: number; image?: string; project?: string} export interface CaseStudy { id: string; title: string; client: string; industry: string; challenge: string; solution: string; results: string[]; technologies: string[]; duration: string; teamSize: number; image: string; featured?: boolean} export interface BlogPost { id: string; title: string; excerpt: string; content: string; author: string; publishedAt: string; updatedAt: string; tags: string[]; category: string; image: string; featured?: boolean; readTime: number} export interface PricingTier { id: string; name: string; price: number; currency: string; period: | 'month' | 'year' | 'one-time'; features: string[]; limitations?: string[]; popular?: boolean; cta: string; description: string} export interface ApiResponse<T> { success: boolean; data?: T; error?: string; message?: string} export interface PaginationParams { page: number; limit: number; sort?: string; order?: 'asc' | 'desc'} export interface PaginatedResponse<T> { data: T[]; pagination: { page: number; limit: number; total: number; pages: number; hasNext: boolean; hasPrev: boolean}} export interface SEOProps { title?: string; description?: string; keywords?: string; ogImage?: string; url?: string; type?: string; noindex?: boolean} export interface PerformanceMetrics { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number} export interface AccessibilitySettings { highContrast: boolean; fontSize: number; reducedMotion: boolean; screenReader: boolean} export interface UserPreferences { theme: | 'light' | 'dark' | 'system'; language: string; accessibility: AccessibilitySettings; notifications: { email: boolean; browser: boolean; marketing: boolean}} export interface NavigationItem { name: string; href: string; submenu?: NavigationItem[]; external?: boolean} export interface SocialLink { platform: | 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram'; url: string; label: string} export interface CompanyInfo { name: string; tagline: string; description: string; address: { street: string; city: string; state: string; zip: string; country: string}; contact: { phone: string; email: string; website: string}; certifications: string[]} export interface ErrorInfo { message: string; code?: string; details?: any; timestamp: string; userAgent?: string; url?: string} export interface LoadingState { isLoading: boolean; error?: string; progress?: number} export interface FormField { name: string; label: string; type: | 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio'; required: boolean; placeholder?: string; options?: { value: string; label: string }[]; validation?: { min?: number; max?: number; pattern?: string; message?: string}} export interface Project { id: string; name: string; description: string; status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled'; priority: 'low' | 'medium' | 'high' | 'critical'; startDate: Date; endDate: Date; budget: { allocated: number; spent: number; currency: string}; team: { lead: string; members: string[]; external: string[]}; client: { name: string; contact: string; industry: string}; deliverables: { name: string; description: string; status: 'pending' | 'in-progress' | 'completed' | 'review'; dueDate: Date}[]; risks: { description: string; probability: 'low' | 'medium' | 'high'; impact: 'low' | 'medium' | 'high'; mitigation: string}[]; dependencies: { project: string; type: 'blocking' | 'influencing'; description: string}[]; metrics: { name: string; value: number; unit: string; target: number}[]; lessons: { learned: string; category: 'technical' | 'process' | 'communication' | 'management'; impact: 'positive' | 'negative' | 'neutral'}[]} export interface User { id: string; email: string; name: string; role: 'admin' | 'manager' | 'developer' | 'client' | 'guest'; permissions: string[]; profile: { avatar?: string; bio?: string; skills: string[]; experience: number; location: string; timezone: string}; preferences: { theme: 'light' | 'dark' | 'auto'; language: string; notifications: { email: boolean; push: boolean; sms: boolean}}; activity: { lastLogin: Date; loginCount: number; projects: string[]; tasks: string[]}; subscription: { plan: 'free' | 'basic' | 'premium' | 'enterprise'; status: 'active' | 'inactive' | 'cancelled' | 'expired'; startDate: Date; endDate: Date; features: string[]}} export interface Notification { id: string; type: 'info' | 'success' | 'warning' | 'error'; title: string; message: string; timestamp: Date; read: boolean; action?: { label: string; url: string}; category: 'system' | 'project' | 'team' | 'client' | 'billing'; priority: 'low' | 'medium' | 'high'; expires?: Date} export interface BaseComponentProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'button' | 'submit' | 'reset'} export interface InputProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number'; placeholder?: string; value?: string; onChange?: (value: string) => void; error?: string; required?: boolean} export interface ApiRequest { method: | 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'; url: string; data?: any; params?: Record<string,any>; headers?: Record<string,string>} export interface Environment { NODE_ENV: | 'development' | 'production' | 'test'; NEXT_PUBLIC_API_URL?: string; NEXT_PUBLIC_APP_URL?: string; NEXT_PUBLIC_GA_ID?: string; NEXT_PUBLIC_SENTRY_DSN?: string}
+export interface Service { id: string; name: string; description: string; category: | 'micro-saas' | 'ai-services' | 'it-services'; price: { min: number; max: number; currency: string}; features: string[]; technologies: string[]; deliveryTime: string; support: string; image?: string; popular?: boolean} export interface ContactForm { name: string; email: string; company?: string; phone?: string; service: string; budget?: string; message: string; preferredContact: | 'email' | 'phone' | 'both'} export interface TeamMember { id: string; name: string; position: string; bio: string; image: string; skills: string[]; linkedin?: string; github?: string; twitter?: string} export interface Testimonial { id: string; name: string; company: string; position: string; content: string; rating: number; image?: string; project?: string} export interface CaseStudy { id: string; title: string; client: string; industry: string; challenge: string; solution: string; results: string[]; technologies: string[]; duration: string; teamSize: number; image: string; featured?: boolean} export interface BlogPost { id: string; title: string; excerpt: string; content: string; author: string; publishedAt: string; updatedAt: string; tags: string[]; category: string; image: string; featured?: boolean; readTime: number} export interface PricingTier { id: string; name: string; price: number; currency: string; period: | 'month' | 'year' | 'one-time'; features: string[]; limitations?: string[]; popular?: boolean; cta: string; description: string} export interface ApiResponse<T> { success: boolean; data?: T; error?: string; message?: string} export interface PaginationParams { page: number; limit: number; sort?: string; order?: 'asc' | 'desc'} export interface PaginatedResponse<T> { data: T[]; pagination: { page: number; limit: number; total: number; pages: number; hasNext: boolean; hasPrev: boolean}} export interface SEOProps { title?: string; description?: string; keywords?: string; ogImage?: string; url?: string; type?: string; noindex?: boolean} export interface PerformanceMetrics { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number} export interface AccessibilitySettings { highContrast: boolean; fontSize: number; reducedMotion: boolean; screenReader: boolean} export interface UserPreferences { theme: | 'light' | 'dark' | 'system'; language: string; accessibility: AccessibilitySettings; notifications: { email: boolean; browser: boolean; marketing: boolean}} export interface NavigationItem { name: string; href: string; submenu?: NavigationItem[]; external?: boolean} export interface SocialLink { platform: | 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram'; url: string; label: string} export interface CompanyInfo { name: string; tagline: string; description: string; address: { street: string; city: string; state: string; zip: string; country: string}; contact: { phone: string; email: string; website: string}; certifications: string[]} export interface ErrorInfo { message: string; code?: string; details?: any; timestamp: string; userAgent?: string; url?: string} export interface LoadingState { isLoading: boolean; error?: string; progress?: number} export interface FormField { name: string; label: string; type: | 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio'; required: boolean; placeholder?: string; options?: { value: string; label: string }[]; validation?: { min?: number; max?: number; pattern?: string; message?: string}} export interface Project { id: string; name: string; description: string; status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled'; priority: 'low' | 'medium' | 'high' | 'critical'; startDate: Date; endDate: Date; budget: { allocated: number; spent: number; currency: string}; team: { lead: string; members: string[]; external: string[]}; client: { name: string; contact: string; industry: string}; deliverables: { name: string; description: string; status: 'pending' | 'in-progress' | 'completed' | 'review'; dueDate: Date}[]; risks: { description: string; probability: 'low' | 'medium' | 'high'; impact: 'low' | 'medium' | 'high'; mitigation: string}[]; dependencies: { project: string; type: 'blocking' | 'influencing'; description: string}[]; metrics: { name: string; value: number; unit: string; target: number}[]; lessons: { learned: string; category: 'technical' | 'process' | 'communication' | 'management'; impact: 'positive' | 'negative' | 'neutral'}[]} export interface User { id: string; email: string; name: string; role: 'admin' | 'manager' | 'developer' | 'client' | 'guest'; permissions: string[]; profile: { avatar?: string; bio?: string; skills: string[]; experience: number; location: string; timezone: string}; preferences: { theme: 'light' | 'dark' | 'auto'; language: string; notifications: { email: boolean; push: boolean; sms: boolean}}; activity: { lastLogin: Date; loginCount: number; projects: string[]; tasks: string[]}; subscription: { plan: 'free' | 'basic' | 'premium' | 'enterprise'; status: 'active' | 'inactive' | 'cancelled' | 'expired'; startDate: Date; endDate: Date; features: string[]}} export interface Notification { id: string; type: 'info' | 'success' | 'warning' | 'error'; title: string; message: string; timestamp: Date; read: boolean; action?: { label: string; url: string}; category: 'system' | 'project' | 'team' | 'client' | 'billing'; priority: 'low' | 'medium' | 'high'; expires?: Date} export interface BaseComponentProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'button' | 'submit' | 'reset'} export interface InputProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number'; placeholder?: string; value?: string; onChange?: (value: string) => void; error?: string; required?: boolean} export interface ApiRequest { method: | 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'; url: string; data?: any; params?: Record<string,any>; headers?: Record<string,string>} export interface Environment { NODE_ENV: | 'development' | 'production' | 'test'; NEXT_PUBLIC_API_URL?: string; NEXT_PUBLIC_APP_URL?: string; NEXT_PUBLIC_GA_ID?: string; NEXT_PUBLIC_SENTRY_DSN?: string}
+export interface Service { id: string; name: string; description: string; category: | 'micro-saas' | 'ai-services' | 'it-services'; price: { min: number; max: number; currency: string}; features: string[]; technologies: string[]; deliveryTime: string; support: string; image?: string; popular?: boolean} export interface ContactForm { name: string; email: string; company?: string; phone?: string; service: string; budget?: string; message: string; preferredContact: | 'email' | 'phone' | 'both'} export interface TeamMember { id: string; name: string; position: string; bio: string; image: string; skills: string[]; linkedin?: string; github?: string; twitter?: string} export interface Testimonial { id: string; name: string; company: string; position: string; content: string; rating: number; image?: string; project?: string} export interface CaseStudy { id: string; title: string; client: string; industry: string; challenge: string; solution: string; results: string[]; technologies: string[]; duration: string; teamSize: number; image: string; featured?: boolean} export interface BlogPost { id: string; title: string; excerpt: string; content: string; author: string; publishedAt: string; updatedAt: string; tags: string[]; category: string; image: string; featured?: boolean; readTime: number} export interface PricingTier { id: string; name: string; price: number; currency: string; period: | 'month' | 'year' | 'one-time'; features: string[]; limitations?: string[]; popular?: boolean; cta: string; description: string} export interface ApiResponse<T> { success: boolean; data?: T; error?: string; message?: string} export interface PaginationParams { page: number; limit: number; sort?: string; order?: 'asc' | 'desc'} export interface PaginatedResponse<T> { data: T[]; pagination: { page: number; limit: number; total: number; pages: number; hasNext: boolean; hasPrev: boolean}} export interface SEOProps { title?: string; description?: string; keywords?: string; ogImage?: string; url?: string; type?: string; noindex?: boolean} export interface PerformanceMetrics { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number} export interface AccessibilitySettings { highContrast: boolean; fontSize: number; reducedMotion: boolean; screenReader: boolean} export interface UserPreferences { theme: | 'light' | 'dark' | 'system'; language: string; accessibility: AccessibilitySettings; notifications: { email: boolean; browser: boolean; marketing: boolean}} export interface NavigationItem { name: string; href: string; submenu?: NavigationItem[]; external?: boolean} export interface SocialLink { platform: | 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram'; url: string; label: string} export interface CompanyInfo { name: string; tagline: string; description: string; address: { street: string; city: string; state: string; zip: string; country: string}; contact: { phone: string; email: string; website: string}; certifications: string[]} export interface ErrorInfo { message: string; code?: string; details?: any; timestamp: string; userAgent?: string; url?: string} export interface LoadingState { isLoading: boolean; error?: string; progress?: number} export interface FormField { name: string; label: string; type: | 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio'; required: boolean; placeholder?: string; options?: { value: string; label: string }[]; validation?: { min?: number; max?: number; pattern?: string; message?: string}} export interface Project { id: string; name: string; description: string; status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled'; priority: 'low' | 'medium' | 'high' | 'critical'; startDate: Date; endDate: Date; budget: { allocated: number; spent: number; currency: string}; team: { lead: string; members: string[]; external: string[]}; client: { name: string; contact: string; industry: string}; deliverables: { name: string; description: string; status: 'pending' | 'in-progress' | 'completed' | 'review'; dueDate: Date}[]; risks: { description: string; probability: 'low' | 'medium' | 'high'; impact: 'low' | 'medium' | 'high'; mitigation: string}[]; dependencies: { project: string; type: 'blocking' | 'influencing'; description: string}[]; metrics: { name: string; value: number; unit: string; target: number}[]; lessons: { learned: string; category: 'technical' | 'process' | 'communication' | 'management'; impact: 'positive' | 'negative' | 'neutral'}[]} export interface User { id: string; email: string; name: string; role: 'admin' | 'manager' | 'developer' | 'client' | 'guest'; permissions: string[]; profile: { avatar?: string; bio?: string; skills: string[]; experience: number; location: string; timezone: string}; preferences: { theme: 'light' | 'dark' | 'auto'; language: string; notifications: { email: boolean; push: boolean; sms: boolean}}; activity: { lastLogin: Date; loginCount: number; projects: string[]; tasks: string[]}; subscription: { plan: 'free' | 'basic' | 'premium' | 'enterprise'; status: 'active' | 'inactive' | 'cancelled' | 'expired'; startDate: Date; endDate: Date; features: string[]}} export interface Notification { id: string; type: 'info' | 'success' | 'warning' | 'error'; title: string; message: string; timestamp: Date; read: boolean; action?: { label: string; url: string}; category: 'system' | 'project' | 'team' | 'client' | 'billing'; priority: 'low' | 'medium' | 'high'; expires?: Date} export interface BaseComponentProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'button' | 'submit' | 'reset'} export interface InputProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number'; placeholder?: string; value?: string; onChange?: (value: string) => void; error?: string; required?: boolean} export interface ApiRequest { method: | 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'; url: string; data?: any; params?: Record<string,any>; headers?: Record<string,string>} export interface Environment { NODE_ENV: | 'development' | 'production' | 'test'; NEXT_PUBLIC_API_URL?: string; NEXT_PUBLIC_APP_URL?: string; NEXT_PUBLIC_GA_ID?: string; NEXT_PUBLIC_SENTRY_DSN?: string}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  id: string, title: string,
+  description: string, image: string,
+  technologies: string[], liveUrl?: string,
+
+export interface Project {;
+<<<<<<< HEAD
+
+  id: string;
+  title: string;
+
+<<<<<<< HEAD
+  name: string;
+=======
+id: string;
+  title: string;
+name: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+
+=======
+  id: string;
+  title: string;
+  id: string;
+  title: string;
+  name: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  description: string;
+  image: string;
+  technologies: string[];
+  liveUrl?: string;
+<<<<<<< HEAD
+
+  githubUrl?: string;
+  featured: boolean;
+
+=======
+origin/main
+  "id": string;
+  name: string;
+  description: string;
+  githubUrl?: string;
+  featured: boolean;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
+<<<<<<< HEAD
+=======
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+  linkedin?: string;
+  github?: string;
+  twitter?: string;
+
+;
+
+}
+export interface Project {
+
+
+  id: string;
+  title: string;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  name: string;
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
+=======
+;
+  description: string;
+  image: string;
+  technologies: string[];
+  live_url?: string;
+  github_url?: string;
+  featured: boolean;
+  status: 'planning' | 'in - progress' | 'completed' | 'on - hold' | 'cancelled';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  start_date: Date;
+  end_date: Date;
+  budget: {
+
+<<<<<<< HEAD
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+  id: string, title: string,
+  description: string, image: string,
+  technologies: string[], liveUrl?: string,
+
+  githubUrl?: string;
+  featured: boolean;
+=======
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  startDate: Date;
+  endDate: Date;
+  budget: {
+<<<<<<< HEAD
+allocated: number;
+=======
+    allocated: number;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    spent: number;
+    currency: string};
+  "team": {
+    lead: string;
+    members: string[];
+    external: string[]};
+  "client": {
+    name: string;
+    contact: string;
+    industry: string};
+  "deliverables": {
+    name: string;
+    description: string;
+    status: 'pending' | 'in-progress' | 'completed' | 'review';
+    dueDate: Date}[];
+  "risks": {
+    description: string;
+    probability: 'low' | 'medium' | 'high';
+    impact: 'low' | 'medium' | 'high';
+    mitigation: string}[];
+  "dependencies": {
+    project: string;
+    type: 'blocking' | 'influencing';
+    description: string}[];
+  "metrics": {
+    name: string;
+    value: number;
+    unit: string;
+    target: number}[];
+  "lessons": {
+    learned: string;
+    category: 'technical' | 'process' | 'communication' | 'management';
+    impact: 'positive' | 'negative' | 'neutral'}[]}
+export interface User {
+  "id": string;
+  email: string;
+  name: string;
+  role: 'admin' | 'manager' | 'developer' | 'client' | 'guest';
+  permissions: string[];
+  profile: {
+    avatar?: string;
+    bio?: string;
+    skills: string[];
+    experience: number;
+    location: string;
+    timezone: string};
+  "preferences": {
+    theme: 'light' | 'dark' | 'auto';
+    language: string;
+    notifications: {
+      email: boolean;
+      push: boolean;
+      sms: boolean}};
+  "activity": {
+    lastLogin: Date;
+    loginCount: number;
+    projects: string[];
+    tasks: string[]};
+  "subscription": {
+    plan: 'free' | 'basic' | 'premium' | 'enterprise';
+    status: 'active' | 'inactive' | 'cancelled' | 'expired';
+    startDate: Date;
+    endDate: Date;
+    features: string[]}}
+export interface Notification {
+  "id": string;
+  type: 'info' | 'success' | 'warning' | 'error';
+  title: string;
+  message: string;
+  timestamp: Date;
+  read: boolean;
+  action?: {
+    label: string;
+    url: string};
+  "category": 'system' | 'project' | 'team' | 'client' | 'billing';
+  priority: 'low' | 'medium' | 'high';
+  expires?: Date}
+export interface BaseComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset'}
+// InputProps should not extend BaseComponentProps due to incompatible 'type'
+export interface InputProps {
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
+  placeholder?: string;
+  value?: string;
+  onChange?: ("value": string) => void;
+  error?: string;
+  required?: boolean}
+// API types
+export interface ApiRequest {
+  "method": | 'GET'
+    | 'POST'
+    | 'PUT'
+    | 'DELETE'
+    | 'PATCH';
+  url: string;
+  data?: any;
+  params?: Record<string, any>;
+  headers?: Record<string, string>}
+// Environment types
+export interface Environment {
+  "NODE_ENV": | 'development'
+    | 'production'
+    | 'test';
+  NEXT_PUBLIC_API_URL?: string;
+  NEXT_PUBLIC_APP_URL?: string;
+  NEXT_PUBLIC_GA_ID?: string;
+  NEXT_PUBLIC_SENTRY_DSN?: string}
+export interface Service { id: string; name: string; description: string; category: | 'micro-saas' | 'ai-services' | 'it-services'; price: { min: number; max: number; currency: string} }; features: 'string[]; technologies: string[]; deliveryTime: string; support: string; image?: string; popular?: boolean;' } export interface ContactForm { name: string; email: string; company?: string; phone?: string; service: string; budget?: string; message: string; preferredContact: | 'email' | 'phone' | 'both'} } export interface TeamMember { id: 'string; name: string; position: string; bio: string; image: string; skills: string[]; linkedin?: string; github?: string; twitter?: string;' } } export interface Testimonial { id: 'string; name: string; company: string; position: string; content: string; rating: number; image?: string; project?: string;' } } export interface CaseStudy { id: 'string; title: string; client: string; industry: string; challenge: string; solution: string; results: string[]; technologies: string[]; duration: string; teamSize: number; image: string; featured?: boolean;' } } export interface BlogPost { id: 'string; title: string; excerpt: string; content: string; author: string; publishedAt: string; updatedAt: string; tags: string[]; category: string; image: string; featured?: boolean; readTime: number;' } } export interface PricingTier { id: string; name: string; price: number; currency: string; period: | 'month' | 'year' | 'one-time'; features: string[]; limitations?: string[]; popular?: boolean; cta: string; description: string} } export interface ApiResponse<T> { success: 'boolean; data?: T; error?: string; message?: string;' } export interface PaginationParams { page: number; limit: number; sort?: string; order?: 'asc' | 'desc'} } export interface PaginatedResponse<T> { data: T[]; pagination: { page: number; limit: number; total: number; pages: number; hasNext: boolean; hasPrev: boolean}} export interface SEOProps { title?: string; description?: string; keywords?: string; ogImage?: string; url?: string; type?: string; noindex?: boolean} } export interface PerformanceMetrics { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number} } export interface AccessibilitySettings { highContrast: 'boolean; fontSize: number; reducedMotion: boolean; screenReader: boolean;' } } export interface UserPreferences { theme: | 'light' | 'dark' | 'system'; language: string; accessibility: AccessibilitySettings; notifications: { email: boolean; browser: boolean; marketing: boolean} }} export interface NavigationItem { name: 'string; href: string; submenu?: NavigationItem[]; external?: boolean;' } } export interface SocialLink { platform: | 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram'; url: string; label: string} } export interface CompanyInfo { name: string; tagline: string; description: string; address: { street: string; city: string; state: string; zip: string; country: string} }; contact: { phone: string; email: string; website: string}; certifications: 'string[];' } export interface ErrorInfo { message: 'string; code?: string; details?: any; timestamp: string; userAgent?: string; url?: string;' } } export interface LoadingState { isLoading: 'boolean; error?: string; progress?: number;' } } export interface FormField { name: string; label: string; type: | 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio'; required: boolean; placeholder?: string} options?: { value: 'string; label: string' }[]; validation?: { min?: number; max?: number; pattern?: string; message?: string}} export interface Project { id: string; name: string; description: string; status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled'; priority: 'low' | 'medium' | 'high' | 'critical'; startDate: Date; endDate: Date; budget: { allocated: number; spent: number; currency: string} }; team: { lead: string; members: string[]; external: string[]}; client: { name: string; contact: string; industry: string}; deliverables: { name: string; description: string; status: 'pending' | 'in-progress' | 'completed' | 'review'; dueDate: Date}[]; risks: { description: string; probability: 'low' | 'medium' | 'high'; impact: 'low' | 'medium' | 'high'; mitigation: string}[]; dependencies: { project: string; type: 'blocking' | 'influencing'; description: string}[]; metrics: { name: string; value: number; unit: string; target: number}[]; lessons: { learned: string; category: 'technical' | 'process' | 'communication' | 'management'; impact: 'positive' | 'negative' | 'neutral'}[]} export interface User { id: string; email: string; name: string; role: 'admin' | 'manager' | 'developer' | 'client' | 'guest'; permissions: string[]; profile: { avatar?: string; bio?: string; skills: string[]; experience: number; location: string; timezone: string} }; preferences: { theme: 'light' | 'dark' | 'auto'; language: string; notifications: { email: boolean; push: boolean; sms: boolean}}; activity: { lastLogin: Date; loginCount: number; projects: string[]; tasks: string[]}; subscription: { plan: 'free' | 'basic' | 'premium' | 'enterprise'; status: 'active' | 'inactive' | 'cancelled' | 'expired'; startDate: Date; endDate: Date; features: string[]}} export interface Notification { id: string; type: 'info' | 'success' | 'warning' | 'error'; title: string; message: string; timestamp: Date; read: boolean; action?: { label: string; url: string} }; category: 'system' | 'project' | 'team' | 'client' | 'billing'; priority: 'low' | 'medium' | 'high'; expires?: Date} export interface BaseComponentProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'button' | 'submit' | 'reset'} } export interface InputProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number'; placeholder?: string; value?: string; onChange?: (value: 'string) => void; error?: string; required?: boolean;' } } export interface ApiRequest { method: | 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'; url: string; data?: any; params?: Record<string,any> headers?: Record<string,string> } } export interface Environment { NODE_ENV: | 'development' | 'production' | 'test'; NEXT_PUBLIC_API_URL?: string; NEXT_PUBLIC_APP_URL?: string; NEXT_PUBLIC_GA_ID?: string; NEXT_PUBLIC_SENTRY_DSN?: string} }
+<<<<<<< HEAD
 
 export interface Service { id: string; name: string; description: string; category: | 'micro-saas' | 'ai-services' | 'it-services'; price: { min: number; max: number; currency: string}; features: string[]; technologies: string[]; deliveryTime: string; support: string; image?: string; popular?: boolean} export interface ContactForm { name: string; email: string; company?: string; phone?: string; service: string; budget?: string; message: string; preferredContact: | 'email' | 'phone' | 'both'} export interface TeamMember { id: string; name: string; position: string; bio: string; image: string; skills: string[]; linkedin?: string; github?: string; twitter?: string} export interface Testimonial { id: string; name: string; company: string; position: string; content: string; rating: number; image?: string; project?: string} export interface CaseStudy { id: string; title: string; client: string; industry: string; challenge: string; solution: string; results: string[]; technologies: string[]; duration: string; teamSize: number; image: string; featured?: boolean} export interface BlogPost { id: string; title: string; excerpt: string; content: string; author: string; publishedAt: string; updatedAt: string; tags: string[]; category: string; image: string; featured?: boolean; readTime: number} export interface PricingTier { id: string; name: string; price: number; currency: string; period: | 'month' | 'year' | 'one-time'; features: string[]; limitations?: string[]; popular?: boolean; cta: string; description: string} export interface ApiResponse<T> { success: boolean; data?: T; error?: string; message?: string} export interface PaginationParams { page: number; limit: number; sort?: string; order?: 'asc' | 'desc'} export interface PaginatedResponse<T> { data: T[]; pagination: { page: number; limit: number; total: number; pages: number; hasNext: boolean; hasPrev: boolean}} export interface SEOProps { title?: string; description?: string; keywords?: string; ogImage?: string; url?: string; type?: string; noindex?: boolean} export interface PerformanceMetrics { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number} export interface AccessibilitySettings { highContrast: boolean; fontSize: number; reducedMotion: boolean; screenReader: boolean} export interface UserPreferences { theme: | 'light' | 'dark' | 'system'; language: string; accessibility: AccessibilitySettings; notifications: { email: boolean; browser: boolean; marketing: boolean}} export interface NavigationItem { name: string; href: string; submenu?: NavigationItem[]; external?: boolean} export interface SocialLink { platform: | 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram'; url: string; label: string} export interface CompanyInfo { name: string; tagline: string; description: string; address: { street: string; city: string; state: string; zip: string; country: string}; contact: { phone: string; email: string; website: string}; certifications: string[]} export interface ErrorInfo { message: string; code?: string; details?: any; timestamp: string; userAgent?: string; url?: string} export interface LoadingState { isLoading: boolean; error?: string; progress?: number} export interface FormField { name: string; label: string; type: | 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio'; required: boolean; placeholder?: string; options?: { value: string; label: string }[]; validation?: { min?: number; max?: number; pattern?: string; message?: string}} export interface Project { id: string; name: string; description: string; status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled'; priority: 'low' | 'medium' | 'high' | 'critical'; startDate: Date; endDate: Date; budget: { allocated: number; spent: number; currency: string}; team: { lead: string; members: string[]; external: string[]}; client: { name: string; contact: string; industry: string}; deliverables: { name: string; description: string; status: 'pending' | 'in-progress' | 'completed' | 'review'; dueDate: Date}[]; risks: { description: string; probability: 'low' | 'medium' | 'high'; impact: 'low' | 'medium' | 'high'; mitigation: string}[]; dependencies: { project: string; type: 'blocking' | 'influencing'; description: string}[]; metrics: { name: string; value: number; unit: string; target: number}[]; lessons: { learned: string; category: 'technical' | 'process' | 'communication' | 'management'; impact: 'positive' | 'negative' | 'neutral'}[]} export interface User { id: string; email: string; name: string; role: 'admin' | 'manager' | 'developer' | 'client' | 'guest'; permissions: string[]; profile: { avatar?: string; bio?: string; skills: string[]; experience: number; location: string; timezone: string}; preferences: { theme: 'light' | 'dark' | 'auto'; language: string; notifications: { email: boolean; push: boolean; sms: boolean}}; activity: { lastLogin: Date; loginCount: number; projects: string[]; tasks: string[]}; subscription: { plan: 'free' | 'basic' | 'premium' | 'enterprise'; status: 'active' | 'inactive' | 'cancelled' | 'expired'; startDate: Date; endDate: Date; features: string[]}} export interface Notification { id: string; type: 'info' | 'success' | 'warning' | 'error'; title: string; message: string; timestamp: Date; read: boolean; action?: { label: string; url: string}; category: 'system' | 'project' | 'team' | 'client' | 'billing'; priority: 'low' | 'medium' | 'high'; expires?: Date} export interface BaseComponentProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'button' | 'submit' | 'reset'} export interface InputProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number'; placeholder?: string; value?: string; onChange?: (value: string) => void; error?: string; required?: boolean} export interface ApiRequest { method: | 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'; url: string; data?: any; params?: Record<string,any>; headers?: Record<string,string>} export interface Environment { NODE_ENV: | 'development' | 'production' | 'test'; NEXT_PUBLIC_API_URL?: string; NEXT_PUBLIC_APP_URL?: string; NEXT_PUBLIC_GA_ID?: string; NEXT_PUBLIC_SENTRY_DSN?: string}
 
+=======
+export interface Service { id: string; name: string; description: string; category: | 'micro-saas' | 'ai-services' | 'it-services'; price: { min: number; max: number; currency: string}; features: string[]; technologies: string[]; deliveryTime: string; support: string; image?: string; popular?: boolean} export interface ContactForm { name: string; email: string; company?: string; phone?: string; service: string; budget?: string; message: string; preferredContact: | 'email' | 'phone' | 'both'} export interface TeamMember { id: string; name: string; position: string; bio: string; image: string; skills: string[]; linkedin?: string; github?: string; twitter?: string} export interface Testimonial { id: string; name: string; company: string; position: string; content: string; rating: number; image?: string; project?: string} export interface CaseStudy { id: string; title: string; client: string; industry: string; challenge: string; solution: string; results: string[]; technologies: string[]; duration: string; teamSize: number; image: string; featured?: boolean} export interface BlogPost { id: string; title: string; excerpt: string; content: string; author: string; publishedAt: string; updatedAt: string; tags: string[]; category: string; image: string; featured?: boolean; readTime: number} export interface PricingTier { id: string; name: string; price: number; currency: string; period: | 'month' | 'year' | 'one-time'; features: string[]; limitations?: string[]; popular?: boolean; cta: string; description: string} export interface ApiResponse<T> { success: boolean; data?: T; error?: string; message?: string} export interface PaginationParams { page: number; limit: number; sort?: string; order?: 'asc' | 'desc'} export interface PaginatedResponse<T> { data: T[]; pagination: { page: number; limit: number; total: number; pages: number; hasNext: boolean; hasPrev: boolean}} export interface SEOProps { title?: string; description?: string; keywords?: string; ogImage?: string; url?: string; type?: string; noindex?: boolean} export interface PerformanceMetrics { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number} export interface AccessibilitySettings { highContrast: boolean; fontSize: number; reducedMotion: boolean; screenReader: boolean} export interface UserPreferences { theme: | 'light' | 'dark' | 'system'; language: string; accessibility: AccessibilitySettings; notifications: { email: boolean; browser: boolean; marketing: boolean}} export interface NavigationItem { name: string; href: string; submenu?: NavigationItem[]; external?: boolean} export interface SocialLink { platform: | 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram'; url: string; label: string} export interface CompanyInfo { name: string; tagline: string; description: string; address: { street: string; city: string; state: string; zip: string; country: string}; contact: { phone: string; email: string; website: string}; certifications: string[]} export interface ErrorInfo { message: string; code?: string; details?: any; timestamp: string; userAgent?: string; url?: string} export interface LoadingState { isLoading: boolean; error?: string; progress?: number} export interface FormField { name: string; label: string; type: | 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio'; required: boolean; placeholder?: string; options?: { value: string; label: string }[]; validation?: { min?: number; max?: number; pattern?: string; message?: string}} export interface Project { id: string; name: string; description: string; status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled'; priority: 'low' | 'medium' | 'high' | 'critical'; startDate: Date; endDate: Date; budget: { allocated: number; spent: number; currency: string}; team: { lead: string; members: string[]; external: string[]}; client: { name: string; contact: string; industry: string}; deliverables: { name: string; description: string; status: 'pending' | 'in-progress' | 'completed' | 'review'; dueDate: Date}[]; risks: { description: string; probability: 'low' | 'medium' | 'high'; impact: 'low' | 'medium' | 'high'; mitigation: string}[]; dependencies: { project: string; type: 'blocking' | 'influencing'; description: string}[]; metrics: { name: string; value: number; unit: string; target: number}[]; lessons: { learned: string; category: 'technical' | 'process' | 'communication' | 'management'; impact: 'positive' | 'negative' | 'neutral'}[]} export interface User { id: string; email: string; name: string; role: 'admin' | 'manager' | 'developer' | 'client' | 'guest'; permissions: string[]; profile: { avatar?: string; bio?: string; skills: string[]; experience: number; location: string; timezone: string}; preferences: { theme: 'light' | 'dark' | 'auto'; language: string; notifications: { email: boolean; push: boolean; sms: boolean}}; activity: { lastLogin: Date; loginCount: number; projects: string[]; tasks: string[]}; subscription: { plan: 'free' | 'basic' | 'premium' | 'enterprise'; status: 'active' | 'inactive' | 'cancelled' | 'expired'; startDate: Date; endDate: Date; features: string[]}} export interface Notification { id: string; type: 'info' | 'success' | 'warning' | 'error'; title: string; message: string; timestamp: Date; read: boolean; action?: { label: string; url: string}; category: 'system' | 'project' | 'team' | 'client' | 'billing'; priority: 'low' | 'medium' | 'high'; expires?: Date} export interface BaseComponentProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'button' | 'submit' | 'reset'} export interface InputProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number'; placeholder?: string; value?: string; onChange?: (value: string) => void; error?: string; required?: boolean} export interface ApiRequest { method: | 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'; url: string; data?: any; params?: Record<string,any>; headers?: Record<string,string>} export interface Environment { NODE_ENV: | 'development' | 'production' | 'test'; NEXT_PUBLIC_API_URL?: string; NEXT_PUBLIC_APP_URL?: string; NEXT_PUBLIC_GA_ID?: string; NEXT_PUBLIC_SENTRY_DSN?: string}
+export interface Service { id: string; name: string; description: string; category: | 'micro-saas' | 'ai-services' | 'it-services'; price: { min: number; max: number; currency: string}; features: string[]; technologies: string[]; deliveryTime: string; support: string; image?: string; popular?: boolean} export interface ContactForm { name: string; email: string; company?: string; phone?: string; service: string; budget?: string; message: string; preferredContact: | 'email' | 'phone' | 'both'} export interface TeamMember { id: string; name: string; position: string; bio: string; image: string; skills: string[]; linkedin?: string; github?: string; twitter?: string} export interface Testimonial { id: string; name: string; company: string; position: string; content: string; rating: number; image?: string; project?: string} export interface CaseStudy { id: string; title: string; client: string; industry: string; challenge: string; solution: string; results: string[]; technologies: string[]; duration: string; teamSize: number; image: string; featured?: boolean} export interface BlogPost { id: string; title: string; excerpt: string; content: string; author: string; publishedAt: string; updatedAt: string; tags: string[]; category: string; image: string; featured?: boolean; readTime: number} export interface PricingTier { id: string; name: string; price: number; currency: string; period: | 'month' | 'year' | 'one-time'; features: string[]; limitations?: string[]; popular?: boolean; cta: string; description: string} export interface ApiResponse<T> { success: boolean; data?: T; error?: string; message?: string} export interface PaginationParams { page: number; limit: number; sort?: string; order?: 'asc' | 'desc'} export interface PaginatedResponse<T> { data: T[]; pagination: { page: number; limit: number; total: number; pages: number; hasNext: boolean; hasPrev: boolean}} export interface SEOProps { title?: string; description?: string; keywords?: string; ogImage?: string; url?: string; type?: string; noindex?: boolean} export interface PerformanceMetrics { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number} export interface AccessibilitySettings { highContrast: boolean; fontSize: number; reducedMotion: boolean; screenReader: boolean} export interface UserPreferences { theme: | 'light' | 'dark' | 'system'; language: string; accessibility: AccessibilitySettings; notifications: { email: boolean; browser: boolean; marketing: boolean}} export interface NavigationItem { name: string; href: string; submenu?: NavigationItem[]; external?: boolean} export interface SocialLink { platform: | 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram'; url: string; label: string} export interface CompanyInfo { name: string; tagline: string; description: string; address: { street: string; city: string; state: string; zip: string; country: string}; contact: { phone: string; email: string; website: string}; certifications: string[]} export interface ErrorInfo { message: string; code?: string; details?: any; timestamp: string; userAgent?: string; url?: string} export interface LoadingState { isLoading: boolean; error?: string; progress?: number} export interface FormField { name: string; label: string; type: | 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio'; required: boolean; placeholder?: string; options?: { value: string; label: string }[]; validation?: { min?: number; max?: number; pattern?: string; message?: string}} export interface Project { id: string; name: string; description: string; status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled'; priority: 'low' | 'medium' | 'high' | 'critical'; startDate: Date; endDate: Date; budget: { allocated: number; spent: number; currency: string}; team: { lead: string; members: string[]; external: string[]}; client: { name: string; contact: string; industry: string}; deliverables: { name: string; description: string; status: 'pending' | 'in-progress' | 'completed' | 'review'; dueDate: Date}[]; risks: { description: string; probability: 'low' | 'medium' | 'high'; impact: 'low' | 'medium' | 'high'; mitigation: string}[]; dependencies: { project: string; type: 'blocking' | 'influencing'; description: string}[]; metrics: { name: string; value: number; unit: string; target: number}[]; lessons: { learned: string; category: 'technical' | 'process' | 'communication' | 'management'; impact: 'positive' | 'negative' | 'neutral'}[]} export interface User { id: string; email: string; name: string; role: 'admin' | 'manager' | 'developer' | 'client' | 'guest'; permissions: string[]; profile: { avatar?: string; bio?: string; skills: string[]; experience: number; location: string; timezone: string}; preferences: { theme: 'light' | 'dark' | 'auto'; language: string; notifications: { email: boolean; push: boolean; sms: boolean}}; activity: { lastLogin: Date; loginCount: number; projects: string[]; tasks: string[]}; subscription: { plan: 'free' | 'basic' | 'premium' | 'enterprise'; status: 'active' | 'inactive' | 'cancelled' | 'expired'; startDate: Date; endDate: Date; features: string[]}} export interface Notification { id: string; type: 'info' | 'success' | 'warning' | 'error'; title: string; message: string; timestamp: Date; read: boolean; action?: { label: string; url: string}; category: 'system' | 'project' | 'team' | 'client' | 'billing'; priority: 'low' | 'medium' | 'high'; expires?: Date} export interface BaseComponentProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'button' | 'submit' | 'reset'} export interface InputProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number'; placeholder?: string; value?: string; onChange?: (value: string) => void; error?: string; required?: boolean} export interface ApiRequest { method: | 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'; url: string; data?: any; params?: Record<string,any>; headers?: Record<string,string>} export interface Environment { NODE_ENV: | 'development' | 'production' | 'test'; NEXT_PUBLIC_API_URL?: string; NEXT_PUBLIC_APP_URL?: string; NEXT_PUBLIC_GA_ID?: string; NEXT_PUBLIC_SENTRY_DSN?: string}
+export interface Service { id: string; name: string; description: string; category: | 'micro-saas' | 'ai-services' | 'it-services'; price: { min: number; max: number; currency: string}; features: string[]; technologies: string[]; deliveryTime: string; support: string; image?: string; popular?: boolean} export interface ContactForm { name: string; email: string; company?: string; phone?: string; service: string; budget?: string; message: string; preferredContact: | 'email' | 'phone' | 'both'} export interface TeamMember { id: string; name: string; position: string; bio: string; image: string; skills: string[]; linkedin?: string; github?: string; twitter?: string} export interface Testimonial { id: string; name: string; company: string; position: string; content: string; rating: number; image?: string; project?: string} export interface CaseStudy { id: string; title: string; client: string; industry: string; challenge: string; solution: string; results: string[]; technologies: string[]; duration: string; teamSize: number; image: string; featured?: boolean} export interface BlogPost { id: string; title: string; excerpt: string; content: string; author: string; publishedAt: string; updatedAt: string; tags: string[]; category: string; image: string; featured?: boolean; readTime: number} export interface PricingTier { id: string; name: string; price: number; currency: string; period: | 'month' | 'year' | 'one-time'; features: string[]; limitations?: string[]; popular?: boolean; cta: string; description: string} export interface ApiResponse<T> { success: boolean; data?: T; error?: string; message?: string} export interface PaginationParams { page: number; limit: number; sort?: string; order?: 'asc' | 'desc'} export interface PaginatedResponse<T> { data: T[]; pagination: { page: number; limit: number; total: number; pages: number; hasNext: boolean; hasPrev: boolean}} export interface SEOProps { title?: string; description?: string; keywords?: string; ogImage?: string; url?: string; type?: string; noindex?: boolean} export interface PerformanceMetrics { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number} export interface AccessibilitySettings { highContrast: boolean; fontSize: number; reducedMotion: boolean; screenReader: boolean} export interface UserPreferences { theme: | 'light' | 'dark' | 'system'; language: string; accessibility: AccessibilitySettings; notifications: { email: boolean; browser: boolean; marketing: boolean}} export interface NavigationItem { name: string; href: string; submenu?: NavigationItem[]; external?: boolean} export interface SocialLink { platform: | 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram'; url: string; label: string} export interface CompanyInfo { name: string; tagline: string; description: string; address: { street: string; city: string; state: string; zip: string; country: string}; contact: { phone: string; email: string; website: string}; certifications: string[]} export interface ErrorInfo { message: string; code?: string; details?: any; timestamp: string; userAgent?: string; url?: string} export interface LoadingState { isLoading: boolean; error?: string; progress?: number} export interface FormField { name: string; label: string; type: | 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio'; required: boolean; placeholder?: string; options?: { value: string; label: string }[]; validation?: { min?: number; max?: number; pattern?: string; message?: string}} export interface Project { id: string; name: string; description: string; status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled'; priority: 'low' | 'medium' | 'high' | 'critical'; startDate: Date; endDate: Date; budget: { allocated: number; spent: number; currency: string}; team: { lead: string; members: string[]; external: string[]}; client: { name: string; contact: string; industry: string}; deliverables: { name: string; description: string; status: 'pending' | 'in-progress' | 'completed' | 'review'; dueDate: Date}[]; risks: { description: string; probability: 'low' | 'medium' | 'high'; impact: 'low' | 'medium' | 'high'; mitigation: string}[]; dependencies: { project: string; type: 'blocking' | 'influencing'; description: string}[]; metrics: { name: string; value: number; unit: string; target: number}[]; lessons: { learned: string; category: 'technical' | 'process' | 'communication' | 'management'; impact: 'positive' | 'negative' | 'neutral'}[]} export interface User { id: string; email: string; name: string; role: 'admin' | 'manager' | 'developer' | 'client' | 'guest'; permissions: string[]; profile: { avatar?: string; bio?: string; skills: string[]; experience: number; location: string; timezone: string}; preferences: { theme: 'light' | 'dark' | 'auto'; language: string; notifications: { email: boolean; push: boolean; sms: boolean}}; activity: { lastLogin: Date; loginCount: number; projects: string[]; tasks: string[]}; subscription: { plan: 'free' | 'basic' | 'premium' | 'enterprise'; status: 'active' | 'inactive' | 'cancelled' | 'expired'; startDate: Date; endDate: Date; features: string[]}} export interface Notification { id: string; type: 'info' | 'success' | 'warning' | 'error'; title: string; message: string; timestamp: Date; read: boolean; action?: { label: string; url: string}; category: 'system' | 'project' | 'team' | 'client' | 'billing'; priority: 'low' | 'medium' | 'high'; expires?: Date} export interface BaseComponentProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'button' | 'submit' | 'reset'} export interface InputProps { className?: string; children?: React.ReactNode; id?: string; disabled?: boolean; loading?: boolean; onClick?: () => void; type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number'; placeholder?: string; value?: string; onChange?: (value: string) => void; error?: string; required?: boolean} export interface ApiRequest { method: | 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'; url: string; data?: any; params?: Record<string,any>; headers?: Record<string,string>} export interface Environment { NODE_ENV: | 'development' | 'production' | 'test'; NEXT_PUBLIC_API_URL?: string; NEXT_PUBLIC_APP_URL?: string; NEXT_PUBLIC_GA_ID?: string; NEXT_PUBLIC_SENTRY_DSN?: string}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+  id: string, title: string,
+  description: string, image: string,
+  technologies: string[], liveUrl?: string,
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   githubUrl?: string;
   featured: boolean;
 
@@ -717,6 +1012,7 @@ client?: {
 <<<<<<< HEAD
 
   deliverables?: {
+<<<<<<< HEAD
 
     allocated: number;
     spent: number;
@@ -738,6 +1034,8 @@ client?: {
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     allocated: number;
     spent: number;
     currency: string;
@@ -753,6 +1051,7 @@ client?: {
     industry: string;
   }
   deliverables: {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     name: string;
@@ -774,19 +1073,27 @@ client?: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 deliverables?: {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: string;
     description: string;
     status: 'pending' | 'in-progress' | 'completed' | 'review';
     dueDate: Date;
   }[];
+<<<<<<< HEAD
 risks?: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  risks?: {
+  risks: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description: string;
     probability: 'low' | 'medium' | 'high';
     impact: 'low' | 'medium' | 'high';
     mitigation: string;
   }[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -804,10 +1111,15 @@ risks?: {
 dependencies?: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  dependencies?: {
+  dependencies: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     project: string;
     type: 'blocking' | 'influencing';
     description: string;
   }[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -825,11 +1137,16 @@ dependencies?: {
 metrics?: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  metrics?: {
+  metrics: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: string;
     value: number;
     unit: string;
     target: number;
   }[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -847,11 +1164,16 @@ metrics?: {
 lessons?: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  lessons?: {
+  lessons: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     learned: string;
     category: 'technical' | 'process' | 'communication' | 'management';
     impact: 'positive' | 'negative' | 'neutral';
   }[];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -867,33 +1189,45 @@ export interface Partner {
 
 // Pricing Types
 =======
-export interface FAQ {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface FAQ {
 
 
 export interface FAQ {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   question: string;
   answer: string;
   category?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   id: string;
 
 =======
+=======
+export interface PricingPlan {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 export interface PricingPlan {;
+<<<<<<< HEAD
 
   id: string;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  id: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   name: string;
   price: number;
   period: string;
@@ -901,6 +1235,7 @@ export interface PricingPlan {;
   popular?: boolean;
   cta: string;
   href: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -972,6 +1307,27 @@ currency?: string;
 
 }
 export interface NavigationItem {
+=======
+  currency?: string;
+  limitations?: string[];
+  description?: string;
+}
+export interface PricingTier {
+  id: string;
+  name: string;
+  price: number;
+  currency: string;
+  period: 'month' | 'year' | 'one-time';
+  features: string[];
+  limitations?: string[];
+  popular?: boolean;
+  cta: string;
+  description: string;
+}
+export interface NavigationItem {
+
+export interface NavigationItem {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   name: string;
   href: string;
   children?: NavigationItem[];
@@ -979,6 +1335,7 @@ export interface NavigationItem {
   external?: boolean;
 }
 export interface SocialLink {
+<<<<<<< HEAD
   name: string;
   href: string;
   icon: string;
@@ -987,6 +1344,19 @@ platform?: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
   url?: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+
+export interface SocialLink {;
+  name: string;
+  href: string;
+  icon: string;
+  platform?: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
+  label?: string;
+  url?: string;
+  platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
+  url: string;
+  label: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export interface FooterLink {
   name: string;
@@ -998,7 +1368,10 @@ export interface FooterSection {
 }
 export interface HeroSection {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
 
@@ -1014,11 +1387,14 @@ export interface FooterSection {;
 }
 
 export interface HeroSection {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: string;
   subtitle: string;
   cta: {
@@ -1048,12 +1424,17 @@ export interface HeroSection {;
   image?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+export interface Feature {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 export interface Feature {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1062,6 +1443,8 @@ export interface Feature {;
 }
 export interface Feature {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: string;
   description: string;
   icon: string;
@@ -1069,22 +1452,30 @@ export interface Feature {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+export interface Stats {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 export interface Stats {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 export interface Stats {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   label: string;
   value: string;
   description?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1150,14 +1541,18 @@ export interface Event {
   image?: string;
 }
 
-export interface CaseStudy {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface CaseStudy {
 
 
 export interface CaseStudy {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   client: string;
@@ -1172,12 +1567,17 @@ export interface CaseStudy {;
   featured?: boolean;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+export interface JobOpening {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 export interface JobOpening {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1187,6 +1587,8 @@ export interface JobOpening {;
 }
 export interface JobOpening {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   department: string;
@@ -1204,18 +1606,25 @@ export interface JobOpening {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+export interface NewsItem {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 export interface NewsItem {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 export interface NewsItem {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   excerpt: string;
@@ -1228,18 +1637,25 @@ export interface NewsItem {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+export interface Event {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 export interface Event {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 export interface Event {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   description: string;
@@ -1250,7 +1666,6 @@ export interface Event {
   registrationUrl?: string;
   image?: string;
 }
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1382,6 +1797,177 @@ export interface SuccessResponse<T> {;
 
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
 
+<<<<<<< HEAD
+=======
+export interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'manager' | 'developer' | 'client' | 'guest';
+  permissions: string[];
+  profile: {
+    avatar?: string;
+    bio?: string;
+    skills: string[];
+    experience: number;
+    location: string;
+    timezone: string;
+  }
+  preferences: {
+    theme: 'light' | 'dark' | 'auto';
+    language: string;
+    notifications: {
+      email: boolean;
+      push: boolean;
+      sms: boolean;
+    }
+  }
+  activity: {
+    lastLogin: Date;
+    loginCount: number;
+    projects: string[];
+    tasks: string[];
+  }
+  subscription: {
+    plan: 'free' | 'basic' | 'premium' | 'enterprise';
+    status: 'active' | 'inactive' | 'cancelled' | 'expired';
+    startDate: Date;
+    endDate: Date;
+    features: string[];
+  }
+}
+export interface Notification {
+  id: string;
+  type: 'info' | 'success' | 'warning' | 'error';
+  title: string;
+  message: string;
+  timestamp: Date;
+  read: boolean;
+  action?: {
+    label: string;
+    url: string;
+  }
+  category: 'system' | 'project' | 'team' | 'client' | 'billing';
+  priority: 'low' | 'medium' | 'high';
+  expires?: Date;
+}
+export interface BaseComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+}
+export interface InputProps {
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
+  error?: string;
+  required?: boolean;
+}
+export interface ApiRequest {
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+  url: string;
+  data?: any;
+  params?: Record<string, any>;
+  headers?: Record<string, string>;
+}
+export interface ApiResponse<T> {
+  success: boolean;
+  data?: T;
+  error?: string;
+  message?: string;
+}
+export interface PaginationParams {
+  page: number;
+  limit: number;
+  sort?: string;
+  order?: 'asc' | 'desc';
+}
+export interface PaginatedResponse<T> {
+  data: T[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    pages: number;
+    hasNext: boolean;
+    hasPrev: boolean;
+  }
+}
+export interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+}
+export interface AccessibilitySettings {
+  highContrast: boolean;
+  fontSize: number;
+  reducedMotion: boolean;
+  screenReader: boolean;
+}
+export interface UserPreferences {
+  theme: 'light' | 'dark' | 'system';
+  language: string;
+  accessibility: AccessibilitySettings;
+  notifications: {
+    email: boolean;
+    browser: boolean;
+    marketing: boolean;
+  }
+}
+export interface CompanyInfo {
+  name: string;
+  tagline: string;
+  description: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+  }
+  contact: {
+    phone: string;
+    email: string;
+    website: string;
+  }
+  certifications: string[];
+}
+export interface ErrorInfo {
+  message: string;
+  code?: string;
+  details?: any;
+  timestamp: string;
+  userAgent?: string;
+  url?: string;
+}
+export interface FormField {
+  name: string;
+  label: string;
+  type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
+  required: boolean;
+  placeholder?: string;
+  options?: { value: string; label: string }[];
+  validation?: {
+    min?: number;
+    max?: number;
+    pattern?: string;
+    message?: string;
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Environment
 export interface Environment {;
   NODE_ENV: 'development' | 'production' | 'test';
@@ -1390,6 +1976,10 @@ export interface Environment {;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Additional interfaces
 export interface User {;
   id: string;
@@ -1568,6 +2158,7 @@ export interface PaginatedResponse<T> {;
     hasPrev: boolean;
   };
 }
+<<<<<<< HEAD
 
 export interface Partner {
   name: string;
@@ -1741,6 +2332,11 @@ export interface Environment {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+ursor/fix-lint-push-and-merge-to-main-2c83
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface Partner {
   name: string;
   logo: string;
@@ -1840,6 +2436,7 @@ export interface SuccessResponse < T> {
 
 <<<<<<< HEAD
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1869,3 +2466,13 @@ export type Response < T> = SuccessResponse < T> | ErrorResponse;
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+export type Response<T> = SuccessResponse<T> | ErrorResponse;
+origin/main
+export type Response<T> = SuccessResponse<T> | ErrorResponse;
+export interface ContactInfo {
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

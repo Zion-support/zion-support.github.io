@@ -7,13 +7,15 @@
 
 =======
 
-<<<<<<< HEAD
 import React from "react";
 
 import {HelpCategory} from "./types";
 import {HelpCircle, CreditCard, Users, Calendar, Briefcase} from "lucide-react";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { HelpCategory } from "./types",
 import { 
@@ -23,6 +25,7 @@ import {
   Calendar, 
   Briefcase 
 } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -37,6 +40,9 @@ import {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
     id: "getting-started"
@@ -45,6 +51,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     icon: <HelpCircle className="h-6 w-6 text-zion-purple" />
     articles: [
       {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -59,26 +66,27 @@ export const HELP_CATEGORIES: HelpCategory[] = [
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         id: "create-account"
         title: "Creating your account"
         content: "Welcome to Zion AI Marketplace! This guide will walk you through the process of creating and setting up your account.\n\nTo create a new account on Zion AI Marketplace:\n\n1. Click on the 'Sign Up' button in the top-right corner of the homepage\n2. Enter your email address and create a strong password\n3. Select your account type (Client or Talent)\n4. Verify your email address by clicking the link sent to your inbox\n5. Complete your profile information\n\nOnce your account is created, you'll have access to the marketplace and can start browsing or listing services based on your account type.";
         lastUpdated: "2023-11-15"
         tags: ["account", "registration", "setup"]
       }
-=======
         id: "create-account",
-<<<<<<< HEAD
         title: "Creating your account",;
         content: "Welcome to Zion AI Marketplace! This guide will walk you through the process of creating and setting up your account.\n\nTo create a new account on Zion AI Marketplace:\n\n1. Click on the 'Sign Up' button in the top-right corner of the homepage\n2. Enter your email address and create a strong password\n3. Select your account type (Client or Talent)\n4. Verify your email address by clicking the link sent to your inbox\n5. Complete your profile information\n\nOnce your account is created, you'll have access to the marketplace and can start browsing or listing services based on your account type.";
-=======
         title: "Creating your account",
         content: "Welcome to Zion AI Marketplace! This guide will walk you through the process of creating and setting up your account.\n\nTo create a new account on Zion AI Marketplace:\n\n1. Click on the 'Sign Up' button in the top-right corner of the homepage\n2. Enter your email address and create a strong password\n3. Select your account type (Client or Talent)\n4. Verify your email address by clicking the link sent to your inbox\n5. Complete your profile information\n\nOnce your account is created, you'll have access to the marketplace and can start browsing or listing services based on your account type.",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         lastUpdated: "2023-11-15",
         tags: ["account", "registration", "setup"]
       },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {
         id: "complete-profile"
         title: "Completing your profile"
@@ -86,12 +94,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         lastUpdated: "2023-11-18"
         tags: ["profile", "setup"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       {
         id: "platform-navigation"
@@ -102,8 +113,11 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       }
     ]
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       },
       {
         id: "platform-navigation",
@@ -115,12 +129,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     ]
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "hiring"
     name: "Hiring Process"
@@ -129,12 +146,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     articles: [
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         id: "post-job"
         title: "Posting a job"
         content: "Posting a job on Zion AI Marketplace is quick and straightforward. Follow these steps to create an effective job posting:\n\n1. Click on the 'Post a Job' button from your dashboard\n2. Fill in the job title, category, and required skills\n3. Write a detailed description of the project or position\n4. Specify your budget range and timeline\n5. Add any specific requirements or qualifications\n6. Review and publish your listing\n\nFor best results, be as specific as possible about your requirements and expectations. Our AI matching system will use this information to connect you with the most qualified talent.";
@@ -164,8 +184,11 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       }
     ]
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         id: "post-job",
         title: "Posting a job",
         content: "Posting a job on Zion AI Marketplace is quick and straightforward. Follow these steps to create an effective job posting:\n\n1. Click on the 'Post a Job' button from your dashboard\n2. Fill in the job title, category, and required skills\n3. Write a detailed description of the project or position\n4. Specify your budget range and timeline\n5. Add any specific requirements or qualifications\n6. Review and publish your listing\n\nFor best results, be as specific as possible about your requirements and expectations. Our AI matching system will use this information to connect you with the most qualified talent.",
@@ -196,12 +219,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     ]
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "profile-setup"
     name: "Profile Setup"
@@ -210,20 +236,26 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     articles: [
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         id: "talent-profile"
         title: "Setting up a talent profile"
         content: "Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\nCompleteness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.";
         lastUpdated: "2023-10-15"
         tags: ["profile", "talent"]
       }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         id: "talent-profile",
         title: "Setting up a talent profile",
         content: "Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\nCompleteness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.",
@@ -231,12 +263,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         tags: ["profile", "talent"]
       },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {
         id: "client-profile"
         title: "Setting up a client profile"
@@ -244,12 +279,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         lastUpdated: "2023-10-20"
         tags: ["profile", "client"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       {
         id: "portfolio-creation"
@@ -260,8 +298,11 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       }
     ]
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       },
       {
         id: "portfolio-creation",
@@ -273,12 +314,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     ]
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "payments"
     name: "Payments"
@@ -287,12 +331,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     articles: [
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         id: "payment-methods"
         title: "Accepted payment methods"
         content: "Zion AI Marketplace supports a variety of payment methods to accommodate users worldwide. Currently accepted payment methods include:\n\n• Credit Cards (Visa, Mastercard, American Express, Discover)\n• PayPal\n• Bank Transfers (ACH for US, SEPA for Europe)\n• Wire Transfers for international payments\n• Cryptocurrency (Bitcoin, Ethereum)\n\nTo add or update your payment method: \n1. Go to Settings > Billing & Payments\n2. Select 'Add Payment Method'\n3. Follow the prompts to enter your information\n4. Set your preferred default payment method\n\nAll payment information is securely encrypted and stored in compliance with PCI DSS standards."
@@ -315,8 +362,11 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       }
     ]
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         id: "payment-methods",
         title: "Accepted payment methods",
         content: "Zion AI Marketplace supports a variety of payment methods to accommodate users worldwide. Currently accepted payment methods include:\n\n• Credit Cards (Visa, Mastercard, American Express, Discover)\n• PayPal\n• Bank Transfers (ACH for US, SEPA for Europe)\n• Wire Transfers for international payments\n• Cryptocurrency (Bitcoin, Ethereum)\n\nTo add or update your payment method:\n1. Go to Settings > Billing & Payments\n2. Select 'Add Payment Method'\n3. Follow the prompts to enter your information\n4. Set your preferred default payment method\n\nAll payment information is securely encrypted and stored in compliance with PCI DSS standards.",
@@ -340,12 +390,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     ]
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "disputes"
     name: "Disputes"
@@ -355,8 +408,11 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         id: "file-dispute"
         title: "How to file a dispute"
         content: "If you encounter issues with a contract or project, you can use our dispute resolution system. Here's how to file a dispute:\n\n1. Navigate to the project in question from your dashboard\n2. Click the 'Issues' tab and select 'File a Dispute'\n3. Select the dispute category (payment, deliverables, communication, etc.)\n4. Provide a clear description of the issue\n5. Attach any relevant evidence (messages, deliverables, contract details)\n6. Submit your dispute\n\nOnce submitted, the other party will be notified and given 72 hours to respond. Our support team will be automatically notified of all disputes filed.";
@@ -381,7 +437,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   }
 ];
 
-=======
         id: "file-dispute",
         title: "How to file a dispute",
         content: "If you encounter issues with a contract or project, you can use our dispute resolution system. Here's how to file a dispute:\n\n1. Navigate to the project in question from your dashboard\n2. Click the 'Issues' tab and select 'File a Dispute'\n3. Select the dispute category (payment, deliverables, communication, etc.)\n4. Provide a clear description of the issue\n5. Attach any relevant evidence (messages, deliverables, contract details)\n6. Submit your dispute\n\nOnce submitted, the other party will be notified and given 72 hours to respond. Our support team will be automatically notified of all disputes filed.",
@@ -398,17 +453,17 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         id: "dispute-prevention",
         title: "Tips for preventing disputes",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.";
         lastUpdated: "2023-12-05",
         tags: ["prevention", "best practices", "communication"]
       }
     ]
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",
         lastUpdated: "2023-12-05",
         tags: ["prevention", "best practices", "communication"]
@@ -573,6 +628,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         tags: ["prevention", "best practices", "communication"];
       }
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -1247,3 +1303,7 @@ tags: ["prevention", "best practices", "communication" ]
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

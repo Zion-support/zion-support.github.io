@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -17,8 +21,17 @@ async function ensure() {
   }
 }
 export default async function handler(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   await ensure();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
@@ -35,6 +48,7 @@ export default async function handler(
       text: body.text |""
       createdAt: new Date().toISOString()
     }
+<<<<<<< HEAD
 
 =======
 
@@ -52,6 +66,8 @@ export default async function handler(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -79,6 +95,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       text: body.text || '',
       createdAt: new Date().toISOString()
     };
+<<<<<<< HEAD
 
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
@@ -292,16 +309,26 @@ data.comments.push (comment);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
 
   }
+<<<<<<< HEAD
 
   res.status(405).json({ error: "Method not allowed" });
 }
 }
 
+=======
+  res.status(405).json({ error: "Method not allowed" });
+  res.status(405).json({ error: 'Method not allowed' })
+}
+res.status(405).json({ error: "Method not allowed" });
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -397,5 +424,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

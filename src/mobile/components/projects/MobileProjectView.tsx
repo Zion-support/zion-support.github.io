@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -7,6 +7,8 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -63,13 +65,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     })
     // Navigate to messaging with this client
   }
+
 <<<<<<< HEAD
 =======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -184,11 +185,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6 px-4 pb-24">
@@ -208,6 +204,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               </div>
               <Badge>{project.status}</Badge>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -250,38 +247,36 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 <p className='font-medium'>{project.endDate |'Not set'}</p>
 ursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='space-y-1'>
               <div className='flex justify-between items-center text-sm'>
-=======
             
             <div className="space-y-1">
               <div className="flex justify-between items-center text-sm">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <span>Progress</span>
                 <span className="font-medium">{project.progress}%</span>
               </div>
               <Progress value={project.progress} className="h-2" />
             </div>
-<<<<<<< HEAD
             <div className='grid grid-cols-2 gap-3 text-sm'>
-=======
             
             <div className="grid grid-cols-2 gap-3 text-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div>
                 <p className="text-muted-foreground">Start Date</p>
                 <p className="font-medium">{project.startDate}</p>
               </div>
               <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -296,12 +291,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <p className='text-muted-foreground'>End Date</p>
                 <p className='font-medium'>{project.endDate |'Not set'}</p>
-=======
                 <p className="text-muted-foreground">End Date</p>
                 <p className="font-medium">{project.endDate || "Not set"}</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </div>
               <div>
                 <p className="text-muted-foreground">Total Amount</p>
@@ -313,6 +308,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="font-medium capitalize">{project.status}</p>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -334,18 +330,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-sm">{project.description}</p>
 =======
 =======
-            
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            
             <div>
               <p className="text-sm text-muted-foreground mb-1">Description</p>
               <p className="text-sm">{project.description}</p>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>
-<<<<<<< HEAD
             <div className='flex gap-2'>
               <Button size='sm' variant='outline' className='gap-1 flex-1'>
                 <FileText className='h-4 w-4' /> Contract
@@ -421,10 +413,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={startProjectCall}              >
                 <Video className='h-4 w-4' /> Call
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               </Button>
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             <div className="flex gap-2">
               <Button size="sm" variant="outline" className="gap-1 flex-1">
@@ -445,17 +440,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               >
                 <Video className="h-4 w-4" /> Call
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Button>
 >>>>>>>             </div>
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
       <section>
         <h2 className='text-lg font-medium mb-4'>Milestones</h2>
         <div className='space-y-3'>
@@ -465,6 +462,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className='flex items-center gap-2'>
                     {milestone.status === 'completed' ? (
                       <CheckCircle className='h-5 w-5 text-green-500' />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                     ) : (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -539,6 +537,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
@@ -550,18 +550,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="flex items-center gap-2">
                     {milestone.status === "completed" ? (
                       <CheckCircle className="h-5 w-5 text-green-500" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ) : (
                       <div className="h-5 w-5 rounded-full border-2 border-muted-foreground"></div>
                     )}
                     <h3 className="font-medium">{milestone.title}</h3>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Badge
                     variant={
                       milestone.paymentStatus === 'paid'
@@ -577,10 +575,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className='flex justify-between text-sm'>
                     <span className='text-muted-foreground'>Due Date:</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     <span>{milestone.dueDate}</span>
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Badge 
                     variant={
                       milestone.paymentStatus === "paid" ? "default" : 
@@ -705,6 +706,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Due Date:</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -716,6 +718,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <span>{milestone.dueDate}</span>
                   </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -739,19 +743,24 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
             </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </div>
-<<<<<<< HEAD
       </section>
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </Badge>;
 =======
       </section>
@@ -789,6 +798,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       </section>;
 =======
@@ -796,12 +806,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </section>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>;
   );
 };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -812,12 +825,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

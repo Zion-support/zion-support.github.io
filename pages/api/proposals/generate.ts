@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
   try {
@@ -106,6 +105,7 @@ function handler() {
     return res
       .status(500)
       .json({ error: error?.message |"Failed to generate proposal" });
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -113,6 +113,21 @@ function handler() {
 =======
 }
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { OpenAI } from 'openai';
+import { createProposal } from '../../../utils/data/proposals';
+const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status($1).json({$2});
+import { OpenAI } from 'openai';
+import { createProposal } from '../../../utils/data/proposals';
+const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`;
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   try {
     const {
       targetInstitution,
@@ -209,6 +224,7 @@ const contentMarkdown = completion.choices?.[0]?.message?.content || '# Proposal
 return res.status(200).json({ meta, markdown: contentMarkdown })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
+<<<<<<< HEAD
 
   }
 }
@@ -216,11 +232,36 @@ return res.status(200).json({ meta, markdown: contentMarkdown })
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

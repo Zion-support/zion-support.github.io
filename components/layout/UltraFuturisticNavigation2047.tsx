@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -36,16 +37,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
 =======
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Menu,
   ChevronDown,
@@ -124,8 +128,11 @@ interface NavigationItem {
   Youtube,;
   MapPin,;
 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {
   Menu
@@ -189,6 +196,7 @@ import {
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -295,11 +303,15 @@ interface NavigationItem {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-  href: string;  icon?: React.ReactNode;import {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  href: string;  icon?: React.ReactNode;import {
   href: string;  icon?: React.ReactNode;import { ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -348,6 +360,7 @@ interface NavigationItem {
   title?: string;
   featured?: boolean;
   category?: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -491,19 +504,15 @@ const navigation_items: NavigationItem[] = [;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   color?: string
 }
-=======
   color?: string;
-=======
   color?: string;  color?: string
 }
-=======
   color?: string;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const navigationItems: NavigationItem[] = [
   {
 
@@ -519,7 +528,6 @@ const navigationItems: NavigationItem[] = [
     color: 'from-emerald-500 to-cyan-500'
     children: [
       {
-<<<<<<< HEAD
         name: 'Home'
         href: '/'
         description: 'Main homepage'
@@ -914,7 +922,6 @@ const UltraFuturisticNavigation2047 = () => {
   const handleDropdownToggle = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name)
   }
-=======
 
     description: 'Main pages and core information',
     category: 'core',
@@ -1586,9 +1593,6 @@ const navigationItems: NavigationItem[] = [;
     category: 'company',
     color: 'from-gray-500 to-slate-500',
     children: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       {
         href: '/about',
         description: 'Our story and mission',
@@ -1790,14 +1794,14 @@ const UltraFuturisticNavigation2047 = () => {
       }
     ]
   }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   };
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -1841,7 +1845,10 @@ const UltraFuturisticNavigation2047 = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, []);
   return (
     <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>
@@ -1877,7 +1884,6 @@ const UltraFuturisticNavigation2047 = () => {
                 <Rocket className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-=======
 
 <<<<<<< HEAD
 
@@ -1889,8 +1895,11 @@ const UltraFuturisticNavigation2047 = () => {
 
     window.addEventListener('resize', handleResize);
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 Zion Tech Group
               </span>
             </Link>
@@ -2002,14 +2011,7 @@ const UltraFuturisticNavigation2047 = () => {
                       <div className=&quot;space-y-4&quot;>
 =======
                       className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <div className='space-y-4'>
                         {item.children?.map(child => (
@@ -2234,14 +2236,7 @@ const UltraFuturisticNavigation2047 = () => {
                                 {child.description}
                               </p>                              <p className="text-sm text-gray-400 mt-1">{child.description}</p>
                             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         ))}
@@ -2252,6 +2247,7 @@ const UltraFuturisticNavigation2047 = () => {
               </div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           {/* Contact Info & CTA */}
@@ -2268,12 +2264,9 @@ href="/contact"
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>
             <div className='flex items-center space-x-4 text-sm text-gray-400'>
@@ -2288,15 +2281,8 @@ href="/contact"
             <div className="flex items-center space-x-4 text-sm text-gray-400">
               <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
-<<<<<<< HEAD
-=======
 
                 <span>{contactInfo.mobile}</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </a>
             </div>
             <Link
@@ -2308,6 +2294,7 @@ href="/contact"
               <ArrowRight className='ml-2 w-4 h-4' />            </Link>
           </div>
           {/* Mobile menu button */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2336,6 +2323,8 @@ href="/contact"
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='lg:hidden'>              href="/contact"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2375,6 +2364,7 @@ href="/contact"
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               )}
+<<<<<<< HEAD
 
 
 
@@ -2545,26 +2535,16 @@ href="/contact"
           <motion.div;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
               )}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -2610,14 +2590,7 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                       <motion.div;
 =======
             className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigationItems.map(item => (
@@ -2779,20 +2752,12 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                 <div className="px-3 pt-2">;
 =======
                         className='ml-4 mt-2 space-y-1'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         {item.children?.map(child => (
                           <Link
                             key={child.name}
                             href={child.href}
-<<<<<<< HEAD
                             className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}                      >
                         {item.children?.map((child) => (
                           <Link
@@ -2800,16 +2765,10 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                             href={child.href}
                             className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
                             onClick={closeMenu}
-=======
                             className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}
 
                             onClick={closeMenu}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           >
                             {child.name}
                           </Link>
@@ -2819,10 +2778,7 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                   </AnimatePresence>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>
                 <div className='px-3 py-2 text-sm text-gray-400'>
@@ -3021,18 +2977,20 @@ export default UltraFuturisticNavigation2047;
 =======
 =======
   );
-<<<<<<< HEAD
 }
-=======
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default UltraFuturisticNavigation2047;  )
 }
 export default UltraFuturisticNavigation2047;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default UltraFuturisticNavigation2047;
 
@@ -3047,13 +3005,14 @@ export default UltraFuturisticNavigation2047;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default UltraFuturisticNavigation2047;
 export default UltraFuturisticNavigation2047;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default UltraFuturisticNavigation2047;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

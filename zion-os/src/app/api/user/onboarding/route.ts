@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,6 +12,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { prisma } from '@/lib/prisma';
@@ -95,13 +98,14 @@ if ( {) {
 =======
     console.error('Onboarding completion error:', error);
     return NextResponse.json(
-<<<<<<< HEAD
       { error: 'Internal server error' }
-=======
       { error: 'Internal server error' },
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -136,6 +140,7 @@ export async function POST(request: NextRequest) {;
     return NextResponse.json(;
       { error: "Internal server error" };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -155,6 +160,8 @@ export async function POST(request: NextRequest) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       { status: 500 }
     );
   }

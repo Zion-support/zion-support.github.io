@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import TryItConsole from './TryItConsole';
@@ -75,34 +76,24 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
 <div className='font-medium mb-2'>Code Examples</div>        <CodeSamples samples={endpoint.samples} />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import CodeSamples from './CodeSamples',
-=======
 import React from 'react';
 import CodeSamples from './CodeSamples';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import TryItConsole from './TryItConsole';
 import { EndpointSpec } from '../../data/api-docs/types';
 
 export default function EndpointDetail({
-<<<<<<< HEAD
   endpoint
 }: {
-=======
   endpoint,
 }: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   endpoint: EndpointSpec;
 }) {
-<<<<<<< HEAD
-=======
 
   return (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className='space-y-4'>
 
       <div>
@@ -251,7 +242,6 @@ export default function EndpointDetail(): any ({;
         <CodeSamples samples={endpoint.samples} />
       </div>
       <div>
-<<<<<<< HEAD
         <div className='font-medium mb-2'>Try It</div>
         <TryItConsole
           method={endpoint.method}
@@ -298,6 +288,7 @@ export default function EndpointDetail(): any ({;
 =======
 
             ))}
+<<<<<<< HEAD
 
 
 
@@ -427,18 +418,18 @@ export default function EndpointDetail(): any ({;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+          </ul>
+        </div>
+      )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             ))}
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </ul>
         </div>
       )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {endpoint.errors && endpoint.errors.length > 0 && (
         <div>
           <div className='font-medium mb-2'>Error Codes</div>
@@ -450,11 +441,10 @@ export default function EndpointDetail(): any ({;
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.errors.map((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
-<<<<<<< HEAD
-=======
 
             ))}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -462,6 +452,8 @@ export default function EndpointDetail(): any ({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </ul>
         </div>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -539,8 +531,6 @@ export default function EndpointDetail(): any ({;
     </div>);
 =======
   );
-<<<<<<< HEAD
-=======
 }
 
 <<<<<<< HEAD
@@ -555,7 +545,11 @@ export default function EndpointDetail(): any ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

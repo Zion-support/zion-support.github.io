@@ -15,9 +15,12 @@ import { Label } from "@/components/ui/label",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -40,6 +43,7 @@ export function WaitlistSection() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/WaitlistSection.tsx
 =======
 
@@ -48,22 +52,25 @@ export function WaitlistSection() {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
-<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
-=======
 import { useToast } from "@/hooks/use-toast",
 import { Checkbox } from "@/components/ui/checkbox",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -73,9 +80,12 @@ export function WaitlistSection() {
   const { toast } = useToast(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -87,6 +97,7 @@ export function WaitlistSection() {
       return
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -95,12 +106,17 @@ export function WaitlistSection() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setIsSubmitting(true);
     try {
       // Simulating an API call
       await new Promise(resolve => setTimeout(resolve, 1000));
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     setIsSubmitting(true),
     
@@ -109,12 +125,15 @@ export function WaitlistSection() {
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Success!"
         description: "Thank you for registering with Zion. We'll be in touch soon."})
@@ -337,13 +356,10 @@ export function WaitlistSection() {;
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
   }
 
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">
       {/* Background elements */}
@@ -468,6 +484,7 @@ export function WaitlistSection() {;
               </Label>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -479,15 +496,19 @@ export function WaitlistSection() {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button
               type="submit"
               disabled={isSubmitting}
-=======
             <Button 
               type="submit" 
               disabled={isSubmitting} 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -497,6 +518,7 @@ export function WaitlistSection() {;
       </div>
     </section>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -508,6 +530,9 @@ export function WaitlistSection() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -791,11 +816,10 @@ return (<section id="waitlist" className="py-20 bg-zion-blue-dark relative overf
 =======
     </section>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

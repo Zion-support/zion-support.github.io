@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from "react",
@@ -26,6 +27,8 @@ interface ReviewCardProps {
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {formatDistanceToNow} from "date-fns";
 import {Star, Flag, User} from "lucide-react";
@@ -35,6 +38,7 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Textarea} from "@/components/ui/textarea";
+<<<<<<< HEAD
 interface ReviewCardProps {;
   review: Review,;
   onReport: (reviewId: string, reason: string) => Promise<boolean>;
@@ -118,6 +122,13 @@ import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 import {
 =======
+=======
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { Star, Flag, User } from "lucide-react",
+import { Review } from "@/types/reviews",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -132,13 +143,20 @@ import {
 } from "@/components/ui/dialog";
 
 import { Textarea } from "@/components/ui/textarea";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
 <<<<<<< HEAD
   DialogTrigger,
 } from '@/components / ui / dialog';
@@ -157,13 +175,26 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
 DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
 
+=======
+  DialogTrigger} from "@/components/ui/dialog",
+import { Textarea } from "@/components/ui/textarea",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReviewCardProps {
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
 
+<<<<<<< HEAD
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
 const [reportReason, setReportReason] = useState("");
+=======
+export function ReviewCard({ review, onReport }: ReviewCardProps) {;
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+export function ReviewCard({ review, onReport }: ReviewCardProps) {
+  const [reportReason, setReportReason] = useState("");
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
 
@@ -179,6 +210,12 @@ const [reportReason, setReportReason] = useState("");
 }
   const renderStars = (rating?: number) => {
     if (!rating) return null;
+<<<<<<< HEAD
+=======
+  const [reportReason, setReportReason] = useState(""),
+  const [isReporting, setIsReporting] = useState(false),
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const handleReport = async () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -196,6 +233,7 @@ const [reportReason, setReportReason] = useState("");
   
   const renderStars = (rating?: number) => {
     if (!rating) return null,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -242,6 +280,9 @@ if (return null) {
   const renderStars = (rating?: number) => {
     if (!rating) return null;
 
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return (
       <div className="flex">
         {[1, 2, 3, 4, 5].map((star) => (
@@ -253,17 +294,26 @@ if (return null) {
         ))}
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 );
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    );
+  }
+    )
+  },
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -420,6 +470,14 @@ export function ReviewCard({ review, onReport } ReviewCardProps) {;
 .substring(0, 2);
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      .substring(0, 2);
+  }
+
+      .substring(0, 2)
+  },
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
@@ -440,8 +498,16 @@ export function ReviewCard({ review, onReport } ReviewCardProps) {;
               ) : (
                 <AvatarFallback>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+                  {review.reviewer_profile?.display_name
+                    ? getInitials(review.reviewer_profile.display_name)
+                    : "??"}
+                </AvatarFallback>
+                  {review.reviewer_profile?.display_name ? 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { Star, Flag, User } from "lucide-react",;
@@ -515,6 +581,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               ) : (;
                 <AvatarFallback>;
                   {review.reviewer_profile?.display_name ?;
+<<<<<<< HEAD
 =======
                   {review.reviewer_profile?.display_name ? 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -552,6 +619,14 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
           )}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                    getInitials(review.reviewer_profile.display_name) : "??"}
+                </AvatarFallback>;
+              )}
+            </Avatar>
+          )}
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div>
             <div className="font-medium">
               {review.is_anonymous
@@ -560,20 +635,28 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 : review.reviewer_profile?.display_name |"User"}
             </div>
             <div className="text-sm text-muted-foreground">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           {renderStars(review.rating)}
 
 =======
 
+=======
+              {formatDistanceToNow(new Date(review.created_at), {
+                addSuffix: true
+              })}
+            </div>
+          </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
             </div>;
           </div>;
         </div>;
         <div className="flex">;
-=======
         </div>
         <div className="flex">
+<<<<<<< HEAD
 
           {renderStars(review.rating)}
 
@@ -592,12 +675,16 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
           {renderStars(review.rating)}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          {renderStars(review.rating)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
         <div className="flex">{renderStars(review.rating)}</div>
       </div>
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -721,6 +808,13 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         review.quality_rating |
         review.timeliness_rating |
         review.would_work_again !== undefined) && (
+=======
+      {(review.communication_rating |
+        review.quality_rating |
+        review.timeliness_rating |
+        review.would_work_again !== undefined) && (
+      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
@@ -760,6 +854,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   : "Would not work again"}
               </Badge>
             )}
+<<<<<<< HEAD
 </div>
         </div>
 
@@ -768,6 +863,17 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       )}
 
+=======
+          </div>
+        </div>
+      )}
+          </div>;
+        </div>;
+          </div>;
+        </div>;
+      )}
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -820,6 +926,7 @@ disabled={!reportReason.trim() |isReporting}
         </Dialog>
       </div>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1137,3 +1244,11 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -10,6 +10,8 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm, ControllerRenderProps } from "react-hook-form"
@@ -28,6 +30,7 @@ import {
 import { cleanupAuthState } from "@/utils/authUtils"
 import { logErrorToProduction } from '@/utils/productionLogger'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -36,6 +39,9 @@ import { logErrorToProduction } from '@/utils/productionLogger'
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -58,6 +64,7 @@ import { cleanupAuthState } from "@/utils/authUtils",
 import { logErrorToProduction } from '@/utils/productionLogger',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -65,6 +72,8 @@ import { logErrorToProduction } from '@/utils/productionLogger',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Form validation schema
 =======
 >>>>>>> // Form validation schema
@@ -74,6 +83,7 @@ const updatePasswordSchema = z
     password: z
       .string()
       .min(8, "Password must be at least 8 characters")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -87,6 +97,9 @@ const updatePasswordSchema = z
       .max(64, "Password must be less than 64 characters")
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      .max(64, "Password must be less than 64 characters")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     confirmPassword: z.string()})
   .refine((data,) => data.password === data.confirmPassword, {
     message: "Passwords do not match"
@@ -96,6 +109,7 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>     confirmPassword: z.string()})
       .max(64, "Password must be less than 64 characters"),
@@ -108,25 +122,27 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 
 =======
 =======
-      .max(64, "Password must be less than 64 characters"),
 =======
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .max(64, "Password must be less than 64 characters"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      .max(64, "Password must be less than 64 characters"),
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 }
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
@@ -134,6 +150,8 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
 export default function UpdatePassword() {
@@ -491,6 +509,7 @@ export default function UpdatePassword() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -503,3 +522,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

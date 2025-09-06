@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 useEffect ( () => {
   const updateDimensions = () => {
@@ -39,6 +39,8 @@ coordinate_y: number;
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 useEffect ( () => {
   const updateDimensions = () => {
   setDimensions ({
@@ -189,7 +191,6 @@ break;
 case 'energy': // Energy field
 }ctx.restore ()
 export default function UltraQuantumHolographicBackground({
-<<<<<<< HEAD
   children
   intensity = 'high'
   colorScheme = 'quantum'
@@ -197,7 +198,6 @@ export default function UltraQuantumHolographicBackground({
   animationSpeed = 1.5
   className = ''
 }: UltraQuantumHolographicBackgroundProps) {
-=======
   children,
   intensity = 'high',
   colorScheme = 'quantum',
@@ -205,7 +205,6 @@ export default function UltraQuantumHolographicBackground({
   animationSpeed = 1.5,
   className = '',
 }: UltraQuantumHolographicBackgroundProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground({;
@@ -691,6 +690,7 @@ max_life: number,
           this.vy += 0.1;
           if (this.y > dimensions.height) {
             this.y = -10;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -717,10 +717,12 @@ max_life: number,
 draw() {
 =======
 <<<<<<< HEAD
-            this.vy = Math.random() * 2 + 1;          }            this.vy = Math.random() * 2 + 1
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+            this.vy = Math.random() * 2 + 1;          }            this.vy = Math.random() * 2 + 1
             this.vy = Math.random() * 2 + 1;          }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -740,8 +742,12 @@ draw() {
 =======
 <<<<<<< HEAD
 =======
+=======
+          }
+        }
+      }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       draw() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1433,11 +1439,10 @@ dimensions.height / 2,        Math.max (dimensions.width, dimensions.height) / 2
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
-=======
             ctx.stroke();          }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1460,6 +1465,12 @@ dimensions.height / 2,        Math.max (dimensions.width, dimensions.height) / 2
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          }
+        }
+      }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Draw holographic grid
       ctx.strokeStyle = colors.secondary;
       ctx.lineWidth = 0.3;
@@ -1762,6 +1773,7 @@ if ( {) {
           filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`;
       />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       {/* Holographic Overlay Effects */}
       <div className='fixed inset-0 z-10 pointer-events-none'>
@@ -1818,10 +1830,10 @@ if ( {) {
           className='absolute inset - 0';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Holographic Overlay Effects */}
       <div className='fixed inset-0 z-10 pointer-events-none'>
-<<<<<<< HEAD
-=======
 
         }}
       />
@@ -1843,13 +1855,9 @@ if ( {) {
 
       {/* Quantum Noise Effect */}
       <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
       {/* Holographic Overlay Effects */}
       <div className='fixed inset-0 z-10 pointer-events-none'>
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           className='absolute inset-0'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2070,6 +2078,7 @@ ease: "easeInOut"
             ]
           }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{
             duration: 6,
             repeat: Infinity,
@@ -2081,6 +2090,8 @@ ease: "easeInOut"
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         }}
       />
@@ -2094,8 +2105,6 @@ ease: "easeInOut"
 
           }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2185,19 +2194,17 @@ transition={{;
           }}
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             duration: 4
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
-=======
             duration: 4,
             repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
@@ -2205,13 +2212,17 @@ transition={{;
     </div>
 );  )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           }}
         />
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2224,15 +2235,18 @@ transition={{;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
-<<<<<<< HEAD
 );  )
 }
-=======
     </div>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

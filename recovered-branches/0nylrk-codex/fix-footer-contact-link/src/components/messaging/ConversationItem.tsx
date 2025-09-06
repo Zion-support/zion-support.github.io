@@ -13,21 +13,21 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
 import React from 'react';
 import { format  } from 'date-fns';
 import { cn  } from '@/lib/utils';
 import { Conversation  } from '@/types/messaging';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 interface ConversationItemProps {
-<<<<<<< HEAD
-=======
   conversation: Conversation,
   isActive: boolean,
   onClick: () => void
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -37,6 +37,7 @@ interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -56,6 +57,9 @@ interface ConversationItemProps {;
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   conversation: Conversation
   isActive: boolean
@@ -64,7 +68,6 @@ interface ConversationItemProps {;
 }
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
-<<<<<<< HEAD
 
 <<<<<<< HEAD
       className={cn(
@@ -80,28 +83,25 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 <<<<<<< HEAD
 
     <div
-=======
     <div 
-<<<<<<< HEAD
       className={cn(;
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       className={cn(
-<<<<<<< HEAD
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30"
 
-=======
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}

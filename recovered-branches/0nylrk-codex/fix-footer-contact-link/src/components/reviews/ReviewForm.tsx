@@ -18,9 +18,12 @@ import {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {useForm} from "react-hook-form";
@@ -30,6 +33,7 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import {Switch} from "@/components/ui/switch";
 import {Review} from "@/types/reviews";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ReviewFormValues {;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewForm.tsx
@@ -65,10 +69,11 @@ interface ReviewFormValues {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { useForm } from "react-hook-form",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -77,7 +82,6 @@ import {
   FormField;
   FormItem;
   FormLabel;
-=======
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import {
@@ -86,23 +90,23 @@ import {
   FormField,
   FormItem,
   FormLabel,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   FormMessage} from "@/components/ui/form",
 import {
   RadioGroup;
   RadioGroupItem} from "@/components/ui/radio-group",
-<<<<<<< HEAD
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
-=======
 import { Switch } from "@/components/ui/switch",
 import { Review } from "@/types/reviews",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -111,6 +115,7 @@ interface ReviewFormValues {
   timeliness_rating?: number,
   would_work_again?: boolean,
   is_anonymous?: boolean
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -137,6 +142,8 @@ export function ReviewForm(): any ({;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewForm.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 interface ReviewFormProps {
 
@@ -148,8 +155,6 @@ interface ReviewFormProps {
   defaultValues?: Review;
   isSubmitting: boolean
 }
-<<<<<<< HEAD
-=======
 
 export function ReviewForm({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -158,6 +163,7 @@ export function ReviewForm({;
   revieweeName;
   onSubmit;
   defaultValues;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewForm.tsx
 
@@ -168,6 +174,8 @@ export function ReviewForm({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
@@ -206,18 +214,22 @@ interface ReviewFormProps {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ReviewForm({
   projectId,
   revieweeId,
   revieweeName,
   onSubmit,
   defaultValues,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -234,15 +246,18 @@ export function ReviewForm({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isSubmitting}: ReviewFormProps) {
-<<<<<<< HEAD
   const [hoveredStar, setHoveredStar] = useState<number>(0);
 
-=======
   const [hoveredStar, setHoveredStar] = useState<number>(0),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating
@@ -253,10 +268,13 @@ export function ReviewForm({
       would_work_again: defaultValues.would_work_again
       is_anonymous: defaultValues.is_anonymous} : {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       rating: 0
       review_text: ""
       communication_rating: undefined
@@ -265,10 +283,13 @@ export function ReviewForm({
       would_work_again: undefined
       is_anonymous: false}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
   const handleSubmit = async (values: ReviewFormValues) => {
     const formattedData = {
@@ -281,6 +302,7 @@ export function ReviewForm({
     }
   }
   const watchRating = form.watch("rating");
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -317,11 +339,11 @@ export function ReviewForm({
   });
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-=======
-=======
   }),;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleSubmit = async (values: ReviewFormValues) => {;
@@ -573,13 +595,10 @@ function ReviewForm() {
   },
   
   const watchRating = form.watch("rating"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Main Rating */}
         <FormField
           control={form.control}
@@ -619,8 +638,11 @@ function ReviewForm() {
           )}
         />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       rating: 0,
       review_text: "",
       communication_rating: undefined,
@@ -1167,20 +1189,12 @@ if ( {) {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-=======
         
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },;
   const watchRating = form.watch("rating"),;
   return (;
     <Form {...form}>;
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Review Text */}
         <FormField
           control={form.control}
@@ -1209,14 +1223,7 @@ if ( {) {
         {watchRating > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
-<<<<<<< HEAD
-=======
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Communication */}
             <FormField
               control={form.control}
@@ -1374,6 +1381,7 @@ if ( {) {
       </form>
     </Form>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1564,9 +1572,13 @@ defaultValues: defaultValues ? {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewForm.tsx
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

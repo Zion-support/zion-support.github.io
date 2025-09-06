@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -20,9 +21,9 @@ export const innovativeITInfrastructureServices2025 = [;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 export const innovativeITInfrastructureServices2025 = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
@@ -505,26 +506,31 @@ export const innovativeITInfrastructureServices2025 = [
     ]
     compliance: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'SOC2'
       'ISO 27001'
       'Uptime Institute'
       'Energy Star'
       'Industry-specific regulations'
     ]
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'SOC2',
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
       'Industry-specific regulations',
     ],;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },];
     id: 'quantum-edge-computing-orchestrator', name: 'Quantum Edge Computing Orchestrator',
     description: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.',
@@ -761,6 +767,7 @@ export const innovativeITInfrastructureServices2025 = [
     ];
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'];
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations']
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -789,6 +796,11 @@ export const innovativeITInfrastructureServices2025 = [
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+];
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const innovativeITInfrastructureServices2025 = [;
   {;
     id: 'quantum-edge-computing-orchestrator',;
@@ -995,6 +1007,7 @@ export const innovativeITInfrastructureServices2025 = [;
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'],;
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
@@ -1017,3 +1030,7 @@ export const innovativeITInfrastructureServices2025 = [;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

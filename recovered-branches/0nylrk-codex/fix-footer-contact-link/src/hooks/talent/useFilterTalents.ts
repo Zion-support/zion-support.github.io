@@ -5,11 +5,10 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useMemo  } from 'react';
 import { TalentProfile } from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 import {useState, useMemo} from 'react';
@@ -22,6 +21,11 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {useState, useMemo} from 'react';
+import {TalentProfile} from '@/types/talent';
+export function useFilterTalents(talents: TalentProfile[]) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [searchTerm, setSearchTerm] = useState('');
 
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
@@ -136,8 +140,11 @@ setSelectedSkills(prev =>
         talent.bio?.toLowerCase().includes(lowerSearch) |
         talent.skills?.some(skill => skill.toLowerCase().includes(lowerSearch))
       )
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useMemo } from 'react',;
 import { TalentProfile } from '@/types/talent',;
 export function useFilterTalents(talents: TalentProfile[]) {;
@@ -191,6 +198,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         talent.skills?.some(skill => skill.toLowerCase().includes(lowerSearch));
       );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -219,6 +227,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     // Filter by selected skills
     if (selectedSkills.length > 0) {
@@ -307,11 +317,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         )
       )
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Filter by price range
     result = result.filter(talent => {
       const hourlyRate = talent.hourly_rate |0;
@@ -326,6 +332,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     // Sort talents
     switch (sortOption) {
       case 'price-low':
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/talent/useFilterTalents.ts
 
@@ -342,6 +349,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         result.sort((a, b) => (a.hourly_rate |0) - (b.hourly_rate |0));
         break;
       case 'price-high':
@@ -352,11 +361,13 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         break;
       case 'experience':
         result.sort((a, b) => (b.years_experience |0) - (a.years_experience |0));
-=======
         result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     // Filter by price range;
     result = result.filter(talent => {;
@@ -383,6 +394,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0)),;
         break,;
       default: // Default sorting by relevance (no specific order);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -414,6 +426,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         break;
       case 'price-high':
         result.sort((a, b) => (b.hourly_rate || 0) - (a.hourly_rate || 0));
@@ -423,12 +437,16 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         break;
       case 'experience':
         result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0));
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         break;
       default: // Default sorting by relevance (no specific order)
         break
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -445,6 +463,9 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return result
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
   return {
@@ -462,6 +483,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     setSortOption;
     toggleSkill;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -470,6 +492,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     return result;
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]),;
@@ -487,6 +511,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     sortOption,;
     setSortOption,;
     toggleSkill,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -792,6 +817,8 @@ export function useFilterTalents(talents:TalentProfile[]) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     toggleAvailability;
     toggleRegion;
 

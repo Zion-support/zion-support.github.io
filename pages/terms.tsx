@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -16,13 +17,12 @@ import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -30,6 +30,8 @@ import Link from 'next/link';
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -44,10 +46,13 @@ export default function Terms() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return (
     <>
@@ -154,7 +159,6 @@ export default function Terms() {
       </main>
     </>
   );
-=======
 import React from 'react',
       ]
     },
@@ -214,8 +218,11 @@ const TermsPage: React.FC = () => {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return (
     <>
@@ -321,6 +328,7 @@ const TermsPage: React.FC = () => {
                   <strong>Address:</strong> {contact.address}
                 </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -329,6 +337,54 @@ import React from 'react';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React from 'react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from 'react';
+] 
+};
+const termsSections = [ {
+  Please read these terms carefully before using our website or services. </p> </div> </section> 
+};
+{
+  title: 'Service Description';
+content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`;
+icon: <Globe className="w-6 h-6 text-green-400" /> 
+};
+{
+  title: 'User Responsibilities';
+content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, or in any way that violates applicable laws or regulations.`;
+icon: <Users className="w-6 h-6 text-yellow-400" /> 
+};
+{
+  title: 'Privacy and Data Protection';
+content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`;
+icon: <Eye className="w-6 h-6 text-cyan-400" /> 
+};
+{
+  title: 'Intellectual Property Rights';
+content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`;
+icon: <Shield className="w-6 h-6 text-red-400" /> 
+}];
+const importantNotices = [ {
+  title: 'AI Technology Risks';
+content: 'Our AI consciousness technology involves experimental and cutting-edge research. Users acknowledge that such technology may carry inherent risks and uncertainties.';
+type: 'warning' 
+};
+{
+  title: 'Quantum Computing Limitations';
+content: 'Quantum computing services are subject to current technological limitations and may not be suitable for all applications or use cases.';
+type: 'info' 
+};
+{
+  title: 'Service Availability';
+content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.';
+type: 'info' 
+}];
+origin/automation-improvements-final
+
+
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Terms() {
   const contact = {
 =======
@@ -433,6 +489,7 @@ export default function Terms() {
                   <strong>Address:</strong> {contact.address}
                 </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -446,6 +503,8 @@ export default function Terms() {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
             </section>
           </div>
@@ -496,11 +555,7 @@ function Terms() {
 =======
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
 ] 
 };
@@ -582,7 +637,6 @@ content: 'In no event shall Zion Tech Group be liable for any damages arising ou
 
 }> <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > Terms of Service </h1> <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto" > Please read these terms carefully before using our services. They govern your use of Zion Tech Group's technology solutions. </p> </div> </motion.div> </div> </section> <motion.div initial= {
   {
-<<<<<<< HEAD
   opacity: 0, x: -20 
 
 }whileInView= {
@@ -617,12 +671,7 @@ export default Terms;
   {
   duration: 0.6 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+origin/main
     title: 'Limitations',
     icon: <Shield className="w-6 h-6 text-purple-400" />,
     content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
@@ -630,10 +679,8 @@ export default Terms;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Terms() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
@@ -1054,6 +1101,7 @@ export default function Terms() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 =======
 
       />;
@@ -1527,6 +1575,8 @@ function Terms() {
                     <div className="bg-gray-800/50 rounded-xl p-4">;
                       <h4 className="font-semibold text-red-400 mb-2">Termination</h4>;
                       <p className="text-gray-300 text-sm">;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* User Obligations Section */}
         <section className="py - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -3608,6 +3658,7 @@ function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -4989,6 +5040,8 @@ export default function Terms() {_return (
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* User Obligations Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -4997,7 +5050,6 @@ export default function Terms() {_return (
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
         {/* User Obligations Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -5279,8 +5331,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -5353,6 +5403,7 @@ export default function Terms(req, res) {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* Liability Limitations */}
         {/* Intellectual Property Section */}
@@ -5360,6 +5411,8 @@ export default function Terms(req, res) {
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Liability Limitations */}
         {/* Intellectual Property Section */}
         <section className="py-20">
@@ -5370,6 +5423,7 @@ export default function Terms(req, res) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
             >
@@ -5398,6 +5452,8 @@ export default function Terms(req, res) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Liability Limitations */}
         {/* Intellectual Property Section */}
         <section className="py-20">
@@ -5407,7 +5463,6 @@ export default function Terms(req, res) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
         {/* Liability Limitations */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -5441,8 +5496,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -5544,12 +5597,15 @@ export default function Terms(req, res) {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* Limitation of Liability Section */}
         <section className=&quot;py-20&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Limitation of Liability Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -5559,6 +5615,7 @@ export default function Terms(req, res) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
             >
@@ -5590,6 +5647,8 @@ export default function Terms(req, res) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Limitation of Liability Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -5598,7 +5657,6 @@ export default function Terms(req, res) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
         {/* Limitation of Liability Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -5627,8 +5685,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -5685,6 +5741,7 @@ export default function Terms(req, res) {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* CTA Section */}
         {/* Contact Section */}
@@ -5695,13 +5752,12 @@ export default function Terms(req, res) {
           <div className=&quot;max-w-4xl mx-auto text-center&quot;>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* CTA Section */}
         {/* Contact Section */}
-=======
-<<<<<<< HEAD
         {/* CTA Section */}
         {/* Contact Section */}
-=======
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -5712,8 +5768,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Contact Section */}
@@ -5850,14 +5904,11 @@ export default function Terms(req, res) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {termsSections.map((section, index) => (
               <motion.div
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={section.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className=&quot;group cursor-pointer&quot;
               >
@@ -5871,6 +5922,8 @@ export default function Terms(req, res) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 key={section.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -5891,8 +5944,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="group cursor-pointer"
               >
                 <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-black/50 border border-white/10 hover:border-cyan-500/30 transition-all duration-300">
@@ -5904,30 +5955,30 @@ export default function Terms(req, res) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Service Categories */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className=&quot;py-20 bg-gradient-to-r from-gray-900/50 to-black/50&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
 =======
 =======
-      {/* Service Categories */}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      {/* Service Categories */}
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -5941,8 +5992,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -5976,14 +6025,11 @@ export default function Terms(req, res) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {serviceCategories.map((service, index) => (
               <motion.div
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={service.category}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className=&quot;group&quot;
               >
@@ -6009,6 +6055,8 @@ export default function Terms(req, res) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 key={service.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -6029,8 +6077,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="group"
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-black/50 rounded-2xl border border-white/10 hover:border-cyan-500/30 transition-all duration-300 overflow-hidden">
@@ -6051,16 +6097,16 @@ export default function Terms(req, res) {
                           <li key={featureIndex} className="flex items-start gap-2">
                             <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
 <<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                            {feature}
-                          </li>
-                        ))}
-=======
 <<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             {feature}
                           </li>
                         ))}
-=======
+                            {feature}
+                          </li>
+                        ))}
                             {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -6072,8 +6118,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </ul>
                     </div>
 <<<<<<< HEAD
@@ -6092,7 +6136,10 @@ export default function Terms(req, res) {
                           <li key={restrictionIndex} className="flex items-start gap-2">
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             {restriction}
                           </li>
                         ))}
@@ -6126,8 +6173,6 @@ export default function Terms(req, res) {
                   <FileText className=&quot;w-6 h-6&quot; />
 =======
   ];
-=======
-<<<<<<< HEAD
                             {restriction}
                           </li>
                         ))}
@@ -6135,7 +6180,6 @@ export default function Terms(req, res) {
     'Unauthorized access to our systems or networksInterference with service operationDistribution of malware or harmful codeViolation of third-party rightsAttempts to gain unauthorized accessUse of services for illegal activities';
   ];
 
-=======
                             {restriction  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -6150,8 +6194,6 @@ export default function Terms(req, res) {
                       </ul>
     'Unauthorized access to our systems or networksInterference with service operationDistribution of malware or harmful codeViolation of third-party rightsAttempts to gain unauthorized accessUse of services for illegal activities'
   ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const limitations = [
     'Services provided "as is" without warrantiesNo guarantee of uninterrupted serviceLimitation of liability for damagesNo responsibility for third-party contentService availability subject to changeTechnical support during business hours only'
   ];
@@ -6184,6 +6226,7 @@ export default function Terms(req, res) {
             </div>
           </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {/* Overview */}
           <section className=&quot;py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50&quot;>
@@ -6214,18 +6257,15 @@ export default function Terms(req, res) {
                 
 =======
 <<<<<<< HEAD
-          {/* Overview */}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Overview */}
-=======
+          {/* Overview */}
           {/* Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -6303,24 +6343,22 @@ export default function Terms(req, res) {
             </div>
           </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {/* Key Terms */}
           <section className=&quot;py-20 px-4&quot;>
             <div className=&quot;max-w-6xl mx-auto&quot;>
 =======
 <<<<<<< HEAD
-          {/* Key Terms */}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Key Terms */}
-=======
+          {/* Key Terms */}
           {/* Key Terms */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -6346,14 +6384,11 @@ export default function Terms(req, res) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {termsSections.map((section, index) => (
                   <motion.div
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     key={section.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className=&quot;bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50&quot;
                   >
@@ -6372,6 +6407,8 @@ export default function Terms(req, res) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       </ul>;
     'Unauthorized access to our systems or networksInterference with service operationDistribution of malware or harmful codeViolation of third-party rightsAttempts to gain unauthorized accessUse of services for illegal activities';
   ],;
@@ -6555,8 +6592,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -6572,10 +6607,6 @@ export default function Terms(req, res) {
                           <span className="text-gray-300">{item}</span>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         </li>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       ))}
                     </ul>
                   </motion.div>
@@ -6584,21 +6615,25 @@ export default function Terms(req, res) {
             </div>
           </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Prohibited Activities */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <section className=&quot;py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50&quot;>
             <div className=&quot;max-w-6xl mx-auto&quot;>
 =======
 =======
-          {/* Prohibited Activities */}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          {/* Prohibited Activities */}
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -6619,8 +6654,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -6690,24 +6723,22 @@ export default function Terms(req, res) {
             </div>
           </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {/* Service Limitations */}
           <section className=&quot;py-20 px-4&quot;>
             <div className=&quot;max-w-6xl mx-auto&quot;>
 =======
 <<<<<<< HEAD
-          {/* Service Limitations */}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Service Limitations */}
-=======
+          {/* Service Limitations */}
           {/* Service Limitations */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -6779,24 +6810,22 @@ export default function Terms(req, res) {
             </div>
           </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {/* Detailed Terms */}
           <section className=&quot;py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50&quot;>
             <div className=&quot;max-w-4xl mx-auto&quot;>
 =======
 <<<<<<< HEAD
-          {/* Detailed Terms */}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Detailed Terms */}
-=======
+          {/* Detailed Terms */}
           {/* Detailed Terms */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-4xl mx-auto">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -7101,12 +7130,15 @@ export default function Terms(req, res) {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* Terms Overview */}
         <section className=&quot;py-20&quot;>
           <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Terms Overview */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -7116,6 +7148,7 @@ export default function Terms(req, res) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
             >
@@ -7131,6 +7164,8 @@ export default function Terms(req, res) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Terms Overview */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -7139,7 +7174,6 @@ export default function Terms(req, res) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
         {/* Terms Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -7168,8 +7202,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6">Terms Overview</h2>
@@ -7178,7 +7210,6 @@ export default function Terms(req, res) {
                 By using our services, you agree to these terms.
               </p>
             </motion.div>
-<<<<<<< HEAD
             {/* Key Terms Points */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -7190,6 +7221,7 @@ export default function Terms(req, res) {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className=&quot;p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-xl&quot;
                 >
                   <div className=&quot;flex items-center space-x-3 mb-4&quot;>
@@ -7200,6 +7232,8 @@ export default function Terms(req, res) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Key Terms Points */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {termsSections.map((section, index) => (
@@ -7209,7 +7243,6 @@ export default function Terms(req, res) {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-=======
             {/* Key Terms Points */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -7243,8 +7276,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-xl"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -7254,14 +7285,11 @@ export default function Terms(req, res) {
                   <p className="text-gray-300">{section.content}</p>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         {/* Detailed Terms */}
@@ -7271,10 +7299,9 @@ export default function Terms(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Detailed Terms */}
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -7284,6 +7311,7 @@ export default function Terms(req, res) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className=&quot;space-y-12&quot;
             >
@@ -7326,6 +7354,8 @@ export default function Terms(req, res) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -7362,8 +7392,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="space-y-12"
             >
               <div className="text-center mb-16">
@@ -7372,19 +7400,13 @@ export default function Terms(req, res) {
                   Complete terms governing your use of our services.
                 </p>
               </div>
-<<<<<<< HEAD
               {/* Section 1: Definitions */}
-=======
-<<<<<<< HEAD
               {/* Section 1: Definitions */}
-=======
               {/* Section 1: Definitions */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-cyan-400 mb-4">1. Definitions</h3>
                 <div className="text-gray-300 space-y-4">
@@ -7400,19 +7422,13 @@ export default function Terms(req, res) {
                   </ul>
                 </div>
               </div>
-<<<<<<< HEAD
               {/* Section 2: Acceptance */}
-=======
-<<<<<<< HEAD
               {/* Section 2: Acceptance */}
-=======
               {/* Section 2: Acceptance */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-purple-400 mb-4">2. Acceptance of Terms</h3>
                 <div className="text-gray-300 space-y-4">
@@ -7429,6 +7445,7 @@ export default function Terms(req, res) {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               {/* Section 3: Use of Services */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
@@ -7441,18 +7458,15 @@ export default function Terms(req, res) {
                   <ul className=&quot;list-disc list-inside space-y-2 ml-4&quot;>
 =======
 <<<<<<< HEAD
-              {/* Section 3: Use of Services */}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Section 3: Use of Services */}
-=======
+              {/* Section 3: Use of Services */}
               {/* Section 3: Use of Services */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-emerald-400 mb-4">3. Use of Services</h3>
                 <div className="text-gray-300 space-y-4">
@@ -7483,6 +7497,7 @@ export default function Terms(req, res) {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               {/* Section 4: Intellectual Property */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
@@ -7501,18 +7516,15 @@ export default function Terms(req, res) {
                   <ul className=&quot;list-disc list-inside space-y-2 ml-4&quot;>
 =======
 <<<<<<< HEAD
-              {/* Section 4: Intellectual Property */}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Section 4: Intellectual Property */}
-=======
+              {/* Section 4: Intellectual Property */}
               {/* Section 4: Intellectual Property */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-orange-400 mb-4">4. Intellectual Property Rights</h3>
                 <div className="text-gray-300 space-y-4">
@@ -7535,6 +7547,7 @@ export default function Terms(req, res) {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               {/* Section 5: Privacy */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
@@ -7548,18 +7561,15 @@ export default function Terms(req, res) {
                     By using our services, you consent to the collection and use of information as 
 =======
 <<<<<<< HEAD
-              {/* Section 5: Privacy */}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Section 5: Privacy */}
-=======
+              {/* Section 5: Privacy */}
               {/* Section 5: Privacy */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-pink-400 mb-4">5. Privacy</h3>
                 <div className="text-gray-300 space-y-4">
@@ -7574,6 +7584,7 @@ export default function Terms(req, res) {
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               {/* Section 6: Disclaimers */}
@@ -7599,18 +7610,15 @@ export default function Terms(req, res) {
                     indirect, incidental, special, consequential, or punitive damages arising from your 
 =======
 <<<<<<< HEAD
-              {/* Section 6: Disclaimers */}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Section 6: Disclaimers */}
-=======
+              {/* Section 6: Disclaimers */}
               {/* Section 6: Disclaimers */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-red-400 mb-4">6. Disclaimers and Limitations</h3>
                 <div className="text-gray-300 space-y-4">
@@ -7635,6 +7643,7 @@ export default function Terms(req, res) {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               {/* Section 7: Termination */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
@@ -7648,18 +7657,15 @@ export default function Terms(req, res) {
                     Upon termination, your right to use our services will cease immediately, and you 
 =======
 <<<<<<< HEAD
-              {/* Section 7: Termination */}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Section 7: Termination */}
-=======
+              {/* Section 7: Termination */}
               {/* Section 7: Termination */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-yellow-400 mb-4">7. Termination</h3>
                 <div className="text-gray-300 space-y-4">
@@ -7675,6 +7681,7 @@ export default function Terms(req, res) {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               {/* Section 8: Governing Law */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
@@ -7688,18 +7695,15 @@ export default function Terms(req, res) {
                     Any disputes arising under these terms shall be subject to the exclusive jurisdiction 
 =======
 <<<<<<< HEAD
-              {/* Section 8: Governing Law */}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Section 8: Governing Law */}
-=======
+              {/* Section 8: Governing Law */}
               {/* Section 8: Governing Law */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-indigo-400 mb-4">8. Governing Law</h3>
                 <div className="text-gray-300 space-y-4">
@@ -7715,6 +7719,7 @@ export default function Terms(req, res) {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               {/* Section 9: Contact Information */}
               <div className=&quot;prose prose-invert max-w-none&quot;>
@@ -7728,18 +7733,15 @@ export default function Terms(req, res) {
                     <div className=&quot;space-y-2&quot;>
 =======
 <<<<<<< HEAD
-              {/* Section 9: Contact Information */}
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Section 9: Contact Information */}
-=======
+              {/* Section 9: Contact Information */}
               {/* Section 9: Contact Information */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-cyan-400 mb-4">9. Contact Information</h3>
                 <div className="text-gray-300 space-y-4">
@@ -7756,6 +7758,7 @@ export default function Terms(req, res) {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
             </motion.div>
@@ -7774,13 +7777,14 @@ export default function Terms(req, res) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
           <div className="mt-12 text-center">
             <Link href="/" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
@@ -7791,9 +7795,7 @@ export default function Terms(req, res) {
       </main>
     </>
   );
-=======
         </section>
-<<<<<<< HEAD
         {/* Agreement Section */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -7803,6 +7805,7 @@ export default function Terms(req, res) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className=&quot;p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl&quot;
             >
@@ -7815,29 +7818,24 @@ export default function Terms(req, res) {
               <p className=&quot;text-sm text-gray-400&quot;>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Agreement Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
         </section>
         {/* Agreement Section */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -7858,8 +7856,6 @@ export default function Terms(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl"
             >
               <Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -7921,19 +7917,13 @@ export default Terms
 export default Terms;
             </div>
           </section>
-<<<<<<< HEAD
           {/* Contact Information */}
-=======
-<<<<<<< HEAD
           {/* Contact Information */}
-=======
           {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
@@ -7973,60 +7963,34 @@ export default Terms;
     </ErrorBoundary>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 
 export default TermsPage
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
+ursor/fix-lint-push-and-merge-to-main-ae4e
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default TermsPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 }> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) 
 };export default TermsPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 }> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>)
 };export default TermsPage;
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 export default TermsPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
+origin/main
 },
 export default TermsPage,
               className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl";
@@ -8106,7 +8070,10 @@ export default Terms,;
   );
 };
 export default TermsPage;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

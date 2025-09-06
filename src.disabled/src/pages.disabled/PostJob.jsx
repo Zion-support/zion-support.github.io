@@ -1,12 +1,18 @@
 import React from 'react';
 interface PostJobProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function PostJob({ }: PostJobProps) {
   return (
     <div>
@@ -14,6 +20,7 @@ export default function PostJob({ }: PostJobProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -34,3 +41,12 @@ export default function PostJob({ }: PostJobProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:src.disabled/src/pages.disabled/PostJob.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/src/pages.disabled/PostJob.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

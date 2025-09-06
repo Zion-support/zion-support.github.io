@@ -5,9 +5,6 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -19,9 +16,12 @@ import {useTranslation} from "react-i18next";
 import {useTranslationService} from "@/hooks/useTranslationService";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {toast} from "@/components/ui/use-toast";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -32,42 +32,46 @@ import { Loader2, Globe } from "lucide-react",
 import { useTranslation } from "react-i18next",
 import { useTranslationService } from "@/hooks/useTranslationService",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { toast } from "@/components/ui/use-toast";
-=======
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
 import { toast } from "@/components/ui/use-toast",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TranslatableJobFormProps {
 
   onSubmit: (formData: any) => void
   isSubmitting?: boolean
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
 
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {;
   const { t } = useTranslation();
   const { translateContent, isTranslating } = useTranslationService();
   const { supportedLanguages, currentLanguage } = useLanguage();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
-<<<<<<< HEAD
   const { t } = useTranslation();
   const { translateContent, isTranslating } = useTranslationService();
   const { supportedLanguages, currentLanguage } = useLanguage();
@@ -112,11 +116,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       budget
       deadline})
   }
-=======
   const { t } = useTranslation(),
   const { translateContent, isTranslating } = useTranslationService(),
   const { supportedLanguages, currentLanguage } = useLanguage(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
@@ -174,12 +176,16 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 
 =======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Auto translate content when language tab changes
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
       setActiveTab(tab)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -222,6 +228,8 @@ import {toast} from "@/components/ui/use-toast";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   // Auto translate function
@@ -242,13 +250,15 @@ import {toast} from "@/components/ui/use-toast";
         content = requirements[lang];
         sourceLanguage = lang;
         break
-<<<<<<< HEAD
       }
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -410,15 +420,14 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         content = requirements[lang],;
         sourceLanguage = lang,;
         break;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!content) {
       toast({
         title: t('translation.no_content')
@@ -427,6 +436,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       return
     }
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -444,12 +454,16 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 
 =======
 <<<<<<< HEAD
-      const { translations, error } = await translateContent(content, 'job', sourceLanguage);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      const { translations, error } = await translateContent(content, 'job', sourceLanguage);
       const { translations, error } = await translateContent(content, 'job', sourceLanguage),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (error) {
         toast({
           title: t('translation.translation_failed')
@@ -457,6 +471,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
           variant: "destructive"})
         return
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -465,6 +480,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     if (!content) {;
       toast({;
@@ -483,6 +500,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
           variant: "destructive"}),;
         return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -494,6 +512,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       if (field === 'title') {
         setTitle(translations)
@@ -502,6 +522,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       } else if (field === 'requirements') {
         setRequirements(translations)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -517,6 +538,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: t('translation.translation_success')
         description: t('translation.content_translated')})
@@ -531,12 +555,15 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"})
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   // Ensure all translations are available
@@ -547,8 +574,11 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     // Title translations
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
       promises.push(autoTranslate('title'))
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       toast({;
         title: t('translation.translation_success'),;
@@ -570,6 +600,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {;
       promises.push(autoTranslate('title'));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -581,6 +612,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -594,6 +627,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       await Promise.all(promises)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -605,11 +639,14 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  },
 =======
+  }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  },
   };
-=======
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -623,6 +660,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -1365,6 +1405,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
             t('jobs.post_job_button')
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1748,13 +1789,18 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>
       </div>
     </form>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>;
       </div>;
     </form>;
@@ -1859,5 +1905,8 @@ if (!description.en && !description.es && !description.pt && !description.ar) re
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

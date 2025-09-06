@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -9,24 +8,24 @@ import React from 'react';
 import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react'
-<<<<<<< HEAD
 import { SEO  } from './SEO';
-=======
 import React from 'react'
 import { SEO } from './SEO'
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { SEO } from './SEO';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
@@ -46,9 +45,10 @@ xport const SitemapPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
 const resolvePath = (path: string): string => pathMap[path] ?? path
-=======
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import Link from 'next/link',
@@ -59,13 +59,8 @@ import { SEO } from './SEO',
 const pathMap: Record<string string> = {
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'},
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const SitemapPage: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
@@ -80,6 +75,7 @@ export const SitemapPage: React.FC = () => {
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 =======
@@ -87,12 +83,9 @@ export const SitemapPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Public Pages */}
@@ -113,6 +106,7 @@ export const SitemapPage: React.FC = () => {
                   </li>
                 ))
               }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -200,16 +194,12 @@ export const SitemapPage: React.FC = () => {;
           {/* Talent Routes */}
 >>>>>>>           <div className="bg-zion-blue-dark p-6 rounded-lg">
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </ul>
           </div>
-=======
             </ul>;
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -239,6 +229,7 @@ export const SitemapPage: React.FC = () => {;
               }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             </ul>
@@ -249,16 +240,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           {/* Client Routes */}
 >>>>>>>           <div className="bg-zion-blue-dark p-6 rounded-lg">
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </ul>
           </div>
-=======
             </ul>;
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -288,6 +275,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             </ul>
@@ -298,16 +286,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           {/* Shared Routes */}
 >>>>>>>           <div className="bg-zion-blue-dark p-6 rounded-lg">
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </ul>
           </div>
-=======
             </ul>;
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -337,6 +321,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             </ul>
@@ -347,16 +332,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           {/* Admin Routes */}
 >>>>>>>           <div className="bg-zion-blue-dark p-6 rounded-lg">
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </ul>
           </div>
-=======
             </ul>;
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -381,11 +362,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {route.label}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {/* Dynamic Routes */}
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Link>
                   </li>
                 ))
@@ -393,27 +377,26 @@ ursor/fix-website-loading-errors-and-merge-6662
             </ul>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           {/* Dynamic Routes */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Link>;
                   </li>;
                 ));
               }
             </ul>;
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Dynamic Routes */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -424,14 +407,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <li key={key}>
 >>>>>>>                   <div className="flex items-center text-zion-slate">
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {Object.entries(dynamicPaths).map(([key, path],) => (
-=======
               {Object.entries(dynamicPaths).map(([key, path]) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <li key={key}>
                   <div className="flex items-center text-zion-slate">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -440,6 +419,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </li>
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -450,6 +430,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </ul>
           </div>
         </div>
@@ -543,11 +525,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>;) }
 '"
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             </ul>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
@@ -556,6 +534,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -571,3 +550,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

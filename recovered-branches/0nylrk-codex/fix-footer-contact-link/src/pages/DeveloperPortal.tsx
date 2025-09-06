@@ -8,8 +8,6 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
@@ -19,13 +17,15 @@ import {ApiKeysManager} from "@/components/developers/ApiKeysManager";
 import {WebhooksManager} from "@/components/developers/WebhooksManager";
 import {ApiDocumentation} from "@/components/developers/ApiDocumentation";
 import {ApiLogs} from "@/components/developers/ApiLogs";
-=======
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { 
@@ -38,6 +38,7 @@ import {
   Webhook 
 } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -48,12 +49,15 @@ import {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
 import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
 import { ApiLogs } from "@/components/developers/ApiLogs",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -64,12 +68,15 @@ import { ApiLogs } from "@/components/developers/ApiLogs",
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TabDefinition {
   id: string
   label: string
 
   icon: LucideIcon
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -98,26 +105,25 @@ export function DeveloperPortal() {;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 export function DeveloperPortal() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function DeveloperPortal() {
-<<<<<<< HEAD
   const { user } = useAuth();
 
   const [activeTab, setActiveTab] = useState<string>("documentation");
 
-=======
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState<string>("documentation"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen }
@@ -198,13 +204,14 @@ function DeveloperPortal() {
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
-<<<<<<< HEAD
             const Icon = tab.icon;
 
-=======
             const Icon = tab.icon,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             return (
               <button
                 key={tab.id}
@@ -216,11 +223,14 @@ function DeveloperPortal() {
                 onClick={() => setActiveTab(tab.id)}
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Icon size={16} className="mr-2" />
 import { useState } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -300,6 +310,7 @@ export function DeveloperPortal() {;
                 onClick={() => setActiveTab(tab.id)}
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -310,6 +321,8 @@ export function DeveloperPortal() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Icon size={16} className="mr-2" />
                 {tab.label}
               </button>
@@ -494,7 +507,6 @@ function ProtectedDeveloperPortal() {
     </div>
   )
 }
-<<<<<<< HEAD
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
@@ -503,8 +515,11 @@ export default function ProtectedDeveloperPortal() {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export default function ProtectedDeveloperPortal() {;
   return (;
@@ -573,8 +588,9 @@ return (<button tab.id
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

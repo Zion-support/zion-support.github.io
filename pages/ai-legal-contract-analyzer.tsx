@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Head from 'next/head';
 
@@ -158,14 +159,13 @@ import {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-import React from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 
 import {
-<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -173,9 +173,12 @@ import {
   ArrowRight
   Star
   Scale;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Phone,
   Mail,
   MapPin,
@@ -194,9 +197,12 @@ import {
 =======
   Star,;
   Scale,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 ;
@@ -325,8 +331,11 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-reac
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function AILegalContractAnalyzerPage() {
 <<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'));
@@ -338,6 +347,7 @@ export default function AILegalContractAnalyzerPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -346,11 +356,14 @@ export default function AILegalContractAnalyzerPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -375,6 +388,11 @@ export default function AILegalContractAnalyzerPage() {
   if (!service) return null,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default function AILegalContractAnalyzerPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
+  if (!service) return null,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout>
       <Head>
@@ -477,7 +495,6 @@ export default function AILegalContractAnalyzerPage() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         <div className="bg-amber-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Streamline Legal Work</h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -495,12 +512,8 @@ export default function AILegalContractAnalyzerPage() {
       </main>
     </Layout>
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </div>
     </Layout>
   )
@@ -510,9 +523,12 @@ export default function AILegalContractAnalyzerPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

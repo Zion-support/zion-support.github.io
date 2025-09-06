@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,29 +48,26 @@ function ThemeToggle() {
               : "text - zinc - 400 hover:text - zinc - 100";
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useTheme } from "@/components/theme-provider";
 import { Moon, Sun, Monitor } from "lucide-react";
 export function ThemeToggle() {const { theme, setTheme } = useTheme();
-=======
 "use client",;
 import { useTheme } from "@/components/theme-provider",;
 import { Moon, Sun, Monitor } from "lucide-react",;
 export function ThemeToggle() {;
   const { theme, setTheme } = useTheme();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="flex items-center gap-2">;
       <span className="sr-only">Theme</span>;
       <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
         <button;
           onClick={() => setTheme("light")}
-<<<<<<< HEAD
           className={`rounded px-2 py-1 text-sm transition-colors ${theme === "light";
-=======
           className={`rounded px-2 py-1 text-sm transition-colors ${;
             theme === "light";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -101,12 +99,9 @@ export function ThemeToggle() {;
 =======
 =======
           onClick={() => setTheme("system")}
-<<<<<<< HEAD
           className={`rounded px-2 py-1 text-sm transition-colors ${theme === "system";
-=======
           className={`rounded px-2 py-1 text-sm transition-colors ${;
             theme === "system";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -139,12 +134,9 @@ export function ThemeToggle() {;
 =======
 =======
           onClick={() => setTheme("dark")}
-<<<<<<< HEAD
           className={`rounded px-2 py-1 text-sm transition-colors ${theme === "dark";
-=======
           className={`rounded px-2 py-1 text-sm transition-colors ${;
             theme === "dark";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

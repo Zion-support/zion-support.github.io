@@ -32,9 +32,12 @@ function TranslatableJobForm() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -57,12 +60,15 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage)
   // Form fields with translations
   const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -74,10 +80,13 @@ import { useTranslation } from "react-i18next",
 import { useTranslationService } from "@/hooks/useTranslationService",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
@@ -91,18 +100,26 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage)
   // Form fields with translations
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
     en: ""
     es: ""
     fr: ""
     pt: ""
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  const [title, setTitle] = useState<Record<SupportedLanguage string>>({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     en: "",
     es: "",
     fr: "",
     pt: "",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -181,6 +198,8 @@ if ( {) {
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ar: ""
   })
     ar: ""
@@ -204,13 +223,10 @@ if ( {) {
       return;
           variant: "destructive"
       })
-<<<<<<< HEAD
       return
         title: t('translation.translation_success')
-=======
       return;
         title: t('translation.translation_success'),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         description: t('translation.content_translated')
       })
     } catch (error) {
@@ -220,8 +236,6 @@ if ( {) {
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"
       })
-<<<<<<< HEAD
-=======
 import { toast } from "@/components/ui/use-toast",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface TranslatableJobFormProps {
@@ -242,7 +256,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     es: "",
     fr: "",
     pt: "",
-=======
     }
   }
   // Ensure all translations are available
@@ -251,8 +264,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 };
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ar: ""}),
   
   const [description, setDescription] = useState<Record<SupportedLanguage string>>({
@@ -464,8 +475,11 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         title: t('translation.translation_failed'),;
         description: error instanceof Error ? error.message : t('translation.unknown_error'),;
         variant: "destructive"});
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src/components/jobs/TranslatableJobForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   // Ensure all translations are available;
@@ -730,16 +744,20 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
             t('jobs.post_job_button')
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>
       </div>
     </form>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
 >>>>>>> 
         </Button>;
@@ -760,6 +778,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
 }
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>;
       </div>;
     </form>;
@@ -767,9 +787,12 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src/components/jobs/TranslatableJobForm.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

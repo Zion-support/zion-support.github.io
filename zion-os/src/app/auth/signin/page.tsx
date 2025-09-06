@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,6 +101,8 @@ function SignInPage() {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -118,7 +121,6 @@ export default function SignInPage() {const [email, setEmail] = useState("");
     } finally {setIsLoading(false);
     }
   }
-=======
 "use client",;
 import { useState } from "react",;
 import Link from "next/link",;
@@ -141,7 +143,6 @@ export default function SignInPage() {;
       setIsLoading(false);
     }
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
@@ -158,12 +159,13 @@ export default function SignInPage() {;
                 <p className="text-red-400 text-sm">{error}</p>;
               </div>;
             )}
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div>;
               <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Email Address;

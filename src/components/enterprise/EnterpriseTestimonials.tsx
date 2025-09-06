@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseTestimonials.tsx
 
 <<<<<<< HEAD
@@ -17,17 +18,13 @@ import { Quote } from 'lucide-react'
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react";
 import { Quote } from 'lucide-react'
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React from 'react'
 import { Quote } from 'lucide-react'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
@@ -76,10 +73,13 @@ export function EnterpriseTestimonials() {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous."
     author: "Elena Rodriguez"
     title: "CTO"
@@ -103,19 +103,25 @@ import {
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseTestimonials.tsx
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function EnterpriseTestimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
@@ -147,10 +153,13 @@ export function EnterpriseTestimonials() {
                       <img
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         src={testimonial.image}
                         alt={testimonial.author}
                         className='h-full w-full object-cover'
@@ -170,8 +179,6 @@ export function EnterpriseTestimonials() {
           </CarouselContent>
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">
             <CarouselPrevious />
-<<<<<<< HEAD
-=======
             <CarouselNext />
           </div>
         </Carousel>
@@ -180,8 +187,6 @@ export function EnterpriseTestimonials() {
   );
 };
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       />
@@ -491,6 +496,7 @@ export function EnterpriseTestimonials() {;
                       <p className="font-bold">{testimonial.author}</p>;
                       <p className="text-sm text-muted-foreground">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         {testimonial.title}, {testimonial.company}
                       </p>;
@@ -510,6 +516,8 @@ export function EnterpriseTestimonials() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <CarouselNext />
           </div>
         </Carousel>
@@ -696,14 +704,15 @@ image: "/placeholder.svg" ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/EnterpriseTestimonials.tsx
 =======
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

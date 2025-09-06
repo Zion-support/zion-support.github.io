@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -20,6 +21,10 @@ import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
@@ -85,6 +90,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   })
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -147,9 +153,13 @@ function handler() {
 =======
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

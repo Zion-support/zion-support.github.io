@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/QuoteRequestsList.tsx
 
 import React from "react",
@@ -13,25 +14,26 @@ import { QuoteRequestCard } from "./QuoteRequestCard",
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {QuoteRequestCard} from "./QuoteRequestCard";
 import {EmptyStateCard} from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { QuoteRequestCard } from "./QuoteRequestCard",
-<<<<<<< HEAD
 import { EmptyStateCard } from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
-=======
 import { EmptyStateCard } from "./EmptyStateCard",
 import type { QuoteRequest } from "@/types/quotes",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[],
   isLoading: boolean,
@@ -40,6 +42,7 @@ type QuoteRequestsListProps = {
   onMarkAsResponded: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -53,8 +56,9 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[]
   isLoading: boolean
@@ -63,31 +67,27 @@ type QuoteRequestsListProps = {
   onMarkAsResponded: (id: string) => void
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
-=======
-<<<<<<< HEAD
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
   quotes;
   isLoading;
   isArchived;
   onViewDetails;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
-<<<<<<< HEAD
   quotes;
   isLoading;
   isArchived;
   onViewDetails;
   onMarkAsResponded
-=======
   quotes,
   isLoading,
   isArchived,
   onViewDetails,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onMarkAsResponded,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onToggleArchive
 }) => {
   if (isLoading) {
@@ -97,11 +97,14 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
       </div>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
@@ -193,6 +196,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
       </div>;
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -213,15 +217,18 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   if (quotes.length === 0) {
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
   }
-<<<<<<< HEAD
-=======
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       {quotes.map(quote => (
@@ -233,6 +240,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
           onToggleArchive={onToggleArchive}
         />
       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -361,20 +369,19 @@ quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/QuoteRequestsList.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
-<<<<<<< HEAD
 }
 
-=======
     </div>;
   );
-=======
-=======
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

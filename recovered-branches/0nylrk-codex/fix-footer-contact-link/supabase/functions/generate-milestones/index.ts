@@ -11,19 +11,21 @@ import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -32,10 +34,13 @@ const corsHeaders = {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -65,27 +70,29 @@ serve(async (req) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
-<<<<<<< HEAD
   }
   try {
     // Get the OpenAI API key from environment variables
     const apiKey = Deno.env.get('OPENAI_API_KEY');
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
-<<<<<<< HEAD
     }
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json();
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -102,6 +109,7 @@ serve(async (req) => {;
     if (!apiKey) {;
       throw new Error('OPENAI_API_KEY is not set');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -114,6 +122,8 @@ serve(async (req) => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 
     // Parse request body
@@ -139,8 +149,11 @@ serve(async (req) => {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
 =======
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Create prompt for OpenAI
     const prompt = `
     You are an expert project manager who specializes in breaking down projects into clear milestones.
@@ -159,21 +172,27 @@ serve(async (req) => {;
     "title", "description", "dueDate", "estimatedHours"
     Ensure your response is ONLY the JSON array with no additional text.
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
 <<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-    `;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    `;
     `,
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Call OpenAI API
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -208,15 +227,14 @@ serve(async (req) => {;
 
 =======
 <<<<<<< HEAD
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       body: JSON.stringify({
         model: 'gpt-4o-mini',
         messages: [
           {
-<<<<<<< HEAD
             role: 'system'
             content: 'You are a project management expert that breaks work into appropriate milestones.'}
           {
@@ -245,7 +263,6 @@ serve(async (req) => {;
       JSON.stringify({ error: error.message |'Failed to generate milestones' });
       {
         status: 500
-=======
             role: 'system',
             content: 'You are a project management expert that breaks work into appropriate milestones.'},
           {
@@ -258,9 +275,6 @@ serve(async (req) => {;
     if (!response.ok) {
       throw new Error(data.error?.message || 'Failed to generate milestones')
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
     // Parse the AI-generated content to ensure it's valid JSON
     try {
@@ -281,9 +295,12 @@ serve(async (req) => {;
       JSON.stringify({ error: error.message || 'Failed to generate milestones' });
       { 
         status: 500, 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     // Parse the AI-generated content to ensure it's valid JSON;
     try {;
@@ -303,6 +320,7 @@ serve(async (req) => {;
       JSON.stringify({ error: error.message || 'Failed to generate milestones' }),;
       {;
         status: 500,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -438,12 +456,14 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -603,3 +623,5 @@ if ( {) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -25,27 +26,29 @@ const Page: NextPage = () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-=======
 import type { NextPage } from 'next'
 import Head from 'next/head'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
-=======
 import type { NextPage } from 'next'
 import Head from 'next/head'
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const Page: NextPage = () => {
   return (
 import type {_NextPage} from 'next';
 import Head from 'next/head';
 const Page: NextPage = () => {_return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -59,6 +62,9 @@ const Page: NextPage = () => {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/fix-lint-push-and-merge-to-main-ce13
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <>
       <Head>
         <title>Auto Update 2025-08-24T00-54-20-891Z</title>
@@ -84,6 +90,7 @@ const Page: NextPage = () => {
       </div>
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -130,18 +137,20 @@ export default Page
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default Page;
 
-=======
-},
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-export default Page
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 },
 <<<<<<< HEAD
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default Page
+},
 
 
 export default Page
@@ -154,10 +163,12 @@ export default Page
 
 export default Page,;
 ;
-=======
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231;
+;
 export default Page
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

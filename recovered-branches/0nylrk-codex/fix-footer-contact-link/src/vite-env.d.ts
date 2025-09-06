@@ -8,7 +8,6 @@
 =======
 
 ;
-<<<<<<< HEAD
 interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
   // add more env variables as needed;
 }
@@ -39,8 +38,11 @@ declare let __dirname: string;
 declare let process: {env: {;
     [key: string]: string | undefined;
     NODE_ENV: 'development' | 'production' | 'test';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ImportMetaEnv {;
   readonly VITE_APP_TITLE: string,;
   // add more env variables as needed;
@@ -87,17 +89,21 @@ declare let process: {;
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     PORT?: string;
   }
 }
 // Badge component type fixes
 declare module '@/components/ui/badge' {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -154,14 +160,12 @@ declare module '@vitejs/plugin-react - swc' {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-  export interface BadgeProps {
-<<<<<<< HEAD
-  }
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  export interface BadgeProps {
+  }
   export interface BadgeProps {};
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   export const Badge: React.FC<BadgeProps>;
 }
 // FeatureCard type fixes;
@@ -217,6 +221,7 @@ declare module '@livekit/components-react' {export interface VideoCallProps {;
     onDisconnect?: () => void;
     className?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -225,6 +230,9 @@ declare module '@livekit/components-react' {export interface VideoCallProps {;
   export interface BadgeProps {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  export interface BadgeProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     className?: string,
     variant?: "default" | "secondary" | "destructive" | "outline",
     children?: React.ReactNode,
@@ -453,30 +461,38 @@ declare module '@/components/ChatAssistant/ChatMessage' {;
     timestamp?: Date,;
     key?: string | number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 declare module '@livekit/components-styles' {// Empty stub for the styles;
 }
-=======
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // ProductListingCard type fixes;
 declare module '@/components/ProductListingCard' {;
   export interface ProductListingCardProps {;
@@ -597,13 +613,12 @@ declare module '@livekit/components-react' {;
   export const LiveKitRoom: React.FC<any>;
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

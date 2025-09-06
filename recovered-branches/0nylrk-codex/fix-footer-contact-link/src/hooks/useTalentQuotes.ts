@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
@@ -7,16 +8,22 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
 import { useAuth  } from '@/hooks/useAuth';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import {useAuth} from '@/hooks/useAuth';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -27,6 +34,8 @@ import {useToast} from '@/hooks/use-toast';
 export const useTalentQuotes = () => {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
 import {useToast} from '@/hooks/use-toast';
@@ -76,8 +85,11 @@ queryFn: () => quoteRequestService && quoteRequestService.getByTalentId(talentId
     // Status filter
     if (statusFilter !== 'all' && quote.status !== statusFilter) {
       return false
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -106,6 +118,7 @@ export const useTalentQuotes = () => {;
     // Status filter;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -138,6 +151,8 @@ export const useTalentQuotes = () => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     // Archive filter
     if (archiveFilter === 'active' && quote.is_archived) {
@@ -146,15 +161,17 @@ export const useTalentQuotes = () => {;
     if (archiveFilter === 'archived' && !quote.is_archived) {
       return false
     }
-<<<<<<< HEAD
     return true
   });
   // Mark as viewed/responded mutation
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
       quoteRequestService.updateStatus(id, status);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     return true
   }),
@@ -163,6 +180,7 @@ export const useTalentQuotes = () => {;
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -182,6 +200,8 @@ export const useTalentQuotes = () => {;
       } else if (variables && variables.status === 'responded') {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     onSuccess: (_, variables) => {
       let message = "Status updated",
       if (variables.status === 'in_review') {
@@ -217,7 +237,6 @@ export const useTalentQuotes = () => {;
 =======
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-<<<<<<< HEAD
     }
     onError: (error: Error) => {
       toast({
@@ -239,8 +258,11 @@ export const useTalentQuotes = () => {;
 =======
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
       quoteRequestService.toggleArchive(id, isArchived);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     onError: (error: Error) => {
       toast({
@@ -256,12 +278,15 @@ export const useTalentQuotes = () => {;
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     onSuccess: (_, variables) => {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
@@ -282,13 +307,13 @@ export const useTalentQuotes = () => {;
 =======
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
-=======
     };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -336,6 +361,7 @@ export const useTalentQuotes = () => {;
       updateStatusMutation.mutate({ id, status: 'in_review' });
     markAsResponded: (id: string) =>
       updateStatusMutation.mutate({ id, status: 'responded' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -463,12 +489,16 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    toggleArchive: (id: string, isArchived: boolean) =>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    toggleArchive: (id: string, isArchived: boolean) =>
     toggleArchive: (id: string, isArchived: boolean) => 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     onError: (error: Error) => {
       toast({
@@ -540,6 +570,7 @@ if ( {) {
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -703,6 +734,8 @@ export const useTalentQuotes = () => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 

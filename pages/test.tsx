@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -37,23 +38,22 @@ import Layout from '../components/Layout';
 
 
 =======
+=======
+import React from 'react';
+import Layout from '../components/Layout';
+import Layout from '../components/Layout';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
 
 import Layout from '../components/Layout';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function TestPage() {
   return (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -69,10 +69,15 @@ export default function TestPage() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Layout title="Test Page">
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -102,10 +107,14 @@ export default function TestPage() {
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    </Layout>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <>
       <Head>
         <title>Test Page | Zion Tech Group</title>
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function TestPage() {;
@@ -128,28 +137,32 @@ export default function TestPage() {;
   return (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='min-h-screen bg-black text-white flex items-center justify-center'>
         <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
       </div>
     </>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
 
-=======
     </Layout>;
   );
 }
-=======
 import React from 'react'
 import Head from 'next/head'
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function TestPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -167,6 +180,9 @@ export default function TestPage() {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <>
       <Head>
         <title>Test Page | Zion Tech Group</title>
@@ -174,6 +190,7 @@ export default function TestPage() {
       <div className='min-h-screen bg-black text-white flex items-center justify-center'>
         <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -202,32 +219,29 @@ export default function TestPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
   );
-=======
-=======
-=======
     </>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
->>>>>>> origin/main
-=======
+origin/main
 );
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
         <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
       </div>
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -239,13 +253,14 @@ export default function TestPage() {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <>;
       <Head>;
@@ -315,3 +330,6 @@ function TestPage() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -5,9 +5,6 @@
 
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -29,9 +26,12 @@ import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviews
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -49,27 +49,28 @@ import { Badge } from "@/components/ui/badge",
 import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
 import { MyApplications } from "@/components/jobs/MyApplications",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
-=======
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
 function TalentDashboardContent() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <SEO
@@ -147,6 +148,7 @@ function TalentDashboardContent() {
               </CardContent>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import {useState, useEffect} from "react";
@@ -184,6 +186,8 @@ function TalentDashboardContent() {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -283,6 +287,7 @@ function TalentDashboardContent() {;
               </CardContent>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -294,6 +299,8 @@ function TalentDashboardContent() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {/* Upcoming Interviews Card */}
@@ -369,6 +376,7 @@ function TalentDashboardContent() {;
     </>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -843,6 +851,8 @@ function TalentDashboard() {
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function TalentDashboard() {
   return (
     <ProtectedRoute>
@@ -851,8 +861,11 @@ export default function TalentDashboard() {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export default function TalentDashboard() {;
   return (;
@@ -875,8 +888,9 @@ export default function TalentDashboard() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

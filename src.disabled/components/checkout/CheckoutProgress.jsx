@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,15 @@ const React from";react"";export: { function }";export: default function Checkou
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+:src.disabled/components/checkout/CheckoutProgress.jsx
+import React from\';react\'';\"export\": { function }\';\"export\": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status=\'incomplete\' label=\'Shipping\' />\' <Step status=\'incomplete\' label=\'Payment\' />\' <Step status=\'incomplete\' label=\'Review\' />\' </Steps>\' ) } \''\';\';
+const React from";react"";export: { function }";export: default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from\';react\'';\"export\": { function }\';\"export\": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status=\'incomplete\' label=\'Shipping\' />\' <Step status=\'incomplete\' label=\'Payment\' />\' <Step status=\'incomplete\' label=\'Review\' />\' </Steps>\' ) } \''\';\';
+const React from";react"";export: { function }";export: default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'"
+:temp_exclude/src.disabled/components/checkout/CheckoutProgress.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
 =======
 =======

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -11,6 +12,9 @@ try {
   const { talent } = req && req.body as { talent?: Record<string, any> };
   if (!talent) return res && res.status(400).json({ error: "Missing talent payload" });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { ats } from "../../../../lib/integrations/connectors";
@@ -95,7 +99,13 @@ function handler() {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  res.status(200).json({ ok: true, results });
+}
+res.status(200).json({ ok: true, results });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -163,6 +173,7 @@ results.push({ providerId: conn.providerId, ok: true })
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -179,3 +190,6 @@ results.push({ providerId: conn.providerId, ok: true })
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

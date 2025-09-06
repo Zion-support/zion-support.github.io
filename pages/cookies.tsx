@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -135,26 +136,15 @@ export default function CookiePolicyPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
+origin/automation-improvements-final
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Shield
   Settings
   Info
@@ -163,7 +153,6 @@ import {
   CheckCircle
   XCircle
   AlertTriangle
-=======
   Shield,
   Settings,
   Info,
@@ -172,22 +161,22 @@ import {
   CheckCircle,
   XCircle,
   AlertTriangle;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 export default function CookiePolicyPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
-<<<<<<< HEAD
     necessary: true
     analytics: false
     marketing: false
     functional: false
-=======
     necessary: true,
     analytics: false,
     marketing: false,
     functional: false;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
   const cookieTypes = [;
     {;
@@ -904,6 +893,7 @@ if (return) {
       </div>
     </MainLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { motion } from 'framer-motion';
 import Head from 'next/head';
@@ -949,33 +939,21 @@ export default function CookiesPage() {
       </div>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -985,6 +963,10 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+origin/automation-improvements-final
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CookiesPage() {
 export default function CookiesPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1006,6 +988,7 @@ export default function CookiesPage() {;
             browser.
           </p>
           <ul className='list-disc list-inside text-gray-300 space-y-1'>
+<<<<<<< HEAD
 =======
 
 =======
@@ -1025,30 +1008,41 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 }      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+=======
+      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+}      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+ursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-=======
-=======
 import React from 'react',
 import SEO from '../components/SEO',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
           <p className="text-gray-300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>
           <ul className="list-disc list-inside text-gray-300 space-y-1">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1071,6 +1065,15 @@ export default function CookiesPage() {
           </ul>
 <<<<<<< HEAD
 
+=======
+origin/automation-improvements-final
+            <li>Purpose: performance and security</li>
+<li>Purpose: performance and security</li>
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
+          </ul>
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <p className='text-gray-400 text-sm'>
             Questions?{' '}
             <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
@@ -1078,6 +1081,7 @@ export default function CookiesPage() {
             </a>
           </p>
         </div>
+<<<<<<< HEAD
 
   );
 
@@ -1122,32 +1126,25 @@ export default function CookiesPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </Layout>
     </>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   );
-=======
-<<<<<<< HEAD
       </Layout>
     </>;
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 canonical='https://ziontechgroup && ziontechgroup.com/cookies/'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1254,11 +1251,10 @@ function CookiesPage() {
 
 =======
 =======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
+}
       </div>
     </UltraAdvancedFuturisticBackground>
   )
@@ -1268,7 +1264,10 @@ function CookiesPage() {
   }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

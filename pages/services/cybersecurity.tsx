@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,17 +10,20 @@ import { motion } from 'framer-motion';
 import {
 =======
 <<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react',
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import Head from 'next/head',
@@ -61,6 +65,8 @@ import {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Shield
   Lock
   Eye
@@ -144,9 +150,12 @@ export default function CybersecurityServicesPage() {
   ];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Shield,
   Lock,
   Eye,
@@ -310,9 +319,7 @@ import EnhancedFooter from '../../components/EnhancedFooter';
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -322,10 +329,13 @@ import {
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CybersecurityServicesPage() {
   const services = [
     {
@@ -390,12 +400,10 @@ export default function CybersecurityServicesPage() {
       features: ["Identity Verification", "Access Control", "Network Segmentation", "Continuous Monitoring"],
       price: "From $15,000",
       icon: Zap,
-<<<<<<< HEAD
       color: 'from-emerald-500 to-teal-500',
     },;
   ];
 
-=======
       color: "from-emerald-500 to-teal-500"
       } catch (error) {
     console.error("Error:", error);
@@ -403,8 +411,11 @@ export default function CybersecurityServicesPage() {
   }
 }
   ],
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const stats = [
     { number: "99.99%", label: "Threat Detection Rate", icon: Shield },
     { number: "24/7", label: "Security Monitoring", icon: Eye },
@@ -419,15 +430,21 @@ export default function CybersecurityServicesPage() {
   }
 }
   ],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Cybersecurity Services - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta
           name='description'
           content='Advanced cybersecurity solutions from Zion Tech Group. AI-powered threat detection, quantum-resistant encryption, and comprehensive security services.'
@@ -452,8 +469,11 @@ export default function CybersecurityServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta name="description" content="Advanced cybersecurity solutions from Zion Tech Group. AI-powered threat detection, quantum-resistant encryption, and comprehensive security services." />
         <meta property="og:title" content="Cybersecurity Services - Zion Tech Group" />
         <meta property="og:description" content="Advanced cybersecurity solutions for comprehensive protection." />
@@ -512,16 +532,20 @@ className="mb-8"
 }
             className="mb-8"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-red-400 bg-clip-text text-transparent mb-6">
               Cybersecurity
             </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -559,6 +583,8 @@ className="mb-8"
             </p>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Advanced security solutions that protect your digital assets and
               ensure business continuity            </p>
@@ -614,21 +640,12 @@ transition={{ duration: 0 && 0.8 }}
             className='mb-12'
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
-<<<<<<< HEAD
               From AI-powered threat detection to quantum-resistant encryption
-=======
               From AI-powered threat detection to quantum-resistant encryption,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               we provide comprehensive cybersecurity solutions that keep your
               business secure and compliant.
-=======
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Advanced security solutions that protect your digital assets and ensure business continuity
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
           </motion.div>
           <motion.div
@@ -662,6 +679,7 @@ transition={{ duration: 0 && 0.8 }}
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -676,6 +694,8 @@ transition={{ duration: 0 && 0.8 }}
             {stats.map((stat, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -691,7 +711,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 className="text-center"
 =======
                 className='text-center'
-=======
       {/* Stats Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -869,16 +888,20 @@ export default function CybersecurityServicesPage(req, res) {
 }
                 className="text-center"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-orange-400" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -925,6 +948,8 @@ export default function CybersecurityServicesPage(req, res) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -951,7 +976,6 @@ export default function CybersecurityServicesPage(req, res) {
             className="text-center mb-16"
 =======
             className='text-center mb-16'
-=======
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
@@ -993,18 +1017,22 @@ export default function CybersecurityServicesPage(req, res) {
 }
             className="text-center mb-16"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl font-bold text-white mb-6">Cybersecurity Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Comprehensive security solutions designed to protect your business from evolving threats
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1021,6 +1049,8 @@ export default function CybersecurityServicesPage(req, res) {
             {services.map((service, index) => (
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
@@ -1057,7 +1087,6 @@ export default function CybersecurityServicesPage(req, res) {
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-red-500/30 transition-all duration-300"
 =======
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-red-500/30 transition-all duration-300'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -1088,17 +1117,21 @@ export default function CybersecurityServicesPage(req, res) {
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-red-500/30 transition-all duration-300"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1108,6 +1141,8 @@ export default function CybersecurityServicesPage(req, res) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {service.title}
                 </h3>
@@ -1121,9 +1156,12 @@ export default function CybersecurityServicesPage(req, res) {
                       <CheckCircle className='w-5 h-5 text-orange-400 mr-3 flex-shrink-0' />                      {feature}
                     </li>
                   ))}
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
@@ -1167,11 +1205,6 @@ export default function CybersecurityServicesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </ul>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className="flex items-center justify-between">
@@ -1182,6 +1215,7 @@ export default function CybersecurityServicesPage(req, res) {
                   </button>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1197,6 +1231,8 @@ export default function CybersecurityServicesPage(req, res) {
           </div>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
 <<<<<<< HEAD
 </div>;
@@ -1226,7 +1262,6 @@ export default function CybersecurityServicesPage(req, res) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1265,6 +1300,7 @@ export default function CybersecurityServicesPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1277,6 +1313,8 @@ export default function CybersecurityServicesPage(req, res) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1359,15 +1397,11 @@ Security Assessment
 =======
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) )
-=======
 ),
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div> </section> <motion.div initial= {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
@@ -1554,14 +1588,10 @@ Security Assessment
 =======
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
-<<<<<<< HEAD
-=======
 
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
@@ -1612,6 +1642,7 @@ Security Assessment
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1627,3 +1658,5 @@ Security Assessment
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

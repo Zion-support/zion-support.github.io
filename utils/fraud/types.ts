@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -48,6 +49,8 @@ export interface FraudDetectionResult {;
   isFraud: boolean;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Fraud detection types
 export type AdminActionType =
   | 'ban_user'
@@ -57,12 +60,9 @@ export type AdminActionType =
   | 'investigate'
   | 'dismiss';
   | 'escalate';
-<<<<<<< HEAD
 export interface AdminAction {
-=======
 
 export interface AdminAction {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   caseId: string;
   type: AdminActionType;
@@ -73,12 +73,9 @@ export interface AdminAction {;
   executedAt?: string;
   status: 'pending' | 'executed' | 'failed'
 }
-<<<<<<< HEAD
 export interface FraudDetectionResult {
-=======
 
 export interface FraudDetectionResult {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isFraud: boolean;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   confidence: number;
@@ -96,8 +93,8 @@ export interface FraudDetectionResult {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
-<<<<<<< HEAD
 export interface FraudDetectionConfig {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 }
@@ -112,6 +109,10 @@ export interface FraudDetectionConfig {;
 export interface FraudDetectionConfig {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+export interface FraudDetectionConfig {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   enabled: boolean;
   rules: {
     suspiciousActivity: {
@@ -170,18 +171,19 @@ export interface FraudDetectionConfig {;
   autoActions: {
     enabled: boolean;
     actions: AdminActionType[];
-<<<<<<< HEAD
     confidenceThreshold: number
   }
-=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     confidenceThreshold: number,
   };
-=======
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
@@ -191,3 +193,6 @@ export interface FraudDetectionConfig {;
 =======
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

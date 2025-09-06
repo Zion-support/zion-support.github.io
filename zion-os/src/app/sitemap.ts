@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,6 +86,8 @@ export default function sitemap (): MetadataRoute.Sitemap {
     change_frequency: 'weekly';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https: //ziontechgroup.com';
   const routes = [;
     '';
@@ -102,7 +105,6 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
     '/ai-consciousness-simulator/ai-content-creation-revolution/ai-content-creation/ai-content-factory/ai-content-generation-automation-2033/ai-content-generation-pro-2029/ai-content-generator/ai-content-marketing-automation';
     '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant';
     '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub';
-=======
 export default function sitemap(): MetadataRoute.Sitemap {;
   const baseUrl = 'https: //ziontechgroup.com';
   const routes = [;
@@ -121,7 +123,6 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     '/ai-consciousness-simulator/ai-content-creation-revolution/ai-content-creation/ai-content-factory/ai-content-generation-automation-2033/ai-content-generation-pro-2029/ai-content-generator/ai-content-marketing-automation',;
     '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant',;
     '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub',;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
   const quantumServices = [;
     '/quantum-neural-network-platform/quantum-cloud-infrastructure/quantum-financial-trading/quantum-network-optimization/quantum-private-network-solutions/quantum-private-network-solutions-2026'];
@@ -130,7 +131,6 @@ export default function sitemap(): MetadataRoute.Sitemap {;
   const complianceServices = [;
     '/soc2-compliance-automation'];
   const allRoutes = [;
-<<<<<<< HEAD
     ...routes;
     ...aiServices;
     ...quantumServices;
@@ -138,7 +138,6 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     ...complianceServices];
   return allRoutes.map((route) => ({;
     url: `${baseUrl}${route}`;
-=======
     ...routes,;
     ...aiServices,;
     ...quantumServices,;
@@ -146,7 +145,6 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     ...complianceServices];
   return allRoutes.map((route) => ({;
     url: `${baseUrl}${route}`,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     lastModified: new Date();
     changeFrequency: 'weekly';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

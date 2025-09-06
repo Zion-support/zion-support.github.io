@@ -1,6 +1,16 @@
-<<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "GET") {
+    try {
+      const content = fs.existsSync(filePath)
+        ? JSON.parse(fs.readFileSync(filePath, "utf8"))
+        : { content: "" }
+        ? JSON.parse(fs.readFileSync(filePath, "utf8"));
+        : { content: "" };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       res.status(200).json(content);
     } catch (e: any) {
       res.status(500).json({ error: e?.message |"Failed to read changelog" });
@@ -163,6 +173,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -172,3 +183,5 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

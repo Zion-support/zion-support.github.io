@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -26,17 +27,73 @@ import Link from 'next / link';
 import { use_router } from 'next / router';
 =======
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {
+<<<<<<< HEAD
+=======
+  Menu
+  X
+  ChevronDown
+  ChevronRight
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Sparkles
+  Brain
+  Atom
+  Shield
+  DollarSign
+  FileText
+  BarChart3
+  MessageSquare
+  Truck
+  Users
+  Database
+  Cpu
+  Cloud
+  Play
+  Search
+  ShieldCheck
+  TrendingUp
+  Rocket
+  Zap
+  Check
+  Star
+  Clock
+  Target
+  Building
+  Award
+  ChartBar
+  Lock
+  Smartphone
+  Palette
+  Calendar
+  CreditCard
+  Settings
+  Code
+  BookOpen
+  Activity
+  Bot
+  ChevronRight as ChevronRightIcon
+  Eye
+  FlaskConical
+  Link as LinkIcon;
+import Button from '../ui/Button';
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu,
   X,
   ChevronDown,
@@ -87,6 +144,7 @@ import {
   FlaskConical,;
   Link as LinkIcon,;
 import Button from '../ui/Button';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function NeoFuturisticNavigation() {
@@ -1579,15 +1637,18 @@ function NeoFuturisticNavigation() {
   Link as LinkIcon,;
 import Button from '../ui/Button';
 <<<<<<< HEAD
-export default function NeoFuturisticNavigation() {;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function NeoFuturisticNavigation() {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function NeoFuturisticNavigation() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -1613,10 +1674,7 @@ export default function NeoFuturisticNavigation() {
     setActiveDropdown(null);
   }
   const isActive = (path: string) => router.pathname === path;
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const serviceCategories = [
     {
       name: 'Quantum Computing'
@@ -1907,10 +1965,7 @@ export default function NeoFuturisticNavigation() {
       link: '/reports'
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Popular quick links to flagship services
   const popularServiceLinks = [
     { name: 'AI Content Generator', href: '/ai-content-generator' }
@@ -1923,10 +1978,7 @@ export default function NeoFuturisticNavigation() {
     { name: 'AI Sales Automation', href: '/ai-sales-automation' }
     { name: 'AI Market Research', href: '/ai-market-research' }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Newly added real services quick links
   const newServiceLinks = [
     {
@@ -2306,14 +2358,7 @@ export default function NeoFuturisticNavigation() {
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
                   />
                 </button>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -2494,14 +2539,7 @@ export default function NeoFuturisticNavigation() {
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Company Section */}
               <div>
                 <button
@@ -3472,10 +3510,7 @@ icon: <Atom className="w-5 h-5" />,
       )}
     </nav>
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   `w-4 h-4 transition-transform duration-300 $ {
   activeDropdown === 'services' ? 'rotate-180' : ''
 }`
@@ -3531,6 +3566,7 @@ icon: <Atom className="w-5 h-5" />,
 				</div>
 			)}
 		</nav>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -3671,11 +3707,15 @@ icon: <Atom className="w-5 h-5" />,
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
-=======
 	);
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

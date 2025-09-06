@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,13 +29,13 @@ function AIAutomationPage() {
           Transform your business processes with intelligent automation powered by cutting - edge AI technology;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 export default function AIAutomationPage() {return (;
-=======
 "use client",;
 export default function AIAutomationPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">AI Workflow Automation</h1>;

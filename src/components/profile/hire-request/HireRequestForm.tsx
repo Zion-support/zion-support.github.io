@@ -1,17 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { useHireRequestForm, FormValues } from './useHireRequestForm'
 import { Button } from '@/components/ui/button'
 import { DialogFooter } from '@/components/ui/dialog'
 import { Form } from '@/components/ui/form'
-<<<<<<< HEAD
-=======
 import { Loader2 } from 'lucide-react'
 import { TalentProfile } from '@/types/talent'
 import { PersonalInfoFields } from './PersonalInfoFields'
@@ -41,8 +42,6 @@ export function HireRequestForm({
     initialJobTitle,
     userDetails,
   })
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",
@@ -52,14 +51,18 @@ import { DialogFooter } from "@/components/ui/dialog",
 import { Form } from "@/components/ui/form",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Loader2 } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -92,19 +95,22 @@ export interface HireRequestFormProps {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
-=======
 import { TimelineField } from "./TimelineField",
 import { BudgetFields } from "./BudgetFields",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface HireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
   initialJobTitle?: string,
   userDetails?: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name?: string;
     email?: string;
     id?: string
@@ -124,6 +130,7 @@ export function HireRequestForm({
     userDetails
   })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   return (
 ursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -132,6 +139,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name?: string,
     email?: string,
     id?: string
@@ -147,11 +156,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     userDetails 
   }),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -159,7 +163,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <PersonalInfoFields form={form} />
         </div>
-<<<<<<< HEAD
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -281,6 +284,7 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
               <>
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 Submitting...
               </>
             ) : (
@@ -353,6 +357,8 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
@@ -380,15 +386,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 Submitting...
               </>
             ) : (
               'Submit Request'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -398,6 +408,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>           </Button>;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </Button>
         </DialogFooter>
@@ -406,11 +418,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
-<<<<<<< HEAD
-=======
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",;
 import { Button } from "@/components/ui/button",;
@@ -485,6 +493,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -497,3 +506,5 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

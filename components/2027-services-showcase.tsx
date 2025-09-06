@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -50,20 +51,27 @@ export default function ServicesShowcase2027() {
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import Head from 'next/head',
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Search
   Star
   Users
@@ -97,6 +105,7 @@ import {
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -149,6 +158,12 @@ import {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin
+ } from 'lucide-react';
+import { cuttingEdge2027Innovations  } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Search,
   Star,
   Users,
@@ -244,7 +259,6 @@ function ServicesShowcase2027() {
   Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin;
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 export default function ServicesShowcase2027() {;
@@ -1299,7 +1313,6 @@ transition={{ duration: 0 && 0.8 }}>;
 =======
 =======
             {/* CTA Buttons */}
-<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
                 href='/contact'
@@ -1324,27 +1337,14 @@ transition={{ duration: 0 && 0.8 }}>;
                 className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <DollarSign className="w-5 h-5" />
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <span>View Pricing</span>
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Search and Filters */}
       <section className='px-4 sm:px-6 lg:px-8 mb-16'>
         <div className='max-w-7xl mx-auto'>
@@ -1439,15 +1439,16 @@ value={searchTerm}
 =======
                 </select>
               </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Price Range Filter */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Price Range">Price Range</label>
@@ -1473,9 +1474,8 @@ value={searchTerm}
 =======
                 </select>
               </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1492,6 +1492,8 @@ value={searchTerm}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Sort By */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>
@@ -1819,7 +1821,6 @@ value={searchTerm}
                   <div className="bg - black / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 6 h - full hover:border - cyan - 400 / 50 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - 2xl shadow - cyan - 500 / 20">;
 =======
                     <div className='mb-4'>
-<<<<<<< HEAD
                       <div className='text-2xl font-bold text-white'>                        {service.price}                >
                   <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1843,6 +1844,7 @@ value={searchTerm}
 
                       <div className="text-2xl font-bold text-white">
                         {service.price}
+<<<<<<< HEAD
 =======
                     <div className='mb-4'>
 
@@ -1852,6 +1854,8 @@ value={searchTerm}
                         {service.price}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div className='text-2xl font-bold text-white'>                        {service.price}
 
                       {service.description}
@@ -1861,6 +1865,7 @@ value={searchTerm}
 
                         {service.price}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1873,6 +1878,8 @@ value={searchTerm}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       </div>
                     </div>
                     <div className="flex items-start justify-between mb-4">;
@@ -1916,6 +1923,7 @@ value={searchTerm}
                         )}
                       </div>
                     </div>
+<<<<<<< HEAD
 
 =======
 
@@ -1957,6 +1965,9 @@ value={searchTerm}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {/* ROI */}
                     <div className='mb-6 text-center'>;
                       <div className='text-green-400 font-semibold text-lg'>;
@@ -1988,6 +1999,7 @@ value={searchTerm}
                         href='/contact'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact"
@@ -2006,6 +2018,8 @@ value={searchTerm}
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >                    </div>
                     {/* Actions */}
                     <div className="flex space-x-3">
@@ -2013,15 +2027,17 @@ value={searchTerm}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         href={service.link}
                         className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
-=======
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       >
                         Learn More
                       </Link>
@@ -2032,6 +2048,7 @@ value={searchTerm}
                         Contact
 </Link>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2064,6 +2081,9 @@ value={searchTerm}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {/* Category Badge */}
                     <div className='mt-4'>;
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service && service.category}                    <div className="mt-4">;
@@ -2100,6 +2120,7 @@ value={searchTerm}
             </AnimatePresence>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -2125,6 +2146,9 @@ value={searchTerm}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
@@ -2145,6 +2169,7 @@ value={searchTerm}
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
                 }}
+<<<<<<< HEAD
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
 
 =======
@@ -2162,12 +2187,15 @@ value={searchTerm}
               className="text-center py-20"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >              className="text-center py-20"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <button
                 onClick={() => {
@@ -2176,14 +2204,11 @@ setSearchTerm('');
                   setSelectedPriceRange('all')
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >
 
               <button
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
@@ -2253,20 +2278,22 @@ setSearchTerm('');
 =======
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Contact Section */}
       <section className='px-4 sm:px-6 lg:px-8 mb-20'>
         <div className='max-w-4xl mx-auto'>
           <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
             <h2 className='text-3xl font-bold text-white mb-4'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2294,6 +2321,9 @@ setSearchTerm('');
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -2830,19 +2860,16 @@ setSearchTerm('');
         </div>
       </footer>
     </UltraFuturisticMatrixBackground2027>
-<<<<<<< HEAD
 );  )
 }
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

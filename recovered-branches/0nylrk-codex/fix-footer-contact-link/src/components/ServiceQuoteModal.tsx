@@ -7,11 +7,12 @@ import { useState } from 'react',
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -29,6 +30,7 @@ import {ProductListing} from "@/types/listings";
 import {toast} from '@/hooks/use-toast';
 import {supabase} from "@/integrations/supabase/client";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useState } from 'react',
@@ -41,6 +43,9 @@ import { useState } from 'react',
 import { useState } from 'react',
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { useState } from 'react',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -54,6 +59,7 @@ import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -67,19 +73,23 @@ import { supabase } from "@/integrations/supabase/client",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ProductListing } from "@/types/listings";
 import { toast  } from '@/hooks/use-toast';
 import { supabase } from "@/integrations/supabase/client";
-=======
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ServiceQuoteModalProps {
 
   open: boolean
@@ -99,6 +109,7 @@ const TIMELINE_OPTIONS = [
   { label: "6+ months", value: "6+months" }]
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -149,6 +160,8 @@ export function ServiceQuoteModal(): any ({ open, onOpenChange, service }: Servi
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ServiceQuoteModal.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description: ''
     email: ''
     budget: BUDGET_RANGES[0].value
@@ -158,6 +171,7 @@ export function ServiceQuoteModal(): any ({ open, onOpenChange, service }: Servi
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ServiceQuoteModal.tsx
 
@@ -228,23 +242,23 @@ function ServiceQuoteModal() {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description: '',
     email: '',
     budget: BUDGET_RANGES[0].value,
-<<<<<<< HEAD
     timeframe: TIMELINE_OPTIONS[0].value}),;
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
   const [isSubmitting, setIsSubmitting] = useState(false);
-=======
     timeframe: TIMELINE_OPTIONS[0].value}),
   const [startDate, setStartDate] = useState<Date | undefined>(new Date()),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -256,18 +270,27 @@ function ServiceQuoteModal() {
 =======
 
 =======
+=======
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value }))
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true)
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(),
     setIsSubmitting(true),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -313,6 +336,8 @@ function ServiceQuoteModal() {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       // Call Supabase function to process the quote
       const { data, error } = await supabase.functions.invoke('process-quote', {
@@ -326,15 +351,18 @@ function ServiceQuoteModal() {
             startDate: startDate?.toISOString()
             endDate: endDate?.toISOString()}
         }
-<<<<<<< HEAD
       });
       if (error) throw error;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }),
 
       if (error) throw error,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -342,6 +370,8 @@ function ServiceQuoteModal() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Show success message
       toast({
         title: "Quote Request Submitted!"
@@ -357,21 +387,24 @@ function ServiceQuoteModal() {
 =======
       onOpenChange(false),
       setFormData({
-<<<<<<< HEAD
         description: ''
         email: ''
         budget: BUDGET_RANGES[0].value
         timeframe: TIMELINE_OPTIONS[0].value})
       setStartDate(new Date());
       setEndDate(undefined);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description: '',
         email: '',
         budget: BUDGET_RANGES[0].value,
         timeframe: TIMELINE_OPTIONS[0].value}),
       setStartDate(new Date()),
       setEndDate(undefined),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -381,6 +414,8 @@ function ServiceQuoteModal() {
       console.error("Error submitting quote:", error);
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setCurrentStep('details')
     } catch (error) {
       console.error("Error submitting quote:", error),
@@ -475,31 +510,26 @@ if (throw error) {
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const nextStep = () => {
     if (currentStep === 'details') setCurrentStep('timeline'),
     else if (currentStep === 'timeline') setCurrentStep('contact')
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const prevStep = () => {
     if (currentStep === 'timeline') setCurrentStep('details'),
     else if (currentStep === 'contact') setCurrentStep('timeline')
-<<<<<<< HEAD
   }
-=======
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -548,11 +578,14 @@ if (throw error) {
                     {BUDGET_RANGES.map((range) => (
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
@@ -995,11 +1028,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 =======
                     {BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {range.label}
                       </SelectItem>
                     ))}
@@ -1106,6 +1134,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                         className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                           "justify-start text-left font-normal w-full"
@@ -1176,11 +1205,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                 <Label htmlFor="email" className="text-white">Contact Email</Label>;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           "justify-start text-left font-normal w-full";
 
-=======
                           "justify-start text-left font-normal w-full",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >
@@ -1257,6 +1286,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                       <span className="text-white">{format(endDate, "PPP")}</span>
                     </div>
                   )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1353,24 +1383,17 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ServiceQuoteModal.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
           )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
             {currentStep !== 'details' && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1726,7 +1749,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
-<<<<<<< HEAD
             </div>
           </DialogFooter>
         </form>
@@ -1734,8 +1756,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
     </Dialog>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>;
           </DialogFooter>;
         </form>;
@@ -1861,5 +1886,8 @@ return (<Dialog open= {
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

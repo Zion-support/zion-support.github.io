@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,6 +12,9 @@ import { SEO } from "@/components/SEO";
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import {
   Card
@@ -36,17 +40,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
   TableRow
 } from '@/components/ui/table'
 import { Badge } from '@/components/ui/badge'
-<<<<<<< HEAD
-=======
 import { Search, Filter } from 'lucide-react'
 import { SEO } from '@/components/SEO'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { Search, Filter } from 'lucide-react'
 import { SEO } from "@/components/SEO";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -59,6 +62,7 @@ import { Search, Filter } from 'lucide-react'
 import { SEO } from "@/components/SEO",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -66,10 +70,13 @@ import { SEO } from "@/components/SEO",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -80,6 +87,8 @@ const MOCK_SUPPORT_REQUESTS = [
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 'SR-1001'
     user: 'john.doe@example.com'
     userId: 'user-123'
@@ -206,6 +215,7 @@ export default function SupportRequests() {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: 'SR-1007',
     user: 'jamie.taylor@tech.org',
     userId: 'user-345',
@@ -237,6 +247,8 @@ class ErrorBoundary extends React.Component {
   }
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "SR-1001",
     user: "john.doe@example.com",
     userId: "user-123",
@@ -303,9 +315,6 @@ class ErrorBoundary extends React.Component {
     category: "verification"
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     id: 'SR-1007',
     user: 'jamie.taylor@tech.org',
     userId: 'user-345',
@@ -368,8 +377,6 @@ export default function SupportRequests() {
     setPriorityFilter(null)
     setCategoryFilter(null)
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     id: "SR-1007",
     user: "jamie.taylor@tech.org",
     userId: "user-345",
@@ -542,11 +549,6 @@ export default function SupportRequests() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
@@ -564,6 +566,7 @@ export default function SupportRequests() {;
               Manage and respond to user support requests and issues
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -590,22 +593,27 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='mt-4 md:mt-0'>
             <Button className='bg-zion-purple hover:bg-zion-purple-light'>
-=======
           
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               New Support Case
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -624,12 +632,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 =======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>
@@ -639,6 +644,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -680,12 +686,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>
               <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -703,12 +713,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -723,12 +737,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 =======
-          
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
@@ -737,6 +748,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardHeader>
           </Card>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -772,22 +784,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onValueChange={value => setStatusFilter(value |null)}
 ursor/fix-website-loading-errors-and-merge-6662
 =======
-        <Tabs defaultValue='all' className='mb-8'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        <Tabs defaultValue='all' className='mb-8'>
         
         <Tabs defaultValue="all" className="mb-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <TabsList>
             <TabsTrigger value="all">All Requests</TabsTrigger>
             <TabsTrigger value="escalated">Escalated</TabsTrigger>
             <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>
             <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -860,21 +877,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
-          <TabsContent value='all' className='mt-6'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          <TabsContent value='all' className='mt-6'>
           
           <TabsContent value="all" className="mt-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <Input
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -887,24 +909,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   placeholder='Search by ID, user or issue...'
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   className='pl-10'                />
               </div>
               <Select
-<<<<<<< HEAD
                 value={statusFilter |''}
                 onValueChange={value => setStatusFilter(value |null)}
-=======
                 value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Status' />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -915,6 +939,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -946,6 +971,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Statuses</SelectItem>
@@ -954,27 +981,31 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
               <Select
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 value={priorityFilter |''}
                 onValueChange={value => setPriorityFilter(value |null)}
-=======
                 value={priorityFilter || ''}
                 onValueChange={value => setPriorityFilter(value || null)}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Priority' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 </SelectTrigger>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1004,6 +1035,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Priorities</SelectItem>
@@ -1012,27 +1045,31 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
               <Select
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 value={categoryFilter |''}
                 onValueChange={value => setCategoryFilter(value |null)}
-=======
                 value={categoryFilter || ''}
                 onValueChange={value => setCategoryFilter(value || null)}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Category' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 </SelectTrigger>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1058,6 +1095,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Categories</SelectItem>
@@ -1070,7 +1109,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </SelectContent>
               </Select>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Button
                 variant='outline'
                 onClick={resetFilters}
@@ -1079,6 +1121,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Filter className='h-4 w-4 mr-2' /> Reset Filters
               </Button>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             {/* Support Requests Table */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1109,17 +1152,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters
               </Button>
             </div>
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
@@ -1139,30 +1179,34 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </TableHeader>
                   <TableBody>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {filteredRequests.map(request => (                      <TableRow key={request.id}>
                         <TableCell className='font-medium'>
                           {request.id}
                         </TableCell>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {filteredRequests.map((request) => (
                       <TableRow key={request.id}>
                         <TableCell className="font-medium">{request.id}</TableCell>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           <Badge
                             variant={
                               request.status === 'open'
@@ -1185,6 +1229,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                                   : 'outline'
                             }
                           >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                             {request.priority}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1239,6 +1284,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           <Badge variant={
                             request.status === 'open' 
                               ? 'default' 
@@ -1505,11 +1552,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                               ? 'default';
                               : 'outline';
                           }>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             {request.priority}
                           </Badge>
                         </TableCell>
@@ -1527,7 +1569,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               </CardContent>
             </Card>
           </TabsContent>
-<<<<<<< HEAD
           <TabsContent value='escalated' className='mt-6'>
             <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
               <h3 className='text-xl font-medium mb-4'>Escalated Requests</h3>
@@ -1555,7 +1596,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className='text-zion-slate-light'>
                 These support requests have been waiting for an agent response
                 for over 24 hours.
-=======
           
           <TabsContent value="escalated" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
@@ -1582,6 +1622,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-zion-slate-light">
                 These support requests have been waiting for an agent response for over 24 hours.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1593,6 +1634,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </p>
 >>>>>>>             </div>
           </TabsContent>
@@ -1600,6 +1643,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1623,6 +1667,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return true
 })
 //Count by status for the summary dashboard Support Requests | Admin Dashboard"description=" Manage and track user support requests and issues"/> <div className=" container mx-auto px-4 py-8"> <div className=" flex flex-col md:flex-row items-start md:items-center justify-between mb-8"> <div> <h1 className=" text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"> Support Requests </h1> <p className=" text-zion-slate-light mt-2"> Manage and respond to user support requests and issues </p> </div> <div className=" mt-4 md:mt-0"> <Button className=" bg-zion-purple hover:bg-zion-purple-light"> New Support Case </Button> </div> </div> <CardDescription>Open Requests</CardDescription> </CardHeader> </Card> <Card> <CardDescription>In Progress</CardDescription> </CardHeader> </Card> <Card> <CardDescription>Resolved</CardDescription> </CardHeader> </Card> <Card> <CardDescription>Total Requests</CardDescription> </CardHeader> </Card> </div> <Tabs defaultValue=" all"className=" mb-8"> <TabsList> <TabsTrigger value=" all">All Requests</TabsTrigger> <TabsTrigger value=" escalated">Escalated</TabsTrigger> <TabsTrigger value=" ai-flagged">AI Flagged</TabsTrigger> <TabsTrigger value=" need-response">Need Response</TabsTrigger> </TabsList> </SelectTrigger> <SelectContent> <SelectItem value="">All Statuses</SelectItem> <SelectItem value=" open">Open</SelectItem> <SelectItem value=" in-progress">In Progress</SelectItem> <SelectItem value=" resolved">Resolved</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Priorities</SelectItem> <SelectItem value=" high">High</SelectItem> <SelectItem value=" medium">Medium</SelectItem> <SelectItem value=" low">Low</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Categories</SelectItem> <SelectItem value=" authentication">Authentication</SelectItem> <SelectItem value=" billing">Billing</SelectItem> <SelectItem value=" api">API</SelectItem> <SelectItem value=" disputes">Disputes</SelectItem> <SelectItem value=" verification">Verification</SelectItem> <SelectItem value=" profile">Profile</SelectItem> </SelectContent> </Select> </Button> </div> {
@@ -1644,21 +1690,19 @@ ursor/fix-website-loading-errors-and-merge-6662
   new Date (request.createdAt) .toLocaleDateString ()
 }</TableCell> <TableCell> {
   new Date (request.lastUpdated) .toLocaleDateString () "
-<<<<<<< HEAD
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>)
 }'"}
-=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;
 }'"};
-=======
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

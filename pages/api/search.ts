@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { AccessLevel } from '../../utils/search/filter';
@@ -80,6 +78,7 @@ function handler() {
     });
 
   } catch (e: any) {
+<<<<<<< HEAD
 
 
   }
@@ -100,12 +99,34 @@ function handler() {
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+    res.status(500).json({ ok: false, error: e?.message |"Search failed" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { AccessLevel } from '../../utils/search/filter';
+import { parseQueryToFilters } from '../../utils/search/parser';
+import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { AccessLevel } from '../../utils/search/filter';
+import { parseQueryToFilters } from '../../utils/search/parser';
+import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req, res) {
+  try {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const q = (req.query.q as string) || '';
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])]));
     const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null;
     res.status(200).json({
@@ -122,6 +143,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       results})
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Search failed' })
+<<<<<<< HEAD
 
   }
 }
@@ -160,6 +182,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const results = searchAll(parsed, access);
 
     const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])]));
+=======
+    const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])])),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null;
     res.status(200).json({
       ok: true,
@@ -178,4 +203,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

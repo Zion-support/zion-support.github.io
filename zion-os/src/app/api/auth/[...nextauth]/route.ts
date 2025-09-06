@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,6 +25,8 @@ const handler = NextAuth({;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
@@ -109,7 +112,6 @@ export { handler as GET, handler as POST }
   pages: {signIn: "/auth/signin";
     signUp: "/auth/signup"}});
 export { handler as GET, handler as POST }
-=======
 import NextAuth from "next-auth",;
 import CredentialsProvider from "next-auth/providers/credentials",;
 import { PrismaAdapter } from "@auth/prisma-adapter",;
@@ -176,6 +178,7 @@ const handler = NextAuth({;
     signUp: "/auth/signup"}}),;
 export { handler as GET, handler as POST };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -183,3 +186,5 @@ export { handler as GET, handler as POST };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

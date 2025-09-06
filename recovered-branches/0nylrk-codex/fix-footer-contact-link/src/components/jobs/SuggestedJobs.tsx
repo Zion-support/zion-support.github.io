@@ -5,45 +5,49 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useAuth} from "@/hooks/useAuth";
 import {Loader2} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {useJobSuggestions} from "@/hooks/useJobSuggestions";
 import {JobMatchesCard} from "./JobMatchesCard";
 import {NoJobsCard} from "./NoJobsCard";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
-=======
 import { JobMatchesCard } from "./JobMatchesCard",
 import { NoJobsCard } from "./NoJobsCard",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface SuggestedJobsProps {
   talentId?: string
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SuggestedJobsProps {
   talentId?: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface SuggestedJobsProps {
@@ -62,19 +66,20 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-<<<<<<< HEAD
   const { user } = useAuth();
-=======
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { 
     isLoading,
     updateJobMatchStatus, 
@@ -86,6 +91,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   } = useJobSuggestions(currentTalentId),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -93,6 +99,8 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const currentTalentId = talentId |user?.id;
   const {
@@ -125,24 +133,29 @@ import {NoJobsCard} from "./NoJobsCard";
 =======
     updateJobMatchStatus(matchId, 'applied'),
     // In a real app, this might redirect to application form or open a modal
-<<<<<<< HEAD
   }
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   if (isLoading) {
     return (
@@ -151,11 +164,14 @@ import {NoJobsCard} from "./NoJobsCard";
       </div>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from "lucide-react",;
 import { Badge } from "@/components/ui/badge",;
@@ -317,19 +333,11 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
 <<<<<<< HEAD
 =======
     );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />
   }
-<<<<<<< HEAD
-=======
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       {/* New Matches Section */}
@@ -381,9 +389,12 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <JobMatchesCard
                 key={match.id}
                 match={match}
@@ -391,10 +402,13 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 onDecline={handleDecline}
                 showApplied={true}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               />
             ))}
           </div>
@@ -403,6 +417,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -732,6 +747,8 @@ if (isLoading) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <JobMatchesCard 
                 key={match.id} 
                 match={match} 
@@ -739,11 +756,11 @@ if (isLoading) {
                 onDecline={handleDecline}
                 showApplied={true}
               />;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
-=======
               />;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

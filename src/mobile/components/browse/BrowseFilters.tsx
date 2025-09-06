@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Slider } from '@/components/ui/slider'
@@ -17,7 +20,10 @@ import {
   SelectValue
 } from '@/components/ui/select'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { X, Filter } from 'lucide-react'
 
 
@@ -26,6 +32,7 @@ interface BrowseFiltersProps {
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const addFilter = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -43,16 +50,14 @@ import { X, Filter } from 'lucide-react'
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
 import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { X, Filter } from 'lucide-react'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
@@ -61,12 +66,15 @@ import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   type: 'jobs' | 'talents'
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([])
@@ -78,11 +86,14 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   type: "jobs" | "talents"
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -119,11 +130,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-3">
@@ -142,6 +148,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               </SheetHeader>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <div className='py-6 space-y-6'>
@@ -151,17 +158,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                   <>
 >>>>>>>                     <div className="space-y-2">
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='py-6 space-y-6'>
                 {type === 'jobs' ? (
-=======
               
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <>
                     <div className="space-y-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -175,6 +178,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                     <div className='space-y-2'>
@@ -183,15 +187,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                       <Label>Experience Level</Label>
 >>>>>>>                       <div className="flex gap-2 flex-wrap">
 =======
-                    <div className='space-y-2'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    <div className='space-y-2'>
                     
                     <div className="space-y-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <Label>Experience Level</Label>
                       <div className="flex gap-2 flex-wrap">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -214,10 +214,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className='space-y-2'>
                       <Label>Experience (years)</Label>
                       <Slider
@@ -228,12 +231,15 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         className='my-4'                      />
                       <div className='flex justify-between text-xs text-muted-foreground'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                         <span>0+ years</span>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                         <span>0+ years</span>
 >>>>>>>                         <span>20+ years</span>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
@@ -245,11 +251,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         className="my-4"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <span>0+ years</span>
                         <span>20+ years</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -259,14 +260,19 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-                <div className='space-y-2'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <div className='space-y-2'>
                 
                 <div className="space-y-2">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Label>Location</Label>
 =======
                 <div className='space-y-2'>
@@ -285,6 +291,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </SelectContent>
                   </Select>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -390,15 +397,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
-                <div className='space-y-2'>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <div className='space-y-2'>
                 
                 <div className="space-y-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Label>Salary Range</Label>
                   <div className="flex gap-4 items-center">
                     <Input placeholder="Min" type="number" className="w-full" />
@@ -406,16 +409,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Input placeholder="Max" type="number" className="w-full" />
                   </div>
                 </div>
-<<<<<<< HEAD
                 <div className='space-y-2'>
-=======
                 
                 <div className="space-y-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Label>Skills</Label>
                   <div className="grid grid-cols-2 gap-2">
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
@@ -426,21 +422,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <div className='flex items-center justify-between'>
-=======
                 
                 <div className="flex items-center justify-between">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -458,12 +456,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <SheetFooter>
                 <Button variant="outline" className="w-full">Reset</Button>
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -478,12 +480,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 =======
-          
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          
           <Select>
             <SelectTrigger className="w-[120px] h-8">
               <SelectValue placeholder="Sort By" />
@@ -497,9 +496,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Select>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {activeFilters.map(filter => (
             <Badge
               key={filter}
@@ -514,22 +516,26 @@ ursor/fix-website-loading-errors-and-merge-6662
           ))}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </div>
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
     </div>;
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {activeFilters.map((filter) => (
@@ -557,6 +563,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -572,3 +579,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

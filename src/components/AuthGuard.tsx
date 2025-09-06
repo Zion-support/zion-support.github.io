@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/AuthGuard.tsx
 
 
@@ -8,6 +9,8 @@
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const redirectTo = options?.redirectTo || '/login'
       const returnUrl = options?.returnUrl || router.asPath
           if (!requireAuth({ showToast: false })) return false,
@@ -21,9 +24,12 @@
     isLoading}
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -40,12 +46,15 @@ interface AuthGuardProps {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const redirectTo = options?.redirectTo |'/login'
@@ -58,6 +67,7 @@ interface AuthGuardProps {;
     isAuthenticated
     user
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -122,9 +132,10 @@ interface AuthGuardProps {;
   allowGuest?:boolean;
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     isLoading}
 }
-=======
   useEffect(() => {
     // Don't redirect while auth is still loading
     if (isLoading) return,
@@ -585,8 +596,11 @@ return false;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

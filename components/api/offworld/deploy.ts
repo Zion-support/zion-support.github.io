@@ -87,6 +87,7 @@ if (!fs && fs.existsSync(outDir)) {
     return res.status(200).json({ cid, provider });
   } catch (error: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }    return res.status(200).json({ cid, provider })
 
@@ -100,11 +101,10 @@ if (!fs && fs.existsSync(outDir)) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-    return res.status(500).json({ error: error?.message |'Unknown error' });
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    return res.status(500).json({ error: error?.message |'Unknown error' });
     return res.status(500).json({ error: error?.message || 'Unknown error' });
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }    return res.status(200).json({ cid, provider })
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -125,6 +125,7 @@ if (!fs && fs.existsSync(outDir)) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -213,18 +214,19 @@ function handler() {
 =======
 =======
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
 }
-=======
   }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

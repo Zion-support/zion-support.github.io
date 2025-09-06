@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
@@ -22,6 +23,8 @@ const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
 ))
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from &quot;react&quot;
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
 <<<<<<< HEAD
@@ -43,52 +46,45 @@ const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
 ;
 import { cn } from &quot;@/lib/utils&quot;
 import { ButtonProps, buttonVariants } from &quot;@/components/ui/button&quot;
-=======
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react'
-<<<<<<< HEAD
 import { cn } from &quot;@/lib/utils&quot;
 import { ButtonProps, buttonVariants } from &quot;@/components/ui/button&quot;
 const Pagination = ({ className, ...props }: React.ComponentProps<&quot;nav&quot;>) => (
-=======
 
 import { cn } from "@/lib/utils"
 import { ButtonProps, buttonVariants } from "@/components/ui/button"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   <nav
-<<<<<<< HEAD
     role=&quot;navigation&quot;
     aria-label=&quot;pagination&quot;
     className={cn(&quot;mx-auto flex w-full justify-center&quot; className)}
-=======
     role="navigation"
     aria-label="pagination"
     className={cn("mx-auto flex w-full justify-center", className)}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {...props}
   />
 )
-<<<<<<< HEAD
 Pagination.displayName = &quot;Pagination&quot;
 const PaginationContent = React.forwardRef<
   HTMLUListElement
   React.ComponentProps<&quot;ul&quot;>
-=======
 Pagination.displayName = "Pagination"
 
 const PaginationContent = React.forwardRef<
   HTMLUListElement,
   React.ComponentProps<"ul">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >(({ className, ...props }, ref) => (
   <ul
     ref={ref}
-<<<<<<< HEAD
     className={cn(&quot;flex flex-row items-center gap-1&quot; className)}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     className={cn(&quot;flex flex-row items-center gap-1&quot; className)}
@@ -96,24 +92,24 @@ const PaginationContent = React.forwardRef<
     className={cn("flex flex-row items-center gap-1", className)}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    className={cn("flex flex-row items-center gap-1", className)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {...props}
 />
 ))
-<<<<<<< HEAD
 PaginationContent.displayName = &quot;PaginationContent&quot;
 const PaginationItem = React.forwardRef<
   HTMLLIElement
   React.ComponentProps<&quot;li&quot;>
-=======
 PaginationContent.displayName = "PaginationContent"
 
 const PaginationItem = React.forwardRef<
   HTMLLIElement,
   React.ComponentProps<"li">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >(({ className, ...props }, ref) => (
-<<<<<<< HEAD
   <li ref={ref} className={cn("&quot; className)} {...props} />
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   <li ref={ref} className={cn("&quot; className)} {...props} />
@@ -121,13 +117,16 @@ const PaginationItem = React.forwardRef<
   <li ref={ref} className={cn("", className)} {...props} />
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  <li ref={ref} className={cn("", className)} {...props} />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ))
-<<<<<<< HEAD
 PaginationItem.displayName = &quot;PaginationItem&quot;
 type PaginationLinkProps = {
   isActive?: boolean
   size?: ButtonProps[&quot;size&quot;]
 } & React.ComponentProps<&quot;a&quot;>
+<<<<<<< HEAD
 <<<<<<< HEAD
   size?: ButtonProps[&quot;size&quot;]
 } & React.ComponentProps<&quot;a&quot;>
@@ -136,29 +135,33 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 PaginationItem.displayName = "PaginationItem"
 
 type PaginationLinkProps = {
   isActive?: boolean
-<<<<<<< HEAD
   size?: ButtonProps[&quot;size&quot;]
 } & React.ComponentProps<&quot;a&quot;>
-=======
   size?: ButtonProps["size"]
 } & React.ComponentProps<"a">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PaginationButtonProps
 >>>>>>>   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
   isActive?: boolean
 }
 const PaginationLink = ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -171,28 +174,31 @@ const PaginationLink = ({
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   className
   isActive
   size = &quot;icon&quot;
-=======
   className,
   isActive,
-<<<<<<< HEAD
   size = &quot;icon&quot;
-=======
   size = "icon",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ...props
 >>>>>>> }: PaginationLinkProps) => (
   <a
     aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -208,17 +214,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         variant: isActive ? "outline&quot; : &quot;ghost&quot;
-<<<<<<< HEAD
         size})
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         variant: isActive ? "outline" : "ghost",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         size}),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
 >>>>>>>     )}
     {...props}
@@ -226,17 +232,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 PaginationLink.displayName = &quot;PaginationLink&quot;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-PaginationLink.displayName = &quot;PaginationLink&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+PaginationLink.displayName = &quot;PaginationLink&quot;
 PaginationLink.displayName = "PaginationLink"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
   ({ page, isActive, className, ...props }, ref) => (
     <button
@@ -247,6 +258,7 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       className={cn(;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         buttonVariants({ variant: 'ghost', size: 'icon' });
@@ -255,17 +267,21 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         buttonVariants({ variant: 'ghost', size: 'icon' });
         isActive && 'bg-green-600 text-white';
-=======
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
         isActive && 'bg-green-600 text-white',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className;
 >>>>>>>       )}
       {...props}
@@ -291,17 +307,22 @@ const PaginationPrevious = ({
 )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 PaginationPrevious.displayName = &quot;PaginationPrevious&quot;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-PaginationPrevious.displayName = &quot;PaginationPrevious&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+PaginationPrevious.displayName = &quot;PaginationPrevious&quot;
 PaginationPrevious.displayName = "PaginationPrevious"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const PaginationNext = ({
   className
   ...props
@@ -318,17 +339,22 @@ const PaginationNext = ({
 )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 PaginationNext.displayName = &quot;PaginationNext&quot;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-PaginationNext.displayName = &quot;PaginationNext&quot;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+PaginationNext.displayName = &quot;PaginationNext&quot;
 PaginationNext.displayName = "PaginationNext"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const PaginationEllipsis = ({
   className
   ...props
@@ -344,10 +370,13 @@ const PaginationEllipsis = ({
 )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 PaginationEllipsis.displayName = &quot;PaginationEllipsis"
 export {
   Pagination
@@ -359,6 +388,7 @@ export {
   PaginationNext
   PaginationPrevious}
 <<<<<<< HEAD
+<<<<<<< HEAD
   PaginationNext,;
   PaginationPrevious};
 >>>>>>> 
@@ -367,6 +397,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
 export {
@@ -376,16 +408,17 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationButton,
-<<<<<<< HEAD
   PaginationNext,;
   PaginationPrevious};
-=======
   PaginationNext,
   PaginationPrevious}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

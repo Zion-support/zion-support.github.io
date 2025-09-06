@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
 =======
@@ -8,6 +9,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, {
   createContext
   useContext
@@ -220,6 +224,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
             onClick: loginAction
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { toast } from '@/hooks/use-toast';
 =======
@@ -240,6 +245,8 @@ import { toast } from '@/hooks/use-toast';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         : undefined
     })
   }, [])
@@ -709,14 +716,18 @@ export function useErrorHandler() {
 
     handleAsyncOperation}
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         : undefined,;
     });
   }, []);
   const clearAllErrors = useCallback(() => {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
   }, [])
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> import { toast } from '@/hooks/use-toast';
@@ -731,6 +742,8 @@ import { Button } from '@/components/ui/button',;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -857,6 +870,7 @@ export function GlobalErrorHandler({ children } GlobalErrorHandlerProps) {;
   }, []),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>>   const contextValue: ErrorContextType = {
@@ -866,6 +880,8 @@ export function GlobalErrorHandler({ children } GlobalErrorHandlerProps) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const contextValue: ErrorContextType = {
     reportError,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -874,12 +890,15 @@ export function GlobalErrorHandler({ children } GlobalErrorHandlerProps) {;
     showAuthError,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     clearAllErrors,
   }
   return (
@@ -896,6 +915,7 @@ export function useGlobalErrorHandler(): ErrorContextType {
   }
   return context
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     clearAllErrors},
 
@@ -904,6 +924,8 @@ export function useGlobalErrorHandler(): ErrorContextType {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     clearAllErrors},
 
   return (
@@ -922,14 +944,18 @@ export function useGlobalErrorHandler(): ErrorContextType {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> // Helper function to convert technical errors to user-friendly messages
@@ -941,6 +967,8 @@ function getErrorMessage(error: Error): string {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (
     message.includes('fetch') ||
     message.includes('network') ||
@@ -1041,11 +1069,14 @@ export function useErrorHandler() {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
     return "Unable to connect to our servers. Please check your internet connection."
   }
@@ -1263,6 +1294,7 @@ export function useErrorHandler() {;
 } ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -1355,3 +1387,5 @@ if (options?.onError) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

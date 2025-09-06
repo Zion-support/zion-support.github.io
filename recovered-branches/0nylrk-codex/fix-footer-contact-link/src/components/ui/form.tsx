@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/form.tsx
 
 <<<<<<< HEAD
@@ -11,12 +12,13 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from 'react';
 import * as LabelPrimitive from '@radix-ui/react-label';
 import {useReactId} from '@/hooks/useReactId';
 import {Slot} from '@radix-ui/react-slot';
 import {Controller, type, FieldPath, type, FieldValues, FormProvider, useFormContext,} from 'react-hook-form';
-<<<<<<< HEAD
 import {cn} from '@/lib/utils';
 import {Label} from '@/components/ui/label';
 const Form = FormProvider;
@@ -27,10 +29,13 @@ const FormFieldContext = React.createContext<FormFieldContextValue>({
   name: ''
 });
 const FormField = ({ ...props }: any) =></FormFieldContextValue> {
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { useReactId } from "@/hooks/useReactId"
@@ -41,6 +46,7 @@ import {
   type FieldValues,
   FormProvider,
   useFormContext} from "react-hook-form"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -99,6 +105,8 @@ const useFormField = () => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { cn } from "@/lib/utils"
 import { Label } from "@/components/ui/label"
@@ -113,7 +121,6 @@ const FormFieldContext = React.createContext<FormFieldContextValue>({
   name: ""})
 
 const FormField = ({ ...props }: any) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <FormFieldContext.Provider value={{ name: props.name }}>
@@ -121,10 +128,13 @@ const FormField = ({ ...props }: any) => {
     </FormFieldContext.Provider>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
 const useFormField = () => {
@@ -136,8 +146,11 @@ const useFormField = () => {
   ) as FormItemContextValue | null;
   const { getFieldState, formState } = useFormContext();
   const fieldState = getFieldState(fieldContext.name, formState);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 }
 
@@ -148,6 +161,7 @@ const useFormField = () => {
 
   const fieldState = getFieldState(fieldContext.name, formState)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -325,11 +339,12 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<;
     formMessageId:`${id}-form-item-message`,;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!fieldContext) {
     throw new Error("useFormField should be used within <FormField>")
   }
   if (!itemContext) {
-<<<<<<< HEAD
     throw new Error('useFormField should be used within <FormItem>');
   }
   const { id } = itemContext as FormItemContextValue;
@@ -346,15 +361,11 @@ type FormItemContextValue = {
   id: string
 }
 const FormItemContext = React.createContext<FormItemContextValue | null>(null);
-<<<<<<< HEAD
 const FormItem = React.forwardRef<
   HTMLDivElement
   React.HTMLAttr</HTMLDivElement>ibutes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const id = useReactId();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     throw new Error("useFormField should be used within <FormItem>")
   }
 
@@ -482,10 +493,6 @@ FormMessage && FormMessage.displayName = 'FormMessage';
 }
 
 const FormItemContext = React.createContext<FormItemContextValue | null>(null)
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const FormItem = React.forwardRef<
   HTMLDivElement,
@@ -493,12 +500,12 @@ const FormItem = React.forwardRef<
 >(({ className, ...props }, ref) => {
   const id = useReactId()
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <FormItemContext.Provider value={{ id }}>
       <div ref={ref} className={cn("space-y-2", className)} {...props} />
     </FormItemContext.Provider>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -511,6 +518,8 @@ const FormItem = React.forwardRef<
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 });
 FormItem.displayName = 'FormItem';
@@ -550,8 +559,11 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<
   const body = error ? String(error?.message) : children;
   if (!body) {
     return null;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 })
 FormItem.displayName = "FormItem"
@@ -563,6 +575,7 @@ const FormLabel = React.forwardRef<
   const { error, formItemId } = useFormField()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
@@ -571,6 +584,8 @@ const FormLabel = React.forwardRef<
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Label
       ref={ref}
@@ -578,10 +593,13 @@ const FormLabel = React.forwardRef<
       htmlFor={formItemId}
       {...props}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     />
   )
 })
@@ -595,12 +613,15 @@ const FormControl = React.forwardRef<
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Slot
       ref={ref}
@@ -613,6 +634,7 @@ const FormControl = React.forwardRef<
       aria-invalid={!!error}
       {...props}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -623,6 +645,8 @@ const FormControl = React.forwardRef<
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     />
   )
 })
@@ -636,18 +660,22 @@ const FormDescription = React.forwardRef<
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <p
       ref={ref}
       id={formDescriptionId}
       className={cn("text-sm text-muted-foreground", className)}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -659,6 +687,8 @@ const FormDescription = React.forwardRef<
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     />
   )
 })
@@ -673,6 +703,7 @@ const FormMessage = React.forwardRef<
 
   if (!body) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -680,26 +711,30 @@ const FormMessage = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    return null
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    return null
     return null;
-=======
     return null
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
     >
       {body}
     </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 });
 FormMessage.displayName = 'FormMessage';
@@ -713,8 +748,11 @@ export {
   FormMessage
   FormField
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 })
 FormMessage.displayName = "FormMessage"
@@ -878,6 +916,7 @@ export {
   FormDescription,
   FormMessage,
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/form.tsx
 
 
@@ -979,16 +1018,17 @@ React.HTMLAttributes<HTMLParagraphElement> > ( ({
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/form.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormField}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   FormField,;
 };
-=======
   FormField}
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

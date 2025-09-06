@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/ProjectDetailsField.tsx
 
 =======
@@ -11,6 +12,9 @@ import { UseFormReturn  } from './react - hook - form';
 =======
 import React from "react";
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { UseFormReturn } from "react-hook-form";
 import {
   FormField
@@ -21,6 +25,7 @@ import {
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
+<<<<<<< HEAD
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>;
@@ -53,6 +58,8 @@ interface ProjectDetailsFieldProps {
   form: UseFormReturn < FormValues>;
 }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/ProjectDetailsField.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Textarea} from "@/components/ui/textarea";
@@ -60,9 +67,12 @@ import {FormValues} from "./useHireRequestForm";
 
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -74,6 +84,7 @@ import React from "react",;
 import { UseFormReturn } from "react-hook-form",;
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Textarea } from "@/components/ui/textarea",;
+<<<<<<< HEAD
 
 =======
 } from "@/components/ui/form";
@@ -206,6 +217,11 @@ export function ProjectDetailsField({ form } ProjectDetailsFieldProps) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/ProjectDetailsField.tsx
 =======
+=======
+import { FormValues } from "./useHireRequestForm";
+interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
   return (
@@ -226,6 +242,7 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
         </FormItem>
       )}
     />
+<<<<<<< HEAD
 
   );
 }
@@ -233,3 +250,10 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

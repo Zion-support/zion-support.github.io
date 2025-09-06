@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -104,6 +105,8 @@ export default function QuantumSecureCommunication() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react';
 import Head from 'next/head';
@@ -113,40 +116,29 @@ import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
   DollarSign, Shield, Mail, MapPin, Rocket, Lock
   Brain, Database, TrendingUp as TrendingUpIcon, Users
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
 import { motion } from 'framer-motion',;
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   DollarSign, Shield, Mail, MapPin, Rocket, Lock,
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   Target, BarChart, PieChart, Activity, Eye, Key
-<<<<<<< HEAD
 } from 'lucide-react'
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-=======
 } from 'lucide-react',;
 import Button from '../components/ui/Button',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function QuantumSecureCommunication() {
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -154,16 +146,20 @@ export default function QuantumSecureCommunication() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const features = [
     'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communicationsQuantum-resistant algorithms and protocolsSecure file sharing and collaboration toolsReal-time encrypted messaging and video callsAudit trails and compliance reportingMulti-platform support (Web, Mobile, Desktop)Integration with existing communication tools'
     'Advanced threat detection and monitoring24/7 security monitoring and support'
-<<<<<<< HEAD
   ]
   const useCases = [
     'Secure executive communicationsConfidential document sharingRegulated industry complianceResearch collaborationGovernment communications'
@@ -178,8 +174,11 @@ export default function QuantumSecureCommunication() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ],
   const useCases = [
     'Secure executive communicationsConfidential document sharingRegulated industry complianceResearch collaborationGovernment communications'
@@ -190,24 +189,23 @@ export default function QuantumSecureCommunication() {
   const technology = [
     'Quantum ComputingPost-Quantum CryptographyReactNode.jsWebRTCWebAssemblyDockerKubernetes'
   ],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
-<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground
       intensity="high"
-=======
-<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground 
       intensity="high" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       colorScheme="quantum-fusion"
-<<<<<<< HEAD
       particleCount={500}
       animationSpeed={2.0}
       enableHolographic={true}
       enableQuantumEffects={true}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     website: 'https://ziontechgroup.com'
@@ -237,10 +235,11 @@ export default function QuantumSecureCommunication() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <UltraAdvancedFuturisticBackground
       intensity="high"
       colorScheme="quantum-fusion"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       particleCount={500  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -262,11 +261,14 @@ export default function QuantumSecureCommunication() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
       <div className="min-h-screen">
         <Head>
@@ -282,6 +284,7 @@ export default function QuantumSecureCommunication() {
           <link rel="canonical" href="https://ziontechgroup.com/quantum-secure-communication" />
         </Head>
         <UltraAdvancedNavigation />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -394,6 +397,8 @@ function QuantumSecureCommunication() {
           <div className=&quot;max-w-7xl mx-auto&quot;>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Hero Section */}
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -412,6 +417,7 @@ function QuantumSecureCommunication() {
                 initial={{ scale: 0.8, rotate: -5 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className=&quot;mb-8&quot;
               >
@@ -438,6 +444,8 @@ function QuantumSecureCommunication() {
 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -480,11 +488,14 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">
@@ -494,6 +505,7 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
                 </div>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
@@ -502,21 +514,19 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
 
 =======
 <<<<<<< HEAD
-              <motion.h1
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <motion.h1
               <motion.h1 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-=======
-<<<<<<< HEAD
-=======
               <motion.h1
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -533,6 +543,7 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -545,11 +556,14 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-6"
               >
                 Quantum-Secure Communication
               </motion.h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
@@ -558,21 +572,19 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
 
 =======
 <<<<<<< HEAD
-              <motion.p
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <motion.p
               <motion.p 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-=======
-<<<<<<< HEAD
-=======
               <motion.p
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -588,6 +600,7 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -607,12 +620,15 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 Unbreakable encryption for the <span className="text-purple-400 font-bold">quantum era</span>
               </motion.p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
@@ -621,21 +637,19 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
 
 =======
 <<<<<<< HEAD
-              <motion.p
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              <motion.p
               <motion.p 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-=======
-<<<<<<< HEAD
-=======
               <motion.p
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -652,6 +666,7 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -664,16 +679,21 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
               >
                 Next-generation communication platform that uses quantum cryptography to provide unbreakable encryption for sensitive communications, ensuring your data remains secure even against quantum computers.
               </motion.p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Pricing and CTA */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -743,7 +763,6 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-=======
               {/* Pricing and CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -784,11 +803,14 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="bg-gradient-to-r from-purple-500 to-pink-600 p-1 rounded-2xl shadow-2xl"
                 >
                   <div className="bg-gray-900 rounded-2xl px-8 py-6">
@@ -796,6 +818,7 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
                       <div className="text-4xl font-bold text-white mb-2">$599</div>
                       <div className="text-purple-200 text-lg mb-4">per month</div>
                       <div className="text-gray-300 mb-6">30-day free trial</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -806,18 +829,20 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <Button
                         href="/contact"
-=======
-<<<<<<< HEAD
                       <Button 
                         href="/contact" 
-=======
                       <Button
                         href="/contact"
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         variant="primary"
                         className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-xl"
                       >
@@ -849,6 +874,7 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 >
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -861,15 +887,21 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                  <Button 
-                    href="/contact" 
 =======
                   <Button
                     href="/contact"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  <Button 
+                    href="/contact" 
+                  <Button
+                    href="/contact"
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -880,6 +912,7 @@ className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium
                   </Button>
                 </motion.div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1063,12 +1096,13 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Key Benefits */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
-=======
               {/* Key Benefits */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1090,11 +1124,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
               >
                 <div className="text-center p-4">
@@ -1113,7 +1142,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-7xl mx-auto">
@@ -1122,7 +1150,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-=======
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1151,11 +1178,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1171,8 +1193,11 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
               {features.map((feature, index) => (
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1348,7 +1373,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
 =======
 =======
                   whileHover={{ scale: 1.02, y: -5 }}
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1379,11 +1403,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="group bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 >
@@ -1398,7 +1417,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
 =======
 =======
                     <h3 className="text-lg font-semibold text-white group-hover:text-purple-300 transition-colors">
-<<<<<<< HEAD
                       {feature}
                     </h3>
                   </div>
@@ -1415,8 +1433,11 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1461,11 +1482,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1481,7 +1497,10 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
               {useCases.map((useCase, index) => (
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1578,7 +1597,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
 =======
 =======
                   whileHover={{ scale: 1.02, y: -5 }}
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1609,11 +1627,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -1621,7 +1634,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
                       <Shield className="w-5 h-5 text-white" />
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
-<<<<<<< HEAD
                       {useCase}
                     </h3>
                   </div>
@@ -1640,7 +1652,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-=======
                       {useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1691,11 +1702,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -1706,13 +1712,17 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
                   {technology.map((tech, index) => (
                     <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       key={index}
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1788,6 +1798,8 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1813,17 +1825,11 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                       <span className="text-gray-200">{tech}</span>
                     </motion.div>
-<<<<<<< HEAD
                   ))}
                 </div>
               </motion.div>
@@ -1834,6 +1840,7 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
                 whileInView={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >;
@@ -1850,6 +1857,8 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1883,11 +1892,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -1898,13 +1902,17 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
                   {integrations.map((integration, index) => (
                     <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       key={index}
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1953,6 +1961,8 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
               viewport={{ once: true }}
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1978,17 +1988,11 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                       <span className="text-gray-200">{integration}</span>
                     </motion.div>
-<<<<<<< HEAD
                   ))}
                 </div>
               </motion.div>
@@ -2003,7 +2007,6 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-=======
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2044,6 +2047,7 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2055,6 +2059,8 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -2076,16 +2082,18 @@ className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 roun
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2107,6 +2115,7 @@ className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-y
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2118,11 +2127,14 @@ className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-y
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
                 <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2133,15 +2145,17 @@ className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-y
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                  Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month).
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month).
                   Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month). 
-=======
                   Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month).
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Our advantage: Quantum-resistant encryption, enterprise features, and compliance tools.
                 </p>
                 <div className="space-y-4">
@@ -2161,21 +2175,27 @@ className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-y
               </motion.div>
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2197,6 +2217,7 @@ className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-g
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2208,6 +2229,8 @@ className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-g
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
@@ -2234,6 +2257,7 @@ className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-g
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2396,18 +2420,14 @@ className="text - center mb - 16";
                     href="/contact" 
 =======
 <<<<<<< HEAD
-        {/* CTA Section */}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+        {/* CTA Section */}
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -2456,20 +2476,19 @@ className="text - center mb - 16";
   }
 }
                 >
-<<<<<<< HEAD
                   <Button
                     href="/contact"
-=======
-<<<<<<< HEAD
                   <Button 
                     href="/contact" 
-=======
                   <Button
                     href="/contact"
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     variant="primary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/25"
                   >
@@ -2505,6 +2524,7 @@ className="text - center mb - 16";
 }
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Button 
                     href="/contact" 
 =======
@@ -2520,15 +2540,21 @@ className="text - center mb - 16";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                  <Button 
-                    href="/contact" 
 =======
                   <Button
                     href="/contact"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  <Button 
+                    href="/contact" 
+                  <Button
+                    href="/contact"
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -2556,16 +2582,21 @@ className="text - center mb - 16";
 =======
               <div className="mt-8 text-gray-400">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</a></p>
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</a></p>
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</Link> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</Link></p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <p className="mt-2">{contactInfo.address}</p>
               </div>
             </motion.div>
@@ -2573,6 +2604,7 @@ className="text - center mb - 16";
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2591,10 +2623,10 @@ className="text - center mb - 16";
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 }
@@ -2665,11 +2697,12 @@ className="text - center mb - 16";
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -54,13 +54,9 @@ jest.mock("next/image", () => ({
 =======
         emit: jest.fn()
       },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:jest.setup.js
+:jest.setup.js
       isFallback: false,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD:backup-problematic-files/jest.setup.js
+:backup-problematic-files/jest.setup.js
       isFallback: false
     }
   }
@@ -74,13 +70,16 @@ jest.mock('next/image', () => ({
     return <img {...props} />
   }
 }));
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/jest.setup.js
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+:backup-problematic-files/jest.setup.js
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     };
   },
 }));
@@ -105,6 +104,7 @@ jest.mock("next/image", () => {
     return <img src={src} alt={alt} {...props} />;
   };
 });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,6 +123,9 @@ jest.mock('next/link', () => ({
 =======
 =======
 <<<<<<< HEAD:jest.setup.js
+=======
+:jest.setup.js
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Mock Next.js Link component
@@ -136,25 +139,32 @@ jest.mock("next/link", () => {
   };
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
 
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> main:jest.setup.js
+=======
+main:jest.setup.js
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
-<<<<<<< HEAD:backup-problematic-files/jest.setup.js
+:backup-problematic-files/jest.setup.js
     return <a href={href} {...props}>{children}</a>
   }
-=======
 
   },
+<<<<<<< HEAD
 >>>>>>> main:jest.setup.js
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+main:jest.setup.js
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }));
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -199,6 +209,7 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 
@@ -217,10 +228,15 @@ beforeEach(() => {
 =======
 =======
 <<<<<<< HEAD
-};
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
+};
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/jest.setup.js
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:backup-problematic-files/jest.setup.js
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

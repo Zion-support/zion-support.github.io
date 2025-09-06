@@ -259,67 +259,37 @@ const ScrollToTop: React.FC = () => {
 
 =======
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ChevronUp } from 'lucide-react';
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/main
 
 import { ChevronUp } from 'lucide-react';
 export default function ScrollToTop() {
-=======
-<<<<<<< HEAD
 import { ChevronUp } from 'lucide-react';
 
-<<<<<<< HEAD
 export default function ScrollToTop() {
-=======
-=======
 export default function ScrollToTop() {;
   const [isVisible, setIsVisible] = useState(false);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const ScrollToTop: React.FC = () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        setIsVisible(true);
-      } else {
-<<<<<<< HEAD
-        setIsVisible(false);
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         setIsVisible(true);
       } else {
         setIsVisible(false);
-=======
-<<<<<<< HEAD
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
         setIsVisible(true)
       } else {
         setIsVisible(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
         setIsVisible(true);
       } else {
         setIsVisible(false);      }
@@ -328,35 +298,19 @@ const ScrollToTop: React.FC = () => {
     return () => window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true)
       } else {
         setIsVisible(false)
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
       }
     };
 
     window.addEventListener('scroll', toggleVisibility);
-<<<<<<< HEAD
-<<<<<<< HEAD
     return () => window.removeEventListener('scroll', toggleVisibility);
-=======
     return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
     return () => window.removeEventListener('scroll', toggleVisibility);
-=======
-<<<<<<< HEAD
     return () => window.removeEventListener('scroll', toggleVisibility);
-=======
     return () => window.removeEventListener('scroll', toggleVisibility)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
         setIsVisible(false);      }
     }
     window.addEventListener('scroll', toggleVisibility);
@@ -367,25 +321,15 @@ const ScrollToTop: React.FC = () => {
     }
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/main
+origin/automation-improvements-final
   }, []);
   const scrollToTop = () => {
     window.scrollTo({
-<<<<<<< HEAD
       top: 0,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
       top: 0
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/main
       behavior: 'smooth'
     });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -394,6 +338,7 @@ const ScrollToTop: React.FC = () => {
   if (!isVisible) {
     return null;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -406,6 +351,8 @@ const ScrollToTop: React.FC = () => {
   }
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
@@ -423,6 +370,7 @@ const ScrollToTop: React.FC = () => {
     </button>
   );
 }
+<<<<<<< HEAD
 =======
 
     });  };      behavior: 'smooth'})
@@ -432,6 +380,14 @@ const ScrollToTop: React.FC = () => {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+origin/automation-improvements-final
+      behavior: 'smooth',
+      top: 0
+      behavior: 'smooth'
+    });  };      behavior: 'smooth'})
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       {isVisible && (
@@ -439,6 +395,7 @@ const ScrollToTop: React.FC = () => {
           onClick={scrollToTop}
           className='fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group'
           aria-label='Scroll to top'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         >
@@ -449,12 +406,9 @@ const ScrollToTop: React.FC = () => {
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <svg
@@ -532,6 +486,7 @@ export default ScrollToTop;
       )}
     </>
   );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   };
@@ -672,16 +627,13 @@ export default ScrollToTop;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
-<<<<<<< HEAD
+}
       behavior: 'smooth',
     });
-=======
       behavior: 'smooth'})
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   };
 
   return (
@@ -689,7 +641,6 @@ export default ScrollToTop;
       {isVisible && (
         <button
           onClick={scrollToTop}
-<<<<<<< HEAD
           className='fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group'
           aria-label='Scroll to top'
         >
@@ -705,7 +656,6 @@ export default ScrollToTop;
               strokeLinejoin='round'
               strokeWidth={2}
               d='M5 10l7-7m0 0l7 7m-7-7v18'
-=======
           className="fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group"
           aria-label="Scroll to top"
         >
@@ -721,56 +671,36 @@ export default ScrollToTop;
               strokeLinejoin="round"
               strokeWidth={2}
               d="M5 10l7-7m0 0l7 7m-7-7v18"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             />
           </svg>
         </button>
       )}
     </>
-<<<<<<< HEAD
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ScrollToTop;
-=======
   )
 };
 
 export default ScrollToTop;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ScrollToTop;  )
 }
 export default ScrollToTop;
-<<<<<<< HEAD
 
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
+origin/main
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+export default ScrollToTop;
 export default ScrollToTop;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default ScrollToTop;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -71,7 +71,6 @@ const [loading, setLoading] = useState(false);
   };
 =======
 import React, { useState } from 'react';
-<<<<<<< HEAD
 export default function UNBridge() {
   const [form, setForm] = useState({
 
@@ -82,14 +81,15 @@ export default function UNBridge() {
     budgetOrResolution: 'USD 3M over 24 months'
     supportingMultiverses: 'Digital Labor, AI Ethics'
     promptAssist:
-<<<<<<< HEAD
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
     language: 'en'
-=======
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en',;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
@@ -191,11 +191,7 @@ export default function UNBridge() {;
       setLoading(false);
     }
 
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export default function UNBridge(req, res) {
   try {
   const [form, setForm] = useState({;
@@ -637,12 +633,15 @@ const list = await fetch('/api/proposals/list');
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>
@@ -698,6 +697,7 @@ const list = await fetch('/api/proposals/list');
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
@@ -727,6 +727,8 @@ const list = await fetch('/api/proposals/list');
             {result?.markdown || 'No draft yet'}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='space-y-3'>
           <div className='text-sm opacity-70'>Output</div>
           <div className='border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50'>
@@ -775,7 +777,6 @@ const list = await fetch('/api/proposals/list');
             >
               Submit (Email)
             </button>
-=======
         <div className="space-y-3">
           <div className="text-sm opacity-70">Output</div>
           <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
@@ -792,6 +793,7 @@ const list = await fetch('/api/proposals/list');
             <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
           </div>
           {translated && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -810,6 +812,8 @@ const list = await fetch('/api/proposals/list');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
               {translated}
             </div>
@@ -829,8 +833,6 @@ const list = await fetch('/api/proposals/list');
             >
               Submit (Email)
             </button>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
               {translated  } catch (error) {
     console.error("Error:", error);
@@ -847,12 +849,15 @@ const list = await fetch('/api/proposals/list');
             <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
             <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
@@ -887,7 +892,6 @@ const list = await fetch('/api/proposals/list');
   }
 }
               {result.meta.artifacts?.pdfPath && (
-<<<<<<< HEAD
                 <div>
                   <a
                     className='text-blue-600 underline'
@@ -1220,12 +1224,8 @@ if (return) {
 ;
 =======
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {
     console.error("Error:", error);
@@ -1263,6 +1263,7 @@ if (return) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1278,3 +1279,5 @@ if (return) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -9,8 +9,6 @@
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { SmartContractBuilder  } from '@/components/contracts/SmartContractBuilder';
 import { ContractBuilder  } from '@/components/contracts/ContractBuilder';
@@ -19,8 +17,11 @@ import { ContractTypeCards  } from './ContractTypeCards';
 import { RecentContractsTable  } from './RecentContractsTable';
 import { TalentProfile  } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
 import {ContractBuilder} from '@/components/contracts/ContractBuilder';
@@ -29,6 +30,7 @@ import {ContractTypeCards} from './ContractTypeCards';
 import {RecentContractsTable} from './RecentContractsTable';
 import {TalentProfile} from '@/types/talent';
 import {useAuth} from '@/hooks/useAuth';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 // Mock data for demo purposes
@@ -40,9 +42,10 @@ export function ContractBuilderContent() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock data for demo purposes
 
-<<<<<<< HEAD
 const mockTalent: TalentProfile = {
   id: 'talent-123'
   user_id: 'user-abc-123'
@@ -52,10 +55,12 @@ const mockTalent: TalentProfile = {
   profile_picture_url: ''
   skills: ['ReactNode.jsSmart Contracts']}
 export function ContractBuilderContent() {
-=======
 export function ContractBuilderContent() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
   const [recentContracts, setRecentContracts] = useState([
@@ -77,6 +82,7 @@ export function ContractBuilderContent() {;
     }
   ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -93,6 +99,11 @@ export function ContractBuilderContent() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const handleContractGenerated = (content: string) => {
+    console.log('Contract generated:', content.substring(0, 100) + '...')
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
 import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
@@ -132,6 +143,7 @@ export function ContractBuilderContent() {;
     }
   ]),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -142,11 +154,14 @@ export function ContractBuilderContent() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const handleContractGenerated = (content: string) => {
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -166,34 +181,42 @@ export function ContractBuilderContent() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleViewContract = (contractId: string) => {
     // // // console.log('Viewing contract:', contractId),
     // Future implementation: View specific contract details
-<<<<<<< HEAD
   }
-=======
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <>
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-      <ContractTypeCards
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      <ContractTypeCards
       
       <ContractTypeCards 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ]),;
   const handleContractGenerated = (content: string) => {;
     // // // console.log('Contract generated:', content.substring(0, 100) + '...');
@@ -206,6 +229,7 @@ export function ContractBuilderContent() {;
     <>;
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />;
       <ContractTypeCards;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -221,6 +245,8 @@ export function ContractBuilderContent() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         onStandardClick={() => setShowBuilderType('standard')}
         onSmartClick={() => setShowBuilderType('smart')}
       />

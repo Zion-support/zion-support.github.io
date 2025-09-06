@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,15 +28,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 =======
 <<<<<<< HEAD
-import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils/design-map';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {try {;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils/design-map';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {try {;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   try {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default async function handler(req, res) {
   try {
     const base = getZionDesignMap();
@@ -92,6 +96,7 @@ import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils
 export default async function handler(req, res) {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -107,11 +112,14 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const base = getZionDesignMap();
     const [localTokens, cmsTokens] = await Promise.all([;
       buildTokenSet();
       fetchLovableTokens()]);
     const tokens = {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -168,10 +176,13 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       colors: { ...localTokens.colors, ...(cmsTokens?.colors |{}) }
       typography: {fontSizes: { ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes |{}) }}}
     res.status(200).json({ route: base.route, products: base.products, tokens });
   } catch (e: any) {res.status(500).json({ error: e?.message |'Failed to build design map' });
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -194,18 +205,15 @@ function handler() {
     res.status (500).json ({ error: e?.message || 'Failed to build design map' });
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       colors: { ...localTokens.colors, ...(cmsTokens?.colors || {}) };
       typography: {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         fontSizes: { ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes || {}) }}}
 ;
     res.status(200).json({ route: base.route, products: base.products, tokens });
   } catch (e: any) {;
     res.status(500).json({ error: e?.message || 'Failed to build design map' });
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         fontSizes: { ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes || {}) }}  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -248,11 +256,14 @@ function handler() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

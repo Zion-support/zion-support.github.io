@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from 'react';
@@ -23,10 +24,10 @@ export const FilterSidebar: React.FC < FilterSidebarProps> = ({
 
 =======
 <<<<<<< HEAD
-import React from 'react';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React from 'react';
 import React from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface FilterSidebarProps {
   className?: string;
   children?: React.ReactNode
@@ -138,25 +139,32 @@ export function FilterSidebar({
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </>
   )}
 '"`
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
     </>;
   )};
 '"`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -165,6 +173,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface FilterSidebarProps {;
@@ -185,6 +195,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
 export default FilterSidebar;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -197,3 +208,5 @@ export default FilterSidebar;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

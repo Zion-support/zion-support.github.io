@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -21,4 +22,13 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:src.disabled/components/profile/HireNowCTA.jsx
+'\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
+"export: function HireNowCTA({ talentName,hourlyRate,onHire }) {" const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ projectDescription: ",budget: ",",startDate: ",message: "})" const handleSubmit = e => {""";"""";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+'\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
+"export: function HireNowCTA({ talentName,hourlyRate,onHire }) {" const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ projectDescription: ",budget: ",",startDate: ",message: "})" const handleSubmit = e => {""";"""";"""
+:temp_exclude/src.disabled/components/profile/HireNowCTA.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 '"export": function HireNowCTA({ talentName,hourlyRate,onHire }) {' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ "projectDescription": ',"budget": ',',"startDate": ',"message": '})' const handleSubmit = e => {''';''"";""}

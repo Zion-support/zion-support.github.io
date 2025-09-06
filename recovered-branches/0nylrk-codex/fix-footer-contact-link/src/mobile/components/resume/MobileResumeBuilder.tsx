@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
@@ -15,6 +16,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -23,6 +27,7 @@ import {Textarea} from "@/components/ui/textarea";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Label} from "@/components/ui/label";
 import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -40,6 +45,11 @@ export function MobileResumeBuilder() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+type ResumeStep = "basics" | "experience" | "education" | "skills";
+export function MobileResumeBuilder() {
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -55,6 +65,7 @@ import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
@@ -62,19 +73,21 @@ type ResumeStep = "basics" | "experience" | "education" | "skills",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
-<<<<<<< HEAD
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
-=======
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const renderStepContent = () => {
     switch (currentStep) {
       case "basics": return <BasicsStep />,
@@ -87,6 +100,7 @@ export function MobileResumeBuilder() {
       default:
         return <BasicsStep />
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ========
@@ -127,12 +141,16 @@ function MobileResumeBuilder() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
 =======
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
@@ -287,20 +305,25 @@ function BasicsStep() {
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Textarea
             id="summary"
             placeholder="Write a brief summary about yourself"
-=======
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             rows={4}
           />
         </div>
@@ -309,6 +332,7 @@ function BasicsStep() {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -319,6 +343,11 @@ function BasicsStep() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -598,6 +627,7 @@ function BasicsStep() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
 
 <<<<<<< HEAD
@@ -630,26 +660,30 @@ function ExperienceStep() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
     const newId = (experiences.length + 1).toString(),
     setExperiences([...experiences, { id: newId }])
-<<<<<<< HEAD
   }
   const removeExperience = (id: string) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const removeExperience = (id: string) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -828,6 +862,8 @@ function ExperienceStep() {;
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-4">
       {experiences.map((exp, index) => (
@@ -867,24 +903,30 @@ function ExperienceStep() {;
             <div className="space-y-2">
               <Label htmlFor={`description-${exp.id}`}>Description</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Textarea
                 id={`description-${exp.id}`}
                 placeholder="Describe your responsibilities and achievements"
-=======
               <Textarea 
                 id={`description-${exp.id}`} 
                 placeholder="Describe your responsibilities and achievements" 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 rows={3}
               />
             </div>
           </CardContent>
         </Card>
       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1048,10 +1090,16 @@ function EducationStep() {;
         className="w-full gap-2"
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      <Button
+        variant="outline"
+        className="w-full gap-2"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <Button 
         variant="outline" 
         className="w-full gap-2" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1059,6 +1107,8 @@ function EducationStep() {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         onClick={addExperience}
       >
         <Plus className="h-4 w-4" /> Add Another Experience
@@ -1077,20 +1127,21 @@ function EducationStep() {
 =======
     const newId = (educations.length + 1).toString(),
     setEducations([...educations, { id: newId }])
+  }
+  const removeEducation = (id: string) => {
+    setEducations(educations.filter(edu => edu.id !== id))
+  }
+  },
+  
+  const removeEducation = (id: string) => {
+    setEducations(educations.filter(edu => edu.id !== id))
+  },
+  
 <<<<<<< HEAD
-  }
-  const removeEducation = (id: string) => {
-    setEducations(educations.filter(edu => edu.id !== id))
-  }
-=======
-  },
-  
-  const removeEducation = (id: string) => {
-    setEducations(educations.filter(edu => edu.id !== id))
-  },
-  
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-4">
       {educations.map((edu, index) => (
@@ -1215,6 +1266,7 @@ function EducationStep() {;
 function SkillsStep() {
   const [skills, setSkills] = useState([
     { id: '1', name: "", proficiency: "beginner" }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1367,27 +1419,30 @@ function SkillsStep() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-  ]);
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  ]);
   ]),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const addSkill = () => {
     const newId = (skills.length + 1).toString(),
     setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
-<<<<<<< HEAD
   }
   const removeSkill = (id: string) => {
     setSkills(skills.filter(skill => skill.id !== id))
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const removeSkill = (id: string) => {
     setSkills(skills.filter(skill => skill.id !== id))
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1395,10 +1450,13 @@ function SkillsStep() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const updateSkill = (id: string, field: string, value: string) => {
     setSkills(skills.map(skill =>
       skill.id === id ? { ...skill, [field]: value } : skill
     ))
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1421,13 +1479,17 @@ function SkillsStep() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
-=======
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-4">
       <Card>
@@ -1464,11 +1526,14 @@ function SkillsStep() {
                     <Trash2 className="h-4 w-4 text-destructive" />
                   </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       <Button;
         variant="outline";
@@ -1763,24 +1828,22 @@ function SkillsStep() {;
                   >;
                     <Trash2 className="h-4 w-4 text-destructive" />;
                   </Button>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
             ))}
-<<<<<<< HEAD
             <Button
               variant="outline"
               className="w-full gap-2"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             <Button 
               variant="outline" 
               className="w-full gap-2" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1788,6 +1851,8 @@ function SkillsStep() {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onClick={addSkill}
             >
               <Plus className="h-4 w-4" /> Add Another Skill
@@ -1812,6 +1877,7 @@ function SkillsStep() {;
       </Card>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1967,16 +2033,15 @@ return (<div className="space-y-6 px-4 pb-24" > <div className="flex justify-bet
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
 }
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

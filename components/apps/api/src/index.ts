@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -39,14 +40,14 @@ await app && app.register(cors, {
     if (!origin || allowed && allowed.includes('*') || allowed && allowed.includes(origin)) {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
 import rateLimit from '@fastify/rate-limit',
-=======
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import dotenv from 'dotenv';
 import { createOpenAIClient, generateJobPost  } from './openai.js';
 import { getPool, withUser } from './pg.js';
@@ -613,7 +614,6 @@ app.get('/notifications', async (req, reply) => {
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
-<<<<<<< HEAD
     );
     return res.rows;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -667,6 +667,7 @@ app.get ('/talent / search', async (req, reply) => {
   });
   return { results: rows }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 app.get ('/projects/:name / track', async (req, reply) => {
@@ -729,14 +730,15 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
     );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
     );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

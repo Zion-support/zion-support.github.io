@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export interface RealMarketServiceExtended { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketServicesExtended: RealMarketServiceExtended[] = [ { id: 'extended-service-1',name: 'Extended Market Service 1',tagline: 'Extended market coverage',price: '$599',features: ['Extended features','Market coverage','Advanced analytics'],},];
@@ -7,6 +8,7 @@ export interface RealMarketServiceExtended { id: string; name: string; tagline: 
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
 export interface RealMarketServiceExtended {
   "id": string;
   name: string;
@@ -20,6 +22,27 @@ export const "realMarketServicesExtended": RealMarketServiceExtended[] = [{
     "price": '$599',
     "features": ['Extended features', 'Market coverage', 'Advanced analytics']},
 ];
+export interface RealMarketServiceExtended { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketServicesExtended: RealMarketServiceExtended[] = [ { id: 'extended-service-1',name: 'Extended Market Service 1',tagline: 'Extended market coverage',price: '$599',features: ['Extended features','Market coverage','Advanced analytics'],},];
+export interface RealMarketServiceExtended { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketServicesExtended: RealMarketServiceExtended[] = [ { id: 'extended-service-1',name: 'Extended Market Service 1',tagline: 'Extended market coverage',price: '$599',features: ['Extended features','Market coverage','Advanced analytics'],},];
+export interface RealMarketServiceExtended { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketServicesExtended: RealMarketServiceExtended[] = [ { id: 'extended-service-1',name: 'Extended Market Service 1',tagline: 'Extended market coverage',price: '$599',features: ['Extended features','Market coverage','Advanced analytics'],},];
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export interface RealMarketServiceExtended { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketServicesExtended: RealMarketServiceExtended[] = [ { id: 'extended-service-1',name: 'Extended Market Service 1',tagline: 'Extended market coverage',price: '$599',features: ['Extended features','Market coverage','Advanced analytics'],},];
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export interface RealMarketServiceExtended {
+  "id": string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[]}
+export const "realMarketServicesExtended": RealMarketServiceExtended[] = [{
+    id: 'extended-service-1',
+    "name": 'Extended Market Service 1',
+    "tagline": 'Extended market coverage',
+    "price": '$599',
+    "features": ['Extended features', 'Market coverage', 'Advanced analytics']},
+];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -48,3 +71,9 @@ export const "realMarketServicesExtended": RealMarketServiceExtended[] = [{
 ];
 export interface RealMarketServiceExtended { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketServicesExtended: RealMarketServiceExtended[] = [ { id: 'extended-service-1',name: 'Extended Market Service 1',tagline: 'Extended market coverage',price: '$599',features: ['Extended features','Market coverage','Advanced analytics'],},];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export interface RealMarketServiceExtended { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketServicesExtended: RealMarketServiceExtended[] = [ { id: 'extended-service-1',name: 'Extended Market Service 1',tagline: 'Extended market coverage',price: '$599',features: ['Extended features','Market coverage','Advanced analytics'],},];
+export interface RealMarketServiceExtended { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketServicesExtended: RealMarketServiceExtended[] = [ { id: 'extended-service-1',name: 'Extended Market Service 1',tagline: 'Extended market coverage',price: '$599',features: ['Extended features','Market coverage','Advanced analytics'],},];
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

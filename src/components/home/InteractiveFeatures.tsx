@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/home/InteractiveFeatures.tsx
 
 =======
@@ -8,6 +9,8 @@ import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
 import Link from 'next/link'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import {
   Card
@@ -17,15 +20,16 @@ import {
   CardDescription
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-<<<<<<< HEAD
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
 
 import Link from 'next/link'
-=======
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {
   className?: string
   style?: React.CSSProperties
@@ -40,10 +44,13 @@ export function InteractiveFeatures({
   const [openIndex, setOpenIndex] = React.useState<number | null>(null)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const features = [
     {
       title: 'AI Talent Matching'
@@ -84,12 +91,15 @@ export function InteractiveFeatures({
     setOpenIndex(prev => (prev === index ? null : index))
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -126,6 +136,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const features = [
 =======
 >>>>>>>   const features = [
@@ -134,6 +145,8 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const features = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
@@ -163,12 +176,15 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       details:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.',
       icon: <Settings className='h-8 w-8 text-amber-700' />,
       link: '/equipment',
@@ -182,11 +198,14 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
     setOpenIndex(prev => (prev === index ? null : index))
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.",
       icon: <Settings className="h-8 w-8 text-amber-700" />,
       link: "/equipment"}],
@@ -195,6 +214,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
     setOpenIndex((prev) => (prev === index ? null : index))
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   return (
@@ -206,6 +226,8 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <section className={cn("py-16 bg-zion-blue-dark", className)} style={style}>
@@ -218,6 +240,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
             Hover or click a card to learn more about what Zion offers
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -357,10 +380,11 @@ export function InteractiveFeatures(): any ({;
                   <CardDescription className='text - zion - slate - light'>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           {features.map((feature, index) => (
             <Card
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card
@@ -471,6 +495,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
           {features.map((feature, index) => (;
             <Card;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/InteractiveFeatures.tsx
 =======
 <<<<<<< HEAD
@@ -479,10 +504,13 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/home/InteractiveFeatures.tsx
 
@@ -499,17 +527,13 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
 >>>>>>>                 <div>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className='cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg'            >
               <CardHeader className='flex flex-row items-start space-x-3'>
-=======
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {feature.icon}
                 <div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -523,22 +547,28 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
                 className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                   'transition-all duration-300'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                  'transition-all duration-300'
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  'transition-all duration-300'
                   'transition-all duration-300',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   openIndex === index
                     ? 'max-h-48 opacity-100 p-6 pt-0'
                     : 'max-h-0 opacity-0 p-0'
                 )}              >
                 <CardContent className='text-sm text-zion-slate-light p-0'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -563,12 +593,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   "transition-all duration-300",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
                 )}
               >
                 <CardContent className="text-sm text-zion-slate-light p-0">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -581,6 +614,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p>{feature.details}</p>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
@@ -592,6 +627,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </Card>
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -708,20 +744,18 @@ return (<section className= {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/InteractiveFeatures.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
       </div>
     </section>
   )
-<<<<<<< HEAD
 export default InteractiveFeatures
 
-=======
 export default InteractiveFeatures;
 ;
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         </div>;
       </div>;
     </section>;
@@ -730,8 +764,11 @@ export default InteractiveFeatures;
 ;
 export default InteractiveFeatures;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

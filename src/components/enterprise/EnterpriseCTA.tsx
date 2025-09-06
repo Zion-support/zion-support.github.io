@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseCTA.tsx
 
 <<<<<<< HEAD
@@ -22,19 +23,15 @@ export function EnterpriseCTA() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from 'lucide-react'
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Calendar, ArrowRight } from 'lucide-react'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterpriseCTA() {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -98,6 +95,7 @@ export function EnterpriseCTA() {
                       </span>                    </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                   <li className="flex gap-3">
@@ -116,20 +114,16 @@ import { Calendar } from 'lucide-react';
 export function EnterpriseCTA() {
 >>>>>>>   return (
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <li className="flex gap-3">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-primary text-sm font-medium">4</span>
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterpriseCTA() {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -190,6 +184,7 @@ export function EnterpriseCTA() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseCTA.tsx
 <<<<<<< HEAD
 
@@ -197,10 +192,13 @@ export function EnterpriseCTA() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </section>;
   );
 };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -290,14 +288,11 @@ export function EnterpriseCTA() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </section>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -502,6 +497,7 @@ function EnterpriseCTA() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseCTA.tsx
 
 =======
@@ -531,3 +527,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

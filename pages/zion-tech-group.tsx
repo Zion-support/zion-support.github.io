@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Head from 'next/head',
 import Link from 'next/link',
@@ -99,8 +100,9 @@ import Head from 'next / head';
 import Link from 'next / link';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -183,9 +185,6 @@ import {
   ChevronRight
   Home;} from 'lucide-react';
 
-=======
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -343,9 +342,7 @@ export default function ZionTechGroupPage() {
   ChevronRight,;
   Home,;} from 'lucide-react';
 
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import Link from 'next/link',
 import {
@@ -365,11 +362,6 @@ import {
   Calendar, Clock, FileText2, PieChart, Atom,
   Truck, ChevronRight, Home
 } from 'lucide-react',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ZionTechGroupPage() {
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -383,6 +375,7 @@ export default function ZionTechGroupPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -393,6 +386,8 @@ export default function ZionTechGroupPage() {
         {/* Navigation */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
         {/* Navigation */}
         <nav className='bg-black/20 backdrop-blur-md border-b border-white/10'>
@@ -403,7 +398,6 @@ export default function ZionTechGroupPage() {
                   <Link href='/' className='text-2xl font-bold text-white'>
                     Zion Tech Group
                   </Link>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
@@ -418,6 +412,7 @@ export default function ZionTechGroupPage() {
                 <div className="flex-shrink-0">
                   <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -430,6 +425,8 @@ export default function ZionTechGroupPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </div>
               <div className="hidden md:block">
@@ -487,6 +484,7 @@ export default function ZionTechGroupPage() {_return (
           </div>
         </nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -497,13 +495,18 @@ export default function ZionTechGroupPage() {_return (
 {/* Breadcrumb */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Breadcrumb */}
         <div className='bg-black/20 border-b border-white/10'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
             <nav className='flex' aria-label='Breadcrumb'>
               <ol className='flex items-center space-x-4'>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -518,6 +521,7 @@ export default function ZionTechGroupPage() {_return (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <nav className="flex" aria-label="Breadcrumb">
               <ol className="flex items-center space-x-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -534,6 +538,8 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <li>
                   <div>
                     <Link href="/" className="text-gray-300 hover:text-white">
@@ -561,6 +567,7 @@ export default function ZionTechGroupPage() {_return (
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -571,6 +578,8 @@ export default function ZionTechGroupPage() {_return (
 {/* Hero Section */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Hero Section */}
         <div className='relative overflow-hidden py-24'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -578,8 +587,11 @@ export default function ZionTechGroupPage() {_return (
               <h1 className='text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl'>
                 <span className='block'>About</span>
                 <span className='block text-purple-400'>Zion Tech Group</span>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -597,6 +609,7 @@ export default function ZionTechGroupPage() {_return (
                 <span className="block">About</span>
                 <span className="block text-purple-400">Zion Tech Group</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -612,6 +625,8 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </h1>
               <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                 We are the architects of tomorrow, building revolutionary quantum AI solutions and autonomous systems that will define the next decade of innovation.
@@ -621,6 +636,7 @@ export default function ZionTechGroupPage() {_return (
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -639,12 +655,17 @@ export default function ZionTechGroupPage() {_return (
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Mission & Vision Section */}
         <div className='py-16 bg-black/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Mission & Vision Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -653,6 +674,7 @@ export default function ZionTechGroupPage() {_return (
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -666,6 +688,8 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div>
                 <div className="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
                   <Target className="h-8 w-8 text-white" />
@@ -677,6 +701,7 @@ export default function ZionTechGroupPage() {_return (
                 <p className="text-gray-300">
                   We believe that technology should serve humanity, not replace it. Our solutions are designed to augment human capabilities, enhance decision-making, and create a more sustainable and prosperous future for all.
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -692,14 +717,19 @@ export default function ZionTechGroupPage() {_return (
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <p className='text-gray-300'>
                   We believe that technology should serve humanity, not replace
                   it. Our solutions are designed to augment human capabilities
                   enhance decision-making, and create a more sustainable and
                   prosperous future for all.                </p>
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
               <div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -722,6 +752,7 @@ export default function ZionTechGroupPage() {_return (
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -735,6 +766,8 @@ export default function ZionTechGroupPage() {_return (
 {/* Core Values Section */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Core Values Section */}
         <div className='py-16'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -751,7 +784,6 @@ export default function ZionTechGroupPage() {_return (
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Brain className='h-8 w-8 text-white' />
-<<<<<<< HEAD
                 </div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Innovation First
@@ -765,10 +797,13 @@ export default function ZionTechGroupPage() {_return (
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Shield className='h-8 w-8 text-white' />
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Core Values Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -793,6 +828,7 @@ export default function ZionTechGroupPage() {_return (
                   <Brain className="h-8 w-8 text-white" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -801,6 +837,8 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>
                 <p className="text-gray-300">
@@ -808,6 +846,7 @@ export default function ZionTechGroupPage() {_return (
                 </p>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -826,13 +865,15 @@ export default function ZionTechGroupPage() {_return (
                   <Shield className="h-8 w-8 text-white" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Shield className='h-8 w-8 text-white' />
-=======
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-8 w-8 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -840,6 +881,8 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Ethical Responsibility</h3>
                 <p className="text-gray-300">
@@ -847,6 +890,7 @@ export default function ZionTechGroupPage() {_return (
                 </p>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -865,13 +909,15 @@ export default function ZionTechGroupPage() {_return (
                   <Users className="h-8 w-8 text-white" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Users className='h-8 w-8 text-white' />
-=======
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -879,6 +925,8 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Human-Centric Design</h3>
                 <p className="text-gray-300">
@@ -886,6 +934,7 @@ export default function ZionTechGroupPage() {_return (
                 </p>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -904,13 +953,15 @@ export default function ZionTechGroupPage() {_return (
                   <Globe className="h-8 w-8 text-white" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Globe className='h-8 w-8 text-white' />
-=======
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Globe className="h-8 w-8 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -918,6 +969,8 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Global Impact</h3>
                 <p className="text-gray-300">
@@ -925,6 +978,7 @@ export default function ZionTechGroupPage() {_return (
                 </p>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -943,13 +997,15 @@ export default function ZionTechGroupPage() {_return (
                   <Award className="h-8 w-8 text-white" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Award className='h-8 w-8 text-white' />
-=======
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="h-8 w-8 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -957,12 +1013,15 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Excellence</h3>
                 <p className="text-gray-300">
                   We maintain the highest standards of quality in everything we do, from research and development to customer support.
                 </p>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -984,6 +1043,11 @@ export default function ZionTechGroupPage() {_return (
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              <div className='text-center'>
+                <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <Rocket className='h-8 w-8 text-white' />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Future-Focused
@@ -991,6 +1055,7 @@ export default function ZionTechGroupPage() {_return (
                 <p className='text-gray-300'>;
                   We don't just adapt to change; we anticipate it and create the
                   technologies that will define tomorrow.                </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1008,11 +1073,17 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Rocket className="h-8 w-8 text-white" />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Future-Focused</h3>
                 <p className="text-gray-300">
                   We don't just adapt to change, we anticipate it and create the technologies that will define tomorrow.
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1024,10 +1095,13 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1039,6 +1113,8 @@ export default function ZionTechGroupPage() {_return (
 {/* Technology Stack Section */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Technology Stack Section */}
         <div className='py-16 bg-black/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1055,8 +1131,11 @@ export default function ZionTechGroupPage() {_return (
               <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center'>
                 <div className='w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4'>
                   <Brain className='h-6 w-6 text-white' />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Technology Stack Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1080,6 +1159,7 @@ export default function ZionTechGroupPage() {_return (
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Brain className="h-6 w-6 text-white" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1095,6 +1175,8 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
                 <p className="text-gray-300 text-sm">
@@ -1102,6 +1184,7 @@ export default function ZionTechGroupPage() {_return (
                 </p>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1120,13 +1203,15 @@ export default function ZionTechGroupPage() {_return (
                   <Cpu className="h-6 w-6 text-white" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center'>
                 <div className='w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4'>
                   <Cpu className='h-6 w-6 text-white' />
-=======
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Cpu className="h-6 w-6 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1134,6 +1219,8 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Artificial Intelligence</h3>
                 <p className="text-gray-300 text-sm">
@@ -1141,6 +1228,7 @@ export default function ZionTechGroupPage() {_return (
                 </p>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1159,13 +1247,15 @@ export default function ZionTechGroupPage() {_return (
                   <Server className="h-6 w-6 text-white" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center'>
                 <div className='w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4'>
                   <Server className='h-6 w-6 text-white' />
-=======
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Server className="h-6 w-6 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1173,6 +1263,8 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Cloud Infrastructure</h3>
                 <p className="text-gray-300 text-sm">
@@ -1180,6 +1272,7 @@ export default function ZionTechGroupPage() {_return (
                 </p>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1198,13 +1291,15 @@ export default function ZionTechGroupPage() {_return (
                   <Shield className="h-6 w-6 text-white" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center'>
                 <div className='w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4'>
                   <Shield className='h-6 w-6 text-white' />
-=======
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-6 w-6 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1212,6 +1307,8 @@ export default function ZionTechGroupPage() {_return (
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Cybersecurity</h3>
                 <p className="text-gray-300 text-sm">
@@ -1225,6 +1322,7 @@ export default function ZionTechGroupPage() {_return (
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2046,6 +2144,8 @@ className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medi
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Company Stats Section */}
         <div className='py-16'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -2064,7 +2164,6 @@ className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medi
                   500+
                 </div>
                 <div className='text-gray-300'>Global Clients</div>
-=======
         {/* Company Stats Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2082,11 +2181,6 @@ className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medi
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">500+</div>
                 <div className="text-gray-300">Global Clients</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
@@ -2103,7 +2197,6 @@ className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medi
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Team Section */}
         <div className='py-16 bg-black/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -2120,7 +2213,6 @@ className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medi
               <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center'>
                 <div className='w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <User className='h-10 w-10 text-white' />
-=======
         {/* Team Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2138,11 +2230,6 @@ className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medi
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <User className="h-10 w-10 text-white" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Kleber</h3>
                 <p className="text-purple-400 mb-2">CEO & Founder</p>
@@ -2150,19 +2237,12 @@ className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medi
                   Visionary leader with over a decade of experience in quantum computing and AI innovation.
                 </p>
               </div>
-<<<<<<< HEAD
               <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center'>
                 <div className='w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Brain className='h-10 w-10 text-white' />
-=======
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="h-10 w-10 text-white" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Dr. Sarah Chen</h3>
                 <p className="text-purple-400 mb-2">Chief Technology Officer</p>
@@ -2170,19 +2250,12 @@ className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medi
                   Quantum computing expert with PhD from MIT and 15+ years in advanced AI research.
                 </p>
               </div>
-<<<<<<< HEAD
               <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center'>
                 <div className='w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Shield className='h-10 w-10 text-white' />
-=======
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-10 w-10 text-white" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Marcus Rodriguez</h3>
                 <p className="text-purple-400 mb-2">Chief Security Officer</p>
@@ -2193,14 +2266,16 @@ className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medi
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* CTA Section */}
         <div className='bg-purple-600'>
           <div className='max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-extrabold text-white sm:text-4xl'>
               <span className='block'>Ready to Join the Future?</span>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2215,6 +2290,7 @@ className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medi
           <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
               <span className="block">Ready to Join the Future?</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2231,6 +2307,8 @@ className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medi
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </h2>
             <p className="mt-4 text-lg leading-6 text-purple-100">
               Discover how Zion Tech Group can transform your business with revolutionary technology solutions.
@@ -2246,6 +2324,7 @@ className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medi
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2352,6 +2431,8 @@ className='inline-flex items-center px-6 py-3 border border-white text-base font
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Footer */}
         <footer className='bg-black/40'>
           <div className='max-w-7xl mx-auto py-12 px-4 sm: px-6 lg:py-16 lg:px-8'>
@@ -2363,7 +2444,6 @@ className='inline-flex items-center px-6 py-3 border border-white text-base font
                 <p className='text-gray-300 text-base'>
                   Leading the future with revolutionary quantum AI solutions and
                   autonomous systems.
-=======
         {/* Footer */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2378,6 +2458,7 @@ className='inline-flex items-center px-6 py-3 border border-white text-base font
                 <p className="text-gray-300 text-base">
                   Leading the future with revolutionary quantum AI solutions and autonomous systems.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -2386,6 +2467,8 @@ className='inline-flex items-center px-6 py-3 border border-white text-base font
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </p>
               </div>
               <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
@@ -2474,6 +2557,7 @@ className='inline-flex items-center px-6 py-3 border border-white text-base font
         </footer>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2925,13 +3009,11 @@ className='text-base text-gray-300 hover:text-white'>                          C
 =======
 =======
 <<<<<<< HEAD
-  );
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  );
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 import React from 'react';
 import Head from 'next/head';
@@ -3403,6 +3485,7 @@ export default function ZionTechGroupPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -3418,3 +3501,5 @@ export default function ZionTechGroupPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

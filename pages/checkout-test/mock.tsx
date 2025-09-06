@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -42,15 +43,21 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-import { useRouter  } from 'next/router';
 =======
+import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useRouter  } from 'next/router';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 import { CheckCircle, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     router.push('/checkout');
@@ -84,18 +91,17 @@ export default function MockCheckoutPage(req, res) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function MockCheckoutPage() {;
   const router = useRouter();
   const { mock } = router.query;
 
   if (!mock) {
-=======
 export default function MockCheckoutPage(req, res) {
   try {
   const router = useRouter();
   const { mock } = router.query;
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (!mock) {
     router.push('/checkout');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -126,12 +132,8 @@ export default function MockCheckoutPage(req, res) {
               What happened:
             </h3>
             <ul className='text-zion-slate-light space-y-1 text-sm'>
-=======
   if (!mock) {;
-=======
   if (!mock) {;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     router.push('/checkout');
     return <div>Redirecting...</div>;
     } catch (error) {
@@ -139,9 +141,6 @@ export default function MockCheckoutPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
@@ -164,8 +163,6 @@ export default function MockCheckoutPage(req, res) {
               What happened:
             </h3>
             <ul className='text-zion-slate-light space-y-1 text-sm'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
@@ -221,11 +218,14 @@ export default function MockCheckoutPage(req, res) {
             <h3 className="text-lg font-semibold text-white mb-2">What happened:</h3>
             <ul className="text-zion-slate-light space-y-1 text-sm">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <li>• Checkout request received successfully</li>
               <li>• Mock session ID generated: cs_test_mock_session_id_{Date.now()}</li>
               <li>• Cart items would be processed</li>
@@ -234,6 +234,7 @@ export default function MockCheckoutPage(req, res) {
               <li>• Order confirmation would be sent</li>
             </ul>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -279,13 +280,12 @@ export default function MockCheckoutPage(req, res) {
             <div className='text-zion-slate-light text-sm'>
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+          <div className='space-y-4'>
+            <div className='text-zion-slate-light text-sm'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="space-y-4">
             <div className="text-zion-slate-light text-sm">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <p>To test with real Stripe: </p>
               <ol className="list-decimal list-inside space-y-1 mt-2">
                 <li>Configure real Stripe test keys in environment variables</li>
@@ -294,9 +294,12 @@ export default function MockCheckoutPage(req, res) {
               </ol>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Button
                 asChild
@@ -310,8 +313,11 @@ export default function MockCheckoutPage(req, res) {
                 className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'
               >
                 <Link href='/marketplace'>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Button asChild variant="outline" className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10">
@@ -321,6 +327,7 @@ export default function MockCheckoutPage(req, res) {
               </Button>
               <Button asChild className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue">
                 <Link href="/marketplace">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -340,6 +347,8 @@ export default function MockCheckoutPage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Continue Shopping
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
@@ -350,6 +359,7 @@ export default function MockCheckoutPage(req, res) {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -454,13 +464,11 @@ if ( {) {
               </li>              <li>• Cart items would be processed</li>;
 =======
 <<<<<<< HEAD
-);
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+);
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -582,9 +590,12 @@ if ( {) {
   );
 } ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

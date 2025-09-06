@@ -17,14 +17,18 @@ import { Badge } from "@/components/ui/badge",
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Badge} from "@/components/ui/badge";
 import {Star} from "lucide-react";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ProfileHeroProps {;
   name: string,;
@@ -36,10 +40,11 @@ interface ProfileHeroProps {;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
@@ -54,6 +59,7 @@ interface ProfileHeroProps {
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   profileType: 'service' | 'talent';
 }
@@ -87,6 +93,10 @@ import { cn } from "@/lib/utils",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Star } from "lucide-react",
+import { cn } from "@/lib/utils",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProfileHeroProps {
   name: string,
   title: string,
@@ -97,6 +107,7 @@ interface ProfileHeroProps {
   reviewCount?: number,
   aiScore?: number,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   profileType: 'service' | 'talent'
 }
@@ -104,12 +115,11 @@ interface ProfileHeroProps {
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   profileType: 'service' | 'talent'
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function ProfileHero({;
   name;
   title;
@@ -119,9 +129,12 @@ export function ProfileHero({;
   rating;
   reviewCount;
   aiScore;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ProfileHero({
   name,
   title,
@@ -131,6 +144,7 @@ export function ProfileHero({
   rating,
   reviewCount,
   aiScore,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -144,6 +158,8 @@ export function ProfileHero({
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   profileType
 }: ProfileHeroProps) {
   return (
@@ -170,6 +186,7 @@ export function ProfileHero({
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -177,6 +194,8 @@ export function ProfileHero({
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { Badge } from "@/components/ui/badge",;
@@ -227,6 +246,7 @@ export function ProfileHero({;
               ) : (;
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -238,6 +258,8 @@ export function ProfileHero({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -248,6 +270,7 @@ export function ProfileHero({;
                 <Badge
                   variant="outline"
                   className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -343,11 +366,12 @@ export function ProfileHero({;
                     "ml-2 border-zion-purple/50 text-zion-cyan",
 
 =======
-                    "ml-2 border-zion-purple/50 text-zion-cyan";
-<<<<<<< HEAD
-
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    "ml-2 border-zion-purple/50 text-zion-cyan";
+
                     "ml-2 border-zion-purple/50 text-zion-cyan",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -424,6 +448,9 @@ export function ProfileHero({;
                 )}
 
 =======
+=======
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
                 >
@@ -442,21 +469,17 @@ export function ProfileHero({;
                     {reviewCount && (
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>
                     )}
-<<<<<<< HEAD
                   </div>
-<<<<<<< HEAD
                 )}
-=======
                   </div>;
-=======
-=======
                   </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
                 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {aiScore && (
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
                     AI Match: {aiScore}%

@@ -12,17 +12,17 @@ import { supabase } from '@/integrations/supabase/client',
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { supabase } from '@/integrations/supabase/client';
-=======
 import { supabase } from '@/integrations/supabase/client',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
-import {supabase} from '@/integrations/supabase/client';
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import {supabase} from '@/integrations/supabase/client';
 import { supabase } from '@/integrations/supabase/client',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -32,11 +32,14 @@ import { supabase } from '@/integrations/supabase/client',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
     const { error } = await supabase
       .from('analytics_events')
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -58,33 +61,31 @@ export async function ensureAnalyticsTablesExist() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .select('id');
       .limit(1);
-=======
       .select('id')
-<<<<<<< HEAD
       .limit(1);
 
-=======
       .limit(1),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (error && error.code === 'PGRST204') {
       // // // console.log('Creating analytics tables...'),
       await createAnalyticsTables()
-<<<<<<< HEAD
     }
   } catch (error) {
     console.warn('Error checking if analytics tables exist:', error);
     // No need to create tables here, as this could be a connection error
-<<<<<<< HEAD
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { supabase } from '@/integrations/supabase/client',;
 export async function ensureAnalyticsTablesExist() {;
   try {;
@@ -100,6 +101,7 @@ export async function ensureAnalyticsTablesExist() {;
   } catch (error) {;
     console.warn('Error checking if analytics tables exist:', error),;
     // No need to create tables here, as this could be a connection error;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -154,6 +156,11 @@ CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public && public.a
         -- View for daily page views
         CREATE OR REPLACE VIEW public && public.daily_page_views
 =======
+=======
+  }
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 async function createAnalyticsTables() {
   try {
     // Create analytics_events table
@@ -167,7 +174,6 @@ async function createAnalyticsTables() {
           metadata JSONB,
           created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
           session_id TEXT
-<<<<<<< HEAD
         );
         CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public.analytics_events(event_type);
         CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public.analytics_events(user_id);
@@ -179,11 +185,14 @@ async function createAnalyticsTables() {
         SELECT
           DATE_TRUNC('day', created_at) AS date;
           path;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ),
 
         CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public.analytics_events(event_type),
@@ -196,6 +205,7 @@ async function createAnalyticsTables() {
         SELECT 
           DATE_TRUNC('day', created_at) AS date,
           path,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -334,54 +344,47 @@ function createAnalyticsTables() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/setupAnalyticsTables.ts
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           COUNT(*) AS view_count
         FROM public.analytics_events
         WHERE event_type = 'page_view'
         GROUP BY DATE_TRUNC('day', created_at), path
-<<<<<<< HEAD
         ORDER BY date DESC, view_count DESC;
-=======
         ORDER BY date DESC, view_count DESC,
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         -- View for conversion rates
         CREATE OR REPLACE VIEW public.conversion_rates
         WITH (security_invoker = true) AS
         WITH conversions AS (
-<<<<<<< HEAD
           SELECT
             DATE_TRUNC('day', created_at) AS date;
             COUNT(*) AS conversion_count;
-=======
           SELECT 
             DATE_TRUNC('day', created_at) AS date,
             COUNT(*) AS conversion_count,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             metadata->>'conversionType' AS conversion_type
           FROM public.analytics_events
           WHERE event_type = 'conversion'
           GROUP BY DATE_TRUNC('day', created_at), metadata->>'conversionType'
         ),
         page_views AS (
-<<<<<<< HEAD
           SELECT
             DATE_TRUNC('day', created_at) AS date;
-=======
           SELECT 
             DATE_TRUNC('day', created_at) AS date,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             COUNT(*) AS view_count
           FROM public.analytics_events
           WHERE event_type = 'page_view' AND path = '/'
           GROUP BY DATE_TRUNC('day', created_at)
         )
-<<<<<<< HEAD
         SELECT
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           c.date;
           c.conversion_type;
           c.conversion_count;
           p.view_count;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/setupAnalyticsTables.ts
 
@@ -434,22 +437,28 @@ function createAnalyticsTables() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         SELECT 
           c.date,
           c.conversion_type,
           c.conversion_count,
           p.view_count,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 100, 2) AS conversion_rate
         FROM conversions c
         LEFT JOIN page_views p ON c.date = p.date
         ORDER BY c.date DESC,
       `
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -479,6 +488,8 @@ export async function ensureAnalyticsTablesExist() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/setupAnalyticsTables.ts
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     });
     console.log('Analytics tables created successfully')
   } catch (error) {
@@ -487,21 +498,20 @@ export async function ensureAnalyticsTablesExist() {;
     // Tables creation failed, but we can still continue
   }
 }
-=======
     }),
     
     // // // console.log('Analytics tables created successfully')
   } catch (error) {
     console.error('Error creating analytics tables:', error),
     // Tables creation failed, but we can still continue
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 async function createAnalyticsTables() {;
   try {;
@@ -639,6 +649,7 @@ async function createAnalyticsTables() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }),
@@ -691,3 +702,5 @@ CREATE INDEX IF NOT EXISTS analytics events created at idx ON public.analytics e
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

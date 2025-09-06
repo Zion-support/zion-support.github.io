@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/SidebarProvider.tsx
 
 =======
@@ -54,21 +55,16 @@ interface SidebarProviderProps {
 
 
 =======
-import React, { createContext, useContext, useState } from "react";
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import React, { createContext, useContext, useState } from "react";
 import React, { createContext, useContext, useState } from "react",
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SidebarContextType {
   isOpen: boolean;
   toggle: () => void;
   open: () => void;
   close: () => void
-<<<<<<< HEAD
 }
 
 const SidebarContext = createContext<SidebarContextType>({
@@ -82,12 +78,10 @@ interface SidebarProviderProps {
   children: React.ReactNode;
   defaultOpen?: boolean;
 }
-<<<<<<< HEAD
 export function SidebarProvider({
   children
   defaultOpen = true
 }: SidebarProviderProps) {
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function SidebarProvider({ 
@@ -95,11 +89,14 @@ export function SidebarProvider({
   defaultOpen = true 
 }: SidebarProviderProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
@@ -107,6 +104,7 @@ export function SidebarProvider({
 
   return (
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -121,13 +119,12 @@ import React, { createContext, useContext, useState } from "react",;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/SidebarProvider.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div
         className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
       >
-=======
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { createContext, useContext, useState } from "react",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface SidebarContextType {;
@@ -190,15 +187,19 @@ export function SidebarProvider({;
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {children}
       </div>
     </SidebarContext.Provider>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -316,16 +317,15 @@ return (<SidebarContext.Provider value= {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/SidebarProvider.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
 }
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

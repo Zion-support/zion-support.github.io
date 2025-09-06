@@ -1,14 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react'
 import { Globe } from 'lucide-react'
-<<<<<<< HEAD
-=======
 import {
   Select,
   SelectContent,
@@ -19,14 +20,13 @@ import {
   CountryPricing,
   onsiteServicePricing,
 } from '@/data/onsiteServicePricing'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState, useEffect } from "react",
 import { Globe } from 'lucide-react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -37,6 +37,9 @@ import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricin
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Select
   SelectContent
@@ -55,11 +58,14 @@ export function CountrySelector({
   selectedCountry
 }: CountrySelectorProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void
   selectedCountry: CountryPricing | null
@@ -67,6 +73,7 @@ export function CountrySelector({;
   onCountryChange,;
   selectedCountry;
 }: CountrySelectorProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -77,6 +84,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
 >>>>>>>   onCountryChange: (country: CountryPricing | null,) => void
 
@@ -84,11 +93,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
   // Set top/popular countries
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const popular = [
       'United States'
       'United Kingdom'
@@ -103,16 +108,20 @@ ursor/fix-website-loading-errors-and-merge-6662
       .sort((a, b) => a.country.localeCompare(b.country))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"],
     const top = onsiteServicePricing.filter(item => 
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -123,21 +132,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setTopCountries(top)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, [])
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
-<<<<<<< HEAD
     const country =
       onsiteServicePricing.find(item => item.country === countryName) |null
-=======
     const country = null;
       onsiteServicePricing.find(item => item.country === countryName) || null
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     onCountryChange(country)
-<<<<<<< HEAD
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>   return (
@@ -265,13 +273,10 @@ export function CountrySelector(): any ({;
 >>>>>>>     <div className="mb-6">
 =======
 =======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  },
+
   return (
     <div className="mb-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -281,10 +286,13 @@ export function CountrySelector(): any ({;
       </h3>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Select
         onValueChange={handleCountryChange}
         value={selectedCountry?.country}      >
@@ -329,7 +337,6 @@ export function CountrySelector(): any ({;
               ))}          </div>              .map((item) => (
               .sort((a, b,) => a.country.localeCompare(b.country))
               .map((item,) => (
-=======
       
       <Select 
         onValueChange={handleCountryChange} 
@@ -432,15 +439,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               .map((item) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -525,17 +536,20 @@ function CountrySelector() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </SelectContent>
       </Select>
     </div>
   )
 }
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>;
         </SelectContent>;
       </Select>;
@@ -563,8 +577,11 @@ function CountrySelector() {
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

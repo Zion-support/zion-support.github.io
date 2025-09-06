@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ export default function NewJobPage() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
@@ -27,7 +30,6 @@ export default function NewJobPage() {
   const { notify } = useToast();
   const [loading, setLoading] = useState(false);
   const onSubmit = null;
-=======
 import {useState} from 'react';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
@@ -38,9 +40,12 @@ import { useToast } from '../../components/ui/NotificationSystem';
       </EnhancedCard>
     </div>
 );
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import EnhancedCard from '../../components/ui/EnhancedCard'
 import EnhancedButton from '../../components/ui/EnhancedButton'
@@ -58,9 +63,12 @@ export default function NewJobPage() {
     }, 800)
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -74,6 +82,7 @@ export default function NewJobPage() {
             <textarea className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" rows={5} placeholder="Job description" />
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
           </form>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -113,6 +122,8 @@ export default function NewJobPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </form>
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       </EnhancedCard>
     </div>
@@ -148,8 +159,11 @@ import { use_toast } from '../../components / ui / NotificationSystem';
 =======
 =======
 );
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -164,6 +178,7 @@ import { use_toast } from '../../components / ui / NotificationSystem';
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -176,3 +191,5 @@ import { use_toast } from '../../components / ui / NotificationSystem';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

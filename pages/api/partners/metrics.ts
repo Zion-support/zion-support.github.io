@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 
@@ -100,15 +98,17 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: 'Missing code' });
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
@@ -159,7 +159,6 @@ export default async function handler(req, res) {
         payout_amount: 210
         currency: "USD"
       });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -228,11 +227,13 @@ export default async function handler(req, res) {
         conversion_rate: 7 / 12,
         payout_amount: 210,
         currency: 'USD'})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     const supabase = getServerSupabase();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const events = ["visitsignupprofile_completedjob_createdhire"] as const;
     const counts: Record < string, number> = {}
     for (const ev of events) {
@@ -337,19 +338,15 @@ conversion_rate: total_signups;
 =======
       conversion_rate: total_signups
         ? total_profile_completions / total_signups
-<<<<<<< HEAD
         : 0
       payout_amount: total_profile_completions * 50
       currency: "USD"
-=======
-=======
         : 0,
       payout_amount: total_profile_completions * 50,
       currency: "USD",
     });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -401,7 +398,6 @@ export default async function handler(req, res) {
 }
 ;
     const supabase = getServerSupabase();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
     for (const ev of events) {
@@ -427,10 +423,14 @@ export default async function handler(req, res) {
       conversion_rate: total_signups ? total_profile_completions / total_signups : 0,
       payout_amount,
       currency: 'USD'
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     });
   } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       conversion_rate: total_signups ? total_profile_completions / total_signups : 0, payout_amount,
@@ -455,15 +455,17 @@ export default async function handler(req, res) {
 
 =======
 <<<<<<< HEAD
-    return res.status(500).json({ error: e?.message });
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    return res.status(500).json({ error: e?.message });
     return res.status(500).json({ error: e?.message })
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }
-<<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
+}
 }
   } catch (error) {
     console.error("Error:", error);
@@ -493,8 +495,10 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

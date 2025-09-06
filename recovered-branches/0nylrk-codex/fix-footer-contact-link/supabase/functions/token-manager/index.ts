@@ -14,8 +14,6 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/token-manager/index.ts
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
@@ -44,16 +42,18 @@ const supabase = createClient(supabaseUrl, serviceKey);
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 const supabase = createClient(supabaseUrl, serviceKey);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
-=======
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -62,6 +62,8 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TokenRequest {
   userId: string,
   amount: number,
@@ -72,6 +74,7 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, serviceKey),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -121,12 +124,13 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/token-manager/index.ts
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', {
       headers: {
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-<<<<<<< HEAD
   }
   const url = new URL(req.url);
   const action = url.pathname.split('/').pop();
@@ -228,12 +232,14 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
   if (txError) return new Response(JSON.stringify({ error: txError.message }), { status: 500 });
 
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 })
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",;
 interface TokenRequest {;
@@ -357,6 +363,7 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     reason}),;
   if (txError) return new Response(JSON.stringify({ error: txError.message }), { status: 500 });
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -492,3 +499,7 @@ if (wallet) {
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

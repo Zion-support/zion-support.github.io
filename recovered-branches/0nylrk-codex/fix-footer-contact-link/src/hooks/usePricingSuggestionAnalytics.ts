@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/usePricingSuggestionAnalytics.ts
 
 =======
@@ -29,6 +30,8 @@ interface PricingSuggestionAnalytics {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect  } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 interface PricingSuggestionAnalytics {
@@ -50,16 +53,18 @@ interface PricingSuggestionAnalytics {
     type: 'client' | 'talent'
   }[];
   isLoading: boolean
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
-=======
 import {useState, useEffect} from 'react';
 import {supabase} from "@/integrations/supabase/client";
-=======
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -68,6 +73,8 @@ import { supabase } from "@/integrations/supabase/client",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -85,6 +92,7 @@ interface PricingSuggestionAnalytics {
   }[],
   isLoading: boolean,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -96,15 +104,18 @@ export function usePricingSuggestionAnalytics(days = 30) {
 <<<<<<< HEAD
 
 =======
+=======
+  error: string | null
+}
+export function usePricingSuggestionAnalytics(days = 30) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
     totalSuggestions: 0;
     acceptanceRate: 0;
     averagePriceGap: 0;
     suggestionsByCategory: [];
     recentSuggestions: [];
-=======
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
-<<<<<<< HEAD
     totalSuggestions: 0;
     acceptanceRate: 0;
     averagePriceGap: 0;
@@ -113,18 +124,21 @@ export function usePricingSuggestionAnalytics(days = 30) {
     isLoading: true
     error: null
   });
-=======
     totalSuggestions: 0,
     acceptanceRate: 0,
     averagePriceGap: 0,
     suggestionsByCategory: [],
     recentSuggestions: [],
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     isLoading: true,
     error: null
   }),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -135,12 +149,15 @@ export function usePricingSuggestionAnalytics(days = 30) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -172,6 +189,8 @@ export function usePricingSuggestionAnalytics(days = 30) {
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/usePricingSuggestionAnalytics.ts
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         await new Promise(resolve => setTimeout(resolve, 1000));
         // Mock data for demonstration
         const mockData = {
@@ -200,11 +219,14 @@ export function usePricingSuggestionAnalytics(days = 30) {
           isLoading: false
           error: null
         });
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         await new Promise(resolve => setTimeout(resolve, 1000)),
 
         // Mock data for demonstration
@@ -236,16 +258,20 @@ export function usePricingSuggestionAnalytics(days = 30) {
         }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -258,16 +284,15 @@ export function usePricingSuggestionAnalytics(days = 30) {
         console && console.error("Error fetching pricing suggestion analytics:", error);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         //   .gte('created_at', `now() - interval '${days} days'`);
         // if (error) throw error;
-=======
         //   .gte('created_at', `now() - interval '${days} days'`),
         
         // if (error) throw error,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Process data and setAnalytics({...})
       } catch (error) {
-<<<<<<< HEAD
         console.error("Error fetching pricing suggestion analytics:", error);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         setAnalytics({
@@ -299,12 +324,13 @@ export function usePricingSuggestionAnalytics(days = 30) {
 =======
 
   return analytics
-<<<<<<< HEAD
-=======
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
@@ -645,11 +671,11 @@ return analytics;
     fetchAnalytics();
   }, [days]);
   return analytics;
+}
+}
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

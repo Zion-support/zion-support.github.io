@@ -17,6 +17,7 @@ function fixImportSyntax(filePath) {
       return match.replace(imports, fixedImports);
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -28,12 +29,16 @@ function fixImportSyntax(filePath) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    // Fix missing commas in import statements
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    // Fix missing commas in import statements
 
     // Fix missing commas in import statements;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items

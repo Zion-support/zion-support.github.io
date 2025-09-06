@@ -1,19 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/header/Logo.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react',
 import Link from 'next/link';
 import { useWhitelabel } from '@/context/WhitelabelContext';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Link from 'next/link'
 import { useWhitelabel } from '@/context/WhitelabelContext'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface LogoProps {
   customLogo?: string
 export function Logo({ customLogo }: LogoProps) {
@@ -41,18 +44,17 @@ export function Logo({ customLogo }: LogoProps) { const { isWhitelabel, logoUrl,
 
   const logoToUse = customLogo |(isWhitelabel ? logoUrl : null)
   // Use the white-label color if available and no specific _customColor is provided
-<<<<<<< HEAD
   // const colorToUse = _customColor |(isWhitelabel ? primaryColor : undefined)
 
-=======
-=======
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined)
-=======
 import React from 'react';
 import Link from 'next/link';
 import { useWhitelabel } from '@/context/WhitelabelContext';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react',;
 import Link from 'next/link',;
@@ -99,11 +101,6 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/header/Logo.tsx
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (logoToUse) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
@@ -112,6 +109,7 @@ if ( {) {
       </Link>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/header/Logo.tsx
 <<<<<<< HEAD
@@ -124,11 +122,15 @@ if ( {) {
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Link href="/" className="flex items-center">
       <img src="/logos/zion-logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />
     </Link>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -204,6 +206,8 @@ if ( {) {
       <img
         src='/logos/zion-logo && logo.png'
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (logoToUse) {
     return (
       <Link href='/' className='flex items-center'>
@@ -299,15 +303,13 @@ export function Logo({ customLogo } LogoProps) {;
   );
 };
 }
-=======
 }
+}
+;
+;
 <<<<<<< HEAD
-=======
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

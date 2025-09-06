@@ -11,14 +11,15 @@ export interface Notification {;
 =======
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export interface Notification {
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
+export interface Notification {
 export interface Notification {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -34,6 +35,8 @@ export interface Notification {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
@@ -160,7 +163,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
   const typeStyles = {
-<<<<<<< HEAD
     success: "bg-green-50 border-green-400 text-green-800"
     error: "bg-red-50 border-red-400 text-red-800"
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800"
@@ -202,8 +204,11 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       setToasts((prev) => prev.filter((t) => t.id !== id))
     }, 3000)
   }, [])
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     success: "bg-green-50 border-green-400 text-green-800",
     error: "bg-red-50 border-red-400 text-red-800",
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
@@ -230,10 +235,6 @@ interface Notification {
 export default function NotificationSystem({
   notifications,
   onDismiss,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 key={notification.id},
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},
 
@@ -306,11 +307,12 @@ export default function NotificationSystem({
   }, []),
 
 }: NotificationSystemProps) {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: NotificationSystemProps) {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (notifications.length === 0) return null;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
@@ -466,19 +468,16 @@ if (return null) {
       ))}
     </div>;
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

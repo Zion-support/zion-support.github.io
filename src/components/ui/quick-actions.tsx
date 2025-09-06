@@ -1,11 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
 import React, { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
@@ -81,16 +82,13 @@ export function QuickActions() {
   if (!isAllowed) {
     return null
   }
-<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false)
   const [isProcessing, setIsProcessing] = useState<string | null>(null)
   const executeAction = async (actionId: string, action: () => void) => {
-=======
 ;
   const [isVisible, setIsVisible] = useState(false);
   const [isProcessing, setIsProcessing] = useState<string | null>(null);
   const executeAction = async (actionId: string, action: () => void) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
@@ -104,10 +102,13 @@ export function QuickActions() {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -139,6 +140,7 @@ export function QuickActions() {
       icon: <Trash2 className='w-4 h-4' />
       category: 'maintenance'
       dangerous: true
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -191,6 +193,8 @@ export function QuickActions() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -229,10 +233,6 @@ export function QuickActions() {;
     }
   },
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -245,6 +245,7 @@ export function QuickActions() {;
       action: () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     {
 =======
@@ -258,20 +259,26 @@ export function QuickActions() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        localStorage.setItem('performance-monitoringtrue'),
+        window.location.reload()
+      }},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         localStorage.setItem('performance-monitoring', 'true')
         window.location.reload()
       },
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>     {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       id: 'enable-bundle-analyzer',
@@ -282,6 +289,7 @@ export function QuickActions() {;
       action: () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     {
 =======
@@ -295,20 +303,26 @@ export function QuickActions() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        localStorage.setItem('bundle-analyzertrue'),
+        window.location.reload()
+      }},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         localStorage.setItem('bundle-analyzer', 'true')
         window.location.reload()
       },
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>     {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       id: 'clear-cache',
@@ -319,6 +333,7 @@ export function QuickActions() {;
       dangerous: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       action: () => {
 =======
@@ -326,6 +341,8 @@ export function QuickActions() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       action: () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         if ('caches' in window) {
@@ -333,6 +350,7 @@ export function QuickActions() {;
             names.forEach(name => caches.delete(name))
           })
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -343,23 +361,25 @@ export function QuickActions() {;
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         localStorage.clear()
         sessionStorage.clear()
         window.location.reload()
-<<<<<<< HEAD
       }
     }
-=======
       },
     },
-=======
         localStorage.clear(),
         sessionStorage.clear(),
         window.location.reload()
       }},
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
 >>>>>>>       id: 'preload-critical-resources'
       label: 'Preload Critical Resources'
@@ -371,16 +391,20 @@ ursor/fix-website-loading-errors-and-merge-6662
         const criticalFonts = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           '/fonts/inter-var.woff2'
           '/fonts/cal-sans.woff2'
-=======
-<<<<<<< HEAD
           '/fonts/inter-var.woff2',
           '/fonts/cal-sans.woff2',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ]
         criticalFonts.forEach(font => {
           const link = document.createElement('link')
@@ -401,6 +425,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           document.head.appendChild(link)
         })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           '/fonts/inter-var.woff2'
@@ -408,6 +433,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
     {
@@ -479,6 +506,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     maintenance:
       'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           '/fonts/inter-var.woff2/fonts/cal-sans.woff2'
         ],
@@ -532,6 +560,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         localStorage.clear(),
         sessionStorage.clear(),
         window.location.reload()
@@ -545,11 +575,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
-=======
       },
     },
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           '/fonts/inter-var.woff2/fonts/cal-sans.woff2'
         ],
         
@@ -576,10 +603,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           document.head.appendChild(link)
         })
       }},
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'download-performance-report',
       label: 'Download Performance Report',
@@ -597,9 +620,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             width: screen.width,
             height: screen.height,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             colorDepth: screen.colorDepth,
           },
         }
@@ -617,11 +643,14 @@ ursor/fix-website-loading-errors-and-merge-6662
       },
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             colorDepth: screen.colorDepth
           }
         },
@@ -639,6 +668,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         document.body.removeChild(a),
         URL.revokeObjectURL(url)
       }},
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -718,6 +748,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -726,21 +758,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       category: 'development',
       dangerous: true,
       action: () => {
-<<<<<<< HEAD
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
-=======
-<<<<<<< HEAD
         throw new Error(
           'Test error for Sentry integration - this is intentional!'
         )
       },
     },
-=======
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -749,9 +775,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       category: 'maintenance',
       action: () => {
         window.location.reload()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       },
     },
   ]
@@ -768,8 +791,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     maintenance:
       'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }}],
 
   const categorizedActions = {
@@ -781,29 +802,30 @@ ursor/fix-website-loading-errors-and-merge-6662
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant='outline'
           size='sm'
           onClick={() => setIsVisible(true)}
           className='bg-background/80 backdrop-blur-sm'        >
           <Settings className='w-4 h-4 mr-2' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           Quick Actions
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant="outline"
           size="sm"
           onClick={() => setIsVisible(true)}
@@ -811,11 +833,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         >
           <Settings className="w-4 h-4 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Quick Actions
 >>>>>>>         </Button>
       </div>
@@ -843,6 +868,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               ✕
             </Button>
@@ -852,10 +878,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               variant='ghost'
               size='sm'
               onClick={() => setIsVisible(false)}
               className='h-6 w-6 p-0'            >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               ✕
             </Button>
@@ -866,21 +895,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               variant="ghost"
               size="sm"
               onClick={() => setIsVisible(false)}
               className="h-6 w-6 p-0"
             >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ✕
             </Button>
           </div>
         </CardHeader>
-<<<<<<< HEAD
         <CardContent className='pt-0 space-y-4'>
           {Object.entries(categorizedActions).map(
             ([category, categoryActions]) => (
@@ -933,13 +958,15 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
+}
+}
 <<<<<<< HEAD
-}
-}
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -990,6 +1017,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 } ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -1003,3 +1031,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

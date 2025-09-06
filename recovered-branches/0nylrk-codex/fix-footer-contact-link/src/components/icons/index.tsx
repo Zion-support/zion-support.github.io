@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/icons/index.tsx
 
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import * as LucideIcons from 'lucide-react';
 // Alias for missing icons or for icons with different names
@@ -106,16 +109,17 @@ type IconProps = LucideIcons.LucideProps;
 const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
   const IconComponent = (props: IconProps) => {
     // Fix: Use proper type casting to access the icon component
-<<<<<<< HEAD
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>
     return <LucideIcon {...props} />
   }
-=======
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
     return <LucideIcon {...props} />;
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   IconComponent.displayName = aliasName;
   return IconComponent
 }
@@ -585,13 +589,14 @@ export const {;
     iconExports[alias] = createIconComponent(alias, 'HelpCircle')
   }
 });
-<<<<<<< HEAD
 export const {
-=======
 
 export const {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   LayoutGrid;
   List;
   Zap;
@@ -663,17 +668,18 @@ export const {;
 
 =======
   Tag} = iconExports;
-<<<<<<< HEAD
 // Also export all original icons from lucide-react
 export * from 'lucide-react';
 
-=======
 
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import * as LucideIcons from 'lucide-react',;
 // Alias for missing icons or for icons with different names;
@@ -854,6 +860,7 @@ export const {;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -894,3 +901,5 @@ export * from 'lucide-react';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

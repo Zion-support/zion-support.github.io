@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Button from '../components/ui/Button';
@@ -201,18 +202,17 @@ import Button from '../components / ui / Button';
 import {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
   Link
   Copy
   BarChart3
@@ -226,9 +226,12 @@ import {
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
 export default function URLShortenerPage() {
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Link,
   Copy,
   BarChart3,
@@ -363,7 +366,6 @@ function URLShortenerPage() {
   Trash2,;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 export default function URLShortenerPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
   const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
@@ -520,12 +522,9 @@ export default function URLShortenerPage() {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return result;
-<<<<<<< HEAD
   }
-=======
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
   }
@@ -1035,6 +1034,7 @@ export default function URLShortenerPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
 =======
 
@@ -1284,12 +1284,9 @@ export default function URLShortenerPage() {;
       </section>
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
         <section className='py-20 bg-gray-800'>
@@ -1694,6 +1691,7 @@ onClick={() => deleteUrl(url && url.id)}
           </div>
         </section>
       )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1752,11 +1750,15 @@ onClick={() => deleteUrl(url && url.id)}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Features */}
       <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1778,6 +1780,10 @@ onClick={() => deleteUrl(url && url.id)}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+              Professional URL Shortening Features
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened
@@ -2082,6 +2088,7 @@ onClick={() => deleteUrl(url && url.id)}
         </div>
       </section>
     </>
+<<<<<<< HEAD
 
 }
 =======
@@ -2941,22 +2948,23 @@ className='border-white text-white hover:bg-white hover:text-orange-600'>       
     </>);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
-=======
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

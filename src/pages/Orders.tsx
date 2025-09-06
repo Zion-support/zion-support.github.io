@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
@@ -13,11 +12,12 @@ import {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
-<<<<<<< HEAD
 import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Table
@@ -44,21 +44,16 @@ import { Badge } from '@/components/ui/badge';
 >>>>>>> 
 export default function OrdersPage() {;
 
-=======
-=======
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth',
 import { useGetOrdersQuery } from '@/hooks/useOrders',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
   Table,
   TableBody,
   TableCell,
-<<<<<<< HEAD
   TableHead,;
   TableHeader;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 
@@ -83,10 +78,13 @@ export default function OrdersPage() {;
   const formatDate = (date: string) => new Date(date).toLocaleDateString();
   const getStatusBadge = (status: string,) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth',
@@ -100,11 +98,14 @@ import {
   TableBody,
   TableCell,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   TableHead,
   TableHeader,
   TableRow} from '@/components/ui/table',
@@ -128,11 +129,6 @@ export default function OrdersPage() {
   const formatDate = (date: string) => new Date(date).toLocaleDateString(),
 
   const getStatusBadge = (status: string) => {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     switch (status) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       case 'in_escrow':
@@ -157,6 +153,7 @@ export default function OrdersPage() {
       default:
         return status
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -201,10 +198,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               </TableRow>;
 
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="container max-w-4xl py-10">
@@ -237,6 +234,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <EmptyState
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           icon={<FileText className='h-10 w-10' />}
@@ -245,18 +243,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           icon={<FileText className='h-10 w-10' />}
           title='No Orders'          description="You haven't purchased anything yet."
-=======
           icon={<FileText className="h-10 w-10" />}
           title="No Orders"
           description="You haven't purchased anything yet."
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
 >>>>>>>       ) : (
         <Table>
@@ -272,6 +274,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <TableBody>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             {orders.map(order => (              <TableRow key={order.orderId}>
@@ -280,18 +283,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {orders.map(order => (              <TableRow key={order.orderId}>
                 <TableCell className='font-medium'>{order.orderId}</TableCell>
-=======
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <TableCell>{formatDate(order.date)}</TableCell>
 >>>>>>>                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
@@ -345,19 +352,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
             ))}
-<<<<<<< HEAD
           </TableBody>
         </Table>
       )}
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </TableBody>;
         </Table>;
       )}
@@ -365,6 +372,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -382,3 +390,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

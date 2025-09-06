@@ -27,22 +27,28 @@ export default function AccountSettingsPage() {;
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function AccountSettingsPage() {
-<<<<<<< HEAD
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null);
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -76,17 +82,21 @@ export default function AccountSettingsPage() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -94,6 +104,7 @@ export default function AccountSettingsPage(req, res) {
   const [linking, setLinking] = useState(false);
   const [backupCid, setBackupCid] = useState('');
   const [restoreCid, setRestoreCid] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -314,6 +325,8 @@ const data = await res.json();
     try {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const [status, setStatus] = useState<string | null>(null);
   useEffect(() => {
@@ -332,7 +345,6 @@ const data = await res.json();
     if (typeof window !== 'undefined')
       window.localStorage.setItem('zion-web3-display', String(val));  }
   const linkDID = async () => {
-=======
   const [status, setStatus] = useState<string | null>(null);
   useEffect(() => {;
     const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
@@ -345,14 +357,12 @@ const data = await res.json();
     if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-display', String(val));
   },;
   const linkDID = async () => {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (!user) return;
     setLinking(true);
     setStatus(null);
     try {
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes.json();
-<<<<<<< HEAD
       const payload = {
         ens
         lens
@@ -363,9 +373,7 @@ const data = await res.json();
         nonce
         ts: Date.now()
       }
-=======
       const payload = { ens, lens, ceramic, farcaster, address: user.address, chain: user.chain, nonce, ts: Date.now() },;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort);
       let signature: string | null = null;
@@ -377,7 +385,6 @@ const data = await res.json();
           signature = await signer.signMessage(msg);
         } else if (user.chain === 'sol' && (window as any).solana?.isPhantom) {;
           const enc = new TextEncoder().encode(msg);
-<<<<<<< HEAD
           const { signature: sig } = await (window as any).solana.signMessage(
             enc
             'utf8'
@@ -413,7 +420,6 @@ const data = await res.json();
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify(profile)
       });
-=======
           const { signature: sig } = await (window as any).solana.signMessage(enc, 'utf8');
           const bs58 = (await import('bs58')).default;
           signature = bs58.encode(sig);
@@ -458,12 +464,16 @@ const data = await res.json();
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify(profile)}),;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Backup failed');
       setBackupCid(data.cid);
       setStatus('Backup saved to decentralized storage');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     } catch (error) {
@@ -482,6 +492,8 @@ const data = await res.json();
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } catch (e: any) {
       setStatus(e?.message |'Backup failed');    }
   }
@@ -510,7 +522,6 @@ const data = await res.json();
       setStatus(e?.message |'Restore failed');    }
   }
 
-=======
     } catch (error) {
       setStatus(e?.message || 'Backup failed');
       } catch (error) {
@@ -909,15 +920,10 @@ if ( {) {
   }
 }
       setStatus('Profile restored from backup');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     } catch (e: any) {
       setStatus(e?.message || 'Restore failed');    }
   };
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch (error) {
       setStatus(e?.message || 'Restore failed');
       } catch (error) {
@@ -926,11 +932,6 @@ if ( {) {
   }
 }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -977,6 +978,7 @@ if ( {) {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -984,6 +986,8 @@ if ( {) {
 <section className="rounded-xl border p-5">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>
           <div className='grid grid-cols-1 gap-3'>
@@ -1041,8 +1045,11 @@ if ( {) {
                 </code>
               </span>
             )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="rounded-xl border p-5">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <h2 className="font-semibold mb-2">Link Web3 identities</h2>
@@ -1072,6 +1079,7 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1084,12 +1092,15 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
             <button onClick={doRestore} className="rounded-md border px-4 py-2">Restore profile</button>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1136,16 +1147,14 @@ if ( {) {
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {status && <div className='text-sm text-gray-600'>{status}</div>}
       </div>
     </>
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1160,9 +1169,12 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

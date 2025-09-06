@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -26,6 +27,9 @@ id: 'ai-emotion-intelligence-platform', name: 'AI Emotion Intelligence Platform'
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const real2036AIServices = [
   {
     id: 'ai-emotion-intelligence-platform'
@@ -355,6 +359,7 @@ export const real2036AIServices = [
     ]
     useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -366,6 +371,8 @@ export const real2036AIServices = [
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Autonomous vehicles'
       'Fleet management'
       'Traffic optimization'
@@ -703,9 +710,12 @@ export const real2036AIServices = [;
     use_cases: [;
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Autonomous vehicles',
       'Fleet management',
       'Traffic optimization',
@@ -954,8 +964,6 @@ export const real2036AIServices = [;
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const real2036AIServices = [;
   {;
     id: 'ai-emotion-intelligence-platform',;
@@ -1166,12 +1174,11 @@ export const real2036AIServices = [;
     useCases: [;
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';
     ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useEffect, useState } from "react";
 import { connectMetaMask, getAccounts } from "../../utils/wallet";
@@ -8,6 +11,7 @@ export type RedemptionType =
   | "promote_listing";
   | "premium_support";
 export default function UseTokensModal({
+<<<<<<< HEAD
 
 =======
 
@@ -15,11 +19,19 @@ export default function UseTokensModal({
 
 =======
 
+=======
+  isOpen
+  onClose
+  serviceId
+  defaultType
+}: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isOpen,
   onClose,
   serviceId,
   defaultType,
 }: {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -68,6 +80,8 @@ isOpen
 }: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
@@ -219,10 +233,15 @@ export default function UseTokensModal ({
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+
+  if (!isOpen) return null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
@@ -439,6 +458,7 @@ if (return null) {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -469,3 +489,10 @@ if (return null) {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+);
+  );
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

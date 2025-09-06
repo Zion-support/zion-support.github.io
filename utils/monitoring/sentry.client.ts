@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -21,28 +22,29 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as Sentry from '@sentry/react';
-<<<<<<< HEAD
 if (typeof window !== 'undefined') {Sentry.init({;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN |'';
     tracesSampleRate: 0.1;
     integrations: [];
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
-=======
-=======
-<<<<<<< HEAD
 import * as Sentry from '@sentry/react',;
-=======
 import * as Sentry from '@sentry/react';
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 if (typeof window !== 'undefined') {;
   Sentry.init({;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '',;
     tracesSampleRate: 0.1,;
     integrations: [];
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -53,10 +55,13 @@ if (typeof window !== 'undefined') {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -73,3 +78,6 @@ if (typeof window !== 'undefined') {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

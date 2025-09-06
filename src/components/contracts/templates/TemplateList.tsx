@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateList.tsx
 
 
@@ -12,6 +13,9 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react";
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -21,12 +25,15 @@ interface TemplateListProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { ContractTemplate } from "@/types/contracts",
@@ -36,6 +43,7 @@ import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -48,11 +56,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 =======
 <<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth";
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { useAuth } from "@/hooks/useAuth";
 import { useAuth } from "@/hooks/useAuth",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // useRouter replaces the old useLocation hook from react-router
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -66,11 +73,14 @@ import { useAuth } from "@/hooks/useAuth",
   AlertDialogTitle} from "@/components/ui/alert-dialog"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ContractTemplate } from "@/types/contracts"
 import { Button } from "@/components/ui/button"
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -89,8 +99,11 @@ import { useAuth } from "@/hooks/useAuth"
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react"
 interface TemplateListProps {
   templates: ContractTemplate[]
@@ -132,6 +145,7 @@ export function TemplateList({
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useAuth } from "@/hooks/useAuth",
@@ -162,6 +176,8 @@ import { use_auth  } from '@/hooks / use_auth';
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuth } from "@/hooks/useAuth",
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router',
@@ -175,6 +191,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useState } from "react",
@@ -343,6 +360,8 @@ export function TemplateList(): any ({;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -472,12 +491,7 @@ export function TemplateList({;
     }
     await setDefaultTemplate.mutateAsync(templateId)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">
@@ -511,6 +525,7 @@ export function TemplateList({;
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
                 </p>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -604,12 +619,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateList.tsx
 =======
 =======
-              
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              
               <div className="flex items-center gap-2">
                 <Button
                   variant="ghost"
@@ -657,6 +669,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <Separator className="my-3" />
 
@@ -680,22 +693,18 @@ ursor/fix-website-loading-errors-and-merge-6662
               className="w-full"
 >>>>>>>             >
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Separator className="my-3" />
-<<<<<<< HEAD
             <Button
               onClick = {() => onSelect(template),}
               variant="outline"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             
             <Separator className="my-3" />
             
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="w-full"
             >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -704,6 +713,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardContent>
         </Card>
       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -715,6 +725,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -745,19 +758,24 @@ router.push (`/auth/login?returnTo=$ {
 }`)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 return
 }await setDefaultTemplate.mutateAsync (templateId)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 return
 }await setDefaultTemplate.mutateAsync (templateId)
-=======
 return;
 }await setDefaultTemplate.mutateAsync (templateId) 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
   template.title
@@ -777,6 +795,7 @@ return;
 }onOpenChange= {
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -826,15 +845,14 @@ return;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateList.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   handleDeleteConfirm
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)
 }'"}
-=======
   handleDeleteConfirm ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 }'"};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
@@ -1140,8 +1158,11 @@ return;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

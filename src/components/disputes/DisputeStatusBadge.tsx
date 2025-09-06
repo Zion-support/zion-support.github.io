@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputeStatusBadge.tsx
 
 <<<<<<< HEAD
@@ -8,12 +9,16 @@ import { Badge } from "@/components/ui/badge";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { Badge } from "@/components/ui/badge";
-=======
 import { Badge } from '@/components/ui/badge'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ShieldAlert } from 'lucide-react'
 
 import {
@@ -29,6 +34,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let message = null;
     default:
       break
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -95,8 +101,9 @@ function DisputeStatusBadge() {
       break;
 <<<<<<<< HEAD:src/components/disputes/DisputeStatusBadge.tsx
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
     case 'resolved':
       variant = 'outline'
       message = 'This dispute has been resolved'
@@ -105,8 +112,6 @@ function DisputeStatusBadge() {
       variant = 'outline'
       message = 'This dispute has been closed'
       break
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 
@@ -138,6 +143,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       break,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     default:
 =======
@@ -157,11 +163,12 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     default:
       break
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Tooltip>
@@ -175,30 +182,37 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
         <p>{message}</p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </TooltipContent>;
     </Tooltip>;
   );
 };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </TooltipContent>
     </Tooltip>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -304,6 +318,7 @@ export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -347,3 +362,5 @@ message ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

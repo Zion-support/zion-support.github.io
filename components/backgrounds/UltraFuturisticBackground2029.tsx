@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -37,6 +37,8 @@ ctx.global_alpha = particle.opacity;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 // Initialize particles
@@ -543,6 +545,7 @@ ctx.shadowColor = particle.color;
                   ctx.lineTo(partner.x, partner.y);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -643,10 +646,12 @@ if ( {) {
                   ctx.stroke ();                }                  ctx.stroke ();
 =======
 <<<<<<< HEAD
-                  ctx.stroke();                }                  ctx.stroke()
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  ctx.stroke();                }                  ctx.stroke()
                   ctx.stroke();                }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -654,10 +659,13 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 }
               }
             }
             break;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -748,8 +756,9 @@ if ( {) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           case 'holographic':
             // Holographic particles with rainbow effect
             const time = Date.now() * 0.001;
@@ -2015,14 +2024,7 @@ if ( {) {
           ease: 'easeInOut'
         }}
       />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -2035,18 +2037,13 @@ if ( {) {
         <motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
           animate={{
-<<<<<<< HEAD
             scale: [1, 1.2, 1]
             opacity: [0.1, 0.3, 0.1],          }}
           transition={{
-<<<<<<< HEAD
             duration: 4
             repeat: Infinity
-=======
             duration: 4,
             repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'easeInOut',      {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -2061,25 +2058,19 @@ if ( {) {
           animate={{
             scale: [1, 1.2, 1];
             opacity: [0.1, 0.3, 0.1]
-<<<<<<< HEAD
           }}
           transition={{
             duration: 4
             repeat: Infinity
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ease: 'easeInOut'
-=======
-=======
             ease: 'easeInOut',
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
 <<<<<<< HEAD
 
@@ -2163,23 +2154,17 @@ if ( {) {
           animate={{
             scale: [1.2, 1, 1.2];
             opacity: [0.3, 0.1, 0.3]
-<<<<<<< HEAD
           }}
           transition={{
             duration: 5
             repeat: Infinity
             ease: 'easeInOut'
-=======
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 5,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
         />
         {/* Neural network nodes */}
@@ -2199,23 +2184,17 @@ if ( {) {
           animate={{
             scale: [1, 1.1, 1];
             opacity: [0.2, 0.4, 0.2]
-<<<<<<< HEAD
           }}
           transition={{
             duration: 6
             repeat: Infinity
             ease: 'easeInOut'
-=======
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
         />
       </div>
@@ -2237,8 +2216,6 @@ if ( {) {
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.2, 1];
             }}
-=======
-<<<<<<< HEAD
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1],          }}
           transition={{
@@ -2263,13 +2240,9 @@ if ( {) {
 
             }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
             }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             transition={{
               duration: 3 + i * 0 && 0.5,
               repeat: Infinity,
@@ -2307,11 +2280,10 @@ if ( {) {
         ))}
       </div>
     </div>
-<<<<<<< HEAD
 );  )
 }
-=======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -2319,3 +2291,5 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

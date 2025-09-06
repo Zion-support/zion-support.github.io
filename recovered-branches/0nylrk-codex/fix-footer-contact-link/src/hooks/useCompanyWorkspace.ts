@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useCompanyWorkspace.ts
@@ -13,34 +14,35 @@ import { useState, useEffect } from "react",
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {Company} from "@/components/enterprise/workspace/CompanyDashboard";
 export function useCompanyWorkspace(companySlug?: string) {;
   const [company, setCompany] = useState<Company | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
-<<<<<<< HEAD
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
 export function useCompanyWorkspace(companySlug?: string) {
   const [company, setCompany] = useState<Company | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
-=======
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard",
 export function useCompanyWorkspace(companySlug?: string) {
   const [company, setCompany] = useState<Company | null>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   useEffect(() => {
     // In a real app, this would fetch data from an API based on the companySlug
@@ -73,7 +75,6 @@ export function useCompanyWorkspace(companySlug?: string) {
           name: "Acme Corporation",
           logoUrl: "/placeholder.svg",
           theme: {
-<<<<<<< HEAD
             primaryColor: "#4f46e5";
             backgroundColor: "#ffffff"
             textColor: "#1f2937"}
@@ -82,8 +83,11 @@ export function useCompanyWorkspace(companySlug?: string) {
           teamLimit: 50;
           billingCycle: "Annual"
           workspaceUrl: "acme.zion-ai.com"});
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
             textColor: "#1f2937"},
@@ -92,6 +96,7 @@ export function useCompanyWorkspace(companySlug?: string) {
           teamLimit: 50,
           billingCycle: "Annual",
           workspaceUrl: "acme.zion-ai.com"}),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -103,6 +108,8 @@ billingCycle: "Annual",
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         setError(null)
       } else {
         // For any other slug, we could check if it's a valid company
@@ -130,7 +137,10 @@ billingCycle: "Annual",
           theme: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             primaryColor: "#4f46e5";
             backgroundColor: "#ffffff"
             textColor: "#1f2937"}
@@ -143,7 +153,6 @@ billingCycle: "Annual",
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useCompanyWorkspace.ts
 =======
           billingCycle: "Monthly"
-=======
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
             textColor: "#1f2937"},
@@ -151,8 +160,6 @@ billingCycle: "Annual",
           teamSize: 5,
           teamLimit: 10,
           billingCycle: "Monthly",
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           workspaceUrl: `${companySlug}.zion-ai.com`});
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         setError(null)
@@ -166,8 +173,6 @@ billingCycle: "Annual",
 <<<<<<< HEAD
 =======
 
-=======
-<<<<<<< HEAD
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
             textColor: "#1f2937"},
@@ -175,9 +180,12 @@ billingCycle: "Annual",
           teamSize: 5,
           teamLimit: 10,
           billingCycle: "Monthly",
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           workspaceUrl: `${companySlug}.zion-ai.com`}),
         setError(null)
 import { useState, useEffect } from "react",;
@@ -228,6 +236,7 @@ export function useCompanyWorkspace(companySlug?: string) {;
       setIsLoading(false);
     }, 1000), // Simulate loading delay;
   }, [companySlug]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ========
@@ -408,6 +417,8 @@ setError (null);
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return { company, isLoading, error }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

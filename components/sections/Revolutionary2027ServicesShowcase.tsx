@@ -46,7 +46,6 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   ArrowRight
   Brain
   Zap
@@ -69,8 +68,11 @@ import {
   Megaphone
   Scale
   Network;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Brain,
   Zap,
@@ -112,8 +114,11 @@ const Revolutionary2027ServicesShowcase = () =>: any {
 =======
   Scale,;
   Network,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
 import Link from 'next/link';
@@ -283,6 +288,7 @@ const Revolutionary2027ServicesShowcase = () => {
       transition: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -305,6 +311,8 @@ const Revolutionary2027ServicesShowcase = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         staggerChildren: 0.1
       }
     },  };        staggerChildren: 0.1
@@ -314,16 +322,18 @@ const Revolutionary2027ServicesShowcase = () => {
   };
 =======
   }
-=======
         staggerChildren: 0.1,
       },
     },  };
 
   };
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -1243,14 +1253,7 @@ stagger_children: 0.1,
 
 =======
           className='text-center mb-20'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -1271,14 +1274,7 @@ stagger_children: 0.1,
             Transform your business with solutions that were once science fiction.
           </p>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Category Overview */}
         <motion.div
           variants={containerVariants}
@@ -1319,6 +1315,7 @@ stagger_children: 0.1,
           ))}
         </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 {/* Hover Effect Overlay */}
                 <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>              </div>                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>;
               </div>;
@@ -1330,12 +1327,9 @@ stagger_children: 0.1,
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Featured Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -1364,7 +1358,6 @@ stagger_children: 0.1,
                   <h3 className='text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'>
                     {service.name}
                   </h3>
-<<<<<<< HEAD
                   <p className='text-gray-300 leading-relaxed'>                    {service.description}
                   </p>
                   {/* Features */}            >
@@ -1393,7 +1386,6 @@ stagger_children: 0.1,
                         <span className="text-sm text-gray-400">{feature}</span>
                     ))}
                   </div>
-=======
 
                   <p className='text-gray-300 leading-relaxed'>                    {service.description}
                   </p>
@@ -1410,11 +1402,6 @@ stagger_children: 0.1,
                     ))}
                   </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Market Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='flex justify-between items-center text-sm text-gray-400'>
@@ -1461,14 +1448,7 @@ stagger_children: 0.1,
             </motion.div>
           ))}
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1564,15 +1544,16 @@ stagger_children: 0.1,
         >
 =======
           className='text-center'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -1763,26 +1744,19 @@ export default Revolutionary2027ServicesShowcase;
 =======
 =======
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Revolutionary2027ServicesShowcase;  )
 }
 export default Revolutionary2027ServicesShowcase;
 
-<<<<<<< HEAD
-=======
+export default Revolutionary2027ServicesShowcase;
 export default Revolutionary2027ServicesShowcase;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default Revolutionary2027ServicesShowcase;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

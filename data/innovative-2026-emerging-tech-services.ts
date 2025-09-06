@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,6 +10,8 @@ import { ServiceVariant } from '../types / service - variants';
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -803,7 +806,6 @@ export const getPopularEmergingTechServices = () => {;
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.'
       launchDate: '2026-01-25'
       customers: 60
@@ -812,7 +814,6 @@ export const getPopularEmergingTechServices = () => {;
     }
   ];
 export const getPopularEmergingTechServices = () => {
-=======
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
       launchDate: '2026-01-25',
       customers: 60,
@@ -822,7 +823,6 @@ export const getPopularEmergingTechServices = () => {
   ];
 
 export const getPopularEmergingTechServices = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1289,12 +1289,8 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
     const price = parseInt(service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice
   })
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026EmergingTechService {;
   id: string,;
@@ -1616,11 +1612,10 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

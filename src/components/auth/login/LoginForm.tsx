@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
 
 <<<<<<< HEAD
@@ -30,10 +31,11 @@ import { Input  } from '@/components / ui / input';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from "react";
 import { useRouter  } from 'next/router';
-=======
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
@@ -51,9 +53,12 @@ import { z } from "zod"
 import { useAuth } from "@/context/auth/AuthProvider"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Form,
   FormControl,
@@ -77,7 +82,6 @@ import { useForm, ControllerRenderProps } from "react-hook-form",
 
 import { useState } from "react",
 import { useRouter } from 'next/router',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -87,11 +91,14 @@ import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -103,6 +110,7 @@ import {
   FormLabel
   FormMessage
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -110,6 +118,10 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Form,
   FormControl,
@@ -118,12 +130,14 @@ import {
   FormLabel,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormMessage,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/form'
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import Link from 'next/link';
@@ -144,8 +158,6 @@ export function LoginForm() {
   const [isResending, setIsResending] = useState(false)
   const [verificationMessage, setVerificationMessage] = useState('')
   const router = useRouter()
-<<<<<<< HEAD
-=======
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import {
@@ -154,7 +166,6 @@ import {
   FormField,
   FormItem,
   FormLabel,
-=======
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any,
     defaultValues: {
@@ -177,9 +188,12 @@ import {
           ) {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
@@ -225,12 +239,14 @@ export function LoginForm() {
     defaultValues: {
 =======
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any
     defaultValues: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       email: ''
       password: ''
       rememberMe: false
@@ -238,6 +254,7 @@ export function LoginForm() {
   })
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return
+<<<<<<< HEAD
 <<<<<<< HEAD
     try {
       setIsSubmitting(true)
@@ -306,6 +323,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       email: "",
       password: "",
       rememberMe: false}}),
@@ -313,36 +332,33 @@ if ( {) {
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       setIsSubmitting(true)
       // Pass email and password to the login function
-<<<<<<< HEAD
       const result = await login(data.email, data.password, data.rememberMe)
-=======
       const result = await login(data.email, data.password, data.rememberMe),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (result?.error) {
         let errorMessage = "Login failed. Please try again.", // Default generic error
         if (result?.error && result?.error?.message) {
-<<<<<<< HEAD
           if (
             result.error.message.toLowerCase().includes('email not confirmed')
           ) {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
-=======
           if (result.error.message.toLowerCase().includes("email not confirmed")) {
             errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (result?.error) {
         let errorMessage = "Login failed. Please try again.", // Default generic error
         if (result?.error && result?.error?.message) {
           if (result.error.message.toLowerCase().includes("email not confirmed")) {
             errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -430,11 +446,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           } else {
             errorMessage = result.error.message
           }
         }
-<<<<<<< HEAD
         form.setError('root', { message: errorMessage })
       } else {
         fireEvent('login', { method: 'email' })
@@ -481,7 +498,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
     router.push(`/verify-status?email=${encodeURIComponent(email)}`)
   }
-=======
         form.setError("root", { message: errorMessage })
       } else {
         fireEvent('login', { method: 'email' })
@@ -722,11 +738,6 @@ if ( {) {
     router.push(`/verify-status?email=${encodeURIComponent(email)}`)
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Form {...form}>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -735,6 +746,7 @@ if ( {) {
           <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
         </Alert>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -747,6 +759,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <form
         onSubmit={form.handleSubmit(onSubmit, errors => {
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues
@@ -768,11 +782,14 @@ if ( {) {
                 Email address
               </FormLabel>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               <FormControl>
                 <div className="relative">
                   <Input
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <form;
         onSubmit={form.handleSubmit(onSubmit, (errors) => {;
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
@@ -788,20 +805,19 @@ if ( {) {
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "email"> }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormControl>
                 <div className="relative">
                   <Input
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     placeholder='you@example.com'
                     aria-label='Email address'
                     aria-invalid={!!form.formState.errors.email}
                     className='bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple'                    {...field}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                   />
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -875,11 +891,14 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     placeholder="you@example.com"
                     aria-label="Email address"
                     aria-invalid={!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>                   />
@@ -891,6 +910,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -898,6 +919,7 @@ if ( {) {
               </FormControl>
               <FormMessage className="text-red-400" />
             </FormItem>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -908,6 +930,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         />
         <FormField
@@ -945,12 +969,15 @@ if ( {) {
                     </span>
                   </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 </div>
               </FormControl>
               <FormMessage className='text-red-400' />
             </FormItem>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className="space-y-6";
       >;
         <FormField;
@@ -969,17 +996,15 @@ if ( {) {
                     {...field}
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </FormControl>
               <FormMessage className='text-red-400' />
             </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         />
         <FormField
@@ -992,6 +1017,7 @@ if ( {) {
           }) => (
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               <FormControl>
                 </div>
               </FormControl>
@@ -1001,6 +1027,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         />;
         <FormField;
@@ -1469,27 +1497,15 @@ export function LoginForm() {;
           name="rememberMe"
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "rememberMe"> }) => (
             <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormControl>
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
-<<<<<<< HEAD
                   className='border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white'
                   aria-label='Remember me'                />
-=======
                   className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"
                   aria-label="Remember me"
                 />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
@@ -1512,11 +1528,14 @@ export function LoginForm() {;
         <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             Check status
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           type='submit'
           className='w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible'
           disabled={isLoading |isSubmitting}        >
@@ -1542,10 +1561,13 @@ export function LoginForm() {;
             className='w-1/2 ml-2'
             onClick={handleCheckStatus}          >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>             Check status
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           type="submit"
           className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible"
           disabled={isLoading || isSubmitting}
@@ -1610,11 +1632,6 @@ export function LoginForm() {;
             className="w-1/2 ml-2"
             onClick={handleCheckStatus}
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Check status
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </Button>
@@ -1633,11 +1650,14 @@ export function LoginForm() {;
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 return
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }else {
   fireEvent ('login', {'
   method: 'email'
@@ -1651,12 +1671,13 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
-<<<<<<< HEAD
 return
-=======
 return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
@@ -1687,16 +1708,21 @@ if (!email) {'
 })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 return
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-return
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+return
 return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
@@ -1717,6 +1743,7 @@ return;
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
 }'"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1750,6 +1777,8 @@ return;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </Button>;
           <Button;
             type="button";
@@ -2049,8 +2078,11 @@ return;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

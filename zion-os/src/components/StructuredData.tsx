@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,6 +88,8 @@ function StructuredData() {
         "https://linkedin.com / company / ziontechgroup";
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 export function StructuredData() {const structuredData = {;
     "@context": "https://schema.org";
@@ -137,9 +140,12 @@ export function StructuredData() {const structuredData = {;
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 export function StructuredData() {;
   const structuredData = {;
@@ -190,7 +196,6 @@ export function StructuredData() {;
       "url": "https://ziontechgroup.com";
     }
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <script;

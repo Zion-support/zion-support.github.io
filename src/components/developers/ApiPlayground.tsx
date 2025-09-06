@@ -1,23 +1,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiPlayground.tsx
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import CodeBlock from "./CodeBlock";
-=======
-<<<<<<< HEAD
 import { useState } from 'react'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import CodeBlock from './CodeBlock'
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface Param {
 
   name: string
@@ -43,6 +46,7 @@ export function ApiPlayground({
   const sendRequest = async () => {
     // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { Button } from "@/components/ui/button";
@@ -52,13 +56,17 @@ import CodeBlock from "./CodeBlock";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const baseUrl =
       process.env.NEXT_PUBLIC_API_URL |
-=======
     const baseUrl = null;
       process.env.NEXT_PUBLIC_API_URL ||
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       (typeof window !== 'undefined' ? window.location.origin : '')
     let url = `${baseUrl}${path}`
     const searchParams = new URLSearchParams()
@@ -69,6 +77,7 @@ import CodeBlock from "./CodeBlock";
       })
       const query = searchParams.toString()
       if (query) url += `?${query}` }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -87,10 +96,11 @@ import CodeBlock from './CodeBlock';
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Button } from "@/components/ui/button",
 import CodeBlock from "./CodeBlock",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -146,6 +156,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     const options: RequestInit = {
       method
@@ -165,13 +176,17 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const options: RequestInit = {
       method
       headers: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         Authorization: `Bearer ${apiKey}`
         'Content-Type': 'application/json'
       }
@@ -215,32 +230,27 @@ if (url += `?${query}` }
 =======
     }
     if (method !== 'GET' && method !== 'DELETE') {
-=======
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
-<<<<<<< HEAD
       signal: AbortSignal.timeout(15000)},
 
     if (method !== "GET" && method !== "DELETE") {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
       signal: AbortSignal.timeout(15000),
     }
     if (method !== 'GET' && method !== 'DELETE') {
-=======
       signal: AbortSignal.timeout(15000)},
 
     if (method !== "GET" && method !== "DELETE") {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       try {
         options.body = JSON.stringify(JSON.parse(body))
       } catch {
         options.body = body
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
     setLoading(true)
@@ -341,6 +351,7 @@ if ( {) {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   return (
     <div className="space-y-4">
       <Input
@@ -393,6 +404,8 @@ export function ApiPlayground(): any ({;
       if (query) url += `?${query}`;    }
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {;
   const [apiKey, setApiKey] = useState("demo_key_123"),;
@@ -645,36 +658,20 @@ if () {) {
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-4">
       <Input
         value={apiKey}
-<<<<<<< HEAD
         onChange={e => setApiKey(e.target.value)}
         placeholder='API Key'
-=======
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       />
       {params.map(p => (
         <Input
           key={p.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
           value={paramValues[p.name] |''}
-=======
           value={paramValues[p.name] || ''}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           onChange={e => handleParamChange(p.name, e.target.value)}        />
       ))}
       {method !== 'GET' && method !== 'DELETE' && (
@@ -714,21 +711,28 @@ if (contentType?.includes ('application/json') ) {
   /> {
   params.map ( (p) => (<Input key= {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   p.name
 }</div>)
 }export default ApiPlayground
 '"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   p.name 
 }</div>) ;
 }export default ApiPlayground;
 '";
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>>           value={paramValues[p.name] || ""}
@@ -736,6 +740,8 @@ if (contentType?.includes ('application/json') ) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           value={paramValues[p.name] || ""}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           onChange={(e) => handleParamChange(p.name, e.target.value)}
@@ -757,6 +763,7 @@ if (contentType?.includes ('application/json') ) {
 }
 ;
 export default ApiPlayground;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -964,3 +971,5 @@ if (contentType?.includes ('application/json') ) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

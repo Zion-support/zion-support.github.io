@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const cuttingEdgeAIServices2025 = [
   {
     id: 'ai-consciousness-evolution-pro'
@@ -868,6 +872,7 @@ export const cuttingEdgeAIServices2025 = [
     ]
     compliance: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -878,6 +883,8 @@ export const cuttingEdgeAIServices2025 = [
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'SOC2'
       'ISO 27001'
       'GDPR'
@@ -885,9 +892,12 @@ export const cuttingEdgeAIServices2025 = [
       'Intellectual property protection'
     ]
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'SOC2',
       'ISO 27001',
       'GDPR',
@@ -933,19 +943,20 @@ export const cuttingEdgeAIServices2025 = [
 ;
 =======
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
     ];
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'];
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection']
-<<<<<<< HEAD
   }
 ];
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const cuttingEdgeAIServices2025 = [;
   {;
     id: 'ai-consciousness-evolution-pro',;
@@ -1152,6 +1163,7 @@ export const cuttingEdgeAIServices2025 = [;
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'],;
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
@@ -1174,3 +1186,7 @@ export const cuttingEdgeAIServices2025 = [;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

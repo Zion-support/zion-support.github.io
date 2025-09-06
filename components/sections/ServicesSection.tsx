@@ -38,12 +38,23 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 =======
+=======
+  Brain
+  Cloud
+  RefreshCw
+  Wifi
+  Shield
+  BarChart3
+  ArrowRight
+  Zap;} from 'lucide-react';import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Brain,
   Cloud,
   RefreshCw,
@@ -52,9 +63,12 @@ import {
   BarChart3,
   ArrowRight,;
   Zap,;} from 'lucide-react';import { ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Brain;
   Cloud
   RefreshCw
@@ -604,6 +618,7 @@ const ServicesSection: React.FC = () => {;
 =======
   const cardVariants = {
 <<<<<<< HEAD
+<<<<<<< HEAD
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
@@ -671,6 +686,8 @@ const ServicesSection: React.FC = () => {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     hidden: { opacity: 0, y: 20 }
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -683,18 +700,18 @@ const ServicesSection: React.FC = () => {;
     visible: { opacity: 1, coordinate_y: 0 },
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
       }
     }
-=======
     visible: { opacity: 1, y: 0 },
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   };
 
   const cardVariants = {
@@ -703,8 +720,11 @@ const ServicesSection: React.FC = () => {;
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden'>;
       {/* Background Elements */}
@@ -720,16 +740,15 @@ const ServicesSection: React.FC = () => {;
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />
       </div>
-<<<<<<< HEAD
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  }
-=======
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
-=======
         {/* Section Header */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <section className="py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden">;
       {/* Background Elements */}
@@ -755,7 +774,6 @@ const ServicesSection: React.FC = () => {;
       </div>
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
-=======
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 
@@ -766,22 +784,14 @@ const ServicesSection: React.FC = () => {;
 
         {/* Section Header */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='text-center mb-16'        >          className="text-center mb-16"
-=======
           className='text-center mb-16'        >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -813,16 +823,17 @@ const ServicesSection: React.FC = () => {;
           </h2>
 =======
             className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
-<<<<<<< HEAD
-=======
 
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>
@@ -833,6 +844,7 @@ const ServicesSection: React.FC = () => {;
             </span>
           </h2>
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -848,8 +860,10 @@ const ServicesSection: React.FC = () => {;
             We deliver cutting-edge technology solutions that drive innovation
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+            We deliver cutting-edge technology solutions that drive innovation
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             We deliver cutting-edge technology solutions that drive innovation,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             efficiency, and growth for businesses across all industries.          </p>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -860,6 +874,7 @@ const ServicesSection: React.FC = () => {;
           </p>
 
         </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -914,6 +929,9 @@ const ServicesSection: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -994,7 +1012,6 @@ const ServicesSection: React.FC = () => {;
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>
                   {service.title}
                 </h3>
-<<<<<<< HEAD
                 <p className='text-gray-300 mb-6 leading-relaxed'>                  {service.description}
                 </p>
                 {/* Features */}            >
@@ -1127,6 +1144,7 @@ const ServicesSection: React.FC = () => {;
 <<<<<<< HEAD
 
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
+<<<<<<< HEAD
 =======
                 </h3>
 
@@ -1136,6 +1154,8 @@ const ServicesSection: React.FC = () => {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                 <p className='text-gray-300 mb-6 leading-relaxed'>                  {service.description}
                 </p>
@@ -1147,6 +1167,7 @@ const ServicesSection: React.FC = () => {;
 
                 {/* Features */}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1160,10 +1181,13 @@ const ServicesSection: React.FC = () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
             </motion.div>
           ))}
         </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1193,12 +1217,9 @@ const ServicesSection: React.FC = () => {;
 =======
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         {/* Bottom CTA */}
         <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1220,15 +1241,16 @@ const ServicesSection: React.FC = () => {;
         >
 =======
           className='text-center'
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1389,26 +1411,19 @@ export default ServicesSection;
 =======
 =======
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ServicesSection;  )
 }
 export default ServicesSection;
 
-<<<<<<< HEAD
-=======
+export default ServicesSection;
 export default ServicesSection;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default ServicesSection;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

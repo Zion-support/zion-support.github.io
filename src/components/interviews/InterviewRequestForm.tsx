@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,6 +8,8 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -38,8 +40,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { z } from 'zod'
 import { format, addDays } from 'date-fns'
-<<<<<<< HEAD
-=======
 import { CalendarIcon } from 'lucide-react'
 import { toast } from '@/components/ui/use-toast'
 import { useInterviews } from '@/hooks/useInterviews'
@@ -48,8 +48,6 @@ interface InterviewRequestFormProps {
   talent: TalentProfile
   onClose: () => void
   userDetails?: UserProfile
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { CalendarIcon } from 'lucide-react'
@@ -128,12 +126,15 @@ export function InterviewRequestForm({
   const [isSubmitting, setIsSubmitting] = useState(false)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -161,6 +162,7 @@ interface InterviewRequestFormProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const formSchema = z.object({
 =======
 onst formSchema = z.object({
@@ -169,6 +171,8 @@ onst formSchema = z.object({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const formSchema = z.object({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   date: z.date({
@@ -181,12 +185,15 @@ const formSchema = z.object({
   meetingLink: z.string().optional(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: z.string().min(3, 'Please provide a brief title for the interview.'),
   notes: z.string().optional(),
 })
@@ -197,6 +204,7 @@ export function InterviewRequestForm({
 }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews()
   const [isSubmitting, setIsSubmitting] = useState(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   title: z.string().min(3, "Please provide a brief title for the interview."),
@@ -211,6 +219,8 @@ export function InterviewRequestForm({
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()}),
 
@@ -218,32 +228,26 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   const { requestInterview } = useInterviews(),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: `Interview with ${talent.full_name}`
       duration: '30'
       platform: 'zoom'
       notes: ''
       meetingLink: ''
     }
-=======
       title: `Interview with ${talent.full_name}`,
-<<<<<<< HEAD
       duration: '30',
       platform: 'zoom',
       notes: '',
       meetingLink: '',
     },
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   })
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
@@ -262,6 +266,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>   const form = useForm<z.infer<typeof formSchema>>({
@@ -276,6 +281,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       await requestInterview({
         talent_id: talent.id
         client_id: userDetails.id
@@ -301,6 +308,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         variant: 'destructive'
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -309,6 +317,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      title: `Interview with ${talent.full_name}`,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       duration: "30",
       platform: "zoom",
       notes: "",
@@ -335,11 +346,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       await requestInterview({
         talent_id: talent.id,
         client_id: userDetails.id,
@@ -348,6 +362,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         notes: values.notes,
         meeting_platform: values.platform as any,
         meeting_link: values.meetingLink,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -365,6 +380,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         interview_type: 'video',
         title: values.title,
       })
@@ -382,11 +399,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         variant: 'destructive',
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         interview_type: "video",
         title: values.title
       }),
@@ -403,6 +423,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         variant: "destructive"})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     } finally {
 =======
@@ -413,12 +434,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } finally {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setIsSubmitting(false)
     }
   }
   const timeSlots = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -428,6 +452,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     '09:00'
     '09:30'
     '10:00'
@@ -452,10 +478,13 @@ ursor/fix-website-loading-errors-and-merge-6662
     '19:30'
     '20:00'
 <<<<<<< HEAD
+<<<<<<< HEAD
   ]
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     '09:00',
     '09:30',
     '10:00',
@@ -479,16 +508,19 @@ ursor/fix-website-loading-errors-and-merge-6662
     '19:00',
     '19:30',
     '20:00',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ]
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   return (
@@ -500,6 +532,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Form {...form}>
@@ -507,6 +541,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="flex items-center mb-6">
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
             <img
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -522,20 +557,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-              src={talent.profile_picture_url |'/placeholder.svg'}
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              src={talent.profile_picture_url |'/placeholder.svg'}
               src={talent.profile_picture_url || '/placeholder.svg'}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               alt={talent.full_name}
               className='h-full w-full object-cover'
               loading='lazy'            />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               src={talent.profile_picture_url || "/placeholder.svg"}
               alt={talent.full_name}
               className="h-full w-full object-cover"
               loading="lazy"
             />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -580,6 +619,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
@@ -589,13 +630,17 @@ ursor/fix-website-loading-errors-and-merge-6662
         <FormField
           control={form.control}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name='title'
           render={({
             field
           }: {
             field: ControllerRenderProps<z.infer<typeof formSchema>, 'title'>
           }) => (            <FormItem>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               <FormLabel>Interview Title</FormLabel>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -605,14 +650,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Input placeholder='Brief title for the interview' {...field} />
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name="title"
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (
             <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
                 <Input placeholder="Brief title for the interview" {...field} />
@@ -622,6 +664,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </FormItem>
           )}
         />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -636,6 +679,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <FormField
+            control={form.control}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             name='date'
             render={({
               field
@@ -643,6 +691,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               field: ControllerRenderProps<z.infer<typeof formSchema>, 'date'>
             }) => (
               <FormItem className='flex flex-col'>                <FormLabel>Date</FormLabel>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -654,17 +703,23 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             name="date"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (
               <FormItem className="flex flex-col">
                 <FormLabel>Date</FormLabel>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -681,28 +736,32 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
                       <Button
-<<<<<<< HEAD
                         variant='outline'
                         className={cn(
                           'w-full pl-3 text-left font-normal'
                           !field.value && 'text-muted-foreground'
                         )}                      >
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         variant="outline"
                         className={cn(
                           "w-full pl-3 text-left font-normal",
                           !field.value && "text-muted-foreground"
                         )}
                       >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -715,6 +774,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         {field.value ? (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           format(field.value, "PPP")
@@ -729,10 +790,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Calendar
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       mode='single'
                       selected={field.value}
                       onSelect={field.onChange}
@@ -740,6 +804,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         date < new Date() |date > addDays(new Date(), 90)
                       }                      initialFocus
                       className='p-3 pointer-events-auto'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                     />
 ursor/fix-website-loading-errors-and-merge-6662
@@ -776,12 +841,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       mode="single"
                       selected={field.value}
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus
                       className="p-3 pointer-events-auto"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -795,6 +863,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     />
                   </PopoverContent>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -803,11 +873,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               </FormItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <FormLabel>Time</FormLabel>
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           />
           <FormField
@@ -819,10 +892,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               field: ControllerRenderProps<z.infer<typeof formSchema>, 'time'>
             }) => (              <FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 <FormLabel>Time</FormLabel>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
@@ -994,11 +1070,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="time"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => (
               <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <FormLabel>Time</FormLabel>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -1007,6 +1078,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       <SelectValue placeholder="Select time" />
                     </SelectTrigger>
                   </FormControl>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1018,17 +1090,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                         {time}
 >>>>>>>                       </SelectItem>
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <SelectContent className='max-h-[300px]'>
                     {timeSlots.map(time => (                      <SelectItem key={time} value={time}>
-=======
                   <SelectContent className="max-h-[300px]">
                     {timeSlots.map((time) => (
                       <SelectItem key={time} value={time}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {time}
                       </SelectItem>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1042,12 +1110,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <FormField
             control={form.control}
             name='duration'
@@ -1060,9 +1132,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               >
             }) => (              <FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
@@ -1070,9 +1145,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="duration"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <FormField
             control={form.control}
             name='duration'
@@ -1086,11 +1164,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             }) => (              <FormItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1101,6 +1182,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <FormLabel>Duration</FormLabel>
 =======
@@ -1109,6 +1191,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <FormLabel>Duration</FormLabel>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -1127,6 +1211,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1182,6 +1267,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name='platform';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
           <FormField
             control={form.control}
@@ -1196,21 +1283,19 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               >
             }) => (              <FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 <FormLabel>Platform</FormLabel>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />;
           <FormField;
             control={form.control}
             name="platform"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
               <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <FormLabel>Platform</FormLabel>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -1229,6 +1314,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1292,6 +1378,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             name='meeting_link';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
         </div>
         {form.watch('platform') !== 'in-app' && (
@@ -1308,10 +1396,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               >
             }) => (              <FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 <FormLabel>Meeting Link (Optional)</FormLabel>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />;
         </div>;
         {form.watch('platform') !== 'in-app' && (;
@@ -1320,11 +1411,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             name="meetingLink"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => (
               <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <FormLabel>Meeting Link (Optional)</FormLabel>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <FormControl>
@@ -1338,6 +1424,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
           />
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1374,8 +1461,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <FormField
           control={form.control}
           name='notes'
@@ -1389,8 +1477,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Textarea
                   placeholder="Share what you'd like to discuss in this interview"
                   className='h-20'
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
         <FormField;
           control={form.control}
@@ -1404,6 +1495,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className="h-20"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   {...field}
 =======
@@ -1414,6 +1506,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {...field}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 />
@@ -1422,6 +1516,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </FormItem>
           )}
         />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1436,13 +1531,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Button type='submit' disabled={isSubmitting}>
             {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='flex justify-end gap-4 pt-4'>
           <Button variant='outline' onClick={onClose} type='button'>
-=======
 
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             Cancel
           </Button>
           <Button type="submit" disabled={isSubmitting}>
@@ -1455,30 +1550,42 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }setIsSubmitting (true)
 }catch (error) {
   logErrorToProduction ('Failed to schedule interview:', {
   data: error
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 toast ({
 }finally {
   setIsSubmitting (false)
 }"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 toast ({;
 }finally {;
   setIsSubmitting (false) ;
 }";
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"
@@ -1517,6 +1624,7 @@ toast ({;
 }'"}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 ;
@@ -1542,3 +1650,7 @@ toast ({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

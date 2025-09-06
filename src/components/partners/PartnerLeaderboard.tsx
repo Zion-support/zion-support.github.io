@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
@@ -9,8 +6,6 @@ interface LeaderboardEntry {
   rank: number,
   name: string,
   avatar?: string
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 <<<<<<< HEAD
 
@@ -33,7 +28,6 @@ interface LeaderboardEntry {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from 'lucide-react'
@@ -48,23 +42,21 @@ interface LeaderboardEntry {
   earnings: number
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   referrals: number,
   earnings: number,
 >>>>>>>   badges: string[]
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { Crown, Medal, Trophy } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   referrals: number,
   earnings: number,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   badges: string[]
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
@@ -82,6 +74,7 @@ export function PartnerLeaderboard() {
       badges: ["gold", "trending"]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }
@@ -89,15 +82,19 @@ export function PartnerLeaderboard() {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
 >>>>>>>       id: "2"
       rank: 2
@@ -108,6 +105,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       badges: ["silver"]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }
@@ -115,15 +113,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
 >>>>>>>       id: "3"
       rank: 3
@@ -134,6 +136,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       badges: ["bronze"]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }
@@ -141,15 +144,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-    }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
 >>>>>>>       id: "4"
       rank: 4
@@ -160,6 +167,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       badges: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     {
 =======
@@ -167,6 +175,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: "5"
       rank: 5
@@ -195,6 +206,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>     {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       id: "5",
@@ -209,12 +221,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
-    },
 =======
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    },
     {
       id: "5",
       rank: 5,
@@ -224,9 +234,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       earnings: 2175,
       badges: ["newcomer"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   ]
   // Function to render rank badge
@@ -245,11 +258,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
@@ -460,6 +476,7 @@ export function PartnerLeaderboard() {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -485,3 +502,5 @@ export function PartnerLeaderboard() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

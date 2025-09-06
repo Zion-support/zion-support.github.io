@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 
 
@@ -7,6 +8,8 @@
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { BookOpen, Terminal } from 'lucide-react'
 
@@ -50,12 +53,8 @@ responseExamples?: {
 }\`, {
   method: 'GET'
 headers: {'
-<<<<<<< HEAD
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json'
-=======
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from "react",
@@ -98,6 +97,7 @@ interface EndpointSectionProps {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 xport function ApiDocumentation() {
 ursor/fix-website-loading-errors-and-merge-6662
@@ -115,6 +115,8 @@ export function ApiDocumentation() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ApiDocumentation() {
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -127,6 +129,7 @@ export function ApiDocumentation() {
           Reference documentation for integrating with the Zion Marketplace API.
         </CardDescription>
       </CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -150,12 +153,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      
       <CardContent>
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">
           <Terminal className="h-4 w-4" />
@@ -164,7 +164,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           </AlertDescription>
         </Alert>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Tabs defaultValue='jobs' className='space-y-4'>
           <TabsList className='bg-zinc-800 border-zinc-700'>
             <TabsTrigger value='jobs'>Jobs</TabsTrigger>
@@ -175,12 +178,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           </TabsList>
           <TabsContent value='jobs' className='space-y-6'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>             <EndpointSection
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <EndpointSection
 >>>>>>>               method="GET"
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <Tabs defaultValue="jobs" className="space-y-4">
           <TabsList className="bg-zinc-800 border-zinc-700">
@@ -192,11 +198,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           </TabsList>
           
           <TabsContent value="jobs" className="space-y-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <EndpointSection
               method="GET"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -204,6 +205,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               description="List all available jobs with optional filtering."
               note=""
               params={[
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -337,6 +339,8 @@ function ApiDocumentation() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {
                   name: 'page'
                   type: 'integer'
@@ -391,17 +395,19 @@ function ApiDocumentation() {
                   description: 'Filter by job status (new, active, closed)'
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               ]}
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "category", type: "string", description: "Filter by job category" },
                 { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },
                 { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ]}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               codeExamples={{
@@ -413,17 +419,22 @@ function ApiDocumentation() {
   headers: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     'Authorization': 'Bearer YOUR_API_KEY'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-    'Authorization': 'Bearer YOUR_API_KEY'
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    'Authorization': 'Bearer YOUR_API_KEY'
     'Authorization': 'Bearer YOUR_API_KEY',
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Content-Type': 'application/json'
   }
 })
@@ -439,15 +450,19 @@ headers=headers) data = response.json () print (data) `
   success: ` {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 });'
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }`
 }'
 }/> <EndpointSection deadline: '2025-06-30T23:59:59Z'
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
               ]}
@@ -476,10 +491,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }` ;
 }';
 }/> <EndpointSection deadline: '2025-06-30T23:59:59Z' ;
 }) ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -487,6 +505,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 });'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 'deadline': '2025-06-30T23:59:59Z' '
@@ -612,13 +632,14 @@ response = requests.get(
     headers=headers
 )
 data = response.json()
-<<<<<<< HEAD
 print(data)`
-=======
 print(data)`,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 }),;
@@ -636,6 +657,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -683,6 +705,8 @@ print (data)`,
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               }}
               responseExamples={{
                 success: `{
@@ -706,16 +730,21 @@ print (data)`,
     // More jobs...
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   ]
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  ]
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  ]
   ],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "meta": {
     "total": 42
     "page": 1
@@ -763,12 +792,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
 =======
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }`
-=======
 }`,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
             />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -795,6 +820,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   required: true
                 },              ]}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 <<<<<<< HEAD
 
@@ -802,11 +828,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
                 javascript: `const jobId = 'job_abc123'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -814,6 +843,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }`;
               }}
             />
@@ -828,16 +859,20 @@ ursor/fix-website-loading-errors-and-merge-6662
               ]}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
@@ -854,16 +889,13 @@ print(data)`
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                javascript: `const jobId = 'job_abc123',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                javascript: `const jobId = 'job_abc123',
                 javascript: `const jobId = 'job_abc123'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
   method: 'GET'
   headers: {
-<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
@@ -881,18 +913,17 @@ response = requests.get(
     headers=headers
 )
 data = response.json()
-<<<<<<< HEAD
 print(data)`
-=======
-=======
 print(data)`,
-=======
                 javascript: `const jobId = 'job_abc123',
 const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
   method: 'GET',
   headers: {
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
             />;
             <EndpointSection;
@@ -966,6 +997,7 @@ data = response.json();
 print(data)`;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               }}
 =======
@@ -1006,6 +1038,8 @@ print (data)`,
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               }}
               responseExamples={{
                 success: `{
@@ -1022,6 +1056,7 @@ print (data)`,
       "currency": "USD"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }`;
               }}
@@ -1031,6 +1066,8 @@ print (data)`,
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     "status": "active"
     "client_id": "user_xyz789"
@@ -1042,11 +1079,14 @@ print (data)`,
               }}
             />
 <<<<<<< HEAD
+<<<<<<< HEAD
 }`,
               }}
             />
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     "status": "active",
     "client_id": "user_xyz789",
@@ -1054,19 +1094,20 @@ print (data)`,
     "deadline": "2025-06-30T23:59:59Z",
     "application_count": 12
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }`,
               }}
             />
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }`;
               }}
             />
             
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>             <EndpointSection
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1076,6 +1117,8 @@ print (data)`,
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <EndpointSection
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               method="POST"
@@ -1083,6 +1126,7 @@ print (data)`,
               description="Create a new job listing."
               note="Requires jobs:write scope"
               params={[
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1130,6 +1174,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>>                 {
 ========
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
 =======
@@ -1204,6 +1250,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   description: 'Job deadline (ISO date string)'
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>               ]}
@@ -1231,6 +1278,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 { name: "title", type: "string", description: "Job title", required: true },
                 { name: "description", type: "string", description: "Detailed job description", required: true },
                 { name: "category", type: "string", description: "Job category", required: true },
@@ -1239,7 +1288,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 { name: "budget.max", type: "number", description: "Maximum budget" },
                 { name: "budget.currency", type: "string", description: "Currency code (default: USD)" },
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ]}
               codeExamples={{
                 curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\
@@ -1263,10 +1311,13 @@ ursor/fix-website-loading-errors-and-merge-6662
   headers: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
@@ -1276,9 +1327,12 @@ ursor/fix-website-loading-errors-and-merge-6662
     category: 'development'
     skills: ['react', 'typescript', 'node.js']
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   },
   body: JSON.stringify({
@@ -1286,8 +1340,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     description: 'We need an experienced React developer...',
     category: 'development',
     skills: ['reacttypescriptnode.js'],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     budget: {
       min: 5000
       max: 10000
@@ -1297,6 +1354,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 })
@@ -1305,20 +1363,25 @@ logInfo(data);`
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 })
 const data = await response.json()
 logInfo(data);`
-=======
 });
 const data = await response.json();
 logInfo(data);`,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }),
 
 const data = await response.json(),
 logInfo(data),`,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1397,15 +1460,13 @@ print(data)`
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 python: `import requests
 import json
 headers = {
-<<<<<<< HEAD
-<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY'
-=======
     'Authorization': 'Bearer YOUR_API_KEY',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'Content-Type': 'application/json'
 }`
 }'"
@@ -1418,13 +1479,14 @@ response = requests.post(
     data=json.dumps(payload)
 )
 data = response.json()
-<<<<<<< HEAD
 print(data)`
-=======
 print(data)`,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 ;
@@ -1445,6 +1507,7 @@ response = requests.post(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1503,6 +1566,8 @@ print (data)`,
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               }}
               responseExamples={{
                 success: `{
@@ -1519,10 +1584,13 @@ print (data)`,
       "currency": "USD"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     "status": "new"
     "client_id": "user_xyz789"
@@ -1535,8 +1603,11 @@ print (data)`,
           </TabsContent>
           <TabsContent value='talent' className='space-y-6'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     "status": "new",
     "client_id": "user_xyz789",
@@ -1544,26 +1615,33 @@ print (data)`,
     "deadline": "2025-06-30T23:59:59Z"
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }`,
               }}
             />
           </TabsContent>
           <TabsContent value='talent' className='space-y-6'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }`;
               }}
             />
           </TabsContent>
           
           <TabsContent value="talent" className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1576,6 +1654,8 @@ print (data)`,
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <EndpointSection
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               method="GET"
@@ -1583,6 +1663,7 @@ print (data)`,
               description="List talent profiles with optional filtering."
               note=""
               params={[
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1628,6 +1709,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>>                 {
 ========
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
 =======
@@ -1675,16 +1758,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                   description: 'Filter by availability status'
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               ]}
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },
                 { name: "availability", type: "string", description: "Filter by availability status" }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ]}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               codeExamples={{
@@ -1696,18 +1781,22 @@ ursor/fix-website-loading-errors-and-merge-6662
   headers: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 python: `import requests
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
 })
 const data = await response.json()
 logInfo(data);`
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
               ]}
@@ -1735,12 +1824,15 @@ logInfo(data)`,
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
 });
 const data = await response.json();
 logInfo(data);`,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1756,6 +1848,8 @@ logInfo(data)`,
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
@@ -1796,12 +1890,8 @@ response = requests.get(
     headers=headers
 )
 data = response.json()
-<<<<<<< HEAD
 print(data)`
-=======
 print(data)`,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 }),;
@@ -1820,6 +1910,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1851,6 +1942,8 @@ print (data)`,
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               }}
               responseExamples={{
                 success: `{
@@ -1868,21 +1961,27 @@ print (data)`,
     // More talent profiles...
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   ]
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  ]
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  ]
   ],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "meta": {
     "total": 28
     "page": 1
     "limit": 20
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1916,10 +2015,10 @@ print (data)`,
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
 =======
 <<<<<<< HEAD
-}`
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+}`
 }`,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
             />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1946,6 +2045,7 @@ print (data)`,
                   required: true
                 },              ]}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 <<<<<<< HEAD
 
@@ -1953,11 +2053,14 @@ print (data)`,
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
                 javascript: `const talentId = 'talent_abc123'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1965,6 +2068,8 @@ print (data)`,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }`;
               }}
             />
@@ -1979,16 +2084,20 @@ print (data)`,
               ]}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {
@@ -2022,29 +2131,27 @@ logInfo(data)`,
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
 =======
 <<<<<<< HEAD
-                javascript: `const talentId = 'talent_abc123',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                javascript: `const talentId = 'talent_abc123',
                 javascript: `const talentId = 'talent_abc123'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {
   method: 'GET'
   headers: {
-<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
-<<<<<<< HEAD
 })
 const data = await response.json()
 logInfo(data);`
-=======
 });
 const data = await response.json();
 logInfo(data);`,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
@@ -2064,6 +2171,7 @@ print(data)`
               responseExamples = {{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -2071,12 +2179,17 @@ print(data)`
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 javascript: `const talentId = 'talent_abc123',
 const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {
   method: 'GET',
   headers: {
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
             />;
             <EndpointSection;
@@ -2114,6 +2227,7 @@ data = response.json();
 print(data)`;
               }}
               responseExamples={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2174,6 +2288,8 @@ print (data)`,
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 success: `{
   "data": {
     "id": "talent_abc123"
@@ -2194,10 +2310,13 @@ print (data)`,
         "image_url": "https://example.com/portfolio/123.jpg"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ,}
     ]
     "certifications": [
@@ -2236,7 +2355,6 @@ print (data)`,
             />
           </TabsContent>
           <TabsContent value='quotes' className='space-y-6'>
-=======
       }
     ],
     "certifications": [
@@ -2246,9 +2364,12 @@ print (data)`,
         "issue_date": "2024-01-15"
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ]
   }
 }`,
@@ -2257,11 +2378,14 @@ print (data)`,
           </TabsContent>
           <TabsContent value='quotes' className='space-y-6'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ];
   }
 }`;
@@ -2270,6 +2394,7 @@ print (data)`,
           </TabsContent>
           
           <TabsContent value="quotes" className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2282,6 +2407,8 @@ print (data)`,
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <EndpointSection
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               method="POST"
@@ -2289,6 +2416,7 @@ print (data)`,
               description="Create a quote request for a talent."
               note="Requires quotes:write scope"
               params={[
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2327,6 +2455,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>>                 {
 ========
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
 =======
@@ -2383,6 +2513,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   required: true
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>               ]}
@@ -2418,6 +2549,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 { name: "talent_id", type: "string", description: "ID of the talent to request a quote from", required: true },
                 { name: "project_name", type: "string", description: "Name of the project", required: true },
                 { name: "project_summary", type: "string", description: "Brief summary of the project", required: true },
@@ -2427,7 +2560,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 { name: "budget_max", type: "number", description: "Maximum budget" },
                 { name: "requester_name", type: "string", description: "Name of the requester", required: true },
                 { name: "requester_email", type: "string", description: "Email of the requester", required: true }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ]}
               codeExamples={{
                 curl: `curl -X POST "https://api.ziontechgroup.com/v1/quotes" \\
@@ -2448,7 +2580,10 @@ ursor/fix-website-loading-errors-and-merge-6662
   method: 'POST'
   headers: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
@@ -2490,12 +2625,15 @@ print(data)`
               }}
               responseExamples = {{
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 const data = await response.json();
 logInfo(data);`,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   },
   body: JSON.stringify({
@@ -2509,19 +2647,20 @@ logInfo(data);`,
     requester_name: 'John Doe',
     requester_email: 'john@example.com'
   })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 });
 const data = await response.json();
 logInfo(data);`,
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }),
 
 const data = await response.json(),
 logInfo(data),`,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2530,10 +2669,13 @@ logInfo(data),`,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 python: `import requests
 import json
 
 headers = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2579,6 +2721,8 @@ payload = {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 payload = {
@@ -2607,11 +2751,14 @@ print(data)`,
               }}
               responseExamples = {{
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 ;
@@ -2630,6 +2777,7 @@ data = response.json();
 print(data)`;
               }}
               responseExamples={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2704,6 +2852,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 success: `{
   "data": {
     "id": "quote_def456"
@@ -2721,19 +2871,12 @@ ursor/fix-website-loading-errors-and-merge-6662
     "status": "new"
     "created_at": "2025-05-16T14:30:15Z"
   }
-<<<<<<< HEAD
 }`,              }}
             />
-=======
 }`;
               }}
             />
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <EndpointSection
               method="GET"
               endpoint="/api/quotes"
@@ -2741,7 +2884,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               note=""
               params={[
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {
                   name: 'page'
                   type: 'integer'
@@ -2764,16 +2910,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                     'Filter by status (new, viewed, replied, archived)'
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               ]}
               codeExamples = {{
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/quotes" \\
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ]}
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\
@@ -2785,18 +2933,22 @@ ursor/fix-website-loading-errors-and-merge-6662
   headers: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 python: `import requests
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
 })
 const data = await response.json()
 logInfo(data);`
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                 python: `import requests
@@ -2831,14 +2983,19 @@ const data = await response && response.json()
 logInfo(data)`,
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
 });
 const data = await response.json();
 logInfo(data);`,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
@@ -2877,12 +3034,8 @@ response = requests.get(
     headers=headers
 )
 data = response.json()
-<<<<<<< HEAD
 print(data)`
-=======
 print(data)`,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 }),;
@@ -2900,6 +3053,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2930,6 +3084,8 @@ print (data)`,
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               }}
               responseExamples={{
                 success: `{
@@ -2949,16 +3105,21 @@ print (data)`,
     // More quotes...
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   ]
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  ]
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  ]
   ],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "meta": {
     "total": 5
     "page": 1
@@ -2997,12 +3158,8 @@ print (data)`,
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 =======
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }`
-=======
 }`,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             />
@@ -3036,6 +3193,7 @@ function verifyWebhookSignature(payload, signature, secret) {
   const expectedSignature = hmac.update(payload).digest('hex')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }`;
 =======
@@ -3046,6 +3204,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }`;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               }}
@@ -3076,6 +3236,7 @@ function verifyWebhookSignature(payload, signature, secret) {
   const expectedSignature = hmac.update(payload).digest('hex'),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -3083,10 +3244,13 @@ function verifyWebhookSignature(payload, signature, secret) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return crypto.timingSafeEqual(
     Buffer.from(signature)
     Buffer.from(expectedSignature)
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -3097,6 +3261,8 @@ function verifyWebhookSignature(payload, signature, secret) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const signature = req.headers['x-zion-signature']
@@ -3116,6 +3282,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               <h4 className='text-md font-semibold mt-6 mb-2'>Event Types</h4>
               <table className='w-full border-collapse mt-2'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 <thead>
                   <tr className="border-b border-zinc-800">
                     <th className="py-2 px-4 text-left">Event Type</th>
@@ -3130,6 +3297,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 // Example usage in Express.js;
@@ -3154,6 +3323,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
               
               <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>
               <table className="w-full border-collapse mt-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -3203,6 +3373,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <thead>
                   <tr className="border-b border-zinc-800">
                     <th className="py-2 px-4 text-left">Event Type</th>
@@ -3229,6 +3401,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
                   </tr>
                 </tbody>
               </table>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3338,6 +3511,8 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
               </p>;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <h4 className='text-md font-semibold mt-6 mb-2'>
                 Sample Payloads
               </h4>
@@ -3349,12 +3524,16 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                 webhook payload:
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <CodeBlock
                 code = {`{
   "event_type": "new_application"
   "event_id": "evt_abc123def456"
   "timestamp": "2025-05-16T15:30:00Z"
+<<<<<<< HEAD
 <<<<<<< HEAD
               
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -3362,6 +3541,8 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>
@@ -3378,13 +3559,13 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
               
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <CodeBlock
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 code={`{
   "event_type": "new_application",
   "event_id": "evt_abc123def456",
   "timestamp": "2025-05-16T15:30:00Z",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3396,6 +3577,8 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
 >>>>>>>     "application_id": "app_123456"
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "data": {
     "application_id": "app_123456"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -3416,7 +3599,10 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
   }
 }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 language='json'
                 showLineNumbers={true}              />
             </div>
@@ -3432,6 +3618,7 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                 indicate an error with our servers.
               </p>
               <table className='w-full border-collapse mt-4'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 <thead>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -3537,6 +3724,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </td>
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 language="json"
                 showLineNumbers={true}
               />
@@ -3553,11 +3742,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               </p>
               
               <table className="w-full border-collapse mt-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <thead>
                   <tr className="border-b border-zinc-800">
                     <th className="py-2 px-4 text-left">Status Code</th>
@@ -3606,11 +3790,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               </table>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <CodeBlock
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <h4 className='text-md font-semibold mt-6 mb-2'>
                 Error Response Format
               </h4>
@@ -3618,6 +3805,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 Error responses include a consistent JSON object with the
                 following format:
               </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               <CodeBlock
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -3628,17 +3816,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>   "error": {
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <h4 className="text-md font-semibold mt-6 mb-2">Error Response Format</h4>
               <p className="text-zinc-400 mb-2">
                 Error responses include a consistent JSON object with the following format:
               </p>
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <CodeBlock
                 code={`{
   "error": {
@@ -3647,6 +3832,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     "message": "The request was invalid"
     "details": [
       {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3660,6 +3846,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        "field": "project_name"
+        "message": "Project name is required"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ,}
     ]
   }
@@ -3959,6 +4149,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
                 </li>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         "field": "project_name",
@@ -3972,6 +4163,10 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        "field": "project_name",
+        "message": "Project name is required"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   // Process the webhook event;
   const event = JSON.parse(payload),;
@@ -4122,6 +4317,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               </ul>
 =======
@@ -4132,6 +4328,8 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </ul>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>
@@ -4140,6 +4338,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -4153,10 +4352,10 @@ unction EndpointSection({
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Helper component for API endpoint documentation
 function EndpointSection({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -4170,6 +4369,7 @@ function EndpointSection({
 }: EndpointSectionProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -4178,6 +4378,8 @@ function EndpointSection({
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [activeTab, setActiveTab] = useState('curl')
 
   return (
@@ -4202,12 +4404,15 @@ function EndpointSection({
             <Badge className='ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800'>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 // Helper component for API endpoint documentation
@@ -4221,11 +4426,14 @@ function EndpointSection({
   responseExamples
 }: EndpointSectionProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [activeTab, setActiveTab] = useState("curl"),
   
   return (
@@ -5599,6 +5807,7 @@ function EndpointSection({;
             <Badge className="ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800">;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               {note}
 =======
@@ -5634,23 +5843,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {note}
             </Badge>
           )}
         </div>
-<<<<<<< HEAD
         <p className='mt-2 text-zinc-400'>{description}</p>
       </div>
-=======
         
         <p className="mt-2 text-zinc-400">{description}</p>
       </div>
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {params.length > 0 && (
         <div className="border-t border-zinc-800 p-4">
           <h4 className="font-medium mb-2">Parameters</h4>
@@ -5665,6 +5869,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </thead>
             <tbody>
               {params.map((param, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -5691,6 +5896,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <tr
                   key={index}
                   className={
@@ -5705,10 +5912,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {param.description}
                   </td>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 </tr>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800" : ""}>
                   <td className="py-2 font-mono text-sm">
                     {param.name}
@@ -5716,11 +5926,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </td>
                   <td className="py-2 text-sm text-zinc-400">{param.type}</td>
                   <td className="py-2 text-sm text-zinc-400">{param.description}</td>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </tr>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               ))}
@@ -5728,6 +5933,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </table>
         </div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -5818,8 +6024,9 @@ function EndpointSection({;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {codeExamples && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className='border-t border-zinc-800 p-4'>
@@ -5845,7 +6052,6 @@ function EndpointSection({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
                   key = {lang,}
-=======
       
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {codeExamples && (
@@ -5856,6 +6062,7 @@ function EndpointSection({;
               {Object.keys(codeExamples).map((lang) => (
                 <button
                   key={lang}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -6005,6 +6212,8 @@ function EndpointSection() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang 
                       ? "bg-zinc-700 text-white" 
@@ -6020,32 +6229,33 @@ function EndpointSection() {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         </div>
       )}
       {responseExamples && (
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CodeBlock
             code={codeExamples[activeTab] |'// Code example not available'}
             language={activeTab === 'curl' ? 'bash' : activeTab}          />
-<<<<<<< HEAD
-=======
-=======
           <CodeBlock 
             code={codeExamples[activeTab] || "// Code example not available"}
             language={activeTab === "curl" ? "bash" : activeTab}
           />
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       )}
       {responseExamples && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='border-t border-zinc-800 p-4'>
           <h4 className='font-medium mb-2'>Response</h4>
           <CodeBlock code={responseExamples.success} language='json' />        </div>
@@ -6053,6 +6263,7 @@ function EndpointSection() {
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -6063,6 +6274,8 @@ function EndpointSection() {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CodeBlock 
             code={codeExamples[activeTab] || "// Code example not available"}
             language={activeTab === "curl" ? "bash" : activeTab}
@@ -6071,7 +6284,6 @@ function EndpointSection() {
       )}
       
       {responseExamples && (
-=======
 
 ;
 }
@@ -6080,9 +6292,12 @@ function EndpointSection() {
 }
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="border-t border-zinc-800 p-4">
           <h4 className="font-medium mb-2">Response</h4>
           <CodeBlock
@@ -6100,6 +6315,7 @@ function EndpointSection() {
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -6286,3 +6502,5 @@ headers=headers) data = response.json () print (data) ` ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/EducationForm.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ========
@@ -66,13 +67,30 @@ export function EducationForm(props:EducationFormProps) {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/EducationForm.tsx
 =======
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { EducationForm as EducationFormComponent  } from './education';
 import { EducationFormProps } from './education/types';
 export function EducationForm(props: EducationFormProps) {
   return <EducationFormComponent {...props} />;
 }
+<<<<<<< HEAD
 
 }
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {EducationForm, as, EducationFormComponent} from './education';
+import {EducationFormProps} from './education/types';
+export function EducationForm(props: EducationFormProps) {
+  return <EducationFormComponent {...props} />
+import { EducationForm as EducationFormComponent } from './education',;
+import { EducationFormProps } from './education/types';
+export function EducationForm(props: EducationFormProps) {;
+  return <EducationFormComponent {...props} />;
+}
+;
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

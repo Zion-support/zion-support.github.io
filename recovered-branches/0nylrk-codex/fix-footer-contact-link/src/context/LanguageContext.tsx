@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/LanguageContext.tsx
 
 <<<<<<< HEAD
@@ -6,6 +7,8 @@
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 
 import {useTranslation} from 'react-i18next';
@@ -13,14 +16,16 @@ import {supabase} from '../integrations/supabase/client';
 import {toast} from '../components/ui/use-toast';
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
 export type LanguageContextType = {
-<<<<<<< HEAD
   currentLanguage: SupportedLanguage
   changeLanguage: (lang: SupportedLanguage) => Promise<void>
   isRTL: boolean
   supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   currentLanguage: SupportedLanguage,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,
   isRTL: boolean,
@@ -28,12 +33,15 @@ export type LanguageContextType = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const supportedLanguages = [
   { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' }
   { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
@@ -86,6 +94,7 @@ interface LanguageProviderProps {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -93,11 +102,12 @@ interface LanguageProviderProps {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children
   authState = { isAuthenticated: false, user: null }
 }) => {
-=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
@@ -105,12 +115,15 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   authState = { isAuthenticated: false, user: null } 
 }) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
@@ -153,10 +166,13 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
           if (error) {
             console.error('Error updating language preference:', error)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import { supabase } from '../integrations/supabase/client',;
@@ -473,24 +489,19 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
             .eq('id', user.id),;
           if (error) {;
             console.error('Error updating language preference:', error);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         } catch (err) {
           console.error('Error syncing language with profile:', err)
         }
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
-=======
     };
     
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     syncLanguageWithProfile()
   }, [currentLanguage, isAuthenticated, user]);
   const changeLanguage = async (lang: SupportedLanguage) => {
@@ -512,6 +523,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
           .eq('id', user.id);
         if (error) {
           console.error('Error updating language preference:', error)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -539,6 +551,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
       });
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },;
     syncLanguageWithProfile();
   }, [currentLanguage, isAuthenticated, user]),;
@@ -594,24 +608,19 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
           .eq('id', user.id),;
         if (error) {;
           console.error('Error updating language preference:', error);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
     } catch (err) {
       console.error('Error changing language:', err)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   };
   
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <LanguageContext.Provider
       value={{
@@ -724,8 +733,11 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
         supportedLanguages
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   return (;
     <LanguageContext.Provider;
@@ -734,6 +746,7 @@ if ( {) {
         changeLanguage,;
         isRTL;
         supportedLanguages;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -859,25 +872,25 @@ syncLanguageWithProfile ()
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }}
     >
       {children}
-<<<<<<< HEAD
     </LanguageContext.Provider>
   )
-<<<<<<< HEAD
 }
 
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     </LanguageContext.Provider>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

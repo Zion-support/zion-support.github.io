@@ -10,17 +10,19 @@ import { Button } from "@/components/ui/button",
 
 =======
 
-<<<<<<< HEAD
 import React, { useState } from "react";
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Button} from "@/components/ui/button";
 import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -36,6 +38,10 @@ import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { 
   getClientBudgetSuggestion;
   PricingSuggestion;
@@ -43,6 +49,7 @@ import {
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -77,6 +84,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
 interface ClientBudgetRecommenderProps {
@@ -175,14 +184,16 @@ import { Sparkles } from "lucide-react",
       if (scope) params.scope = scope;
       if (experienceLevel) params.experienceLevel = experienceLevel;
       const result = await getClientBudgetSuggestion(params);
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
@@ -191,12 +202,15 @@ interface ClientBudgetRecommenderProps {
   experienceLevel?: string,
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
@@ -213,9 +227,12 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   const generateSuggestion = async () => {
     if (!jobTitle || !category) {
       return
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -250,6 +267,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     if (!jobTitle || !category) {;
       return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -259,6 +277,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 
     setIsLoading(true),
@@ -273,15 +293,19 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
       const result = await getClientBudgetSuggestion(params),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating budget suggestion:", error)
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -292,6 +316,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   const handleApplySuggestion = () => {
@@ -308,13 +334,14 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         })
       }
     }
-<<<<<<< HEAD
   }
-=======
   };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     setIsLoading(true),;
     try {;
@@ -382,12 +409,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         {!suggestion && !isLoading ? (;
 =======
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <div>
@@ -426,6 +448,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             rateType="hourly"
           />
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -720,22 +743,19 @@ return (<div className="space-y-4" > <div> {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

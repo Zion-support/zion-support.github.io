@@ -32,8 +32,6 @@ import {toast} from 'sonner';
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -48,7 +46,6 @@ import { Switch  } from '@/components/ui/switch';
 import { Label  } from '@/components/ui/label';
 import { toast } from 'sonner';
 export default function AccountSettings() {
-=======
 import {useState, useEffect} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -63,13 +60,17 @@ import {Switch} from '@/components/ui/switch';
 import {Label} from '@/components/ui/label';
 import {toast} from 'sonner';
 export default function AccountSettings() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -94,6 +95,8 @@ export default function AccountSettings() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     try {
 
@@ -103,10 +106,13 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3);
         setDidHandle(parsed.didHandle |'');
         setEnableBackup(!!parsed.enableBackup)
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -127,9 +133,12 @@ export default function AccountSettings() {
   const [enableBackup, setEnableBackup] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   useEffect(() => {
     try {
@@ -140,6 +149,7 @@ export default function AccountSettings() {
         setDidHandle(parsed.didHandle || ''),
         setEnableBackup(!!parsed.enableBackup)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -149,6 +159,8 @@ export default function AccountSettings() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -177,6 +189,7 @@ export default function AccountSettings() {;
         setDidHandle(parsed.didHandle || ''),;
         setEnableBackup(!!parsed.enableBackup);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -199,21 +212,23 @@ export default function AccountSettings() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     } catch (e) {
       console.error('Error loading account settings', e)
     }
-<<<<<<< HEAD
   }, []);
-<<<<<<< HEAD
   const handleSave = () => {
     setIsSubmitting(true);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  }, []),
 =======
-=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, []),
+  }, []),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -222,10 +237,13 @@ export default function AccountSettings() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const handleSave = () => {
     setIsSubmitting(true),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -235,6 +253,8 @@ export default function AccountSettings() {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Simulate API call
     setTimeout(() => {
       try {
@@ -301,10 +321,13 @@ export default function AccountSettings() {;
       } finally {
         setIsSubmitting(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }, 1000)
   }
@@ -331,8 +354,11 @@ export default function AccountSettings() {;
         const ensName = await provider.lookupAddress(address);
         if (ensName) {
           setDidHandle(ensName)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, []),;
   const handleSave = () => {;
     setIsSubmitting(true),;
@@ -565,11 +591,6 @@ export default function AccountSettings() {;
         const ensName = await provider.lookupAddress(address);
         if (ensName) {;
           setDidHandle(ensName);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       } catch (error) {
         console.error('ENS lookup error:', error)
@@ -578,18 +599,10 @@ export default function AccountSettings() {;
     } catch (error: any) {
       toast.error(error.message |'Failed to connect wallet')
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   };
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <>
@@ -1077,6 +1090,7 @@ export default function AccountSettings() {;
                 </Button>
                 <p className="text-xs text-gray-500 mt-1">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                   disabled={!enableBackup}>;
@@ -1373,6 +1387,8 @@ if ( {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {enableBackup
                     ? 'Restore your profile data from decentralized storage'
                     : 'Enable backup first to use this feature'}
@@ -1386,7 +1402,6 @@ if ( {) {
     </>
   )
 }
-=======
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
                     : 'Enable backup first to use this feature'}
@@ -1463,5 +1478,8 @@ try {
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

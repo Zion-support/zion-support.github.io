@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -11,9 +12,10 @@ real_implementation: boolean;
   launch_date: string;
 =======
 =======
+=======
+export interface InnovativeAIService {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface InnovativeAIService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -826,6 +828,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 
 =======
 =======
@@ -2235,20 +2238,20 @@ export interface InnovativeAIService {;
     realImplementation: true
     implementationDetails:
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.'
     launchDate: '2024-08-01'
     customers: 67
     rating: 4.7
     reviews: 34
   }
-=======
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
     launchDate: '2024-08-01',
     customers: 67,
     rating: 4.7,
     reviews: 34,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -2263,14 +2266,9 @@ export interface InnovativeAIService {;
     rating: 4.7
 
     reviews: 34
-<<<<<<< HEAD
   }
 ];
-=======
 export interface InnovativeAIService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -2741,12 +2739,11 @@ export const innovativeAIServices: InnovativeAIService[] = [;
     customers: 67,;
     rating: 4.7,;
     reviews: 34;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

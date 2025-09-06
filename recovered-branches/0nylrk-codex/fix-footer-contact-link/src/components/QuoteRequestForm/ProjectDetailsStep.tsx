@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { QuoteFormData } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
 
@@ -18,6 +19,18 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import {QuoteFormData} from "@/types/quotes";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Textarea} from "@/components/ui/textarea";
+import { QuoteFormData } from "@/types/quotes",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -47,6 +60,7 @@ export function ProjectDetailsStep({
     <div className="space-y-6">
       <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -60,6 +74,12 @@ export function ProjectDetailsStep({
           Tell us about your project
         </h3>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        <h3 className="text-xl font-semibold text-white mb-4">
+          Tell us about your project
+        </h3>
+        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="space-y-4">
           <div>
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -97,6 +117,7 @@ export function ProjectDetailsStep({
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div>
 
 <<<<<<< HEAD
@@ -112,6 +133,13 @@ export function ProjectDetailsStep({
           Contact Information
         </h3>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      <div>
+        <h3 className="text-xl font-semibold text-white mb-4">
+          Contact Information
+        </h3>
+        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -121,6 +149,7 @@ export function ProjectDetailsStep({
               id="name"
               placeholder="Your name"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -128,6 +157,17 @@ export function ProjectDetailsStep({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              value={formData.contactInfo.name}
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+                    ...formData.contactInfo
+                    name: e.target.value
+                  }
+                })
+              }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { QuoteFormData } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
@@ -173,6 +213,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input;
               id="name";
               placeholder="Your name";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -191,10 +232,13 @@ value={formData.contactInfo.name}
                 })
               }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               value={formData.contactInfo.name}
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, name: e.target.value } ;
               })}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -202,6 +246,8 @@ value={formData.contactInfo.name}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
@@ -230,6 +276,7 @@ value={formData.contactInfo.name}
               placeholder="Your company name"
               value={formData.contactInfo.company}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -242,6 +289,9 @@ value={formData.contactInfo.name}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 onChange={(e) =>
+=======
+              onChange={(e) =>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 updateFormData({
                   contactInfo: {
                     ...formData.contactInfo
@@ -249,7 +299,13 @@ onChange={(e) =>
                   }
                 })
               }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              onChange={(e) => updateFormData({;
+                contactInfo: { ...formData.contactInfo, company: e.target.value } ;
+              })}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
@@ -373,6 +429,7 @@ export function ProjectDetailsStep({ formData, updateFormData } ProjectDetailsSt
               type="email"
               placeholder="Your email address"
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ProjectDetailsStep.tsx
 
               value={formData.contactInfo.email}
@@ -388,6 +445,10 @@ export function ProjectDetailsStep({ formData, updateFormData } ProjectDetailsSt
 =======
               value={formData.contactInfo.email}
 onChange={(e) =>
+=======
+              value={formData.contactInfo.email}
+              onChange={(e) =>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 updateFormData({
                   contactInfo: {
                     ...formData.contactInfo
@@ -395,7 +456,13 @@ onChange={(e) =>
                   }
                 })
               }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              onChange={(e) => updateFormData({;
+                contactInfo: { ...formData.contactInfo, email: e.target.value } ;
+              })}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
@@ -407,6 +474,7 @@ onChange={(e) =>
               id="phone"
               placeholder="Your phone number"
               value={formData.contactInfo.phone}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -420,6 +488,9 @@ onChange={(e) =>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 onChange={(e) =>
+=======
+              onChange={(e) =>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 updateFormData({
                   contactInfo: {
                     ...formData.contactInfo
@@ -427,13 +498,20 @@ onChange={(e) =>
                   }
                 })
               }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              onChange={(e) => updateFormData({;
+                contactInfo: { ...formData.contactInfo, phone: e.target.value } ;
+              })}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
             />
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -457,6 +535,11 @@ onChange={(e) =>
                 contactInfo: { ...formData && formData.contactInfo, phone: e && e.target.value } ;
               })}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  );
+}
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 import { QuoteFormData  } from '@/types / quotes';
 import { Input  } from '@/components / ui / input';
@@ -511,6 +594,7 @@ function ProjectDetailsStep() {
 <<<<<<< HEAD
     </div>;
   );
+<<<<<<< HEAD
 
 }
 ;
@@ -705,3 +789,9 @@ updateFormData: (data: Partial<QuoteFormData>) => void
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+;
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

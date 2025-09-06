@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,11 +23,11 @@ function APIPage() {
       <div className="max - w-6xl mx - auto">;
 =======
 <<<<<<< HEAD
-export default function APIPage() {return (;
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function APIPage() {return (;
 export default function APIPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-6xl mx-auto">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -261,20 +262,23 @@ const economy = await client.economies.create ({
               <div className="bg-gray-900/50 rounded-lg p-4">;
                 <div className="text-sm text-gray-400 mb-2">Node.js</div>;
                 <pre className="text-sm text-gray-300 overflow-x-auto">;
-<<<<<<< HEAD
 {`const { ZionOS } = require('@zion-os/sdk');
 const client = new ZionOS('YOUR_API_KEY');
 const economy = await client.economies.create({name: 'My Digital Economy';
   description: 'A sovereign digital economy';
   features: ['marketplacegovernancetokens'];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 {`const { ZionOS } = require('@zion-os/sdk'),;
 const client = new ZionOS('YOUR_API_KEY'),;
 const economy = await client.economies.create({;
   name: 'My Digital Economy',;
   description: 'A sovereign digital economy',;
   features: ['marketplacegovernancetokens'],;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -283,6 +287,8 @@ const economy = await client.economies.create({;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   blockchain: 'ethereum';
 });
 // // // console.log ('Economy created:', economy.id), `}

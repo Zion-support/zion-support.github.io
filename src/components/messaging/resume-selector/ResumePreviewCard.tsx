@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -20,8 +17,6 @@ export function ResumePreviewCard({
   onDownload,
   isLoading,
 }: ResumePreviewCardProps) {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 <<<<<<< HEAD
 =======
@@ -55,11 +50,14 @@ import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Resume } from "@/types/resume";
 interface ResumePreviewCardProps {
   resume: Resume;
@@ -71,10 +69,13 @@ export function ResumePreviewCard({
   isLoading
 }: ResumePreviewCardProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Resume } from "@/types/resume",
 interface ResumePreviewCardProps {
   resume: Resume,
@@ -83,11 +84,6 @@ interface ResumePreviewCardProps {
 }
 
 export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
@@ -99,6 +95,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
               <p className="text-sm text-zion-cyan">{resume.basic_info.headline}</p>
             )}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -136,6 +133,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>;
         </div>;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button
             variant='ghost'
             size='sm'
@@ -148,7 +147,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
         {resume.basic_info.summary && (
           <p className='text-xs text-zion-slate line-clamp-2 mb-2'>
-=======
           <Button 
             variant="ghost" 
             size="sm" 
@@ -199,20 +197,17 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         </div>;
         {resume.basic_info.summary && (;
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {resume.basic_info.summary}
           </p>
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {resume.skills && resume.skills.length > 0 && (
           <div className='flex flex-wrap gap-1 mt-2'>
             {resume.skills.slice(0, 5).map((skill, index) => (
@@ -220,6 +215,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
                 key={index}
                 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -230,11 +226,14 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge
                 key = {index,}
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         {resume.skills && resume.skills.length > 0 && (
@@ -245,13 +244,11 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {resume.skills.slice(0, 5).map((skill, index) => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Badge 
@@ -260,21 +257,24 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-              >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+              >
+              >
 <<<<<<< HEAD
-=======
-              >
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {skill.name}
               </Badge>
             ))}
             {resume.skills.length > 5 && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge 
@@ -295,19 +295,14 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Badge
                 variant='outline'
-<<<<<<< HEAD
                 className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge
-=======
               <Badge 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                 className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge 
-=======
               <Badge 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 variant="outline"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
@@ -317,6 +312,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             )}
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -359,27 +355,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardContent>
-<<<<<<< HEAD
     </Card>
   )
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </CardContent>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Card>;
   );
 };
 }
-<<<<<<< HEAD
 }
-=======
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

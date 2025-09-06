@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -451,6 +452,8 @@ const Services2024Page: React.FC = () => {
                 </div>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -462,6 +465,7 @@ import {;
   ArrowRight, CheckCircle, Zap, Sparkles;
 } from 'lucide-react',;
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -508,6 +512,27 @@ import { motion } from 'framer-motion';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+import {
+  Search
+  Filter
+  Star
+  Users
+  TrendingUp
+  Brain
+  Atom
+  Cpu
+  Shield
+  Database
+  Cloud
+  ArrowRight
+  CheckCircle
+  Zap
+  Sparkles;} from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Search,
   Filter,
@@ -524,30 +549,34 @@ import {
   CheckCircle,
   Zap,;
   Sparkles,;} from 'lucide-react';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {;
   Search, Filter, Star, Users, TrendingUp,;
   Brain, Atom, Cpu, Shield, Database, Cloud,;
   ArrowRight, CheckCircle, Zap, Sparkles;
 } from 'lucide-react',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const Services2024Page: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [searchQuery, setSearchQuery] = useState('');
@@ -730,7 +759,10 @@ const Services2024Page: React.FC = () => {
       count: allServices.filter(s => s.variant.includes('customer')).length
     },  ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain;
     if (variant.includes('security')) return Shield;
@@ -759,6 +791,7 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -767,6 +800,10 @@ const Services2024Page: React.FC = () => {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    return 'from-gray-500 to-slate-500';  }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const Services2024Page: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -842,6 +879,7 @@ const Services2024Page: React.FC = () => {;
   }
 }
   ],
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1049,6 +1087,8 @@ const Services2024Page: React.FC = () => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
@@ -1071,7 +1111,6 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
     return 'from-gray-500 to-slate-500'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
@@ -1081,6 +1120,7 @@ const Services2024Page: React.FC = () => {;
         <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1107,6 +1147,8 @@ const Services2024Page: React.FC = () => {;
             <motion.div
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <UltraFuturisticBackground2034 intensity={0.8} theme='quantum' />
       <div className='relative z-10 min-h-screen'>
         {/* Hero Section */}
@@ -1115,7 +1157,6 @@ const Services2024Page: React.FC = () => {;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
       <UltraFuturisticBackground2034 intensity={0.8} theme="quantum" />
       <div className="relative z-10 min-h-screen">
         {/* Hero Section */  } catch (error) {
@@ -1143,6 +1184,7 @@ const Services2024Page: React.FC = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1153,11 +1195,14 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1169,22 +1214,27 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-=======
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   Future-Ready
                 </span>
                 <br />
                 <span className="text-white">Solutions</span>
               </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
@@ -1209,6 +1259,8 @@ const Services2024Page: React.FC = () => {;
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'>
                 Experience the next generation of AI, quantum security, and
                 enterprise IT solutions. Transform your business with our
@@ -1221,8 +1273,11 @@ const Services2024Page: React.FC = () => {;
                     {allServices.length}
                   </div>
                   <div className='text-gray-400'>Revolutionary Services</div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
                 Experience the next generation of AI, quantum security, and enterprise IT solutions.
                 Transform your business with our revolutionary 2024 service portfolio.
@@ -1237,6 +1292,7 @@ const Services2024Page: React.FC = () => {;
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>
                   <div className="text-gray-400">Revolutionary Services</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1249,6 +1305,8 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
@@ -1271,6 +1329,7 @@ const Services2024Page: React.FC = () => {;
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1338,6 +1397,8 @@ transition={{ duration: 0 && 0.8 }}>;
         {/* Search and Filters */}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Search and Filters */}
         <section className='px-4 sm:px-6 lg:px-8 mb-16'>
           <div className='max-w-7xl mx-auto'>
@@ -1347,7 +1408,6 @@ transition={{ duration: 0 && 0.8 }}>;
                 <div className='lg:col-span-2'>
                   <div className='relative'>
                     <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />
-=======
         {/* Search and Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1377,11 +1437,6 @@ transition={{ duration: 0 && 0.8 }}>;
                 <div className="lg:col-span-2">
                   <div className="relative">
                     <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <input
                       type="text"
                       placeholder="Search services by name, features, or description..."
@@ -1395,6 +1450,7 @@ transition={{ duration: 0 && 0.8 }}>;
                     />
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1706,6 +1762,8 @@ if ( {) {
                     {sortOrder === 'asc' ? '↑' : '↓'}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {/* Category Filter */}
                 <div>
                   <select
@@ -1721,7 +1779,6 @@ if ( {) {
                 </div>
                 {/* Sort */}
                 <div className='flex space-x-2'>
-=======
                 {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1752,11 +1809,6 @@ if ( {) {
   }
 }
                 <div className="flex space-x-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <select
                     value={sortBy  } catch (error) {
     console.error("Error:", error);
@@ -1770,7 +1822,6 @@ if ( {) {
                     <option value="customers">Sort by Customers</option>
                   </select>
                   <button
-<<<<<<< HEAD
                     onClick={() =>
                       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')
                     }
@@ -1806,8 +1857,11 @@ if ( {) {
         {/* Services Grid */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
                     {sortOrder === 'asc' ? '↑' : '↓'  } catch (error) {
     console.error("Error:", error);
@@ -1886,12 +1940,15 @@ if ( {) {
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {filteredServices.length === 0 ? (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
@@ -1902,6 +1959,7 @@ if ( {) {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (
                   <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1926,6 +1984,8 @@ if ( {) {
                     transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -2014,7 +2074,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                               className: `w-6 h-6 text-cyan-400`
                             }
                           )}
-=======
                     key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2050,10 +2109,8 @@ transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                         <div className="text-right">
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                           <div className="text-sm text-gray-400">per month</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         </div>
                       </div>
-<<<<<<< HEAD
                       {/* Service Info */}
                       <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>
                         {service.name}
@@ -2079,8 +2136,11 @@ transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                                 </span>
                               </div>
                             ))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {/* Service Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2136,16 +2196,10 @@ transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           {service.features.length > 3 && (
                             <div className="text-sm text-cyan-400">
                               +{service.features.length - 3} more features
                             </div>
-<<<<<<< HEAD
                           )}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2217,7 +2271,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                             <span className='text-sm font-semibold text-white'>
                               {service.rating}
                             </span>
-=======
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2238,6 +2291,7 @@ transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />
                             <span className="text-sm font-semibold text-white">{service.rating}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -2250,6 +2304,8 @@ transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           </div>
                           <div className="text-xs text-gray-400">Rating</div>
                         </div>
@@ -2262,6 +2318,7 @@ transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                           <div className="text-xs text-gray-400">Launched</div>
                         </div>
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2312,12 +2369,17 @@ transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                       <div className='flex items-center justify-between'>
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                      {/* CTA */}
+                      <div className='flex items-center justify-between'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {/* CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                       <div className="flex items-center justify-between">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2331,6 +2393,8 @@ transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <Link
                           href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
                           <span className="font-medium">Learn More</span>
@@ -2351,6 +2415,7 @@ transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                       </div>
                     </div>
                   </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2409,6 +2474,8 @@ transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 ))}
 </div>;
             )}
@@ -2509,7 +2576,6 @@ viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple
               className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
-=======
                       <div className="grid grid-cols-3 gap-4 mb-6">;
                         <div className="text-center">;
                           <div className="flex items-center justify-center space-x-1 mb-1">;
@@ -2586,11 +2652,6 @@ viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple
 }
               viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -2634,6 +2695,7 @@ viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   )
 
@@ -2648,14 +2710,17 @@ export default Services2024Page;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ),
 };
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className='flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold'>;
@@ -2693,7 +2758,6 @@ export default Services2024Page;
                   <ArrowRight className='w - 4 h - 4' />                </Link>;
 =======
 
-=======
 },
 export default Services2024Page,
         <section className="px-4 sm:px-6 lg:px-8 mb-20">;
@@ -2757,11 +2821,10 @@ export default Services2024Page;
     </>;
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Services2024Page;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

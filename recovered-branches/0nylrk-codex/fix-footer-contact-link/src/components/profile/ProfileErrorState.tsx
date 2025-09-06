@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import { Button } from "@/components/ui/button",
 
@@ -23,6 +24,18 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import React from 'react';
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {ArrowLeft} from "lucide-react";
+import React from 'react',
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom",
+import { ArrowLeft } from "lucide-react",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProfileErrorStateProps {
   error: string | null;
 }
@@ -46,9 +59,16 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  );
+}
+  )
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
@@ -94,6 +114,7 @@ export function ProfileErrorState({ error } ProfileErrorStateProps) {;
         </Link>;
       </Button>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
@@ -169,3 +190,9 @@ function ProfileErrorState() {
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  );
+}
+;
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementButton.tsx
 
 =======
@@ -8,6 +9,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
@@ -22,9 +26,12 @@ interface AIEnhancementButtonProps {
   size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AIEnhancementButton({
   options
   onEnhanced
@@ -37,9 +44,12 @@ export function AIEnhancementButton({
   const { enhanceContent, isEnhancing } = useAIContentEnhancer()
   const [showActions, setShowActions] = useState(false)
   const [generatedContent, setGeneratedContent] = useState<string | null>(null)
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
@@ -60,6 +70,7 @@ interface AIEnhancementButtonProps {
   contentLength?: number
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 export function AIEnhancementButton({
@@ -73,6 +84,10 @@ export function AIEnhancementButton({
 export function AIEnhancementButton({
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+export function AIEnhancementButton({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   options
   onEnhanced
@@ -86,6 +101,7 @@ export function AIEnhancementButton({
   const [showActions, setShowActions] = useState(false)
   const [generatedContent, setGeneratedContent] = useState<string | null>(null)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   const handleEnhance = async () => {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -93,6 +109,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>     if ((!options.content |options.content.trim().length < contentLength) &&
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   options,
   onEnhanced,
   buttonText = "Enhance with AI",
@@ -105,11 +123,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   const [showActions, setShowActions] = useState(false),
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -120,11 +133,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         variant: "destructive"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       toast({
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       })
       return;
     }
@@ -140,6 +156,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       setShowActions(false)
       setGeneratedContent(null)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       toast({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         title: "Content applied"
@@ -148,6 +165,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }),
       return
 import { useState } from 'react',;
@@ -200,16 +219,10 @@ export function AIEnhancementButton({;
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
-<<<<<<< HEAD
   }
   const handleRegenerate = async () => {
     await handleEnhance()
@@ -218,12 +231,14 @@ export function AIEnhancementButton({;
     setShowActions(false)
     setGeneratedContent(null)
   }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const handleRegenerate = async () => {
@@ -244,11 +259,6 @@ export function AIEnhancementButton({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (showActions) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
@@ -293,6 +303,7 @@ export function AIEnhancementButton({;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -305,11 +316,17 @@ export function AIEnhancementButton({;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  return (
+    <Button
+      type="button"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       variant = {variant,}
       size = {size,}
       className={`gap-1 ${className}`}
       onClick = {handleEnhance,}
       disabled = {isEnhancing,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -318,10 +335,13 @@ export function AIEnhancementButton({;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   return (
     <Button
       type="button"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   },;
@@ -436,6 +456,8 @@ export function AIEnhancementButton(): any ({;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleAccept = () => {;
@@ -751,6 +773,7 @@ if ( {) {
       disabled={isEnhancing}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>>     >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -762,6 +785,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
       {isEnhancing ? (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -772,21 +797,24 @@ if ( {) {
       <span className="text-xs">{buttonText}</span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     </Button>;
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Button>
   )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     </Button>;
   );
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };"
 <Button type="button" variant="ghost" size="sm" onClick={
   handleAccept "
@@ -795,6 +823,7 @@ if ( {) {
 }return (<Button) : (<Sparkles className=" h-4 w-4" />)
 }</Button>)
 }"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementButton.tsx
 <<<<<<< HEAD
@@ -843,14 +872,17 @@ return ;
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     </Button>
   )
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

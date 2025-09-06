@@ -24,7 +24,10 @@ declare global {
 declare global {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   var webpackChunk_N_E: any[];
   var __webpack_require__: any;
   var __webpack_exports__: any;
@@ -34,11 +37,14 @@ declare global {
   var __rest: any;
   var __decorate: any;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   var __awaiter: any
 >>>>>>> // CRITICAL: Self polyfill - must be first
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   var webpackChunk_N_E: any[]
   var __webpack_require__: any
   var __webpack_exports__: any
@@ -47,7 +53,6 @@ declare global {
   var __assign: any
   var __rest: any
   var __decorate: any
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   var __awaiter: any
 // CRITICAL: Self polyfill - must be first
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -259,12 +264,15 @@ function __extends_helper() {
         )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   var webpackChunk_N_E: any[],
   var __webpack_require__: any,
   var __webpack_exports__: any,
@@ -370,6 +378,7 @@ const tsHelpers = {;
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>           t[symbol] = s[symbol]
@@ -378,14 +387,15 @@ const tsHelpers = {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           t[symbol] = s[symbol]
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     }
     return t
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
@@ -399,11 +409,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   __decorate: function (
     decorators: any[]
     target: any
@@ -438,6 +452,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) |r
     return (c > 3 && r && key && Object.defineProperty(target, key, r), r)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   },
   
@@ -452,23 +467,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
-=======
-=======
   
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
     let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
     if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
     else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
     return c > 3 && r && key && Object.defineProperty(target, key, r), r
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   },
   
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     function adopt(value: any) {
       return value instanceof P
         ? value
@@ -527,10 +539,13 @@ try {
         console.warn('Webpack chunk loading error prevented:', error)
         return 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
@@ -542,11 +557,14 @@ try {
   
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
     return new (P || (P = Promise))(function (resolve: any, reject: any) {
       function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
@@ -648,6 +666,7 @@ if (typeof window !== 'undefined') {;
         return true, // Suppress error;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       }
     }
@@ -662,10 +681,11 @@ if (typeof window !== 'undefined') {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
   }
-<<<<<<< HEAD
 } catch (e) {
   // Silently handle any errors in error prevention setup
 // Global error suppression for common serverless issues
@@ -728,7 +748,10 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
     }
   })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
@@ -822,10 +845,13 @@ if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
 }
 export default {}, // Ensure this can be imported as a module
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 // Node.js environment polyfills (for SSR/build time);
@@ -918,17 +944,10 @@ export default {}, // Ensure this can be imported as a module;
 export default {}, // Ensure this can be imported as a module;
 =======
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
     selfDefined: typeof self !== 'undefined',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     webpackChunkDefined:
       typeof webpackChunk_N_E !== 'undefined' ||
       (typeof self !== 'undefined' &&
@@ -948,8 +967,6 @@ export default {}; // Ensure this can be imported as a module
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
@@ -977,15 +994,17 @@ export const verifyPolyfills = () => {;
 // Auto-verify in development;
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export default {}, // Ensure this can be imported as a module;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 }
 }
@@ -994,6 +1013,7 @@ export default {}, // Ensure this can be imported as a module;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1001,3 +1021,5 @@ export default {}, // Ensure this can be imported as a module;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

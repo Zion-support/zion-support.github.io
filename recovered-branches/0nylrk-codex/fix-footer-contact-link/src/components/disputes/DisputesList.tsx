@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
@@ -15,6 +16,9 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -25,6 +29,7 @@ import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -33,6 +38,8 @@ import {Link} from "react-router-dom";
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button",
@@ -49,6 +56,7 @@ import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from "lucide-react",
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 type DisputesListProps = {
@@ -60,32 +68,34 @@ type DisputesListProps = {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
-<<<<<<< HEAD
 }
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
   const filteredDisputes = statusFilter === "all"
     ? disputes
     : disputes.filter(dispute => dispute.status === statusFilter);
-=======
 },
 
-<<<<<<< HEAD
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
-=======
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
     : disputes.filter(dispute => dispute.status === statusFilter),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -104,6 +114,8 @@ type DisputesListProps = {
       case "open": return "default";
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default",
@@ -124,17 +136,22 @@ type DisputesListProps = {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
-  }
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   if (isLoading) {
     return (
@@ -167,11 +184,14 @@ type DisputesListProps = {
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
                 </TableRow>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Dispute, DisputeStatus } from "@/types/disputes",;
 import { Button } from "@/components/ui/button",;
@@ -347,6 +367,7 @@ function DisputesList() {
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
                 </TableRow>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
               ))}
             </TableBody>;
@@ -455,6 +476,8 @@ function DisputesList() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))}
             </TableBody>
           </Table>
@@ -462,10 +485,7 @@ function DisputesList() {
       </div>
     )
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (disputes.length === 0) {
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">
@@ -563,6 +583,7 @@ function DisputesList() {
                 </TableCell>
               </TableRow>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -746,14 +767,19 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </TableBody>
         </Table>
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </TableBody>;
         </Table>;
       </div>;
@@ -851,5 +877,8 @@ if (isLoading) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

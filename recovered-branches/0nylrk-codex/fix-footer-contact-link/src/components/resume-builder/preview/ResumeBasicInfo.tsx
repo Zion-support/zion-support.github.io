@@ -2,6 +2,7 @@
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/ResumeBasicInfo.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ResumeBasicInfo } from '@/types/resume';
 =======
@@ -63,6 +64,12 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
       <h1 className="text-2xl font-bold">{basicInfo.headline || basicInfo.title}</h1>
 =======
 import { ResumeBasicInfo } from '@/types/resume';
+=======
+import {ResumeBasicInfo} from '@/types/resume';
+interface ResumeBasicInfoSectionProps {
+  basicInfo: ResumeBasicInfo
+import { ResumeBasicInfo } from '@/types/resume';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
 }
@@ -76,7 +83,12 @@ export function ResumeBasicInfoSection({
       </h1>
       {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}
     </div>
+<<<<<<< HEAD
 
+=======
+interface ResumeBasicInfoSectionProps {;
+  basicInfo: ResumeBasicInfo;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export function ResumeBasicInfoSection({
@@ -89,14 +101,21 @@ export function ResumeBasicInfoSection({
       {basicInfo.summary && (
         <p className="text-sm">{basicInfo.summary}</p>
       )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -134,3 +153,5 @@ export function ResumeBasicInfoSection({ basicInfo } ResumeBasicInfoSectionProps
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

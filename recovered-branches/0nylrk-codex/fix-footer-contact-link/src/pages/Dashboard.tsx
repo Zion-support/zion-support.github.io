@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Dashboard.tsx
 
 <<<<<<< HEAD
@@ -22,6 +23,8 @@ import { NotificationCenter } from "@/components/NotificationCenter",
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Header} from "@/components/Header";
@@ -40,8 +43,6 @@ export default function Dashboard() {;
 =======
   const { user, logout } = useAuth();
   const { toast } = useToast();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -51,7 +52,6 @@ import { Badge } from "@/components/ui/badge",
 import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react",
 import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications",
 import { NotificationCenter } from "@/components/NotificationCenter",
-<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 export default function Dashboard() {
@@ -59,6 +59,7 @@ export default function Dashboard() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -145,15 +146,15 @@ export default function Dashboard() {;
 <<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Dashboard.tsx
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useToast } from "@/hooks/use-toast",
 import { Link } from "react-router-dom",
 export default function Dashboard() {
   const { user, logout } = useAuth(),
   const { toast } = useToast(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   if (!user) return null,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   const handleTestNotification = async () => {
     const result = await createTestNotification(user.id),
@@ -167,12 +168,9 @@ export default function Dashboard() {
         description: "Something went wrong"
         variant: "destructive"})
     }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Header />
@@ -190,6 +188,7 @@ export default function Dashboard() {
                   <h2 className="text-xl font-bold text-white">{user.displayName}</h2>
                   <p className="text-zion-slate-light mb-2">{user.email}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -199,16 +198,21 @@ export default function Dashboard() {
 
 =======
 <<<<<<< HEAD
-                  <Badge
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  <Badge
                   <Badge 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className="bg-zion-purple text-white mb-4"
                   >
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
                   </Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -219,11 +223,15 @@ export default function Dashboard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                  <Button
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                  <Button
                   <Button 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     onClick={() => window.location.href = "/profile"}
                   >
@@ -272,6 +280,7 @@ export default function Dashboard() {
                       Send Test Notification
                     </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -282,32 +291,43 @@ export default function Dashboard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                    <Button
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    <Button
                     <Button 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
                         await createOnboardingNotification({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           userId: user.id
                           missingMilestone: 'profile_completed'
                           userRole: user.userType === 'employer' |user.userType === 'buyer' ? 'client' : 'talent'
                         });
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           userId: user.id,
                           missingMilestone: 'profile_completed',
                           userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
                         }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -315,6 +335,8 @@ export default function Dashboard() {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         toast({
                           title: "Onboarding notification sent"
                           description: "Check your notification center"
@@ -325,6 +347,7 @@ export default function Dashboard() {
                       Send Onboarding Nudge
                     </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -335,11 +358,15 @@ export default function Dashboard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 <<<<<<< HEAD
-                    <Button
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+                    <Button
                     <Button 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
@@ -454,6 +481,7 @@ export default function Dashboard() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -472,6 +500,9 @@ export default function Dashboard() {
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
@@ -1157,8 +1188,11 @@ return (<> <Header /> <Badge className="bg-zion-purple text-white mb-4" > > <Use
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
